@@ -112,6 +112,64 @@
 
     footer { text-align: center; padding: 24px; color: #333; font-size: 12px; }
     .refresh-note { font-size: 11px; color: #444; text-align: right; padding: 0 32px 8px; }
+
+    /* Global Markets */
+    .indices-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .idx-card {
+      background: #1a1d2e; border: 1px solid #2a2d3e;
+      border-radius: 10px; padding: 14px 16px;
+    }
+    .idx-name  { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.8px; }
+    .idx-price { font-size: 18px; font-weight: 700; margin-top: 4px; color: #fff; }
+    .idx-chg   { font-size: 12px; font-weight: 600; margin-top: 2px; }
+    .vix-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px;
+    }
+    .vix-card {
+      background: #1a1d2e; border: 1px solid #2a2d3e;
+      border-radius: 10px; padding: 12px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .vix-label { font-size: 12px; color: #666; }
+    .vix-val   { font-size: 16px; font-weight: 700; }
+
+    /* News */
+    .news-filters { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+    .nf-btn {
+      padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;
+      border: 1px solid #2a2d3e; background: transparent; color: #666; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .nf-btn:hover  { border-color: #5b9cf6; color: #5b9cf6; }
+    .nf-btn.active { background: #5b9cf6; border-color: #5b9cf6; color: #fff; }
+    .news-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    }
+    .news-card {
+      background: #1a1d2e; border: 1px solid #2a2d3e;
+      border-radius: 10px; padding: 14px;
+      display: flex; flex-direction: column; gap: 8px;
+      text-decoration: none; transition: border-color 0.2s;
+    }
+    .news-card:hover { border-color: #5b9cf6; }
+    .news-tag {
+      display: inline-block; padding: 2px 8px; border-radius: 4px;
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; align-self: flex-start;
+    }
+    .tag-nifty   { background: rgba(102,187,106,0.15); color: #66bb6a; }
+    .tag-markets { background: rgba(91,156,246,0.15);  color: #5b9cf6; }
+    .tag-india   { background: rgba(255,215,64,0.15);  color: #ffd740; }
+    .tag-economy { background: rgba(239,83,80,0.12);   color: #ef5350; }
+    .tag-world   { background: rgba(149,156,218,0.15); color: #9fa8da; }
+    .news-title { font-size: 13px; font-weight: 600; color: #dde; line-height: 1.45; }
+    .news-meta  { font-size: 11px; color: #555; display: flex; gap: 10px; margin-top: auto; }
+    .news-src   { color: #5b9cf6; }
+    .news-empty { text-align: center; padding: 32px; color: #555; grid-column: 1/-1; font-size: 13px; }
   </style>
 </head>
 <body>
@@ -123,6 +181,8 @@
       Market {{ 'Open' if market_open else 'Closed' }}
     </span>
     <span class="badge paper">PAPER TRADE</span>
+    <a href="/logout" style="padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;
+       background:#1e2130;color:#666;text-decoration:none;border:1px solid #2a2d3e;">Logout</a>
   </div>
 </header>
 
@@ -171,6 +231,15 @@
       background: {% if score >= 55 %}#66bb6a{% elif score >= 40 %}#ffb74d{% else %}#ef5350{% endif %};
     "></div>
   </div>
+</div>
+
+<!-- LIVE KITE POSITIONS (visible when live trading) -->
+<div class="section" id="live-section" style="display:none">
+  <h2>Live Kite Positions <span id="pos-updated" style="font-size:10px;color:#444;font-weight:400;text-transform:none"></span></h2>
+  <div class="tbl-wrap" id="live-positions-wrap">
+    <div class="no-trades">Fetching from Kite...</div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px" id="funds-row"></div>
 </div>
 
 <!-- BOT LOG -->
@@ -259,8 +328,212 @@
   </div>
 </div>
 
+<!-- GLOBAL MARKETS -->
+<div class="section">
+  <h2>Global Markets <span id="idx-updated" style="font-size:10px;color:#444;font-weight:400;text-transform:none;letter-spacing:0"></span></h2>
+  <div class="indices-grid" id="indices-grid">
+    <div class="idx-card"><div class="idx-name">Loading...</div><div class="idx-price" style="color:#444">—</div></div>
+  </div>
+  <div class="vix-row">
+    <div class="vix-card"><span class="vix-label">FII/DII Flows</span><span class="vix-val" style="color:#555;font-size:13px">See nse.in</span></div>
+    <div class="vix-card"><span class="vix-label">India VIX</span><span class="vix-val" id="vix-val" style="color:#666">—</span></div>
+    <div class="vix-card"><span class="vix-label">SGX Nifty</span><span class="vix-val" id="sgx-val" style="color:#fff">—</span></div>
+  </div>
+</div>
+
+<!-- NEWS -->
+<div class="section">
+  <h2>Market News <span id="news-updated" style="font-size:10px;color:#444;font-weight:400;text-transform:none;letter-spacing:0"></span></h2>
+  <div class="news-filters">
+    <button class="nf-btn active" onclick="filterNews('all',this)">All</button>
+    <button class="nf-btn" onclick="filterNews('nifty',this)">NIFTY</button>
+    <button class="nf-btn" onclick="filterNews('markets',this)">Markets</button>
+    <button class="nf-btn" onclick="filterNews('india',this)">India</button>
+    <button class="nf-btn" onclick="filterNews('economy',this)">Economy</button>
+    <button class="nf-btn" onclick="filterNews('world',this)">World</button>
+  </div>
+  <div class="news-grid" id="news-grid">
+    <div class="news-empty">Loading news...</div>
+  </div>
+</div>
+
 <div class="refresh-note">Auto-refreshes every 30 seconds</div>
 <footer>Fluno Trading Bot &nbsp;|&nbsp; Paper Trade Mode &nbsp;|&nbsp; Data: Yahoo Finance</footer>
 
+<script>
+// ── GLOBAL INDICES ────────────────────────────────────────────────────────────
+const INDICES = [
+  { sym: '^NSEI',  name: 'NIFTY 50',   flag: '🇮🇳' },
+  { sym: '^BSESN', name: 'SENSEX',     flag: '🇮🇳' },
+  { sym: '^GSPC',  name: 'S&P 500',    flag: '🇺🇸' },
+  { sym: '^DJI',   name: 'Dow Jones',  flag: '🇺🇸' },
+  { sym: '^IXIC',  name: 'NASDAQ',     flag: '🇺🇸' },
+  { sym: '^N225',  name: 'Nikkei 225', flag: '🇯🇵' },
+  { sym: '^HSI',   name: 'Hang Seng',  flag: '🇭🇰' },
+  { sym: '^FTSE',  name: 'FTSE 100',   flag: '🇬🇧' },
+];
+
+async function fetchIdx(sym) {
+  try {
+    const r = await fetch('https://query1.finance.yahoo.com/v8/finance/chart/' + encodeURIComponent(sym) + '?interval=1d&range=2d');
+    const d = await r.json();
+    const m = d.chart.result[0].meta;
+    const price = m.regularMarketPrice;
+    const prev  = m.previousClose || m.chartPreviousClose;
+    const chg   = price - prev;
+    const pct   = (chg / prev * 100).toFixed(2);
+    return { price, chg, pct };
+  } catch { return null; }
+}
+
+async function loadIndices() {
+  const results = await Promise.all(INDICES.map(i => fetchIdx(i.sym)));
+  document.getElementById('indices-grid').innerHTML = INDICES.map((idx, i) => {
+    const r = results[i];
+    if (!r) return '<div class="idx-card"><div class="idx-name">' + idx.flag + ' ' + idx.name + '</div><div class="idx-price" style="color:#444">—</div></div>';
+    const up  = r.chg >= 0;
+    const col = up ? '#66bb6a' : '#ef5350';
+    const sgn = up ? '+' : '';
+    return '<div class="idx-card"><div class="idx-name">' + idx.flag + ' ' + idx.name + '</div>' +
+      '<div class="idx-price">' + r.price.toLocaleString('en-IN', {maximumFractionDigits:2}) + '</div>' +
+      '<div class="idx-chg" style="color:' + col + '">' + sgn + r.chg.toFixed(1) + ' (' + sgn + r.pct + '%)</div></div>';
+  }).join('');
+
+  // VIX
+  const vix = await fetchIdx('^INDIAVIX');
+  if (vix) {
+    const col = vix.price > 18 ? '#ef5350' : vix.price > 13 ? '#ffd740' : '#66bb6a';
+    document.getElementById('vix-val').textContent = vix.price.toFixed(2);
+    document.getElementById('vix-val').style.color = col;
+  }
+  // SGX Nifty proxy (use NIFTY futures symbol if available)
+  const sgx = await fetchIdx('CNXNifty.NS');
+  if (sgx) {
+    const col = sgx.chg >= 0 ? '#66bb6a' : '#ef5350';
+    document.getElementById('sgx-val').textContent = sgx.price.toLocaleString('en-IN', {maximumFractionDigits:0});
+    document.getElementById('sgx-val').style.color = col;
+  }
+
+  document.getElementById('idx-updated').textContent = '— updated ' + new Date().toLocaleTimeString();
+}
+
+// ── NEWS ──────────────────────────────────────────────────────────────────────
+let allNews = [];
+
+const FEEDS = [
+  { url: 'https://economictimes.indiatimes.com/markets/stocks/rssfeeds/2146842.cms', src: 'Economic Times' },
+  { url: 'https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms', src: 'ET Economy' },
+  { url: 'https://www.moneycontrol.com/rss/buzzingstocks.xml', src: 'Moneycontrol' },
+  { url: 'https://feeds.feedburner.com/ndtvprofit-latest', src: 'NDTV Profit' },
+];
+
+function tagNews(title) {
+  const t = title.toLowerCase();
+  if (/nifty|banknifty|nse|bse|sensex|options|futures|fii|dii/.test(t)) return 'nifty';
+  if (/rbi|rupee|gdp|inflation|budget|economy|rate|repo/.test(t))        return 'economy';
+  if (/india|modi|sebi|government|policy/.test(t))                        return 'india';
+  if (/us|china|fed|europe|global|oil|dollar|nasdaq/.test(t))             return 'world';
+  return 'markets';
+}
+
+function timeAgo(dateStr) {
+  const diff = (Date.now() - new Date(dateStr)) / 60000;
+  if (diff < 60)   return Math.round(diff) + 'm ago';
+  if (diff < 1440) return Math.round(diff / 60) + 'h ago';
+  return Math.round(diff / 1440) + 'd ago';
+}
+
+async function loadNews() {
+  const items = [];
+  await Promise.all(FEEDS.map(async feed => {
+    try {
+      const url = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feed.url) + '&count=6';
+      const r   = await fetch(url);
+      const d   = await r.json();
+      if (d.status === 'ok') {
+        d.items.forEach(item => items.push({ title: item.title, link: item.link, date: item.pubDate, src: feed.src, tag: tagNews(item.title) }));
+      }
+    } catch {}
+  }));
+  allNews = items.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 18);
+  renderNews('all');
+  document.getElementById('news-updated').textContent = '— updated ' + new Date().toLocaleTimeString();
+}
+
+const tagLabels = { nifty: 'NIFTY', markets: 'Markets', india: 'India', economy: 'Economy', world: 'World' };
+
+function renderNews(filter) {
+  const shown = filter === 'all' ? allNews : allNews.filter(n => n.tag === filter);
+  const grid  = document.getElementById('news-grid');
+  if (!shown.length) { grid.innerHTML = '<div class="news-empty">No news in this category right now.</div>'; return; }
+  grid.innerHTML = shown.map(n =>
+    '<a class="news-card" href="' + n.link + '" target="_blank" rel="noopener">' +
+    '<span class="news-tag tag-' + n.tag + '">' + (tagLabels[n.tag] || n.tag) + '</span>' +
+    '<div class="news-title">' + n.title + '</div>' +
+    '<div class="news-meta"><span class="news-src">' + n.src + '</span><span>' + timeAgo(n.date) + '</span></div>' +
+    '</a>'
+  ).join('');
+}
+
+function filterNews(tag, btn) {
+  document.querySelectorAll('.nf-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderNews(tag);
+}
+
+// ── LIVE KITE POSITIONS ───────────────────────────────────────────────────────
+async function loadPositions() {
+  try {
+    const r = await fetch('/api/state');
+    const s = await r.json();
+    if (!s.paper_trade) {
+      document.getElementById('live-section').style.display = '';
+      const pr = await fetch('/api/positions');
+      const pd = await pr.json();
+      if (pd.error) { document.getElementById('live-positions-wrap').innerHTML = '<div class="no-trades" style="color:#ef5350">Kite: ' + pd.error + '</div>'; return; }
+
+      const positions = pd.positions || [];
+      if (!positions.length) {
+        document.getElementById('live-positions-wrap').innerHTML = '<div class="no-trades">No open positions in Kite.</div>';
+      } else {
+        const rows = positions.map(p => {
+          const pnl = p.unrealised || 0;
+          const col = pnl >= 0 ? 'green' : 'red';
+          const sl  = p.average_price - 150/0.40/25;
+          return '<tr>' +
+            '<td>' + p.tradingsymbol + '</td>' +
+            '<td>' + p.quantity + '</td>' +
+            '<td>' + p.average_price.toFixed(2) + '</td>' +
+            '<td>' + (p.last_price || '—') + '</td>' +
+            '<td class="' + col + '">Rs. ' + Math.round(pnl) + '</td>' +
+            '<td style="color:#ef5350">~' + sl.toFixed(0) + '</td>' +
+            '<td style="color:#5b9cf6">' + p.product + '</td>' +
+          '</tr>';
+        }).join('');
+        document.getElementById('live-positions-wrap').innerHTML =
+          '<table><tr><th>Symbol</th><th>Qty</th><th>Avg Price</th><th>LTP</th><th>Unrealised P&L</th><th>Stop Loss</th><th>Product</th></tr>' + rows + '</table>';
+      }
+
+      // Funds
+      const f = pd.funds || {};
+      document.getElementById('funds-row').innerHTML = [
+        ['Available Cash', 'Rs. ' + Math.round(f.available?.cash || 0)],
+        ['Used Margin',    'Rs. ' + Math.round(f.utilised?.debits || 0)],
+        ['Net P&L Today',  'Rs. ' + Math.round((f.utilised?.m2m_realised || 0) + (f.utilised?.m2m_unrealised || 0))],
+      ].map(([l,v]) => '<div class="card" style="padding:14px"><div class="label">' + l + '</div><div class="value white" style="font-size:18px">' + v + '</div></div>').join('');
+
+      document.getElementById('pos-updated').textContent = '— updated ' + new Date().toLocaleTimeString();
+    }
+  } catch(e) {}
+}
+
+// Boot
+loadIndices();
+loadNews();
+loadPositions();
+setInterval(loadIndices, 300000);
+setInterval(loadNews, 600000);
+setInterval(loadPositions, 30000);  // refresh positions every 30s
+</script>
 </body>
 </html>

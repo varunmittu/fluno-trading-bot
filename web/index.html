@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fluno Trading — Live Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://s3.tradingview.com/tv.js"></script>
   <style>
     :root {
       --bg:      #08090f;
@@ -387,6 +388,18 @@
     <span class="ticker-value" id="win-rate" style="color:var(--blue)">—</span>
   </div>
   <span class="last-update" id="last-update">Loading...</span>
+</div>
+
+<!-- TRADINGVIEW NIFTY CHART -->
+<div style="background:#0f1117;border-bottom:1px solid #1e2235;padding:0">
+  <div style="max-width:1400px;margin:0 auto;padding:20px 32px 0">
+    <div style="font-size:11px;color:#5c6080;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">
+      NIFTY 50 Live Chart &nbsp;·&nbsp; NSE &nbsp;·&nbsp; 5 Min
+    </div>
+  </div>
+  <div class="tradingview-widget-container" style="max-width:1400px;margin:0 auto;padding:0 32px 20px">
+    <div id="tradingview_nifty" style="height:420px;border-radius:12px;overflow:hidden"></div>
+  </div>
 </div>
 
 <main>
@@ -981,10 +994,45 @@ async function loadAll() {
   document.getElementById('last-update').textContent = 'Updated ' + new Date().toLocaleTimeString();
 }
 
+// ── TRADINGVIEW CHART ────────────────────────────────────────────────────────
+function initChart() {
+  if (typeof TradingView === 'undefined') { setTimeout(initChart, 500); return; }
+  new TradingView.widget({
+    container_id:      "tradingview_nifty",
+    width:             "100%",
+    height:            420,
+    symbol:            "NSE:NIFTY",
+    interval:          "5",
+    timezone:          "Asia/Kolkata",
+    theme:             "dark",
+    style:             "1",
+    locale:            "en",
+    toolbar_bg:        "#13161f",
+    gridColor:         "rgba(30,34,53,0.8)",
+    enable_publishing: false,
+    hide_top_toolbar:  false,
+    hide_legend:       false,
+    save_image:        false,
+    studies:           ["RSI@tv-basicstudies", "MACD@tv-basicstudies"],
+    overrides: {
+      "paneProperties.background":           "#0f1117",
+      "paneProperties.backgroundType":       "solid",
+      "scalesProperties.textColor":          "#5c6080",
+      "mainSeriesProperties.candleStyle.upColor":        "#00e676",
+      "mainSeriesProperties.candleStyle.downColor":      "#ff1744",
+      "mainSeriesProperties.candleStyle.borderUpColor":  "#00e676",
+      "mainSeriesProperties.candleStyle.borderDownColor":"#ff1744",
+      "mainSeriesProperties.candleStyle.wickUpColor":    "#00e676",
+      "mainSeriesProperties.candleStyle.wickDownColor":  "#ff1744",
+    }
+  });
+}
+
 // Boot
 loadAll();
 loadIndices();
 loadNews();
+initChart();
 setInterval(loadAll, 60000);
 setInterval(loadIndices, 300000);  // refresh indices every 5 min
 setInterval(loadNews, 600000);     // refresh news every 10 min

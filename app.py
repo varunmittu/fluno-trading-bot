@@ -6,10 +6,12 @@ Bot runs in background automatically.
 """
 
 import subprocess, sys
-subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "flask", "kiteconnect", "pandas", "numpy", "yfinance"])
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "flask", "kiteconnect", "pandas", "numpy", "yfinance", "flask-limiter"])
 
-from flask import Flask, render_template
-import sqlite3, threading, time, os, calendar, json
+from flask import Flask, render_template, request, redirect, session, url_for, jsonify
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+import sqlite3, threading, time, os, calendar, json, secrets
 from datetime import datetime, date, timedelta
 import pandas as pd
 import numpy as np
@@ -17,10 +19,25 @@ import yfinance as yf
 from kiteconnect import KiteConnect
 
 app = Flask(__name__)
+app.secret_key = secrets.token_hex(32)
+
+# Rate limiter — blocks brute-force attacks
+limiter = Limiter(get_remote_address, app=app, default_limits=["200 per day", "60 per hour"])
+
+# Security headers on every response
+@app.after_request
+def security_headers(r):
+    r.headers["X-Frame-Options"]        = "DENY"
+    r.headers["X-Content-Type-Options"] = "nosniff"
+    r.headers["X-XSS-Protection"]       = "1; mode=block"
+    r.headers["Referrer-Policy"]        = "no-referrer"
+    r.headers["Cache-Control"]          = "no-store"
+    return r
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 API_KEY        = "your_api_key_here"  # paste from developers.kite.trade
 TOKEN_FILE     = "kite_token.txt"
+DASHBOARD_PASS = "fluno2026"          # change this to your own password
 PAPER_TRADE    = True
 THRESHOLD      = 55
 STOP_LOSS      = -150
@@ -306,8 +323,98 @@ def bot_loop():
 
         time.sleep(CHECK_INTERVAL)
 
+# ── AUTH ──────────────────────────────────────────────────────────────────────
+def login_required(f):
+    from functools import wraps
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        if not session.get("auth"):
+            return redirect(url_for("login"))
+        return f(*args, **kwargs)
+    return decorated
+
+@app.route("/login", methods=["GET", "POST"])
+@limiter.limit("10 per minute")
+def login():
+    error = ""
+    if request.method == "POST":
+        if request.form.get("password") == DASHBOARD_PASS:
+            session["auth"] = True
+            return redirect("/")
+        error = "Wrong password. Try again."
+    return f"""<!DOCTYPE html><html><head><title>Fluno — Login</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      *{{box-sizing:border-box;margin:0;padding:0}}
+      body{{background:#08090f;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:'Segoe UI',sans-serif}}
+      .box{{background:#13161f;border:1px solid #1e2235;border-radius:16px;padding:40px;width:340px;text-align:center}}
+      .logo{{width:48px;height:48px;background:linear-gradient(135deg,#00e676,#448aff);border-radius:14px;
+             display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;
+             color:#000;margin:0 auto 16px}}
+      h2{{color:#fff;font-size:20px;margin-bottom:6px}}
+      p{{color:#5c6080;font-size:13px;margin-bottom:24px}}
+      input{{width:100%;padding:12px 16px;background:#0f1117;border:1px solid #1e2235;border-radius:10px;
+             color:#fff;font-size:15px;outline:none;margin-bottom:14px}}
+      input:focus{{border-color:#448aff}}
+      button{{width:100%;padding:12px;background:linear-gradient(135deg,#00e676,#448aff);
+              border:none;border-radius:10px;font-size:15px;font-weight:700;
+              color:#000;cursor:pointer}}
+      .err{{color:#ff1744;font-size:13px;margin-bottom:12px}}
+    </style></head><body>
+    <div class="box">
+      <div class="logo">F</div>
+      <h2>Fluno Trading Bot</h2>
+      <p>Enter your dashboard password</p>
+      {'<div class="err">' + error + '</div>' if error else ''}
+      <form method="post">
+        <input type="password" name="password" placeholder="Password" autofocus>
+        <button type="submit">Enter Dashboard</button>
+      </form>
+    </div></body></html>"""
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect("/login")
+
+# ── LIVE KITE DATA API ────────────────────────────────────────────────────────
+@app.route("/api/positions")
+@login_required
+def api_positions():
+    try:
+        if not os.path.exists(TOKEN_FILE):
+            return jsonify({"error": "No token"})
+        with open(TOKEN_FILE) as f:
+            token = f.read().strip()
+        kite = KiteConnect(api_key=state.get("api_key_real", API_KEY))
+        kite.set_access_token(token)
+        pos = kite.positions()
+        orders = kite.orders()
+        return jsonify({
+            "positions": pos.get("net", []),
+            "orders":    orders,
+            "funds":     kite.margins().get("equity", {})
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)})
+
+@app.route("/api/state")
+@login_required
+def api_state():
+    return jsonify({
+        "nifty_price":    state["nifty_price"],
+        "score":          state["score"],
+        "score_breakdown":state["score_breakdown"],
+        "open_positions": state["open_positions"],
+        "daily_pnl":      state["daily_pnl"],
+        "market_open":    state["market_open"],
+        "log":            state["log"][:30],
+        "paper_trade":    PAPER_TRADE,
+    })
+
 # ── FLASK ROUTES ──────────────────────────────────────────────────────────────
 @app.route("/")
+@login_required
 def dashboard():
     conn   = get_db()
     trades = conn.execute("SELECT * FROM trades ORDER BY id DESC LIMIT 50").fetchall()
@@ -380,4 +487,4 @@ if __name__ == "__main__":
     print("  Fluno Trading Bot is running!")
     print("  Open your browser at: http://localhost:5000")
     print("="*50 + "\n")
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    app.run(host="127.0.0.1", port=5000, debug=False)  # localhost only — not exposed to network
