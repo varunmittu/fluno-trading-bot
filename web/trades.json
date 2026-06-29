@@ -1,0 +1,14 @@
+{
+  "last_updated": "2026-06-29",
+  "summary": {
+    "total_trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0,
+    "total_pnl": 0,
+    "avg_win": 0,
+    "avg_loss": 0
+  },
+  "trades": [],
+  "daily_pnl": {}
+}
