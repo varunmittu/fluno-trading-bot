@@ -42,6 +42,52 @@
       --mono:      'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
     }
 
+    /* ── DARK THEME ─────────────────────────────────────────────────── */
+    [data-theme="dark"] {
+      --bg:        #07080f;
+      --surface:   #0f1120;
+      --card:      #0f1120;
+      --border:    #1c2040;
+      --border-h:  #2a3060;
+      --blue-bg:   rgba(37,99,235,0.12);
+      --green-bg:  rgba(10,124,82,0.12);
+      --green-b:   rgba(10,124,82,0.35);
+      --red-bg:    rgba(200,30,30,0.12);
+      --red-b:     rgba(200,30,30,0.3);
+      --gold-bg:   rgba(180,83,9,0.12);
+      --purple-bg: rgba(109,40,217,0.12);
+      --text:      #e8eaf6;
+      --text2:     #9fa8da;
+      --muted:     #6b7a99;
+      --muted2:    #4a5080;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+      --shadow:    0 4px 16px rgba(0,0,0,0.5);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,0.6);
+    }
+    [data-theme="dark"] #site-header {
+      background: rgba(7,8,15,0.95);
+    }
+    [data-theme="dark"] #ticker-bar,
+    [data-theme="dark"] .tv-header,
+    [data-theme="dark"] .table-head,
+    [data-theme="dark"] .log-inner {
+      background: var(--bg);
+    }
+    [data-theme="dark"] tbody tr:hover td { background: rgba(37,99,235,0.08); }
+    [data-theme="dark"] .cal-nodata  { background: rgba(255,255,255,0.03); border-color: var(--border); }
+    [data-theme="dark"] .cal-weekend,
+    [data-theme="dark"] .cal-future  { background: rgba(255,255,255,0.02); }
+
+    /* theme toggle button */
+    .theme-btn {
+      width: 36px; height: 36px; border-radius: 9px;
+      border: 1px solid var(--border); background: var(--surface);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 17px; line-height: 1;
+      transition: all 0.2s; flex-shrink: 0;
+    }
+    .theme-btn:hover { border-color: var(--blue); background: var(--blue-bg); transform: scale(1.08); }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -482,6 +528,7 @@
   <div class="header-right">
     <span class="pill pill-paper" id="mode-pill"><span class="dot dot-blue"></span>Paper Trade</span>
     <span class="pill" id="market-pill"><span class="dot" id="market-dot"></span><span id="market-text">Checking...</span></span>
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle dark / light mode">🌙</button>
     <button class="refresh-btn" onclick="manualRefresh(this)" title="Refresh data">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M1 4v6h6"/><path d="M23 20v-6h-6"/>
@@ -1338,6 +1385,57 @@ async function loadAll() {
   document.getElementById('portfolio-meta').textContent = 'Last updated ' + ts;
   return true;
 }
+
+// ── THEME TOGGLE ─────────────────────────────────────────────────────────────
+function applyTheme(dark) {
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  document.getElementById('theme-btn').textContent = dark ? '☀️' : '🌙';
+  // Reinitialise TradingView charts with matching theme
+  ['tv_nifty','tv_banknifty'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = '';
+  });
+  if (typeof TradingView !== 'undefined') {
+    const base = {
+      width:'100%', height:420, interval:'5',
+      timezone:'Asia/Kolkata', theme: dark ? 'dark' : 'light',
+      style:'1', locale:'en', enable_publishing:false,
+      hide_top_toolbar:false, save_image:false,
+      studies:['RSI@tv-basicstudies','MACD@tv-basicstudies'],
+      overrides:{
+        'paneProperties.background':                        dark ? '#0f1120' : '#ffffff',
+        'paneProperties.backgroundType':                    'solid',
+        'scalesProperties.textColor':                       dark ? '#6b7a99' : '#6b7a99',
+        'mainSeriesProperties.candleStyle.upColor':         dark ? '#00e676' : '#0a7c52',
+        'mainSeriesProperties.candleStyle.downColor':       dark ? '#ff1744' : '#c81e1e',
+        'mainSeriesProperties.candleStyle.borderUpColor':   dark ? '#00e676' : '#0a7c52',
+        'mainSeriesProperties.candleStyle.borderDownColor': dark ? '#ff1744' : '#c81e1e',
+        'mainSeriesProperties.candleStyle.wickUpColor':     dark ? '#00e676' : '#0a7c52',
+        'mainSeriesProperties.candleStyle.wickDownColor':   dark ? '#ff1744' : '#c81e1e',
+      }
+    };
+    new TradingView.widget({...base, container_id:'tv_nifty',     symbol:'NSE:NIFTY'});
+    new TradingView.widget({...base, container_id:'tv_banknifty', symbol:'NSE:BANKNIFTY'});
+  }
+}
+
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const next   = !isDark;
+  localStorage.setItem('fluno-theme', next ? 'dark' : 'light');
+  applyTheme(next);
+}
+
+// Apply saved or system preference on load
+(function() {
+  const saved  = localStorage.getItem('fluno-theme');
+  const prefer = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const dark   = saved ? saved === 'dark' : prefer;
+  if (dark) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('theme-btn').textContent = '☀️';
+  }
+})();
 
 // ── BOOT ──────────────────────────────────────────────────────────────────────
 loadAll();
