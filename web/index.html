@@ -235,6 +235,95 @@
     .cal-profit .cal-pnl { color: var(--green); }
     .cal-loss   .cal-pnl { color: var(--red); }
 
+    /* ── INDICES ── */
+    .indices-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .index-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      transition: border-color 0.2s;
+    }
+    .index-card:hover { border-color: var(--blue); }
+    .index-name  { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; }
+    .index-price { font-size: 18px; font-weight: 700; margin-top: 4px; font-variant-numeric: tabular-nums; }
+    .index-chg   { font-size: 12px; font-weight: 600; margin-top: 2px; }
+    .index-card.loading .index-price { color: var(--muted); font-size: 14px; }
+
+    /* ── FII/DII ── */
+    .fiidii-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .fiidii-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .fiidii-label { font-size: 12px; color: var(--muted); }
+    .fiidii-val   { font-size: 16px; font-weight: 700; }
+
+    /* ── NEWS ── */
+    .news-filters {
+      display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;
+    }
+    .nf-btn {
+      padding: 5px 16px; border-radius: 20px; font-size: 12px; font-weight: 600;
+      border: 1px solid var(--border); background: transparent;
+      color: var(--muted); cursor: pointer; transition: all 0.2s;
+    }
+    .nf-btn:hover  { border-color: var(--blue); color: var(--blue); }
+    .nf-btn.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .news-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      display: flex; flex-direction: column; gap: 8px;
+      transition: border-color 0.2s, transform 0.15s;
+      cursor: pointer; text-decoration: none;
+    }
+    .news-card:hover { border-color: var(--blue); transform: translateY(-2px); }
+    .news-tag {
+      display: inline-block; padding: 2px 8px; border-radius: 4px;
+      font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;
+      align-self: flex-start;
+    }
+    .tag-markets { background: rgba(68,138,255,0.15); color: var(--blue); }
+    .tag-india   { background: rgba(255,215,64,0.15);  color: var(--gold); }
+    .tag-world   { background: rgba(92,96,128,0.15);   color: #9fa8da; }
+    .tag-nifty   { background: rgba(0,230,118,0.15);   color: var(--green); }
+    .tag-economy { background: rgba(255,23,68,0.12);   color: var(--red); }
+    .news-title  { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.45; }
+    .news-meta   { font-size: 11px; color: var(--muted); display: flex; gap: 10px; margin-top: auto; }
+    .news-src    { color: var(--blue); }
+    .news-loading { text-align: center; padding: 32px; color: var(--muted); grid-column: 1/-1; }
+
+    @media (max-width: 1100px) {
+      .indices-grid  { grid-template-columns: repeat(2, 1fr); }
+      .news-grid     { grid-template-columns: repeat(2, 1fr); }
+      .fiidii-grid   { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .indices-grid { grid-template-columns: repeat(2, 1fr); }
+      .news-grid    { grid-template-columns: 1fr; }
+      .fiidii-grid  { grid-template-columns: 1fr; }
+    }
+
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -431,6 +520,41 @@
       <div class="cal-summary" id="cal-summary"></div>
     </div>
     <div class="cal-grid" id="cal-grid"></div>
+  </div>
+
+  <!-- GLOBAL MARKETS -->
+  <div class="chart-card" style="margin-bottom:24px">
+    <div class="card-title">
+      <span>Global Markets</span>
+      <span style="font-size:11px;color:var(--muted)" id="indices-updated"></span>
+    </div>
+    <div class="indices-grid" id="indices-grid">
+      <div class="index-card loading"><div class="index-name">Loading...</div><div class="index-price">—</div></div>
+    </div>
+    <div class="fiidii-grid" id="fiidii-grid">
+      <div class="fiidii-card"><span class="fiidii-label">FII Net (Today)</span><span class="fiidii-val" id="fii-val" style="color:var(--muted)">Fetching...</span></div>
+      <div class="fiidii-card"><span class="fiidii-label">DII Net (Today)</span><span class="fiidii-val" id="dii-val" style="color:var(--muted)">Fetching...</span></div>
+      <div class="fiidii-card"><span class="fiidii-label">India VIX</span><span class="fiidii-val" id="vix-val" style="color:var(--muted)">—</span></div>
+    </div>
+  </div>
+
+  <!-- MARKET NEWS -->
+  <div class="chart-card" style="margin-bottom:24px">
+    <div class="card-title" style="margin-bottom:16px">
+      <span>Market News</span>
+      <span style="font-size:11px;color:var(--muted)" id="news-updated"></span>
+    </div>
+    <div class="news-filters">
+      <button class="nf-btn active" onclick="filterNews('all',this)">All</button>
+      <button class="nf-btn" onclick="filterNews('markets',this)">Markets</button>
+      <button class="nf-btn" onclick="filterNews('nifty',this)">NIFTY</button>
+      <button class="nf-btn" onclick="filterNews('india',this)">India</button>
+      <button class="nf-btn" onclick="filterNews('economy',this)">Economy</button>
+      <button class="nf-btn" onclick="filterNews('world',this)">World</button>
+    </div>
+    <div class="news-grid" id="news-grid">
+      <div class="news-loading">Loading news...</div>
+    </div>
   </div>
 
 </main>
@@ -707,27 +831,163 @@ function renderCalendar(data) {
   }
 }
 
+// ── GLOBAL INDICES ───────────────────────────────────────────────────────────
+const INDICES = [
+  { sym: '^NSEI',  name: 'NIFTY 50',   flag: '🇮🇳' },
+  { sym: '^BSESN', name: 'SENSEX',     flag: '🇮🇳' },
+  { sym: '^GSPC',  name: 'S&P 500',    flag: '🇺🇸' },
+  { sym: '^DJI',   name: 'Dow Jones',  flag: '🇺🇸' },
+  { sym: '^IXIC',  name: 'NASDAQ',     flag: '🇺🇸' },
+  { sym: '^N225',  name: 'Nikkei 225', flag: '🇯🇵' },
+  { sym: '^HSI',   name: 'Hang Seng',  flag: '🇭🇰' },
+  { sym: '^FTSE',  name: 'FTSE 100',   flag: '🇬🇧' },
+];
+
+async function fetchIndex(sym) {
+  try {
+    const r = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}?interval=1d&range=2d`);
+    const d = await r.json();
+    const m   = d.chart.result[0].meta;
+    const price = m.regularMarketPrice;
+    const prev  = m.previousClose || m.chartPreviousClose;
+    const chg   = price - prev;
+    const pct   = (chg / prev * 100).toFixed(2);
+    return { price, chg, pct };
+  } catch { return null; }
+}
+
+async function loadIndices() {
+  const results = await Promise.all(INDICES.map(idx => fetchIndex(idx.sym)));
+  const grid = document.getElementById('indices-grid');
+  grid.innerHTML = INDICES.map((idx, i) => {
+    const r = results[i];
+    if (!r) return `<div class="index-card"><div class="index-name">${idx.flag} ${idx.name}</div><div class="index-price" style="color:var(--muted)">—</div></div>`;
+    const up  = r.chg >= 0;
+    const col = up ? 'var(--green)' : 'var(--red)';
+    const sgn = up ? '+' : '';
+    return `<div class="index-card">
+      <div class="index-name">${idx.flag} ${idx.name}</div>
+      <div class="index-price">${r.price.toLocaleString('en-IN', {maximumFractionDigits:2})}</div>
+      <div class="index-chg" style="color:${col}">${sgn}${r.chg.toFixed(1)} (${sgn}${r.pct}%)</div>
+    </div>`;
+  }).join('');
+
+  // India VIX
+  try {
+    const vr  = await fetchIndex('^INDIAVIX');
+    if (vr) {
+      const col = vr.price > 18 ? 'var(--red)' : vr.price > 13 ? 'var(--gold)' : 'var(--green)';
+      document.getElementById('vix-val').textContent = vr.price.toFixed(2);
+      document.getElementById('vix-val').style.color = col;
+    }
+  } catch {}
+
+  document.getElementById('indices-updated').textContent = 'Updated ' + new Date().toLocaleTimeString();
+
+  // FII/DII: show static note (live data requires NSE scrape — available on nse.in)
+  document.getElementById('fii-val').textContent  = 'See nse.in';
+  document.getElementById('fii-val').style.color  = 'var(--muted)';
+  document.getElementById('dii-val').textContent  = 'See nse.in';
+  document.getElementById('dii-val').style.color  = 'var(--muted)';
+}
+
+// ── NEWS ─────────────────────────────────────────────────────────────────────
+let allNews = [];
+
+const NEWS_FEEDS = [
+  { url: 'https://economictimes.indiatimes.com/markets/stocks/rssfeeds/2146842.cms', src: 'Economic Times' },
+  { url: 'https://economictimes.indiatimes.com/news/economy/rssfeeds/1373380680.cms', src: 'ET Economy' },
+  { url: 'https://www.moneycontrol.com/rss/buzzingstocks.xml', src: 'Moneycontrol' },
+  { url: 'https://feeds.feedburner.com/ndtvprofit-latest', src: 'NDTV Profit' },
+];
+
+function tagNews(title) {
+  const t = title.toLowerCase();
+  if (/nifty|banknifty|nse|bse|sensex|options|futures|fii|dii/.test(t)) return 'nifty';
+  if (/rbi|rupee|gdp|inflation|budget|economy|rate|repo/.test(t))        return 'economy';
+  if (/india|modi|sebi|government|policy/.test(t))                       return 'india';
+  if (/us|china|fed|europe|global|oil|dollar|nasdaq|s&p/.test(t))        return 'world';
+  return 'markets';
+}
+
+function timeAgo(dateStr) {
+  const diff = (Date.now() - new Date(dateStr)) / 60000;
+  if (diff < 60)   return Math.round(diff) + 'm ago';
+  if (diff < 1440) return Math.round(diff/60) + 'h ago';
+  return Math.round(diff/1440) + 'd ago';
+}
+
+async function loadNews() {
+  document.getElementById('news-grid').innerHTML = '<div class="news-loading">Loading news...</div>';
+  const items = [];
+  await Promise.all(NEWS_FEEDS.map(async feed => {
+    try {
+      const url = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}&count=6`;
+      const r   = await fetch(url);
+      const d   = await r.json();
+      if (d.status === 'ok') {
+        d.items.forEach(item => items.push({
+          title: item.title,
+          link:  item.link,
+          date:  item.pubDate,
+          src:   feed.src,
+          tag:   tagNews(item.title),
+        }));
+      }
+    } catch {}
+  }));
+  allNews = items.sort((a,b) => new Date(b.date) - new Date(a.date)).slice(0, 18);
+  renderNews('all');
+  document.getElementById('news-updated').textContent = 'Updated ' + new Date().toLocaleTimeString();
+}
+
+function renderNews(filter) {
+  const shown = filter === 'all' ? allNews : allNews.filter(n => n.tag === filter);
+  const grid  = document.getElementById('news-grid');
+  if (!shown.length) {
+    grid.innerHTML = '<div class="news-loading">No news in this category right now.</div>';
+    return;
+  }
+  const tagLabels = { nifty:'NIFTY', markets:'Markets', india:'India', economy:'Economy', world:'World' };
+  grid.innerHTML = shown.map(n => `
+    <a class="news-card" href="${n.link}" target="_blank" rel="noopener">
+      <span class="news-tag tag-${n.tag}">${tagLabels[n.tag] || n.tag}</span>
+      <div class="news-title">${n.title}</div>
+      <div class="news-meta">
+        <span class="news-src">${n.src}</span>
+        <span>${timeAgo(n.date)}</span>
+      </div>
+    </a>`).join('');
+}
+
+function filterNews(tag, btn) {
+  document.querySelectorAll('.nf-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderNews(tag);
+}
+
 // ── MAIN LOAD ────────────────────────────────────────────────────────────────
 async function loadAll() {
   checkMarket();
   fetchNifty();
-
   const data = await fetchTrades();
   if (!data) return;
-
   renderStats(data);
   renderChart(data);
   renderSignal(data);
   renderLog(data);
   renderTrades(data);
   renderCalendar(data);
-
   document.getElementById('last-update').textContent = 'Updated ' + new Date().toLocaleTimeString();
 }
 
 // Boot
 loadAll();
+loadIndices();
+loadNews();
 setInterval(loadAll, 60000);
+setInterval(loadIndices, 300000);  // refresh indices every 5 min
+setInterval(loadNews, 600000);     // refresh news every 10 min
 setInterval(() => {
   document.getElementById('footer-time').textContent = new Date().toLocaleTimeString();
 }, 1000);
