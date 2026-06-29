@@ -9,7 +9,7 @@ import subprocess, sys
 subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "flask", "kiteconnect", "pandas", "numpy", "yfinance"])
 
 from flask import Flask, render_template
-import sqlite3, threading, time, os, calendar
+import sqlite3, threading, time, os, calendar, json
 from datetime import datetime, date, timedelta
 import pandas as pd
 import numpy as np
@@ -35,12 +35,13 @@ BROKERAGE      = 20
 
 # Shared state (bot thread writes, Flask reads)
 state = {
-    "nifty_price": "--",
-    "score": 0,
+    "nifty_price":    "--",
+    "score":          0,
+    "score_breakdown": {},
     "open_positions": [],
-    "daily_pnl": 0.0,
-    "market_open": False,
-    "log": [],
+    "daily_pnl":      0.0,
+    "market_open":    False,
+    "log":            [],
 }
 
 # ── DATABASE ──────────────────────────────────────────────────────────────────
@@ -96,14 +97,14 @@ def macd(series, fast=12, slow=26, signal=9):
     return m_line, s_line
 
 def confidence_score(row, prev):
-    score = 0
-    if row["rsi"] < 45:                                                   score += 20
-    if prev["macd"] < prev["macd_sig"] and row["macd"] > row["macd_sig"]: score += 15
-    if row["volume"] > row["vol_avg"] * 1.2:                              score += 5
-    if row["sma20"] > row["sma50"] > row["sma200"]:                       score += 20
-    if row["close"] > row["sma50"]:                                        score += 10
-    if row["sma20"] > prev["sma20"]:                                       score += 5
-    return score
+    bd = {"rsi": 0, "macd": 0, "vol": 0, "sma": 0, "price": 0, "slope": 0}
+    if row["rsi"] < 45:                                                    bd["rsi"]   = 20
+    if prev["macd"] < prev["macd_sig"] and row["macd"] > row["macd_sig"]: bd["macd"]  = 15
+    if row["volume"] > row["vol_avg"] * 1.2:                               bd["vol"]   = 5
+    if row["sma20"] > row["sma50"] > row["sma200"]:                        bd["sma"]   = 20
+    if row["close"] > row["sma50"]:                                         bd["price"] = 10
+    if row["sma20"] > prev["sma20"]:                                        bd["slope"] = 5
+    return sum(bd.values()), bd
 
 # ── MARKET DATA ───────────────────────────────────────────────────────────────
 def fetch_candles():
@@ -145,6 +146,60 @@ def bot_log(msg, cls=""):
     state["log"] = state["log"][:50]   # keep last 50 lines
     print(f"[{entry['time']}] {msg}")
 
+# ── VERCEL SYNC ──────────────────────────────────────────────────────────────
+def sync_to_vercel():
+    """Write trades.json and push to GitHub → Vercel redeploys in ~15 seconds."""
+    try:
+        conn = get_db()
+        rows = [dict(r) for r in conn.execute("SELECT * FROM trades ORDER BY id").fetchall()]
+        conn.close()
+
+        wins   = [t for t in rows if t["pnl"] > 0]
+        losses = [t for t in rows if t["pnl"] <= 0]
+        total  = sum(t["pnl"] for t in rows)
+
+        daily = {}
+        for t in rows:
+            daily[t["date"]] = round(daily.get(t["date"], 0) + t["pnl"], 0)
+
+        payload = {
+            "last_updated":    datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "summary": {
+                "total_trades": len(rows),
+                "wins":         len(wins),
+                "losses":       len(losses),
+                "win_rate":     round(len(wins) / len(rows) * 100, 1) if rows else 0,
+                "total_pnl":    round(total, 0),
+                "avg_win":      round(sum(t["pnl"] for t in wins)   / len(wins),   0) if wins   else 0,
+                "avg_loss":     round(sum(t["pnl"] for t in losses) / len(losses), 0) if losses else 0,
+            },
+            "trades":          rows,
+            "daily_pnl":       daily,
+            "current_score":   state["score"],
+            "score_breakdown": state["score_breakdown"],
+            "bot_log":         state["log"][:20],
+        }
+
+        web_json = os.path.join(os.path.dirname(os.path.abspath(__file__)), "web", "trades.json")
+        with open(web_json, "w") as f:
+            json.dump(payload, f, indent=2, default=str)
+
+        proj = os.path.dirname(os.path.abspath(__file__))
+        subprocess.run(["git", "add", "web/trades.json"], cwd=proj, capture_output=True)
+        r = subprocess.run(["git", "commit", "-m", f"bot: sync {datetime.now().strftime('%H:%M')}"], cwd=proj, capture_output=True)
+        if b"nothing to commit" in r.stdout:
+            return  # no change, skip push
+        push = subprocess.run(["git", "push", "origin", "main"], cwd=proj, capture_output=True)
+        if push.returncode == 0:
+            bot_log("Synced to Vercel — live in ~15s", "ok")
+        else:
+            bot_log(f"Vercel sync failed: {push.stderr.decode()[:80]}", "err")
+    except Exception as e:
+        bot_log(f"Vercel sync error: {e}", "err")
+
+def sync_background():
+    threading.Thread(target=sync_to_vercel, daemon=True).start()
+
 # ── BOT THREAD ────────────────────────────────────────────────────────────────
 def bot_loop():
     init_db()
@@ -165,9 +220,10 @@ def bot_loop():
 
     bot_log(f"Bot started | PAPER TRADE | Threshold: {THRESHOLD}", "info")
 
-    positions = []
-    daily_pnl = 0.0
-    today     = date.today()
+    positions  = []
+    daily_pnl  = 0.0
+    today      = date.today()
+    last_sync  = 0   # epoch time of last periodic sync
 
     while True:
         if date.today() != today:
@@ -211,30 +267,39 @@ def bot_loop():
                     daily_pnl += pnl
                     bot_log(f"STOP LOSS | Entry:{pos['entry']:.0f} Exit:{price:.0f} P&L:Rs.{pnl:.0f}", "err")
                     closed.append(pos)
+                    sync_background()
                 elif pnl >= TAKE_PROFIT:
                     pnl = TAKE_PROFIT
                     save_trade(pos["score"], pos["entry"], price, pnl, "TAKE_PROFIT")
                     daily_pnl += pnl
                     bot_log(f"TAKE PROFIT | Entry:{pos['entry']:.0f} Exit:{price:.0f} P&L:Rs.{pnl:.0f}", "ok")
                     closed.append(pos)
+                    sync_background()
             for pos in closed:
                 positions.remove(pos)
 
             # Check for new entry
-            df    = fetch_candles()
-            row   = df.iloc[-1]
-            prev  = df.iloc[-2]
-            score = confidence_score(row, prev)
+            df          = fetch_candles()
+            row         = df.iloc[-1]
+            prev        = df.iloc[-2]
+            score, bkdn = confidence_score(row, prev)
 
-            state["score"]          = score
-            state["open_positions"] = len(positions)
-            state["daily_pnl"]      = round(daily_pnl, 0)
+            state["score"]           = score
+            state["score_breakdown"] = bkdn
+            state["open_positions"]  = len(positions)
+            state["daily_pnl"]       = round(daily_pnl, 0)
 
             if len(positions) < MAX_POSITIONS and score >= THRESHOLD:
                 positions.append({"entry": price, "score": score})
                 bot_log(f"[PAPER] BUY CE | NIFTY:{price:.0f} Score:{score} Pos:{len(positions)}/2", "ok")
+                sync_background()
             else:
                 bot_log(f"NIFTY:{price:.0f} Score:{score}/75 Pos:{len(positions)}/2 Daily:Rs.{daily_pnl:.0f}")
+
+            # Sync score/log to Vercel every 30 minutes even without a trade
+            if time.time() - last_sync > 1800:
+                sync_background()
+                last_sync = time.time()
 
         except Exception as e:
             bot_log(f"Error: {e}", "err")
