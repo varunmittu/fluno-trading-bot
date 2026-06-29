@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29 00:00",
+  "last_updated": "2026-06-30 00:00",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -14,5 +14,8 @@
   "current_score": 0,
   "score_breakdown": { "rsi": 0, "macd": 0, "vol": 0, "sma": 0, "price": 0, "slope": 0 },
   "open_positions": 0,
-  "bot_log": []
+  "bot_log": [],
+  "vix": null,
+  "supertrend_bullish": null,
+  "oi_nifty": null
 }

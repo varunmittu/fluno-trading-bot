@@ -306,6 +306,57 @@
     .tv-title { font-size: 13px; font-weight: 700; color: var(--text); }
     .tv-sub   { font-size: 11px; color: var(--muted); margin-top: 1px; }
     .live-dot { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; color: var(--green); }
+    /* Timeframe toolbar */
+    .tv-toolbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 0 18px; flex-wrap: wrap; gap: 12px;
+    }
+    .tf-group { display: flex; gap: 6px; }
+    .tf-btn {
+      padding: 5px 14px; border-radius: 7px; font-size: 12px; font-weight: 600;
+      border: 1px solid var(--border); background: var(--surface); color: var(--muted);
+      cursor: pointer; font-family: var(--font); transition: all 0.2s;
+    }
+    .tf-btn:hover  { border-color: var(--blue); color: var(--blue); background: var(--blue-bg); }
+    .tf-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .study-tags { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+    .study-tag {
+      padding: 3px 10px; border-radius: 5px; font-size: 11px; font-weight: 700;
+      background: var(--blue-bg); color: var(--blue); border: 1px solid #bfcfff; letter-spacing: 0.2px;
+    }
+
+    /* ── OPTION CHAIN ───────────────────────────────────────────────── */
+    .oc-summary {
+      display: grid; grid-template-columns: repeat(6,1fr); gap: 14px; margin-bottom: 24px;
+    }
+    .oc-stat {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 18px 20px; box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .oc-stat:hover { box-shadow: var(--shadow); transform: translateY(-1px); }
+    .oc-label { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+    .oc-val   { font-size: 22px; font-weight: 800; color: var(--text); font-family: var(--mono); margin-top: 6px; letter-spacing: -0.5px; }
+    .oc-note  { font-size: 10px; color: var(--muted2); margin-top: 4px; line-height: 1.4; }
+    .oc-ce-col { color: var(--green) !important; }
+    .oc-pe-col { color: var(--red) !important; }
+    .oc-atm-row td { background: var(--blue-bg) !important; font-weight: 700; }
+    .oc-nse-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 22px; border-radius: 9px; font-size: 13px; font-weight: 600;
+      color: var(--blue); border: 1px solid #bfcfff; background: var(--blue-bg);
+      text-decoration: none; transition: all 0.2s; margin-top: 16px;
+    }
+    .oc-nse-link:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .oc-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+    .oc-tab {
+      padding: 6px 18px; border-radius: 20px; font-size: 12px; font-weight: 600;
+      border: 1px solid var(--border); background: var(--surface); color: var(--muted);
+      cursor: pointer; font-family: var(--font); transition: all 0.2s;
+    }
+    .oc-tab.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    @media (max-width: 1200px) { .oc-summary { grid-template-columns: repeat(3,1fr); } }
+    @media (max-width: 768px)  { .oc-summary { grid-template-columns: repeat(2,1fr); } }
 
     /* ── TABLE ──────────────────────────────────────────────────────── */
     .table-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); overflow: hidden; }
@@ -516,8 +567,9 @@
   </a>
 
   <nav id="main-nav">
-    <a href="#overview"  class="active">Overview</a>
+    <a href="#overview"     class="active">Overview</a>
     <a href="#charts">Charts</a>
+    <a href="#optionchain">Option Chain</a>
     <a href="#portfolio">Portfolio</a>
     <a href="#calendar">Calendar</a>
     <a href="#markets">Markets</a>
@@ -707,29 +759,136 @@
         <div class="s-icon" style="background:var(--blue-bg)">📈</div>
         Live Charts
       </div>
-      <div class="section-meta">NSE · 5 Min · RSI + MACD indicators</div>
+      <div class="section-meta">NSE · Real-time tick data · RSI + MACD + Volume</div>
     </div>
+
+    <!-- Timeframe + Study toolbar -->
+    <div class="tv-toolbar">
+      <div>
+        <div style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Timeframe</div>
+        <div class="tf-group">
+          <button class="tf-btn"        onclick="setTVInterval('1','1m',this)">1m</button>
+          <button class="tf-btn"        onclick="setTVInterval('3','3m',this)">3m</button>
+          <button class="tf-btn active" onclick="setTVInterval('5','5m',this)">5m</button>
+          <button class="tf-btn"        onclick="setTVInterval('15','15m',this)">15m</button>
+          <button class="tf-btn"        onclick="setTVInterval('30','30m',this)">30m</button>
+          <button class="tf-btn"        onclick="setTVInterval('60','1H',this)">1H</button>
+          <button class="tf-btn"        onclick="setTVInterval('D','1D',this)">D</button>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Active Studies</div>
+        <div class="study-tags">
+          <span class="study-tag">RSI</span>
+          <span class="study-tag">MACD</span>
+          <span class="study-tag">Volume</span>
+          <span class="study-tag" style="background:var(--green-bg);color:var(--green);border-color:var(--green-b)">Supertrend</span>
+          <span class="study-tag" style="background:var(--gold-bg);color:var(--gold);border-color:#fcd34d">VWAP</span>
+          <span class="study-tag" style="background:var(--purple-bg);color:var(--purple);border-color:#c4b5fd">Bollinger</span>
+        </div>
+      </div>
+      <div style="font-size:11px;color:var(--muted);text-align:right;line-height:1.6">
+        Charts update <strong style="color:var(--green)">tick-by-tick</strong> during market hours<br>
+        powered by TradingView
+      </div>
+    </div>
+
     <div class="tv-grid">
       <div class="tv-card">
         <div class="tv-header">
           <div>
             <div class="tv-title">NIFTY 50</div>
-            <div class="tv-sub">NSE:NIFTY · 5 Min</div>
+            <div class="tv-sub" id="tv-sub-nifty">NSE:NIFTY · 5m</div>
           </div>
           <div class="live-dot"><span class="dot dot-green"></span>Live</div>
         </div>
-        <div id="tv_nifty" style="height:420px"></div>
+        <div id="tv_nifty" style="height:440px"></div>
       </div>
       <div class="tv-card">
         <div class="tv-header">
           <div>
             <div class="tv-title">Bank Nifty</div>
-            <div class="tv-sub">NSE:BANKNIFTY · 5 Min</div>
+            <div class="tv-sub" id="tv-sub-banknifty">NSE:BANKNIFTY · 5m</div>
           </div>
           <div class="live-dot"><span class="dot dot-green"></span>Live</div>
         </div>
-        <div id="tv_banknifty" style="height:420px"></div>
+        <div id="tv_banknifty" style="height:440px"></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════ OPTION CHAIN ══════════════════════ -->
+<section id="optionchain">
+  <div class="page-section">
+    <div class="section-header">
+      <div class="section-title">
+        <div class="s-icon" style="background:var(--purple-bg)">⛓️</div>
+        Option Chain
+      </div>
+      <div class="section-meta" id="oc-updated">Synced from bot during market hours</div>
+    </div>
+
+    <!-- PCR / Max Pain / VIX / Supertrend summary -->
+    <div class="oc-summary">
+      <div class="oc-stat">
+        <div class="oc-label">Put-Call Ratio (PCR)</div>
+        <div class="oc-val" id="oc-pcr">—</div>
+        <div class="oc-note" id="oc-pcr-note">Market sentiment indicator</div>
+      </div>
+      <div class="oc-stat">
+        <div class="oc-label">Max Pain</div>
+        <div class="oc-val" id="oc-maxpain">—</div>
+        <div class="oc-note">Options expire worthless at this strike</div>
+      </div>
+      <div class="oc-stat">
+        <div class="oc-label">CE OI Total</div>
+        <div class="oc-val oc-ce-col" id="oc-ce-oi">—</div>
+        <div class="oc-note">Call side open interest</div>
+      </div>
+      <div class="oc-stat">
+        <div class="oc-label">PE OI Total</div>
+        <div class="oc-val oc-pe-col" id="oc-pe-oi">—</div>
+        <div class="oc-note">Put side open interest</div>
+      </div>
+      <div class="oc-stat">
+        <div class="oc-label">Supertrend</div>
+        <div class="oc-val" id="oc-st">—</div>
+        <div class="oc-note">Bot trend filter (7,3)</div>
+      </div>
+      <div class="oc-stat">
+        <div class="oc-label">India VIX</div>
+        <div class="oc-val" id="oc-vix">—</div>
+        <div class="oc-note">Bot blocks entry above 25</div>
+      </div>
+    </div>
+
+    <!-- Symbol tabs -->
+    <div class="oc-tabs">
+      <button class="oc-tab active" onclick="switchOCTab('nifty',this)">NIFTY 50</button>
+      <button class="oc-tab" onclick="switchOCTab('banknifty',this)">Bank Nifty</button>
+    </div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:12px">
+      Showing ATM ± 5 strikes · Nearest expiry · <strong>ATM row highlighted blue</strong>
+    </div>
+
+    <!-- Option chain table -->
+    <div class="table-card" id="oc-table-wrap">
+      <div class="empty-msg" style="padding:56px">
+        Option chain data will appear here after the bot syncs during market hours (9:15 AM – 3:20 PM).
+        <br><span style="font-size:12px;color:var(--muted2);margin-top:8px;display:block">Bot fetches NIFTY option chain every 5 minutes and includes it in the live sync.</span>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:16px">
+      <a class="oc-nse-link" href="https://www.nseindia.com/option-chain" target="_blank" rel="noopener noreferrer">
+        View Full Option Chain on NSE India ↗
+      </a>
+      <a class="oc-nse-link" href="https://www.nseindia.com/option-chain" target="_blank" rel="noopener noreferrer" style="margin-left:10px;background:var(--red-bg);color:var(--red);border-color:var(--red-b)">
+        Bank Nifty Option Chain ↗
+      </a>
     </div>
   </div>
 </section>
@@ -937,7 +1096,7 @@
 
     <!-- Indicator breakdown -->
     <div style="margin-top:28px">
-      <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:14px">Signal Indicators (75 pts max)</div>
+      <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:14px">Signal Indicators (75 pts max) + Filters</div>
       <div class="indicator-grid">
         <div class="ind-card">
           <div class="ind-name">RSI &lt; 45</div>
@@ -968,6 +1127,26 @@
           <div class="ind-name">Volume Spike</div>
           <div class="ind-pts">5 pts</div>
           <div class="ind-desc">Volume &gt; 1.2× 20-day average confirms institutional participation.</div>
+        </div>
+      </div>
+
+      <!-- Extra filters -->
+      <div style="font-size:13px;font-weight:700;color:var(--text);margin:24px 0 14px">Additional Filters (block entry, no score impact)</div>
+      <div class="indicator-grid">
+        <div class="ind-card" style="border-color:var(--green-b);background:var(--green-bg)">
+          <div class="ind-name" style="color:var(--green)">Supertrend Filter</div>
+          <div class="ind-pts" style="color:var(--green)">Required</div>
+          <div class="ind-desc">Supertrend(7,3) must be bullish. If bearish, bot skips new entries even if score ≥ 55. Most-used trend filter in Indian markets.</div>
+        </div>
+        <div class="ind-card" style="border-color:var(--red-b);background:var(--red-bg)">
+          <div class="ind-name" style="color:var(--red)">VIX Filter</div>
+          <div class="ind-pts" style="color:var(--red)">VIX &lt; 25</div>
+          <div class="ind-desc">India VIX above 25 signals extreme fear/volatility. Bot pauses all new entries. Existing positions still monitored for stop-loss.</div>
+        </div>
+        <div class="ind-card" style="border-color:#fcd34d;background:var(--gold-bg)">
+          <div class="ind-name" style="color:var(--gold)">Trailing Stop-Loss</div>
+          <div class="ind-pts" style="color:var(--gold)">+₹400 / +₹700</div>
+          <div class="ind-desc">Once profit hits ₹400 → stop moves to break-even. At ₹700 → stop locks in ₹200. Protects gains while letting winners run.</div>
         </div>
       </div>
     </div>
@@ -1347,38 +1526,156 @@ function filterNews(tag, btn) {
 }
 
 // ── TRADINGVIEW ───────────────────────────────────────────────────────────────
-function initCharts() {
-  if (typeof TradingView === 'undefined') { setTimeout(initCharts, 500); return; }
+let tvCurrentInterval = '5';
+let tvCurrentLabel    = '5m';
+
+function buildTVCharts(interval, dark) {
+  ['tv_nifty','tv_banknifty'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = '';
+  });
+  if (typeof TradingView === 'undefined') return;
   const base = {
-    width:'100%', height:420, interval:'5',
-    timezone:'Asia/Kolkata', theme:'light', style:'1', locale:'en',
-    enable_publishing:false, hide_top_toolbar:false, save_image:false,
-    studies:['RSI@tv-basicstudies','MACD@tv-basicstudies'],
+    width:'100%', height:440, interval: interval,
+    timezone:'Asia/Kolkata', theme: dark ? 'dark' : 'light',
+    style:'1', locale:'en', enable_publishing:false,
+    hide_top_toolbar:false, save_image:false, withdateranges:true,
+    studies:[
+      'RSI@tv-basicstudies',
+      'MACD@tv-basicstudies',
+      'Volume@tv-basicstudies',
+      'BB@tv-basicstudies',
+      'VWAP@tv-basicstudies',
+      'Supertrend@tv-basicstudies',
+    ],
     overrides:{
-      'paneProperties.background':                        '#ffffff',
+      'paneProperties.background':                        dark ? '#0f1120' : '#ffffff',
       'paneProperties.backgroundType':                    'solid',
       'scalesProperties.textColor':                       '#6b7a99',
-      'mainSeriesProperties.candleStyle.upColor':         '#0a7c52',
-      'mainSeriesProperties.candleStyle.downColor':       '#c81e1e',
-      'mainSeriesProperties.candleStyle.borderUpColor':   '#0a7c52',
-      'mainSeriesProperties.candleStyle.borderDownColor': '#c81e1e',
-      'mainSeriesProperties.candleStyle.wickUpColor':     '#0a7c52',
-      'mainSeriesProperties.candleStyle.wickDownColor':   '#c81e1e',
+      'mainSeriesProperties.candleStyle.upColor':         dark ? '#00e676' : '#0a7c52',
+      'mainSeriesProperties.candleStyle.downColor':       dark ? '#ff1744' : '#c81e1e',
+      'mainSeriesProperties.candleStyle.borderUpColor':   dark ? '#00e676' : '#0a7c52',
+      'mainSeriesProperties.candleStyle.borderDownColor': dark ? '#ff1744' : '#c81e1e',
+      'mainSeriesProperties.candleStyle.wickUpColor':     dark ? '#00e676' : '#0a7c52',
+      'mainSeriesProperties.candleStyle.wickDownColor':   dark ? '#ff1744' : '#c81e1e',
     }
   };
   new TradingView.widget({...base, container_id:'tv_nifty',     symbol:'NSE:NIFTY'});
   new TradingView.widget({...base, container_id:'tv_banknifty', symbol:'NSE:BANKNIFTY'});
+  document.getElementById('tv-sub-nifty').textContent     = `NSE:NIFTY · ${interval === 'D' ? '1D' : interval+'m'}`;
+  document.getElementById('tv-sub-banknifty').textContent = `NSE:BANKNIFTY · ${interval === 'D' ? '1D' : interval+'m'}`;
+}
+
+function setTVInterval(interval, label, btn) {
+  tvCurrentInterval = interval;
+  tvCurrentLabel    = label;
+  document.querySelectorAll('.tf-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  buildTVCharts(interval, dark);
+}
+
+function initCharts() {
+  if (typeof TradingView === 'undefined') { setTimeout(initCharts, 500); return; }
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  buildTVCharts(tvCurrentInterval, dark);
+}
+
+// ── OPTION CHAIN RENDERER ─────────────────────────────────────────────────────
+let ocCurrentSymbol = 'nifty';
+function switchOCTab(sym, btn) {
+  ocCurrentSymbol = sym;
+  document.querySelectorAll('.oc-tab').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+}
+
+function renderOptionChain(data) {
+  // Summary cards
+  const oi  = data.oi_nifty;
+  const vix = data.vix;
+  const st  = data.supertrend_bullish;
+
+  const stEl = document.getElementById('oc-st');
+  if (st === true)       { stEl.textContent = 'Bullish'; stEl.style.color = 'var(--green)'; }
+  else if (st === false) { stEl.textContent = 'Bearish'; stEl.style.color = 'var(--red)'; }
+  else                   { stEl.textContent = '—';       stEl.style.color = 'var(--muted)'; }
+
+  const vixEl = document.getElementById('oc-vix');
+  if (vix) {
+    vixEl.textContent = vix.toFixed(2);
+    vixEl.style.color = vix > 25 ? 'var(--red)' : vix > 18 ? 'var(--gold)' : 'var(--green)';
+  }
+
+  if (!oi) {
+    document.getElementById('oc-table-wrap').innerHTML =
+      '<div class="empty-msg" style="padding:56px">Option chain data will appear here after the bot syncs during market hours.<br><span style="font-size:12px;color:var(--muted2)">Bot fetches NIFTY chain every 5 minutes.</span></div>';
+    return;
+  }
+
+  const pcr = oi.pcr;
+  const pcrEl = document.getElementById('oc-pcr');
+  pcrEl.textContent = pcr ? pcr.toFixed(2) : '—';
+  pcrEl.style.color = pcr > 1.2 ? 'var(--green)' : pcr < 0.8 ? 'var(--red)' : 'var(--gold)';
+  document.getElementById('oc-pcr-note').textContent =
+    pcr > 1.2 ? 'Bullish — more puts than calls' :
+    pcr < 0.8 ? 'Bearish — more calls than puts' : 'Neutral sentiment';
+
+  document.getElementById('oc-maxpain').textContent  = oi.max_pain ? oi.max_pain.toLocaleString('en-IN') : '—';
+  document.getElementById('oc-ce-oi').textContent    = oi.ce_oi_total ? (oi.ce_oi_total/100000).toFixed(1)+'L' : '—';
+  document.getElementById('oc-pe-oi').textContent    = oi.pe_oi_total ? (oi.pe_oi_total/100000).toFixed(1)+'L' : '—';
+  document.getElementById('oc-updated').textContent  = 'Synced from bot · ' + (data.last_updated || '');
+
+  const atm  = oi.atm_strike;
+  const rows = (oi.strikes || []).map(s => {
+    const isAtm = s.strike === atm;
+    const fmtOI = v => v ? (v/100000).toFixed(1)+'L' : '—';
+    const fmtChg = v => {
+      if (!v) return '<span style="color:var(--muted)">—</span>';
+      const col = v > 0 ? 'var(--green)' : 'var(--red)';
+      return `<span style="color:${col}">${v>0?'+':''}${(v/100000).toFixed(1)}L</span>`;
+    };
+    const rowClass = isAtm ? 'oc-atm-row' : '';
+    return `<tr class="${rowClass}">
+      <td style="font-family:var(--mono);color:var(--green)">${fmtOI(s.ce_oi)}</td>
+      <td>${fmtChg(s.ce_oi_chg)}</td>
+      <td style="font-family:var(--mono);color:var(--muted)">${s.ce_iv ? s.ce_iv.toFixed(1)+'%' : '—'}</td>
+      <td style="font-family:var(--mono);font-weight:700;color:var(--green)">${s.ce_ltp || '—'}</td>
+      <td style="font-family:var(--mono);font-weight:800;font-size:14px;text-align:center;color:${isAtm?'var(--blue)':'var(--text)'}">
+        ${s.strike.toLocaleString('en-IN')}${isAtm ? '<br><span style="font-size:10px;color:var(--blue);font-weight:700">ATM</span>' : ''}
+      </td>
+      <td style="font-family:var(--mono);font-weight:700;color:var(--red)">${s.pe_ltp || '—'}</td>
+      <td style="font-family:var(--mono);color:var(--muted)">${s.pe_iv ? s.pe_iv.toFixed(1)+'%' : '—'}</td>
+      <td>${fmtChg(s.pe_oi_chg)}</td>
+      <td style="font-family:var(--mono);color:var(--red)">${fmtOI(s.pe_oi)}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('oc-table-wrap').innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4" style="text-align:center;color:var(--green);background:var(--green-bg)">CALL OPTIONS (CE)</th>
+          <th style="text-align:center;background:var(--blue-bg);color:var(--blue)">STRIKE</th>
+          <th colspan="4" style="text-align:center;color:var(--red);background:var(--red-bg)">PUT OPTIONS (PE)</th>
+        </tr>
+        <tr>
+          <th>OI</th><th>OI Change</th><th>IV</th><th>LTP</th>
+          <th style="background:var(--blue-bg)">Strike</th>
+          <th>LTP</th><th>IV</th><th>OI Change</th><th>OI</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>`;
 }
 
 // ── MAIN LOAD ─────────────────────────────────────────────────────────────────
 async function loadAll() {
   checkMarket();
-  updateTicker('^NSEI',    'nifty-price', 'nifty-chg');
-  updateTicker('^NSEBANK', 'bank-price',  'bank-chg');
   const data = await fetchTrades();
   if (!data) return;
   renderStats(data); renderChart(data); renderSignal(data);
   renderLog(data);   renderTrades(data); renderCalendar(data);
+  renderOptionChain(data);
   const ts = new Date().toLocaleTimeString('en-IN');
   document.getElementById('last-update').textContent = 'Updated ' + ts;
   document.getElementById('overview-meta').textContent = 'Last updated ' + ts;
@@ -1390,33 +1687,7 @@ async function loadAll() {
 function applyTheme(dark) {
   document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
   document.getElementById('theme-btn').textContent = dark ? '☀️' : '🌙';
-  // Reinitialise TradingView charts with matching theme
-  ['tv_nifty','tv_banknifty'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = '';
-  });
-  if (typeof TradingView !== 'undefined') {
-    const base = {
-      width:'100%', height:420, interval:'5',
-      timezone:'Asia/Kolkata', theme: dark ? 'dark' : 'light',
-      style:'1', locale:'en', enable_publishing:false,
-      hide_top_toolbar:false, save_image:false,
-      studies:['RSI@tv-basicstudies','MACD@tv-basicstudies'],
-      overrides:{
-        'paneProperties.background':                        dark ? '#0f1120' : '#ffffff',
-        'paneProperties.backgroundType':                    'solid',
-        'scalesProperties.textColor':                       dark ? '#6b7a99' : '#6b7a99',
-        'mainSeriesProperties.candleStyle.upColor':         dark ? '#00e676' : '#0a7c52',
-        'mainSeriesProperties.candleStyle.downColor':       dark ? '#ff1744' : '#c81e1e',
-        'mainSeriesProperties.candleStyle.borderUpColor':   dark ? '#00e676' : '#0a7c52',
-        'mainSeriesProperties.candleStyle.borderDownColor': dark ? '#ff1744' : '#c81e1e',
-        'mainSeriesProperties.candleStyle.wickUpColor':     dark ? '#00e676' : '#0a7c52',
-        'mainSeriesProperties.candleStyle.wickDownColor':   dark ? '#ff1744' : '#c81e1e',
-      }
-    };
-    new TradingView.widget({...base, container_id:'tv_nifty',     symbol:'NSE:NIFTY'});
-    new TradingView.widget({...base, container_id:'tv_banknifty', symbol:'NSE:BANKNIFTY'});
-  }
+  buildTVCharts(tvCurrentInterval, dark);
 }
 
 function toggleTheme() {
@@ -1437,20 +1708,32 @@ function toggleTheme() {
   }
 })();
 
+// ── SMART PRICE UPDATES (fast during market hours) ───────────────────────────
+function isMarketNow() {
+  const now = new Date(), ist = new Date(now.getTime() + 5.5*3600000);
+  const h=ist.getUTCHours(), m=ist.getUTCMinutes(), dow=ist.getUTCDay();
+  return dow>0&&dow<6 && (h>9||(h===9&&m>=15)) && (h<15||(h===15&&m<30));
+}
+function smartPricePoll() {
+  updateTicker('^NSEI',    'nifty-price', 'nifty-chg');
+  updateTicker('^NSEBANK', 'bank-price',  'bank-chg');
+  setTimeout(smartPricePoll, isMarketNow() ? 10000 : 120000);
+}
+
 // ── BOOT ──────────────────────────────────────────────────────────────────────
 loadAll();
 loadIndices();
 loadNews();
 initCharts();
+smartPricePoll();
 
-setInterval(loadAll,         60000);
-setInterval(loadIndices,    300000);
-setInterval(loadNews,       600000);
-setInterval(() => updateTicker('^NSEI',    'nifty-price','nifty-chg'), 30000);
-setInterval(() => updateTicker('^NSEBANK', 'bank-price', 'bank-chg'),  30000);
+setInterval(loadAll,      60000);
+setInterval(loadIndices, 300000);
+setInterval(loadNews,    600000);
 setInterval(() => {
   const t = new Date().toLocaleTimeString('en-IN');
   document.getElementById('footer-clock').textContent = t;
+  checkMarket();
 }, 1000);
 </script>
 </body>

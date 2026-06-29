@@ -6,11 +6,12 @@ Bot runs in background automatically.
 """
 
 import subprocess, sys
-subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "flask", "kiteconnect", "pandas", "numpy", "yfinance"])
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "flask", "kiteconnect", "pandas", "numpy", "yfinance", "requests"])
 
 from flask import Flask, render_template, jsonify
 import sqlite3, threading, time, os, calendar, json
 from datetime import datetime, date
+import requests as req_lib
 import pandas as pd
 import numpy as np
 import yfinance as yf
@@ -35,13 +36,16 @@ BROKERAGE      = 20
 
 # Shared state (bot thread writes, Flask reads)
 state = {
-    "nifty_price":    "--",
-    "score":          0,
-    "score_breakdown": {},
-    "open_positions": [],
-    "daily_pnl":      0.0,
-    "market_open":    False,
-    "log":            [],
+    "nifty_price":       "--",
+    "score":             0,
+    "score_breakdown":   {},
+    "open_positions":    [],
+    "daily_pnl":         0.0,
+    "market_open":       False,
+    "log":               [],
+    "vix":               None,
+    "supertrend_bullish": None,
+    "oi_nifty":          None,
 }
 
 # ── DATABASE ──────────────────────────────────────────────────────────────────
@@ -96,6 +100,41 @@ def macd(series, fast=12, slow=26, signal=9):
     s_line = m_line.ewm(span=signal).mean()
     return m_line, s_line
 
+def supertrend(df, period=7, multiplier=3):
+    """Returns a Series: 1 = bullish (price above band), -1 = bearish."""
+    high  = df['high'].values.astype(float)
+    low   = df['low'].values.astype(float)
+    close = df['close'].values.astype(float)
+    n     = len(df)
+
+    # Wilder ATR
+    tr  = np.zeros(n)
+    for i in range(1, n):
+        tr[i] = max(high[i]-low[i], abs(high[i]-close[i-1]), abs(low[i]-close[i-1]))
+    atr = np.zeros(n)
+    for i in range(period, n):
+        atr[i] = np.mean(tr[i-period+1:i+1]) if atr[i-1] == 0 else (atr[i-1]*(period-1)+tr[i])/period
+
+    hl2     = (high + low) / 2
+    basic_ub = hl2 + multiplier * atr
+    basic_lb = hl2 - multiplier * atr
+
+    final_ub  = basic_ub.copy()
+    final_lb  = basic_lb.copy()
+    direction = np.ones(n)
+
+    for i in range(1, n):
+        if atr[i] == 0:
+            direction[i] = direction[i-1]; continue
+        final_ub[i] = basic_ub[i] if basic_ub[i] < final_ub[i-1] or close[i-1] > final_ub[i-1] else final_ub[i-1]
+        final_lb[i] = basic_lb[i] if basic_lb[i] > final_lb[i-1] or close[i-1] < final_lb[i-1] else final_lb[i-1]
+        if direction[i-1] == 1:
+            direction[i] = 1 if close[i] >= final_lb[i] else -1
+        else:
+            direction[i] = -1 if close[i] <= final_ub[i] else 1
+
+    return pd.Series(direction, index=df.index)
+
 def confidence_score(row, prev):
     bd = {"rsi": 0, "macd": 0, "vol": 0, "sma": 0, "price": 0, "slope": 0}
     if row["rsi"] < 45:                                                    bd["rsi"]   = 20
@@ -119,6 +158,7 @@ def fetch_candles():
     df["macd"]    = m
     df["macd_sig"]= s
     df["vol_avg"] = df["volume"].rolling(20).mean()
+    df["st_dir"]  = supertrend(df)   # 1=bullish, -1=bearish
     return df.dropna().reset_index(drop=True)
 
 def fetch_live_price():
@@ -130,6 +170,88 @@ def fetch_live_price():
     except Exception:
         pass
     return None
+
+def fetch_vix():
+    try:
+        t = yf.Ticker("^INDIAVIX")
+        h = t.history(period="1d", interval="1m")
+        if len(h) > 0:
+            return round(float(h["Close"].iloc[-1]), 2)
+    except Exception:
+        pass
+    return None
+
+def fetch_nse_optionchain(symbol="NIFTY"):
+    """Fetch live option chain from NSE India (requires cookie init)."""
+    try:
+        s = req_lib.Session()
+        h = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "*/*",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Referer": "https://www.nseindia.com",
+        }
+        s.get("https://www.nseindia.com", headers=h, timeout=8)
+        url = f"https://www.nseindia.com/api/option-chain-indices?symbol={symbol.upper()}"
+        r   = s.get(url, headers=h, timeout=8)
+        if r.status_code == 200:
+            return r.json()
+    except Exception:
+        pass
+    return None
+
+def calculate_oi_metrics(data, spot_price):
+    """Compute PCR, Max Pain, ATM strikes from option chain JSON."""
+    if not data or "records" not in data:
+        return None
+    try:
+        records = data["records"]["data"]
+        expiry  = data["records"]["expiryDates"][0]
+        ce_tot = pe_tot = 0
+        rows = []
+        for rec in records:
+            if rec.get("expiryDate") != expiry:
+                continue
+            strike = rec.get("strikePrice", 0)
+            ce = rec.get("CE", {}) or {}
+            pe = rec.get("PE", {}) or {}
+            c_oi = ce.get("openInterest", 0) or 0
+            p_oi = pe.get("openInterest", 0) or 0
+            ce_tot += c_oi; pe_tot += p_oi
+            rows.append({
+                "strike":    strike,
+                "ce_oi":     c_oi,
+                "ce_oi_chg": ce.get("changeinOpenInterest", 0) or 0,
+                "ce_ltp":    ce.get("lastPrice", 0) or 0,
+                "ce_iv":     ce.get("impliedVolatility", 0) or 0,
+                "pe_oi":     p_oi,
+                "pe_oi_chg": pe.get("changeinOpenInterest", 0) or 0,
+                "pe_ltp":    pe.get("lastPrice", 0) or 0,
+                "pe_iv":     pe.get("impliedVolatility", 0) or 0,
+            })
+        if not rows:
+            return None
+        pcr = round(pe_tot / ce_tot, 2) if ce_tot > 0 else 0
+        # Max Pain: strike where combined options payoff is minimum
+        max_pain, min_pain = None, float("inf")
+        for r in rows:
+            pain = sum(max(0, x["strike"]-r["strike"])*x["ce_oi"] + max(0, r["strike"]-x["strike"])*x["pe_oi"] for x in rows)
+            if pain < min_pain:
+                min_pain = pain; max_pain = r["strike"]
+        # ATM ± 5 strikes
+        atm = min(rows, key=lambda x: abs(x["strike"] - spot_price))
+        idx = next(i for i, r in enumerate(rows) if r["strike"] == atm["strike"])
+        return {
+            "pcr":         pcr,
+            "max_pain":    max_pain,
+            "ce_oi_total": ce_tot,
+            "pe_oi_total": pe_tot,
+            "expiry":      expiry,
+            "atm_strike":  atm["strike"],
+            "strikes":     rows[max(0, idx-5):idx+6],
+        }
+    except Exception:
+        return None
 
 def is_market_open():
     now    = datetime.now()
@@ -163,7 +285,7 @@ def sync_to_vercel():
             daily[t["date"]] = round(daily.get(t["date"], 0) + t["pnl"], 0)
 
         payload = {
-            "last_updated":    datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "last_updated":       datetime.now().strftime("%Y-%m-%d %H:%M"),
             "summary": {
                 "total_trades": len(rows),
                 "wins":         len(wins),
@@ -173,12 +295,15 @@ def sync_to_vercel():
                 "avg_win":      round(sum(t["pnl"] for t in wins)   / len(wins),   0) if wins   else 0,
                 "avg_loss":     round(sum(t["pnl"] for t in losses) / len(losses), 0) if losses else 0,
             },
-            "trades":          rows,
-            "daily_pnl":       daily,
-            "current_score":   state["score"],
-            "score_breakdown": state["score_breakdown"],
-            "open_positions":  state["open_positions"],
-            "bot_log":         state["log"][:20],
+            "trades":             rows,
+            "daily_pnl":          daily,
+            "current_score":      state["score"],
+            "score_breakdown":    state["score_breakdown"],
+            "open_positions":     state["open_positions"],
+            "bot_log":            state["log"][:20],
+            "vix":                state.get("vix"),
+            "supertrend_bullish": state.get("supertrend_bullish"),
+            "oi_nifty":           state.get("oi_nifty"),
         }
 
         web_json = os.path.join(os.path.dirname(os.path.abspath(__file__)), "web", "trades.json")
@@ -301,11 +426,29 @@ def bot_loop():
 
             state["nifty_price"] = price
 
-            # Check open positions for stop-loss / take-profit
+            # Check open positions for stop-loss / take-profit / trailing stop
             closed = []
             for pos in positions:
                 move = (price - pos["entry"]) * DELTA * LOT
                 pnl  = move - BROKERAGE
+
+                # Activate trailing stop once Rs.400 profit is reached
+                if pnl >= 400 and pos.get("trail_stop") is None:
+                    pos["trail_stop"] = 0      # lock in break-even
+                    save_positions(positions)
+                    bot_log(f"Trail stop ON — protecting breakeven | P&L:Rs.{pnl:.0f}", "info")
+                elif pnl >= 700 and pos.get("trail_stop", -9999) < 200:
+                    pos["trail_stop"] = 200    # lock in Rs.200 profit
+                    save_positions(positions)
+                    bot_log(f"Trail stop raised to +Rs.200 | P&L:Rs.{pnl:.0f}", "info")
+
+                # Trail stop triggered
+                if pos.get("trail_stop") is not None and pnl <= pos["trail_stop"]:
+                    save_trade(pos["score"], pos["entry"], price, round(pnl, 2), "TRAIL_STOP")
+                    daily_pnl += pnl
+                    bot_log(f"TRAIL STOP | Entry:{pos['entry']:.0f} Exit:{price:.0f} P&L:Rs.{pnl:.0f}", "ok")
+                    closed.append(pos); sync_background(); continue
+
                 if pnl <= STOP_LOSS:
                     pnl = STOP_LOSS
                     save_trade(pos["score"], pos["entry"], price, pnl, "STOP_LOSS")
@@ -331,19 +474,44 @@ def bot_loop():
             prev        = df.iloc[-2]
             score, bkdn = confidence_score(row, prev)
 
+            # Supertrend direction (1=bullish, -1=bearish)
+            st_bullish = int(row["st_dir"]) == 1
+            state["supertrend_bullish"] = st_bullish
+
             state["score"]           = score
             state["score_breakdown"] = bkdn
             state["open_positions"]  = len(positions)
             state["daily_pnl"]       = round(daily_pnl, 0)
 
+            # VIX check — fetch once per loop, skip new entries if panic
+            vix = fetch_vix()
+            if vix:
+                state["vix"] = vix
+
+            # Option chain — fetch and cache for Vercel sync
+            oc = fetch_nse_optionchain("NIFTY")
+            if oc:
+                metrics = calculate_oi_metrics(oc, price)
+                if metrics:
+                    state["oi_nifty"] = metrics
+
+            # Entry decision: score + Supertrend + VIX filter
             if len(positions) < MAX_POSITIONS and score >= THRESHOLD:
-                positions.append({"entry": price, "score": score})
-                save_positions(positions)
-                action = "[PAPER] BUY CE" if PAPER_TRADE else "BUY CE"
-                bot_log(f"{action} | NIFTY:{price:.0f} Score:{score} Pos:{len(positions)}/2", "ok")
-                sync_background()
+                if state.get("vix") and state["vix"] > 25:
+                    bot_log(f"VIX={state['vix']:.1f} — high volatility, NO new entry | Score:{score}/75", "err")
+                elif not st_bullish:
+                    bot_log(f"Score:{score}/75 but Supertrend BEARISH — skipping entry", "err")
+                else:
+                    positions.append({"entry": price, "score": score, "trail_stop": None})
+                    save_positions(positions)
+                    action = "[PAPER] BUY CE" if PAPER_TRADE else "BUY CE"
+                    st_tag = "ST:Bullish"
+                    bot_log(f"{action} | NIFTY:{price:.0f} Score:{score}/75 {st_tag} Pos:{len(positions)}/2", "ok")
+                    sync_background()
             else:
-                bot_log(f"NIFTY:{price:.0f} Score:{score}/75 Pos:{len(positions)}/2 Daily:Rs.{daily_pnl:.0f}")
+                st_tag = "ST:Bull" if st_bullish else "ST:Bear"
+                vix_tag = f" VIX:{state['vix']:.1f}" if state.get("vix") else ""
+                bot_log(f"NIFTY:{price:.0f} Score:{score}/75 {st_tag}{vix_tag} Pos:{len(positions)}/2 Daily:Rs.{daily_pnl:.0f}")
 
             # Sync score/log to Vercel every 30 minutes even without a trade
             if time.time() - last_sync > 1800:
@@ -378,15 +546,34 @@ def api_positions():
 @app.route("/api/state")
 def api_state():
     return jsonify({
-        "nifty_price":    state["nifty_price"],
-        "score":          state["score"],
-        "score_breakdown":state["score_breakdown"],
-        "open_positions": state["open_positions"],
-        "daily_pnl":      state["daily_pnl"],
-        "market_open":    state["market_open"],
-        "log":            state["log"][:30],
-        "paper_trade":    PAPER_TRADE,
+        "nifty_price":       state["nifty_price"],
+        "score":             state["score"],
+        "score_breakdown":   state["score_breakdown"],
+        "open_positions":    state["open_positions"],
+        "daily_pnl":         state["daily_pnl"],
+        "market_open":       state["market_open"],
+        "log":               state["log"][:30],
+        "paper_trade":       PAPER_TRADE,
+        "vix":               state.get("vix"),
+        "supertrend_bullish":state.get("supertrend_bullish"),
     })
+
+@app.route("/api/optionchain/<symbol>")
+def api_optionchain(symbol):
+    data = fetch_nse_optionchain(symbol.upper())
+    if not data:
+        return jsonify({"error": "NSE option chain unavailable — market may be closed or NSE rate-limited."})
+    spot = state.get("nifty_price")
+    if isinstance(spot, (int, float)):
+        metrics = calculate_oi_metrics(data, spot)
+        if metrics:
+            return jsonify(metrics)
+    return jsonify({"error": "Could not calculate metrics"})
+
+@app.route("/api/vix")
+def api_vix():
+    v = fetch_vix()
+    return jsonify({"vix": v})
 
 # ── FLASK ROUTES ──────────────────────────────────────────────────────────────
 @app.route("/")
