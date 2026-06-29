@@ -6,38 +6,21 @@ Bot runs in background automatically.
 """
 
 import subprocess, sys
-subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "flask", "kiteconnect", "pandas", "numpy", "yfinance", "flask-limiter"])
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "flask", "kiteconnect", "pandas", "numpy", "yfinance"])
 
-from flask import Flask, render_template, request, redirect, session, url_for, jsonify
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
-import sqlite3, threading, time, os, calendar, json, secrets
-from datetime import datetime, date, timedelta
+from flask import Flask, render_template, jsonify
+import sqlite3, threading, time, os, calendar, json
+from datetime import datetime, date
 import pandas as pd
 import numpy as np
 import yfinance as yf
 from kiteconnect import KiteConnect
 
 app = Flask(__name__)
-app.secret_key = secrets.token_hex(32)
-
-# Rate limiter — blocks brute-force attacks
-limiter = Limiter(get_remote_address, app=app, default_limits=["200 per day", "60 per hour"])
-
-# Security headers on every response
-@app.after_request
-def security_headers(r):
-    r.headers["X-Frame-Options"]        = "DENY"
-    r.headers["X-Content-Type-Options"] = "nosniff"
-    r.headers["X-XSS-Protection"]       = "1; mode=block"
-    r.headers["Referrer-Policy"]        = "no-referrer"
-    r.headers["Cache-Control"]          = "no-store"
-    return r
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 API_KEY        = "your_api_key_here"  # paste from developers.kite.trade
 TOKEN_FILE     = "kite_token.txt"
-DASHBOARD_PASS = "fluno2026"          # change this to your own password
 PAPER_TRADE    = True
 THRESHOLD      = 55
 STOP_LOSS      = -150
@@ -194,6 +177,7 @@ def sync_to_vercel():
             "daily_pnl":       daily,
             "current_score":   state["score"],
             "score_breakdown": state["score_breakdown"],
+            "open_positions":  state["open_positions"],
             "bot_log":         state["log"][:20],
         }
 
@@ -235,12 +219,39 @@ def bot_loop():
     except Exception as e:
         bot_log(f"Kite connection failed: {e}", "err")
 
-    bot_log(f"Bot started | PAPER TRADE | Threshold: {THRESHOLD}", "info")
+    mode_label = "PAPER TRADE" if PAPER_TRADE else "LIVE TRADE"
+    bot_log(f"Bot started | {mode_label} | Threshold: {THRESHOLD}", "info")
 
-    positions  = []
+    # Restore open positions from disk (survives restarts)
+    POSITIONS_FILE = "open_positions.json"
+    def save_positions(pos):
+        with open(POSITIONS_FILE, "w") as f:
+            json.dump(pos, f)
+    def load_positions():
+        if os.path.exists(POSITIONS_FILE):
+            try:
+                with open(POSITIONS_FILE) as f:
+                    return json.load(f)
+            except Exception:
+                pass
+        return []
+
+    positions  = load_positions()
+    if positions:
+        bot_log(f"Restored {len(positions)} open position(s) from disk.", "info")
     daily_pnl  = 0.0
     today      = date.today()
     last_sync  = 0   # epoch time of last periodic sync
+
+    # Cache daily candles — refresh once per day only
+    _candle_cache = {"date": None, "df": None}
+    def get_candles():
+        today_str = date.today().isoformat()
+        if _candle_cache["date"] != today_str or _candle_cache["df"] is None:
+            bot_log("Fetching daily candles from Yahoo...", "info")
+            _candle_cache["df"]   = fetch_candles()
+            _candle_cache["date"] = today_str
+        return _candle_cache["df"]
 
     while True:
         if date.today() != today:
@@ -262,6 +273,23 @@ def bot_loop():
         if daily_pnl <= DAILY_LIMIT:
             bot_log(f"Daily loss limit hit (Rs.{daily_pnl:.0f}). Stopped for today.", "err")
             time.sleep(300)
+            continue
+
+        # EOD exit — force-close all positions at 3:20 PM
+        now_t = datetime.now()
+        eod   = now_t.replace(hour=15, minute=20, second=0, microsecond=0)
+        if positions and now_t >= eod:
+            price = fetch_live_price() or 0
+            for pos in positions:
+                move = (price - pos["entry"]) * DELTA * LOT
+                pnl  = round(move - BROKERAGE, 2)
+                save_trade(pos["score"], pos["entry"], price, pnl, "EOD_EXIT")
+                daily_pnl += pnl
+                bot_log(f"EOD EXIT | Entry:{pos['entry']:.0f} Exit:{price:.0f} P&L:Rs.{pnl:.0f}", "info")
+            positions.clear()
+            save_positions(positions)
+            sync_background()
+            time.sleep(60)
             continue
 
         try:
@@ -294,9 +322,11 @@ def bot_loop():
                     sync_background()
             for pos in closed:
                 positions.remove(pos)
+            if closed:
+                save_positions(positions)
 
-            # Check for new entry
-            df          = fetch_candles()
+            # Check for new entry (uses cached daily candles — only fetches once per day)
+            df          = get_candles()
             row         = df.iloc[-1]
             prev        = df.iloc[-2]
             score, bkdn = confidence_score(row, prev)
@@ -308,7 +338,9 @@ def bot_loop():
 
             if len(positions) < MAX_POSITIONS and score >= THRESHOLD:
                 positions.append({"entry": price, "score": score})
-                bot_log(f"[PAPER] BUY CE | NIFTY:{price:.0f} Score:{score} Pos:{len(positions)}/2", "ok")
+                save_positions(positions)
+                action = "[PAPER] BUY CE" if PAPER_TRADE else "BUY CE"
+                bot_log(f"{action} | NIFTY:{price:.0f} Score:{score} Pos:{len(positions)}/2", "ok")
                 sync_background()
             else:
                 bot_log(f"NIFTY:{price:.0f} Score:{score}/75 Pos:{len(positions)}/2 Daily:Rs.{daily_pnl:.0f}")
@@ -323,70 +355,15 @@ def bot_loop():
 
         time.sleep(CHECK_INTERVAL)
 
-# ── AUTH ──────────────────────────────────────────────────────────────────────
-def login_required(f):
-    from functools import wraps
-    @wraps(f)
-    def decorated(*args, **kwargs):
-        if not session.get("auth"):
-            return redirect(url_for("login"))
-        return f(*args, **kwargs)
-    return decorated
-
-@app.route("/login", methods=["GET", "POST"])
-@limiter.limit("10 per minute")
-def login():
-    error = ""
-    if request.method == "POST":
-        if request.form.get("password") == DASHBOARD_PASS:
-            session["auth"] = True
-            return redirect("/")
-        error = "Wrong password. Try again."
-    return f"""<!DOCTYPE html><html><head><title>Fluno — Login</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <style>
-      *{{box-sizing:border-box;margin:0;padding:0}}
-      body{{background:#08090f;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:'Segoe UI',sans-serif}}
-      .box{{background:#13161f;border:1px solid #1e2235;border-radius:16px;padding:40px;width:340px;text-align:center}}
-      .logo{{width:48px;height:48px;background:linear-gradient(135deg,#00e676,#448aff);border-radius:14px;
-             display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;
-             color:#000;margin:0 auto 16px}}
-      h2{{color:#fff;font-size:20px;margin-bottom:6px}}
-      p{{color:#5c6080;font-size:13px;margin-bottom:24px}}
-      input{{width:100%;padding:12px 16px;background:#0f1117;border:1px solid #1e2235;border-radius:10px;
-             color:#fff;font-size:15px;outline:none;margin-bottom:14px}}
-      input:focus{{border-color:#448aff}}
-      button{{width:100%;padding:12px;background:linear-gradient(135deg,#00e676,#448aff);
-              border:none;border-radius:10px;font-size:15px;font-weight:700;
-              color:#000;cursor:pointer}}
-      .err{{color:#ff1744;font-size:13px;margin-bottom:12px}}
-    </style></head><body>
-    <div class="box">
-      <div class="logo">F</div>
-      <h2>Fluno Trading Bot</h2>
-      <p>Enter your dashboard password</p>
-      {'<div class="err">' + error + '</div>' if error else ''}
-      <form method="post">
-        <input type="password" name="password" placeholder="Password" autofocus>
-        <button type="submit">Enter Dashboard</button>
-      </form>
-    </div></body></html>"""
-
-@app.route("/logout")
-def logout():
-    session.clear()
-    return redirect("/login")
-
 # ── LIVE KITE DATA API ────────────────────────────────────────────────────────
 @app.route("/api/positions")
-@login_required
 def api_positions():
     try:
         if not os.path.exists(TOKEN_FILE):
             return jsonify({"error": "No token"})
         with open(TOKEN_FILE) as f:
             token = f.read().strip()
-        kite = KiteConnect(api_key=state.get("api_key_real", API_KEY))
+        kite = KiteConnect(api_key=API_KEY)
         kite.set_access_token(token)
         pos = kite.positions()
         orders = kite.orders()
@@ -399,7 +376,6 @@ def api_positions():
         return jsonify({"error": str(e)})
 
 @app.route("/api/state")
-@login_required
 def api_state():
     return jsonify({
         "nifty_price":    state["nifty_price"],
@@ -414,7 +390,6 @@ def api_state():
 
 # ── FLASK ROUTES ──────────────────────────────────────────────────────────────
 @app.route("/")
-@login_required
 def dashboard():
     conn   = get_db()
     trades = conn.execute("SELECT * FROM trades ORDER BY id DESC LIMIT 50").fetchall()

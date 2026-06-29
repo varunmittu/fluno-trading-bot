@@ -1,6 +1,7 @@
 kite_token.txt
 config.py.txt
 trade_log.db
+open_positions.json
 __pycache__/
 *.pyc
 *.pyo

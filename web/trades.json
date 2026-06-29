@@ -1,18 +1,18 @@
-﻿{
-    "last_updated":  "2026-06-29",
-    "summary":  {
-                    "total_trades":  0,
-                    "wins":  0,
-                    "losses":  0,
-                    "win_rate":  0,
-                    "total_pnl":  0,
-                    "avg_win":  0,
-                    "avg_loss":  0
-                },
-    "trades":  [
-
-               ],
-    "daily_pnl":  {
-
-                  }
+{
+  "last_updated": "2026-06-29 00:00",
+  "summary": {
+    "total_trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0,
+    "total_pnl": 0,
+    "avg_win": 0,
+    "avg_loss": 0
+  },
+  "trades": [],
+  "daily_pnl": {},
+  "current_score": 0,
+  "score_breakdown": { "rsi": 0, "macd": 0, "vol": 0, "sma": 0, "price": 0, "slope": 0 },
+  "open_positions": 0,
+  "bot_log": []
 }

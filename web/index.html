@@ -647,7 +647,8 @@ function renderStats(data) {
   document.getElementById('s-total-pnl').textContent = `Rs. ${pnl}`;
 
   // Ticker
-  document.getElementById('open-pos').textContent   = '0 / 2';
+  const openPos = (data.open_positions !== undefined) ? data.open_positions : 0;
+  document.getElementById('open-pos').textContent = openPos + ' / 2';
   const todayKey = new Date().toISOString().split('T')[0];
   const todayPnl = (data.daily_pnl && data.daily_pnl[todayKey]) || 0;
   const tEl = document.getElementById('today-pnl');
