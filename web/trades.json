@@ -183,17 +183,47 @@
   "daily_pnl": {
     "2026-06-30": -261.0
   },
-  "current_score": 25,
+  "current_score": 30,
   "score_breakdown": {
     "rsi": 15,
     "macd": 0,
     "vol": 0,
     "sma": 10,
-    "price": 0,
+    "price": 5,
     "slope": 0
   },
-  "open_positions": 2,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "14:24:55",
+      "msg": "[PAPER] BUY PE BANKNIFTY 57600 @ \u20b9320.8 | Expiry:01 Jul 2026 Score:30/50 Pos:2/2",
+      "cls": "ok"
+    },
+    {
+      "time": "14:24:49",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:24:48",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "14:24:48",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:24:47",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:24:47",
+      "msg": "Trail ON (break-even) \u2014 NIFTY CE P&L:Rs.416",
+      "cls": "info"
+    },
     {
       "time": "14:24:45",
       "msg": "TRAIL STOP BANKNIFTY PE | P&L:Rs.189",
@@ -263,39 +293,9 @@
       "time": "14:09:22",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "14:09:20",
-      "msg": "NIFTY:23896(B:25/P:20) | BANKNIFTY:57528(B:15/P:30) | SENSEX:76690(B:33/P:12) VIX:13.5 Pos:2/2 Daily:Rs.-150",
-      "cls": ""
-    },
-    {
-      "time": "14:09:14",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:09:13",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:09:13",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:04:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:04:10",
-      "msg": "[PAPER] BUY CE SENSEX 76800 @ \u20b9427.1 | Expiry:03 Jul 2026 Score:33/50 Pos:2/2",
-      "cls": "ok"
     }
   ],
-  "vix": 13.56,
+  "vix": 13.4,
   "supertrend_bullish": false,
   "oi_nifty": null
 }
