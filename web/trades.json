@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-06-30 15:00",
+  "last_updated": "2026-06-30 15:01",
   "summary": {
-    "total_trades": 17,
+    "total_trades": 18,
     "wins": 2,
-    "losses": 15,
-    "win_rate": 11.8,
-    "total_pnl": -843.0,
+    "losses": 16,
+    "win_rate": 11.1,
+    "total_pnl": -1212.0,
     "avg_win": 695.0,
-    "avg_loss": -149.0
+    "avg_loss": -163.0
   },
   "trades": [
     {
@@ -230,124 +230,107 @@
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE"
+    },
+    {
+      "id": 18,
+      "date": "2026-06-30",
+      "time": "15:01",
+      "score": 25,
+      "entry": 23883.6,
+      "exit": 23848.65,
+      "pnl": -369.5,
+      "status": "TRAIL_STOP",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE"
     }
   ],
   "daily_pnl": {
-    "2026-06-30": -843.0
+    "2026-06-30": -1212.0
   },
-  "current_score": 30,
+  "current_score": 25,
   "score_breakdown": {
-    "rsi": 0,
-    "macd": 12,
+    "rsi": 15,
+    "macd": 0,
     "vol": 0,
     "sma": 10,
-    "price": 5,
-    "slope": 3
+    "price": 0,
+    "slope": 0
   },
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
     {
-      "time": "15:00:35",
-      "msg": "NIFTY:23872(B:15/P:30) | BANKNIFTY:57560(B:27/P:18) | SENSEX:76680(B:20/P:25) VIX:13.5 Pos:0/1 Daily:Rs.-132",
-      "cls": ""
+      "time": "15:01:26",
+      "msg": "TRAIL STOP NIFTY CE | P&L:Rs.-369",
+      "cls": "ok"
     },
     {
-      "time": "15:00:33",
+      "time": "14:56:26",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "15:00:32",
+      "time": "14:56:24",
+      "msg": "NIFTY:23941(B:20/P:25) | BANKNIFTY:57709(B:20/P:25) | SENSEX:76685(B:17/P:28) VIX:13.4 Pos:1/1 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:56:20",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "15:00:31",
+      "time": "14:56:19",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "15:00:30",
+      "time": "14:56:19",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "15:00:30",
-      "msg": "TRAIL STOP NIFTY CE | P&L:Rs.-132",
-      "cls": "ok"
-    },
-    {
-      "time": "14:55:31",
+      "time": "14:51:19",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "14:55:28",
-      "msg": "NIFTY:23939(B:35/P:10) | BANKNIFTY:57689(B:15/P:30) | SENSEX:76680(B:17/P:28) VIX:13.4 Pos:1/1 Daily:Rs.0",
+      "time": "14:51:17",
+      "msg": "NIFTY:23928(B:27/P:18) | BANKNIFTY:57666(B:12/P:33) | SENSEX:76678(B:17/P:28) VIX:13.4 Pos:1/1 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "14:55:24",
+      "time": "14:51:14",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "14:55:24",
+      "time": "14:51:13",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "14:55:23",
+      "time": "14:51:13",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "14:50:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:50:21",
-      "msg": "NIFTY:23937(B:35/P:10) | BANKNIFTY:57684(B:12/P:33) | SENSEX:76691(B:17/P:28) VIX:13.3 Pos:1/1 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:50:17",
-      "msg": "Fetching 5-min candles [^BSESN]...",
+      "time": "14:51:10",
+      "msg": "Restored 1 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "14:50:15",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "time": "14:51:10",
+      "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "14:50:14",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:45:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:45:11",
-      "msg": "NIFTY:23946(B:20/P:25) | BANKNIFTY:57704(B:20/P:25) | SENSEX:76682(B:17/P:28) VIX:13.3 Pos:1/1 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:45:07",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:45:07",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
+      "time": "14:51:10",
+      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
+      "cls": "err"
     }
   ],
-  "vix": 13.51,
+  "vix": 13.37,
   "supertrend_bullish": false,
   "oi_nifty": null
 }
