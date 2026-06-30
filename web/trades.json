@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 12:59",
+  "last_updated": "2026-06-30 13:01",
   "summary": {
     "total_trades": 2,
     "wins": 0,
@@ -40,89 +40,114 @@
   "daily_pnl": {
     "2026-06-30": -300.0
   },
-  "current_score": 30,
+  "current_score": 27,
   "score_breakdown": {
     "rsi": 0,
     "macd": 12,
     "vol": 0,
     "sma": 10,
     "price": 5,
-    "slope": 3
+    "slope": 0
   },
   "open_positions": 2,
   "bot_log": [
     {
-      "time": "12:59:06",
-      "msg": "NIFTY:23954(B:30/P:15) | BANKNIFTY:57769(B:17/P:28) | SENSEX:76753(B:30/P:15) VIX:13.4 Pos:2/2 Daily:Rs.-150",
+      "time": "13:01:49",
+      "msg": "NIFTY:23945(B:27/P:18) | BANKNIFTY:57730(B:27/P:18) | SENSEX:76764(B:30/P:15) VIX:13.4 Pos:2/2 Daily:Rs.-150",
       "cls": ""
     },
     {
-      "time": "12:59:01",
+      "time": "13:01:43",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "12:59:01",
+      "time": "13:01:42",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "12:59:00",
+      "time": "13:01:41",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "12:54:02",
+      "time": "12:56:43",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:53:59",
-      "msg": "[PAPER] BUY CE SENSEX 76800 @ \u20b9425.6 | Expiry:03 Jul 2026 Score:33/50 Pos:2/2",
+      "time": "12:56:41",
+      "msg": "[PAPER] BUY PE BANKNIFTY 57700 @ \u20b9321.4 | Expiry:01 Jul 2026 Score:33/50 Pos:2/2",
       "cls": "ok"
     },
     {
-      "time": "12:53:54",
+      "time": "12:56:36",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "12:56:35",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "12:53:53",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:53:52",
+      "time": "12:56:34",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "12:53:50",
+      "time": "12:56:33",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "12:53:50",
-      "msg": "STOP LOSS SENSEX PE | Entry:76660 Exit:76701",
+      "time": "12:56:33",
+      "msg": "STOP LOSS SENSEX PE | Entry:76660 Exit:76727",
       "cls": "err"
     },
     {
-      "time": "12:53:47",
+      "time": "12:51:35",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "12:51:33",
+      "msg": "NIFTY:23944(B:30/P:15) | BANKNIFTY:57756(B:17/P:28) | SENSEX:76649(B:28/P:17) VIX:13.4 Pos:2/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:51:28",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:51:28",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:51:27",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:51:26",
       "msg": "Restored 2 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "12:53:47",
+      "time": "12:51:24",
       "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "12:53:47",
+      "time": "12:51:24",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
   ],
-  "vix": 13.39,
+  "vix": 13.38,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
