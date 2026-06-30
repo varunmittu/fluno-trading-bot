@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 11:09",
+  "last_updated": "2026-06-30 11:14",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -11,17 +11,32 @@
   },
   "trades": [],
   "daily_pnl": {},
-  "current_score": 18,
+  "current_score": 10,
   "score_breakdown": {
     "rsi": 0,
     "macd": 0,
     "vol": 0,
     "sma": 10,
-    "price": 5,
-    "slope": 3
+    "price": 0,
+    "slope": 0
   },
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:14:18",
+      "msg": "NIFTY:23937 Bull:8/75 Bear:10/75 ST:Bear VIX:13.4 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:14:16",
+      "msg": "Fetching 5-min candles...",
+      "cls": "info"
+    },
+    {
+      "time": "11:09:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:09:16",
       "msg": "NIFTY:23883 Bull:0/75 Bear:18/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
@@ -43,7 +58,7 @@
       "cls": "err"
     }
   ],
-  "vix": 13.69,
+  "vix": 13.45,
   "supertrend_bullish": false,
   "oi_nifty": null
 }
