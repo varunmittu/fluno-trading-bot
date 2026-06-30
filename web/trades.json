@@ -1,64 +1,58 @@
 {
-  "last_updated": "2026-06-30 12:51",
+  "last_updated": "2026-06-30 12:53",
   "summary": {
-    "total_trades": 0,
+    "total_trades": 1,
     "wins": 0,
-    "losses": 0,
-    "win_rate": 0,
-    "total_pnl": 0,
+    "losses": 1,
+    "win_rate": 0.0,
+    "total_pnl": -150.0,
     "avg_win": 0,
-    "avg_loss": 0
+    "avg_loss": -150.0
   },
-  "trades": [],
-  "daily_pnl": {},
-  "current_score": 30,
-  "score_breakdown": {
-    "rsi": 0,
-    "macd": 12,
-    "vol": 0,
-    "sma": 10,
-    "price": 5,
-    "slope": 3
+  "trades": [
+    {
+      "id": 1,
+      "date": "2026-06-30",
+      "time": "12:53",
+      "score": 32,
+      "entry": 76660.02,
+      "exit": 76700.77,
+      "pnl": -150.0,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "SENSEX",
+      "option_type": "PE"
+    }
+  ],
+  "daily_pnl": {
+    "2026-06-30": -150.0
   },
+  "current_score": 0,
+  "score_breakdown": {},
   "open_positions": 2,
   "bot_log": [
     {
-      "time": "12:51:33",
-      "msg": "NIFTY:23944(B:30/P:15) | BANKNIFTY:57756(B:17/P:28) | SENSEX:76649(B:28/P:17) VIX:13.4 Pos:2/2 Daily:Rs.0",
-      "cls": ""
+      "time": "12:53:50",
+      "msg": "STOP LOSS SENSEX PE | Entry:76660 Exit:76701",
+      "cls": "err"
     },
     {
-      "time": "12:51:28",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:51:28",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:51:27",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:51:26",
+      "time": "12:53:47",
       "msg": "Restored 2 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "12:51:24",
+      "time": "12:53:47",
       "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "12:51:24",
+      "time": "12:53:47",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
   ],
-  "vix": 13.37,
-  "supertrend_bullish": true,
+  "vix": null,
+  "supertrend_bullish": null,
   "oi_nifty": null
 }
