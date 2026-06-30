@@ -27,10 +27,42 @@
   "daily_pnl": {
     "2026-06-30": -150.0
   },
-  "current_score": 0,
-  "score_breakdown": {},
-  "open_positions": 2,
+  "current_score": 30,
+  "score_breakdown": {
+    "rsi": 0,
+    "macd": 12,
+    "vol": 0,
+    "sma": 10,
+    "price": 5,
+    "slope": 3
+  },
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "12:53:59",
+      "msg": "[PAPER] BUY CE SENSEX 76800 @ \u20b9425.6 | Expiry:03 Jul 2026 Score:33/50 Pos:2/2",
+      "cls": "ok"
+    },
+    {
+      "time": "12:53:54",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:53:53",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "12:53:52",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:53:50",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
     {
       "time": "12:53:50",
       "msg": "STOP LOSS SENSEX PE | Entry:76660 Exit:76701",
@@ -52,7 +84,7 @@
       "cls": "err"
     }
   ],
-  "vix": null,
-  "supertrend_bullish": null,
+  "vix": 13.39,
+  "supertrend_bullish": true,
   "oi_nifty": null
 }
