@@ -1,12 +1,12 @@
 {
   "last_updated": "2026-06-30 14:06",
   "summary": {
-    "total_trades": 7,
-    "wins": 0,
+    "total_trades": 8,
+    "wins": 1,
     "losses": 7,
-    "win_rate": 0.0,
-    "total_pnl": -1050.0,
-    "avg_win": 0,
+    "win_rate": 12.5,
+    "total_pnl": 150.0,
+    "avg_win": 1200.0,
     "avg_loss": -150.0
   },
   "trades": [
@@ -100,10 +100,23 @@
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE"
+    },
+    {
+      "id": 8,
+      "date": "2026-06-30",
+      "time": "14:06",
+      "score": 30,
+      "entry": 57697.15,
+      "exit": 57481.05,
+      "pnl": 1200.0,
+      "status": "TAKE_PROFIT",
+      "mode": "PAPER",
+      "instrument": "BANKNIFTY",
+      "option_type": "PE"
     }
   ],
   "daily_pnl": {
-    "2026-06-30": -1050.0
+    "2026-06-30": 150.0
   },
   "current_score": 25,
   "score_breakdown": {
@@ -114,8 +127,38 @@
     "price": 0,
     "slope": 0
   },
-  "open_positions": 2,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "14:06:20",
+      "msg": "[PAPER] BUY CE SENSEX 76800 @ \u20b9430.0 | Expiry:03 Jul 2026 Score:33/50 Pos:1/2",
+      "cls": "ok"
+    },
+    {
+      "time": "14:06:16",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:06:15",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:06:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "14:06:14",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:06:13",
+      "msg": "TAKE PROFIT BANKNIFTY PE | Entry:57697 Exit:57481 +Rs.1200",
+      "cls": "ok"
+    },
     {
       "time": "14:06:11",
       "msg": "STOP LOSS NIFTY CE | Entry:23930 Exit:23884",
@@ -185,39 +228,9 @@
       "time": "13:50:48",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "13:50:45",
-      "msg": "NIFTY:23940(B:33/P:12) | BANKNIFTY:57631(B:15/P:30) | SENSEX:76663(B:30/P:15) VIX:13.4 Pos:2/2 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:50:41",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:50:40",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:50:40",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:50:36",
-      "msg": "Restored 2 open position(s) from disk.",
-      "cls": "info"
-    },
-    {
-      "time": "13:50:36",
-      "msg": "Bot started | PAPER TRADE | Threshold: 20",
-      "cls": "info"
     }
   ],
-  "vix": 13.44,
-  "supertrend_bullish": true,
+  "vix": 13.58,
+  "supertrend_bullish": false,
   "oi_nifty": null
 }
