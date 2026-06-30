@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 15:01",
+  "last_updated": "2026-06-30 15:05",
   "summary": {
     "total_trades": 18,
     "wins": 2,
@@ -260,102 +260,107 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "15:01:30",
-      "msg": "NIFTY:23849(B:15/P:30) | BANKNIFTY:57511(B:15/P:30) | SENSEX:76689(B:20/P:25) VIX:13.7 Pos:0/1 Daily:Rs.-369",
+      "time": "15:05:44",
+      "msg": "NIFTY:23840(B:15/P:30) | BANKNIFTY:57480(B:15/P:30) | SENSEX:76637(B:27/P:18) VIX:13.7 Pos:0/1 Daily:Rs.-132",
       "cls": ""
     },
     {
-      "time": "15:01:28",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:01:27",
+      "time": "15:05:40",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "15:01:27",
+      "time": "15:05:38",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "15:01:26",
+      "time": "15:05:36",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "15:01:26",
-      "msg": "TRAIL STOP NIFTY CE | P&L:Rs.-369",
-      "cls": "ok"
-    },
-    {
-      "time": "14:56:26",
+      "time": "15:00:37",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "14:56:24",
-      "msg": "NIFTY:23941(B:20/P:25) | BANKNIFTY:57709(B:20/P:25) | SENSEX:76685(B:17/P:28) VIX:13.4 Pos:1/1 Daily:Rs.0",
+      "time": "15:00:35",
+      "msg": "NIFTY:23872(B:15/P:30) | BANKNIFTY:57560(B:27/P:18) | SENSEX:76680(B:20/P:25) VIX:13.5 Pos:0/1 Daily:Rs.-132",
       "cls": ""
     },
     {
-      "time": "14:56:20",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:56:19",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:56:19",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:51:19",
+      "time": "15:00:33",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "14:51:17",
-      "msg": "NIFTY:23928(B:27/P:18) | BANKNIFTY:57666(B:12/P:33) | SENSEX:76678(B:17/P:28) VIX:13.4 Pos:1/1 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:51:14",
+      "time": "15:00:32",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "14:51:13",
+      "time": "15:00:31",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "14:51:13",
+      "time": "15:00:30",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "14:51:10",
-      "msg": "Restored 1 open position(s) from disk.",
+      "time": "15:00:30",
+      "msg": "TRAIL STOP NIFTY CE | P&L:Rs.-132",
+      "cls": "ok"
+    },
+    {
+      "time": "14:55:31",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "14:55:28",
+      "msg": "NIFTY:23939(B:35/P:10) | BANKNIFTY:57689(B:15/P:30) | SENSEX:76680(B:17/P:28) VIX:13.4 Pos:1/1 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:55:24",
+      "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "14:51:10",
-      "msg": "Bot started | PAPER TRADE | Threshold: 20",
+      "time": "14:55:24",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "14:51:10",
-      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
-      "cls": "err"
+      "time": "14:55:23",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:50:24",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "14:50:21",
+      "msg": "NIFTY:23937(B:35/P:10) | BANKNIFTY:57684(B:12/P:33) | SENSEX:76691(B:17/P:28) VIX:13.3 Pos:1/1 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:50:17",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:50:15",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "cls": "info"
     }
   ],
-  "vix": 13.67,
+  "vix": 13.71,
   "supertrend_bullish": false,
   "oi_nifty": null
 }
