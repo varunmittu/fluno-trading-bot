@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 12:23",
+  "last_updated": "2026-06-30 12:26",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -11,69 +11,49 @@
   },
   "trades": [],
   "daily_pnl": {},
-  "current_score": 8,
+  "current_score": 33,
   "score_breakdown": {
-    "rsi": 0,
+    "rsi": 15,
     "macd": 0,
     "vol": 0,
-    "sma": 0,
+    "sma": 10,
     "price": 5,
     "slope": 3
   },
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "12:23:42",
-      "msg": "NIFTY:23930(B:8/P:0) | BANKNIFTY:57694(B:15/P:18) | SENSEX:76670(B:8/P:12) VIX:13.4 Pos:0/2 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:23:39",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:23:38",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:23:37",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:18:39",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "time": "12:26:32",
+      "msg": "[PAPER] BUY PE SENSEX | Price:76660 Score:32/50 ST:Bear Pos:2/2",
       "cls": "ok"
     },
     {
-      "time": "12:18:37",
-      "msg": "NIFTY:23922(B:8/P:0) | BANKNIFTY:57687(B:0/P:18) | SENSEX:76692(B:8/P:0) VIX:13.4 Pos:0/2 Daily:Rs.0",
-      "cls": ""
+      "time": "12:26:32",
+      "msg": "[PAPER] BUY CE NIFTY | Price:23930 Score:33/50 ST:Bull Pos:1/2",
+      "cls": "ok"
     },
     {
-      "time": "12:18:26",
+      "time": "12:26:27",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "12:18:26",
+      "time": "12:26:25",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "12:18:25",
+      "time": "12:26:24",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "12:18:24",
+      "time": "12:26:21",
       "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "12:18:24",
+      "time": "12:26:21",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
