@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 12:14",
+  "last_updated": "2026-06-30 12:16",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -23,37 +23,37 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "12:14:02",
-      "msg": "NIFTY:23928(B:8/P:27) | BANKNIFTY:57705(B:0/P:18) | SENSEX:76718(B:8/P:0) VIX:13.4 Pos:0/2 Daily:Rs.0",
+      "time": "12:16:44",
+      "msg": "NIFTY:23928(B:8/P:0) | BANKNIFTY:57712(B:0/P:18) | SENSEX:76694(B:8/P:0) VIX:13.4 Pos:0/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "12:13:59",
+      "time": "12:16:41",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "12:13:58",
+      "time": "12:16:40",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "12:13:58",
+      "time": "12:16:39",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "12:13:56",
+      "time": "12:16:38",
       "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "12:13:56",
+      "time": "12:16:38",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
   ],
-  "vix": 13.4,
+  "vix": 13.39,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
