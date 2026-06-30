@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-30 12:53",
+  "last_updated": "2026-06-30 12:56",
   "summary": {
-    "total_trades": 1,
+    "total_trades": 2,
     "wins": 0,
-    "losses": 1,
+    "losses": 2,
     "win_rate": 0.0,
-    "total_pnl": -150.0,
+    "total_pnl": -300.0,
     "avg_win": 0,
     "avg_loss": -150.0
   },
@@ -22,10 +22,23 @@
       "mode": "PAPER",
       "instrument": "SENSEX",
       "option_type": "PE"
+    },
+    {
+      "id": 2,
+      "date": "2026-06-30",
+      "time": "12:56",
+      "score": 32,
+      "entry": 76660.02,
+      "exit": 76727.36,
+      "pnl": -150.0,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "SENSEX",
+      "option_type": "PE"
     }
   ],
   "daily_pnl": {
-    "2026-06-30": -150.0
+    "2026-06-30": -300.0
   },
   "current_score": 30,
   "score_breakdown": {
@@ -36,55 +49,55 @@
     "price": 5,
     "slope": 3
   },
-  "open_positions": 1,
+  "open_positions": 2,
   "bot_log": [
     {
-      "time": "12:53:59",
-      "msg": "[PAPER] BUY CE SENSEX 76800 @ \u20b9425.6 | Expiry:03 Jul 2026 Score:33/50 Pos:2/2",
-      "cls": "ok"
+      "time": "12:56:33",
+      "msg": "STOP LOSS SENSEX PE | Entry:76660 Exit:76727",
+      "cls": "err"
     },
     {
-      "time": "12:53:54",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:53:53",
+      "time": "12:51:35",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:53:52",
+      "time": "12:51:33",
+      "msg": "NIFTY:23944(B:30/P:15) | BANKNIFTY:57756(B:17/P:28) | SENSEX:76649(B:28/P:17) VIX:13.4 Pos:2/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:51:28",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:51:28",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "12:53:50",
+      "time": "12:51:27",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "12:53:50",
-      "msg": "STOP LOSS SENSEX PE | Entry:76660 Exit:76701",
-      "cls": "err"
-    },
-    {
-      "time": "12:53:47",
+      "time": "12:51:26",
       "msg": "Restored 2 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "12:53:47",
+      "time": "12:51:24",
       "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "12:53:47",
+      "time": "12:51:24",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
   ],
-  "vix": 13.39,
+  "vix": 13.37,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
