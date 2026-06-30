@@ -23,62 +23,37 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "12:07:25",
-      "msg": "NIFTY:23933(B:8/P:15) | BANKNIFTY:57711(B:0/P:18) | SENSEX:76693(B:8/P:10) VIX:13.4 Pos:0/2 Daily:Rs.0",
+      "time": "12:07:46",
+      "msg": "NIFTY:23933(B:8/P:15) | BANKNIFTY:57706(B:0/P:18) | SENSEX:76698(B:8/P:10) VIX:13.4 Pos:0/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "12:07:20",
+      "time": "12:07:43",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "12:07:20",
+      "time": "12:07:42",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "12:07:19",
+      "time": "12:07:42",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "12:02:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:02:18",
-      "msg": "NIFTY:23932(B:8/P:0) | BANKNIFTY:57706(B:0/P:30) | SENSEX:76657(B:3/P:15) VIX:13.4 Pos:0/2 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:02:15",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:14",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:14",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:12",
+      "time": "12:07:39",
       "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "12:02:12",
+      "time": "12:07:39",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
   ],
-  "vix": 13.45,
+  "vix": 13.44,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
