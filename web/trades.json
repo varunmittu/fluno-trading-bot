@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 09:49",
+  "last_updated": "2026-06-30 09:51",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -23,42 +23,42 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "09:49:01",
-      "msg": "NIFTY:23855 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
+      "time": "09:51:21",
+      "msg": "NIFTY:23860 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "09:44:01",
+      "time": "09:46:22",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "09:43:58",
+      "time": "09:46:19",
       "msg": "NIFTY:23867 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "09:38:59",
+      "time": "09:41:19",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "09:38:56",
-      "msg": "NIFTY:23880 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
+      "time": "09:41:17",
+      "msg": "NIFTY:23875 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "09:38:54",
+      "time": "09:41:14",
       "msg": "Fetching daily candles from Yahoo...",
       "cls": "info"
     },
     {
-      "time": "09:38:53",
+      "time": "09:41:13",
       "msg": "Bot started | PAPER TRADE | Threshold: 55",
       "cls": "info"
     },
     {
-      "time": "09:38:53",
+      "time": "09:41:13",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
