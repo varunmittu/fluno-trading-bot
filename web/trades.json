@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 11:03",
+  "last_updated": "2026-06-30 11:08",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -11,17 +11,72 @@
   },
   "trades": [],
   "daily_pnl": {},
-  "current_score": 10,
+  "current_score": 15,
   "score_breakdown": {
     "rsi": 0,
     "macd": 0,
     "vol": 0,
     "sma": 0,
     "price": 10,
-    "slope": 0
+    "slope": 5
   },
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:08:17",
+      "msg": "NIFTY:23880 Bull:20/75 Bear:15/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:08:15",
+      "msg": "Fetching 1-min candles...",
+      "cls": "info"
+    },
+    {
+      "time": "11:07:14",
+      "msg": "NIFTY:23884 Bull:20/75 Bear:15/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:07:11",
+      "msg": "Fetching 1-min candles...",
+      "cls": "info"
+    },
+    {
+      "time": "11:06:11",
+      "msg": "NIFTY:23881 Bull:20/75 Bear:15/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:06:08",
+      "msg": "Fetching 1-min candles...",
+      "cls": "info"
+    },
+    {
+      "time": "11:05:07",
+      "msg": "NIFTY:23880 Bull:20/75 Bear:15/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:05:05",
+      "msg": "Fetching 1-min candles...",
+      "cls": "info"
+    },
+    {
+      "time": "11:04:05",
+      "msg": "NIFTY:23890 Bull:20/75 Bear:15/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:04:02",
+      "msg": "Fetching 1-min candles...",
+      "cls": "info"
+    },
+    {
+      "time": "11:03:04",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:03:02",
       "msg": "NIFTY:23891 Bull:25/75 Bear:10/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
@@ -66,36 +121,6 @@
       "time": "10:58:51",
       "msg": "NIFTY:23896 Bull:0/75 Bear:15/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "10:58:48",
-      "msg": "Fetching 1-min candles...",
-      "cls": "info"
-    },
-    {
-      "time": "10:57:50",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:57:48",
-      "msg": "NIFTY:23899 Bull:10/75 Bear:20/75 ST:Bull VIX:13.6 Pos:0/2 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:57:45",
-      "msg": "Fetching 1-min candles...",
-      "cls": "info"
-    },
-    {
-      "time": "10:57:44",
-      "msg": "Bot started | PAPER TRADE | Threshold: 55",
-      "cls": "info"
-    },
-    {
-      "time": "10:57:44",
-      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
-      "cls": "err"
     }
   ],
   "vix": 13.7,
