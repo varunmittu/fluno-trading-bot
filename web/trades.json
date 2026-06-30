@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 11:36",
+  "last_updated": "2026-06-30 11:41",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -22,6 +22,31 @@
   },
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:41:50",
+      "msg": "NIFTY:23948(B:8/P:10) | BANKNIFTY:57772(B:0/P:18) | SENSEX:76873(B:8/P:25) VIX:13.3 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:41:47",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:41:46",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:41:46",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:36:47",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:36:45",
       "msg": "NIFTY:23934(B:8/P:10) | BANKNIFTY:57771(B:0/P:18) | SENSEX:76732(B:8/P:25) VIX:13.4 Pos:0/2 Daily:Rs.0",
@@ -96,34 +121,9 @@
       "time": "11:21:32",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "11:21:29",
-      "msg": "NIFTY:23936(B:8/P:25) | BANKNIFTY:57785(B:3/P:15) | SENSEX:76534(B:0/P:18) VIX:13.4 Pos:0/2 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:21:25",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:21:25",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:21:24",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:21:22",
-      "msg": "Bot started | PAPER TRADE | Threshold: 30",
-      "cls": "info"
     }
   ],
-  "vix": 13.43,
+  "vix": 13.34,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
