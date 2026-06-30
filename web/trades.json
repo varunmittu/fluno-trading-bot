@@ -222,10 +222,42 @@
   "daily_pnl": {
     "2026-06-30": -711.0
   },
-  "current_score": 0,
-  "score_breakdown": {},
-  "open_positions": 2,
+  "current_score": 28,
+  "score_breakdown": {
+    "rsi": 15,
+    "macd": 0,
+    "vol": 0,
+    "sma": 10,
+    "price": 0,
+    "slope": 3
+  },
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "14:32:06",
+      "msg": "NIFTY:23937(B:17/P:28) | BANKNIFTY:57695(B:12/P:33) | SENSEX:76538(B:15/P:30) VIX:13.4 Pos:1/1 Daily:Rs.-150",
+      "cls": ""
+    },
+    {
+      "time": "14:32:04",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "14:32:03",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:32:02",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:32:02",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
     {
       "time": "14:32:01",
       "msg": "STOP LOSS SENSEX PE | Entry:76491 Exit:76538",
@@ -247,7 +279,7 @@
       "cls": "err"
     }
   ],
-  "vix": null,
-  "supertrend_bullish": null,
+  "vix": 13.38,
+  "supertrend_bullish": false,
   "oi_nifty": null
 }
