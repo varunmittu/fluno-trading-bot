@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-30 14:30",
+  "last_updated": "2026-06-30 14:32",
   "summary": {
-    "total_trades": 15,
+    "total_trades": 16,
     "wins": 2,
-    "losses": 13,
-    "win_rate": 13.3,
-    "total_pnl": -561.0,
+    "losses": 14,
+    "win_rate": 12.5,
+    "total_pnl": -711.0,
     "avg_win": 695.0,
     "avg_loss": -150.0
   },
@@ -204,59 +204,50 @@
       "mode": "PAPER",
       "instrument": "BANKNIFTY",
       "option_type": "PE"
+    },
+    {
+      "id": 16,
+      "date": "2026-06-30",
+      "time": "14:32",
+      "score": 30,
+      "entry": 76491.18,
+      "exit": 76538.39,
+      "pnl": -150.0,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "SENSEX",
+      "option_type": "PE"
     }
   ],
   "daily_pnl": {
-    "2026-06-30": -561.0
+    "2026-06-30": -711.0
   },
-  "current_score": 28,
-  "score_breakdown": {
-    "rsi": 15,
-    "macd": 0,
-    "vol": 0,
-    "sma": 10,
-    "price": 0,
-    "slope": 3
-  },
+  "current_score": 0,
+  "score_breakdown": {},
   "open_positions": 2,
   "bot_log": [
     {
-      "time": "14:30:52",
-      "msg": "NIFTY:23938(B:17/P:28) | BANKNIFTY:57707(B:12/P:33) | SENSEX:76492(B:15/P:30) VIX:13.3 Pos:2/1 Daily:Rs.0",
-      "cls": ""
+      "time": "14:32:01",
+      "msg": "STOP LOSS SENSEX PE | Entry:76491 Exit:76538",
+      "cls": "err"
     },
     {
-      "time": "14:30:49",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:30:49",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:30:48",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:30:44",
+      "time": "14:31:59",
       "msg": "Restored 2 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "14:30:44",
+      "time": "14:31:59",
       "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "14:30:44",
+      "time": "14:31:59",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
   ],
-  "vix": 13.35,
-  "supertrend_bullish": false,
+  "vix": null,
+  "supertrend_bullish": null,
   "oi_nifty": null
 }
