@@ -248,17 +248,42 @@
   "daily_pnl": {
     "2026-06-30": -1212.0
   },
-  "current_score": 25,
+  "current_score": 30,
   "score_breakdown": {
-    "rsi": 15,
-    "macd": 0,
+    "rsi": 0,
+    "macd": 12,
     "vol": 0,
     "sma": 10,
-    "price": 0,
-    "slope": 0
+    "price": 5,
+    "slope": 3
   },
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "15:01:30",
+      "msg": "NIFTY:23849(B:15/P:30) | BANKNIFTY:57511(B:15/P:30) | SENSEX:76689(B:20/P:25) VIX:13.7 Pos:0/1 Daily:Rs.-369",
+      "cls": ""
+    },
+    {
+      "time": "15:01:28",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "15:01:27",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "15:01:27",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "cls": "info"
+    },
+    {
+      "time": "15:01:26",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
     {
       "time": "15:01:26",
       "msg": "TRAIL STOP NIFTY CE | P&L:Rs.-369",
@@ -330,7 +355,7 @@
       "cls": "err"
     }
   ],
-  "vix": 13.37,
+  "vix": 13.67,
   "supertrend_bullish": false,
   "oi_nifty": null
 }
