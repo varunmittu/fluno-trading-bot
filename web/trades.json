@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-30 13:32",
+  "last_updated": "2026-06-30 13:34",
   "summary": {
-    "total_trades": 4,
+    "total_trades": 5,
     "wins": 0,
-    "losses": 4,
+    "losses": 5,
     "win_rate": 0.0,
-    "total_pnl": -600.0,
+    "total_pnl": -750.0,
     "avg_win": 0,
     "avg_loss": -150.0
   },
@@ -61,124 +61,137 @@
       "mode": "PAPER",
       "instrument": "BANKNIFTY",
       "option_type": "PE"
+    },
+    {
+      "id": 5,
+      "date": "2026-06-30",
+      "time": "13:34",
+      "score": 30,
+      "entry": 57666.0,
+      "exit": 57697.15,
+      "pnl": -150.0,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "BANKNIFTY",
+      "option_type": "PE"
     }
   ],
   "daily_pnl": {
-    "2026-06-30": -600.0
+    "2026-06-30": -750.0
   },
-  "current_score": 30,
+  "current_score": 27,
   "score_breakdown": {
     "rsi": 15,
-    "macd": 0,
+    "macd": 12,
     "vol": 0,
-    "sma": 10,
-    "price": 5,
+    "sma": 0,
+    "price": 0,
     "slope": 0
   },
   "open_positions": 2,
   "bot_log": [
     {
-      "time": "13:32:33",
-      "msg": "NIFTY:23933(B:30/P:15) | BANKNIFTY:57654(B:15/P:30) | SENSEX:76689(B:15/P:30) VIX:13.4 Pos:2/2 Daily:Rs.-150",
-      "cls": ""
+      "time": "13:34:55",
+      "msg": "STOP LOSS BANKNIFTY PE | Entry:57666 Exit:57697",
+      "cls": "err"
     },
     {
-      "time": "13:32:29",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:32:29",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:32:28",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:27:29",
+      "time": "13:29:57",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "13:27:27",
-      "msg": "NIFTY:23931(B:18/P:27) | BANKNIFTY:57648(B:15/P:30) | SENSEX:76673(B:30/P:15) VIX:13.4 Pos:2/2 Daily:Rs.-150",
-      "cls": ""
+      "time": "13:29:55",
+      "msg": "[PAPER] BUY PE BANKNIFTY 57600 @ \u20b9319.9 | Expiry:01 Jul 2026 Score:30/50 Pos:2/2",
+      "cls": "ok"
     },
     {
-      "time": "13:27:21",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:27:20",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:27:19",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:22:21",
+      "time": "13:29:49",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "13:22:18",
-      "msg": "NIFTY:23922(B:30/P:15) | BANKNIFTY:57617(B:15/P:30) | SENSEX:76694(B:42/P:3) VIX:13.5 Pos:2/2 Daily:Rs.-150",
-      "cls": ""
-    },
-    {
-      "time": "13:22:13",
+      "time": "13:29:48",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "13:22:12",
+      "time": "13:29:47",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "13:22:11",
+      "time": "13:29:47",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "13:22:11",
-      "msg": "Trail ON \u2014 BANKNIFTY PE P&L:Rs.804",
-      "cls": "info"
+      "time": "13:29:46",
+      "msg": "STOP LOSS BANKNIFTY PE | Entry:57600 Exit:57666",
+      "cls": "err"
     },
     {
-      "time": "13:17:13",
+      "time": "13:24:48",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "13:17:10",
-      "msg": "NIFTY:23939(B:15/P:30) | BANKNIFTY:57693(B:15/P:30) | SENSEX:76708(B:42/P:3) VIX:13.4 Pos:2/2 Daily:Rs.-150",
-      "cls": ""
+      "time": "13:24:46",
+      "msg": "[PAPER] BUY PE BANKNIFTY 57500 @ \u20b9320.4 | Expiry:01 Jul 2026 Score:30/50 Pos:2/2",
+      "cls": "ok"
     },
     {
-      "time": "13:17:06",
+      "time": "13:24:39",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "13:24:38",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "13:17:05",
+      "time": "13:24:37",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "13:17:05",
+      "time": "13:24:37",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:24:36",
+      "msg": "STOP LOSS SENSEX CE | Entry:76701 Exit:76667",
+      "cls": "err"
+    },
+    {
+      "time": "13:19:39",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "13:19:36",
+      "msg": "NIFTY:23936(B:15/P:30) | BANKNIFTY:57671(B:15/P:30) | SENSEX:76710(B:42/P:3) VIX:13.4 Pos:2/2 Daily:Rs.-150",
+      "cls": ""
+    },
+    {
+      "time": "13:19:31",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:19:30",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:19:29",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     }
   ],
-  "vix": 13.38,
+  "vix": 13.37,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
