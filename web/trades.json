@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 12:26",
+  "last_updated": "2026-06-30 12:28",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -20,45 +20,45 @@
     "price": 5,
     "slope": 3
   },
-  "open_positions": 0,
+  "open_positions": 2,
   "bot_log": [
     {
-      "time": "12:26:32",
-      "msg": "[PAPER] BUY PE SENSEX | Price:76660 Score:32/50 ST:Bear Pos:2/2",
-      "cls": "ok"
+      "time": "12:28:35",
+      "msg": "NIFTY:23932(B:33/P:12) | BANKNIFTY:57718(B:15/P:30) | SENSEX:76663(B:18/P:27) VIX:13.4 Pos:2/2 Daily:Rs.0",
+      "cls": ""
     },
     {
-      "time": "12:26:32",
-      "msg": "[PAPER] BUY CE NIFTY | Price:23930 Score:33/50 ST:Bull Pos:1/2",
-      "cls": "ok"
-    },
-    {
-      "time": "12:26:27",
+      "time": "12:28:26",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "12:26:25",
+      "time": "12:28:25",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "12:26:24",
+      "time": "12:28:24",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "12:26:21",
+      "time": "12:28:22",
+      "msg": "Restored 2 open position(s) from disk.",
+      "cls": "info"
+    },
+    {
+      "time": "12:28:22",
       "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "12:26:21",
+      "time": "12:28:22",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
   ],
-  "vix": 13.44,
+  "vix": 13.41,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
