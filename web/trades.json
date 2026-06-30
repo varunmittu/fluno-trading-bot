@@ -235,17 +235,42 @@
   "daily_pnl": {
     "2026-06-30": -843.0
   },
-  "current_score": 35,
+  "current_score": 30,
   "score_breakdown": {
-    "rsi": 15,
+    "rsi": 0,
     "macd": 12,
     "vol": 0,
-    "sma": 0,
+    "sma": 10,
     "price": 5,
     "slope": 3
   },
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "15:00:35",
+      "msg": "NIFTY:23872(B:15/P:30) | BANKNIFTY:57560(B:27/P:18) | SENSEX:76680(B:20/P:25) VIX:13.5 Pos:0/1 Daily:Rs.-132",
+      "cls": ""
+    },
+    {
+      "time": "15:00:33",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "15:00:32",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "15:00:31",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "cls": "info"
+    },
+    {
+      "time": "15:00:30",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
     {
       "time": "15:00:30",
       "msg": "TRAIL STOP NIFTY CE | P&L:Rs.-132",
@@ -320,34 +345,9 @@
       "time": "14:45:07",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
-    },
-    {
-      "time": "14:45:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:40:07",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:40:04",
-      "msg": "NIFTY:23939(B:17/P:28) | BANKNIFTY:57703(B:17/P:28) | SENSEX:76653(B:5/P:40) VIX:13.3 Pos:1/1 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:40:01",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:40:00",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
     }
   ],
-  "vix": 13.36,
+  "vix": 13.51,
   "supertrend_bullish": false,
   "oi_nifty": null
 }
