@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 09:46",
+  "last_updated": "2026-06-30 09:47",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -23,32 +23,62 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "09:46:19",
-      "msg": "NIFTY:23867 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
+      "time": "09:47:08",
+      "msg": "NIFTY:23866 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "09:41:19",
+      "time": "09:42:08",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "09:41:17",
-      "msg": "NIFTY:23875 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
+      "time": "09:42:06",
+      "msg": "NIFTY:23872 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "09:41:14",
+      "time": "09:37:07",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "09:37:04",
+      "msg": "NIFTY:23880 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:32:04",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "09:32:01",
+      "msg": "NIFTY:23896 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:27:02",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "09:26:59",
+      "msg": "NIFTY:23907 Score:15/75 ST:Bull VIX:13.8 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:26:57",
       "msg": "Fetching daily candles from Yahoo...",
       "cls": "info"
     },
     {
-      "time": "09:41:13",
+      "time": "09:26:55",
       "msg": "Bot started | PAPER TRADE | Threshold: 55",
       "cls": "info"
     },
     {
-      "time": "09:41:13",
+      "time": "09:26:55",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
