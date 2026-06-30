@@ -101,8 +101,38 @@
     "price": 0,
     "slope": 0
   },
-  "open_positions": 2,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "14:04:10",
+      "msg": "[PAPER] BUY CE SENSEX 76800 @ \u20b9427.1 | Expiry:03 Jul 2026 Score:33/50 Pos:2/2",
+      "cls": "ok"
+    },
+    {
+      "time": "14:04:06",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "14:04:06",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:04:05",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:04:04",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:04:04",
+      "msg": "Trail lock +Rs.200 \u2014 BANKNIFTY PE P&L:Rs.1129",
+      "cls": "info"
+    },
     {
       "time": "14:04:03",
       "msg": "STOP LOSS NIFTY CE | Entry:23930 Exit:23891",
@@ -172,14 +202,9 @@
       "time": "13:53:43",
       "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
-    },
-    {
-      "time": "13:53:43",
-      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
-      "cls": "err"
     }
   ],
-  "vix": 13.47,
-  "supertrend_bullish": true,
+  "vix": 13.49,
+  "supertrend_bullish": false,
   "oi_nifty": null
 }
