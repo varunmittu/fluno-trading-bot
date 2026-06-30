@@ -513,8 +513,8 @@ def bot_loop():
                 vix_tag = f" VIX:{state['vix']:.1f}" if state.get("vix") else ""
                 bot_log(f"NIFTY:{price:.0f} Score:{score}/75 {st_tag}{vix_tag} Pos:{len(positions)}/2 Daily:Rs.{daily_pnl:.0f}")
 
-            # Sync score/log to Vercel every 30 minutes even without a trade
-            if time.time() - last_sync > 1800:
+            # Sync score/log to Vercel every 5 minutes even without a trade
+            if time.time() - last_sync > 300:
                 sync_background()
                 last_sync = time.time()
 
