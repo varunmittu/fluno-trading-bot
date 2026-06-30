@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 13:55",
+  "last_updated": "2026-06-30 13:59",
   "summary": {
     "total_trades": 5,
     "wins": 0,
@@ -79,84 +79,84 @@
   "daily_pnl": {
     "2026-06-30": -750.0
   },
-  "current_score": 33,
+  "current_score": 25,
   "score_breakdown": {
     "rsi": 15,
     "macd": 0,
     "vol": 0,
     "sma": 10,
-    "price": 5,
-    "slope": 3
+    "price": 0,
+    "slope": 0
   },
   "open_positions": 2,
   "bot_log": [
     {
-      "time": "13:55:59",
-      "msg": "NIFTY:23931(B:33/P:12) | BANKNIFTY:57620(B:15/P:30) | SENSEX:76666(B:15/P:30) VIX:13.4 Pos:2/2 Daily:Rs.0",
+      "time": "13:59:01",
+      "msg": "NIFTY:23921(B:25/P:20) | BANKNIFTY:57568(B:15/P:30) | SENSEX:76703(B:18/P:27) VIX:13.5 Pos:2/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "13:55:54",
+      "time": "13:58:57",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "13:55:53",
+      "time": "13:58:57",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "13:55:52",
+      "time": "13:58:56",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "13:55:51",
-      "msg": "Trail ON (break-even) \u2014 BANKNIFTY PE P&L:Rs.444",
+      "time": "13:58:56",
+      "msg": "Trail ON (break-even) \u2014 BANKNIFTY PE P&L:Rs.757",
       "cls": "info"
     },
     {
-      "time": "13:50:48",
+      "time": "13:53:55",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "13:50:45",
-      "msg": "NIFTY:23940(B:33/P:12) | BANKNIFTY:57631(B:15/P:30) | SENSEX:76663(B:30/P:15) VIX:13.4 Pos:2/2 Daily:Rs.0",
+      "time": "13:53:53",
+      "msg": "NIFTY:23943(B:33/P:12) | BANKNIFTY:57663(B:15/P:30) | SENSEX:76672(B:30/P:15) VIX:13.4 Pos:2/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "13:50:41",
+      "time": "13:53:48",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "13:50:40",
+      "time": "13:53:48",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "13:50:40",
+      "time": "13:53:47",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "13:50:36",
+      "time": "13:53:43",
       "msg": "Restored 2 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "13:50:36",
+      "time": "13:53:43",
       "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "13:50:36",
+      "time": "13:53:43",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
   ],
-  "vix": 13.39,
+  "vix": 13.47,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
