@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 14:32",
+  "last_updated": "2026-06-30 14:34",
   "summary": {
     "total_trades": 16,
     "wins": 2,
@@ -234,47 +234,37 @@
   "open_positions": 1,
   "bot_log": [
     {
-      "time": "14:32:06",
-      "msg": "NIFTY:23937(B:17/P:28) | BANKNIFTY:57695(B:12/P:33) | SENSEX:76538(B:15/P:30) VIX:13.4 Pos:1/1 Daily:Rs.-150",
+      "time": "14:34:16",
+      "msg": "NIFTY:23937(B:17/P:28) | BANKNIFTY:57709(B:17/P:28) | SENSEX:76450(B:15/P:30) VIX:13.4 Pos:1/1 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "14:32:04",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:32:03",
+      "time": "14:34:13",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "14:32:02",
+      "time": "14:34:12",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "14:32:02",
+      "time": "14:34:12",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "14:32:01",
-      "msg": "STOP LOSS SENSEX PE | Entry:76491 Exit:76538",
-      "cls": "err"
-    },
-    {
-      "time": "14:31:59",
-      "msg": "Restored 2 open position(s) from disk.",
+      "time": "14:34:06",
+      "msg": "Restored 1 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "14:31:59",
+      "time": "14:34:06",
       "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "14:31:59",
+      "time": "14:34:06",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
