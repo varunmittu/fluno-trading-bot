@@ -10,7 +10,7 @@ subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "flask", "k
 
 from flask import Flask, render_template, jsonify
 import sqlite3, threading, time, os, calendar, json
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 import requests as req_lib
 import pandas as pd
 import numpy as np
@@ -20,32 +20,68 @@ from kiteconnect import KiteConnect
 app = Flask(__name__)
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
-API_KEY        = "your_api_key_here"  # paste from developers.kite.trade
-TOKEN_FILE     = "kite_token.txt"
-PAPER_TRADE    = True
-THRESHOLD      = 55
-STOP_LOSS      = -150
-TAKE_PROFIT    = 1200
-DAILY_LIMIT    = -500
-MAX_POSITIONS  = 2
-CHECK_INTERVAL = 300
-DELTA          = 0.40
-LOT            = 25
-BROKERAGE      = 20
+API_KEY           = "your_api_key_here"  # paste from developers.kite.trade
+TOKEN_FILE        = "kite_token.txt"
+PAPER_TRADE       = True
+STOP_LOSS         = -150   # tight SL — cut losses fast
+BIG_TRAIL_START   = 1000   # let winners run — trail activates here
+BIG_TRAIL_DROP    = 200    # close if profit drops Rs.200 from peak
+SMALL_TRAIL_START = 400    # tough day — lock small profit
+SMALL_TRAIL_DROP  = 150    # close if drops Rs.150 from peak (books ~Rs.250)
+DAILY_LIMIT       = -300   # safety net (1 trade/day so rarely hit)
+PAPER_CAPITAL     = 10000  # starting capital
+BASE_LOTS         = 3      # base = 3 lots (75 NIFTY units)
+CAPITAL_PER_LOT   = PAPER_CAPITAL / BASE_LOTS  # Rs.3333 per lot
+MAX_LOTS          = 15     # hard cap on lot scaling
+MAX_POSITIONS     = 1      # one trade per day
+CHECK_INTERVAL    = 60     # check every 1 minute
+DELTA             = 0.40
+LOT               = 75     # fallback units (3 lots × 25)
+BROKERAGE         = 20
+EXPIRY_INDEX      = 0      # 0=nearest weekly, 1=next week
+BOT_STATE_FILE    = "bot_state.json"
+INSTRUMENTS       = [
+    {"name": "NIFTY", "yf": "^NSEI", "nse": "NIFTY", "lot": 75, "delta": 0.40},  # 3 lots
+]
+
+# ── TELEGRAM CONFIG ────────────────────────────────────────────────────────────
+# 1. Create a bot via @BotFather on Telegram → copy the token
+# 2. Paste token into telegram_token.txt (never commit this file)
+# 3. Open your bot on Telegram and send /start → chat ID auto-saves
+TELEGRAM_TOKEN_FILE = "telegram_token.txt"
+TELEGRAM_CHAT_FILE  = "telegram_chat.txt"
+_tg_token   = open(TELEGRAM_TOKEN_FILE).read().strip() if os.path.exists(TELEGRAM_TOKEN_FILE) else ""
+_tg_chat_id = open(TELEGRAM_CHAT_FILE).read().strip()  if os.path.exists(TELEGRAM_CHAT_FILE)  else ""
 # ─────────────────────────────────────────────────────────────────────────────
 
 # Shared state (bot thread writes, Flask reads)
 state = {
-    "nifty_price":       "--",
-    "score":             0,
-    "score_breakdown":   {},
-    "open_positions":    [],
-    "daily_pnl":         0.0,
-    "market_open":       False,
-    "log":               [],
-    "vix":               None,
+    "nifty_price":        "--",
+    "score":              0,
+    "score_breakdown":    {},
+    "bull_score":         0,
+    "bull_breakdown":     {},
+    "bear_score":         0,
+    "bear_breakdown":     {},
+    "active_side":        None,     # "BULL" | "BEAR" | None
+    "open_positions":     [],
+    "daily_pnl":          0.0,
+    "market_open":        False,
+    "log":                [],
+    "vix":                None,
     "supertrend_bullish": None,
-    "oi_nifty":          None,
+    "oi_nifty":           None,
+    "expiry":             None,
+    "available_expiries": [],
+    "option_type":        "—",
+    "first_trade_done":   False,
+    "unrealized_pnl":     0,
+    "total_pnl":          0,
+    "signal":             "--",
+    "yd_high":            None,
+    "yd_low":             None,
+    "lots_today":         BASE_LOTS,
+    "running_capital":    float(PAPER_CAPITAL),
 }
 
 # ── DATABASE ──────────────────────────────────────────────────────────────────
@@ -58,30 +94,165 @@ def init_db():
     conn = get_db()
     conn.execute("""
         CREATE TABLE IF NOT EXISTS trades (
-            id      INTEGER PRIMARY KEY AUTOINCREMENT,
-            date    TEXT,
-            time    TEXT,
-            score   INTEGER,
-            entry   REAL,
-            exit    REAL,
-            pnl     REAL,
-            status  TEXT,
-            mode    TEXT
+            id         INTEGER PRIMARY KEY AUTOINCREMENT,
+            date       TEXT,
+            time       TEXT,
+            score      INTEGER,
+            entry      REAL,
+            exit       REAL,
+            pnl        REAL,
+            status     TEXT,
+            mode       TEXT,
+            instrument TEXT DEFAULT 'NIFTY',
+            option_type TEXT DEFAULT 'CE'
         )
     """)
+    # Add columns silently if upgrading existing DB
+    for col in ["instrument TEXT DEFAULT 'NIFTY'", "option_type TEXT DEFAULT 'CE'"]:
+        try:
+            conn.execute(f"ALTER TABLE trades ADD COLUMN {col}")
+        except Exception:
+            pass
     conn.commit()
     conn.close()
 
-def save_trade(score, entry, exit_price, pnl, status):
+def save_trade(score, entry, exit_price, pnl, status, instrument="NIFTY", option_type="CE"):
     conn = get_db()
     mode = "PAPER" if PAPER_TRADE else "LIVE"
     now  = datetime.now()
     conn.execute(
-        "INSERT INTO trades (date,time,score,entry,exit,pnl,status,mode) VALUES (?,?,?,?,?,?,?,?)",
-        (now.strftime("%Y-%m-%d"), now.strftime("%H:%M"), score, entry, exit_price, round(pnl, 2), status, mode)
+        "INSERT INTO trades (date,time,score,entry,exit,pnl,status,mode,instrument,option_type) VALUES (?,?,?,?,?,?,?,?,?,?)",
+        (now.strftime("%Y-%m-%d"), now.strftime("%H:%M"), score, entry, exit_price, round(pnl, 2), status, mode, instrument, option_type)
     )
     conn.commit()
     conn.close()
+
+def has_traded_today():
+    """Check DB — even if SL fired and position was removed, we still know we traded."""
+    try:
+        conn = get_db()
+        row  = conn.execute("SELECT COUNT(*) FROM trades WHERE date=?",
+                            (date.today().strftime("%Y-%m-%d"),)).fetchone()
+        conn.close()
+        return row[0] > 0
+    except Exception:
+        return False
+
+# ── TELEGRAM ──────────────────────────────────────────────────────────────────
+def tg_send(msg):
+    """Send a message to the registered Telegram chat."""
+    if not _tg_token or not _tg_chat_id:
+        return
+    try:
+        req_lib.post(
+            f"https://api.telegram.org/bot{_tg_token}/sendMessage",
+            json={"chat_id": _tg_chat_id, "text": msg, "parse_mode": "HTML"},
+            timeout=5
+        )
+    except Exception:
+        pass
+
+def tg_poll():
+    """Background thread — polls Telegram for commands every 2 seconds."""
+    global _tg_chat_id
+    if not _tg_token:
+        return
+    offset = 0
+    while True:
+        try:
+            r = req_lib.get(
+                f"https://api.telegram.org/bot{_tg_token}/getUpdates",
+                params={"offset": offset, "timeout": 10},
+                timeout=15
+            )
+            for upd in r.json().get("result", []):
+                offset   = upd["update_id"] + 1
+                msg_obj  = upd.get("message", {})
+                chat_id  = str(msg_obj.get("chat", {}).get("id", ""))
+                text     = msg_obj.get("text", "").strip()
+
+                # /start — register this phone
+                if text == "/start":
+                    _tg_chat_id = chat_id
+                    with open(TELEGRAM_CHAT_FILE, "w") as _f:
+                        _f.write(chat_id)
+                    tg_send(
+                        "✅ <b>Fluno Trading Bot connected!</b>\n\n"
+                        "Commands:\n"
+                        "/status — live prices, scores, position\n"
+                        "/pnl — today's trade summary\n"
+                        "/stop — stop trading for today\n"
+                        "/resume — allow trading again"
+                    )
+                    continue
+
+                if chat_id != _tg_chat_id:
+                    continue  # ignore unknown senders
+
+                cmd = text.lower()
+
+                if cmd == "/status":
+                    scores = state.get("inst_scores", {})
+                    lines  = ["📊 <b>Live Status</b>"]
+                    for iname, v in scores.items():
+                        side_icon = "🟢" if v.get("side") == "BULL" else "🔴"
+                        lines.append(f"{side_icon} {iname}: {v.get('price',0):.0f}  Score {v.get('score',0)}/50")
+                    vix = state.get("vix")
+                    if vix:
+                        lines.append(f"🌡 VIX: {vix:.1f} {'⚠️ HIGH' if vix > 20 else '✅ OK'}")
+                    pos_list = state.get("positions_list", [])
+                    if pos_list:
+                        for p in pos_list:
+                            lines.append(
+                                f"💼 {p['instrument']} {p.get('option_type','')} "
+                                f"{p.get('strike','')} @ ₹{p.get('premium_entry','?')} "
+                                f"| Exp: {p.get('expiry','?')}"
+                            )
+                    else:
+                        lines.append("💼 No open positions")
+                    dpnl  = state.get('daily_pnl', 0)
+                    upnl  = state.get('unrealized_pnl', 0)
+                    lines.append(f"💰 Realized: ₹{dpnl:.0f}  Unrealized: ₹{upnl:.0f}")
+                    done  = state.get("first_trade_done", False)
+                    lines.append("⛔ Trade done for today" if done else "🟢 Ready to trade")
+                    tg_send("\n".join(lines))
+
+                elif cmd == "/pnl":
+                    try:
+                        conn      = get_db()
+                        today_str = date.today().strftime("%Y-%m-%d")
+                        rows      = conn.execute(
+                            "SELECT instrument,option_type,pnl,status FROM trades WHERE date=? ORDER BY id",
+                            (today_str,)
+                        ).fetchall()
+                        conn.close()
+                        if not rows:
+                            tg_send("📭 No trades today yet.")
+                        else:
+                            total = sum(r["pnl"] for r in rows)
+                            lines = [f"📅 <b>Trades — {today_str}</b>"]
+                            for r in rows:
+                                icon = "✅" if r["pnl"] > 0 else "❌"
+                                lines.append(f"{icon} {r['instrument']} {r['option_type']} | {r['status']} | ₹{r['pnl']:.0f}")
+                            lines.append(f"\n<b>Total: ₹{total:.0f}</b>")
+                            tg_send("\n".join(lines))
+                    except Exception as ex:
+                        tg_send(f"Error: {ex}")
+
+                elif cmd == "/stop":
+                    state["first_trade_done"] = True
+                    tg_send("⛔ <b>Trading stopped for today.</b>\nBot will not enter any more trades today.")
+
+                elif cmd == "/resume":
+                    state["first_trade_done"] = False
+                    tg_send("✅ <b>Trading resumed.</b>\nBot will enter the next qualifying trade.")
+
+                else:
+                    tg_send("❓ Unknown command.\nUse: /status  /pnl  /stop  /resume")
+
+        except Exception:
+            pass
+        time.sleep(2)
 
 # ── INDICATORS ────────────────────────────────────────────────────────────────
 def rsi(series, period=14):
@@ -135,21 +306,43 @@ def supertrend(df, period=7, multiplier=3):
 
     return pd.Series(direction, index=df.index)
 
-def confidence_score(row, prev):
+def bull_confidence(row, prev):
+    """Bullish score → BUY CE. Max 50 pts."""
     bd = {"rsi": 0, "macd": 0, "vol": 0, "sma": 0, "price": 0, "slope": 0}
-    if row["rsi"] < 45:                                                    bd["rsi"]   = 20
-    if prev["macd"] < prev["macd_sig"] and row["macd"] > row["macd_sig"]: bd["macd"]  = 15
-    if row["volume"] > row["vol_avg"] * 1.2:                               bd["vol"]   = 5
-    if row["sma20"] > row["sma50"] > row["sma200"]:                        bd["sma"]   = 20
-    if row["close"] > row["sma50"]:                                         bd["price"] = 10
-    if row["sma20"] > prev["sma20"]:                                        bd["slope"] = 5
+    if row["rsi"] < 50:                          bd["rsi"]   = 15  # below midline
+    if row["macd"] > row["macd_sig"]:            bd["macd"]  = 12  # MACD above signal
+    if row["volume"] > row["vol_avg"] * 1.1:     bd["vol"]   = 5   # mild volume spike
+    if row["sma20"] > row["sma50"]:              bd["sma"]   = 10  # short > medium trend
+    if row["close"] > row["sma50"]:              bd["price"] = 5
+    if row["sma20"] > prev["sma20"]:             bd["slope"] = 3
+    return sum(bd.values()), bd
+
+def bear_confidence(row, prev):
+    """Bearish score → BUY PE. Max 50 pts."""
+    bd = {"rsi": 0, "macd": 0, "vol": 0, "sma": 0, "price": 0, "slope": 0}
+    if row["rsi"] > 50:                          bd["rsi"]   = 15  # above midline
+    if row["macd"] < row["macd_sig"]:            bd["macd"]  = 12  # MACD below signal
+    if row["volume"] > row["vol_avg"] * 1.1:     bd["vol"]   = 5   # mild volume spike
+    if row["sma20"] < row["sma50"]:              bd["sma"]   = 10  # short < medium trend
+    if row["close"] < row["sma50"]:              bd["price"] = 5
+    if row["sma20"] < prev["sma20"]:             bd["slope"] = 3
     return sum(bd.values()), bd
 
 # ── MARKET DATA ───────────────────────────────────────────────────────────────
-def fetch_candles():
-    df = yf.download("^NSEI", period="3y", interval="1d", progress=False)
+def fetch_candles(yf_sym="^NSEI"):
+    """Fetch 60 days of 5-min candles for any symbol and compute all indicators."""
+    df = yf.download(yf_sym, period="60d", interval="5m", progress=False)
     df = df.reset_index()
-    df.columns = ["datetime","open","high","low","close","volume"]
+    # Flatten MultiIndex if present (newer yfinance versions)
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = [c[0].lower().replace(" ", "") for c in df.columns]
+    else:
+        df.columns = [str(c).lower().replace(" ", "") for c in df.columns]
+    # Normalise the time column name
+    for col in list(df.columns):
+        if col in ("datetime", "date", "timestamp", "index"):
+            df = df.rename(columns={col: "datetime"}); break
+    df = df[["datetime", "open", "high", "low", "close", "volume"]].copy()
     df["rsi"]     = rsi(df["close"])
     df["sma20"]   = df["close"].rolling(20).mean()
     df["sma50"]   = df["close"].rolling(50).mean()
@@ -161,9 +354,9 @@ def fetch_candles():
     df["st_dir"]  = supertrend(df)   # 1=bullish, -1=bearish
     return df.dropna().reset_index(drop=True)
 
-def fetch_live_price():
+def fetch_live_price(yf_sym="^NSEI"):
     try:
-        ticker = yf.Ticker("^NSEI")
+        ticker = yf.Ticker(yf_sym)
         hist   = ticker.history(period="1d", interval="1m")
         if len(hist) > 0:
             return round(float(hist["Close"].iloc[-1]), 2)
@@ -180,6 +373,57 @@ def fetch_vix():
     except Exception:
         pass
     return None
+
+def fetch_daily_hl(yf_sym="^NSEI"):
+    """Return (yesterday_high, yesterday_low) from daily OHLC."""
+    try:
+        df = yf.download(yf_sym, period="5d", interval="1d", progress=False)
+        df = df.reset_index()
+        if isinstance(df.columns, pd.MultiIndex):
+            df.columns = [c[0].lower() for c in df.columns]
+        else:
+            df.columns = [str(c).lower() for c in df.columns]
+        tcol = next(c for c in df.columns if c in ("datetime","date","timestamp","index"))
+        df[tcol] = pd.to_datetime(df[tcol]).dt.date
+        prev = df[df[tcol] < date.today()]
+        if len(prev) < 1:
+            return None, None
+        yd = prev.iloc[-1]
+        return float(yd["high"]), float(yd["low"])
+    except Exception:
+        return None, None
+
+def fetch_morning_direction(yf_sym="^NSEI"):
+    """CE if first 5-min candle was UP (close >= open), PE if DOWN."""
+    try:
+        df = yf.download(yf_sym, period="1d", interval="5m", progress=False)
+        df = df.reset_index()
+        if isinstance(df.columns, pd.MultiIndex):
+            df.columns = [c[0].lower() for c in df.columns]
+        else:
+            df.columns = [str(c).lower() for c in df.columns]
+        if len(df) < 1:
+            return "CE"
+        first_open  = float(df.iloc[0]["open"])
+        first_close = float(df.iloc[0]["close"])
+        return "CE" if first_close >= first_open else "PE"
+    except Exception:
+        return "CE"
+
+def load_bot_state():
+    """Load running capital and today's lot size from disk."""
+    if os.path.exists(BOT_STATE_FILE):
+        try:
+            with open(BOT_STATE_FILE) as f:
+                s = json.load(f)
+            return float(s.get("running_capital", PAPER_CAPITAL)), int(s.get("lots_today", BASE_LOTS))
+        except Exception:
+            pass
+    return float(PAPER_CAPITAL), BASE_LOTS
+
+def save_bot_state(capital, lots):
+    with open(BOT_STATE_FILE, "w") as f:
+        json.dump({"running_capital": round(capital, 2), "lots_today": lots}, f)
 
 def fetch_nse_optionchain(symbol="NIFTY"):
     """Fetch live option chain from NSE India (requires cookie init)."""
@@ -200,13 +444,43 @@ def fetch_nse_optionchain(symbol="NIFTY"):
         pass
     return None
 
-def calculate_oi_metrics(data, spot_price):
+def fetch_bse_optionchain():
+    """Fetch SENSEX option chain from BSE India (best-effort)."""
+    try:
+        s = req_lib.Session()
+        h = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "Accept": "application/json, text/plain, */*",
+            "Referer": "https://www.bseindia.com/",
+        }
+        # Get available expiry dates for SENSEX (scripcode=1 = SENSEX)
+        exp_r = s.get("https://api.bseindia.com/BseIndiaAPI/api/DDLExpiryDate/w?flag=C&scripcode=1",
+                       headers=h, timeout=8)
+        if exp_r.status_code != 200:
+            return None
+        expiries = exp_r.json()
+        if not expiries:
+            return None
+        exp_date = expiries[min(EXPIRY_INDEX, len(expiries)-1)].get("Val", "")
+        chain_r = s.get(f"https://api.bseindia.com/BseIndiaAPI/api/OptionChain/w?scripcode=1&expirydt={exp_date}",
+                         headers=h, timeout=8)
+        if chain_r.status_code == 200:
+            return {"bse": True, "data": chain_r.json(), "expiry": exp_date,
+                    "expiries": [e.get("Val","") for e in expiries]}
+    except Exception:
+        pass
+    return None
+
+def calculate_oi_metrics(data, spot_price, expiry_index=0):
     """Compute PCR, Max Pain, ATM strikes from option chain JSON."""
     if not data or "records" not in data:
         return None
     try:
-        records = data["records"]["data"]
-        expiry  = data["records"]["expiryDates"][0]
+        records     = data["records"]["data"]
+        all_exp     = data["records"].get("expiryDates", [])
+        expiry      = all_exp[min(expiry_index, len(all_exp) - 1)] if all_exp else None
+        if not expiry:
+            return None
         ce_tot = pe_tot = 0
         rows = []
         for rec in records:
@@ -269,8 +543,68 @@ def bot_log(msg, cls=""):
     print(f"[{entry['time']}] {msg}")
 
 # ── VERCEL SYNC ──────────────────────────────────────────────────────────────
+STRIKE_STEP = {"NIFTY": 50, "BANKNIFTY": 100, "SENSEX": 100}
+
+def get_atm_strike(price, inst_name):
+    step = STRIKE_STEP.get(inst_name, 50)
+    return int(round(price / step) * step)
+
+def get_target_strike(price, inst_name, option_type):
+    """1 strike OTM from ATM → delta ~0.40."""
+    step = STRIKE_STEP.get(inst_name, 50)
+    atm  = get_atm_strike(price, inst_name)
+    return atm + step if option_type == "CE" else atm - step
+
+def fetch_option_premium(inst_name, strike, option_type, spot_price):
+    """
+    Try NSE option chain for actual LTP.
+    Falls back to a VIX-based ATM estimate so the bot always gets a number.
+    """
+    import math
+    try:
+        if inst_name in ["NIFTY", "BANKNIFTY"]:
+            oc = fetch_nse_optionchain(inst_name)
+            if oc:
+                for row in oc.get("records", {}).get("data", []):
+                    if row.get("strikePrice") == strike:
+                        ltp = row.get(option_type, {}).get("lastPrice", 0)
+                        if ltp > 0:
+                            return round(ltp, 1)
+    except Exception:
+        pass
+    # Fallback: rough VIX-based premium estimate using actual spot_price
+    vix   = state.get("vix") or 15
+    iv    = vix / 100
+    t     = 4 / 365                         # ~4 trading days to expiry
+    atm_p = spot_price * iv * math.sqrt(t) * 0.4
+    mono  = abs(strike - spot_price) / spot_price
+    disc  = max(0.25, 1 - mono * 8)
+    return round(atm_p * disc, 1)
+
+def get_next_expiry(inst_name, index=0):
+    """Calculate nearest expiry: NIFTY=Thursday, BANKNIFTY=Wednesday, SENSEX=Friday."""
+    weekday_map = {"NIFTY": 3, "BANKNIFTY": 2, "SENSEX": 4}  # Mon=0 … Sun=6
+    target_wd   = weekday_map.get(inst_name, 3)
+    today       = date.today()
+    days_ahead  = (target_wd - today.weekday()) % 7
+    if days_ahead == 0:
+        days_ahead = 7   # today is expiry day → use next week
+    first_exp   = today + timedelta(days=days_ahead)
+    expiry      = first_exp + timedelta(weeks=index)
+    return expiry.strftime("%d %b %Y")   # e.g. "03 Jul 2026"
+
+EXPIRY_WEEKDAY = {"NIFTY": 3, "BANKNIFTY": 2, "SENSEX": 4}  # Thu, Wed, Fri
+
+def is_expiry_day(inst_name):
+    """True if today is weekly expiry for this instrument — theta risk too high for buying."""
+    return date.today().weekday() == EXPIRY_WEEKDAY.get(inst_name, -1)
+
+_sync_lock = threading.Lock()
+
 def sync_to_vercel():
     """Write trades.json and push to GitHub → Vercel redeploys in ~15 seconds."""
+    if not _sync_lock.acquire(blocking=False):
+        return  # another sync already running, skip
     try:
         conn = get_db()
         rows = [dict(r) for r in conn.execute("SELECT * FROM trades ORDER BY id").fetchall()]
@@ -311,17 +645,20 @@ def sync_to_vercel():
             json.dump(payload, f, indent=2, default=str)
 
         proj = os.path.dirname(os.path.abspath(__file__))
-        subprocess.run(["git", "add", "web/trades.json"], cwd=proj, capture_output=True)
-        r = subprocess.run(["git", "commit", "-m", f"bot: sync {datetime.now().strftime('%H:%M')}"], cwd=proj, capture_output=True)
+        git  = r"C:\Program Files\Git\bin\git.exe"
+        subprocess.run([git, "add", "web/trades.json"], cwd=proj, capture_output=True)
+        r = subprocess.run([git, "commit", "-m", f"bot: sync {datetime.now().strftime('%H:%M')}"], cwd=proj, capture_output=True)
         if b"nothing to commit" in r.stdout:
             return  # no change, skip push
-        push = subprocess.run(["git", "push", "origin", "main"], cwd=proj, capture_output=True)
+        push = subprocess.run([git, "push", "origin", "main"], cwd=proj, capture_output=True)
         if push.returncode == 0:
             bot_log("Synced to Vercel — live in ~15s", "ok")
         else:
             bot_log(f"Vercel sync failed: {push.stderr.decode()[:80]}", "err")
     except Exception as e:
         bot_log(f"Vercel sync error: {e}", "err")
+    finally:
+        _sync_lock.release()
 
 def sync_background():
     threading.Thread(target=sync_to_vercel, daemon=True).start()
@@ -345,7 +682,13 @@ def bot_loop():
         bot_log(f"Kite connection failed: {e}", "err")
 
     mode_label = "PAPER TRADE" if PAPER_TRADE else "LIVE TRADE"
-    bot_log(f"Bot started | {mode_label} | Threshold: {THRESHOLD}", "info")
+    bot_log(f"Bot started | {mode_label} | Strategy: BREAKOUT | SL=Rs.{abs(STOP_LOSS)}", "info")
+
+    # Load dynamic lot state (persists across restarts)
+    running_capital, lots_today = load_bot_state()
+    state["running_capital"] = running_capital
+    state["lots_today"]      = lots_today
+    bot_log(f"Capital: Rs.{running_capital:.0f} | Lots: {lots_today}L ({lots_today*25} units)", "info")
 
     # Restore open positions from disk (survives restarts)
     POSITIONS_FILE = "open_positions.json"
@@ -362,33 +705,61 @@ def bot_loop():
         return []
 
     positions  = load_positions()
+    # Backfill strike + premium for positions that predate the strike selector
+    _changed = False
+    for _p in positions:
+        if not _p.get("strike"):
+            _p["strike"] = get_target_strike(_p["entry"], _p.get("instrument","NIFTY"), _p.get("option_type","CE"))
+            _p["premium_entry"] = fetch_option_premium(_p["instrument"], _p["strike"], _p["option_type"], _p["entry"])
+            _changed = True
+    if _changed:
+        import json as _json
+        with open(POSITIONS_FILE, "w") as _f:
+            _json.dump(positions, _f)
+    # DB-backed flag: survives restarts even if SL fired and position was removed
+    first_trade_done = has_traded_today() or bool(positions)
+    state["first_trade_done"] = first_trade_done
     if positions:
         bot_log(f"Restored {len(positions)} open position(s) from disk.", "info")
-    daily_pnl  = 0.0
-    today      = date.today()
-    last_sync  = 0   # epoch time of last periodic sync
+    elif first_trade_done:
+        bot_log("Already traded today (from DB) — won't enter again.", "info")
+    daily_pnl        = 0.0
+    today            = date.today()
+    last_sync        = 0
+    sl_cooldown      = {}   # {instrument: timestamp} — 10-min cooldown after SL hit
+    # first_trade_done is set after load_positions() — do NOT reset it here
 
-    # Cache daily candles — refresh once per day only
-    _candle_cache = {"date": None, "df": None}
-    def get_candles():
-        today_str = date.today().isoformat()
-        if _candle_cache["date"] != today_str or _candle_cache["df"] is None:
-            bot_log("Fetching daily candles from Yahoo...", "info")
-            _candle_cache["df"]   = fetch_candles()
-            _candle_cache["date"] = today_str
-        return _candle_cache["df"]
+    # Per-instrument candle cache (keyed by yfinance symbol)
+    _candle_cache = {}
+    def get_candles(yf_sym):
+        if yf_sym not in _candle_cache:
+            _candle_cache[yf_sym] = {"ts": 0, "df": None}
+        c = _candle_cache[yf_sym]
+        if time.time() - c["ts"] > 270 or c["df"] is None:
+            bot_log(f"Fetching 5-min candles [{yf_sym}]...", "info")
+            c["df"] = fetch_candles(yf_sym)
+            c["ts"] = time.time()
+        return c["df"]
 
     while True:
+        # Sync from state so Telegram /stop and /resume take effect next iteration
+        first_trade_done = state.get("first_trade_done", first_trade_done)
+
         if date.today() != today:
-            daily_pnl = 0.0
-            today     = date.today()
-            positions = []
-            bot_log("New trading day — P&L reset.", "info")
+            daily_pnl        = 0.0
+            today            = date.today()
+            positions        = []
+            sl_cooldown      = {}
+            first_trade_done = False
+            state["first_trade_done"] = False
+            state["signal"] = "--"
+            bot_log(f"New trading day | Capital: Rs.{running_capital:.0f} | Lots: {lots_today}L", "info")
+            tg_send(f"New trading day started.\nCapital: Rs.{running_capital:.0f} | Lots: {lots_today}L\nWatching NIFTY breakout.")
 
         market_open = is_market_open()
-        state["market_open"]     = market_open
-        state["open_positions"]  = len(positions)
-        state["daily_pnl"]       = round(daily_pnl, 0)
+        state["market_open"]    = market_open
+        state["open_positions"] = len(positions)
+        state["daily_pnl"]      = round(daily_pnl, 0)
 
         if not market_open:
             bot_log("Market closed. Waiting...")
@@ -400,120 +771,248 @@ def bot_loop():
             time.sleep(300)
             continue
 
-        # EOD exit — force-close all positions at 3:20 PM
-        now_t = datetime.now()
-        eod   = now_t.replace(hour=15, minute=20, second=0, microsecond=0)
-        if positions and now_t >= eod:
-            price = fetch_live_price() or 0
-            for pos in positions:
-                move = (price - pos["entry"]) * DELTA * LOT
-                pnl  = round(move - BROKERAGE, 2)
-                save_trade(pos["score"], pos["entry"], price, pnl, "EOD_EXIT")
-                daily_pnl += pnl
-                bot_log(f"EOD EXIT | Entry:{pos['entry']:.0f} Exit:{price:.0f} P&L:Rs.{pnl:.0f}", "info")
-            positions.clear()
-            save_positions(positions)
-            sync_background()
-            time.sleep(60)
-            continue
-
         try:
-            price = fetch_live_price()
-            if price is None:
-                bot_log("Could not fetch live price. Retrying...", "err")
+            # ── 1. Fetch live prices for all instruments ──────────────────────
+            inst_prices = {}
+            for inst in INSTRUMENTS:
+                p = fetch_live_price(inst["yf"])
+                if p:
+                    inst_prices[inst["name"]] = p
+            if not inst_prices:
+                bot_log("Could not fetch any live prices. Retrying...", "err")
                 time.sleep(60)
                 continue
+            state["nifty_price"] = inst_prices.get("NIFTY", "--")
 
-            state["nifty_price"] = price
+            # ── 2. EOD exit — force-close all positions at 3:15 PM ───────────
+            now_t = datetime.now()
+            if positions and now_t >= now_t.replace(hour=15, minute=15, second=0, microsecond=0):
+                for pos in positions:
+                    iname = pos.get("instrument", "NIFTY")
+                    px    = inst_prices.get(iname, pos["entry"])
+                    lot   = pos.get("lot", LOT);  delta = pos.get("delta", DELTA)
+                    otype = pos.get("option_type", "CE")
+                    # Use premium-based P&L if available, else delta approximation
+                    if pos.get("strike") and pos.get("premium_entry"):
+                        live_p = fetch_option_premium(iname, pos["strike"], otype, px)
+                        pnl = round((live_p - pos["premium_entry"]) * lot - BROKERAGE, 2) if live_p else 0
+                    else:
+                        move = (px - pos["entry"]) * delta * lot if otype == "CE" else (pos["entry"] - px) * delta * lot
+                        pnl  = round(move - BROKERAGE, 2)
+                    save_trade(pos["score"], pos["entry"], px, pnl, "EOD_EXIT", iname, otype)
+                    daily_pnl += pnl
+                    bot_log(f"EOD EXIT {iname} {otype} {pos.get('strike','')} | Entry:{pos['entry']:.0f} P&L:Rs.{pnl:.0f}", "info")
+                    tg_send(f"🔔 <b>EOD EXIT — {iname} {otype}</b>\nStrike: {pos.get('strike','')}\nEntry: {pos['entry']:.0f}  Exit: {px:.0f}\n<b>P&amp;L: ₹{pnl:.0f}</b>")
+                    # Update capital and lots after EOD close
+                    running_capital += pnl
+                    if pnl > 0:
+                        lots_today = min(MAX_LOTS, max(BASE_LOTS, int(running_capital // CAPITAL_PER_LOT)))
+                    else:
+                        lots_today = BASE_LOTS
+                    save_bot_state(running_capital, lots_today)
+                    state["running_capital"] = running_capital
+                    state["lots_today"]      = lots_today
+                positions.clear(); save_positions(positions); sync_background()
+                tg_send(f"Market closing - EOD Summary\nToday P&L: Rs.{daily_pnl:.0f}\nCapital: Rs.{running_capital:.0f} | Tomorrow: {lots_today}L")
+                time.sleep(60); continue
 
-            # Check open positions for stop-loss / take-profit / trailing stop
+            # ── 3. Check open positions (SL / TP / trail) ────────────────────
             closed = []
             for pos in positions:
-                move = (price - pos["entry"]) * DELTA * LOT
-                pnl  = move - BROKERAGE
+                iname = pos.get("instrument", "NIFTY")
+                px    = inst_prices.get(iname)
+                if not px:
+                    continue
+                lot   = pos.get("lot", LOT);  delta = pos.get("delta", DELTA)
+                otype = pos.get("option_type", "CE")
+                move  = (px - pos["entry"]) * delta * lot if otype == "CE" else (pos["entry"] - px) * delta * lot
+                pnl   = move - BROKERAGE
 
-                # Activate trailing stop once Rs.400 profit is reached
-                if pnl >= 400 and pos.get("trail_stop") is None:
-                    pos["trail_stop"] = 0      # lock in break-even
-                    save_positions(positions)
-                    bot_log(f"Trail stop ON — protecting breakeven | P&L:Rs.{pnl:.0f}", "info")
-                elif pnl >= 700 and pos.get("trail_stop", -9999) < 200:
-                    pos["trail_stop"] = 200    # lock in Rs.200 profit
-                    save_positions(positions)
-                    bot_log(f"Trail stop raised to +Rs.200 | P&L:Rs.{pnl:.0f}", "info")
+                # ── Premium SL: exit if option lost 60% of entry value (theta/move) ──
+                if pos.get("strike") and pos.get("premium_entry"):
+                    live_prem = fetch_option_premium(iname, pos["strike"], otype, px)
+                    if live_prem and live_prem < pos["premium_entry"] * 0.40:
+                        pnl_p = round((live_prem - pos["premium_entry"]) * lot - BROKERAGE, 2)
+                        save_trade(pos["score"], pos["entry"], px, pnl_p, "PREM_SL", iname, otype)
+                        daily_pnl += pnl_p
+                        sl_cooldown[iname] = time.time()
+                        bot_log(f"PREM SL {iname} {otype} {pos['strike']} | ₹{pos['premium_entry']}→₹{live_prem:.1f} P&L:Rs.{pnl_p:.0f}", "err")
+                        tg_send(f"🔴 <b>PREMIUM SL — {iname} {otype}</b>\nStrike: {pos.get('strike','')}\nPremium: ₹{pos['premium_entry']} → ₹{live_prem:.1f}\n<b>P&amp;L: ₹{pnl_p:.0f}</b>")
+                        closed.append(pos); sync_background(); continue
 
-                # Trail stop triggered
-                if pos.get("trail_stop") is not None and pnl <= pos["trail_stop"]:
-                    save_trade(pos["score"], pos["entry"], price, round(pnl, 2), "TRAIL_STOP")
-                    daily_pnl += pnl
-                    bot_log(f"TRAIL STOP | Entry:{pos['entry']:.0f} Exit:{price:.0f} P&L:Rs.{pnl:.0f}", "ok")
+                # ── Track peak P&L (updated every cycle) ──────────────────────
+                if pnl > pos.get("peak_pnl", -9999):
+                    pos["peak_pnl"] = pnl
+                peak_pnl = pos.get("peak_pnl", 0)
+
+                # ── Hard SL — always Rs.150, always first ──────────────────────
+                if pnl <= STOP_LOSS:
+                    save_trade(pos["score"], pos["entry"], px, STOP_LOSS, "STOP_LOSS", iname, otype)
+                    daily_pnl      += STOP_LOSS
+                    running_capital += STOP_LOSS
+                    lots_today      = BASE_LOTS   # revert to 3 lots after any loss
+                    save_bot_state(running_capital, lots_today)
+                    state["running_capital"] = running_capital
+                    state["lots_today"]      = lots_today
+                    sl_cooldown[iname] = time.time()
+                    bot_log(f"STOP LOSS {iname} {otype} | Entry:{pos['entry']:.0f} Exit:{px:.0f} | Capital:Rs.{running_capital:.0f} Lots->{lots_today}L", "err")
+                    tg_send(f"STOP LOSS - {iname} {otype}\nEntry: {pos['entry']:.0f}  Exit: {px:.0f}\nLoss: Rs.{STOP_LOSS}\nCapital: Rs.{running_capital:.0f} | Back to {lots_today}L tomorrow")
                     closed.append(pos); sync_background(); continue
 
-                if pnl <= STOP_LOSS:
-                    pnl = STOP_LOSS
-                    save_trade(pos["score"], pos["entry"], price, pnl, "STOP_LOSS")
-                    daily_pnl += pnl
-                    bot_log(f"STOP LOSS | Entry:{pos['entry']:.0f} Exit:{price:.0f} P&L:Rs.{pnl:.0f}", "err")
-                    closed.append(pos)
-                    sync_background()
-                elif pnl >= TAKE_PROFIT:
-                    pnl = TAKE_PROFIT
-                    save_trade(pos["score"], pos["entry"], price, pnl, "TAKE_PROFIT")
-                    daily_pnl += pnl
-                    bot_log(f"TAKE PROFIT | Entry:{pos['entry']:.0f} Exit:{price:.0f} P&L:Rs.{pnl:.0f}", "ok")
-                    closed.append(pos)
-                    sync_background()
+                # ── Big trail: let winners run (strong trend day) ───────────────
+                if peak_pnl >= BIG_TRAIL_START and pnl <= peak_pnl - BIG_TRAIL_DROP:
+                    exit_pnl = round(pnl, 2)
+                    save_trade(pos["score"], pos["entry"], px, exit_pnl, "TRAIL_EXIT", iname, otype)
+                    daily_pnl      += exit_pnl
+                    running_capital += exit_pnl
+                    lots_today = min(MAX_LOTS, max(BASE_LOTS, int(running_capital // CAPITAL_PER_LOT)))
+                    save_bot_state(running_capital, lots_today)
+                    state["running_capital"] = running_capital
+                    state["lots_today"]      = lots_today
+                    bot_log(f"TRAIL EXIT {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Booked:Rs.{exit_pnl:.0f} | Capital:Rs.{running_capital:.0f} Lots->{lots_today}L", "ok")
+                    tg_send(f"TRAIL EXIT - {iname} {otype}\nPeak: Rs.{peak_pnl:.0f}  Booked: Rs.{exit_pnl:.0f}\nCapital: Rs.{running_capital:.0f} | Next: {lots_today}L")
+                    closed.append(pos); sync_background(); continue
+
+                # ── Small trail: book profit on tough/slow days ─────────────────
+                if peak_pnl >= SMALL_TRAIL_START and pnl <= peak_pnl - SMALL_TRAIL_DROP:
+                    exit_pnl = round(pnl, 2)
+                    status   = "PROFIT_LOCK" if exit_pnl > 0 else "STOP_LOSS"
+                    save_trade(pos["score"], pos["entry"], px, exit_pnl, status, iname, otype)
+                    daily_pnl      += exit_pnl
+                    running_capital += exit_pnl
+                    if exit_pnl > 0:
+                        lots_today = min(MAX_LOTS, max(BASE_LOTS, int(running_capital // CAPITAL_PER_LOT)))
+                    else:
+                        lots_today = BASE_LOTS
+                    save_bot_state(running_capital, lots_today)
+                    state["running_capital"] = running_capital
+                    state["lots_today"]      = lots_today
+                    bot_log(f"PROFIT LOCK {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Booked:Rs.{exit_pnl:.0f} | Capital:Rs.{running_capital:.0f}", "ok")
+                    tg_send(f"PROFIT LOCK - {iname} {otype}\nPeak: Rs.{peak_pnl:.0f}  Booked: Rs.{exit_pnl:.0f}\nCapital: Rs.{running_capital:.0f} | Next: {lots_today}L")
+                    closed.append(pos); sync_background(); continue
+
+                # Log riding status
+                if peak_pnl >= BIG_TRAIL_START:
+                    bot_log(f"RIDING — {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Now:Rs.{pnl:.0f} (big trail active)", "ok")
+                elif peak_pnl >= SMALL_TRAIL_START:
+                    bot_log(f"RIDING — {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Now:Rs.{pnl:.0f} (small trail active)", "ok")
+
             for pos in closed:
                 positions.remove(pos)
             if closed:
                 save_positions(positions)
 
-            # Check for new entry (uses cached daily candles — only fetches once per day)
-            df          = get_candles()
-            row         = df.iloc[-1]
-            prev        = df.iloc[-2]
-            score, bkdn = confidence_score(row, prev)
-
-            # Supertrend direction (1=bullish, -1=bearish)
-            st_bullish = int(row["st_dir"]) == 1
-            state["supertrend_bullish"] = st_bullish
-
-            state["score"]           = score
-            state["score_breakdown"] = bkdn
-            state["open_positions"]  = len(positions)
-            state["daily_pnl"]       = round(daily_pnl, 0)
-
-            # VIX check — fetch once per loop, skip new entries if panic
+            # ── 4. Update state ────────────────────────────────────────────────
             vix = fetch_vix()
             if vix:
                 state["vix"] = vix
 
-            # Option chain — fetch and cache for Vercel sync
+            px_nifty = inst_prices.get("NIFTY")
+            state["positions_list"]   = positions
+            state["open_positions"]   = len(positions)
+            state["daily_pnl"]        = round(daily_pnl, 0)
+            state["first_trade_done"] = first_trade_done
+
+            # Unrealized P&L
+            unrealized = 0.0
+            for _p in positions:
+                _px    = inst_prices.get(_p.get("instrument","NIFTY"), _p["entry"])
+                _lot   = _p.get("lot", LOT); _delta = _p.get("delta", DELTA)
+                _otype = _p.get("option_type", "CE")
+                _mv    = (_px - _p["entry"]) * _delta * _lot if _otype == "CE" else (_p["entry"] - _px) * _delta * _lot
+                unrealized += _mv - BROKERAGE
+            state["unrealized_pnl"] = round(unrealized, 0)
+            state["total_pnl"]      = round(daily_pnl + unrealized, 0)
+            state["active_side"]    = "BULL" if state.get("option_type") == "CE" else "BEAR" if state.get("option_type") == "PE" else None
+
+            # NIFTY option chain for dashboard
             oc = fetch_nse_optionchain("NIFTY")
             if oc:
-                metrics = calculate_oi_metrics(oc, price)
-                if metrics:
-                    state["oi_nifty"] = metrics
+                all_exp = oc.get("records", {}).get("expiryDates", [])
+                state["available_expiries"] = all_exp
+                if px_nifty:
+                    metrics = calculate_oi_metrics(oc, px_nifty, EXPIRY_INDEX)
+                    if metrics:
+                        state["oi_nifty"] = metrics
+                        state["expiry"]   = metrics["expiry"]
 
-            # Entry decision: score + Supertrend + VIX filter
-            if len(positions) < MAX_POSITIONS and score >= THRESHOLD:
-                if state.get("vix") and state["vix"] > 25:
-                    bot_log(f"VIX={state['vix']:.1f} — high volatility, NO new entry | Score:{score}/75", "err")
-                elif not st_bullish:
-                    bot_log(f"Score:{score}/75 but Supertrend BEARISH — skipping entry", "err")
+            # ── 5. Breakout signal + entry ────────────────────────────────────
+            prefix = "[PAPER]" if PAPER_TRADE else "[LIVE]"
+            _now   = datetime.now()
+            # Entry window: 10:15 AM to 12:30 PM (avoid late entries)
+            _entry_allowed = (_now.hour > 10 or (_now.hour == 10 and _now.minute >= 15)) \
+                             and (_now.hour < 12 or (_now.hour == 12 and _now.minute <= 30))
+            entered = False
+
+            if not first_trade_done and _entry_allowed and len(positions) < MAX_POSITIONS and px_nifty:
+                if is_expiry_day("NIFTY"):
+                    bot_log("SKIP — NIFTY expiry day (Thursday)", "info")
+                elif "NIFTY" in sl_cooldown and time.time() - sl_cooldown["NIFTY"] < 600:
+                    bot_log("NIFTY in SL cooldown — waiting", "info")
                 else:
-                    positions.append({"entry": price, "score": score, "trail_stop": None})
-                    save_positions(positions)
-                    action = "[PAPER] BUY CE" if PAPER_TRADE else "BUY CE"
-                    st_tag = "ST:Bullish"
-                    bot_log(f"{action} | NIFTY:{price:.0f} Score:{score}/75 {st_tag} Pos:{len(positions)}/2", "ok")
-                    sync_background()
-            else:
-                st_tag = "ST:Bull" if st_bullish else "ST:Bear"
-                vix_tag = f" VIX:{state['vix']:.1f}" if state.get("vix") else ""
-                bot_log(f"NIFTY:{price:.0f} Score:{score}/75 {st_tag}{vix_tag} Pos:{len(positions)}/2 Daily:Rs.{daily_pnl:.0f}")
+                    yd_high, yd_low = fetch_daily_hl("^NSEI")
+                    state["yd_high"] = yd_high
+                    state["yd_low"]  = yd_low
 
-            # Sync score/log to Vercel every 5 minutes even without a trade
+                    if yd_high and yd_low:
+                        # Breakout signal
+                        if px_nifty > yd_high:
+                            otype  = "CE"
+                            signal = f"BREAK HIGH {yd_high:.0f}"
+                        elif px_nifty < yd_low:
+                            otype  = "PE"
+                            signal = f"BREAK LOW {yd_low:.0f}"
+                        else:
+                            otype  = fetch_morning_direction("^NSEI")
+                            signal = f"MORN {'UP' if otype=='CE' else 'DN'} ({px_nifty:.0f})"
+
+                        state["signal"] = signal
+                        inst        = INSTRUMENTS[0]
+                        current_lot = lots_today * 25   # 3 lots = 75 units
+                        exp         = state.get("expiry") or get_next_expiry("NIFTY", EXPIRY_INDEX)
+                        strike      = get_target_strike(px_nifty, "NIFTY", otype)
+                        premium     = fetch_option_premium("NIFTY", strike, otype, px_nifty)
+
+                        if premium and premium < 30:
+                            bot_log(f"SKIP NIFTY {otype} {strike} — premium Rs.{premium:.0f} too low (<Rs.30)", "info")
+                        else:
+                            positions.append({
+                                "instrument":    "NIFTY",
+                                "lot":           current_lot,
+                                "delta":         DELTA,
+                                "entry":         px_nifty,
+                                "score":         0,
+                                "option_type":   otype,
+                                "expiry":        exp,
+                                "strike":        strike,
+                                "premium_entry": premium,
+                                "trail_stop":    None,
+                                "peak_pnl":      -9999,
+                            })
+                            save_positions(positions)
+                            first_trade_done = True
+                            state["first_trade_done"] = True
+                            state["option_type"]      = otype
+                            bot_log(f"{prefix} BUY {otype} NIFTY {strike} @ Rs.{premium} | {signal} | {lots_today}L ({current_lot}u) | Expiry:{exp}", "ok")
+                            tg_send(
+                                f"TRADE ENTERED - NIFTY {otype}\n"
+                                f"Signal: {signal}\n"
+                                f"Strike: {strike}  Premium: Rs.{premium}\n"
+                                f"Lots: {lots_today}L ({current_lot} units)  Expiry: {exp}\n"
+                                f"SL: Rs.{abs(STOP_LOSS)}  Capital: Rs.{running_capital:.0f}\n"
+                                f"Mode: {'PAPER' if PAPER_TRADE else 'LIVE'}"
+                            )
+                            sync_background()
+                            entered = True
+
+            if not entered and not first_trade_done:
+                vix_tag = f" VIX:{state['vix']:.1f}" if state.get("vix") else ""
+                sig_tag = state.get("signal","--")
+                yd_h    = state.get("yd_high")
+                yd_l    = state.get("yd_low")
+                hl_tag  = f" YdH:{yd_h:.0f}/YdL:{yd_l:.0f}" if yd_h else ""
+                bot_log(f"NIFTY:{px_nifty:.0f}{hl_tag} Sig:{sig_tag}{vix_tag} Lots:{lots_today}L Cap:Rs.{running_capital:.0f} Daily:Rs.{daily_pnl:.0f}")
+
             if time.time() - last_sync > 300:
                 sync_background()
                 last_sync = time.time()
@@ -546,17 +1045,46 @@ def api_positions():
 @app.route("/api/state")
 def api_state():
     return jsonify({
-        "nifty_price":       state["nifty_price"],
-        "score":             state["score"],
-        "score_breakdown":   state["score_breakdown"],
-        "open_positions":    state["open_positions"],
-        "daily_pnl":         state["daily_pnl"],
-        "market_open":       state["market_open"],
-        "log":               state["log"][:30],
-        "paper_trade":       PAPER_TRADE,
-        "vix":               state.get("vix"),
-        "supertrend_bullish":state.get("supertrend_bullish"),
+        "nifty_price":        state["nifty_price"],
+        "score":              state["score"],
+        "score_breakdown":    state["score_breakdown"],
+        "bull_score":         state.get("bull_score", 0),
+        "bull_breakdown":     state.get("bull_breakdown", {}),
+        "bear_score":         state.get("bear_score", 0),
+        "bear_breakdown":     state.get("bear_breakdown", {}),
+        "active_side":        state.get("active_side"),
+        "open_positions":     state["open_positions"],
+        "daily_pnl":          state["daily_pnl"],
+        "market_open":        state["market_open"],
+        "log":                state["log"][:30],
+        "paper_trade":        PAPER_TRADE,
+        "vix":                state.get("vix"),
+        "supertrend_bullish": state.get("supertrend_bullish"),
+        "expiry":             state.get("expiry"),
+        "available_expiries": state.get("available_expiries", []),
+        "expiry_index":       EXPIRY_INDEX,
+        "option_type":        state.get("option_type", "—"),
+        "inst_scores":        state.get("inst_scores", {}),
+        "paper_capital":      PAPER_CAPITAL,
+        "threshold":          0,
+        "unrealized_pnl":     state.get("unrealized_pnl", 0),
+        "total_pnl":          state.get("total_pnl", 0),
+        "first_trade_done":   state.get("first_trade_done", False),
+        "signal":             state.get("signal", "--"),
+        "yd_high":            state.get("yd_high"),
+        "yd_low":             state.get("yd_low"),
+        "lots_today":         state.get("lots_today", BASE_LOTS),
+        "running_capital":    state.get("running_capital", float(PAPER_CAPITAL)),
     })
+
+@app.route("/api/set_expiry", methods=["POST"])
+def api_set_expiry():
+    global EXPIRY_INDEX
+    from flask import request
+    data = request.get_json(force=True) or {}
+    idx  = int(data.get("index", 0))
+    EXPIRY_INDEX = max(0, idx)
+    return jsonify({"ok": True, "expiry_index": EXPIRY_INDEX})
 
 @app.route("/api/optionchain/<symbol>")
 def api_optionchain(symbol):
@@ -574,6 +1102,75 @@ def api_optionchain(symbol):
 def api_vix():
     v = fetch_vix()
     return jsonify({"vix": v})
+
+@app.route("/api/intraday")
+def api_intraday():
+    """Today's 5-min candles + position levels for ALL 3 instruments."""
+    result = {}
+    positions_list = state.get("positions_list", [])
+    inst_scores    = state.get("inst_scores", {})
+
+    for inst in INSTRUMENTS:
+        try:
+            df = yf.download(inst["yf"], period="1d", interval="5m", progress=False)
+            df = df.reset_index()
+            if isinstance(df.columns, pd.MultiIndex):
+                df.columns = [c[0].lower().replace(" ", "") for c in df.columns]
+            else:
+                df.columns = [str(c).lower().replace(" ", "") for c in df.columns]
+            tcol   = next((c for c in df.columns if c in ("datetime", "date", "timestamp")), df.columns[0])
+            times  = df[tcol].dt.strftime("%H:%M").tolist()
+            closes = [round(float(v), 2) for v in df["close"].tolist()]
+            live_px = inst_scores.get(inst["name"], {}).get("price", closes[-1] if closes else 0)
+
+            mult = inst["delta"] * inst["lot"]
+            pos_data = []
+            for pos in positions_list:
+                if pos.get("instrument", "NIFTY") != inst["name"]:
+                    continue
+                entry  = pos.get("entry")
+                if not entry:
+                    continue   # skip corrupt position
+                # Use per-position lot/delta if stored, else fall back to instrument defaults
+                p_lot   = pos.get("lot",   inst["lot"])
+                p_delta = pos.get("delta", inst["delta"])
+                p_mult  = p_delta * p_lot
+                trail  = pos.get("trail_stop")
+                otype  = pos.get("option_type", "CE")
+                if otype == "CE":
+                    sl_p = round(entry + (STOP_LOSS + BROKERAGE) / p_mult, 1)
+                    tp_p = None   # no fixed TP — let winners run
+                    tr_p = round(entry + (trail + BROKERAGE) / p_mult, 1) if trail is not None else None
+                else:
+                    sl_p = round(entry - (STOP_LOSS + BROKERAGE) / p_mult, 1)
+                    tp_p = None   # no fixed TP — let winners run
+                    tr_p = round(entry - (trail + BROKERAGE) / p_mult, 1) if trail is not None else None
+                strike        = pos.get("strike")
+                premium_entry = pos.get("premium_entry")
+                # Fetch live premium for all instruments (NSE for NIFTY/BANKNIFTY, VIX estimate for SENSEX)
+                live_premium = None
+                if strike:
+                    live_premium = fetch_option_premium(pos.get("instrument", inst["name"]), strike, otype, live_px)
+                pos_data.append({
+                    "entry":         round(entry, 1),
+                    "sl_price":      sl_p,
+                    "tp_price":      tp_p,
+                    "trail_price":   tr_p,
+                    "trail_stop_pnl": trail,
+                    "score":         pos.get("score", 0),
+                    "option_type":   otype,
+                    "live_price":    live_px,
+                    "expiry":        pos.get("expiry") or get_next_expiry(pos.get("instrument","NIFTY"), EXPIRY_INDEX),
+                    "strike":        strike,
+                    "premium_entry": premium_entry,
+                    "live_premium":  live_premium,
+                })
+            result[inst["name"]] = {"times": times, "closes": closes,
+                                     "live_price": live_px, "positions": pos_data}
+        except Exception as e:
+            result[inst["name"]] = {"times": [], "closes": [], "live_price": 0,
+                                     "positions": [], "error": str(e)}
+    return jsonify(result)
 
 # ── FLASK ROUTES ──────────────────────────────────────────────────────────────
 @app.route("/")
@@ -643,10 +1240,13 @@ def dashboard():
 
 # ── START ─────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    t = threading.Thread(target=bot_loop, daemon=True)
-    t.start()
+    init_db()
+    threading.Thread(target=bot_loop, daemon=True).start()
+    threading.Thread(target=tg_poll,  daemon=True).start()
+    tg_ready = "✅ Token loaded" if _tg_token else "⚠️  No token (create telegram_token.txt)"
     print("\n" + "="*50)
     print("  Fluno Trading Bot is running!")
     print("  Open your browser at: http://localhost:5000")
+    print(f"  Telegram: {tg_ready}")
     print("="*50 + "\n")
-    app.run(host="127.0.0.1", port=5000, debug=False)  # localhost only — not exposed to network
+    app.run(host="127.0.0.1", port=5000, debug=False)

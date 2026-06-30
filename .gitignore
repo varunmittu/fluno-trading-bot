@@ -2,6 +2,9 @@ kite_token.txt
 config.py.txt
 trade_log.db
 open_positions.json
+telegram_token.txt
+telegram_chat.txt
+bot_state.json
 __pycache__/
 *.pyc
 *.pyo
