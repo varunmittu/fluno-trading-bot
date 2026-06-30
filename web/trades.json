@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 12:47",
+  "last_updated": "2026-06-30 12:48",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -23,67 +23,67 @@
   "open_positions": 2,
   "bot_log": [
     {
-      "time": "12:47:04",
-      "msg": "NIFTY:23953(B:30/P:15) | BANKNIFTY:57767(B:45/P:0) | SENSEX:76615(B:25/P:20) VIX:13.4 Pos:2/2 Daily:Rs.0",
+      "time": "12:48:53",
+      "msg": "NIFTY:23952(B:30/P:15) | BANKNIFTY:57783(B:30/P:15) | SENSEX:76616(B:25/P:20) VIX:13.3 Pos:2/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "12:47:00",
+      "time": "12:48:46",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "12:46:59",
+      "time": "12:48:45",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "12:46:59",
+      "time": "12:48:44",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "12:42:00",
+      "time": "12:43:46",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:41:58",
-      "msg": "NIFTY:23948(B:18/P:27) | BANKNIFTY:57743(B:18/P:27) | SENSEX:76669(B:33/P:12) VIX:13.3 Pos:2/2 Daily:Rs.0",
+      "time": "12:43:44",
+      "msg": "NIFTY:23954(B:30/P:15) | BANKNIFTY:57763(B:35/P:10) | SENSEX:76666(B:33/P:12) VIX:13.4 Pos:2/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "12:41:54",
+      "time": "12:43:37",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "12:41:53",
+      "time": "12:43:36",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "12:41:53",
+      "time": "12:43:34",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "12:41:51",
+      "time": "12:43:31",
       "msg": "Restored 2 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "12:41:51",
+      "time": "12:43:31",
       "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "12:41:51",
+      "time": "12:43:31",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
   ],
-  "vix": 13.4,
+  "vix": 13.32,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
