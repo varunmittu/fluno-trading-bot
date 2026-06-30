@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 10:57",
+  "last_updated": "2026-06-30 11:03",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -23,6 +23,61 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:03:02",
+      "msg": "NIFTY:23891 Bull:25/75 Bear:10/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:03:00",
+      "msg": "Fetching 1-min candles...",
+      "cls": "info"
+    },
+    {
+      "time": "11:01:59",
+      "msg": "NIFTY:23890 Bull:25/75 Bear:10/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:01:57",
+      "msg": "Fetching 1-min candles...",
+      "cls": "info"
+    },
+    {
+      "time": "11:00:57",
+      "msg": "NIFTY:23884 Bull:20/75 Bear:15/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:00:54",
+      "msg": "Fetching 1-min candles...",
+      "cls": "info"
+    },
+    {
+      "time": "10:59:54",
+      "msg": "NIFTY:23888 Bull:0/75 Bear:15/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:59:51",
+      "msg": "Fetching 1-min candles...",
+      "cls": "info"
+    },
+    {
+      "time": "10:58:51",
+      "msg": "NIFTY:23896 Bull:0/75 Bear:15/75 ST:Bear VIX:13.7 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:58:48",
+      "msg": "Fetching 1-min candles...",
+      "cls": "info"
+    },
+    {
+      "time": "10:57:50",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:57:48",
       "msg": "NIFTY:23899 Bull:10/75 Bear:20/75 ST:Bull VIX:13.6 Pos:0/2 Daily:Rs.0",
       "cls": ""
@@ -43,7 +98,7 @@
       "cls": "err"
     }
   ],
-  "vix": 13.64,
-  "supertrend_bullish": true,
+  "vix": 13.7,
+  "supertrend_bullish": false,
   "oi_nifty": null
 }
