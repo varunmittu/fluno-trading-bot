@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 10:02",
+  "last_updated": "2026-06-30 10:07",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -23,6 +23,16 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:07:36",
+      "msg": "NIFTY:23893 Score:15/75 ST:Bull VIX:13.7 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:02:37",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:02:34",
       "msg": "NIFTY:23894 Score:15/75 ST:Bull VIX:13.8 Pos:0/2 Daily:Rs.0",
       "cls": ""
@@ -43,7 +53,7 @@
       "cls": "err"
     }
   ],
-  "vix": 13.79,
+  "vix": 13.7,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
