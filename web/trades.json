@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 09:38",
+  "last_updated": "2026-06-30 09:41",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -23,27 +23,27 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "09:38:56",
-      "msg": "NIFTY:23880 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
+      "time": "09:41:17",
+      "msg": "NIFTY:23875 Score:15/75 ST:Bull VIX:13.9 Pos:0/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "09:38:54",
+      "time": "09:41:14",
       "msg": "Fetching daily candles from Yahoo...",
       "cls": "info"
     },
     {
-      "time": "09:38:53",
+      "time": "09:41:13",
       "msg": "Bot started | PAPER TRADE | Threshold: 55",
       "cls": "info"
     },
     {
-      "time": "09:38:53",
+      "time": "09:41:13",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
   ],
-  "vix": 13.9,
+  "vix": 13.93,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
