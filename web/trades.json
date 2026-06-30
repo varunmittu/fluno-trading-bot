@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 11:58",
+  "last_updated": "2026-06-30 12:02",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -23,37 +23,37 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "11:58:40",
-      "msg": "NIFTY:23944(B:8/P:10) | BANKNIFTY:57758(B:0/P:30) | SENSEX:76705(B:8/P:10) VIX:13.4 Pos:0/2 Daily:Rs.0",
+      "time": "12:02:18",
+      "msg": "NIFTY:23932(B:8/P:0) | BANKNIFTY:57706(B:0/P:30) | SENSEX:76657(B:3/P:15) VIX:13.4 Pos:0/2 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "11:58:37",
+      "time": "12:02:15",
       "msg": "Fetching 5-min candles [^BSESN]...",
       "cls": "info"
     },
     {
-      "time": "11:58:36",
+      "time": "12:02:14",
       "msg": "Fetching 5-min candles [^NSEBANK]...",
       "cls": "info"
     },
     {
-      "time": "11:58:36",
+      "time": "12:02:14",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "11:58:34",
-      "msg": "Bot started | PAPER TRADE | Threshold: 30",
+      "time": "12:02:12",
+      "msg": "Bot started | PAPER TRADE | Threshold: 20",
       "cls": "info"
     },
     {
-      "time": "11:58:34",
+      "time": "12:02:12",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
   ],
-  "vix": 13.37,
+  "vix": 13.43,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
