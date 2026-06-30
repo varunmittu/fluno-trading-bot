@@ -49,8 +49,33 @@
     "price": 5,
     "slope": 3
   },
-  "open_positions": 2,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "12:56:41",
+      "msg": "[PAPER] BUY PE BANKNIFTY 57700 @ \u20b9321.4 | Expiry:01 Jul 2026 Score:33/50 Pos:2/2",
+      "cls": "ok"
+    },
+    {
+      "time": "12:56:36",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "12:56:35",
+      "msg": "Fetching 5-min candles [^BSESN]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:56:34",
+      "msg": "Fetching 5-min candles [^NSEBANK]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:56:33",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
     {
       "time": "12:56:33",
       "msg": "STOP LOSS SENSEX PE | Entry:76660 Exit:76727",
@@ -97,7 +122,7 @@
       "cls": "err"
     }
   ],
-  "vix": 13.37,
+  "vix": 13.39,
   "supertrend_bullish": true,
   "oi_nifty": null
 }
