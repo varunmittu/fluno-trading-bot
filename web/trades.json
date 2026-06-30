@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 00:00",
+  "last_updated": "2026-06-30 09:15",
   "summary": {
     "total_trades": 0,
     "wins": 0,
@@ -11,11 +11,109 @@
   },
   "trades": [],
   "daily_pnl": {},
-  "current_score": 0,
-  "score_breakdown": { "rsi": 0, "macd": 0, "vol": 0, "sma": 0, "price": 0, "slope": 0 },
+  "current_score": 15,
+  "score_breakdown": {
+    "rsi": 0,
+    "macd": 0,
+    "vol": 0,
+    "sma": 0,
+    "price": 10,
+    "slope": 5
+  },
   "open_positions": 0,
-  "bot_log": [],
-  "vix": null,
-  "supertrend_bullish": null,
+  "bot_log": [
+    {
+      "time": "09:15:34",
+      "msg": "NIFTY:24006 Score:15/75 ST:Bull VIX:13.4 Pos:0/2 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:15:31",
+      "msg": "Fetching daily candles from Yahoo...",
+      "cls": "info"
+    },
+    {
+      "time": "09:14:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:13:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:12:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:11:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:10:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:09:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:08:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:07:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:06:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:05:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:04:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:03:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:02:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:01:24",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:01:24",
+      "msg": "Bot started | PAPER TRADE | Threshold: 55",
+      "cls": "info"
+    },
+    {
+      "time": "09:01:24",
+      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
+      "cls": "err"
+    }
+  ],
+  "vix": 13.44,
+  "supertrend_bullish": true,
   "oi_nifty": null
 }
