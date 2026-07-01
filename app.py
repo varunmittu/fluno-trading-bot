@@ -177,12 +177,16 @@ def tg_poll():
                     with open(TELEGRAM_CHAT_FILE, "w") as _f:
                         _f.write(chat_id)
                     tg_send(
-                        "✅ <b>Fluno Trading Bot connected!</b>\n\n"
+                        "Fluno Trading Bot connected!\n\n"
                         "Commands:\n"
-                        "/status — live prices, scores, position\n"
-                        "/pnl — today's trade summary\n"
-                        "/stop — stop trading for today\n"
-                        "/resume — allow trading again"
+                        "/signal  — today's breakout signal + NIFTY vs yday H/L\n"
+                        "/status  — live NIFTY price, VIX, open position\n"
+                        "/pnl     — today's trade result\n"
+                        "/capital — running capital and lot size\n"
+                        "/history — last 7 trades\n"
+                        "/stop    — pause trading for today\n"
+                        "/resume  — resume trading\n"
+                        "/help    — show this list"
                     )
                     continue
 
@@ -191,30 +195,51 @@ def tg_poll():
 
                 cmd = text.lower()
 
-                if cmd == "/status":
-                    scores = state.get("inst_scores", {})
-                    lines  = ["📊 <b>Live Status</b>"]
-                    for iname, v in scores.items():
-                        side_icon = "🟢" if v.get("side") == "BULL" else "🔴"
-                        lines.append(f"{side_icon} {iname}: {v.get('price',0):.0f}  Score {v.get('score',0)}/50")
-                    vix = state.get("vix")
-                    if vix:
-                        lines.append(f"🌡 VIX: {vix:.1f} {'⚠️ HIGH' if vix > 20 else '✅ OK'}")
+                if cmd == "/signal":
+                    px      = state.get("nifty_price", "--")
+                    yd_h    = state.get("yd_high")
+                    yd_l    = state.get("yd_low")
+                    sig     = state.get("signal", "--")
+                    otype   = state.get("option_type", "--")
+                    done    = state.get("first_trade_done", False)
+                    now_h   = datetime.now().hour
+                    now_m   = datetime.now().minute
+                    if not state.get("market_open"):
+                        tg_send("Market is closed. Signal activates at 10:15 AM.")
+                    elif now_h < 10 or (now_h == 10 and now_m < 15):
+                        tg_send(f"Entry window opens at 10:15 AM.\nNIFTY now: {px}")
+                    else:
+                        lines = ["--- SIGNAL ---"]
+                        lines.append(f"NIFTY: {px}")
+                        if yd_h and yd_l:
+                            lines.append(f"Yday High: {yd_h:.0f}  Yday Low: {yd_l:.0f}")
+                        lines.append(f"Signal: {sig}")
+                        lines.append(f"Direction: {otype}")
+                        lines.append("Trade done" if done else "Watching for entry...")
+                        tg_send("\n".join(lines))
+
+                elif cmd == "/status":
+                    px   = state.get("nifty_price", "--")
+                    vix  = state.get("vix")
                     pos_list = state.get("positions_list", [])
+                    dpnl = state.get("daily_pnl", 0)
+                    upnl = state.get("unrealized_pnl", 0)
+                    done = state.get("first_trade_done", False)
+                    lines = [f"NIFTY: {px}"]
+                    if vix:
+                        lines.append(f"VIX: {vix:.1f}  {'HIGH - caution' if vix > 20 else 'OK'}")
                     if pos_list:
                         for p in pos_list:
+                            pnl_live = upnl
                             lines.append(
-                                f"💼 {p['instrument']} {p.get('option_type','')} "
-                                f"{p.get('strike','')} @ ₹{p.get('premium_entry','?')} "
-                                f"| Exp: {p.get('expiry','?')}"
+                                f"Position: {p.get('instrument')} {p.get('option_type')} {p.get('strike','')}"
+                                f"\nEntry: {p.get('entry',0):.0f}  Premium: Rs.{p.get('premium_entry','?')}"
+                                f"\nUnrealized P&L: Rs.{pnl_live:.0f}"
                             )
                     else:
-                        lines.append("💼 No open positions")
-                    dpnl  = state.get('daily_pnl', 0)
-                    upnl  = state.get('unrealized_pnl', 0)
-                    lines.append(f"💰 Realized: ₹{dpnl:.0f}  Unrealized: ₹{upnl:.0f}")
-                    done  = state.get("first_trade_done", False)
-                    lines.append("⛔ Trade done for today" if done else "🟢 Ready to trade")
+                        lines.append("No open position")
+                    lines.append(f"Realized P&L: Rs.{dpnl:.0f}")
+                    lines.append("Trade done for today" if done else "Ready to trade")
                     tg_send("\n".join(lines))
 
                 elif cmd == "/pnl":
@@ -222,33 +247,85 @@ def tg_poll():
                         conn      = get_db()
                         today_str = date.today().strftime("%Y-%m-%d")
                         rows      = conn.execute(
-                            "SELECT instrument,option_type,pnl,status FROM trades WHERE date=? ORDER BY id",
+                            "SELECT instrument,option_type,entry,exit,pnl,status,time FROM trades WHERE date=? ORDER BY id",
                             (today_str,)
                         ).fetchall()
                         conn.close()
                         if not rows:
-                            tg_send("📭 No trades today yet.")
+                            tg_send("No trades today yet.")
                         else:
                             total = sum(r["pnl"] for r in rows)
-                            lines = [f"📅 <b>Trades — {today_str}</b>"]
+                            lines = [f"Trades - {today_str}"]
                             for r in rows:
-                                icon = "✅" if r["pnl"] > 0 else "❌"
-                                lines.append(f"{icon} {r['instrument']} {r['option_type']} | {r['status']} | ₹{r['pnl']:.0f}")
-                            lines.append(f"\n<b>Total: ₹{total:.0f}</b>")
+                                icon = "WIN" if r["pnl"] > 0 else "LOSS"
+                                lines.append(
+                                    f"{icon} | {r['instrument']} {r['option_type']} | {r['status']}\n"
+                                    f"  Entry: {r['entry']:.0f}  Exit: {r['exit']:.0f}  P&L: Rs.{r['pnl']:.0f}"
+                                )
+                            lines.append(f"\nTotal: Rs.{total:.0f}")
+                            tg_send("\n".join(lines))
+                    except Exception as ex:
+                        tg_send(f"Error: {ex}")
+
+                elif cmd == "/capital":
+                    cap   = state.get("running_capital", PAPER_CAPITAL)
+                    lots  = state.get("lots_today", BASE_LOTS)
+                    units = lots * 25
+                    gain  = cap - PAPER_CAPITAL
+                    lines = [
+                        "--- CAPITAL ---",
+                        f"Starting: Rs.{PAPER_CAPITAL:.0f}",
+                        f"Current:  Rs.{cap:.0f}",
+                        f"Gain:     Rs.{gain:+.0f}",
+                        f"Lots tomorrow: {lots}L ({units} units)",
+                        f"Rs./point: Rs.{units * DELTA:.0f}",
+                    ]
+                    tg_send("\n".join(lines))
+
+                elif cmd == "/history":
+                    try:
+                        conn = get_db()
+                        rows = conn.execute(
+                            "SELECT date,time,instrument,option_type,entry,exit,pnl,status FROM trades ORDER BY id DESC LIMIT 7"
+                        ).fetchall()
+                        conn.close()
+                        if not rows:
+                            tg_send("No trade history yet.")
+                        else:
+                            lines = ["--- LAST 7 TRADES ---"]
+                            for r in rows:
+                                icon = "W" if r["pnl"] > 0 else "L"
+                                lines.append(
+                                    f"{icon} {r['date']} {r['time']} | {r['instrument']} {r['option_type']}"
+                                    f"\n  {r['status']}  Rs.{r['pnl']:.0f}"
+                                )
                             tg_send("\n".join(lines))
                     except Exception as ex:
                         tg_send(f"Error: {ex}")
 
                 elif cmd == "/stop":
                     state["first_trade_done"] = True
-                    tg_send("⛔ <b>Trading stopped for today.</b>\nBot will not enter any more trades today.")
+                    tg_send("Trading paused for today. Send /resume to re-enable.")
 
                 elif cmd == "/resume":
                     state["first_trade_done"] = False
-                    tg_send("✅ <b>Trading resumed.</b>\nBot will enter the next qualifying trade.")
+                    tg_send("Trading resumed. Bot will enter next valid signal.")
+
+                elif cmd in ("/help", "/start"):
+                    tg_send(
+                        "Fluno Bot Commands:\n\n"
+                        "/signal  — today's breakout signal\n"
+                        "/status  — NIFTY price, VIX, position\n"
+                        "/pnl     — today's trade result\n"
+                        "/capital — capital and lot size\n"
+                        "/history — last 7 trades\n"
+                        "/stop    — pause trading today\n"
+                        "/resume  — resume trading\n"
+                        "/help    — this list"
+                    )
 
                 else:
-                    tg_send("❓ Unknown command.\nUse: /status  /pnl  /stop  /resume")
+                    tg_send("Unknown command. Send /help for the full list.")
 
         except Exception:
             pass
