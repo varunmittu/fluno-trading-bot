@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 11:23",
+  "last_updated": "2026-07-01 11:24",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -329,110 +329,30 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
     {
-      "time": "11:23:22",
-      "msg": "PROFIT LOCK NIFTY CE | Peak:Rs.1609 Booked:Rs.1454 | Capital:Rs.11820",
-      "cls": "ok"
+      "time": "11:24:12",
+      "msg": "Already traded today (from DB) \u2014 won't enter again.",
+      "cls": "info"
     },
     {
-      "time": "11:22:23",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "11:24:12",
+      "msg": "Capital: Rs.11820 | Lots: 3L (75 units)",
+      "cls": "info"
     },
     {
-      "time": "11:22:19",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.1609 Now:Rs.1483 (big trail active)",
-      "cls": "ok"
+      "time": "11:24:12",
+      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
+      "cls": "info"
     },
     {
-      "time": "11:21:17",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.1609 Now:Rs.1519 (big trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:20:14",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.1609 Now:Rs.1501 (big trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:19:12",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.1609 Now:Rs.1609 (big trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:18:09",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.1555 Now:Rs.1502 (big trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:17:11",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:17:06",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.1555 Now:Rs.1555 (big trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:16:03",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.1469 Now:Rs.1469 (big trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:14:59",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.1409 Now:Rs.1409 (big trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:13:56",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.1049 Now:Rs.1049 (big trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:12:53",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.918 Now:Rs.918 (small trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:11:54",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:11:50",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.895 Now:Rs.793 (small trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:10:47",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.895 Now:Rs.895 (small trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:09:43",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.613 Now:Rs.613 (small trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:08:40",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.505 Now:Rs.505 (small trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:07:37",
-      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.463 Now:Rs.444 (small trail active)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:06:38",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "11:24:12",
+      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
+      "cls": "err"
     }
   ],
-  "vix": 13.48,
+  "vix": 13.44,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
