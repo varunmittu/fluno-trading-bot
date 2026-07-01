@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 14:34",
+  "last_updated": "2026-07-01 14:39",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -332,6 +332,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:39:57",
+      "msg": "NIFTY:24004 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:38:54",
+      "msg": "NIFTY:24001 Sig:-- VIX:13.5 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:37:52",
+      "msg": "NIFTY:24014 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:34:46",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:29:34",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -362,7 +382,7 @@
       "cls": "err"
     }
   ],
-  "vix": 13.37,
+  "vix": 13.43,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
