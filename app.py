@@ -869,6 +869,7 @@ def bot_loop():
     today            = date.today()
     last_sync        = 0
     sl_cooldown      = {}   # {instrument: timestamp} — 10-min cooldown after SL hit
+    eod_done         = False  # settlement report fires once at 3:30 PM
     # first_trade_done is set after load_positions() — do NOT reset it here
 
     # Per-instrument candle cache (keyed by yfinance symbol)
@@ -895,6 +896,7 @@ def bot_loop():
             first_trade_done = False
             state["first_trade_done"] = False
             state["signal"] = "--"
+            eod_done = False
             bot_log(f"New trading day | Capital: Rs.{running_capital:.0f} | Lots: {lots_today}L", "info")
             tg_send(f"New trading day started.\nCapital: Rs.{running_capital:.0f} | Lots: {lots_today}L\nWatching NIFTY breakout.")
 
@@ -926,26 +928,23 @@ def bot_loop():
                 continue
             state["nifty_price"] = inst_prices.get("NIFTY", "--")
 
-            # ── 2. EOD exit — force-close all positions at 3:15 PM ───────────
-            now_t = datetime.now()
-            if positions and now_t >= now_t.replace(hour=15, minute=15, second=0, microsecond=0):
+            # ── 2. EOD exit at 3:25 PM + settlement at 3:30 PM ──────────────
+            now_t     = datetime.now()
+            eod_exit  = now_t.replace(hour=15, minute=25, second=0, microsecond=0)
+            eod_settle= now_t.replace(hour=15, minute=30, second=0, microsecond=0)
+
+            # 3:25 PM — force-close any open position before market shuts
+            if positions and now_t >= eod_exit:
                 for pos in positions:
                     iname = pos.get("instrument", "NIFTY")
                     px    = inst_prices.get(iname, pos["entry"])
-                    lot   = pos.get("lot", LOT);  delta = pos.get("delta", DELTA)
+                    lot   = pos.get("lot", LOT); delta = pos.get("delta", DELTA)
                     otype = pos.get("option_type", "CE")
-                    # Use premium-based P&L if available, else delta approximation
-                    if pos.get("strike") and pos.get("premium_entry"):
-                        live_p = fetch_option_premium(iname, pos["strike"], otype, px)
-                        pnl = round((live_p - pos["premium_entry"]) * lot - BROKERAGE, 2) if live_p else 0
-                    else:
-                        move = (px - pos["entry"]) * delta * lot if otype == "CE" else (pos["entry"] - px) * delta * lot
-                        pnl  = round(move - BROKERAGE, 2)
+                    move  = (px - pos["entry"]) * delta * lot if otype == "CE" \
+                            else (pos["entry"] - px) * delta * lot
+                    pnl   = round(move - BROKERAGE, 2)
                     save_trade(pos["score"], pos["entry"], px, pnl, "EOD_EXIT", iname, otype)
-                    daily_pnl += pnl
-                    bot_log(f"EOD EXIT {iname} {otype} {pos.get('strike','')} | Entry:{pos['entry']:.0f} P&L:Rs.{pnl:.0f}", "info")
-                    tg_send(f"🔔 <b>EOD EXIT — {iname} {otype}</b>\nStrike: {pos.get('strike','')}\nEntry: {pos['entry']:.0f}  Exit: {px:.0f}\n<b>P&amp;L: ₹{pnl:.0f}</b>")
-                    # Update capital and lots after EOD close
+                    daily_pnl       += pnl
                     running_capital += pnl
                     if pnl > 0:
                         lots_today = min(MAX_LOTS, max(BASE_LOTS, int(running_capital // CAPITAL_PER_LOT)))
@@ -954,8 +953,49 @@ def bot_loop():
                     save_bot_state(running_capital, lots_today)
                     state["running_capital"] = running_capital
                     state["lots_today"]      = lots_today
+                    bot_log(f"EOD EXIT {iname} {otype} | Entry:{pos['entry']:.0f} Exit:{px:.0f} P&L:Rs.{pnl:.0f}", "info")
                 positions.clear(); save_positions(positions); sync_background()
-                tg_send(f"Market closing - EOD Summary\nToday P&L: Rs.{daily_pnl:.0f}\nCapital: Rs.{running_capital:.0f} | Tomorrow: {lots_today}L")
+
+            # 3:30 PM — Zerodha-style settlement report (fires once per day)
+            if now_t >= eod_settle and not eod_done:
+                eod_done = True
+                today_str = date.today().strftime("%Y-%m-%d")
+                conn  = get_db()
+                rows  = conn.execute(
+                    "SELECT instrument,option_type,entry,exit,pnl,status,time FROM trades WHERE date=? ORDER BY id",
+                    (today_str,)
+                ).fetchall()
+                conn.close()
+
+                total_pnl = sum(r["pnl"] for r in rows)
+                wins      = [r for r in rows if r["pnl"] > 0]
+                losses    = [r for r in rows if r["pnl"] <= 0]
+                result    = "PROFIT" if total_pnl > 0 else "LOSS" if total_pnl < 0 else "FLAT"
+
+                lines = [
+                    "=" * 30,
+                    f"SETTLEMENT REPORT — {today_str}",
+                    "=" * 30,
+                ]
+                for r in rows:
+                    tag = "WIN " if r["pnl"] > 0 else "LOSS"
+                    lines.append(
+                        f"{tag} | {r['instrument']} {r['option_type']} | {r['time']}\n"
+                        f"     Entry:{r['entry']:.0f}  Exit:{r['exit']:.0f}  "
+                        f"Status:{r['status']}  P&L:Rs.{r['pnl']:.0f}"
+                    )
+                lines += [
+                    "-" * 30,
+                    f"Trades    : {len(rows)}  (W:{len(wins)} L:{len(losses)})",
+                    f"Day P&L   : Rs.{total_pnl:+.0f}  [{result}]",
+                    f"Capital   : Rs.{running_capital:.0f}",
+                    f"Tomorrow  : {lots_today}L ({lots_today*25} units)",
+                    "=" * 30,
+                    "Settlement complete. T+1 credit by tomorrow morning.",
+                ]
+                tg_send("\n".join(lines))
+                bot_log(f"SETTLEMENT | Day P&L:Rs.{total_pnl:+.0f} | Capital:Rs.{running_capital:.0f} | Next:{lots_today}L", "ok")
+                sync_background()
                 time.sleep(60); continue
 
             # ── 3. Check open positions (SL / TP / trail) ────────────────────
