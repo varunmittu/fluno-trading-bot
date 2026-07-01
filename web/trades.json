@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 11:01",
+  "last_updated": "2026-07-01 11:06",
   "summary": {
     "total_trades": 23,
     "wins": 4,
@@ -316,110 +316,110 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
     {
-      "time": "10:56:44",
+      "time": "11:06:33",
+      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.463 Now:Rs.463 (small trail active)",
+      "cls": "ok"
+    },
+    {
+      "time": "11:05:30",
+      "msg": "RIDING \u2014 NIFTY CE | Peak:Rs.422 Now:Rs.422 (small trail active)",
+      "cls": "ok"
+    },
+    {
+      "time": "11:01:20",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "10:56:40",
-      "msg": "STOP LOSS NIFTY CE | Entry:23982 Exit:23978 | Capital:Rs.10214 Lots->3L",
-      "cls": "err"
-    },
-    {
-      "time": "10:54:37",
+      "time": "10:56:03",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "10:54:33",
-      "msg": "[PAPER] BUY CE NIFTY 24050 @ Rs.133.5 | MORN UP (23982) | 3L (75u) | Expiry:02 Jul 2026",
-      "cls": "ok"
-    },
-    {
-      "time": "10:53:23",
-      "msg": "NIFTY:23967 YdH:24036/YdL:23829 Sig:MORN UP (23971) VIX:13.7 Lots:3L Cap:Rs.10364 Daily:Rs.364",
-      "cls": ""
-    },
-    {
-      "time": "10:53:23",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "10:52:20",
-      "msg": "NIFTY:23968 YdH:24036/YdL:23829 Sig:MORN UP (23971) VIX:13.7 Lots:3L Cap:Rs.10364 Daily:Rs.364",
-      "cls": ""
-    },
-    {
-      "time": "10:52:20",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "10:51:21",
+      "time": "10:53:49",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "10:51:18",
-      "msg": "NIFTY:23966 YdH:24036/YdL:23829 Sig:MORN UP (23971) VIX:13.7 Lots:3L Cap:Rs.10364 Daily:Rs.364",
+      "time": "10:53:45",
+      "msg": "[PAPER] BUY CE NIFTY 24000 @ Rs.135.5 | MORN UP (23969) | 3L (75u) | Expiry:02 Jul 2026",
+      "cls": "ok"
+    },
+    {
+      "time": "10:52:39",
+      "msg": "NIFTY:23970 YdH:24036/YdL:23829 Sig:MORN UP (23971) VIX:13.7 Lots:3L Cap:Rs.10366 Daily:Rs.366",
       "cls": ""
     },
     {
-      "time": "10:51:18",
+      "time": "10:52:39",
       "msg": "NIFTY in SL cooldown \u2014 waiting",
       "cls": "info"
     },
     {
-      "time": "10:50:16",
-      "msg": "NIFTY:23973 YdH:24036/YdL:23829 Sig:MORN UP (23971) VIX:13.6 Lots:3L Cap:Rs.10364 Daily:Rs.364",
+      "time": "10:51:37",
+      "msg": "NIFTY:23963 YdH:24036/YdL:23829 Sig:MORN UP (23971) VIX:13.7 Lots:3L Cap:Rs.10366 Daily:Rs.366",
       "cls": ""
     },
     {
-      "time": "10:50:16",
+      "time": "10:51:37",
       "msg": "NIFTY in SL cooldown \u2014 waiting",
       "cls": "info"
     },
     {
-      "time": "10:49:14",
-      "msg": "NIFTY:23967 YdH:24036/YdL:23829 Sig:MORN UP (23971) VIX:13.7 Lots:3L Cap:Rs.10364 Daily:Rs.364",
-      "cls": ""
-    },
-    {
-      "time": "10:49:14",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "10:48:12",
-      "msg": "NIFTY:23975 YdH:24036/YdL:23829 Sig:MORN UP (23971) VIX:13.6 Lots:3L Cap:Rs.10364 Daily:Rs.364",
-      "cls": ""
-    },
-    {
-      "time": "10:48:12",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "10:46:10",
+      "time": "10:50:38",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "10:44:03",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "10:50:35",
+      "msg": "NIFTY:23973 YdH:24036/YdL:23829 Sig:MORN UP (23971) VIX:13.6 Lots:3L Cap:Rs.10366 Daily:Rs.366",
+      "cls": ""
     },
     {
-      "time": "10:43:59",
-      "msg": "STOP LOSS NIFTY CE | Entry:23971 Exit:23948 | Capital:Rs.10364 Lots->3L",
-      "cls": "err"
+      "time": "10:50:35",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:49:33",
+      "msg": "NIFTY:23969 YdH:24036/YdL:23829 Sig:MORN UP (23971) VIX:13.7 Lots:3L Cap:Rs.10366 Daily:Rs.366",
+      "cls": ""
+    },
+    {
+      "time": "10:49:33",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:48:30",
+      "msg": "NIFTY:23977 YdH:24036/YdL:23829 Sig:MORN UP (23971) VIX:13.6 Lots:3L Cap:Rs.10366 Daily:Rs.366",
+      "cls": ""
+    },
+    {
+      "time": "10:48:30",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:47:28",
+      "msg": "NIFTY:23969 YdH:24036/YdL:23829 Sig:MORN UP (23971) VIX:13.5 Lots:3L Cap:Rs.10366 Daily:Rs.366",
+      "cls": ""
+    },
+    {
+      "time": "10:47:28",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:45:26",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
     }
   ],
-  "vix": 13.55,
+  "vix": 13.56,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
