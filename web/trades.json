@@ -253,107 +253,27 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "09:18:32",
-      "msg": "NIFTY:23906 Sig:-- VIX:14.0 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "time": "09:18:33",
+      "msg": "NIFTY:23905 Sig:-- VIX:14.0 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "09:17:29",
-      "msg": "Could not fetch any live prices. Retrying...",
+      "time": "09:18:22",
+      "msg": "Capital: Rs.10000 | Lots: 3L (75 units)",
+      "cls": "info"
+    },
+    {
+      "time": "09:18:22",
+      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
+      "cls": "info"
+    },
+    {
+      "time": "09:18:22",
+      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
-    },
-    {
-      "time": "09:16:29",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
-    },
-    {
-      "time": "09:15:29",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
-    },
-    {
-      "time": "09:14:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:13:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:12:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:11:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:10:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:09:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:08:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:07:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:06:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:05:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:04:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:03:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:02:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:01:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "09:00:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
-    },
-    {
-      "time": "08:59:28",
-      "msg": "Market closed. Waiting...",
-      "cls": ""
     }
   ],
-  "vix": 14.03,
+  "vix": 14.01,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
