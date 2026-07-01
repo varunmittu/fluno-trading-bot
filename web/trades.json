@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 10:09",
+  "last_updated": "2026-07-01 10:13",
   "summary": {
     "total_trades": 18,
     "wins": 2,
@@ -253,87 +253,107 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "10:09:16",
-      "msg": "NIFTY:23976 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "time": "10:13:30",
+      "msg": "NIFTY:23981 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "10:08:14",
-      "msg": "NIFTY:23969 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "time": "10:12:27",
+      "msg": "NIFTY:23981 Sig:-- VIX:13.5 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "10:07:12",
-      "msg": "NIFTY:23974 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "time": "10:11:25",
+      "msg": "NIFTY:23987 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "10:06:10",
-      "msg": "NIFTY:23972 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "time": "10:10:23",
+      "msg": "NIFTY:23981 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "10:05:06",
+      "time": "10:09:21",
+      "msg": "NIFTY:23977 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:08:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "10:08:19",
       "msg": "NIFTY:23970 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "10:04:07",
+      "time": "10:07:16",
+      "msg": "NIFTY:23972 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:06:15",
+      "msg": "NIFTY:23972 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:05:12",
+      "msg": "NIFTY:23970 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:04:10",
+      "msg": "NIFTY:23972 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:03:11",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "10:04:05",
-      "msg": "NIFTY:23973 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "time": "10:03:08",
+      "msg": "NIFTY:23979 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "10:03:02",
-      "msg": "NIFTY:23982 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "time": "10:02:06",
+      "msg": "NIFTY:23991 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "10:01:59",
+      "time": "10:01:04",
       "msg": "NIFTY:23988 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "10:00:56",
-      "msg": "NIFTY:23988 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:59:54",
+      "time": "10:00:01",
       "msg": "NIFTY:23982 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "09:58:54",
+      "time": "09:58:58",
+      "msg": "NIFTY:23976 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:57:59",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "09:58:51",
-      "msg": "NIFTY:23975 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "time": "09:57:56",
+      "msg": "NIFTY:23972 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "09:58:49",
-      "msg": "Capital: Rs.10000 | Lots: 3L (75 units)",
-      "cls": "info"
-    },
-    {
-      "time": "09:58:49",
-      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
-      "cls": "info"
-    },
-    {
-      "time": "09:58:49",
-      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
-      "cls": "err"
+      "time": "09:56:54",
+      "msg": "NIFTY:23979 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "cls": ""
     }
   ],
-  "vix": 13.6,
+  "vix": 13.56,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
