@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 14:55",
+  "last_updated": "2026-07-01 15:00",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -332,6 +332,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:00:48",
+      "msg": "NIFTY:24022 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:59:46",
+      "msg": "NIFTY:24036 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:58:44",
+      "msg": "NIFTY:24030 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:57:41",
+      "msg": "NIFTY:24025 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:56:38",
+      "msg": "NIFTY:24022 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:55:38",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:55:35",
       "msg": "NIFTY:24020 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
       "cls": ""
@@ -400,39 +430,9 @@
       "time": "14:44:06",
       "msg": "NIFTY:24020 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "14:43:03",
-      "msg": "NIFTY:24015 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:42:01",
-      "msg": "NIFTY:24005 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:40:59",
-      "msg": "NIFTY:23994 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:40:00",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:39:57",
-      "msg": "NIFTY:24004 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:38:54",
-      "msg": "NIFTY:24001 Sig:-- VIX:13.5 Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
     }
   ],
-  "vix": 13.26,
+  "vix": 13.32,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
