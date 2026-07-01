@@ -155,7 +155,7 @@
   <div class="card">
     <div class="label">Total Trades</div>
     <div class="value white">{{ total_trades }}</div>
-    <div class="sub">Win rate: {{ win_rate }}%</div>
+    <div class="sub">Win rate: {{ win_rate }}% &nbsp;<span id="streak-badge" style="font-size:11px"></span></div>
   </div>
 </div>
 
@@ -440,6 +440,19 @@ async function loadState() {
     document.getElementById('no-trade-text').textContent = ftd ? 'Trade complete for today' : 'Waiting for signal';
     document.getElementById('no-trade-text').style.color  = ftd ? '#ffd740' : '#555';
 
+    // Streak badge
+    const stk = s.streak || 0;
+    const stkEl = document.getElementById('streak-badge');
+    if (stk >= 2) {
+      stkEl.textContent = stk + ' win streak';
+      stkEl.style.color = '#66bb6a';
+    } else if (stk <= -2) {
+      stkEl.textContent = Math.abs(stk) + ' loss streak';
+      stkEl.style.color = '#ef5350';
+    } else {
+      stkEl.textContent = '';
+    }
+
     document.getElementById('monitor-ts').textContent = '— ' + new Date().toLocaleTimeString();
   } catch(e) { console.error('state error', e); }
 }
@@ -469,14 +482,28 @@ async function loadChart() {
       const oc   = isCE ? '#66bb6a' : '#ef5350';
       posEl.innerHTML = `<span style="color:${oc};font-weight:700">${p.option_type} ${p.strike||''}</span> &nbsp;·&nbsp; Entry: <strong style="color:#fff">${p.entry?.toLocaleString('en-IN',{maximumFractionDigits:0})}</strong> &nbsp;·&nbsp; P&L: <strong style="color:${pc}">${pnl>=0?'+':''}Rs.${pnl}</strong>`;
 
+      const pkPnl  = p.peak_pnl != null ? Math.round(p.peak_pnl) : null;
+      const beLocked = p.be_locked || false;
+      const slLabel  = beLocked ? `BE LOCK (floor Rs.300)` : `Rs.-150 (hard SL)`;
+      const slColor  = beLocked ? '#66bb6a' : '#ef5350';
+      const beBadge  = beLocked
+        ? `<span style="background:#0d2a12;border:1px solid #2a5a2a;border-radius:4px;padding:2px 8px;font-size:11px;color:#66bb6a;font-weight:700">BE LOCKED</span>`
+        : '';
+      const peakRow  = pkPnl != null
+        ? `<div class="level-row lv-trail" style="padding:8px 14px;margin-bottom:6px"><span class="level-label">Peak P&L</span><span class="level-val" style="color:#ffd740">${pkPnl>=0?'+':''}Rs.${pkPnl}</span></div>`
+        : '';
+
       noTradeEl.style.display = 'none';
       tradeEl.style.display   = '';
       tradeEl.innerHTML = `
-        <div class="level-row lv-live"   style="padding:8px 14px;margin-bottom:6px"><span class="level-label">NIFTY Live</span><span class="level-val white">${liveP.toLocaleString('en-IN',{maximumFractionDigits:0})}</span></div>
-        <div class="level-row lv-entry"  style="padding:8px 14px;margin-bottom:6px"><span class="level-label">Entry</span><span class="level-val" style="color:#5b9cf6">${p.entry?.toLocaleString('en-IN',{maximumFractionDigits:0})}</span></div>
-        <div class="level-row lv-trail"  style="padding:8px 14px;margin-bottom:6px"><span class="level-label">Trail (Big)</span><span class="level-val" style="color:#ffd740">Peak-200</span></div>
-        <div class="level-row lv-trail"  style="padding:8px 14px;margin-bottom:6px"><span class="level-label">Trail (Lock)</span><span class="level-val" style="color:#ffb74d">Peak-150</span></div>
-        <div class="level-row lv-sl"     style="padding:8px 14px"><span class="level-label">Stop Loss</span><span class="level-val" style="color:#ef5350">Rs.-150 fixed</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <span style="font-size:12px;color:#888">Live Position</span>${beBadge}
+        </div>
+        <div class="level-row lv-live"  style="padding:8px 14px;margin-bottom:6px"><span class="level-label">NIFTY Live</span><span class="level-val white">${liveP.toLocaleString('en-IN',{maximumFractionDigits:0})}</span></div>
+        <div class="level-row lv-entry" style="padding:8px 14px;margin-bottom:6px"><span class="level-label">Entry</span><span class="level-val" style="color:#5b9cf6">${p.entry?.toLocaleString('en-IN',{maximumFractionDigits:0})}</span></div>
+        ${peakRow}
+        <div class="level-row lv-trail" style="padding:8px 14px;margin-bottom:6px"><span class="level-label">Big Trail</span><span class="level-val" style="color:#ffb74d">${pkPnl!=null && pkPnl>=1000 ? 'ACTIVE — Peak-200' : 'activates at Rs.1000'}</span></div>
+        <div class="level-row lv-sl"    style="padding:8px 14px"><span class="level-label">SL / Floor</span><span class="level-val" style="color:${slColor}">${slLabel}</span></div>
         <div style="text-align:center;margin-top:10px;font-size:20px;font-weight:800;color:${pc}">${pnl>=0?'+':''}Rs.${pnl}</div>
       `;
     } else {

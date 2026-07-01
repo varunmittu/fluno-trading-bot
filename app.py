@@ -23,11 +23,13 @@ app = Flask(__name__)
 API_KEY           = "your_api_key_here"  # paste from developers.kite.trade
 TOKEN_FILE        = "kite_token.txt"
 PAPER_TRADE       = True
-STOP_LOSS         = -150   # tight SL — cut losses fast
-BIG_TRAIL_START   = 1000   # let winners run — trail activates here
-BIG_TRAIL_DROP    = 200    # close if profit drops Rs.200 from peak
-SMALL_TRAIL_START = 400    # tough day — lock small profit
-SMALL_TRAIL_DROP  = 150    # close if drops Rs.150 from peak (books ~Rs.250)
+STOP_LOSS             = -150   # hard SL — only fires BEFORE breakeven lock
+BIG_TRAIL_START       = 1000   # let winners run — trail activates here
+BIG_TRAIL_DROP        = 200    # close if profit drops Rs.200 from peak
+SMALL_TRAIL_START     = 400    # tough day — lock small profit
+SMALL_TRAIL_DROP      = 150    # close if drops Rs.150 from peak
+BREAKEVEN_LOCK_START  = 300    # once peak hits Rs.300, move SL to +Rs.300
+BREAKEVEN_LOCK_FLOOR  = 300    # guaranteed minimum exit after lock activates
 DAILY_LIMIT       = -300   # safety net (1 trade/day so rarely hit)
 PAPER_CAPITAL     = 10000  # starting capital
 BASE_LOTS         = 3      # base = 3 lots (75 NIFTY units)
@@ -669,6 +671,25 @@ def calculate_oi_metrics(data, spot_price, expiry_index=0):
     except Exception:
         return None
 
+def get_streak():
+    """Positive = win streak, negative = loss streak."""
+    try:
+        conn = get_db()
+        rows = conn.execute("SELECT pnl FROM trades ORDER BY id DESC LIMIT 20").fetchall()
+        conn.close()
+        if not rows:
+            return 0
+        streak  = 0
+        is_win  = rows[0]["pnl"] > 0
+        for r in rows:
+            if (r["pnl"] > 0) == is_win:
+                streak += 1
+            else:
+                break
+        return streak if is_win else -streak
+    except Exception:
+        return 0
+
 def is_market_open():
     now    = datetime.now()
     if now.weekday() >= 5:
@@ -870,6 +891,8 @@ def bot_loop():
     last_sync        = 0
     sl_cooldown      = {}   # {instrument: timestamp} — 10-min cooldown after SL hit
     eod_done         = False  # settlement report fires once at 3:30 PM
+    morning_pinged   = False  # morning Telegram ping fires once at ~9:10 AM
+    weekly_done      = False  # weekly summary fires once on Friday
     # first_trade_done is set after load_positions() — do NOT reset it here
 
     # Per-instrument candle cache (keyed by yfinance symbol)
@@ -896,7 +919,9 @@ def bot_loop():
             first_trade_done = False
             state["first_trade_done"] = False
             state["signal"] = "--"
-            eod_done = False
+            eod_done       = False
+            morning_pinged = False
+            weekly_done    = False
             bot_log(f"New trading day | Capital: Rs.{running_capital:.0f} | Lots: {lots_today}L", "info")
             tg_send(f"New trading day started.\nCapital: Rs.{running_capital:.0f} | Lots: {lots_today}L\nWatching NIFTY breakout.")
 
@@ -905,8 +930,34 @@ def bot_loop():
         state["open_positions"] = len(positions)
         state["daily_pnl"]      = round(daily_pnl, 0)
 
+        # ── Morning ping at 9:10 AM (market opens in 5 min) ─────────────────
+        _now = datetime.now()
+        if not morning_pinged and _now.hour == 9 and _now.minute >= 10:
+            morning_pinged = True
+            try:
+                yd_h, yd_l = fetch_daily_hl("^NSEI")
+                vix_now    = fetch_vix()
+                lines = ["Good morning! Market opens in 5 minutes."]
+                if yd_h and yd_l:
+                    lines.append(f"\nNIFTY Reference:")
+                    lines.append(f"  Yday High : {yd_h:.0f}")
+                    lines.append(f"  Yday Low  : {yd_l:.0f}")
+                if vix_now:
+                    vix_msg = "HIGH — careful" if vix_now > 18 else "Normal"
+                    lines.append(f"India VIX : {vix_now:.1f} ({vix_msg})")
+                lines.append(f"\nCapital : Rs.{running_capital:.0f} | Lots: {lots_today}L ({lots_today*25} units)")
+                lines.append(f"SL: Rs.{abs(STOP_LOSS)} | BE Lock at Rs.{BREAKEVEN_LOCK_FLOOR}")
+                lines.append(f"\nPrediction at 10:15 AM:")
+                if yd_h and yd_l:
+                    lines.append(f"  BULLISH (BUY CE) — if NIFTY > {yd_h:.0f}")
+                    lines.append(f"  BEARISH (BUY PE) — if NIFTY < {yd_l:.0f}")
+                    lines.append(f"  MORNING DIR      — if inside range")
+                tg_send("\n".join(lines))
+                bot_log("Morning Telegram ping sent", "info")
+            except Exception as _me:
+                bot_log(f"Morning ping error: {_me}", "err")
+
         if not market_open:
-            bot_log("Market closed. Waiting...")
             time.sleep(60)
             continue
 
@@ -996,9 +1047,43 @@ def bot_loop():
                 tg_send("\n".join(lines))
                 bot_log(f"SETTLEMENT | Day P&L:Rs.{total_pnl:+.0f} | Capital:Rs.{running_capital:.0f} | Next:{lots_today}L", "ok")
                 sync_background()
+
+                # Weekly summary every Friday
+                if date.today().weekday() == 4 and not weekly_done:
+                    weekly_done = True
+                    try:
+                        week_start = (date.today() - timedelta(days=4)).strftime("%Y-%m-%d")
+                        week_end   = date.today().strftime("%Y-%m-%d")
+                        conn  = get_db()
+                        wrows = conn.execute(
+                            "SELECT pnl FROM trades WHERE date >= ? AND date <= ?",
+                            (week_start, week_end)
+                        ).fetchall()
+                        conn.close()
+                        if wrows:
+                            wtot  = sum(r["pnl"] for r in wrows)
+                            wwins = sum(1 for r in wrows if r["pnl"] > 0)
+                            wn    = len(wrows)
+                            wlines = [
+                                "=" * 28,
+                                "WEEKLY SUMMARY",
+                                f"{week_start} to {week_end}",
+                                "=" * 28,
+                                f"Trades   : {wn}  (W:{wwins} L:{wn-wwins})",
+                                f"Win rate : {round(wwins/wn*100)}%",
+                                f"Week P&L : Rs.{wtot:+.0f}",
+                                f"Capital  : Rs.{running_capital:.0f}",
+                                f"Next week: {lots_today}L ({lots_today*25} units)",
+                                "=" * 28,
+                            ]
+                            tg_send("\n".join(wlines))
+                            bot_log(f"WEEKLY SUMMARY sent | Week P&L:Rs.{wtot:+.0f}", "ok")
+                    except Exception as _we:
+                        bot_log(f"Weekly summary error: {_we}", "err")
+
                 time.sleep(60); continue
 
-            # ── 3. Check open positions (SL / TP / trail) ────────────────────
+            # ── 3. Check open positions (SL / BE lock / trail) ───────────────
             closed = []
             for pos in positions:
                 iname = pos.get("instrument", "NIFTY")
@@ -1010,7 +1095,7 @@ def bot_loop():
                 move  = (px - pos["entry"]) * delta * lot if otype == "CE" else (pos["entry"] - px) * delta * lot
                 pnl   = move - BROKERAGE
 
-                # ── Premium SL: exit if option lost 60% of entry value (theta/move) ──
+                # ── Premium SL: exit if option lost 60% of entry value ────────
                 if pos.get("strike") and pos.get("premium_entry"):
                     live_prem = fetch_option_premium(iname, pos["strike"], otype, px)
                     if live_prem and live_prem < pos["premium_entry"] * 0.40:
@@ -1018,8 +1103,8 @@ def bot_loop():
                         save_trade(pos["score"], pos["entry"], px, pnl_p, "PREM_SL", iname, otype)
                         daily_pnl += pnl_p
                         sl_cooldown[iname] = time.time()
-                        bot_log(f"PREM SL {iname} {otype} {pos['strike']} | ₹{pos['premium_entry']}→₹{live_prem:.1f} P&L:Rs.{pnl_p:.0f}", "err")
-                        tg_send(f"🔴 <b>PREMIUM SL — {iname} {otype}</b>\nStrike: {pos.get('strike','')}\nPremium: ₹{pos['premium_entry']} → ₹{live_prem:.1f}\n<b>P&amp;L: ₹{pnl_p:.0f}</b>")
+                        bot_log(f"PREM SL {iname} {otype} {pos['strike']} | Rs.{pos['premium_entry']}→Rs.{live_prem:.1f} P&L:Rs.{pnl_p:.0f}", "err")
+                        tg_send(f"PREMIUM SL — {iname} {otype}\nStrike: {pos.get('strike','')}\nPremium: Rs.{pos['premium_entry']} → Rs.{live_prem:.1f}\nP&L: Rs.{pnl_p:.0f}")
                         closed.append(pos); sync_background(); continue
 
                 # ── Track peak P&L (updated every cycle) ──────────────────────
@@ -1027,21 +1112,56 @@ def bot_loop():
                     pos["peak_pnl"] = pnl
                 peak_pnl = pos.get("peak_pnl", 0)
 
-                # ── Hard SL — always Rs.150, always first ──────────────────────
-                if pnl <= STOP_LOSS:
+                # ── Activate breakeven lock once peak hits Rs.300 ──────────────
+                if peak_pnl >= BREAKEVEN_LOCK_START and not pos.get("be_locked"):
+                    pos["be_locked"] = True
+                    save_positions(positions)
+                    bot_log(f"BE LOCK ON {iname} {otype} | Peak:Rs.{peak_pnl:.0f} — SL floor now Rs.{BREAKEVEN_LOCK_FLOOR}", "ok")
+                    tg_send(
+                        f"BE LOCK ACTIVE — {iname} {otype}\n"
+                        f"Peak: Rs.{peak_pnl:.0f}\n"
+                        f"SL floor raised to Rs.{BREAKEVEN_LOCK_FLOOR} — you cannot lose now!\n"
+                        f"Still running... waiting for Rs.{BIG_TRAIL_START} to activate big trail."
+                    )
+
+                # ── 1. Breakeven lock exit (pnl drops below Rs.300 after lock) ─
+                if pos.get("be_locked") and pnl < BREAKEVEN_LOCK_FLOOR:
+                    exit_pnl = BREAKEVEN_LOCK_FLOOR   # guaranteed floor
+                    save_trade(pos["score"], pos["entry"], px, exit_pnl, "BE_LOCK", iname, otype)
+                    daily_pnl      += exit_pnl
+                    running_capital += exit_pnl
+                    lots_today = min(MAX_LOTS, max(BASE_LOTS, int(running_capital // CAPITAL_PER_LOT)))
+                    save_bot_state(running_capital, lots_today)
+                    state["running_capital"] = running_capital
+                    state["lots_today"]      = lots_today
+                    bot_log(f"BE LOCK EXIT {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Booked:Rs.{exit_pnl} | Capital:Rs.{running_capital:.0f} Lots->{lots_today}L", "ok")
+                    tg_send(
+                        f"BE LOCK EXIT — {iname} {otype}\n"
+                        f"Peak: Rs.{peak_pnl:.0f}  Booked: Rs.{exit_pnl} (guaranteed floor)\n"
+                        f"Capital: Rs.{running_capital:.0f} | Next: {lots_today}L"
+                    )
+                    closed.append(pos); sync_background(); continue
+
+                # ── 2. Hard SL — only fires before BE lock activates ───────────
+                if not pos.get("be_locked") and pnl <= STOP_LOSS:
                     save_trade(pos["score"], pos["entry"], px, STOP_LOSS, "STOP_LOSS", iname, otype)
                     daily_pnl      += STOP_LOSS
                     running_capital += STOP_LOSS
-                    lots_today      = BASE_LOTS   # revert to 3 lots after any loss
+                    lots_today      = BASE_LOTS
                     save_bot_state(running_capital, lots_today)
                     state["running_capital"] = running_capital
                     state["lots_today"]      = lots_today
                     sl_cooldown[iname] = time.time()
                     bot_log(f"STOP LOSS {iname} {otype} | Entry:{pos['entry']:.0f} Exit:{px:.0f} | Capital:Rs.{running_capital:.0f} Lots->{lots_today}L", "err")
-                    tg_send(f"STOP LOSS - {iname} {otype}\nEntry: {pos['entry']:.0f}  Exit: {px:.0f}\nLoss: Rs.{STOP_LOSS}\nCapital: Rs.{running_capital:.0f} | Back to {lots_today}L tomorrow")
+                    tg_send(
+                        f"STOP LOSS — {iname} {otype}\n"
+                        f"Entry: {pos['entry']:.0f}  Exit: {px:.0f}\n"
+                        f"Loss: Rs.{STOP_LOSS}\n"
+                        f"Capital: Rs.{running_capital:.0f} | Back to {lots_today}L tomorrow"
+                    )
                     closed.append(pos); sync_background(); continue
 
-                # ── Big trail: let winners run (strong trend day) ───────────────
+                # ── 3. Big trail: let winners run (exits at peak - Rs.200) ──────
                 if peak_pnl >= BIG_TRAIL_START and pnl <= peak_pnl - BIG_TRAIL_DROP:
                     exit_pnl = round(pnl, 2)
                     save_trade(pos["score"], pos["entry"], px, exit_pnl, "TRAIL_EXIT", iname, otype)
@@ -1052,12 +1172,17 @@ def bot_loop():
                     state["running_capital"] = running_capital
                     state["lots_today"]      = lots_today
                     bot_log(f"TRAIL EXIT {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Booked:Rs.{exit_pnl:.0f} | Capital:Rs.{running_capital:.0f} Lots->{lots_today}L", "ok")
-                    tg_send(f"TRAIL EXIT - {iname} {otype}\nPeak: Rs.{peak_pnl:.0f}  Booked: Rs.{exit_pnl:.0f}\nCapital: Rs.{running_capital:.0f} | Next: {lots_today}L")
+                    tg_send(
+                        f"TRAIL EXIT — {iname} {otype}\n"
+                        f"Peak: Rs.{peak_pnl:.0f}  Booked: Rs.{exit_pnl:.0f}\n"
+                        f"Capital: Rs.{running_capital:.0f} | Next: {lots_today}L"
+                    )
                     closed.append(pos); sync_background(); continue
 
-                # ── Small trail: book profit on tough/slow days ─────────────────
+                # ── 4. Small trail: range/tough days (floor = Rs.300 if locked) ─
                 if peak_pnl >= SMALL_TRAIL_START and pnl <= peak_pnl - SMALL_TRAIL_DROP:
-                    exit_pnl = round(pnl, 2)
+                    raw_pnl  = round(pnl, 2)
+                    exit_pnl = max(BREAKEVEN_LOCK_FLOOR, raw_pnl) if pos.get("be_locked") else raw_pnl
                     status   = "PROFIT_LOCK" if exit_pnl > 0 else "STOP_LOSS"
                     save_trade(pos["score"], pos["entry"], px, exit_pnl, status, iname, otype)
                     daily_pnl      += exit_pnl
@@ -1070,14 +1195,21 @@ def bot_loop():
                     state["running_capital"] = running_capital
                     state["lots_today"]      = lots_today
                     bot_log(f"PROFIT LOCK {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Booked:Rs.{exit_pnl:.0f} | Capital:Rs.{running_capital:.0f}", "ok")
-                    tg_send(f"PROFIT LOCK - {iname} {otype}\nPeak: Rs.{peak_pnl:.0f}  Booked: Rs.{exit_pnl:.0f}\nCapital: Rs.{running_capital:.0f} | Next: {lots_today}L")
+                    tg_send(
+                        f"PROFIT LOCK — {iname} {otype}\n"
+                        f"Peak: Rs.{peak_pnl:.0f}  Booked: Rs.{exit_pnl:.0f}\n"
+                        f"Capital: Rs.{running_capital:.0f} | Next: {lots_today}L"
+                    )
                     closed.append(pos); sync_background(); continue
 
-                # Log riding status
+                # ── Log riding status ──────────────────────────────────────────
+                be_tag = " | BE LOCKED (floor Rs.300)" if pos.get("be_locked") else ""
                 if peak_pnl >= BIG_TRAIL_START:
-                    bot_log(f"RIDING — {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Now:Rs.{pnl:.0f} (big trail active)", "ok")
+                    bot_log(f"RIDING {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Now:Rs.{pnl:.0f} (big trail active){be_tag}", "ok")
                 elif peak_pnl >= SMALL_TRAIL_START:
-                    bot_log(f"RIDING — {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Now:Rs.{pnl:.0f} (small trail active)", "ok")
+                    bot_log(f"RIDING {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Now:Rs.{pnl:.0f} (small trail){be_tag}", "ok")
+                elif pos.get("be_locked"):
+                    bot_log(f"RIDING {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Now:Rs.{pnl:.0f}{be_tag}", "ok")
 
             for pos in closed:
                 positions.remove(pos)
@@ -1175,14 +1307,17 @@ def bot_loop():
                             first_trade_done = True
                             state["first_trade_done"] = True
                             state["option_type"]      = otype
-                            bot_log(f"{prefix} BUY {otype} NIFTY {strike} @ Rs.{premium} | {signal} | {lots_today}L ({current_lot}u) | Expiry:{exp}", "ok")
+                            direction_label = "BULLISH — BUY CALL (CE)" if otype == "CE" else "BEARISH — BUY PUT (PE)"
+                            bot_log(f"{prefix} {direction_label} | NIFTY {strike} @ Rs.{premium} | {signal} | {lots_today}L ({current_lot}u) | Expiry:{exp}", "ok")
                             tg_send(
-                                f"TRADE ENTERED - NIFTY {otype}\n"
-                                f"Signal: {signal}\n"
-                                f"Strike: {strike}  Premium: Rs.{premium}\n"
-                                f"Lots: {lots_today}L ({current_lot} units)  Expiry: {exp}\n"
-                                f"SL: Rs.{abs(STOP_LOSS)}  Capital: Rs.{running_capital:.0f}\n"
-                                f"Mode: {'PAPER' if PAPER_TRADE else 'LIVE'}"
+                                f"TRADE ENTERED — NIFTY {otype}\n"
+                                f"Direction : {direction_label}\n"
+                                f"Signal    : {signal}\n"
+                                f"Strike    : {strike}  Premium: Rs.{premium}\n"
+                                f"Lots      : {lots_today}L ({current_lot} units)  Expiry: {exp}\n"
+                                f"SL        : Rs.{abs(STOP_LOSS)} | BE Lock at Rs.{BREAKEVEN_LOCK_FLOOR}\n"
+                                f"Capital   : Rs.{running_capital:.0f}\n"
+                                f"Mode      : {'PAPER' if PAPER_TRADE else 'LIVE'}"
                             )
                             sync_background()
                             entered = True
@@ -1257,6 +1392,7 @@ def api_state():
         "yd_low":             state.get("yd_low"),
         "lots_today":         state.get("lots_today", BASE_LOTS),
         "running_capital":    state.get("running_capital", float(PAPER_CAPITAL)),
+        "streak":             get_streak(),
     })
 
 @app.route("/api/set_expiry", methods=["POST"])
@@ -1346,6 +1482,9 @@ def api_intraday():
                     "strike":        strike,
                     "premium_entry": premium_entry,
                     "live_premium":  live_premium,
+                    "peak_pnl":      pos.get("peak_pnl", None),
+                    "be_locked":     pos.get("be_locked", False),
+                    "lot":           p_lot,
                 })
             result[inst["name"]] = {"times": times, "closes": closes,
                                      "live_price": live_px, "positions": pos_data}
