@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 10:25",
+  "last_updated": "2026-07-01 10:29",
   "summary": {
     "total_trades": 20,
     "wins": 4,
@@ -277,8 +277,13 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "10:25:33",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:25:29",
       "msg": "PROFIT LOCK NIFTY CE | Peak:Rs.789 Booked:Rs.516 | Capital:Rs.10516",
@@ -373,14 +378,9 @@
       "time": "10:06:15",
       "msg": "NIFTY:23972 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "10:05:12",
-      "msg": "NIFTY:23970 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
-      "cls": ""
     }
   ],
-  "vix": 13.55,
+  "vix": 13.52,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
