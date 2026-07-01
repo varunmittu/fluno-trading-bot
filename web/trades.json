@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 14:01",
+  "last_updated": "2026-07-01 14:06",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -332,6 +332,11 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:01:13",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:01:07",
       "msg": "Already traded today (from DB) \u2014 won't enter again.",
       "cls": "info"
@@ -352,7 +357,7 @@
       "cls": "err"
     }
   ],
-  "vix": 13.31,
+  "vix": 13.3,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
