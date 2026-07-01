@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 13:07",
+  "last_updated": "2026-07-01 13:12",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -332,107 +332,107 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "13:02:43",
+      "time": "13:06:58",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:57:36",
+      "time": "13:01:52",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:52:24",
+      "time": "12:56:45",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:47:13",
+      "time": "12:51:35",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:42:00",
+      "time": "12:46:22",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:36:49",
+      "time": "12:41:12",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:31:38",
+      "time": "12:36:01",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:26:26",
+      "time": "12:30:50",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:21:15",
+      "time": "12:25:39",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:16:03",
+      "time": "12:20:30",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:10:51",
+      "time": "12:15:19",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:05:39",
+      "time": "12:10:07",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "12:00:25",
+      "time": "12:04:55",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:55:12",
+      "time": "11:59:42",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:50:01",
+      "time": "11:54:29",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:44:50",
+      "time": "11:49:18",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:39:41",
+      "time": "11:44:09",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:34:34",
+      "time": "11:39:02",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:29:26",
+      "time": "11:33:55",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:24:16",
+      "time": "11:28:48",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
   ],
-  "vix": 13.41,
+  "vix": 13.4,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
