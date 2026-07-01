@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 14:50",
+  "last_updated": "2026-07-01 14:55",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -332,6 +332,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:55:35",
+      "msg": "NIFTY:24020 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:54:32",
+      "msg": "NIFTY:24022 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:53:30",
+      "msg": "NIFTY:24015 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:52:27",
+      "msg": "NIFTY:24015 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:51:24",
+      "msg": "NIFTY:24014 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:50:25",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:50:22",
       "msg": "NIFTY:24014 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
       "cls": ""
@@ -400,39 +430,9 @@
       "time": "14:38:54",
       "msg": "NIFTY:24001 Sig:-- VIX:13.5 Lots:3L Cap:Rs.11820 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "14:37:52",
-      "msg": "NIFTY:24014 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:34:46",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:29:34",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:24:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:24:15",
-      "msg": "Already traded today (from DB) \u2014 won't enter again.",
-      "cls": "info"
-    },
-    {
-      "time": "14:24:15",
-      "msg": "Capital: Rs.11820 | Lots: 3L (75 units)",
-      "cls": "info"
     }
   ],
-  "vix": 13.37,
+  "vix": 13.26,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
