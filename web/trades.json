@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 14:45",
+  "last_updated": "2026-07-01 14:50",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -332,6 +332,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:50:22",
+      "msg": "NIFTY:24014 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:49:20",
+      "msg": "NIFTY:24017 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:48:18",
+      "msg": "NIFTY:24016 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:47:16",
+      "msg": "NIFTY:24020 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:46:13",
+      "msg": "NIFTY:24022 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:45:15",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:45:11",
       "msg": "NIFTY:24021 Sig:-- VIX:13.4 Lots:3L Cap:Rs.11820 Daily:Rs.0",
       "cls": ""
@@ -400,16 +430,6 @@
       "time": "14:24:15",
       "msg": "Capital: Rs.11820 | Lots: 3L (75 units)",
       "cls": "info"
-    },
-    {
-      "time": "14:24:15",
-      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
-      "cls": "info"
-    },
-    {
-      "time": "14:24:15",
-      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
-      "cls": "err"
     }
   ],
   "vix": 13.37,
