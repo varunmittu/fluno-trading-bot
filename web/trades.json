@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 13:59",
+  "last_updated": "2026-07-01 14:01",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -332,107 +332,27 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "13:59:31",
-      "msg": "NIFTY:24021 Sig:-- VIX:13.3 Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
+      "time": "14:01:07",
+      "msg": "Already traded today (from DB) \u2014 won't enter again.",
+      "cls": "info"
     },
     {
-      "time": "13:54:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "14:01:07",
+      "msg": "Capital: Rs.11820 | Lots: 3L (75 units)",
+      "cls": "info"
     },
     {
-      "time": "13:49:10",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "14:01:07",
+      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
+      "cls": "info"
     },
     {
-      "time": "13:43:58",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:38:46",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:33:34",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:28:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:23:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:18:08",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:12:59",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:07:51",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:02:43",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:57:36",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:52:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:47:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:42:00",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:36:49",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:31:38",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:26:26",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:21:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "14:01:07",
+      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
+      "cls": "err"
     }
   ],
-  "vix": 13.3,
+  "vix": 13.31,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
