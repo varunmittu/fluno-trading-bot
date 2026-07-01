@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-01 10:41",
+  "last_updated": "2026-07-01 10:43",
   "summary": {
-    "total_trades": 20,
+    "total_trades": 21,
     "wins": 4,
-    "losses": 16,
-    "win_rate": 20.0,
-    "total_pnl": -183.0,
+    "losses": 17,
+    "win_rate": 19.0,
+    "total_pnl": -333.0,
     "avg_win": 605.0,
-    "avg_loss": -163.0
+    "avg_loss": -162.0
   },
   "trades": [
     {
@@ -269,16 +269,39 @@
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE"
+    },
+    {
+      "id": 21,
+      "date": "2026-07-01",
+      "time": "10:43",
+      "score": 0,
+      "entry": 23971.05,
+      "exit": 23965.85,
+      "pnl": -150.0,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE"
     }
   ],
   "daily_pnl": {
     "2026-06-30": -1212.0,
-    "2026-07-01": 1030.0
+    "2026-07-01": 880.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "10:43:15",
+      "msg": "STOP LOSS NIFTY CE | Entry:23971 Exit:23966 | Capital:Rs.10366 Lots->3L",
+      "cls": "err"
+    },
+    {
+      "time": "10:41:11",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:41:07",
       "msg": "[PAPER] BUY CE NIFTY 24000 @ Rs.134.6 | MORN UP (23971) | 3L (75u) | Expiry:02 Jul 2026",
@@ -368,19 +391,9 @@
       "time": "10:11:25",
       "msg": "NIFTY:23987 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "10:10:23",
-      "msg": "NIFTY:23981 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:09:21",
-      "msg": "NIFTY:23977 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
-      "cls": ""
     }
   ],
-  "vix": 13.54,
+  "vix": 13.53,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
