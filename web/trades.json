@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30 15:25",
+  "last_updated": "2026-07-01 09:18",
   "summary": {
     "total_trades": 18,
     "wins": 2,
@@ -248,54 +248,112 @@
   "daily_pnl": {
     "2026-06-30": -1212.0
   },
-  "current_score": 45,
-  "score_breakdown": {
-    "rsi": 15,
-    "macd": 12,
-    "vol": 0,
-    "sma": 10,
-    "price": 5,
-    "slope": 3
-  },
+  "current_score": 0,
+  "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "15:25:01",
-      "msg": "NIFTY:23885(B:0/P:45) | BANKNIFTY:57561(B:0/P:45) | SENSEX:76409(B:15/P:30) VIX:13.5 Pos:0/1 Daily:Rs.0",
+      "time": "09:18:32",
+      "msg": "NIFTY:23906 Sig:-- VIX:14.0 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "15:24:57",
-      "msg": "Fetching 5-min candles [^BSESN]...",
-      "cls": "info"
-    },
-    {
-      "time": "15:24:57",
-      "msg": "Fetching 5-min candles [^NSEBANK]...",
-      "cls": "info"
-    },
-    {
-      "time": "15:24:56",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "15:24:54",
-      "msg": "Already traded today (from DB) \u2014 won't enter again.",
-      "cls": "info"
-    },
-    {
-      "time": "15:24:54",
-      "msg": "Bot started | PAPER TRADE | Threshold: 20",
-      "cls": "info"
-    },
-    {
-      "time": "15:24:54",
-      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
+      "time": "09:17:29",
+      "msg": "Could not fetch any live prices. Retrying...",
       "cls": "err"
+    },
+    {
+      "time": "09:16:29",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "09:15:29",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "09:14:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:13:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:12:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:11:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:10:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:09:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:08:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:07:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:06:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:05:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:04:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:03:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:02:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:01:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "09:00:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
+    },
+    {
+      "time": "08:59:28",
+      "msg": "Market closed. Waiting...",
+      "cls": ""
     }
   ],
-  "vix": 13.5,
-  "supertrend_bullish": false,
+  "vix": 14.03,
+  "supertrend_bullish": null,
   "oi_nifty": null
 }
