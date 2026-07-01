@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 10:14",
+  "last_updated": "2026-07-01 10:15",
   "summary": {
     "total_trades": 18,
     "wins": 2,
@@ -253,6 +253,16 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:15:32",
+      "msg": "[PAPER] BUY CE NIFTY 24050 @ Rs.133.6 | MORN UP (23992) | 3L (75u) | Expiry:02 Jul 2026",
+      "cls": "ok"
+    },
+    {
+      "time": "10:14:30",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:14:27",
       "msg": "NIFTY:23986 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
@@ -341,19 +351,9 @@
       "time": "09:58:54",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "09:58:51",
-      "msg": "NIFTY:23975 Sig:-- VIX:13.6 Lots:3L Cap:Rs.10000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:58:49",
-      "msg": "Capital: Rs.10000 | Lots: 3L (75 units)",
-      "cls": "info"
     }
   ],
-  "vix": 13.58,
+  "vix": 13.56,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
