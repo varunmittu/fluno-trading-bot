@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01 09:44",
+  "last_updated": "2026-07-01 09:49",
   "summary": {
     "total_trades": 18,
     "wins": 2,
@@ -253,6 +253,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:49:39",
+      "msg": "NIFTY:23955 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:48:37",
+      "msg": "NIFTY:23959 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:47:34",
+      "msg": "NIFTY:23952 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:46:32",
+      "msg": "NIFTY:23950 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:45:29",
+      "msg": "NIFTY:23948 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:44:30",
+      "msg": "Vercel sync failed: To https://github.com/varunmittu/fluno-trading-bot.git\n ! [remote rejected] main",
+      "cls": "err"
+    },
+    {
       "time": "09:44:28",
       "msg": "NIFTY:23939 Sig:-- VIX:13.7 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
@@ -321,39 +351,9 @@
       "time": "09:33:04",
       "msg": "NIFTY:23923 Sig:-- VIX:13.9 Lots:3L Cap:Rs.10000 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:32:02",
-      "msg": "NIFTY:23927 Sig:-- VIX:13.9 Lots:3L Cap:Rs.10000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:31:00",
-      "msg": "NIFTY:23936 Sig:-- VIX:13.9 Lots:3L Cap:Rs.10000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:29:58",
-      "msg": "NIFTY:23923 Sig:-- VIX:13.9 Lots:3L Cap:Rs.10000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:28:58",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:28:56",
-      "msg": "NIFTY:23917 Sig:-- VIX:13.9 Lots:3L Cap:Rs.10000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:27:53",
-      "msg": "NIFTY:23918 Sig:-- VIX:13.9 Lots:3L Cap:Rs.10000 Daily:Rs.0",
-      "cls": ""
     }
   ],
-  "vix": 13.72,
+  "vix": 13.67,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
