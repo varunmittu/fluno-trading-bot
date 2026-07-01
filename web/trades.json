@@ -332,67 +332,72 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "12:04:55",
+      "time": "12:05:39",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:59:42",
+      "time": "12:00:25",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:54:29",
+      "time": "11:55:12",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:49:18",
+      "time": "11:50:01",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:44:09",
+      "time": "11:44:50",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:39:02",
+      "time": "11:39:41",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:33:55",
+      "time": "11:34:34",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:28:48",
+      "time": "11:29:26",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:28:43",
+      "time": "11:24:16",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "11:24:12",
       "msg": "Already traded today (from DB) \u2014 won't enter again.",
       "cls": "info"
     },
     {
-      "time": "11:28:43",
+      "time": "11:24:12",
       "msg": "Capital: Rs.11820 | Lots: 3L (75 units)",
       "cls": "info"
     },
     {
-      "time": "11:28:43",
+      "time": "11:24:12",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
       "cls": "info"
     },
     {
-      "time": "11:28:43",
+      "time": "11:24:12",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
   ],
-  "vix": 13.42,
+  "vix": 13.43,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
