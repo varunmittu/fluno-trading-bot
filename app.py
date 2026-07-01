@@ -303,6 +303,69 @@ def tg_poll():
                     except Exception as ex:
                         tg_send(f"Error: {ex}")
 
+                elif cmd == "/exit":
+                    pos_list = state.get("positions_list", [])
+                    if not pos_list:
+                        tg_send("No open position to exit.")
+                    else:
+                        exited = []
+                        for pos in list(pos_list):
+                            iname  = pos.get("instrument", "NIFTY")
+                            otype  = pos.get("option_type", "CE")
+                            lot    = pos.get("lot", LOT)
+                            delta  = pos.get("delta", DELTA)
+                            px_now = fetch_live_price(INSTRUMENTS[0]["yf"])
+                            if not px_now:
+                                tg_send("Could not fetch live price. Try again in 30 seconds.")
+                                break
+                            move   = (px_now - pos["entry"]) * delta * lot if otype == "CE" \
+                                     else (pos["entry"] - px_now) * delta * lot
+                            pnl    = round(move - BROKERAGE, 0)
+                            save_trade(pos["score"], pos["entry"], px_now, pnl, "MANUAL_EXIT", iname, otype)
+                            state["daily_pnl"] = round(state.get("daily_pnl", 0) + pnl, 0)
+                            # Update capital and lots
+                            _cap  = state.get("running_capital", float(PAPER_CAPITAL)) + pnl
+                            _lots = min(MAX_LOTS, max(BASE_LOTS, int(_cap // CAPITAL_PER_LOT))) if pnl > 0 else BASE_LOTS
+                            state["running_capital"] = _cap
+                            state["lots_today"]      = _lots
+                            save_bot_state(_cap, _lots)
+                            exited.append((iname, otype, pos["entry"], px_now, pnl))
+                            pos_list.remove(pos)
+                        state["positions_list"]   = pos_list
+                        state["open_positions"]   = len(pos_list)
+                        state["first_trade_done"] = True
+                        save_positions(pos_list)
+                        sync_background()
+                        for iname, otype, entry, exit_px, pnl in exited:
+                            icon = "WIN" if pnl > 0 else "LOSS"
+                            tg_send(
+                                f"MANUAL EXIT - {iname} {otype}\n"
+                                f"Entry: {entry:.0f}  Exit: {exit_px:.0f}\n"
+                                f"{icon}: Rs.{pnl:.0f}\n"
+                                f"Capital: Rs.{state['running_capital']:.0f} | Next: {state['lots_today']}L"
+                            )
+
+                elif cmd.startswith("/lots"):
+                    parts = cmd.split()
+                    if len(parts) != 2 or not parts[1].isdigit():
+                        tg_send("Usage: /lots 5\nExample: /lots 3 sets 3 lots for next trade.")
+                    else:
+                        new_lots = int(parts[1])
+                        if new_lots < 1 or new_lots > MAX_LOTS:
+                            tg_send(f"Lots must be between 1 and {MAX_LOTS}.")
+                        else:
+                            state["lots_today"] = new_lots
+                            _cap = state.get("running_capital", float(PAPER_CAPITAL))
+                            save_bot_state(_cap, new_lots)
+                            units    = new_lots * 25
+                            rs_per_pt = units * DELTA
+                            tg_send(
+                                f"Lot size set to {new_lots}L ({units} units)\n"
+                                f"Rs./point: Rs.{rs_per_pt:.0f}\n"
+                                f"Max loss per trade: Rs.{abs(STOP_LOSS)}\n"
+                                f"Takes effect on next trade entry."
+                            )
+
                 elif cmd == "/stop":
                     state["first_trade_done"] = True
                     tg_send("Trading paused for today. Send /resume to re-enable.")
@@ -314,14 +377,16 @@ def tg_poll():
                 elif cmd in ("/help", "/start"):
                     tg_send(
                         "Fluno Bot Commands:\n\n"
-                        "/signal  — today's breakout signal\n"
-                        "/status  — NIFTY price, VIX, position\n"
-                        "/pnl     — today's trade result\n"
-                        "/capital — capital and lot size\n"
-                        "/history — last 7 trades\n"
-                        "/stop    — pause trading today\n"
-                        "/resume  — resume trading\n"
-                        "/help    — this list"
+                        "/signal     — today's breakout signal\n"
+                        "/status     — NIFTY price, VIX, position\n"
+                        "/pnl        — today's trade result\n"
+                        "/capital    — running capital and lot size\n"
+                        "/history    — last 7 trades\n"
+                        "/exit       — close open position NOW at market price\n"
+                        "/lots 5     — set lot size (e.g. /lots 5 = 5 lots)\n"
+                        "/stop       — pause trading today\n"
+                        "/resume     — resume trading\n"
+                        "/help       — this list"
                     )
 
                 else:
