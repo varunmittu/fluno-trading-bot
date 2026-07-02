@@ -110,10 +110,6 @@
     .idxfl{font-size:10px;color:var(--t3);text-transform:uppercase;letter-spacing:.8px}
     .idxpr{font-size:17px;font-weight:700;font-family:monospace;margin-top:5px}
     .idxch{font-size:12px;font-weight:600;margin-top:2px}
-    .vixrow{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-    .vixcard{background:var(--s1);border:1px solid var(--bd);border-radius:11px;padding:12px 15px;display:flex;justify-content:space-between;align-items:center}
-    .vixlbl{font-size:11px;color:var(--t3)}.vixval{font-size:15px;font-weight:700;font-family:monospace}
-
     /* NEWS */
     .nfwrap{display:flex;gap:7px;margin-bottom:13px;flex-wrap:wrap}
     .nfbtn{padding:4px 13px;border-radius:20px;font-size:11px;font-weight:600;border:1px solid var(--bd);background:transparent;color:var(--t3);cursor:pointer;transition:all .2s}
@@ -172,10 +168,6 @@
     <div>
       <div style="font-size:10px;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px">NIFTY 50</div>
       <div class="hprice" id="h-nifty">{{ nifty_price }}</div>
-    </div>
-    <div>
-      <div style="font-size:10px;color:var(--t3);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px">India VIX</div>
-      <div id="h-vix" style="font-size:16px;font-weight:700;font-family:monospace;color:var(--t3)">—</div>
     </div>
   </div>
   <div class="hright">
@@ -312,11 +304,6 @@
   <div class="idxgrid" id="idx-grid">
     <div class="idxcard"><div class="idxfl" style="color:var(--t3)">Loading...</div></div>
   </div>
-  <div class="vixrow">
-    <div class="vixcard"><span class="vixlbl">FII/DII Flows</span><span class="vixval" style="color:var(--t3);font-size:12px">nse.in</span></div>
-    <div class="vixcard"><span class="vixlbl">India VIX</span><span class="vixval" id="vix-big" style="color:var(--green)">—</span></div>
-    <div class="vixcard"><span class="vixlbl">SGX Nifty</span><span class="vixval" id="sgx-big" style="color:var(--cyan)">—</span></div>
-  </div>
 </div>
 
 <!-- NEWS -->
@@ -391,12 +378,6 @@ async function loadState() {
     // Header
     const np = s.nifty_price;
     if (np && np !== '--') document.getElementById('h-nifty').textContent = Number(np).toLocaleString('en-IN',{maximumFractionDigits:2});
-    const vix = s.vix;
-    if (vix) {
-      const vc = vix > 20 ? 'var(--red)' : vix > 14 ? 'var(--gold)' : 'var(--green)';
-      document.getElementById('h-vix').textContent = vix.toFixed(1);
-      document.getElementById('h-vix').style.color = vc;
-    }
     const mo = s.market_open;
     const dot = document.getElementById('live-dot');
     const mkb = document.getElementById('mkt-badge');
@@ -567,10 +548,6 @@ async function loadIndices() {
     const up=r.chg>=0, col=up?'var(--green)':'var(--red)', sg=up?'+':'';
     return `<div class="idxcard"><div class="idxfl">${idx.flag} · ${idx.name}</div><div class="idxpr">${r.price.toLocaleString('en-IN',{maximumFractionDigits:2})}</div><div class="idxch" style="color:${col}">${sg}${r.chg.toFixed(1)} (${sg}${r.pct}%)</div></div>`;
   }).join('');
-  const vix=await fetchIdx('^INDIAVIX');
-  if(vix){const e=document.getElementById('vix-big');e.textContent=vix.price.toFixed(2);e.style.color=vix.price>18?'var(--red)':vix.price>13?'var(--gold)':'var(--green)';}
-  const sgx=await fetchIdx('CNXNifty.NS');
-  if(sgx){const e=document.getElementById('sgx-big');e.textContent=sgx.price.toLocaleString('en-IN',{maximumFractionDigits:0});e.style.color=sgx.chg>=0?'var(--green)':'var(--red)';}
   document.getElementById('idx-ts').textContent='— '+new Date().toLocaleTimeString();
 }
 
