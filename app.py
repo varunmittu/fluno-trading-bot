@@ -132,7 +132,8 @@ def init_db():
         )
     """)
     # Add columns silently if upgrading existing DB
-    for col in ["instrument TEXT DEFAULT 'NIFTY'", "option_type TEXT DEFAULT 'CE'"]:
+    for col in ["instrument TEXT DEFAULT 'NIFTY'", "option_type TEXT DEFAULT 'CE'",
+                "invested REAL DEFAULT 0", "lots INTEGER DEFAULT 0"]:
         try:
             conn.execute(f"ALTER TABLE trades ADD COLUMN {col}")
         except Exception:
@@ -140,16 +141,22 @@ def init_db():
     conn.commit()
     conn.close()
 
-def save_trade(score, entry, exit_price, pnl, status, instrument="NIFTY", option_type="CE"):
+def save_trade(score, entry, exit_price, pnl, status, instrument="NIFTY", option_type="CE",
+               invested=0, lots=0):
     conn = get_db()
     mode = "PAPER" if PAPER_TRADE else "LIVE"
     now  = datetime.now()
     conn.execute(
-        "INSERT INTO trades (date,time,score,entry,exit,pnl,status,mode,instrument,option_type) VALUES (?,?,?,?,?,?,?,?,?,?)",
-        (now.strftime("%Y-%m-%d"), now.strftime("%H:%M"), score, entry, exit_price, round(pnl, 2), status, mode, instrument, option_type)
+        "INSERT INTO trades (date,time,score,entry,exit,pnl,status,mode,instrument,option_type,invested,lots) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+        (now.strftime("%Y-%m-%d"), now.strftime("%H:%M"), score, entry, exit_price, round(pnl, 2),
+         status, mode, instrument, option_type, round(invested, 2), lots)
     )
     conn.commit()
     conn.close()
+
+def trade_meta(pos):
+    """(invested, lots) for DB logging, from a position dict."""
+    return pos.get("invested", 0) or 0, int(pos.get("lot", LOT) // 25)
 
 def has_traded_today():
     """Check DB — even if SL fired and position was removed, we still know we traded."""
@@ -344,7 +351,8 @@ def tg_poll():
                             pnl    = round(move - BROKERAGE, 0)
                             if pos.get("strike"):
                                 execute_order("SELL", pos["strike"], otype, lot, reason="MANUAL_EXIT")
-                            save_trade(pos["score"], pos["entry"], px_now, pnl, "MANUAL_EXIT", iname, otype)
+                            _inv, _lts = trade_meta(pos)
+                            save_trade(pos["score"], pos["entry"], px_now, pnl, "MANUAL_EXIT", iname, otype, _inv, _lts)
                             _pnl_adjust.append(pnl)   # bot loop adds this to daily P&L
                             state["daily_pnl"] = round(state.get("daily_pnl", 0) + pnl, 0)
                             # Update capital and lots
@@ -405,6 +413,38 @@ def tg_poll():
                         "Extra trades still need 50%+ confidence and your /confirm."
                     )
 
+                elif cmd == "/report":
+                    # Day-by-day report from July 1: invested, lots, exact P&L
+                    try:
+                        conn = get_db()
+                        rows = conn.execute(
+                            "SELECT date, SUM(invested) AS inv, SUM(pnl) AS pnl, "
+                            "GROUP_CONCAT(DISTINCT lots) AS lts, COUNT(*) AS n "
+                            "FROM trades WHERE date >= '2026-07-01' "
+                            "GROUP BY date ORDER BY date"
+                        ).fetchall()
+                        conn.close()
+                        if not rows:
+                            tg_send("No trades since July 1 yet.")
+                        else:
+                            lines = ["DAILY REPORT (from July 1)", ""]
+                            tot_inv = tot_pnl = 0.0
+                            for r in rows:
+                                dt_   = datetime.strptime(r["date"], "%Y-%m-%d")
+                                label = f"{dt_.strftime('%B')} {dt_.day}"
+                                pnl   = r["pnl"] or 0
+                                inv   = r["inv"] or 0
+                                tot_inv += inv; tot_pnl += pnl
+                                lts   = ",".join(f"{x}L" for x in str(r["lts"] or "").split(",") if x and x != "0") or "—"
+                                res   = (f"Profit Rs.{pnl:,.2f}" if pnl > 0
+                                         else f"Loss Rs.{abs(pnl):,.2f}" if pnl < 0 else "Flat Rs.0.00")
+                                lines.append(f"{label} -> Invested: Rs.{inv:,.0f} | Lot size: {lts} | Result: {res}")
+                            lines.append("")
+                            lines.append(f"Total P&L: {'Profit' if tot_pnl >= 0 else 'Loss'} Rs.{abs(tot_pnl):,.2f}")
+                            tg_send("\n".join(lines))
+                    except Exception as ex:
+                        tg_send(f"Report error: {ex}")
+
                 elif cmd == "/confirm":
                     p = state.get("pending_trade")
                     if not p:
@@ -462,6 +502,7 @@ def tg_poll():
                         "/history    — last 7 trades\n"
                         "/exit       — close open position NOW at market price\n"
                         "/confirm    — approve a waiting 2nd/3rd trade\n"
+                        "/report     — day-by-day results from July 1\n"
                         "/lots 5     — set lot size (e.g. /lots 5 = 5 lots)\n"
                         "/token      — daily Kite login (exact live data)\n"
                         "/stop       — pause trading today\n"
@@ -1289,7 +1330,8 @@ def bot_loop():
                             else (pos["entry"] - px) * delta * lot
                     pnl   = round(move - BROKERAGE, 2)
                     close_position_order(pos, "EOD_EXIT")
-                    save_trade(pos["score"], pos["entry"], px, pnl, "EOD_EXIT", iname, otype)
+                    _inv, _lts = trade_meta(pos)
+                    save_trade(pos["score"], pos["entry"], px, pnl, "EOD_EXIT", iname, otype, _inv, _lts)
                     daily_pnl       += pnl
                     running_capital += pnl
                     if pnl > 0:
@@ -1308,7 +1350,7 @@ def bot_loop():
                 today_str = date.today().strftime("%Y-%m-%d")
                 conn  = get_db()
                 rows  = conn.execute(
-                    "SELECT instrument,option_type,entry,exit,pnl,status,time FROM trades WHERE date=? ORDER BY id",
+                    "SELECT instrument,option_type,entry,exit,pnl,status,time,invested,lots FROM trades WHERE date=? ORDER BY id",
                     (today_str,)
                 ).fetchall()
                 conn.close()
@@ -1330,7 +1372,14 @@ def bot_loop():
                         f"     Entry:{r['entry']:.0f}  Exit:{r['exit']:.0f}  "
                         f"Status:{r['status']}  P&L:Rs.{r['pnl']:.0f}"
                     )
+                day_inv  = sum((r["invested"] or 0) for r in rows)
+                day_lots = ",".join(f"{x}L" for x in sorted({r["lots"] for r in rows if r["lots"]})) or "—"
+                _d       = date.today()
+                day_res  = (f"Profit Rs.{total_pnl:,.2f}" if total_pnl > 0
+                            else f"Loss Rs.{abs(total_pnl):,.2f}" if total_pnl < 0 else "Flat Rs.0.00")
                 lines += [
+                    "-" * 30,
+                    f"{_d.strftime('%B')} {_d.day} -> Invested: Rs.{day_inv:,.0f} | Lot size: {day_lots} | Result: {day_res}",
                     "-" * 30,
                     f"Trades    : {len(rows)}  (W:{len(wins)} L:{len(losses)})",
                     f"Day P&L   : Rs.{total_pnl:+.0f}  [{result}]",
@@ -1396,7 +1445,8 @@ def bot_loop():
                     if live_prem and live_prem < pos["premium_entry"] * 0.40:
                         pnl_p = round((live_prem - pos["premium_entry"]) * lot - BROKERAGE, 2)
                         close_position_order(pos, "PREM_SL")
-                        save_trade(pos["score"], pos["entry"], px, pnl_p, "PREM_SL", iname, otype)
+                        _inv, _lts = trade_meta(pos)
+                        save_trade(pos["score"], pos["entry"], px, pnl_p, "PREM_SL", iname, otype, _inv, _lts)
                         daily_pnl += pnl_p
                         sl_cooldown[iname] = time.time()
                         bot_log(f"PREM SL {iname} {otype} {pos['strike']} | Rs.{pos['premium_entry']}→Rs.{live_prem:.1f} P&L:Rs.{pnl_p:.0f}", "err")
@@ -1424,7 +1474,8 @@ def bot_loop():
                 if pos.get("be_locked") and pnl < BREAKEVEN_LOCK_FLOOR:
                     exit_pnl = BREAKEVEN_LOCK_FLOOR   # guaranteed floor
                     close_position_order(pos, "BE_LOCK")
-                    save_trade(pos["score"], pos["entry"], px, exit_pnl, "BE_LOCK", iname, otype)
+                    _inv, _lts = trade_meta(pos)
+                    save_trade(pos["score"], pos["entry"], px, exit_pnl, "BE_LOCK", iname, otype, _inv, _lts)
                     daily_pnl      += exit_pnl
                     running_capital += exit_pnl
                     lots_today = min(MAX_LOTS, max(BASE_LOTS, int(running_capital // CAPITAL_PER_LOT)))
@@ -1443,7 +1494,8 @@ def bot_loop():
                 pos_sl = -abs(pos.get("sl_rs", abs(STOP_LOSS)))   # e.g. -300
                 if not pos.get("be_locked") and pnl <= pos_sl:
                     close_position_order(pos, "STOP_LOSS")
-                    save_trade(pos["score"], pos["entry"], px, pos_sl, "STOP_LOSS", iname, otype)
+                    _inv, _lts = trade_meta(pos)
+                    save_trade(pos["score"], pos["entry"], px, pos_sl, "STOP_LOSS", iname, otype, _inv, _lts)
                     daily_pnl      += pos_sl
                     running_capital += pos_sl
                     lots_today      = BASE_LOTS
@@ -1471,7 +1523,8 @@ def bot_loop():
                         reason   = "trend weakened" if not strong else f"safety net (peak-{BIG_TRAIL_SAFETY})"
                         exit_pnl = round(pnl, 2)
                         close_position_order(pos, "TRAIL_EXIT")
-                        save_trade(pos["score"], pos["entry"], px, exit_pnl, "TRAIL_EXIT", iname, otype)
+                        _inv, _lts = trade_meta(pos)
+                        save_trade(pos["score"], pos["entry"], px, exit_pnl, "TRAIL_EXIT", iname, otype, _inv, _lts)
                         daily_pnl      += exit_pnl
                         running_capital += exit_pnl
                         lots_today = min(MAX_LOTS, max(BASE_LOTS, int(running_capital // CAPITAL_PER_LOT)))
@@ -1494,7 +1547,8 @@ def bot_loop():
                     exit_pnl = max(BREAKEVEN_LOCK_FLOOR, raw_pnl) if pos.get("be_locked") else raw_pnl
                     status   = "PROFIT_LOCK" if exit_pnl > 0 else "STOP_LOSS"
                     close_position_order(pos, status)
-                    save_trade(pos["score"], pos["entry"], px, exit_pnl, status, iname, otype)
+                    _inv, _lts = trade_meta(pos)
+                    save_trade(pos["score"], pos["entry"], px, exit_pnl, status, iname, otype, _inv, _lts)
                     daily_pnl      += exit_pnl
                     running_capital += exit_pnl
                     if exit_pnl > 0:
@@ -1572,13 +1626,31 @@ def bot_loop():
             def do_entry(otype, signal, conf, sl_rs, trade_no):
                 """Send pre-trade Telegram, place the order, track the position."""
                 nonlocal entered
-                current_lot = lots_today * 25
                 exp     = state.get("expiry") or get_next_expiry("NIFTY", EXPIRY_INDEX)
                 strike  = get_target_strike(px_nifty, "NIFTY", otype)
                 premium = fetch_option_premium("NIFTY", strike, otype, px_nifty)
                 if premium and premium < 30:
                     bot_log(f"SKIP NIFTY {otype} {strike} — premium Rs.{premium:.0f} too low (<Rs.30)", "info")
                     return False
+                # ── Capital check: NEVER buy more than available capital ──────
+                lots_use = lots_today
+                if premium:
+                    per_lot_cost = premium * 25           # 1 lot = 25 units
+                    affordable   = int(running_capital // per_lot_cost)
+                    if affordable < 1:
+                        bot_log(f"SKIP — capital Rs.{running_capital:.0f} can't afford 1 lot (needs Rs.{per_lot_cost:.0f})", "err")
+                        tg_send(
+                            f"TRADE #{trade_no} SKIPPED — not enough capital\n"
+                            f"1 lot of NIFTY {strike} {otype} costs Rs.{per_lot_cost:.0f}\n"
+                            f"Available capital: Rs.{running_capital:.0f}"
+                        )
+                        return False
+                    if affordable < lots_use:
+                        bot_log(f"Lots capped by capital: {lots_use}L -> {affordable}L "
+                                f"(premium Rs.{premium} x 25/lot, capital Rs.{running_capital:.0f})", "info")
+                        lots_use = affordable
+                current_lot = lots_use * 25
+                invested    = round((premium or 0) * current_lot, 2)
                 direction_label = "BULLISH — BUY CALL (CE)" if otype == "CE" else "BEARISH — BUY PUT (PE)"
                 yd_h, yd_l = state.get("yd_high"), state.get("yd_low")
                 pot = round(abs(yd_h - yd_l) * DELTA * current_lot * 0.5, -1) if yd_h and yd_l else 500
@@ -1591,7 +1663,8 @@ def bot_loop():
                     f"Confidence : {conf}%\n"
                     f"Stop loss  : Rs.{sl_rs} (dynamic, max Rs.{SL_MAX})\n"
                     f"Est. profit potential: ~Rs.{pot:.0f}\n"
-                    f"Lots  : {lots_today}L ({current_lot} units) | Expiry: {exp}\n"
+                    f"Lots  : {lots_use}L ({current_lot} units) | Invested: Rs.{invested:.0f}\n"
+                    f"Expiry: {exp}\n"
                     f"Mode  : {'PAPER' if PAPER_TRADE else 'REAL MONEY'}"
                 )
                 order_id = execute_order("BUY", strike, otype, current_lot, reason=signal)
@@ -1611,12 +1684,14 @@ def bot_loop():
                     "trail_stop":    None,
                     "peak_pnl":      -9999,
                     "sl_rs":         sl_rs,
+                    "invested":      invested,
                 })
                 save_positions(positions)
                 state["option_type"] = otype
-                bot_log(f"{prefix} #{trade_no} {direction_label} | NIFTY {strike} @ Rs.{premium} | {signal} | Conf:{conf}% SL:Rs.{sl_rs} | {lots_today}L", "ok")
+                bot_log(f"{prefix} #{trade_no} {direction_label} | NIFTY {strike} @ Rs.{premium} | {signal} | Conf:{conf}% SL:Rs.{sl_rs} | {lots_use}L Inv:Rs.{invested:.0f}", "ok")
                 tg_send(
                     f"TRADE #{trade_no} ENTERED — NIFTY {otype} {strike}\n"
+                    f"Invested: Rs.{invested:.0f} ({lots_use}L)\n"
                     f"SL: Rs.{sl_rs} | BE Lock at Rs.{BREAKEVEN_LOCK_FLOOR}\n"
                     f"Capital: Rs.{running_capital:.0f}"
                 )
