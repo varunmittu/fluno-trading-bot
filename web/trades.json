@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 15:01",
+  "last_updated": "2026-07-02 15:03",
   "summary": {
     "total_trades": 28,
     "wins": 6,
@@ -21,7 +21,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "SENSEX",
-      "option_type": "PE"
+      "option_type": "PE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 2,
@@ -34,7 +36,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "SENSEX",
-      "option_type": "PE"
+      "option_type": "PE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 3,
@@ -47,7 +51,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "SENSEX",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 4,
@@ -60,7 +66,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "BANKNIFTY",
-      "option_type": "PE"
+      "option_type": "PE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 5,
@@ -73,7 +81,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "BANKNIFTY",
-      "option_type": "PE"
+      "option_type": "PE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 6,
@@ -86,7 +96,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 7,
@@ -99,7 +111,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 8,
@@ -112,7 +126,9 @@
       "status": "TAKE_PROFIT",
       "mode": "PAPER",
       "instrument": "BANKNIFTY",
-      "option_type": "PE"
+      "option_type": "PE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 9,
@@ -125,7 +141,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "SENSEX",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 10,
@@ -138,7 +156,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "BANKNIFTY",
-      "option_type": "PE"
+      "option_type": "PE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 11,
@@ -151,7 +171,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "SENSEX",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 12,
@@ -164,7 +186,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 13,
@@ -177,7 +201,9 @@
       "status": "TRAIL_STOP",
       "mode": "PAPER",
       "instrument": "BANKNIFTY",
-      "option_type": "PE"
+      "option_type": "PE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 14,
@@ -190,7 +216,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "BANKNIFTY",
-      "option_type": "PE"
+      "option_type": "PE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 15,
@@ -203,7 +231,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "BANKNIFTY",
-      "option_type": "PE"
+      "option_type": "PE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 16,
@@ -216,7 +246,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "SENSEX",
-      "option_type": "PE"
+      "option_type": "PE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 17,
@@ -229,7 +261,9 @@
       "status": "TRAIL_STOP",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 18,
@@ -242,7 +276,9 @@
       "status": "TRAIL_STOP",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 0.0,
+      "lots": 0
     },
     {
       "id": 19,
@@ -255,7 +291,9 @@
       "status": "PROFIT_LOCK",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 10335.0,
+      "lots": 3
     },
     {
       "id": 20,
@@ -268,7 +306,9 @@
       "status": "PROFIT_LOCK",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 10335.0,
+      "lots": 3
     },
     {
       "id": 21,
@@ -281,7 +321,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 10327.5,
+      "lots": 3
     },
     {
       "id": 22,
@@ -294,7 +336,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 10327.5,
+      "lots": 3
     },
     {
       "id": 23,
@@ -307,7 +351,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 10335.0,
+      "lots": 3
     },
     {
       "id": 24,
@@ -320,7 +366,9 @@
       "status": "PROFIT_LOCK",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 10327.5,
+      "lots": 3
     },
     {
       "id": 25,
@@ -333,7 +381,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 10372.5,
+      "lots": 3
     },
     {
       "id": 26,
@@ -346,7 +396,9 @@
       "status": "BE_LOCK",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 10380.0,
+      "lots": 3
     },
     {
       "id": 27,
@@ -359,7 +411,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 10387.5,
+      "lots": 3
     },
     {
       "id": 28,
@@ -372,7 +426,9 @@
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "NIFTY",
-      "option_type": "CE"
+      "option_type": "CE",
+      "invested": 10395.0,
+      "lots": 3
     }
   ],
   "daily_pnl": {
@@ -385,47 +441,22 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "14:56:08",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:51:03",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:45:58",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:40:52",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:35:47",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:35:42",
+      "time": "15:03:44",
       "msg": "4 trade(s) done today (from DB) \u2014 0 gated slot(s) left.",
       "cls": "info"
     },
     {
-      "time": "14:35:42",
+      "time": "15:03:44",
       "msg": "Capital: Rs.11670 | Lots: 3L (75 units)",
       "cls": "info"
     },
     {
-      "time": "14:35:42",
+      "time": "15:03:44",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL: dynamic Rs.100-500 | Max 3 trades/day",
       "cls": "info"
     },
     {
-      "time": "14:35:35",
+      "time": "15:03:43",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
