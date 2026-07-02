@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 12:08",
+  "last_updated": "2026-07-02 12:10",
   "summary": {
     "total_trades": 26,
     "wins": 6,
@@ -359,104 +359,24 @@
   "open_positions": 1,
   "bot_log": [
     {
-      "time": "12:07:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:07:07",
-      "msg": "[PAPER] BULLISH \u2014 BUY CALL (CE) | NIFTY 24150 @ Rs.149.3 | BREAK HIGH 24050 | 3L (75u) | Expiry:06 Jul 2026",
-      "cls": "ok"
-    },
-    {
-      "time": "12:02:57",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:57:42",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:55:36",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:55:32",
-      "msg": "BE LOCK EXIT NIFTY CE | Peak:Rs.318 Booked:Rs.300 | Capital:Rs.11970 Lots->3L",
-      "cls": "ok"
-    },
-    {
-      "time": "11:54:29",
-      "msg": "RIDING NIFTY CE | Peak:Rs.318 Now:Rs.318 | BE LOCKED (floor Rs.300)",
-      "cls": "ok"
-    },
-    {
-      "time": "11:54:27",
-      "msg": "BE LOCK ON NIFTY CE | Peak:Rs.318 \u2014 SL floor now Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "11:52:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:51:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:51:15",
-      "msg": "[PAPER] BULLISH \u2014 BUY CALL (CE) | NIFTY 24150 @ Rs.148.3 | BREAK HIGH 24050 | 3L (75u) | Expiry:06 Jul 2026",
-      "cls": "ok"
-    },
-    {
-      "time": "11:50:11",
-      "msg": "NIFTY:24088 YdH:24050/YdL:23895 Sig:BREAK HIGH 24050 Lots:3L Cap:Rs.11670 Daily:Rs.-150",
-      "cls": ""
-    },
-    {
-      "time": "11:50:11",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "time": "12:10:00",
+      "msg": "Restored 1 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "11:49:09",
-      "msg": "NIFTY:24084 YdH:24050/YdL:23895 Sig:BREAK HIGH 24050 Lots:3L Cap:Rs.11670 Daily:Rs.-150",
-      "cls": ""
-    },
-    {
-      "time": "11:49:09",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "time": "12:10:00",
+      "msg": "Capital: Rs.11970 | Lots: 3L (75 units)",
       "cls": "info"
     },
     {
-      "time": "11:48:07",
-      "msg": "NIFTY:24084 YdH:24050/YdL:23895 Sig:BREAK HIGH 24050 Lots:3L Cap:Rs.11670 Daily:Rs.-150",
-      "cls": ""
-    },
-    {
-      "time": "11:48:07",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "time": "12:10:00",
+      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
       "cls": "info"
     },
     {
-      "time": "11:47:07",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:47:04",
-      "msg": "NIFTY:24089 YdH:24050/YdL:23895 Sig:BREAK HIGH 24050 Lots:3L Cap:Rs.11670 Daily:Rs.-150",
-      "cls": ""
-    },
-    {
-      "time": "11:47:04",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
+      "time": "12:09:59",
+      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Run kite_setup.py for exact data.",
+      "cls": "err"
     }
   ],
   "vix": null,
