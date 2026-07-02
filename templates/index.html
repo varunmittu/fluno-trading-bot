@@ -277,7 +277,7 @@
         <div class="notrade">
           <div class="nt-ico">◎</div>
           <div class="nt-txt" id="nt-text">Waiting for signal</div>
-          <div class="nt-sub">SL Rs.150 · BE Lock Rs.300 · 1 trade/day</div>
+          <div class="nt-sub">Dynamic SL Rs.100–500 · BE Lock Rs.300 · Max 3 trades/day</div>
         </div>
       </div>
       <div id="pos-levels" style="display:none"></div>
@@ -287,10 +287,11 @@
     <!-- RISK LEVELS -->
     <div class="gc" style="padding:16px">
       <div class="gct" style="margin-bottom:12px">Risk Levels</div>
-      <div class="riskrow"><span style="color:var(--t3)">Hard SL</span><span style="color:var(--red);font-family:monospace;font-weight:700">-Rs.150</span></div>
+      <div class="riskrow"><span style="color:var(--t3)">Hard SL</span><span style="color:var(--red);font-family:monospace;font-weight:700">Dynamic Rs.100–500</span></div>
       <div class="riskrow"><span style="color:var(--t3)">BE Lock activates</span><span style="color:var(--green);font-family:monospace;font-weight:700">+Rs.300</span></div>
       <div class="riskrow"><span style="color:var(--t3)">Small trail</span><span style="color:var(--orange);font-family:monospace;font-weight:700">Peak-150 @ Rs.400</span></div>
-      <div class="riskrow"><span style="color:var(--t3)">Big trail</span><span style="color:var(--cyan);font-family:monospace;font-weight:700">Peak-200 @ Rs.1000</span></div>
+      <div class="riskrow"><span style="color:var(--t3)">Ride winners</span><span style="color:var(--cyan);font-family:monospace;font-weight:700">Trend-based @ Rs.1000+</span></div>
+      <div class="riskrow"><span style="color:var(--t3)">Extra trades</span><span style="color:var(--purple);font-family:monospace;font-weight:700">50% conf + /confirm</span></div>
       <div class="riskrow"><span style="color:var(--t3)">EOD exit</span><span style="color:var(--t2);font-family:monospace;font-weight:700">3:25 PM</span></div>
       <div class="riskrow"><span style="color:var(--t3)">Entry window</span><span style="color:var(--t2);font-family:monospace;font-weight:700">10:15–12:30</span></div>
     </div>
@@ -479,7 +480,7 @@ async function loadChart() {
         ? `<div class="lvrow lv-trail"><span class="lv-label">Big Trail</span><span class="lv-val" style="color:var(--orange)">ACTIVE — Peak-200</span></div>`
         : `<div class="lvrow lv-trail"><span class="lv-label">Big Trail</span><span class="lv-val" style="color:var(--t3)">activates @ Rs.1000</span></div>`;
       const slColor = be ? 'var(--green)' : 'var(--red)';
-      const slLabel = be ? 'BE LOCK (floor Rs.300)' : 'Rs.-150 (hard SL)';
+      const slLabel = be ? 'BE LOCK (floor Rs.300)' : 'Rs.-' + (p.sl_rs || 150) + ' (dynamic SL)';
       posLvlEl.innerHTML = `
         <div class="lvrow lv-live"><span class="lv-label">NIFTY Live</span><span class="lv-val" style="color:var(--t1)">${liveP.toLocaleString('en-IN',{maximumFractionDigits:0})}</span></div>
         <div class="lvrow lv-entry"><span class="lv-label">Entry</span><span class="lv-val" style="color:var(--cyan)">${p.entry?.toLocaleString('en-IN',{maximumFractionDigits:0})}</span></div>

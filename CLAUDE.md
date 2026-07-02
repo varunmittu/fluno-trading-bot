@@ -11,11 +11,18 @@ NIFTY/BANKNIFTY options trading on Zerodha, plus a personal portfolio website.
 4. Build the website (portfolio + calendar + news section)
 
 ## Decisions already made — follow these, don't re-litigate
-- Stop loss: -₹150 per trade, automatic, no exceptions.
-- Daily loss limit: -₹500. Bot stops for the day. NO "revenge trading" —
-  bot never increases size or re-enters to "recover" a loss. Confirmed
-  explicitly by user as a hard rule.
-- Max 2 open positions at a time.
+- Stop loss (updated 2026-07-02): DYNAMIC ₹100–₹500 per trade, chosen by
+  setup confidence (analyze_setup). HARD CAP ₹500 — never exceeded.
+- Daily loss limit (updated 2026-07-02): -₹750, bot stops for the day.
+- Trades per day (updated 2026-07-02, Sai's explicit decision): MAX 3.
+  Trade 1 is automatic. Trades 2-3 are GATED: need ≥50% confidence AND
+  Sai's /confirm on Telegram (sent ≥2 min before entry; 10 min timeout;
+  below 50% = silent skip). Applies after wins AND losses.
+- Profit riding (updated 2026-07-02): above ₹1000 profit, hold while
+  supertrend+MACD stay aligned; book when trend weakens or at peak-300.
+- Lot sizes: NIFTY 50 units (2 lots), BANKNIFTY 15 units (1 lot), SENSEX 10 units (1 lot).
+- Scale-up plan: after consistent profit, move BANKNIFTY and SENSEX to 2 lots each.
+- Max 1 open position at a time.
 - Money movement (deposit/withdraw/UPI PIN) is 100% manual, done by Sai on
   his own banking app. The bot and Claude NEVER touch this. Only the Kite
   API key + secret are used by the bot — never the account password, never

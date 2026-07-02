@@ -39,14 +39,20 @@ API_KEY           = _creds["API_KEY"] or "your_api_key_here"
 API_SECRET        = _creds["API_SECRET"]
 TOKEN_FILE        = "kite_token.txt"
 PAPER_TRADE       = True
-STOP_LOSS             = -150   # hard SL — only fires BEFORE breakeven lock
-BIG_TRAIL_START       = 1000   # let winners run — trail activates here
-BIG_TRAIL_DROP        = 200    # close if profit drops Rs.200 from peak
+STOP_LOSS             = -150   # fallback SL if setup analysis unavailable
+SL_MIN                = 100    # dynamic SL floor
+SL_MAX                = 500    # dynamic SL hard cap — NEVER exceeded
+BIG_TRAIL_START       = 1000   # ride winners from here — exit on trend weakening
+BIG_TRAIL_SAFETY      = 300    # safety net while trend strong: exit at peak-300
 SMALL_TRAIL_START     = 400    # tough day — lock small profit
 SMALL_TRAIL_DROP      = 150    # close if drops Rs.150 from peak
 BREAKEVEN_LOCK_START  = 300    # once peak hits Rs.300, move SL to +Rs.300
 BREAKEVEN_LOCK_FLOOR  = 300    # guaranteed minimum exit after lock activates
-DAILY_LIMIT       = -300   # safety net (1 trade/day so rarely hit)
+DAILY_LIMIT       = -750   # stop trading for the day beyond this loss
+MAX_TRADES_PER_DAY = 3     # 1 auto + up to 2 gated (confidence + /confirm)
+CONFIDENCE_GATE    = 50    # % confidence needed to offer a 2nd/3rd trade
+CONFIRM_MIN_WAIT   = 120   # entry at least 2 min after the gate alert
+CONFIRM_TIMEOUT    = 600   # no /confirm within 10 min → trade skipped
 PAPER_CAPITAL     = 10000  # starting capital
 BASE_LOTS         = 3      # base = 3 lots (75 NIFTY units)
 CAPITAL_PER_LOT   = PAPER_CAPITAL / BASE_LOTS  # Rs.3333 per lot
@@ -380,26 +386,38 @@ def tg_poll():
                             tg_send(
                                 f"Lot size set to {new_lots}L ({units} units)\n"
                                 f"Rs./point: Rs.{rs_per_pt:.0f}\n"
-                                f"Max loss per trade: Rs.{abs(STOP_LOSS)}\n"
+                                f"Max loss per trade: dynamic Rs.{SL_MIN}-{SL_MAX}\n"
                                 f"Takes effect on next trade entry."
                             )
 
                 elif cmd == "/stop":
-                    state["first_trade_done"] = True
-                    tg_send("Trading paused for today. Send /resume to re-enable.")
+                    state["paused"]        = True
+                    state["pending_trade"] = None      # cancel any waiting gate
+                    tg_send("Trading paused. Send /resume to re-enable.")
 
                 elif cmd == "/resume":
-                    # /resume only undoes /stop — it must NEVER allow a second
-                    # trade after one was taken (one trade/day, no revenge trading)
-                    if has_traded_today():
-                        tg_send(
-                            "Cannot resume — a trade was already taken today.\n"
-                            "Rule: ONE trade per day. No re-entry, no revenge trading.\n"
-                            "Bot will trade again tomorrow."
-                        )
+                    # Gates still protect: 2nd/3rd trades need >=50% confidence
+                    # AND your /confirm — resuming cannot cause revenge trades.
+                    state["paused"] = False
+                    tg_send(
+                        "Trading resumed.\n"
+                        f"Trades used today: {state.get('trades_today', 0)}/{MAX_TRADES_PER_DAY}\n"
+                        "Extra trades still need 50%+ confidence and your /confirm."
+                    )
+
+                elif cmd == "/confirm":
+                    p = state.get("pending_trade")
+                    if not p:
+                        tg_send("Nothing to confirm right now. The bot will alert you when a gated trade signal appears.")
                     else:
-                        state["first_trade_done"] = False
-                        tg_send("Trading resumed. Bot will enter next valid signal.")
+                        state["trade_confirmed"] = True
+                        waited = time.time() - p["ts"]
+                        left   = max(0, CONFIRM_MIN_WAIT - waited)
+                        eta    = "on the next check" if left <= 0 else f"in ~{int(left // 60) + 1} min"
+                        tg_send(
+                            f"Confirmed — Trade #{p['no']} ({p['otype']}) will enter {eta}.\n"
+                            f"Confidence: {p['conf']}% | SL: Rs.{p['sl_rs']}"
+                        )
 
                 elif cmd.startswith("/token"):
                     # Daily Kite login from your PHONE — no PC needed:
@@ -443,6 +461,7 @@ def tg_poll():
                         "/capital    — running capital and lot size\n"
                         "/history    — last 7 trades\n"
                         "/exit       — close open position NOW at market price\n"
+                        "/confirm    — approve a waiting 2nd/3rd trade\n"
                         "/lots 5     — set lot size (e.g. /lots 5 = 5 lots)\n"
                         "/token      — daily Kite login (exact live data)\n"
                         "/stop       — pause trading today\n"
@@ -892,6 +911,51 @@ def calculate_oi_metrics(data, spot_price, expiry_index=0):
     except Exception:
         return None
 
+def analyze_setup(otype, signal, df=None):
+    """
+    Score the setup strength → (confidence %, dynamic SL in Rs.).
+    Confidence: RSI/MACD/volume/SMA scoring (max 50) + supertrend alignment (+10)
+    + breakout signal (+10), normalised to a %.
+    Dynamic SL: stronger setup = wider stop, Rs.100 floor, Rs.500 HARD CAP.
+    """
+    conf = 50
+    try:
+        if df is None:
+            df = fetch_candles("^NSEI")
+        row, prev = df.iloc[-1], df.iloc[-2]
+        score, _  = bull_confidence(row, prev) if otype == "CE" else bear_confidence(row, prev)
+        st_ok     = (row["st_dir"] == 1) if otype == "CE" else (row["st_dir"] == -1)
+        total     = score + (10 if st_ok else 0) + (10 if signal.startswith("BREAK") else 0)
+        conf      = max(5, min(95, round(total / 70 * 100)))
+    except Exception:
+        pass
+    sl = SL_MIN + int(round(conf / 100 * (SL_MAX - SL_MIN) / 50)) * 50
+    sl = max(SL_MIN, min(SL_MAX, sl))     # never above Rs.500, ever
+    return conf, sl
+
+def trend_still_strong(otype, df=None):
+    """Is the trend still aligned with the position? Used to ride winners past Rs.1000."""
+    try:
+        if df is None:
+            df = fetch_candles("^NSEI")
+        row     = df.iloc[-1]
+        st_ok   = (row["st_dir"] == 1) if otype == "CE" else (row["st_dir"] == -1)
+        macd_ok = (row["macd"] > row["macd_sig"]) if otype == "CE" else (row["macd"] < row["macd_sig"])
+        return bool(st_ok and macd_ok)
+    except Exception:
+        return False   # data failure → treat as weak → book profit (safe side)
+
+def count_trades_today():
+    """Closed trades so far today (open position is counted via MAX_POSITIONS)."""
+    try:
+        conn = get_db()
+        row  = conn.execute("SELECT COUNT(*) FROM trades WHERE date=?",
+                            (date.today().strftime("%Y-%m-%d"),)).fetchone()
+        conn.close()
+        return row[0]
+    except Exception:
+        return 0
+
 def get_streak():
     """Positive = win streak, negative = loss streak."""
     try:
@@ -1083,7 +1147,7 @@ def bot_loop():
         )
 
     mode_label = "PAPER TRADE" if PAPER_TRADE else "LIVE TRADE"
-    bot_log(f"Bot started | {mode_label} | Strategy: BREAKOUT | SL=Rs.{abs(STOP_LOSS)}", "info")
+    bot_log(f"Bot started | {mode_label} | Strategy: BREAKOUT | SL: dynamic Rs.{SL_MIN}-{SL_MAX} | Max {MAX_TRADES_PER_DAY} trades/day", "info")
 
     # Load dynamic lot state (persists across restarts)
     running_capital, lots_today = load_bot_state()
@@ -1102,13 +1166,13 @@ def bot_loop():
             _changed = True
     if _changed:
         save_positions(positions)
-    # DB-backed flag: survives restarts even if SL fired and position was removed
-    first_trade_done = has_traded_today() or bool(positions)
-    state["first_trade_done"] = first_trade_done
+    # DB-backed count: survives restarts even if SL fired and position was removed
+    _tc = count_trades_today()
+    state["first_trade_done"] = _tc >= MAX_TRADES_PER_DAY
     if positions:
         bot_log(f"Restored {len(positions)} open position(s) from disk.", "info")
-    elif first_trade_done:
-        bot_log("Already traded today (from DB) — won't enter again.", "info")
+    elif _tc:
+        bot_log(f"{_tc} trade(s) done today (from DB) — {max(0, MAX_TRADES_PER_DAY - _tc)} gated slot(s) left.", "info")
     daily_pnl        = 0.0
     today            = date.today()
     last_sync        = 0
@@ -1132,7 +1196,6 @@ def bot_loop():
 
     while True:
         # Sync from state so Telegram /stop, /resume, /lots, /exit take effect
-        first_trade_done = state.get("first_trade_done", first_trade_done)
         running_capital  = state.get("running_capital", running_capital)
         lots_today       = state.get("lots_today", lots_today)
         while _pnl_adjust:                      # P&L booked via Telegram /exit
@@ -1144,8 +1207,11 @@ def bot_loop():
             positions        = []
             save_positions(positions)          # clear stale file — restart-safe
             sl_cooldown      = {}
-            first_trade_done = False
             state["first_trade_done"] = False
+            state["paused"]          = False
+            state["pending_trade"]   = None
+            state["trade_confirmed"] = False
+            state["gate_cooldown"]   = 0
             state["signal"]      = "--"
             state["option_type"] = "—"
             eod_done       = False
@@ -1171,7 +1237,8 @@ def bot_loop():
                     lines.append(f"  Yday High : {yd_h:.0f}")
                     lines.append(f"  Yday Low  : {yd_l:.0f}")
                 lines.append(f"\nCapital : Rs.{running_capital:.0f} | Lots: {lots_today}L ({lots_today*25} units)")
-                lines.append(f"SL: Rs.{abs(STOP_LOSS)} | BE Lock at Rs.{BREAKEVEN_LOCK_FLOOR}")
+                lines.append(f"SL: dynamic Rs.{SL_MIN}-{SL_MAX} | BE Lock at Rs.{BREAKEVEN_LOCK_FLOOR}")
+                lines.append(f"Trades: 1 auto + up to {MAX_TRADES_PER_DAY-1} gated (need your /confirm)")
                 lines.append(f"\nPrediction at 10:15 AM:")
                 if yd_h and yd_l:
                     lines.append(f"  BULLISH (BUY CE) — if NIFTY > {yd_h:.0f}")
@@ -1372,44 +1439,54 @@ def bot_loop():
                     )
                     closed.append(pos); sync_background(); continue
 
-                # ── 2. Hard SL — only fires before BE lock activates ───────────
-                if not pos.get("be_locked") and pnl <= STOP_LOSS:
+                # ── 2. Dynamic hard SL — per-trade Rs.100-500, before BE lock ──
+                pos_sl = -abs(pos.get("sl_rs", abs(STOP_LOSS)))   # e.g. -300
+                if not pos.get("be_locked") and pnl <= pos_sl:
                     close_position_order(pos, "STOP_LOSS")
-                    save_trade(pos["score"], pos["entry"], px, STOP_LOSS, "STOP_LOSS", iname, otype)
-                    daily_pnl      += STOP_LOSS
-                    running_capital += STOP_LOSS
+                    save_trade(pos["score"], pos["entry"], px, pos_sl, "STOP_LOSS", iname, otype)
+                    daily_pnl      += pos_sl
+                    running_capital += pos_sl
                     lots_today      = BASE_LOTS
                     save_bot_state(running_capital, lots_today)
                     state["running_capital"] = running_capital
                     state["lots_today"]      = lots_today
                     sl_cooldown[iname] = time.time()
-                    bot_log(f"STOP LOSS {iname} {otype} | Entry:{pos['entry']:.0f} Exit:{px:.0f} | Capital:Rs.{running_capital:.0f} Lots->{lots_today}L", "err")
+                    bot_log(f"STOP LOSS {iname} {otype} | Entry:{pos['entry']:.0f} Exit:{px:.0f} SL:Rs.{pos_sl} | Capital:Rs.{running_capital:.0f} Lots->{lots_today}L", "err")
                     tg_send(
                         f"STOP LOSS — {iname} {otype}\n"
                         f"Entry: {pos['entry']:.0f}  Exit: {px:.0f}\n"
-                        f"Loss: Rs.{STOP_LOSS}\n"
-                        f"Capital: Rs.{running_capital:.0f} | Back to {lots_today}L tomorrow"
+                        f"Loss: Rs.{pos_sl} (dynamic SL for this trade)\n"
+                        f"Capital: Rs.{running_capital:.0f} | Back to {lots_today}L"
                     )
                     closed.append(pos); sync_background(); continue
 
-                # ── 3. Big trail: let winners run (exits at peak - Rs.200) ──────
-                if peak_pnl >= BIG_TRAIL_START and pnl <= peak_pnl - BIG_TRAIL_DROP:
-                    exit_pnl = round(pnl, 2)
-                    close_position_order(pos, "TRAIL_EXIT")
-                    save_trade(pos["score"], pos["entry"], px, exit_pnl, "TRAIL_EXIT", iname, otype)
-                    daily_pnl      += exit_pnl
-                    running_capital += exit_pnl
-                    lots_today = min(MAX_LOTS, max(BASE_LOTS, int(running_capital // CAPITAL_PER_LOT)))
-                    save_bot_state(running_capital, lots_today)
-                    state["running_capital"] = running_capital
-                    state["lots_today"]      = lots_today
-                    bot_log(f"TRAIL EXIT {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Booked:Rs.{exit_pnl:.0f} | Capital:Rs.{running_capital:.0f} Lots->{lots_today}L", "ok")
-                    tg_send(
-                        f"TRAIL EXIT — {iname} {otype}\n"
-                        f"Peak: Rs.{peak_pnl:.0f}  Booked: Rs.{exit_pnl:.0f}\n"
-                        f"Capital: Rs.{running_capital:.0f} | Next: {lots_today}L"
-                    )
-                    closed.append(pos); sync_background(); continue
+                # ── 3. Ride winners: above Rs.1000, hold while trend is STRONG ──
+                # Book profit only when trend weakens (supertrend/MACD flip)
+                # or on the peak-300 safety net. Lets Rs.1000 run to 2-3-4k.
+                if peak_pnl >= BIG_TRAIL_START:
+                    strong = trend_still_strong(otype, get_candles("^NSEI"))
+                    if strong and pnl > peak_pnl - BIG_TRAIL_SAFETY:
+                        bot_log(f"RIDING {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Now:Rs.{pnl:.0f} | trend STRONG — holding for more", "ok")
+                    else:
+                        reason   = "trend weakened" if not strong else f"safety net (peak-{BIG_TRAIL_SAFETY})"
+                        exit_pnl = round(pnl, 2)
+                        close_position_order(pos, "TRAIL_EXIT")
+                        save_trade(pos["score"], pos["entry"], px, exit_pnl, "TRAIL_EXIT", iname, otype)
+                        daily_pnl      += exit_pnl
+                        running_capital += exit_pnl
+                        lots_today = min(MAX_LOTS, max(BASE_LOTS, int(running_capital // CAPITAL_PER_LOT)))
+                        save_bot_state(running_capital, lots_today)
+                        state["running_capital"] = running_capital
+                        state["lots_today"]      = lots_today
+                        bot_log(f"TRAIL EXIT ({reason}) {iname} {otype} | Peak:Rs.{peak_pnl:.0f} Booked:Rs.{exit_pnl:.0f} | Capital:Rs.{running_capital:.0f} Lots->{lots_today}L", "ok")
+                        tg_send(
+                            f"TRAIL EXIT — {iname} {otype}\n"
+                            f"Reason: {reason}\n"
+                            f"Peak: Rs.{peak_pnl:.0f}  Booked: Rs.{exit_pnl:.0f}\n"
+                            f"Capital: Rs.{running_capital:.0f} | Next: {lots_today}L"
+                        )
+                        closed.append(pos); sync_background()
+                    continue   # above Rs.1000 the ride logic owns this position
 
                 # ── 4. Small trail: range/tough days (floor = Rs.300 if locked) ─
                 if peak_pnl >= SMALL_TRAIL_START and pnl <= peak_pnl - SMALL_TRAIL_DROP:
@@ -1454,7 +1531,6 @@ def bot_loop():
             state["positions_list"]   = positions
             state["open_positions"]   = len(positions)
             state["daily_pnl"]        = round(daily_pnl, 0)
-            state["first_trade_done"] = first_trade_done
 
             # Unrealized P&L
             unrealized = 0.0
@@ -1481,17 +1557,77 @@ def bot_loop():
                             state["oi_nifty"] = metrics
                             state["expiry"]   = metrics["expiry"]
 
-            # ── 5. Breakout signal + entry ────────────────────────────────────
+            # ── 5. Breakout signal + entry (max 3/day: 1 auto + 2 gated) ──────
             prefix = "[PAPER]" if PAPER_TRADE else "[LIVE]"
             _now   = datetime.now()
             # Entry window: 10:15 AM to 12:30 PM (avoid late entries)
             _entry_allowed = (_now.hour > 10 or (_now.hour == 10 and _now.minute >= 15)) \
                              and (_now.hour < 12 or (_now.hour == 12 and _now.minute <= 30))
-            entered = False
+            entered      = False
+            trades_today = count_trades_today()
+            paused       = state.get("paused", False)
+            state["trades_today"]     = trades_today
+            state["first_trade_done"] = trades_today >= MAX_TRADES_PER_DAY or paused
 
-            if not first_trade_done and _entry_allowed and len(positions) < MAX_POSITIONS and px_nifty:
+            def do_entry(otype, signal, conf, sl_rs, trade_no):
+                """Send pre-trade Telegram, place the order, track the position."""
+                nonlocal entered
+                current_lot = lots_today * 25
+                exp     = state.get("expiry") or get_next_expiry("NIFTY", EXPIRY_INDEX)
+                strike  = get_target_strike(px_nifty, "NIFTY", otype)
+                premium = fetch_option_premium("NIFTY", strike, otype, px_nifty)
+                if premium and premium < 30:
+                    bot_log(f"SKIP NIFTY {otype} {strike} — premium Rs.{premium:.0f} too low (<Rs.30)", "info")
+                    return False
+                direction_label = "BULLISH — BUY CALL (CE)" if otype == "CE" else "BEARISH — BUY PUT (PE)"
+                yd_h, yd_l = state.get("yd_high"), state.get("yd_low")
+                pot = round(abs(yd_h - yd_l) * DELTA * current_lot * 0.5, -1) if yd_h and yd_l else 500
+                # ── Telegram BEFORE the trade: direction + expected profit ────
+                tg_send(
+                    f"TRADE #{trade_no} — placing now\n"
+                    f"{direction_label}\n"
+                    f"NIFTY : {px_nifty:.0f} | {signal}\n"
+                    f"Strike: {strike} {otype} @ ~Rs.{premium}\n"
+                    f"Confidence : {conf}%\n"
+                    f"Stop loss  : Rs.{sl_rs} (dynamic, max Rs.{SL_MAX})\n"
+                    f"Est. profit potential: ~Rs.{pot:.0f}\n"
+                    f"Lots  : {lots_today}L ({current_lot} units) | Expiry: {exp}\n"
+                    f"Mode  : {'PAPER' if PAPER_TRADE else 'REAL MONEY'}"
+                )
+                order_id = execute_order("BUY", strike, otype, current_lot, reason=signal)
+                if order_id is None:      # live order failed — no ghost position
+                    bot_log("Entry aborted — live order failed", "err")
+                    return False
+                positions.append({
+                    "instrument":    "NIFTY",
+                    "lot":           current_lot,
+                    "delta":         DELTA,
+                    "entry":         px_nifty,
+                    "score":         conf,
+                    "option_type":   otype,
+                    "expiry":        exp,
+                    "strike":        strike,
+                    "premium_entry": premium,
+                    "trail_stop":    None,
+                    "peak_pnl":      -9999,
+                    "sl_rs":         sl_rs,
+                })
+                save_positions(positions)
+                state["option_type"] = otype
+                bot_log(f"{prefix} #{trade_no} {direction_label} | NIFTY {strike} @ Rs.{premium} | {signal} | Conf:{conf}% SL:Rs.{sl_rs} | {lots_today}L", "ok")
+                tg_send(
+                    f"TRADE #{trade_no} ENTERED — NIFTY {otype} {strike}\n"
+                    f"SL: Rs.{sl_rs} | BE Lock at Rs.{BREAKEVEN_LOCK_FLOOR}\n"
+                    f"Capital: Rs.{running_capital:.0f}"
+                )
+                sync_background()
+                entered = True
+                return True
+
+            if (not paused and _entry_allowed and len(positions) < MAX_POSITIONS
+                    and px_nifty and trades_today < MAX_TRADES_PER_DAY):
                 if is_expiry_day("NIFTY"):
-                    bot_log("SKIP — NIFTY expiry day (Thursday)", "info")
+                    bot_log("SKIP — NIFTY expiry day", "info")
                 elif "NIFTY" in sl_cooldown and time.time() - sl_cooldown["NIFTY"] < 600:
                     bot_log("NIFTY in SL cooldown — waiting", "info")
                 else:
@@ -1510,68 +1646,61 @@ def bot_loop():
                         else:
                             otype  = fetch_morning_direction("^NSEI")
                             signal = f"MORN {'UP' if otype=='CE' else 'DN'} ({px_nifty:.0f})"
-
                         state["signal"] = signal
-                        inst        = INSTRUMENTS[0]
-                        current_lot = lots_today * 25   # 3 lots = 75 units
-                        exp         = state.get("expiry") or get_next_expiry("NIFTY", EXPIRY_INDEX)
-                        strike      = get_target_strike(px_nifty, "NIFTY", otype)
-                        premium     = fetch_option_premium("NIFTY", strike, otype, px_nifty)
 
-                        if premium and premium < 30:
-                            bot_log(f"SKIP NIFTY {otype} {strike} — premium Rs.{premium:.0f} too low (<Rs.30)", "info")
+                        conf, sl_rs = analyze_setup(otype, signal, get_candles("^NSEI"))
+
+                        if trades_today == 0:
+                            # ── First trade: automatic ─────────────────────────
+                            do_entry(otype, signal, conf, sl_rs, 1)
                         else:
-                            direction_label = "BULLISH — BUY CALL (CE)" if otype == "CE" else "BEARISH — BUY PUT (PE)"
-                            # ── Telegram BEFORE the trade ─────────────────────
-                            tg_send(
-                                f"SIGNAL CONFIRMED — placing trade now\n"
-                                f"{direction_label}\n"
-                                f"NIFTY : {px_nifty:.0f} | {signal}\n"
-                                f"Strike: {strike} {otype} @ ~Rs.{premium}\n"
-                                f"Lots  : {lots_today}L ({current_lot} units) | Expiry: {exp}\n"
-                                f"Mode  : {'PAPER' if PAPER_TRADE else 'REAL MONEY'}"
-                            )
-                            order_id = execute_order("BUY", strike, otype, current_lot, reason=signal)
-                            if order_id is None:      # live order failed — do not track a ghost position
-                                bot_log("Entry aborted — live order failed", "err")
-                                time.sleep(CHECK_INTERVAL); continue
-                            positions.append({
-                                "instrument":    "NIFTY",
-                                "lot":           current_lot,
-                                "delta":         DELTA,
-                                "entry":         px_nifty,
-                                "score":         0,
-                                "option_type":   otype,
-                                "expiry":        exp,
-                                "strike":        strike,
-                                "premium_entry": premium,
-                                "trail_stop":    None,
-                                "peak_pnl":      -9999,
-                            })
-                            save_positions(positions)
-                            first_trade_done = True
-                            state["first_trade_done"] = True
-                            state["option_type"]      = otype
-                            bot_log(f"{prefix} {direction_label} | NIFTY {strike} @ Rs.{premium} | {signal} | {lots_today}L ({current_lot}u) | Expiry:{exp}", "ok")
-                            tg_send(
-                                f"TRADE ENTERED — NIFTY {otype}\n"
-                                f"Direction : {direction_label}\n"
-                                f"Signal    : {signal}\n"
-                                f"Strike    : {strike}  Premium: Rs.{premium}\n"
-                                f"Lots      : {lots_today}L ({current_lot} units)  Expiry: {exp}\n"
-                                f"SL        : Rs.{abs(STOP_LOSS)} | BE Lock at Rs.{BREAKEVEN_LOCK_FLOOR}\n"
-                                f"Capital   : Rs.{running_capital:.0f}\n"
-                                f"Mode      : {'PAPER' if PAPER_TRADE else 'LIVE'}"
-                            )
-                            sync_background()
-                            entered = True
+                            # ── 2nd/3rd trade: 50% gate + manual /confirm ──────
+                            pending = state.get("pending_trade")
+                            if pending is None:
+                                if time.time() < state.get("gate_cooldown", 0):
+                                    pass   # recently skipped — don't re-spam
+                                elif conf < CONFIDENCE_GATE:
+                                    # below 50% — skip SILENTLY (no Telegram)
+                                    bot_log(f"Trade #{trades_today+1} skipped silently — confidence {conf}% < {CONFIDENCE_GATE}%", "info")
+                                    state["gate_cooldown"] = time.time() + 900
+                                else:
+                                    state["pending_trade"] = {
+                                        "otype": otype, "signal": signal, "conf": conf,
+                                        "sl_rs": sl_rs, "ts": time.time(), "no": trades_today + 1,
+                                    }
+                                    state["trade_confirmed"] = False
+                                    tg_send(
+                                        f"TRADE #{trades_today+1} SIGNAL — your confirmation needed\n"
+                                        f"{'BULLISH — BUY CE' if otype=='CE' else 'BEARISH — BUY PE'}\n"
+                                        f"Signal: {signal}\n"
+                                        f"Profit probability : {conf}%\n"
+                                        f"Loss probability   : {100-conf}%\n"
+                                        f"Stop loss: Rs.{sl_rs} (dynamic)\n\n"
+                                        f"Reply /confirm to take this trade.\n"
+                                        f"Entry happens at least 2 min after this message.\n"
+                                        f"No reply within 10 min = trade skipped."
+                                    )
+                                    bot_log(f"Trade #{trades_today+1} gate: conf {conf}% — awaiting /confirm", "info")
+                            else:
+                                age = time.time() - pending["ts"]
+                                if state.get("trade_confirmed") and age >= CONFIRM_MIN_WAIT:
+                                    state["pending_trade"]   = None
+                                    state["trade_confirmed"] = False
+                                    do_entry(pending["otype"], pending["signal"],
+                                             pending["conf"], pending["sl_rs"], pending["no"])
+                                elif age > CONFIRM_TIMEOUT and not state.get("trade_confirmed"):
+                                    state["pending_trade"] = None
+                                    state["gate_cooldown"] = time.time() + 900
+                                    tg_send(f"Trade #{pending['no']} skipped — no confirmation received.")
+                                    bot_log("Gated trade skipped — confirmation timeout", "info")
 
-            if not entered and not first_trade_done:
+            if not entered and not positions and trades_today < MAX_TRADES_PER_DAY:
                 sig_tag = state.get("signal","--")
                 yd_h    = state.get("yd_high")
                 yd_l    = state.get("yd_low")
                 hl_tag  = f" YdH:{yd_h:.0f}/YdL:{yd_l:.0f}" if yd_h else ""
-                bot_log(f"NIFTY:{px_nifty:.0f}{hl_tag} Sig:{sig_tag} Lots:{lots_today}L Cap:Rs.{running_capital:.0f} Daily:Rs.{daily_pnl:.0f}")
+                trade_tag = f" T:{trades_today}/{MAX_TRADES_PER_DAY}"
+                bot_log(f"NIFTY:{px_nifty:.0f}{hl_tag} Sig:{sig_tag}{trade_tag} Lots:{lots_today}L Cap:Rs.{running_capital:.0f} Daily:Rs.{daily_pnl:.0f}")
 
             if time.time() - last_sync > 300:
                 sync_background()
@@ -1636,6 +1765,9 @@ def api_state():
         "lots_today":         state.get("lots_today", BASE_LOTS),
         "running_capital":    state.get("running_capital", float(PAPER_CAPITAL)),
         "streak":             get_streak(),
+        "trades_today":       state.get("trades_today", 0),
+        "max_trades":         MAX_TRADES_PER_DAY,
+        "pending_trade":      bool(state.get("pending_trade")),
     })
 
 @app.route("/api/set_expiry", methods=["POST"])
@@ -1698,12 +1830,13 @@ def api_intraday():
                 p_mult  = p_delta * p_lot
                 trail  = pos.get("trail_stop")
                 otype  = pos.get("option_type", "CE")
+                p_sl   = -abs(pos.get("sl_rs", abs(STOP_LOSS)))   # per-trade dynamic SL
                 if otype == "CE":
-                    sl_p = round(entry + (STOP_LOSS + BROKERAGE) / p_mult, 1)
+                    sl_p = round(entry + (p_sl + BROKERAGE) / p_mult, 1)
                     tp_p = None   # no fixed TP — let winners run
                     tr_p = round(entry + (trail + BROKERAGE) / p_mult, 1) if trail is not None else None
                 else:
-                    sl_p = round(entry - (STOP_LOSS + BROKERAGE) / p_mult, 1)
+                    sl_p = round(entry - (p_sl + BROKERAGE) / p_mult, 1)
                     tp_p = None   # no fixed TP — let winners run
                     tr_p = round(entry - (trail + BROKERAGE) / p_mult, 1) if trail is not None else None
                 strike        = pos.get("strike")
@@ -1728,6 +1861,8 @@ def api_intraday():
                     "peak_pnl":      pos.get("peak_pnl", None),
                     "be_locked":     pos.get("be_locked", False),
                     "lot":           p_lot,
+                    "sl_rs":         abs(p_sl),
+                    "conf":          pos.get("score", 0),
                 })
             result[inst["name"]] = {"times": times, "closes": closes,
                                      "live_price": live_px, "positions": pos_data}
