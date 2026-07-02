@@ -222,14 +222,11 @@ def tg_poll():
 
                 elif cmd == "/status":
                     px   = state.get("nifty_price", "--")
-                    vix  = state.get("vix")
                     pos_list = state.get("positions_list", [])
                     dpnl = state.get("daily_pnl", 0)
                     upnl = state.get("unrealized_pnl", 0)
                     done = state.get("first_trade_done", False)
                     lines = [f"NIFTY: {px}"]
-                    if vix:
-                        lines.append(f"VIX: {vix:.1f}  {'HIGH - caution' if vix > 20 else 'OK'}")
                     if pos_list:
                         for p in pos_list:
                             pnl_live = upnl
