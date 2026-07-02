@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 14:34",
+  "last_updated": "2026-07-02 14:35",
   "summary": {
     "total_trades": 28,
     "wins": 6,
@@ -385,22 +385,22 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "14:34:32",
-      "msg": "4 trade(s) done today (from DB) \u2014 -1 gated slot(s) left.",
+      "time": "14:35:42",
+      "msg": "4 trade(s) done today (from DB) \u2014 0 gated slot(s) left.",
       "cls": "info"
     },
     {
-      "time": "14:34:32",
+      "time": "14:35:42",
       "msg": "Capital: Rs.11670 | Lots: 3L (75 units)",
       "cls": "info"
     },
     {
-      "time": "14:34:32",
+      "time": "14:35:42",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL: dynamic Rs.100-500 | Max 3 trades/day",
       "cls": "info"
     },
     {
-      "time": "14:34:31",
+      "time": "14:35:35",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
