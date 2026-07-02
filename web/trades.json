@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 14:28",
+  "last_updated": "2026-07-02 14:33",
   "summary": {
     "total_trades": 28,
     "wins": 6,
@@ -385,6 +385,11 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:28:04",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:22:57",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -478,11 +483,6 @@
       "time": "13:11:27",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
       "cls": "info"
-    },
-    {
-      "time": "13:11:25",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
-      "cls": "err"
     }
   ],
   "vix": null,
