@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 10:24",
+  "last_updated": "2026-07-02 10:29",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -332,6 +332,61 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:29:24",
+      "msg": "NIFTY:24113 Sig:-- VIX:12.7 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:29:24",
+      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
+      "cls": "info"
+    },
+    {
+      "time": "10:28:21",
+      "msg": "NIFTY:24103 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:28:21",
+      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
+      "cls": "info"
+    },
+    {
+      "time": "10:27:19",
+      "msg": "NIFTY:24099 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:27:19",
+      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
+      "cls": "info"
+    },
+    {
+      "time": "10:26:16",
+      "msg": "NIFTY:24101 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:26:16",
+      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
+      "cls": "info"
+    },
+    {
+      "time": "10:25:13",
+      "msg": "NIFTY:24098 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:25:13",
+      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
+      "cls": "info"
+    },
+    {
+      "time": "10:24:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:24:11",
       "msg": "NIFTY:24094 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
       "cls": ""
@@ -375,64 +430,9 @@
       "time": "10:20:01",
       "msg": "NIFTY:24087 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "10:20:01",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "10:19:02",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:18:59",
-      "msg": "NIFTY:24085 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:18:59",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "10:17:57",
-      "msg": "NIFTY:24076 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:17:57",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "10:16:54",
-      "msg": "NIFTY:24079 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:16:54",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "10:15:52",
-      "msg": "NIFTY:24080 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:15:52",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "10:14:50",
-      "msg": "NIFTY:24083 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
     }
   ],
-  "vix": 12.77,
+  "vix": 12.72,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
