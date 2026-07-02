@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-02 12:55",
+  "last_updated": "2026-07-02 12:59",
   "summary": {
-    "total_trades": 27,
+    "total_trades": 28,
     "wins": 6,
-    "losses": 21,
-    "win_rate": 22.2,
-    "total_pnl": 822.0,
+    "losses": 22,
+    "win_rate": 21.4,
+    "total_pnl": 672.0,
     "avg_win": 696.0,
-    "avg_loss": -160.0
+    "avg_loss": -159.0
   },
   "trades": [
     {
@@ -360,17 +360,40 @@
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE"
+    },
+    {
+      "id": 28,
+      "date": "2026-07-02",
+      "time": "12:59",
+      "score": 0,
+      "entry": 24123.8,
+      "exit": 24119.15,
+      "pnl": -150.0,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE"
     }
   ],
   "daily_pnl": {
     "2026-06-30": -1212.0,
     "2026-07-01": 2034.0,
-    "2026-07-02": 0.0
+    "2026-07-02": -150.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:59:20",
+      "msg": "STOP LOSS NIFTY CE | Entry:24124 Exit:24119 | Capital:Rs.11670 Lots->3L",
+      "cls": "err"
+    },
+    {
+      "time": "12:55:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:50:05",
       "msg": "Synced to Vercel \u2014 live in ~15s",
