@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-02 11:52",
+  "last_updated": "2026-07-02 11:55",
   "summary": {
-    "total_trades": 25,
-    "wins": 5,
+    "total_trades": 26,
+    "wins": 6,
     "losses": 20,
-    "win_rate": 20.0,
-    "total_pnl": 672.0,
-    "avg_win": 775.0,
+    "win_rate": 23.1,
+    "total_pnl": 972.0,
+    "avg_win": 696.0,
     "avg_loss": -160.0
   },
   "trades": [
@@ -334,17 +334,50 @@
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE"
+    },
+    {
+      "id": 26,
+      "date": "2026-07-02",
+      "time": "11:55",
+      "score": 0,
+      "entry": 24090.5,
+      "exit": 24098.8,
+      "pnl": 300.0,
+      "status": "BE_LOCK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE"
     }
   ],
   "daily_pnl": {
     "2026-06-30": -1212.0,
     "2026-07-01": 2034.0,
-    "2026-07-02": -150.0
+    "2026-07-02": 150.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:55:32",
+      "msg": "BE LOCK EXIT NIFTY CE | Peak:Rs.318 Booked:Rs.300 | Capital:Rs.11970 Lots->3L",
+      "cls": "ok"
+    },
+    {
+      "time": "11:54:29",
+      "msg": "RIDING NIFTY CE | Peak:Rs.318 Now:Rs.318 | BE LOCKED (floor Rs.300)",
+      "cls": "ok"
+    },
+    {
+      "time": "11:54:27",
+      "msg": "BE LOCK ON NIFTY CE | Peak:Rs.318 \u2014 SL floor now Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "11:52:24",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:51:19",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -423,26 +456,6 @@
     {
       "time": "11:41:52",
       "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:40:47",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:40:43",
-      "msg": "STOP LOSS NIFTY CE | Entry:24077 Exit:24073 | Capital:Rs.11670 Lots->3L",
-      "cls": "err"
-    },
-    {
-      "time": "11:36:29",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:36:20",
-      "msg": "[PAPER] BULLISH \u2014 BUY CALL (CE) | NIFTY 24150 @ Rs.147.6 | BREAK HIGH 24050 | 3L (75u) | Expiry:06 Jul 2026",
       "cls": "ok"
     }
   ],
