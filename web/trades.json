@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 12:15",
+  "last_updated": "2026-07-02 12:20",
   "summary": {
     "total_trades": 27,
     "wins": 6,
@@ -371,6 +371,31 @@
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:20:25",
+      "msg": "NIFTY:24121 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.-150",
+      "cls": ""
+    },
+    {
+      "time": "12:20:25",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:19:24",
+      "msg": "NIFTY:24125 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.-150",
+      "cls": ""
+    },
+    {
+      "time": "12:19:24",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:15:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:13:17",
       "msg": "Synced to Vercel \u2014 live in ~15s",
