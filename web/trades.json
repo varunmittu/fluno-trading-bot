@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 11:07",
+  "last_updated": "2026-07-02 11:12",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -332,27 +332,27 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "11:07:50",
-      "msg": "NIFTY:24104 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "time": "11:12:12",
+      "msg": "NIFTY:24097 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "11:07:50",
+      "time": "11:12:12",
       "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
       "cls": "info"
     },
     {
-      "time": "11:07:40",
+      "time": "11:12:08",
       "msg": "Capital: Rs.11820 | Lots: 3L (75 units)",
       "cls": "info"
     },
     {
-      "time": "11:07:40",
+      "time": "11:12:08",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
       "cls": "info"
     },
     {
-      "time": "11:07:40",
+      "time": "11:12:08",
       "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
       "cls": "err"
     }
