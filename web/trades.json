@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 12:39",
+  "last_updated": "2026-07-02 12:43",
   "summary": {
     "total_trades": 27,
     "wins": 6,
@@ -372,28 +372,23 @@
   "open_positions": 1,
   "bot_log": [
     {
-      "time": "12:33:53",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:33:46",
+      "time": "12:43:51",
       "msg": "Restored 1 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "12:33:46",
+      "time": "12:43:51",
       "msg": "Capital: Rs.11820 | Lots: 3L (75 units)",
       "cls": "info"
     },
     {
-      "time": "12:33:46",
+      "time": "12:43:51",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
       "cls": "info"
     },
     {
-      "time": "12:33:45",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Run kite_setup.py for exact data.",
+      "time": "12:43:50",
+      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
       "cls": "err"
     }
   ],
