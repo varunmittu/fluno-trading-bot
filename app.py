@@ -392,6 +392,39 @@ def tg_poll():
                     state["first_trade_done"] = False
                     tg_send("Trading resumed. Bot will enter next valid signal.")
 
+                elif cmd.startswith("/token"):
+                    # Daily Kite login from your PHONE — no PC needed:
+                    # 1. open login URL  2. copy request_token  3. send /token XXX
+                    parts = text.split()   # original case — tokens are case-sensitive
+                    if len(parts) != 2:
+                        tg_send(
+                            "Daily Kite login (do this from your phone):\n\n"
+                            "1. Open and log in:\n"
+                            f"https://kite.zerodha.com/connect/login?api_key={API_KEY}&v=3\n\n"
+                            "2. After login the address bar shows:\n"
+                            "...request_token=XXXXXX&action=...\n"
+                            "Copy the XXXXXX part.\n\n"
+                            "3. Send here: /token XXXXXX"
+                        )
+                    else:
+                        try:
+                            _k   = KiteConnect(api_key=API_KEY)
+                            data = _k.generate_session(parts[1].strip(), api_secret=API_SECRET)
+                            with open(TOKEN_FILE, "w") as _f:
+                                _f.write(data["access_token"])
+                            # get_kite() auto-detects the new file — no restart needed
+                            if get_kite():
+                                tg_send("Kite connected! Exact exchange data is ON.\nNo restart needed — bot switched automatically.")
+                            else:
+                                tg_send("Token saved but connection check failed. Try /token again with a fresh request_token.")
+                        except Exception as ex:
+                            tg_send(
+                                f"Token failed: {ex}\n\n"
+                                "Note: each request_token works only ONCE and expires in a few minutes.\n"
+                                "Get a fresh one:\n"
+                                f"https://kite.zerodha.com/connect/login?api_key={API_KEY}&v=3"
+                            )
+
                 elif cmd in ("/help", "/start"):
                     tg_send(
                         "Fluno Bot Commands:\n\n"
@@ -402,6 +435,7 @@ def tg_poll():
                         "/history    — last 7 trades\n"
                         "/exit       — close open position NOW at market price\n"
                         "/lots 5     — set lot size (e.g. /lots 5 = 5 lots)\n"
+                        "/token      — daily Kite login (exact live data)\n"
                         "/stop       — pause trading today\n"
                         "/resume     — resume trading\n"
                         "/help       — this list"
@@ -489,20 +523,27 @@ def bear_confidence(row, prev):
     return sum(bd.values()), bd
 
 # ── KITE LIVE DATA — exact exchange data, falls back to yfinance/NSE ─────────
-_kite       = None
-_kite_tried = False
-_nfo_cache  = {"day": None, "rows": None}
+_kite        = None
+_kite_mtime  = -1     # token-file mtime at last connect attempt
+_nfo_cache   = {"day": None, "rows": None}
 
 def get_kite():
-    """Return a connected KiteConnect client, or None (token missing/expired)."""
-    global _kite, _kite_tried
-    if _kite is not None:
-        return _kite
-    if _kite_tried:
-        return None
-    _kite_tried = True
+    """
+    Return a connected KiteConnect client, or None (token missing/expired).
+    Auto-reconnects the moment kite_token.txt changes (e.g. after the user
+    sends /token on Telegram) — NO bot restart needed.
+    """
+    global _kite, _kite_mtime
     try:
-        if not os.path.exists(TOKEN_FILE) or "your_api" in API_KEY:
+        mtime = os.path.getmtime(TOKEN_FILE) if os.path.exists(TOKEN_FILE) else 0
+    except Exception:
+        mtime = 0
+    if mtime == _kite_mtime:
+        return _kite            # same token as last attempt — reuse result
+    _kite_mtime = mtime
+    _kite = None
+    try:
+        if not mtime or "your_api" in API_KEY:
             return None
         token = open(TOKEN_FILE).read().strip()
         k = KiteConnect(api_key=API_KEY)
@@ -510,9 +551,10 @@ def get_kite():
         profile = k.profile()          # validates the token
         _kite = k
         bot_log(f"Kite connected: {profile['user_name']} — live exchange data ON", "ok")
+        tg_send(f"Kite connected ({profile['user_name']}) — exact exchange data ON.")
         return _kite
     except Exception as e:
-        bot_log(f"Kite offline ({e}) — using yfinance backup. Run kite_setup.py for exact data.", "err")
+        bot_log(f"Kite offline ({e}) — using yfinance backup. Send /token on Telegram to fix.", "err")
         return None
 
 def kite_ltp(full_symbol):
@@ -1026,9 +1068,9 @@ def bot_loop():
     # Connect to Kite — live exchange data for spot + option premiums
     if get_kite() is None:
         tg_send(
-            "WARNING: Kite not connected — bot is using backup data (yfinance, 1-2 min delay).\n"
-            "For exact exchange data: run kite_setup.py, log in, then restart the bot.\n"
-            "(Kite access tokens expire every morning — this is normal.)"
+            "Kite not connected — bot is on backup data (yfinance, 1-2 min delay).\n"
+            "Fix it from your phone in 30 seconds: send /token for the steps.\n"
+            "(Kite tokens expire every morning — this is normal, no restart needed.)"
         )
 
     mode_label = "PAPER TRADE" if PAPER_TRADE else "LIVE TRADE"
@@ -1126,6 +1168,8 @@ def bot_loop():
                     lines.append(f"  BULLISH (BUY CE) — if NIFTY > {yd_h:.0f}")
                     lines.append(f"  BEARISH (BUY PE) — if NIFTY < {yd_l:.0f}")
                     lines.append(f"  MORNING DIR      — if inside range")
+                if get_kite() is None:
+                    lines.append("\nKite login needed for exact data — send /token for steps.")
                 tg_send("\n".join(lines))
                 bot_log("Morning Telegram ping sent", "info")
             except Exception as _me:
