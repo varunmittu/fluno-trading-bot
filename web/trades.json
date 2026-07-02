@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 13:10",
+  "last_updated": "2026-07-02 13:11",
   "summary": {
     "total_trades": 28,
     "wins": 6,
@@ -385,57 +385,22 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "13:05:32",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:29",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:59:27",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:59:20",
-      "msg": "STOP LOSS NIFTY CE | Entry:24124 Exit:24119 | Capital:Rs.11670 Lots->3L",
-      "cls": "err"
-    },
-    {
-      "time": "12:55:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:50:05",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:44:57",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:44:52",
-      "msg": "Restored 1 open position(s) from disk.",
+      "time": "13:11:27",
+      "msg": "Already traded today (from DB) \u2014 won't enter again.",
       "cls": "info"
     },
     {
-      "time": "12:44:52",
-      "msg": "Capital: Rs.11820 | Lots: 3L (75 units)",
+      "time": "13:11:27",
+      "msg": "Capital: Rs.11670 | Lots: 3L (75 units)",
       "cls": "info"
     },
     {
-      "time": "12:44:52",
+      "time": "13:11:27",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
       "cls": "info"
     },
     {
-      "time": "12:44:51",
+      "time": "13:11:25",
       "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
       "cls": "err"
     }
