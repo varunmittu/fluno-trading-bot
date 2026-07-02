@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 12:02",
+  "last_updated": "2026-07-02 12:07",
   "summary": {
     "total_trades": 26,
     "wins": 6,
@@ -359,6 +359,16 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:07:07",
+      "msg": "[PAPER] BULLISH \u2014 BUY CALL (CE) | NIFTY 24150 @ Rs.149.3 | BREAK HIGH 24050 | 3L (75u) | Expiry:06 Jul 2026",
+      "cls": "ok"
+    },
+    {
+      "time": "12:02:57",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:57:42",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -446,16 +456,6 @@
     {
       "time": "11:46:01",
       "msg": "NIFTY:24084 YdH:24050/YdL:23895 Sig:BREAK HIGH 24050 Lots:3L Cap:Rs.11670 Daily:Rs.-150",
-      "cls": ""
-    },
-    {
-      "time": "11:46:01",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "11:44:58",
-      "msg": "NIFTY:24080 YdH:24050/YdL:23895 Sig:BREAK HIGH 24050 Lots:3L Cap:Rs.11670 Daily:Rs.-150",
       "cls": ""
     }
   ],
