@@ -346,9 +346,13 @@ def tg_poll():
                             if not px_now:
                                 tg_send("Could not fetch live price. Try again in 30 seconds.")
                                 break
-                            move   = (px_now - pos["entry"]) * delta * lot if otype == "CE" \
-                                     else (pos["entry"] - px_now) * delta * lot
-                            pnl    = round(move - BROKERAGE, 0)
+                            real_p = fetch_live_premium_real(iname, pos.get("strike"), otype)
+                            if real_p and pos.get("premium_entry"):
+                                pnl = round((real_p - pos["premium_entry"]) * lot - BROKERAGE, 0)
+                            else:
+                                move = (px_now - pos["entry"]) * delta * lot if otype == "CE" \
+                                       else (pos["entry"] - px_now) * delta * lot
+                                pnl  = round(move - BROKERAGE, 0)
                             if pos.get("strike"):
                                 execute_order("SELL", pos["strike"], otype, lot, reason="MANUAL_EXIT")
                             _inv, _lts = trade_meta(pos)
@@ -1080,6 +1084,33 @@ def fetch_option_premium(inst_name, strike, option_type, spot_price):
     disc  = max(0.25, 1 - mono * 8)
     return round(atm_p * disc, 1)
 
+def fetch_live_premium_real(inst_name, strike, option_type):
+    """
+    REAL traded premium only (Kite exchange tick, NSE chain as backup).
+    Returns None if no real quote is available — NEVER estimates.
+    Used for premium-based P&L so theta decay is measured truthfully.
+    """
+    if not strike:
+        return None
+    if inst_name == "NIFTY":
+        c = find_option_contract(strike, option_type, EXPIRY_INDEX)
+        if c:
+            ltp = kite_ltp(f"NFO:{c['tradingsymbol']}")
+            if ltp and ltp > 0:
+                return ltp
+    try:
+        if inst_name in ["NIFTY", "BANKNIFTY"]:
+            oc = fetch_nse_optionchain(inst_name)
+            if oc:
+                for row_ in oc.get("records", {}).get("data", []):
+                    if row_.get("strikePrice") == strike:
+                        ltp = row_.get(option_type, {}).get("lastPrice", 0)
+                        if ltp and ltp > 0:
+                            return round(ltp, 1)
+    except Exception:
+        pass
+    return None
+
 def get_next_expiry(inst_name, index=0):
     """Nearest expiry — real contract dates from Kite when connected, weekday calc as backup."""
     if inst_name == "NIFTY":
@@ -1326,9 +1357,13 @@ def bot_loop():
                     px    = inst_prices.get(iname, pos["entry"])
                     lot   = pos.get("lot", LOT); delta = pos.get("delta", DELTA)
                     otype = pos.get("option_type", "CE")
-                    move  = (px - pos["entry"]) * delta * lot if otype == "CE" \
-                            else (pos["entry"] - px) * delta * lot
-                    pnl   = round(move - BROKERAGE, 2)
+                    real_p = fetch_live_premium_real(iname, pos.get("strike"), otype)
+                    if real_p and pos.get("premium_entry"):
+                        pnl = round((real_p - pos["premium_entry"]) * lot - BROKERAGE, 2)
+                    else:
+                        move = (px - pos["entry"]) * delta * lot if otype == "CE" \
+                               else (pos["entry"] - px) * delta * lot
+                        pnl  = round(move - BROKERAGE, 2)
                     close_position_order(pos, "EOD_EXIT")
                     _inv, _lts = trade_meta(pos)
                     save_trade(pos["score"], pos["entry"], px, pnl, "EOD_EXIT", iname, otype, _inv, _lts)
@@ -1436,12 +1471,20 @@ def bot_loop():
                     continue
                 lot   = pos.get("lot", LOT);  delta = pos.get("delta", DELTA)
                 otype = pos.get("option_type", "CE")
-                move  = (px - pos["entry"]) * delta * lot if otype == "CE" else (pos["entry"] - px) * delta * lot
-                pnl   = move - BROKERAGE
+                # ── PREMIUM-BASED P&L: real option price change (theta included)
+                pnl = None
+                if pos.get("strike") and pos.get("premium_entry"):
+                    real_prem = fetch_live_premium_real(iname, pos["strike"], otype)
+                    if real_prem:
+                        pos["last_premium"] = real_prem
+                        pnl = (real_prem - pos["premium_entry"]) * lot - BROKERAGE
+                if pnl is None:   # no real quote — fall back to index-delta model
+                    move = (px - pos["entry"]) * delta * lot if otype == "CE" else (pos["entry"] - px) * delta * lot
+                    pnl  = move - BROKERAGE
 
                 # ── Premium SL: exit if option lost 60% of entry value ────────
                 if pos.get("strike") and pos.get("premium_entry"):
-                    live_prem = fetch_option_premium(iname, pos["strike"], otype, px)
+                    live_prem = pos.get("last_premium")
                     if live_prem and live_prem < pos["premium_entry"] * 0.40:
                         pnl_p = round((live_prem - pos["premium_entry"]) * lot - BROKERAGE, 2)
                         close_position_order(pos, "PREM_SL")
@@ -1587,14 +1630,17 @@ def bot_loop():
             state["open_positions"]   = len(positions)
             state["daily_pnl"]        = round(daily_pnl, 0)
 
-            # Unrealized P&L
+            # Unrealized P&L (premium-based when a real quote exists)
             unrealized = 0.0
             for _p in positions:
-                _px    = inst_prices.get(_p.get("instrument","NIFTY"), _p["entry"])
                 _lot   = _p.get("lot", LOT); _delta = _p.get("delta", DELTA)
                 _otype = _p.get("option_type", "CE")
-                _mv    = (_px - _p["entry"]) * _delta * _lot if _otype == "CE" else (_p["entry"] - _px) * _delta * _lot
-                unrealized += _mv - BROKERAGE
+                if _p.get("last_premium") and _p.get("premium_entry"):
+                    unrealized += (_p["last_premium"] - _p["premium_entry"]) * _lot - BROKERAGE
+                else:
+                    _px = inst_prices.get(_p.get("instrument","NIFTY"), _p["entry"])
+                    _mv = (_px - _p["entry"]) * _delta * _lot if _otype == "CE" else (_p["entry"] - _px) * _delta * _lot
+                    unrealized += _mv - BROKERAGE
             state["unrealized_pnl"] = round(unrealized, 0)
             state["total_pnl"]      = round(daily_pnl + unrealized, 0)
             state["active_side"]    = "BULL" if state.get("option_type") == "CE" else "BEAR" if state.get("option_type") == "PE" else None

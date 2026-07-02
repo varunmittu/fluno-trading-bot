@@ -463,8 +463,13 @@ async function loadChart() {
 
     if (iPos.length > 0) {
       const p = iPos[0], ot = p.option_type;
-      const mv = ot === 'CE' ? (liveP - p.entry) : (p.entry - liveP);
-      const pnl = Math.round(mv * 0.40 * (p.lot || 75) - 20);
+      let pnl;
+      if (p.live_premium && p.premium_entry) {
+        pnl = Math.round((p.live_premium - p.premium_entry) * (p.lot || 75) - 20);
+      } else {
+        const mv = ot === 'CE' ? (liveP - p.entry) : (p.entry - liveP);
+        pnl = Math.round(mv * 0.40 * (p.lot || 75) - 20);
+      }
       const pc = pnl >= 0 ? 'var(--green)' : 'var(--red)';
       const oc = ot === 'CE' ? 'var(--green)' : 'var(--red)';
       const pk = p.peak_pnl != null ? Math.round(p.peak_pnl) : null;
