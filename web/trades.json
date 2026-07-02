@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 10:08",
+  "last_updated": "2026-07-02 10:13",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -332,6 +332,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:13:46",
+      "msg": "NIFTY:24099 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:12:44",
+      "msg": "NIFTY:24110 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:11:42",
+      "msg": "NIFTY:24104 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:10:40",
+      "msg": "NIFTY:24099 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:09:37",
+      "msg": "NIFTY:24097 Sig:-- VIX:12.8 Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:08:37",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:08:34",
       "msg": "NIFTY:24088 Sig:-- VIX:12.9 Lots:3L Cap:Rs.11820 Daily:Rs.0",
       "cls": ""
@@ -400,39 +430,9 @@
       "time": "09:57:10",
       "msg": "Could not fetch any live prices. Retrying...",
       "cls": "err"
-    },
-    {
-      "time": "09:57:09",
-      "msg": "Morning Telegram ping sent",
-      "cls": "info"
-    },
-    {
-      "time": "00:00:01",
-      "msg": "New trading day | Capital: Rs.11820 | Lots: 3L",
-      "cls": "info"
-    },
-    {
-      "time": "18:49:58",
-      "msg": "Already traded today (from DB) \u2014 won't enter again.",
-      "cls": "info"
-    },
-    {
-      "time": "18:49:58",
-      "msg": "Capital: Rs.11820 | Lots: 3L (75 units)",
-      "cls": "info"
-    },
-    {
-      "time": "18:49:58",
-      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
-      "cls": "info"
-    },
-    {
-      "time": "18:49:58",
-      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
-      "cls": "err"
     }
   ],
-  "vix": 12.86,
+  "vix": 12.78,
   "supertrend_bullish": null,
   "oi_nifty": null
 }
