@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 12:30",
+  "last_updated": "2026-07-02 12:33",
   "summary": {
     "total_trades": 27,
     "wins": 6,
@@ -372,102 +372,22 @@
   "open_positions": 1,
   "bot_log": [
     {
-      "time": "12:25:43",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:23:37",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:23:32",
-      "msg": "[PAPER] BULLISH \u2014 BUY CALL (CE) | NIFTY 24150 @ Rs.150.2 | BREAK HIGH 24050 | 3L (75u) | Expiry:06 Jul 2026",
-      "cls": "ok"
-    },
-    {
-      "time": "12:22:28",
-      "msg": "NIFTY:24121 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.-150",
-      "cls": ""
-    },
-    {
-      "time": "12:22:28",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "12:21:25",
-      "msg": "NIFTY:24120 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.-150",
-      "cls": ""
-    },
-    {
-      "time": "12:21:25",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "12:20:28",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:20:25",
-      "msg": "NIFTY:24121 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.-150",
-      "cls": ""
-    },
-    {
-      "time": "12:20:25",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "12:19:24",
-      "msg": "NIFTY:24125 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.-150",
-      "cls": ""
-    },
-    {
-      "time": "12:19:24",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:20",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:13:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:13:12",
-      "msg": "STOP LOSS NIFTY CE | Entry:24108 Exit:24104 | Capital:Rs.11820 Lots->3L",
-      "cls": "err"
-    },
-    {
-      "time": "12:10:07",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:10:00",
+      "time": "12:33:46",
       "msg": "Restored 1 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "12:10:00",
-      "msg": "Capital: Rs.11970 | Lots: 3L (75 units)",
+      "time": "12:33:46",
+      "msg": "Capital: Rs.11820 | Lots: 3L (75 units)",
       "cls": "info"
     },
     {
-      "time": "12:10:00",
+      "time": "12:33:46",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
       "cls": "info"
     },
     {
-      "time": "12:09:59",
+      "time": "12:33:45",
       "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Run kite_setup.py for exact data.",
       "cls": "err"
     }
