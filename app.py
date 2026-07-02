@@ -42,7 +42,7 @@ PAPER_TRADE       = True
 STOP_LOSS             = -150   # fallback SL if setup analysis unavailable
 SL_MIN                = 100    # dynamic SL floor
 SL_MAX                = 500    # dynamic SL hard cap — NEVER exceeded
-BIG_TRAIL_START       = 1000   # ride winners from here — exit on trend weakening
+BIG_TRAIL_START       = 100    # ride winners from Rs.100 peak — exit on trend weakening
 BIG_TRAIL_SAFETY      = 300    # safety net while trend strong: exit at peak-300
 SMALL_TRAIL_START     = 400    # tough day — lock small profit
 SMALL_TRAIL_DROP      = 150    # close if drops Rs.150 from peak
@@ -1512,9 +1512,10 @@ def bot_loop():
                     )
                     closed.append(pos); sync_background(); continue
 
-                # ── 3. Ride winners: above Rs.1000, hold while trend is STRONG ──
+                # ── 3. Ride winners: above Rs.100 peak, hold while trend STRONG ─
                 # Book profit only when trend weakens (supertrend/MACD flip)
-                # or on the peak-300 safety net. Lets Rs.1000 run to 2-3-4k.
+                # or on the peak-300 safety net. BE-lock floor (Rs.300 after
+                # Rs.300 peak) still guarantees the minimum exit.
                 if peak_pnl >= BIG_TRAIL_START:
                     strong = trend_still_strong(otype, get_candles("^NSEI"))
                     if strong and pnl > peak_pnl - BIG_TRAIL_SAFETY:

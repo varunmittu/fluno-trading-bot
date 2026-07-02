@@ -73,7 +73,7 @@ f0     = d.loc[idxs[0]]
 morn   = "CE" if f0["close"] >= f0["open"] else "PE"
 
 SL_MIN, SL_MAX = 100, 500
-BE = 300; SM_S, SM_D = 400, 150; BG_S, BG_SAFE = 1000, 300
+BE = 300; SM_S, SM_D = 400, 150; BG_S, BG_SAFE = 100, 300
 DAILY_LIMIT, MAX_T, GATE = -750, 3, 50
 DELTA, MB = 0.40, 20
 
