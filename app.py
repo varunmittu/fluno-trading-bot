@@ -20,7 +20,23 @@ from kiteconnect import KiteConnect
 app = Flask(__name__)
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
-API_KEY           = "your_api_key_here"  # paste from developers.kite.trade
+import re as _re
+def _load_kite_creds():
+    """Read API key/secret from config.py.txt (gitignored — NEVER commit)."""
+    creds = {"API_KEY": "", "API_SECRET": ""}
+    try:
+        if os.path.exists("config.py.txt"):
+            for line in open("config.py.txt"):
+                m = _re.match(r'\s*(API_KEY|API_SECRET)\s*=\s*["\']([^"\']+)["\']', line)
+                if m:
+                    creds[m.group(1)] = m.group(2)
+    except Exception:
+        pass
+    return creds
+
+_creds            = _load_kite_creds()
+API_KEY           = _creds["API_KEY"] or "your_api_key_here"
+API_SECRET        = _creds["API_SECRET"]
 TOKEN_FILE        = "kite_token.txt"
 PAPER_TRADE       = True
 STOP_LOSS             = -150   # hard SL — only fires BEFORE breakeven lock
@@ -320,7 +336,10 @@ def tg_poll():
                             move   = (px_now - pos["entry"]) * delta * lot if otype == "CE" \
                                      else (pos["entry"] - px_now) * delta * lot
                             pnl    = round(move - BROKERAGE, 0)
+                            if pos.get("strike"):
+                                execute_order("SELL", pos["strike"], otype, lot, reason="MANUAL_EXIT")
                             save_trade(pos["score"], pos["entry"], px_now, pnl, "MANUAL_EXIT", iname, otype)
+                            _pnl_adjust.append(pnl)   # bot loop adds this to daily P&L
                             state["daily_pnl"] = round(state.get("daily_pnl", 0) + pnl, 0)
                             # Update capital and lots
                             _cap  = state.get("running_capital", float(PAPER_CAPITAL)) + pnl
@@ -469,6 +488,135 @@ def bear_confidence(row, prev):
     if row["sma20"] < prev["sma20"]:             bd["slope"] = 3
     return sum(bd.values()), bd
 
+# ── KITE LIVE DATA — exact exchange data, falls back to yfinance/NSE ─────────
+_kite       = None
+_kite_tried = False
+_nfo_cache  = {"day": None, "rows": None}
+
+def get_kite():
+    """Return a connected KiteConnect client, or None (token missing/expired)."""
+    global _kite, _kite_tried
+    if _kite is not None:
+        return _kite
+    if _kite_tried:
+        return None
+    _kite_tried = True
+    try:
+        if not os.path.exists(TOKEN_FILE) or "your_api" in API_KEY:
+            return None
+        token = open(TOKEN_FILE).read().strip()
+        k = KiteConnect(api_key=API_KEY)
+        k.set_access_token(token)
+        profile = k.profile()          # validates the token
+        _kite = k
+        bot_log(f"Kite connected: {profile['user_name']} — live exchange data ON", "ok")
+        return _kite
+    except Exception as e:
+        bot_log(f"Kite offline ({e}) — using yfinance backup. Run kite_setup.py for exact data.", "err")
+        return None
+
+def kite_ltp(full_symbol):
+    """Live traded price via Kite, e.g. 'NSE:NIFTY 50' or 'NFO:NIFTY25JUL24100CE'."""
+    k = get_kite()
+    if not k:
+        return None
+    try:
+        q = k.ltp([full_symbol])
+        return round(float(q[full_symbol]["last_price"]), 2)
+    except Exception:
+        return None
+
+def _norm_expiry(exp):
+    """Normalise Kite expiry field (datetime / date / string) to a date."""
+    if isinstance(exp, datetime):
+        return exp.date()
+    if isinstance(exp, date):
+        return exp
+    try:
+        return datetime.strptime(str(exp)[:10], "%Y-%m-%d").date()
+    except Exception:
+        return None
+
+def get_nfo_options():
+    """All live NIFTY option contracts from Kite (cached for the day)."""
+    k = get_kite()
+    if not k:
+        return None
+    if _nfo_cache["day"] == date.today() and _nfo_cache["rows"] is not None:
+        return _nfo_cache["rows"]
+    try:
+        rows = [r for r in k.instruments("NFO")
+                if r.get("name") == "NIFTY" and r.get("segment") == "NFO-OPT"]
+        _nfo_cache["day"]  = date.today()
+        _nfo_cache["rows"] = rows
+        bot_log(f"Kite: loaded {len(rows)} NIFTY option contracts", "info")
+        return rows
+    except Exception:
+        return None
+
+def find_option_contract(strike, option_type, expiry_index=0):
+    """Find the real tradeable NIFTY contract on Zerodha for a strike + CE/PE."""
+    rows = get_nfo_options()
+    if not rows:
+        return None
+    try:
+        today_d = date.today()
+        match = []
+        for r in rows:
+            exp = _norm_expiry(r.get("expiry"))
+            if exp and exp >= today_d and int(r.get("strike", 0)) == int(strike) \
+               and r.get("instrument_type") == option_type:
+                match.append((exp, r))
+        if not match:
+            return None
+        match.sort(key=lambda x: x[0])
+        idx = min(expiry_index, len(match) - 1)
+        exp, r = match[idx]
+        return {"tradingsymbol": r["tradingsymbol"], "expiry": exp,
+                "lot_size": int(r.get("lot_size", 75))}
+    except Exception:
+        return None
+
+def execute_order(action, strike, option_type, units, reason=""):
+    """
+    Order router. PAPER mode: no-op, returns 'PAPER' — zero behaviour change.
+    LIVE mode (PAPER_TRADE=False): places a real MIS market order on Zerodha NFO.
+    Every entry and exit in the bot goes through here, so flipping
+    PAPER_TRADE to False is the ONLY change needed to go live.
+    """
+    if PAPER_TRADE:
+        return "PAPER"
+    k = get_kite()
+    if not k:
+        bot_log(f"LIVE ORDER FAILED — Kite not connected ({action} {strike}{option_type})", "err")
+        tg_send(f"ORDER FAILED — Kite not connected!\n{action} NIFTY {strike} {option_type} x{units}\nRun kite_setup.py and restart the bot.")
+        return None
+    c = find_option_contract(strike, option_type, EXPIRY_INDEX)
+    if not c:
+        tg_send(f"ORDER FAILED — contract not found: NIFTY {strike} {option_type}")
+        return None
+    lot_sz = c["lot_size"]
+    qty    = max(lot_sz, int(round(units / lot_sz)) * lot_sz)  # exchange lot multiple
+    try:
+        oid = k.place_order(
+            variety=k.VARIETY_REGULAR, exchange="NFO",
+            tradingsymbol=c["tradingsymbol"],
+            transaction_type=k.TRANSACTION_TYPE_BUY if action == "BUY" else k.TRANSACTION_TYPE_SELL,
+            quantity=qty, product=k.PRODUCT_MIS, order_type=k.ORDER_TYPE_MARKET)
+        bot_log(f"LIVE ORDER {action} {c['tradingsymbol']} x{qty} id:{oid} {reason}", "ok")
+        tg_send(f"LIVE ORDER PLACED\n{action} {c['tradingsymbol']} x{qty}\nOrder ID: {oid}\n{reason}")
+        return oid
+    except Exception as e:
+        bot_log(f"LIVE ORDER ERROR {action} {strike}{option_type}: {e}", "err")
+        tg_send(f"ORDER ERROR — {action} NIFTY {strike} {option_type}\n{e}")
+        return None
+
+def close_position_order(pos, reason):
+    """SELL the real option contract when a position closes (no-op in paper mode)."""
+    if pos.get("strike"):
+        execute_order("SELL", pos["strike"], pos.get("option_type", "CE"),
+                      pos.get("lot", LOT), reason=reason)
+
 # ── MARKET DATA ───────────────────────────────────────────────────────────────
 def fetch_candles(yf_sym="^NSEI"):
     """Fetch 60 days of 5-min candles for any symbol and compute all indicators."""
@@ -496,6 +644,12 @@ def fetch_candles(yf_sym="^NSEI"):
     return df.dropna().reset_index(drop=True)
 
 def fetch_live_price(yf_sym="^NSEI"):
+    # 1. Kite — exact real-time exchange tick (no delay)
+    if yf_sym == "^NSEI":
+        px = kite_ltp("NSE:NIFTY 50")
+        if px:
+            return px
+    # 2. yfinance backup (1-2 min delayed)
     try:
         ticker = yf.Ticker(yf_sym)
         hist   = ticker.history(period="1d", interval="1m")
@@ -565,6 +719,25 @@ def load_bot_state():
 def save_bot_state(capital, lots):
     with open(BOT_STATE_FILE, "w") as f:
         json.dump({"running_capital": round(capital, 2), "lots_today": lots}, f)
+
+POSITIONS_FILE = "open_positions.json"
+
+def save_positions(pos):
+    with open(POSITIONS_FILE, "w") as f:
+        json.dump(pos, f)
+
+def load_positions():
+    if os.path.exists(POSITIONS_FILE):
+        try:
+            with open(POSITIONS_FILE) as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return []
+
+# P&L booked outside the bot loop (Telegram /exit) — the loop drains this
+# queue each cycle so manual exits count toward the daily total.
+_pnl_adjust = []
 
 def fetch_nse_optionchain(symbol="NIFTY"):
     """Fetch live option chain from NSE India (requires cookie init)."""
@@ -688,11 +861,13 @@ def get_streak():
         return 0
 
 def is_market_open():
+    # Loop runs until 15:35 so the 15:25 force-close and 15:30 settlement
+    # actually fire (entries are separately capped at 12:30).
     now    = datetime.now()
     if now.weekday() >= 5:
         return False
     open_t  = now.replace(hour=9,  minute=15, second=0, microsecond=0)
-    close_t = now.replace(hour=15, minute=25, second=0, microsecond=0)
+    close_t = now.replace(hour=15, minute=35, second=0, microsecond=0)
     return open_t <= now <= close_t
 
 # ── BOT LOG ───────────────────────────────────────────────────────────────────
@@ -717,10 +892,18 @@ def get_target_strike(price, inst_name, option_type):
 
 def fetch_option_premium(inst_name, strike, option_type, spot_price):
     """
-    Try NSE option chain for actual LTP.
-    Falls back to a VIX-based ATM estimate so the bot always gets a number.
+    Premium priority: 1. Kite live traded price (exact) → 2. NSE option chain →
+    3. IV-based estimate so the bot always gets a number.
     """
     import math
+    # 1. Kite — exact last traded premium of the real contract
+    if inst_name == "NIFTY":
+        c = find_option_contract(strike, option_type, EXPIRY_INDEX)
+        if c:
+            ltp = kite_ltp(f"NFO:{c['tradingsymbol']}")
+            if ltp and ltp > 0:
+                return ltp
+    # 2. NSE option chain
     try:
         if inst_name in ["NIFTY", "BANKNIFTY"]:
             oc = fetch_nse_optionchain(inst_name)
@@ -742,21 +925,34 @@ def fetch_option_premium(inst_name, strike, option_type, spot_price):
     return round(atm_p * disc, 1)
 
 def get_next_expiry(inst_name, index=0):
-    """Calculate nearest expiry: NIFTY=Thursday, BANKNIFTY=Wednesday, SENSEX=Friday."""
+    """Nearest expiry — real contract dates from Kite when connected, weekday calc as backup."""
+    if inst_name == "NIFTY":
+        rows = get_nfo_options()
+        if rows:
+            today_d = date.today()
+            exps = sorted({e for e in (_norm_expiry(r.get("expiry")) for r in rows)
+                           if e and e >= today_d})
+            if exps:
+                return exps[min(index, len(exps) - 1)].strftime("%d %b %Y")
     weekday_map = {"NIFTY": 0, "BANKNIFTY": 2, "SENSEX": 4}  # Mon=0 … Sun=6
-    target_wd   = weekday_map.get(inst_name, 3)
+    target_wd   = weekday_map.get(inst_name, 0)
     today       = date.today()
     days_ahead  = (target_wd - today.weekday()) % 7
     if days_ahead == 0:
         days_ahead = 7   # today is expiry day → use next week
     first_exp   = today + timedelta(days=days_ahead)
     expiry      = first_exp + timedelta(weeks=index)
-    return expiry.strftime("%d %b %Y")   # e.g. "03 Jul 2026"
+    return expiry.strftime("%d %b %Y")   # e.g. "06 Jul 2026"
 
 EXPIRY_WEEKDAY = {"NIFTY": 0, "BANKNIFTY": 2, "SENSEX": 4}  # Mon, Wed, Fri
 
 def is_expiry_day(inst_name):
-    """True if today is weekly expiry for this instrument — theta risk too high for buying."""
+    """True if today is weekly expiry — real contract dates from Kite when connected."""
+    if inst_name == "NIFTY":
+        rows = get_nfo_options()
+        if rows:
+            today_d = date.today()
+            return any(_norm_expiry(r.get("expiry")) == today_d for r in rows)
     return date.today().weekday() == EXPIRY_WEEKDAY.get(inst_name, -1)
 
 _sync_lock = threading.Lock()
@@ -827,19 +1023,13 @@ def sync_background():
 def bot_loop():
     init_db()
 
-    # Connect to Kite (just for identity — data comes from yfinance)
-    try:
-        if os.path.exists(TOKEN_FILE):
-            with open(TOKEN_FILE) as f:
-                token = f.read().strip()
-            kite = KiteConnect(api_key=API_KEY)
-            kite.set_access_token(token)
-            profile = kite.profile()
-            bot_log(f"Connected as {profile['user_name']}", "ok")
-        else:
-            bot_log("kite_token.txt not found — run kite_setup.py", "err")
-    except Exception as e:
-        bot_log(f"Kite connection failed: {e}", "err")
+    # Connect to Kite — live exchange data for spot + option premiums
+    if get_kite() is None:
+        tg_send(
+            "WARNING: Kite not connected — bot is using backup data (yfinance, 1-2 min delay).\n"
+            "For exact exchange data: run kite_setup.py, log in, then restart the bot.\n"
+            "(Kite access tokens expire every morning — this is normal.)"
+        )
 
     mode_label = "PAPER TRADE" if PAPER_TRADE else "LIVE TRADE"
     bot_log(f"Bot started | {mode_label} | Strategy: BREAKOUT | SL=Rs.{abs(STOP_LOSS)}", "info")
@@ -851,19 +1041,6 @@ def bot_loop():
     bot_log(f"Capital: Rs.{running_capital:.0f} | Lots: {lots_today}L ({lots_today*25} units)", "info")
 
     # Restore open positions from disk (survives restarts)
-    POSITIONS_FILE = "open_positions.json"
-    def save_positions(pos):
-        with open(POSITIONS_FILE, "w") as f:
-            json.dump(pos, f)
-    def load_positions():
-        if os.path.exists(POSITIONS_FILE):
-            try:
-                with open(POSITIONS_FILE) as f:
-                    return json.load(f)
-            except Exception:
-                pass
-        return []
-
     positions  = load_positions()
     # Backfill strike + premium for positions that predate the strike selector
     _changed = False
@@ -873,9 +1050,7 @@ def bot_loop():
             _p["premium_entry"] = fetch_option_premium(_p["instrument"], _p["strike"], _p["option_type"], _p["entry"])
             _changed = True
     if _changed:
-        import json as _json
-        with open(POSITIONS_FILE, "w") as _f:
-            _json.dump(positions, _f)
+        save_positions(positions)
     # DB-backed flag: survives restarts even if SL fired and position was removed
     first_trade_done = has_traded_today() or bool(positions)
     state["first_trade_done"] = first_trade_done
@@ -905,17 +1080,23 @@ def bot_loop():
         return c["df"]
 
     while True:
-        # Sync from state so Telegram /stop and /resume take effect next iteration
+        # Sync from state so Telegram /stop, /resume, /lots, /exit take effect
         first_trade_done = state.get("first_trade_done", first_trade_done)
+        running_capital  = state.get("running_capital", running_capital)
+        lots_today       = state.get("lots_today", lots_today)
+        while _pnl_adjust:                      # P&L booked via Telegram /exit
+            daily_pnl += _pnl_adjust.pop(0)
 
         if date.today() != today:
             daily_pnl        = 0.0
             today            = date.today()
             positions        = []
+            save_positions(positions)          # clear stale file — restart-safe
             sl_cooldown      = {}
             first_trade_done = False
             state["first_trade_done"] = False
-            state["signal"] = "--"
+            state["signal"]      = "--"
+            state["option_type"] = "—"
             eod_done       = False
             morning_pinged = False
             weekly_done    = False
@@ -929,7 +1110,7 @@ def bot_loop():
 
         # ── Morning ping at 9:10 AM (market opens in 5 min) ─────────────────
         _now = datetime.now()
-        if not morning_pinged and _now.hour == 9 and _now.minute >= 10:
+        if not morning_pinged and _now.weekday() < 5 and _now.hour == 9 and _now.minute >= 10:
             morning_pinged = True
             try:
                 yd_h, yd_l = fetch_daily_hl("^NSEI")
@@ -987,6 +1168,7 @@ def bot_loop():
                     move  = (px - pos["entry"]) * delta * lot if otype == "CE" \
                             else (pos["entry"] - px) * delta * lot
                     pnl   = round(move - BROKERAGE, 2)
+                    close_position_order(pos, "EOD_EXIT")
                     save_trade(pos["score"], pos["entry"], px, pnl, "EOD_EXIT", iname, otype)
                     daily_pnl       += pnl
                     running_capital += pnl
@@ -1093,6 +1275,7 @@ def bot_loop():
                     live_prem = fetch_option_premium(iname, pos["strike"], otype, px)
                     if live_prem and live_prem < pos["premium_entry"] * 0.40:
                         pnl_p = round((live_prem - pos["premium_entry"]) * lot - BROKERAGE, 2)
+                        close_position_order(pos, "PREM_SL")
                         save_trade(pos["score"], pos["entry"], px, pnl_p, "PREM_SL", iname, otype)
                         daily_pnl += pnl_p
                         sl_cooldown[iname] = time.time()
@@ -1120,6 +1303,7 @@ def bot_loop():
                 # ── 1. Breakeven lock exit (pnl drops below Rs.300 after lock) ─
                 if pos.get("be_locked") and pnl < BREAKEVEN_LOCK_FLOOR:
                     exit_pnl = BREAKEVEN_LOCK_FLOOR   # guaranteed floor
+                    close_position_order(pos, "BE_LOCK")
                     save_trade(pos["score"], pos["entry"], px, exit_pnl, "BE_LOCK", iname, otype)
                     daily_pnl      += exit_pnl
                     running_capital += exit_pnl
@@ -1137,6 +1321,7 @@ def bot_loop():
 
                 # ── 2. Hard SL — only fires before BE lock activates ───────────
                 if not pos.get("be_locked") and pnl <= STOP_LOSS:
+                    close_position_order(pos, "STOP_LOSS")
                     save_trade(pos["score"], pos["entry"], px, STOP_LOSS, "STOP_LOSS", iname, otype)
                     daily_pnl      += STOP_LOSS
                     running_capital += STOP_LOSS
@@ -1157,6 +1342,7 @@ def bot_loop():
                 # ── 3. Big trail: let winners run (exits at peak - Rs.200) ──────
                 if peak_pnl >= BIG_TRAIL_START and pnl <= peak_pnl - BIG_TRAIL_DROP:
                     exit_pnl = round(pnl, 2)
+                    close_position_order(pos, "TRAIL_EXIT")
                     save_trade(pos["score"], pos["entry"], px, exit_pnl, "TRAIL_EXIT", iname, otype)
                     daily_pnl      += exit_pnl
                     running_capital += exit_pnl
@@ -1177,6 +1363,7 @@ def bot_loop():
                     raw_pnl  = round(pnl, 2)
                     exit_pnl = max(BREAKEVEN_LOCK_FLOOR, raw_pnl) if pos.get("be_locked") else raw_pnl
                     status   = "PROFIT_LOCK" if exit_pnl > 0 else "STOP_LOSS"
+                    close_position_order(pos, status)
                     save_trade(pos["score"], pos["entry"], px, exit_pnl, status, iname, otype)
                     daily_pnl      += exit_pnl
                     running_capital += exit_pnl
@@ -1228,16 +1415,18 @@ def bot_loop():
             state["total_pnl"]      = round(daily_pnl + unrealized, 0)
             state["active_side"]    = "BULL" if state.get("option_type") == "CE" else "BEAR" if state.get("option_type") == "PE" else None
 
-            # NIFTY option chain for dashboard
-            oc = fetch_nse_optionchain("NIFTY")
-            if oc:
-                all_exp = oc.get("records", {}).get("expiryDates", [])
-                state["available_expiries"] = all_exp
-                if px_nifty:
-                    metrics = calculate_oi_metrics(oc, px_nifty, EXPIRY_INDEX)
-                    if metrics:
-                        state["oi_nifty"] = metrics
-                        state["expiry"]   = metrics["expiry"]
+            # NIFTY option chain for dashboard (every 3 min — NSE rate-limits)
+            if time.time() - state.get("_last_oc_fetch", 0) > 180:
+                state["_last_oc_fetch"] = time.time()
+                oc = fetch_nse_optionchain("NIFTY")
+                if oc:
+                    all_exp = oc.get("records", {}).get("expiryDates", [])
+                    state["available_expiries"] = all_exp
+                    if px_nifty:
+                        metrics = calculate_oi_metrics(oc, px_nifty, EXPIRY_INDEX)
+                        if metrics:
+                            state["oi_nifty"] = metrics
+                            state["expiry"]   = metrics["expiry"]
 
             # ── 5. Breakout signal + entry ────────────────────────────────────
             prefix = "[PAPER]" if PAPER_TRADE else "[LIVE]"
@@ -1279,6 +1468,20 @@ def bot_loop():
                         if premium and premium < 30:
                             bot_log(f"SKIP NIFTY {otype} {strike} — premium Rs.{premium:.0f} too low (<Rs.30)", "info")
                         else:
+                            direction_label = "BULLISH — BUY CALL (CE)" if otype == "CE" else "BEARISH — BUY PUT (PE)"
+                            # ── Telegram BEFORE the trade ─────────────────────
+                            tg_send(
+                                f"SIGNAL CONFIRMED — placing trade now\n"
+                                f"{direction_label}\n"
+                                f"NIFTY : {px_nifty:.0f} | {signal}\n"
+                                f"Strike: {strike} {otype} @ ~Rs.{premium}\n"
+                                f"Lots  : {lots_today}L ({current_lot} units) | Expiry: {exp}\n"
+                                f"Mode  : {'PAPER' if PAPER_TRADE else 'REAL MONEY'}"
+                            )
+                            order_id = execute_order("BUY", strike, otype, current_lot, reason=signal)
+                            if order_id is None:      # live order failed — do not track a ghost position
+                                bot_log("Entry aborted — live order failed", "err")
+                                time.sleep(CHECK_INTERVAL); continue
                             positions.append({
                                 "instrument":    "NIFTY",
                                 "lot":           current_lot,
@@ -1296,7 +1499,6 @@ def bot_loop():
                             first_trade_done = True
                             state["first_trade_done"] = True
                             state["option_type"]      = otype
-                            direction_label = "BULLISH — BUY CALL (CE)" if otype == "CE" else "BEARISH — BUY PUT (PE)"
                             bot_log(f"{prefix} {direction_label} | NIFTY {strike} @ Rs.{premium} | {signal} | {lots_today}L ({current_lot}u) | Expiry:{exp}", "ok")
                             tg_send(
                                 f"TRADE ENTERED — NIFTY {otype}\n"

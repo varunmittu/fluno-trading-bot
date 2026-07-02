@@ -12,14 +12,19 @@ import subprocess, sys
 subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "kiteconnect"])
 
 from kiteconnect import KiteConnect
+import os, re
 
-# ── PASTE YOUR CREDENTIALS HERE ──────────────────────────────────────────────
-API_KEY    = "your_api_key_here"     # paste from developers.kite.trade
-API_SECRET = "your_api_secret_here"  # paste from developers.kite.trade
-# ─────────────────────────────────────────────────────────────────────────────
+# Credentials are read from config.py.txt (gitignored — NEVER commit that file)
+API_KEY, API_SECRET = "", ""
+if os.path.exists("config.py.txt"):
+    for line in open("config.py.txt"):
+        m = re.match(r'\s*(API_KEY|API_SECRET)\s*=\s*["\']([^"\']+)["\']', line)
+        if m:
+            if m.group(1) == "API_KEY":    API_KEY    = m.group(2)
+            if m.group(1) == "API_SECRET": API_SECRET = m.group(2)
 
-if "your_api" in API_KEY:
-    print("ERROR: Open kite_setup.py and paste your API key and secret first.")
+if not API_KEY or not API_SECRET:
+    print("ERROR: API_KEY / API_SECRET not found in config.py.txt")
     print("Get them from: https://developers.kite.trade/apps")
     sys.exit(1)
 
