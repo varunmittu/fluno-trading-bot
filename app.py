@@ -389,8 +389,17 @@ def tg_poll():
                     tg_send("Trading paused for today. Send /resume to re-enable.")
 
                 elif cmd == "/resume":
-                    state["first_trade_done"] = False
-                    tg_send("Trading resumed. Bot will enter next valid signal.")
+                    # /resume only undoes /stop — it must NEVER allow a second
+                    # trade after one was taken (one trade/day, no revenge trading)
+                    if has_traded_today():
+                        tg_send(
+                            "Cannot resume — a trade was already taken today.\n"
+                            "Rule: ONE trade per day. No re-entry, no revenge trading.\n"
+                            "Bot will trade again tomorrow."
+                        )
+                    else:
+                        state["first_trade_done"] = False
+                        tg_send("Trading resumed. Bot will enter next valid signal.")
 
                 elif cmd.startswith("/token"):
                     # Daily Kite login from your PHONE — no PC needed:
