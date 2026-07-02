@@ -936,15 +936,11 @@ def bot_loop():
             morning_pinged = True
             try:
                 yd_h, yd_l = fetch_daily_hl("^NSEI")
-                vix_now    = fetch_vix()
                 lines = ["Good morning! Market opens in 5 minutes."]
                 if yd_h and yd_l:
                     lines.append(f"\nNIFTY Reference:")
                     lines.append(f"  Yday High : {yd_h:.0f}")
                     lines.append(f"  Yday Low  : {yd_l:.0f}")
-                if vix_now:
-                    vix_msg = "HIGH — careful" if vix_now > 18 else "Normal"
-                    lines.append(f"India VIX : {vix_now:.1f} ({vix_msg})")
                 lines.append(f"\nCapital : Rs.{running_capital:.0f} | Lots: {lots_today}L ({lots_today*25} units)")
                 lines.append(f"SL: Rs.{abs(STOP_LOSS)} | BE Lock at Rs.{BREAKEVEN_LOCK_FLOOR}")
                 lines.append(f"\nPrediction at 10:15 AM:")
@@ -1217,10 +1213,6 @@ def bot_loop():
                 save_positions(positions)
 
             # ── 4. Update state ────────────────────────────────────────────────
-            vix = fetch_vix()
-            if vix:
-                state["vix"] = vix
-
             px_nifty = inst_prices.get("NIFTY")
             state["positions_list"]   = positions
             state["open_positions"]   = len(positions)
@@ -1323,12 +1315,11 @@ def bot_loop():
                             entered = True
 
             if not entered and not first_trade_done:
-                vix_tag = f" VIX:{state['vix']:.1f}" if state.get("vix") else ""
                 sig_tag = state.get("signal","--")
                 yd_h    = state.get("yd_high")
                 yd_l    = state.get("yd_low")
                 hl_tag  = f" YdH:{yd_h:.0f}/YdL:{yd_l:.0f}" if yd_h else ""
-                bot_log(f"NIFTY:{px_nifty:.0f}{hl_tag} Sig:{sig_tag}{vix_tag} Lots:{lots_today}L Cap:Rs.{running_capital:.0f} Daily:Rs.{daily_pnl:.0f}")
+                bot_log(f"NIFTY:{px_nifty:.0f}{hl_tag} Sig:{sig_tag} Lots:{lots_today}L Cap:Rs.{running_capital:.0f} Daily:Rs.{daily_pnl:.0f}")
 
             if time.time() - last_sync > 300:
                 sync_background()
