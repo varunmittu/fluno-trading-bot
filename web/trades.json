@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 11:55",
+  "last_updated": "2026-07-02 11:57",
   "summary": {
     "total_trades": 26,
     "wins": 6,
@@ -359,6 +359,11 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:55:36",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:55:32",
       "msg": "BE LOCK EXIT NIFTY CE | Peak:Rs.318 Booked:Rs.300 | Capital:Rs.11970 Lots->3L",
       "cls": "ok"
@@ -452,11 +457,6 @@
       "time": "11:44:58",
       "msg": "NIFTY in SL cooldown \u2014 waiting",
       "cls": "info"
-    },
-    {
-      "time": "11:41:52",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
