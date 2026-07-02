@@ -743,7 +743,7 @@ def fetch_option_premium(inst_name, strike, option_type, spot_price):
 
 def get_next_expiry(inst_name, index=0):
     """Calculate nearest expiry: NIFTY=Thursday, BANKNIFTY=Wednesday, SENSEX=Friday."""
-    weekday_map = {"NIFTY": 3, "BANKNIFTY": 2, "SENSEX": 4}  # Mon=0 … Sun=6
+    weekday_map = {"NIFTY": 0, "BANKNIFTY": 2, "SENSEX": 4}  # Mon=0 … Sun=6
     target_wd   = weekday_map.get(inst_name, 3)
     today       = date.today()
     days_ahead  = (target_wd - today.weekday()) % 7
@@ -753,7 +753,7 @@ def get_next_expiry(inst_name, index=0):
     expiry      = first_exp + timedelta(weeks=index)
     return expiry.strftime("%d %b %Y")   # e.g. "03 Jul 2026"
 
-EXPIRY_WEEKDAY = {"NIFTY": 3, "BANKNIFTY": 2, "SENSEX": 4}  # Thu, Wed, Fri
+EXPIRY_WEEKDAY = {"NIFTY": 0, "BANKNIFTY": 2, "SENSEX": 4}  # Mon, Wed, Fri
 
 def is_expiry_day(inst_name):
     """True if today is weekly expiry for this instrument — theta risk too high for buying."""
