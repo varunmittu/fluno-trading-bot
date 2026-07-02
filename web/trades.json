@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-07-02 12:10",
+  "last_updated": "2026-07-02 12:13",
   "summary": {
-    "total_trades": 26,
+    "total_trades": 27,
     "wins": 6,
-    "losses": 20,
-    "win_rate": 23.1,
-    "total_pnl": 972.0,
+    "losses": 21,
+    "win_rate": 22.2,
+    "total_pnl": 822.0,
     "avg_win": 696.0,
     "avg_loss": -160.0
   },
@@ -347,17 +347,40 @@
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE"
+    },
+    {
+      "id": 27,
+      "date": "2026-07-02",
+      "time": "12:13",
+      "score": 0,
+      "entry": 24108.35,
+      "exit": 24104.0,
+      "pnl": -150.0,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE"
     }
   ],
   "daily_pnl": {
     "2026-06-30": -1212.0,
     "2026-07-01": 2034.0,
-    "2026-07-02": 150.0
+    "2026-07-02": 0.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:13:12",
+      "msg": "STOP LOSS NIFTY CE | Entry:24108 Exit:24104 | Capital:Rs.11820 Lots->3L",
+      "cls": "err"
+    },
+    {
+      "time": "12:10:07",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:10:00",
       "msg": "Restored 1 open position(s) from disk.",
