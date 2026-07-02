@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 11:22",
+  "last_updated": "2026-07-02 11:27",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -332,6 +332,61 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:27:46",
+      "msg": "NIFTY:24089 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:27:46",
+      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
+      "cls": "info"
+    },
+    {
+      "time": "11:26:43",
+      "msg": "NIFTY:24100 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:26:43",
+      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
+      "cls": "info"
+    },
+    {
+      "time": "11:25:41",
+      "msg": "NIFTY:24103 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:25:41",
+      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
+      "cls": "info"
+    },
+    {
+      "time": "11:24:39",
+      "msg": "NIFTY:24098 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:24:39",
+      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
+      "cls": "info"
+    },
+    {
+      "time": "11:23:37",
+      "msg": "NIFTY:24091 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:23:37",
+      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
+      "cls": "info"
+    },
+    {
+      "time": "11:22:38",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:22:35",
       "msg": "NIFTY:24097 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
       "cls": ""
@@ -374,61 +429,6 @@
     {
       "time": "11:18:25",
       "msg": "NIFTY:24099 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:18:25",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "11:17:27",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:17:24",
-      "msg": "NIFTY:24098 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:17:24",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "11:16:22",
-      "msg": "NIFTY:24102 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:16:22",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "11:15:19",
-      "msg": "NIFTY:24098 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:15:19",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "11:14:16",
-      "msg": "NIFTY:24095 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:14:16",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "11:13:14",
-      "msg": "NIFTY:24095 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
       "cls": ""
     }
   ],
