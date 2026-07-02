@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 11:32",
+  "last_updated": "2026-07-02 11:36",
   "summary": {
     "total_trades": 24,
     "wins": 5,
@@ -332,104 +332,24 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "11:32:57",
-      "msg": "NIFTY:24080 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:32:57",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "11:31:55",
-      "msg": "NIFTY:24084 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:31:55",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "11:30:53",
-      "msg": "NIFTY:24087 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:30:53",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "11:29:51",
-      "msg": "NIFTY:24089 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:29:51",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "11:28:48",
-      "msg": "NIFTY:24091 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:28:48",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "11:27:49",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "time": "11:36:20",
+      "msg": "[PAPER] BULLISH \u2014 BUY CALL (CE) | NIFTY 24150 @ Rs.147.6 | BREAK HIGH 24050 | 3L (75u) | Expiry:06 Jul 2026",
       "cls": "ok"
     },
     {
-      "time": "11:27:46",
-      "msg": "NIFTY:24089 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:27:46",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
+      "time": "11:36:16",
+      "msg": "Capital: Rs.11820 | Lots: 3L (75 units)",
       "cls": "info"
     },
     {
-      "time": "11:26:43",
-      "msg": "NIFTY:24100 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:26:43",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
+      "time": "11:36:16",
+      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
       "cls": "info"
     },
     {
-      "time": "11:25:41",
-      "msg": "NIFTY:24103 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:25:41",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "11:24:39",
-      "msg": "NIFTY:24098 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:24:39",
-      "msg": "SKIP \u2014 NIFTY expiry day (Thursday)",
-      "cls": "info"
-    },
-    {
-      "time": "11:23:37",
-      "msg": "NIFTY:24091 Sig:-- Lots:3L Cap:Rs.11820 Daily:Rs.0",
-      "cls": ""
+      "time": "11:36:16",
+      "msg": "Kite connection failed: Incorrect `api_key` or `access_token`.",
+      "cls": "err"
     }
   ],
   "vix": null,
