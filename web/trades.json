@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02 12:43",
+  "last_updated": "2026-07-02 12:44",
   "summary": {
     "total_trades": 27,
     "wins": 6,
@@ -372,22 +372,22 @@
   "open_positions": 1,
   "bot_log": [
     {
-      "time": "12:43:51",
+      "time": "12:44:52",
       "msg": "Restored 1 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "12:43:51",
+      "time": "12:44:52",
       "msg": "Capital: Rs.11820 | Lots: 3L (75 units)",
       "cls": "info"
     },
     {
-      "time": "12:43:51",
+      "time": "12:44:52",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL=Rs.150",
       "cls": "info"
     },
     {
-      "time": "12:43:50",
+      "time": "12:44:51",
       "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
       "cls": "err"
     }
