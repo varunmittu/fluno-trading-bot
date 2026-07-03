@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03 12:05",
+  "last_updated": "2026-07-03 12:06",
   "summary": {
     "total_trades": 32,
     "wins": 8,
@@ -502,34 +502,24 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "12:04:26",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
-    },
-    {
-      "time": "12:00:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:00:11",
+      "time": "12:06:49",
       "msg": "4 trade(s) done today (from DB) \u2014 0 gated slot(s) left.",
       "cls": "info"
     },
     {
-      "time": "12:00:11",
+      "time": "12:06:49",
       "msg": "Capital: Rs.14904 | Lots: 4L (100 units)",
       "cls": "info"
     },
     {
-      "time": "12:00:11",
+      "time": "12:06:49",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT v4.1 (15-min MTF filter) | SL: dynamic Rs.100-500 | Max 3 trades/day",
       "cls": "info"
     },
     {
-      "time": "12:00:05",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
-      "cls": "err"
+      "time": "12:06:48",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
+      "cls": "ok"
     }
   ],
   "vix": null,
