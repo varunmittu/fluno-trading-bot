@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-03 12:06",
+  "last_updated": "2026-07-03 12:12",
   "summary": {
-    "total_trades": 32,
-    "wins": 8,
-    "losses": 24,
-    "win_rate": 25.0,
-    "total_pnl": 386.0,
-    "avg_win": 561.0,
-    "avg_loss": -171.0
+    "total_trades": 30,
+    "wins": 7,
+    "losses": 23,
+    "win_rate": 23.3,
+    "total_pnl": 482.0,
+    "avg_win": 612.0,
+    "avg_loss": -165.0
   },
   "trades": [
     {
@@ -446,21 +446,6 @@
       "lots": 4
     },
     {
-      "id": 30,
-      "date": "2026-07-03",
-      "time": "10:17",
-      "score": 54,
-      "entry": 24331.9,
-      "exit": 24321.9,
-      "pnl": -300.0,
-      "status": "STOP_LOSS",
-      "mode": "PAPER",
-      "instrument": "NIFTY",
-      "option_type": "CE",
-      "invested": 14940.0,
-      "lots": 4
-    },
-    {
       "id": 31,
       "date": "2026-07-03",
       "time": "11:03",
@@ -474,33 +459,43 @@
       "option_type": "CE",
       "invested": 11257.5,
       "lots": 3
-    },
-    {
-      "id": 32,
-      "date": "2026-07-03",
-      "time": "11:04",
-      "score": 54,
-      "entry": 24343.35,
-      "exit": 24350.8,
-      "pnl": 203.5,
-      "status": "TRAIL_EXIT",
-      "mode": "PAPER",
-      "instrument": "NIFTY",
-      "option_type": "CE",
-      "invested": 11257.5,
-      "lots": 3
     }
   ],
   "daily_pnl": {
     "2026-06-30": -1212.0,
     "2026-07-01": 2034.0,
     "2026-07-02": -150.0,
-    "2026-07-03": -286.0
+    "2026-07-03": -190.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:12:02",
+      "msg": "NIFTY:24363 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:4L Cap:Rs.14904 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:12:02",
+      "msg": "Trade #3 gate: conf 54% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "12:11:59",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:11:59",
+      "msg": "Kite: loaded 1604 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "12:06:54",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:06:49",
       "msg": "4 trade(s) done today (from DB) \u2014 0 gated slot(s) left.",
