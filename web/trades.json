@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03 09:21",
+  "last_updated": "2026-07-03 09:26",
   "summary": {
     "total_trades": 28,
     "wins": 6,
@@ -441,6 +441,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:26:11",
+      "msg": "NIFTY:24343 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:25:11",
+      "msg": "NIFTY:24337 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:24:08",
+      "msg": "NIFTY:24332 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:23:08",
+      "msg": "NIFTY:24334 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:22:08",
+      "msg": "NIFTY:24328 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:21:09",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:21:06",
       "msg": "NIFTY:24314 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
       "cls": ""
@@ -466,27 +496,32 @@
       "cls": ""
     },
     {
+      "time": "09:16:07",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:16:02",
       "msg": "NIFTY:24314 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "09:10:57",
+      "time": "09:10:58",
       "msg": "Morning Telegram ping sent",
       "cls": "info"
     },
     {
-      "time": "02:28:54",
+      "time": "00:48:52",
       "msg": "Capital: Rs.15000 | Lots: 4L (100 units)",
       "cls": "info"
     },
     {
-      "time": "02:28:54",
+      "time": "00:48:52",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL: dynamic Rs.100-500 | Max 3 trades/day",
       "cls": "info"
     },
     {
-      "time": "02:28:53",
+      "time": "00:48:50",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
