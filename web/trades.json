@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03 14:16",
+  "last_updated": "2026-07-03 14:19",
   "summary": {
     "total_trades": 31,
     "wins": 7,
@@ -487,57 +487,42 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "14:11:04",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "14:19:17",
+      "msg": "NIFTY:24280 YdH:24195/YdL:24059 Sig:FADE 24376->24280 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
     },
     {
-      "time": "14:05:57",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:00:51",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:55:47",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:50:41",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:45:35",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:40:32",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:40:25",
-      "msg": "3 trade(s) done today (from DB) \u2014 0 gated slot(s) left.",
+      "time": "14:19:17",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
       "cls": "info"
     },
     {
-      "time": "13:40:25",
+      "time": "14:19:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:19:17",
+      "msg": "Kite: loaded 1604 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "14:19:11",
+      "msg": "3 trade(s) done today (from DB) \u2014 96 gated slot(s) left.",
+      "cls": "info"
+    },
+    {
+      "time": "14:19:11",
       "msg": "Capital: Rs.14604 | Lots: 3L (75 units)",
       "cls": "info"
     },
     {
-      "time": "13:40:25",
-      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT v4.2 (15m MTF + OR-break + fade PE, window till 14:30) | SL: dynamic Rs.100-500 | Max 3 trades/day",
+      "time": "14:19:11",
+      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT v4.2 (15m MTF + OR-break + fade PE, window till 14:30) | SL: dynamic Rs.100-500 | Max 99 trades/day",
       "cls": "info"
     },
     {
-      "time": "13:40:24",
+      "time": "14:19:10",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
