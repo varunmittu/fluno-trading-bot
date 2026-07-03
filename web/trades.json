@@ -502,103 +502,103 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "11:54:30",
+      "time": "11:54:39",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:49:26",
+      "time": "11:49:31",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:44:21",
+      "time": "11:44:27",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:39:17",
+      "time": "11:39:21",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:34:13",
+      "time": "11:34:18",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:29:08",
+      "time": "11:29:13",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:24:03",
+      "time": "11:24:08",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:19:00",
+      "time": "11:19:05",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:13:53",
+      "time": "11:13:59",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:08:46",
+      "time": "11:08:52",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:04:42",
+      "time": "11:03:45",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "11:04:38",
-      "msg": "TRAIL EXIT (trend weakened) NIFTY CE | Peak:Rs.204 Booked:Rs.204 | Capital:Rs.14904 Lots->4L",
+      "time": "11:03:41",
+      "msg": "TRAIL EXIT (trend weakened) NIFTY CE | Peak:Rs.110 Booked:Rs.110 | Capital:Rs.14810 Lots->4L",
       "cls": "ok"
     },
     {
-      "time": "11:04:37",
+      "time": "11:03:40",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "11:03:37",
+      "time": "10:59:31",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "10:59:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:59:20",
+      "time": "10:59:27",
       "msg": "[PAPER] #3 BULLISH \u2014 BUY CALL (CE) | NIFTY 24400 @ Rs.150.1 | BREAK HIGH 24195 | Conf:54% SL:Rs.300 | 3L Inv:Rs.11258",
       "cls": "ok"
     },
     {
-      "time": "10:58:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "10:58:20",
+      "msg": "Vercel sync failed: To https://github.com/varunmittu/fluno-trading-bot.git\n ! [remote rejected] main",
+      "cls": "err"
     },
     {
-      "time": "10:58:16",
+      "time": "10:58:17",
       "msg": "NIFTY:24346 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:58:15",
+      "time": "10:58:17",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "10:57:15",
+      "time": "10:57:16",
       "msg": "NIFTY:24345 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
+      "cls": ""
+    },
+    {
+      "time": "10:56:14",
+      "msg": "NIFTY:24341 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     }
   ],
