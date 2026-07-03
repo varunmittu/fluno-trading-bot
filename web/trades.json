@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-03 12:19",
+  "last_updated": "2026-07-03 12:22",
   "summary": {
-    "total_trades": 30,
+    "total_trades": 31,
     "wins": 7,
-    "losses": 23,
-    "win_rate": 23.3,
-    "total_pnl": 482.0,
+    "losses": 24,
+    "win_rate": 22.6,
+    "total_pnl": 276.0,
     "avg_win": 612.0,
-    "avg_loss": -165.0
+    "avg_loss": -167.0
   },
   "trades": [
     {
@@ -459,18 +459,38 @@
       "option_type": "CE",
       "invested": 11257.5,
       "lots": 3
+    },
+    {
+      "id": 33,
+      "date": "2026-07-03",
+      "time": "12:22",
+      "score": 54,
+      "entry": 24367.05,
+      "exit": 24360.85,
+      "pnl": -206.0,
+      "status": "MANUAL_EXIT",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 11355.0,
+      "lots": 3
     }
   ],
   "daily_pnl": {
     "2026-06-30": -1212.0,
     "2026-07-01": 2034.0,
     "2026-07-02": -150.0,
-    "2026-07-03": -190.0
+    "2026-07-03": -396.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:19:51",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:16:42",
       "msg": "Synced to Vercel \u2014 live in ~15s",
