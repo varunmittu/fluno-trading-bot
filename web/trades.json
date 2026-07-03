@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03 15:26",
+  "last_updated": "2026-07-03 15:30",
   "summary": {
     "total_trades": 31,
     "wins": 7,
@@ -487,6 +487,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:30:09",
+      "msg": "SETTLEMENT | Day P&L:Rs.-396 | Capital:Rs.14604 | Next:3L",
+      "cls": "ok"
+    },
+    {
+      "time": "15:29:07",
+      "msg": "NIFTY:24269 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:28:07",
+      "msg": "NIFTY:24268 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:27:05",
+      "msg": "NIFTY:24264 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:26:07",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:26:04",
       "msg": "NIFTY:24265 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
       "cls": ""
@@ -559,31 +584,6 @@
     {
       "time": "15:13:50",
       "msg": "NIFTY:24275 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:12:49",
-      "msg": "NIFTY:24276 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:11:47",
-      "msg": "NIFTY:24278 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:10:49",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:10:46",
-      "msg": "NIFTY:24281 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:09:46",
-      "msg": "NIFTY:24279 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
       "cls": ""
     }
   ],
