@@ -466,32 +466,27 @@
       "cls": ""
     },
     {
-      "time": "09:16:07",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
       "time": "09:16:02",
       "msg": "NIFTY:24314 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "09:10:58",
+      "time": "09:10:57",
       "msg": "Morning Telegram ping sent",
       "cls": "info"
     },
     {
-      "time": "00:48:52",
+      "time": "02:28:54",
       "msg": "Capital: Rs.15000 | Lots: 4L (100 units)",
       "cls": "info"
     },
     {
-      "time": "00:48:52",
+      "time": "02:28:54",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT | SL: dynamic Rs.100-500 | Max 3 trades/day",
       "cls": "info"
     },
     {
-      "time": "00:48:50",
+      "time": "02:28:53",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
