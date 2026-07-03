@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03 15:15",
+  "last_updated": "2026-07-03 15:20",
   "summary": {
     "total_trades": 31,
     "wins": 7,
@@ -487,6 +487,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:20:57",
+      "msg": "NIFTY:24274 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:19:57",
+      "msg": "NIFTY:24269 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:18:56",
+      "msg": "NIFTY:24270 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:17:53",
+      "msg": "NIFTY:24267 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:16:53",
+      "msg": "NIFTY:24268 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:15:55",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:15:52",
       "msg": "NIFTY:24270 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
       "cls": ""
@@ -555,36 +585,6 @@
       "time": "15:04:39",
       "msg": "NIFTY:24277 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "15:03:38",
-      "msg": "NIFTY:24278 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:02:36",
-      "msg": "NIFTY:24282 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:01:36",
-      "msg": "NIFTY:24272 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:00:38",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:00:35",
-      "msg": "NIFTY:24276 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:00:33",
-      "msg": "3 trade(s) done today (from DB) \u2014 96 gated slot(s) left.",
-      "cls": "info"
     }
   ],
   "vix": null,
