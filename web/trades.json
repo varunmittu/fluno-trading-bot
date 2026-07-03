@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-03 10:16",
+  "last_updated": "2026-07-03 10:17",
   "summary": {
-    "total_trades": 28,
+    "total_trades": 29,
     "wins": 6,
-    "losses": 22,
-    "win_rate": 21.4,
-    "total_pnl": 672.0,
+    "losses": 23,
+    "win_rate": 20.7,
+    "total_pnl": 372.0,
     "avg_win": 696.0,
-    "avg_loss": -159.0
+    "avg_loss": -165.0
   },
   "trades": [
     {
@@ -429,29 +429,55 @@
       "option_type": "CE",
       "invested": 10395.0,
       "lots": 3
+    },
+    {
+      "id": 29,
+      "date": "2026-07-03",
+      "time": "10:17",
+      "score": 54,
+      "entry": 24331.9,
+      "exit": 24321.6,
+      "pnl": -300.0,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 14940.0,
+      "lots": 4
     }
   ],
   "daily_pnl": {
     "2026-06-30": -1212.0,
     "2026-07-01": 2034.0,
-    "2026-07-02": -150.0
+    "2026-07-02": -150.0,
+    "2026-07-03": -300.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "10:16:07",
+      "time": "10:17:09",
+      "msg": "STOP LOSS NIFTY CE | Entry:24332 Exit:24322 SL:Rs.-300 | Capital:Rs.14700 Lots->3L",
+      "cls": "err"
+    },
+    {
+      "time": "10:16:10",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "10:16:05",
       "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24400 @ Rs.149.4 | BREAK HIGH 24195 | Conf:54% SL:Rs.300 | 4L Inv:Rs.14940",
       "cls": "ok"
     },
     {
-      "time": "10:16:03",
+      "time": "10:16:01",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "10:16:02",
+      "time": "10:16:01",
       "msg": "Kite: loaded 1604 NIFTY option contracts",
       "cls": "info"
     },
@@ -471,8 +497,13 @@
       "cls": ""
     },
     {
+      "time": "10:11:58",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:11:55",
-      "msg": "NIFTY:24337 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "msg": "NIFTY:24336 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
       "cls": ""
     },
     {
@@ -487,7 +518,7 @@
     },
     {
       "time": "10:08:52",
-      "msg": "NIFTY:24338 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "msg": "NIFTY:24339 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
       "cls": ""
     },
     {
@@ -496,13 +527,13 @@
       "cls": ""
     },
     {
-      "time": "10:06:52",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "10:06:53",
+      "msg": "Vercel sync failed: To https://github.com/varunmittu/fluno-trading-bot.git\n ! [remote rejected] main",
+      "cls": "err"
     },
     {
-      "time": "10:06:50",
-      "msg": "NIFTY:24325 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "time": "10:06:49",
+      "msg": "NIFTY:24324 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
       "cls": ""
     },
     {
@@ -512,32 +543,17 @@
     },
     {
       "time": "10:04:49",
-      "msg": "NIFTY:24318 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "msg": "NIFTY:24321 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
       "cls": ""
     },
     {
       "time": "10:03:47",
-      "msg": "NIFTY:24329 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "msg": "NIFTY:24328 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
       "cls": ""
     },
     {
       "time": "10:02:46",
       "msg": "NIFTY:24333 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:01:49",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:01:46",
-      "msg": "NIFTY:24340 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:00:44",
-      "msg": "NIFTY:24338 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
       "cls": ""
     }
   ],
