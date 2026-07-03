@@ -472,102 +472,102 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "10:53:06",
-      "msg": "NIFTY:24344 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
+      "time": "10:53:08",
+      "msg": "NIFTY:24345 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:53:06",
+      "time": "10:53:08",
       "msg": "Trade #3 gate: conf 54% \u2014 awaiting /confirm",
       "cls": "info"
     },
     {
-      "time": "10:53:04",
+      "time": "10:53:05",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "10:52:03",
+      "time": "10:52:04",
       "msg": "NIFTY:24345 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:51:02",
+      "time": "10:51:03",
       "msg": "NIFTY:24345 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:49:59",
+      "time": "10:50:00",
       "msg": "NIFTY:24348 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:48:58",
-      "msg": "NIFTY:24346 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
+      "time": "10:49:00",
+      "msg": "NIFTY:24347 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:48:00",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "10:48:01",
+      "msg": "Vercel sync failed: To https://github.com/varunmittu/fluno-trading-bot.git\n ! [remote rejected] main",
+      "cls": "err"
     },
     {
-      "time": "10:47:57",
+      "time": "10:47:58",
       "msg": "NIFTY:24339 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:47:56",
+      "time": "10:47:57",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "10:46:54",
+      "time": "10:46:55",
       "msg": "NIFTY:24341 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:45:53",
+      "time": "10:45:54",
       "msg": "NIFTY:24340 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:44:52",
+      "time": "10:44:53",
       "msg": "NIFTY:24339 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:43:49",
-      "msg": "NIFTY:24337 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
+      "time": "10:43:51",
+      "msg": "NIFTY:24338 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:42:51",
+      "time": "10:42:52",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     },
     {
-      "time": "10:42:48",
-      "msg": "NIFTY:24338 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
+      "time": "10:42:50",
+      "msg": "NIFTY:24339 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:42:47",
+      "time": "10:42:49",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "10:41:47",
-      "msg": "NIFTY:24338 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
+      "time": "10:41:48",
+      "msg": "NIFTY:24337 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:40:44",
+      "time": "10:40:46",
       "msg": "NIFTY:24336 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     },
     {
-      "time": "10:39:43",
+      "time": "10:39:45",
       "msg": "NIFTY:24342 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     }
