@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03 14:55",
+  "last_updated": "2026-07-03 15:00",
   "summary": {
     "total_trades": 31,
     "wins": 7,
@@ -487,104 +487,29 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "14:55:42",
-      "msg": "NIFTY:24262 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
+      "time": "15:00:35",
+      "msg": "NIFTY:24276 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "14:54:41",
-      "msg": "NIFTY:24262 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
+      "time": "15:00:33",
+      "msg": "3 trade(s) done today (from DB) \u2014 96 gated slot(s) left.",
+      "cls": "info"
     },
     {
-      "time": "14:53:39",
-      "msg": "NIFTY:24260 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
+      "time": "15:00:33",
+      "msg": "Capital: Rs.14604 | Lots: 3L (75 units)",
+      "cls": "info"
     },
     {
-      "time": "14:52:39",
-      "msg": "NIFTY:24262 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
+      "time": "15:00:33",
+      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT v4.2 (15m MTF + OR-break + fade PE, window till 14:30) | SL: dynamic Rs.100-500 | Max 99 trades/day",
+      "cls": "info"
     },
     {
-      "time": "14:51:38",
-      "msg": "NIFTY:24271 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:50:39",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "time": "15:00:32",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
-    },
-    {
-      "time": "14:50:36",
-      "msg": "NIFTY:24275 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:49:35",
-      "msg": "NIFTY:24275 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:48:35",
-      "msg": "NIFTY:24273 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:47:32",
-      "msg": "NIFTY:24264 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:46:32",
-      "msg": "NIFTY:24264 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:45:35",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:45:31",
-      "msg": "NIFTY:24273 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:44:29",
-      "msg": "NIFTY:24270 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:43:28",
-      "msg": "NIFTY:24270 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:42:28",
-      "msg": "NIFTY:24269 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:41:25",
-      "msg": "NIFTY:24278 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:40:28",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:40:25",
-      "msg": "NIFTY:24280 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:39:24",
-      "msg": "NIFTY:24277 YdH:24195/YdL:24059 Sig:FADE 24376->24269 T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
