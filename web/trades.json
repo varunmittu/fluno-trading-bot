@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03 12:55",
+  "last_updated": "2026-07-03 13:00",
   "summary": {
     "total_trades": 31,
     "wins": 7,
@@ -487,6 +487,11 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:55:28",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:50:23",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -579,11 +584,6 @@
     {
       "time": "12:14:17",
       "msg": "Capital: Rs.14810 | Lots: 4L (100 units)",
-      "cls": "info"
-    },
-    {
-      "time": "12:14:17",
-      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT v4.1 (15-min MTF filter) | SL: dynamic Rs.100-500 | Max 3 trades/day",
       "cls": "info"
     }
   ],
