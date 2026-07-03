@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03 10:06",
+  "last_updated": "2026-07-03 10:11",
   "summary": {
     "total_trades": 28,
     "wins": 6,
@@ -441,6 +441,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:11:55",
+      "msg": "NIFTY:24337 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:10:55",
+      "msg": "NIFTY:24340 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:09:52",
+      "msg": "NIFTY:24340 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:08:52",
+      "msg": "NIFTY:24338 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:07:52",
+      "msg": "NIFTY:24336 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:06:52",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:06:50",
       "msg": "NIFTY:24325 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
       "cls": ""
@@ -508,36 +538,6 @@
     {
       "time": "09:55:41",
       "msg": "NIFTY:24328 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:54:39",
-      "msg": "NIFTY:24336 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:53:39",
-      "msg": "NIFTY:24339 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:52:38",
-      "msg": "NIFTY:24340 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:51:39",
-      "msg": "Vercel sync failed: To https://github.com/varunmittu/fluno-trading-bot.git\n ! [remote rejected] main",
-      "cls": "err"
-    },
-    {
-      "time": "09:51:36",
-      "msg": "NIFTY:24340 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:50:36",
-      "msg": "NIFTY:24334 Sig:-- T:0/3 Lots:4L Cap:Rs.15000 Daily:Rs.0",
       "cls": ""
     }
   ],
