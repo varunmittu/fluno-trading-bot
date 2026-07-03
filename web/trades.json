@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03 11:04",
+  "last_updated": "2026-07-03 11:08",
   "summary": {
     "total_trades": 32,
     "wins": 8,
@@ -502,6 +502,11 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:04:42",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:04:38",
       "msg": "TRAIL EXIT (trend weakened) NIFTY CE | Peak:Rs.204 Booked:Rs.204 | Capital:Rs.14904 Lots->4L",
       "cls": "ok"
@@ -594,11 +599,6 @@
     {
       "time": "10:49:59",
       "msg": "NIFTY:24348 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
-      "cls": ""
-    },
-    {
-      "time": "10:48:58",
-      "msg": "NIFTY:24346 YdH:24195/YdL:24059 Sig:BREAK HIGH 24195 T:2/3 Lots:3L Cap:Rs.14700 Daily:Rs.-300",
       "cls": ""
     }
   ],
