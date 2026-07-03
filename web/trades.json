@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03 15:30",
+  "last_updated": "2026-07-03 15:31",
   "summary": {
     "total_trades": 31,
     "wins": 7,
@@ -487,6 +487,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:31:13",
+      "msg": "NIFTY:24272 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:30:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "15:30:11",
+      "msg": "WEEKLY SUMMARY sent | Week P&L:Rs.+276",
+      "cls": "ok"
+    },
+    {
       "time": "15:30:09",
       "msg": "SETTLEMENT | Day P&L:Rs.-396 | Capital:Rs.14604 | Next:3L",
       "cls": "ok"
@@ -570,21 +585,6 @@
       "time": "15:15:55",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "15:15:52",
-      "msg": "NIFTY:24270 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:14:50",
-      "msg": "NIFTY:24272 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:13:50",
-      "msg": "NIFTY:24275 Sig:-- T:3/99 Lots:3L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
