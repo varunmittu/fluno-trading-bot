@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03 13:16",
+  "last_updated": "2026-07-03 13:17",
   "summary": {
     "total_trades": 31,
     "wins": 7,
@@ -487,37 +487,22 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "13:11:36",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:06:30",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:01:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:01:16",
+      "time": "13:17:55",
       "msg": "3 trade(s) done today (from DB) \u2014 0 gated slot(s) left.",
       "cls": "info"
     },
     {
-      "time": "13:01:16",
+      "time": "13:17:55",
       "msg": "Capital: Rs.14604 | Lots: 3L (75 units)",
       "cls": "info"
     },
     {
-      "time": "13:01:16",
-      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT v4.1 (15-min MTF filter) | SL: dynamic Rs.100-500 | Max 3 trades/day",
+      "time": "13:17:55",
+      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT v4.2 (15m MTF + OR-break + fade PE, window till 14:30) | SL: dynamic Rs.100-500 | Max 3 trades/day",
       "cls": "info"
     },
     {
-      "time": "13:01:10",
+      "time": "13:17:53",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
