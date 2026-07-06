@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-06 12:01",
+  "last_updated": "2026-07-06 12:03",
   "summary": {
-    "total_trades": 33,
-    "wins": 9,
+    "total_trades": 34,
+    "wins": 10,
     "losses": 24,
-    "win_rate": 27.3,
-    "total_pnl": 1089.0,
-    "avg_win": 566.0,
+    "win_rate": 29.4,
+    "total_pnl": 1389.0,
+    "avg_win": 540.0,
     "avg_loss": -167.0
   },
   "trades": [
@@ -504,6 +504,21 @@
       "option_type": "CE",
       "invested": 9789.0,
       "lots": 2
+    },
+    {
+      "id": 36,
+      "date": "2026-07-06",
+      "time": "12:03",
+      "score": 71,
+      "entry": 24416.05,
+      "exit": 24426.15,
+      "pnl": 300.0,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9860.5,
+      "lots": 2
     }
   ],
   "daily_pnl": {
@@ -511,81 +526,46 @@
     "2026-07-01": 2034.0,
     "2026-07-02": -150.0,
     "2026-07-03": -396.0,
-    "2026-07-06": 813.0
+    "2026-07-06": 1113.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
     {
-      "time": "12:01:10",
-      "msg": "RIDING NIFTY CE | Peak:Rs.328 Now:Rs.328 | staircase floor Rs.300",
+      "time": "12:03:02",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.328 Booked:Rs.300 | Capital:Rs.15717 Lots->1L",
       "cls": "ok"
     },
     {
-      "time": "12:01:10",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.328 \u2014 floor locked at Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "12:00:06",
-      "msg": "RIDING NIFTY CE | Peak:Rs.198 Now:Rs.198 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "11:59:04",
-      "msg": "RIDING NIFTY CE | Peak:Rs.162 Now:Rs.161 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "11:58:01",
-      "msg": "RIDING NIFTY CE | Peak:Rs.162 Now:Rs.162 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "11:57:55",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.162 \u2014 floor locked at Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "11:55:49",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:54:00",
+      "time": "12:03:00",
       "msg": "Kite: loaded 1608 NIFTY option contracts",
       "cls": "info"
     },
     {
-      "time": "11:53:44",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
+      "time": "12:02:53",
+      "msg": "Restored today's booked P&L from DB: Rs.+812.8",
+      "cls": "info"
     },
     {
-      "time": "11:50:37",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:50:28",
+      "time": "12:02:53",
       "msg": "Restored 1 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "11:50:28",
+      "time": "12:02:53",
       "msg": "Capital: Rs.15417 | Lots: 1L (65 units)",
       "cls": "info"
     },
     {
-      "time": "11:50:28",
+      "time": "12:02:53",
       "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT v4.3 (staircase profit booking 150/300/500/700/850/900/+150) | SL: dynamic Rs.100-500",
       "cls": "info"
     },
     {
-      "time": "11:50:27",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
-      "cls": "err"
+      "time": "12:02:52",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
+      "cls": "ok"
     }
   ],
   "vix": null,
