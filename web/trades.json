@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06 10:52",
+  "last_updated": "2026-07-06 10:53",
   "summary": {
     "total_trades": 33,
     "wins": 9,
@@ -518,6 +518,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:53:34",
+      "msg": "NIFTY:24414 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:2/99 Lots:1L Cap:Rs.15417 Daily:Rs.813",
+      "cls": ""
+    },
+    {
+      "time": "10:52:33",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "10:52:33",
+      "msg": "NIFTY:24411 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:2/99 Lots:1L Cap:Rs.15417 Daily:Rs.813",
+      "cls": ""
+    },
+    {
+      "time": "10:52:33",
+      "msg": "Trade #3 gate: conf 71% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "10:52:31",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "10:52:29",
       "msg": "PROFIT LOCK NIFTY CE | Peak:Rs.621 Booked:Rs.331 | Capital:Rs.15417",
       "cls": "ok"
@@ -591,31 +616,6 @@
       "time": "10:35:28",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "10:35:25",
-      "msg": "PROFIT LOCK NIFTY CE | Peak:Rs.744 Booked:Rs.482 | Capital:Rs.15086",
-      "cls": "ok"
-    },
-    {
-      "time": "10:34:22",
-      "msg": "RIDING NIFTY CE | Peak:Rs.744 Now:Rs.696 (small trail) | BE LOCKED (floor Rs.300)",
-      "cls": "ok"
-    },
-    {
-      "time": "10:33:20",
-      "msg": "RIDING NIFTY CE | Peak:Rs.744 Now:Rs.703 (small trail) | BE LOCKED (floor Rs.300)",
-      "cls": "ok"
-    },
-    {
-      "time": "10:32:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:32:15",
-      "msg": "RIDING NIFTY CE | Peak:Rs.744 Now:Rs.744 (small trail) | BE LOCKED (floor Rs.300)",
-      "cls": "ok"
     }
   ],
   "vix": null,
