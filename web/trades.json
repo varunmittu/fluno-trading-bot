@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06 15:05",
+  "last_updated": "2026-07-06 15:10",
   "summary": {
     "total_trades": 37,
     "wins": 12,
@@ -578,6 +578,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:10:08",
+      "msg": "NIFTY:24441 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
+      "cls": ""
+    },
+    {
+      "time": "15:09:06",
+      "msg": "NIFTY:24446 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
+      "cls": ""
+    },
+    {
+      "time": "15:08:05",
+      "msg": "NIFTY:24441 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
+      "cls": ""
+    },
+    {
+      "time": "15:07:05",
+      "msg": "NIFTY:24434 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
+      "cls": ""
+    },
+    {
+      "time": "15:06:02",
+      "msg": "NIFTY:24432 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
+      "cls": ""
+    },
+    {
+      "time": "15:05:04",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:05:02",
       "msg": "NIFTY:24429 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
       "cls": ""
@@ -646,36 +676,6 @@
       "time": "14:54:51",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "14:54:48",
-      "msg": "NIFTY:24408 YdH:24378/YdL:24252 Sig:FADE 24458->24408 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "14:54:48",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:54:47",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:54:47",
-      "msg": "Kite: loaded 1608 NIFTY option contracts",
-      "cls": "info"
-    },
-    {
-      "time": "14:54:40",
-      "msg": "Restored today's booked P&L from DB: Rs.+1,112.8",
-      "cls": "info"
-    },
-    {
-      "time": "14:54:40",
-      "msg": "6 trade(s) done today (from DB) \u2014 93 gated slot(s) left.",
-      "cls": "info"
     }
   ],
   "vix": null,
