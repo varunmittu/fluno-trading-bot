@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06 09:35",
+  "last_updated": "2026-07-06 09:40",
   "summary": {
     "total_trades": 31,
     "wins": 7,
@@ -487,6 +487,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:40:48",
+      "msg": "NIFTY:24373 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:39:48",
+      "msg": "NIFTY:24371 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:38:46",
+      "msg": "NIFTY:24377 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:37:45",
+      "msg": "NIFTY:24368 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:36:45",
+      "msg": "NIFTY:24376 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:35:45",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:35:43",
       "msg": "NIFTY:24376 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
       "cls": ""
@@ -554,36 +584,6 @@
     {
       "time": "09:24:35",
       "msg": "NIFTY:24345 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:23:33",
-      "msg": "NIFTY:24346 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:22:32",
-      "msg": "NIFTY:24351 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:21:32",
-      "msg": "NIFTY:24345 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:20:32",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:20:30",
-      "msg": "NIFTY:24353 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:19:30",
-      "msg": "NIFTY:24352 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
       "cls": ""
     }
   ],
