@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-06 10:32",
+  "last_updated": "2026-07-06 10:35",
   "summary": {
-    "total_trades": 31,
-    "wins": 7,
+    "total_trades": 32,
+    "wins": 8,
     "losses": 24,
-    "win_rate": 22.6,
-    "total_pnl": 276.0,
-    "avg_win": 612.0,
+    "win_rate": 25.0,
+    "total_pnl": 758.0,
+    "avg_win": 596.0,
     "avg_loss": -167.0
   },
   "trades": [
@@ -474,18 +474,54 @@
       "option_type": "CE",
       "invested": 11355.0,
       "lots": 3
+    },
+    {
+      "id": 34,
+      "date": "2026-07-06",
+      "time": "10:35",
+      "score": 71,
+      "entry": 24381.65,
+      "exit": 24400.95,
+      "pnl": 481.8,
+      "status": "PROFIT_LOCK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9730.5,
+      "lots": 2
     }
   ],
   "daily_pnl": {
     "2026-06-30": -1212.0,
     "2026-07-01": 2034.0,
     "2026-07-02": -150.0,
-    "2026-07-03": -396.0
+    "2026-07-03": -396.0,
+    "2026-07-06": 482.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "10:35:25",
+      "msg": "PROFIT LOCK NIFTY CE | Peak:Rs.744 Booked:Rs.482 | Capital:Rs.15086",
+      "cls": "ok"
+    },
+    {
+      "time": "10:34:22",
+      "msg": "RIDING NIFTY CE | Peak:Rs.744 Now:Rs.696 (small trail) | BE LOCKED (floor Rs.300)",
+      "cls": "ok"
+    },
+    {
+      "time": "10:33:20",
+      "msg": "RIDING NIFTY CE | Peak:Rs.744 Now:Rs.703 (small trail) | BE LOCKED (floor Rs.300)",
+      "cls": "ok"
+    },
+    {
+      "time": "10:32:19",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:32:15",
       "msg": "RIDING NIFTY CE | Peak:Rs.744 Now:Rs.744 (small trail) | BE LOCKED (floor Rs.300)",
@@ -565,26 +601,6 @@
       "time": "10:17:38",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "10:17:29",
-      "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24450 @ Rs.149.7 | BREAK HIGH 24378 | Conf:71% SL:Rs.400 | 1L Inv:Rs.9730",
-      "cls": "ok"
-    },
-    {
-      "time": "10:16:27",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:16:25",
-      "msg": "NIFTY:24377 YdH:24378/YdL:24252 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:15:22",
-      "msg": "NIFTY:24370 YdH:24378/YdL:24252 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
