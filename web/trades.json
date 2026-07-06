@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06 10:35",
+  "last_updated": "2026-07-06 10:37",
   "summary": {
     "total_trades": 32,
     "wins": 8,
@@ -503,6 +503,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:37:35",
+      "msg": "[PAPER] #2 BULLISH \u2014 BUY CALL (CE) | NIFTY 24450 @ Rs.150.6 | BREAK HIGH 24378 | Conf:71% SL:Rs.400 | 1L Inv:Rs.9789",
+      "cls": "ok"
+    },
+    {
+      "time": "10:36:31",
+      "msg": "NIFTY:24401 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:1/99 Lots:1L Cap:Rs.15086 Daily:Rs.482",
+      "cls": ""
+    },
+    {
+      "time": "10:35:30",
+      "msg": "NIFTY:24401 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:1/99 Lots:1L Cap:Rs.15086 Daily:Rs.482",
+      "cls": ""
+    },
+    {
+      "time": "10:35:30",
+      "msg": "Trade #2 gate: conf 71% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "10:35:28",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "10:35:28",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "10:35:25",
       "msg": "PROFIT LOCK NIFTY CE | Peak:Rs.744 Booked:Rs.482 | Capital:Rs.15086",
       "cls": "ok"
@@ -570,36 +600,6 @@
     {
       "time": "10:23:53",
       "msg": "RIDING NIFTY CE | Peak:Rs.491 Now:Rs.416 (small trail) | BE LOCKED (floor Rs.300)",
-      "cls": "ok"
-    },
-    {
-      "time": "10:22:50",
-      "msg": "RIDING NIFTY CE | Peak:Rs.491 Now:Rs.491 (small trail) | BE LOCKED (floor Rs.300)",
-      "cls": "ok"
-    },
-    {
-      "time": "10:21:50",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:21:47",
-      "msg": "RIDING NIFTY CE | Peak:Rs.344 Now:Rs.312 | BE LOCKED (floor Rs.300)",
-      "cls": "ok"
-    },
-    {
-      "time": "10:20:45",
-      "msg": "RIDING NIFTY CE | Peak:Rs.344 Now:Rs.344 | BE LOCKED (floor Rs.300)",
-      "cls": "ok"
-    },
-    {
-      "time": "10:20:44",
-      "msg": "BE LOCK ON NIFTY CE | Peak:Rs.344 \u2014 SL floor now Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "10:17:38",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
   ],
