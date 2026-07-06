@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06 10:21",
+  "last_updated": "2026-07-06 10:27",
   "summary": {
     "total_trades": 31,
     "wins": 7,
@@ -487,6 +487,36 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "10:27:01",
+      "msg": "RIDING NIFTY CE | Peak:Rs.491 Now:Rs.453 (small trail) | BE LOCKED (floor Rs.300)",
+      "cls": "ok"
+    },
+    {
+      "time": "10:25:58",
+      "msg": "RIDING NIFTY CE | Peak:Rs.491 Now:Rs.469 (small trail) | BE LOCKED (floor Rs.300)",
+      "cls": "ok"
+    },
+    {
+      "time": "10:24:56",
+      "msg": "RIDING NIFTY CE | Peak:Rs.491 Now:Rs.366 (small trail) | BE LOCKED (floor Rs.300)",
+      "cls": "ok"
+    },
+    {
+      "time": "10:23:53",
+      "msg": "RIDING NIFTY CE | Peak:Rs.491 Now:Rs.416 (small trail) | BE LOCKED (floor Rs.300)",
+      "cls": "ok"
+    },
+    {
+      "time": "10:22:50",
+      "msg": "RIDING NIFTY CE | Peak:Rs.491 Now:Rs.491 (small trail) | BE LOCKED (floor Rs.300)",
+      "cls": "ok"
+    },
+    {
+      "time": "10:21:50",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:21:47",
       "msg": "RIDING NIFTY CE | Peak:Rs.344 Now:Rs.312 | BE LOCKED (floor Rs.300)",
       "cls": "ok"
@@ -553,36 +583,6 @@
     },
     {
       "time": "10:11:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:11:14",
-      "msg": "NIFTY:24383 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:10:14",
-      "msg": "NIFTY:24383 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:09:12",
-      "msg": "NIFTY:24382 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:08:11",
-      "msg": "NIFTY:24377 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:07:11",
-      "msg": "NIFTY:24378 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:06:12",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
