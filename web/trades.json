@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06 12:08",
+  "last_updated": "2026-07-06 12:13",
   "summary": {
     "total_trades": 34,
     "wins": 10,
@@ -533,6 +533,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:13:25",
+      "msg": "NIFTY:24437 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:3/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
+      "cls": ""
+    },
+    {
+      "time": "12:13:24",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:12:24",
+      "msg": "NIFTY:24429 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:3/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
+      "cls": ""
+    },
+    {
+      "time": "12:11:21",
+      "msg": "NIFTY:24426 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:3/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
+      "cls": ""
+    },
+    {
+      "time": "12:10:20",
+      "msg": "NIFTY:24429 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:3/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
+      "cls": ""
+    },
+    {
+      "time": "12:09:19",
+      "msg": "NIFTY:24427 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:3/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
+      "cls": ""
+    },
+    {
+      "time": "12:08:19",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:08:16",
       "msg": "NIFTY:24428 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:3/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
       "cls": ""
@@ -595,36 +630,6 @@
     {
       "time": "12:03:02",
       "msg": "STAIR BOOK NIFTY CE | Peak:Rs.328 Booked:Rs.300 | Capital:Rs.15717 Lots->1L",
-      "cls": "ok"
-    },
-    {
-      "time": "12:03:00",
-      "msg": "Kite: loaded 1608 NIFTY option contracts",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:53",
-      "msg": "Restored today's booked P&L from DB: Rs.+812.8",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:53",
-      "msg": "Restored 1 open position(s) from disk.",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:53",
-      "msg": "Capital: Rs.15417 | Lots: 1L (65 units)",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:53",
-      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT v4.3 (staircase profit booking 150/300/500/700/850/900/+150) | SL: dynamic Rs.100-500",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:52",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
   ],
