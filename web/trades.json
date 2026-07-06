@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-06 12:29",
+  "last_updated": "2026-07-06 12:34",
   "summary": {
-    "total_trades": 34,
-    "wins": 10,
+    "total_trades": 35,
+    "wins": 11,
     "losses": 24,
-    "win_rate": 29.4,
-    "total_pnl": 1389.0,
-    "avg_win": 540.0,
+    "win_rate": 31.4,
+    "total_pnl": 1539.0,
+    "avg_win": 504.0,
     "avg_loss": -167.0
   },
   "trades": [
@@ -519,6 +519,21 @@
       "option_type": "CE",
       "invested": 9860.5,
       "lots": 2
+    },
+    {
+      "id": 37,
+      "date": "2026-07-06",
+      "time": "12:34",
+      "score": 54,
+      "entry": 24443.4,
+      "exit": 24445.55,
+      "pnl": 150.0,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9795.5,
+      "lots": 2
     }
   ],
   "daily_pnl": {
@@ -526,12 +541,32 @@
     "2026-07-01": 2034.0,
     "2026-07-02": -150.0,
     "2026-07-03": -396.0,
-    "2026-07-06": 1113.0
+    "2026-07-06": 1263.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:34:28",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.150 Booked:Rs.150 | Capital:Rs.15867 Lots->1L",
+      "cls": "ok"
+    },
+    {
+      "time": "12:33:26",
+      "msg": "RIDING NIFTY CE | Peak:Rs.150 Now:Rs.150 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "12:33:24",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.150 \u2014 floor locked at Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "12:29:16",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:23:59",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -611,26 +646,6 @@
       "time": "12:08:14",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "12:07:14",
-      "msg": "NIFTY:24426 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:3/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "12:06:13",
-      "msg": "NIFTY:24426 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:3/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "12:05:10",
-      "msg": "NIFTY:24428 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:3/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "12:04:09",
-      "msg": "NIFTY:24424 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:3/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
     }
   ],
   "vix": null,
