@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06 10:17",
+  "last_updated": "2026-07-06 10:21",
   "summary": {
     "total_trades": 31,
     "wins": 7,
@@ -484,8 +484,28 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "10:21:47",
+      "msg": "RIDING NIFTY CE | Peak:Rs.344 Now:Rs.312 | BE LOCKED (floor Rs.300)",
+      "cls": "ok"
+    },
+    {
+      "time": "10:20:45",
+      "msg": "RIDING NIFTY CE | Peak:Rs.344 Now:Rs.344 | BE LOCKED (floor Rs.300)",
+      "cls": "ok"
+    },
+    {
+      "time": "10:20:44",
+      "msg": "BE LOCK ON NIFTY CE | Peak:Rs.344 \u2014 SL floor now Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "10:17:38",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:17:29",
       "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24450 @ Rs.149.7 | BREAK HIGH 24378 | Conf:71% SL:Rs.400 | 1L Inv:Rs.9730",
@@ -565,26 +585,6 @@
       "time": "10:06:12",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "10:06:09",
-      "msg": "NIFTY:24379 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:05:09",
-      "msg": "NIFTY:24382 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:04:09",
-      "msg": "NIFTY:24381 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:03:07",
-      "msg": "NIFTY:24381 Sig:-- T:0/99 Lots:1L Cap:Rs.14604 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
