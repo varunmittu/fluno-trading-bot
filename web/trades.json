@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06 13:10",
+  "last_updated": "2026-07-06 13:16",
   "summary": {
     "total_trades": 36,
     "wins": 11,
@@ -563,6 +563,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:16:07",
+      "msg": "NIFTY:24447 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:5/99 Lots:1L Cap:Rs.15567 Daily:Rs.963",
+      "cls": ""
+    },
+    {
+      "time": "13:15:06",
+      "msg": "NIFTY:24449 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:5/99 Lots:1L Cap:Rs.15567 Daily:Rs.963",
+      "cls": ""
+    },
+    {
+      "time": "13:14:03",
+      "msg": "NIFTY:24449 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:5/99 Lots:1L Cap:Rs.15567 Daily:Rs.963",
+      "cls": ""
+    },
+    {
+      "time": "13:13:01",
+      "msg": "NIFTY:24447 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:5/99 Lots:1L Cap:Rs.15567 Daily:Rs.963",
+      "cls": ""
+    },
+    {
+      "time": "13:12:01",
+      "msg": "NIFTY:24448 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:5/99 Lots:1L Cap:Rs.15567 Daily:Rs.963",
+      "cls": ""
+    },
+    {
+      "time": "13:12:00",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:11:00",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:10:57",
       "msg": "NIFTY:24450 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:5/99 Lots:1L Cap:Rs.15567 Daily:Rs.963",
       "cls": ""
@@ -626,41 +661,6 @@
       "time": "13:01:36",
       "msg": "Gated trade skipped \u2014 confirmation timeout",
       "cls": "info"
-    },
-    {
-      "time": "13:01:29",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:00:31",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:28",
-      "msg": "NIFTY:24439 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:5/99 Lots:1L Cap:Rs.15567 Daily:Rs.963",
-      "cls": ""
-    },
-    {
-      "time": "12:59:27",
-      "msg": "NIFTY:24437 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:5/99 Lots:1L Cap:Rs.15567 Daily:Rs.963",
-      "cls": ""
-    },
-    {
-      "time": "12:58:24",
-      "msg": "NIFTY:24427 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:5/99 Lots:1L Cap:Rs.15567 Daily:Rs.963",
-      "cls": ""
-    },
-    {
-      "time": "12:57:23",
-      "msg": "NIFTY:24438 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:5/99 Lots:1L Cap:Rs.15567 Daily:Rs.963",
-      "cls": ""
-    },
-    {
-      "time": "12:56:22",
-      "msg": "NIFTY:24436 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:5/99 Lots:1L Cap:Rs.15567 Daily:Rs.963",
-      "cls": ""
     }
   ],
   "vix": null,
