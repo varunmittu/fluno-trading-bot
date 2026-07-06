@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06 11:55",
+  "last_updated": "2026-07-06 12:01",
   "summary": {
     "total_trades": 33,
     "wins": 9,
@@ -517,6 +517,41 @@
   "score_breakdown": {},
   "open_positions": 1,
   "bot_log": [
+    {
+      "time": "12:01:10",
+      "msg": "RIDING NIFTY CE | Peak:Rs.328 Now:Rs.328 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "12:01:10",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.328 \u2014 floor locked at Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "12:00:06",
+      "msg": "RIDING NIFTY CE | Peak:Rs.198 Now:Rs.198 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:59:04",
+      "msg": "RIDING NIFTY CE | Peak:Rs.162 Now:Rs.161 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:58:01",
+      "msg": "RIDING NIFTY CE | Peak:Rs.162 Now:Rs.162 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:57:55",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.162 \u2014 floor locked at Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:55:49",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:54:00",
       "msg": "Kite: loaded 1608 NIFTY option contracts",
