@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-06 12:39",
+  "last_updated": "2026-07-06 12:40",
   "summary": {
-    "total_trades": 35,
+    "total_trades": 36,
     "wins": 11,
-    "losses": 24,
-    "win_rate": 31.4,
-    "total_pnl": 1539.0,
+    "losses": 25,
+    "win_rate": 30.6,
+    "total_pnl": 1239.0,
     "avg_win": 504.0,
-    "avg_loss": -167.0
+    "avg_loss": -172.0
   },
   "trades": [
     {
@@ -534,6 +534,21 @@
       "option_type": "CE",
       "invested": 9795.5,
       "lots": 2
+    },
+    {
+      "id": 38,
+      "date": "2026-07-06",
+      "time": "12:40",
+      "score": 54,
+      "entry": 24450.25,
+      "exit": 24438.7,
+      "pnl": -300.0,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9821.5,
+      "lots": 2
     }
   ],
   "daily_pnl": {
@@ -541,12 +556,22 @@
     "2026-07-01": 2034.0,
     "2026-07-02": -150.0,
     "2026-07-03": -396.0,
-    "2026-07-06": 1263.0
+    "2026-07-06": 963.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:40:52",
+      "msg": "STOP LOSS NIFTY CE | Entry:24450 Exit:24439 SL:Rs.-300 | Capital:Rs.15567 Lots->1L",
+      "cls": "err"
+    },
+    {
+      "time": "12:39:52",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:36:46",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -636,16 +661,6 @@
       "time": "12:13:28",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "12:13:25",
-      "msg": "NIFTY:24437 YdH:24378/YdL:24252 Sig:BREAK HIGH 24378 T:3/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "12:13:24",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
