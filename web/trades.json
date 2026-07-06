@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06 11:19",
+  "last_updated": "2026-07-06 11:25",
   "summary": {
     "total_trades": 33,
     "wins": 9,
@@ -518,6 +518,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "11:19:56",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:14:40",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -610,11 +615,6 @@
     {
       "time": "10:48:15",
       "msg": "BE LOCK ON NIFTY CE | Peak:Rs.356 \u2014 SL floor now Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "10:42:55",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
   ],
