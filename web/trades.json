@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06 10:42",
+  "last_updated": "2026-07-06 10:48",
   "summary": {
     "total_trades": 32,
     "wins": 8,
@@ -503,6 +503,21 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "10:48:16",
+      "msg": "RIDING NIFTY CE | Peak:Rs.356 Now:Rs.356 | BE LOCKED (floor Rs.300)",
+      "cls": "ok"
+    },
+    {
+      "time": "10:48:15",
+      "msg": "BE LOCK ON NIFTY CE | Peak:Rs.356 \u2014 SL floor now Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "10:42:55",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:37:39",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -585,21 +600,6 @@
     {
       "time": "10:27:04",
       "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:27:01",
-      "msg": "RIDING NIFTY CE | Peak:Rs.491 Now:Rs.453 (small trail) | BE LOCKED (floor Rs.300)",
-      "cls": "ok"
-    },
-    {
-      "time": "10:25:58",
-      "msg": "RIDING NIFTY CE | Peak:Rs.491 Now:Rs.469 (small trail) | BE LOCKED (floor Rs.300)",
-      "cls": "ok"
-    },
-    {
-      "time": "10:24:56",
-      "msg": "RIDING NIFTY CE | Peak:Rs.491 Now:Rs.366 (small trail) | BE LOCKED (floor Rs.300)",
       "cls": "ok"
     }
   ],
