@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07 12:13",
+  "last_updated": "2026-07-07 12:18",
   "summary": {
     "total_trades": 47,
     "wins": 19,
@@ -823,6 +823,61 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:18:41",
+      "msg": "NIFTY:24493 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:10/99 Lots:1L Cap:Rs.16131 Daily:Rs.414",
+      "cls": ""
+    },
+    {
+      "time": "12:18:41",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:17:39",
+      "msg": "NIFTY:24496 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:10/99 Lots:1L Cap:Rs.16131 Daily:Rs.414",
+      "cls": ""
+    },
+    {
+      "time": "12:17:39",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:16:38",
+      "msg": "NIFTY:24500 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:10/99 Lots:1L Cap:Rs.16131 Daily:Rs.414",
+      "cls": ""
+    },
+    {
+      "time": "12:16:38",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:15:38",
+      "msg": "NIFTY:24507 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:10/99 Lots:1L Cap:Rs.16131 Daily:Rs.414",
+      "cls": ""
+    },
+    {
+      "time": "12:15:38",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:14:35",
+      "msg": "NIFTY:24502 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:10/99 Lots:1L Cap:Rs.16131 Daily:Rs.414",
+      "cls": ""
+    },
+    {
+      "time": "12:14:35",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:13:38",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:13:35",
       "msg": "NIFTY:24507 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:10/99 Lots:1L Cap:Rs.16131 Daily:Rs.414",
       "cls": ""
@@ -865,61 +920,6 @@
     {
       "time": "12:03:01",
       "msg": "[PAPER] #10 BULLISH \u2014 BUY CALL (CE) | NIFTY 24550 @ Rs.152.6 | BREAK HIGH 24459 | Conf:54% SL:Rs.300 | 1L Inv:Rs.9919",
-      "cls": "ok"
-    },
-    {
-      "time": "12:02:58",
-      "msg": "AUTO trade #10: BREAK HIGH 24459 conf 54% \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "12:02:58",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:02:58",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:57",
-      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:54",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.313 Floor:Rs.300 Charges:Rs.66 NET:Rs.+254 | Capital:Rs.16477",
-      "cls": "ok"
-    },
-    {
-      "time": "12:02:52",
-      "msg": "Kite: loaded 1632 NIFTY option contracts",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:47",
-      "msg": "Restored today's booked P&L from DB: Rs.+505.4",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:47",
-      "msg": "Restored 1 open position(s) from disk.",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:47",
-      "msg": "Capital: Rs.16223 | Lots: 1L (65 units)",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:47",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.4 (staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: dynamic Rs.100-500",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:46",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
   ],
