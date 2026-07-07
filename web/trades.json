@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07 11:53",
+  "last_updated": "2026-07-07 11:57",
   "summary": {
     "total_trades": 45,
     "wins": 18,
@@ -789,67 +789,37 @@
   "open_positions": 1,
   "bot_log": [
     {
-      "time": "11:50:27",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "time": "11:57:15",
+      "msg": "RIDING NIFTY CE | Peak:Rs.219 Now:Rs.219 | staircase floor Rs.150",
       "cls": "ok"
     },
     {
-      "time": "11:50:23",
-      "msg": "[PAPER] #9 BULLISH \u2014 BUY CALL (CE) | NIFTY 24550 @ Rs.152.1 | BREAK HIGH 24459 | Conf:54% SL:Rs.300 | 1L Inv:Rs.9886",
-      "cls": "ok"
-    },
-    {
-      "time": "11:50:19",
-      "msg": "AUTO trade #9: BREAK HIGH 24459 conf 54% \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "11:50:19",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:50:18",
-      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
-      "cls": "info"
-    },
-    {
-      "time": "11:50:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:48:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:48:12",
+      "time": "11:57:13",
       "msg": "Kite: loaded 1632 NIFTY option contracts",
       "cls": "info"
     },
     {
-      "time": "11:48:07",
-      "msg": "Restored today's booked P&L from DB: Rs.+1,150.0",
+      "time": "11:57:08",
+      "msg": "Restored today's booked P&L from DB: Rs.+825.8",
       "cls": "info"
     },
     {
-      "time": "11:48:07",
+      "time": "11:57:08",
       "msg": "Restored 1 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "11:48:07",
-      "msg": "Capital: Rs.16867 | Lots: 1L (65 units)",
+      "time": "11:57:08",
+      "msg": "Capital: Rs.16543 | Lots: 1L (65 units)",
       "cls": "info"
     },
     {
-      "time": "11:48:07",
+      "time": "11:57:08",
       "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.4 (staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: dynamic Rs.100-500",
       "cls": "info"
     },
     {
-      "time": "11:48:06",
+      "time": "11:57:07",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
