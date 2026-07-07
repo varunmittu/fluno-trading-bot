@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-07 11:57",
+  "last_updated": "2026-07-07 12:02",
   "summary": {
-    "total_trades": 45,
-    "wins": 18,
+    "total_trades": 46,
+    "wins": 19,
     "losses": 27,
-    "win_rate": 40.0,
-    "total_pnl": 2215.0,
-    "avg_win": 403.0,
-    "avg_loss": -186.0
+    "win_rate": 41.3,
+    "total_pnl": 2148.0,
+    "avg_win": 380.0,
+    "avg_loss": -188.0
   },
   "trades": [
     {
@@ -646,15 +646,15 @@
       "score": 71,
       "entry": 24486.55,
       "exit": 24492.05,
-      "pnl": 150.0,
+      "pnl": 104.36,
       "status": "STAIR_BOOK",
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9789.0,
       "lots": 1,
-      "gross": null,
-      "charges": null
+      "gross": 170.0,
+      "charges": 65.64
     },
     {
       "id": 41,
@@ -663,15 +663,15 @@
       "score": 71,
       "entry": 24500.65,
       "exit": 24481.4,
-      "pnl": -400.0,
+      "pnl": -444.96,
       "status": "STOP_LOSS",
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9841.0,
       "lots": 1,
-      "gross": null,
-      "charges": null
+      "gross": -380.0,
+      "charges": 64.96
     },
     {
       "id": 42,
@@ -680,15 +680,15 @@
       "score": 54,
       "entry": 24474.05,
       "exit": 24484.2,
-      "pnl": 300.0,
+      "pnl": 253.93,
       "status": "STAIR_BOOK",
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9906.0,
       "lots": 1,
-      "gross": null,
-      "charges": null
+      "gross": 320.0,
+      "charges": 66.07
     },
     {
       "id": 43,
@@ -697,15 +697,15 @@
       "score": 54,
       "entry": 24484.2,
       "exit": 24500.5,
-      "pnl": 500.0,
+      "pnl": 453.88,
       "status": "STAIR_BOOK",
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9782.5,
       "lots": 1,
-      "gross": null,
-      "charges": null
+      "gross": 520.0,
+      "charges": 66.12
     },
     {
       "id": 44,
@@ -714,15 +714,15 @@
       "score": 54,
       "entry": 24500.5,
       "exit": 24510.5,
-      "pnl": 300.0,
+      "pnl": 254.05,
       "status": "STAIR_BOOK",
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9841.0,
       "lots": 1,
-      "gross": null,
-      "charges": null
+      "gross": 320.0,
+      "charges": 65.95
     },
     {
       "id": 45,
@@ -731,15 +731,15 @@
       "score": 71,
       "entry": 24510.5,
       "exit": 24511.55,
-      "pnl": 150.0,
+      "pnl": 104.19,
       "status": "STAIR_BOOK",
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9880.0,
       "lots": 1,
-      "gross": null,
-      "charges": null
+      "gross": 170.0,
+      "charges": 65.81
     },
     {
       "id": 46,
@@ -748,15 +748,15 @@
       "score": 71,
       "entry": 24511.55,
       "exit": 24516.8,
-      "pnl": 150.0,
+      "pnl": 104.19,
       "status": "STAIR_BOOK",
       "mode": "PAPER",
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9880.0,
       "lots": 1,
-      "gross": null,
-      "charges": null
+      "gross": 170.0,
+      "charges": 65.81
     },
     {
       "id": 47,
@@ -774,6 +774,23 @@
       "lots": 1,
       "gross": -259.0,
       "charges": 65.24
+    },
+    {
+      "id": 48,
+      "date": "2026-07-07",
+      "time": "12:02",
+      "score": 54,
+      "entry": 24513.0,
+      "exit": 24521.8,
+      "pnl": 253.97,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9886.5,
+      "lots": 1,
+      "gross": 320.0,
+      "charges": 66.03
     }
   ],
   "daily_pnl": {
@@ -782,44 +799,44 @@
     "2026-07-02": -150.0,
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
-    "2026-07-07": 826.0
+    "2026-07-07": 759.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
     {
-      "time": "11:57:15",
-      "msg": "RIDING NIFTY CE | Peak:Rs.219 Now:Rs.219 | staircase floor Rs.150",
+      "time": "12:02:54",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.313 Floor:Rs.300 Charges:Rs.66 NET:Rs.+254 | Capital:Rs.16477",
       "cls": "ok"
     },
     {
-      "time": "11:57:13",
+      "time": "12:02:52",
       "msg": "Kite: loaded 1632 NIFTY option contracts",
       "cls": "info"
     },
     {
-      "time": "11:57:08",
-      "msg": "Restored today's booked P&L from DB: Rs.+825.8",
+      "time": "12:02:47",
+      "msg": "Restored today's booked P&L from DB: Rs.+505.4",
       "cls": "info"
     },
     {
-      "time": "11:57:08",
+      "time": "12:02:47",
       "msg": "Restored 1 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "11:57:08",
-      "msg": "Capital: Rs.16543 | Lots: 1L (65 units)",
+      "time": "12:02:47",
+      "msg": "Capital: Rs.16223 | Lots: 1L (65 units)",
       "cls": "info"
     },
     {
-      "time": "11:57:08",
+      "time": "12:02:47",
       "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.4 (staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: dynamic Rs.100-500",
       "cls": "info"
     },
     {
-      "time": "11:57:07",
+      "time": "12:02:46",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
