@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-07 11:23",
+  "last_updated": "2026-07-07 11:24",
   "summary": {
-    "total_trades": 42,
-    "wins": 16,
+    "total_trades": 43,
+    "wins": 17,
     "losses": 26,
-    "win_rate": 38.1,
-    "total_pnl": 2239.0,
-    "avg_win": 434.0,
+    "win_rate": 39.5,
+    "total_pnl": 2389.0,
+    "avg_win": 417.0,
     "avg_loss": -181.0
   },
   "trades": [
@@ -639,6 +639,21 @@
       "option_type": "CE",
       "invested": 9841.0,
       "lots": 1
+    },
+    {
+      "id": 45,
+      "date": "2026-07-07",
+      "time": "11:24",
+      "score": 71,
+      "entry": 24510.5,
+      "exit": 24511.55,
+      "pnl": 150.0,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9880.0,
+      "lots": 1
     }
   ],
   "daily_pnl": {
@@ -647,12 +662,22 @@
     "2026-07-02": -150.0,
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
-    "2026-07-07": 850.0
+    "2026-07-07": 1000.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:24:14",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.183 Booked:Rs.150 | Capital:Rs.16717 Lots->1L",
+      "cls": "ok"
+    },
+    {
+      "time": "11:23:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:23:12",
       "msg": "RIDING NIFTY CE | Peak:Rs.183 Now:Rs.183 | staircase floor Rs.150",
@@ -741,16 +766,6 @@
     {
       "time": "11:08:10",
       "msg": "AUTO trade #5: BREAK HIGH 24459 conf 54% \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "11:08:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:08:08",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.558 Booked:Rs.500 | Capital:Rs.16267 Lots->1L",
       "cls": "ok"
     }
   ],
