@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-07 11:24",
+  "last_updated": "2026-07-07 11:28",
   "summary": {
-    "total_trades": 43,
-    "wins": 17,
+    "total_trades": 44,
+    "wins": 18,
     "losses": 26,
-    "win_rate": 39.5,
-    "total_pnl": 2389.0,
-    "avg_win": 417.0,
+    "win_rate": 40.9,
+    "total_pnl": 2539.0,
+    "avg_win": 403.0,
     "avg_loss": -181.0
   },
   "trades": [
@@ -654,6 +654,21 @@
       "option_type": "CE",
       "invested": 9880.0,
       "lots": 1
+    },
+    {
+      "id": 46,
+      "date": "2026-07-07",
+      "time": "11:28",
+      "score": 71,
+      "entry": 24511.55,
+      "exit": 24516.8,
+      "pnl": 150.0,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9880.0,
+      "lots": 1
     }
   ],
   "daily_pnl": {
@@ -662,12 +677,37 @@
     "2026-07-02": -150.0,
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
-    "2026-07-07": 1000.0
+    "2026-07-07": 1150.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:28:38",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.230 Booked:Rs.150 | Capital:Rs.16867 Lots->1L",
+      "cls": "ok"
+    },
+    {
+      "time": "11:27:36",
+      "msg": "RIDING NIFTY CE | Peak:Rs.230 Now:Rs.192 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:26:34",
+      "msg": "RIDING NIFTY CE | Peak:Rs.230 Now:Rs.230 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:26:32",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.230 \u2014 floor locked at Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:24:28",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:24:20",
       "msg": "[PAPER] #7 BULLISH \u2014 BUY CALL (CE) | NIFTY 24550 @ Rs.152.0 | BREAK HIGH 24459 | Conf:71% SL:Rs.400 | 1L Inv:Rs.9880",
@@ -741,31 +781,6 @@
     {
       "time": "11:14:39",
       "msg": "STAIR BOOK NIFTY CE | Peak:Rs.313 Booked:Rs.300 | Capital:Rs.16567 Lots->1L",
-      "cls": "ok"
-    },
-    {
-      "time": "11:13:37",
-      "msg": "RIDING NIFTY CE | Peak:Rs.313 Now:Rs.313 | staircase floor Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "11:13:37",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.313 \u2014 floor locked at Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "11:12:37",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:12:33",
-      "msg": "RIDING NIFTY CE | Peak:Rs.267 Now:Rs.267 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "11:12:32",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.267 \u2014 floor locked at Rs.150",
       "cls": "ok"
     }
   ],
