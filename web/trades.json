@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07 12:12",
+  "last_updated": "2026-07-07 12:13",
   "summary": {
     "total_trades": 47,
     "wins": 19,
@@ -822,6 +822,31 @@
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:13:35",
+      "msg": "NIFTY:24507 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:10/99 Lots:1L Cap:Rs.16131 Daily:Rs.414",
+      "cls": ""
+    },
+    {
+      "time": "12:13:35",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:12:36",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "12:12:35",
+      "msg": "NIFTY:24508 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:10/99 Lots:1L Cap:Rs.16131 Daily:Rs.414",
+      "cls": ""
+    },
+    {
+      "time": "12:12:35",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
     {
       "time": "12:12:32",
       "msg": "STOP LOSS NIFTY CE | SL:Rs.-300 Charges:Rs.65 NET:Rs.-345 | Capital:Rs.16131",
