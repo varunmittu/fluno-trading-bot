@@ -639,6 +639,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:08:15",
+      "msg": "[PAPER] #5 BULLISH \u2014 BUY CALL (CE) | NIFTY 24550 @ Rs.151.4 | BREAK HIGH 24459 | Conf:54% SL:Rs.300 | 1L Inv:Rs.9841",
+      "cls": "ok"
+    },
+    {
+      "time": "11:08:11",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "11:08:10",
+      "msg": "AUTO trade #5: BREAK HIGH 24459 conf 54% \u2014 entering",
+      "cls": "ok"
+    },
+    {
+      "time": "11:08:09",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "11:08:08",
       "msg": "STAIR BOOK NIFTY CE | Peak:Rs.558 Booked:Rs.500 | Capital:Rs.16267 Lots->1L",
       "cls": "ok"
@@ -716,26 +736,6 @@
     {
       "time": "11:01:29",
       "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:01:27",
-      "msg": "RIDING NIFTY CE | Peak:Rs.349 Now:Rs.349 | staircase floor Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "11:01:27",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.349 \u2014 floor locked at Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "11:00:25",
-      "msg": "RIDING NIFTY CE | Peak:Rs.267 Now:Rs.267 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "11:00:23",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.267 \u2014 floor locked at Rs.150",
       "cls": "ok"
     }
   ],
