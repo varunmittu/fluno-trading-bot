@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07 11:39",
+  "last_updated": "2026-07-07 11:44",
   "summary": {
     "total_trades": 44,
     "wins": 18,
@@ -684,6 +684,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "11:39:17",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:34:02",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -775,11 +780,6 @@
     },
     {
       "time": "11:17:57",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:14:49",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
