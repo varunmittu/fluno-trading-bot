@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07 11:02",
+  "last_updated": "2026-07-07 11:07",
   "summary": {
     "total_trades": 40,
     "wins": 14,
@@ -621,8 +621,43 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "11:07:05",
+      "msg": "RIDING NIFTY CE | Peak:Rs.558 Now:Rs.558 | staircase floor Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "11:06:01",
+      "msg": "RIDING NIFTY CE | Peak:Rs.521 Now:Rs.521 | staircase floor Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "11:06:01",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.521 \u2014 floor locked at Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "11:04:59",
+      "msg": "RIDING NIFTY CE | Peak:Rs.249 Now:Rs.219 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:03:57",
+      "msg": "RIDING NIFTY CE | Peak:Rs.249 Now:Rs.249 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:03:50",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.249 \u2014 floor locked at Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:02:50",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:02:41",
       "msg": "[PAPER] #4 BULLISH \u2014 BUY CALL (CE) | NIFTY 24550 @ Rs.150.5 | BREAK HIGH 24459 | Conf:54% SL:Rs.300 | 1L Inv:Rs.9782",
@@ -687,36 +722,6 @@
       "time": "10:58:44",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
-    },
-    {
-      "time": "10:56:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:56:08",
-      "msg": "Restored today's booked P&L from DB: Rs.-250.0",
-      "cls": "info"
-    },
-    {
-      "time": "10:56:08",
-      "msg": "Restored 1 open position(s) from disk.",
-      "cls": "info"
-    },
-    {
-      "time": "10:56:08",
-      "msg": "Capital: Rs.15467 | Lots: 1L (65 units)",
-      "cls": "info"
-    },
-    {
-      "time": "10:56:08",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.4 (staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: dynamic Rs.100-500",
-      "cls": "info"
-    },
-    {
-      "time": "10:56:07",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
-      "cls": "err"
     }
   ],
   "vix": null,
