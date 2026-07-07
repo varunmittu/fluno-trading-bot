@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-07 11:07",
+  "last_updated": "2026-07-07 11:08",
   "summary": {
-    "total_trades": 40,
-    "wins": 14,
+    "total_trades": 41,
+    "wins": 15,
     "losses": 26,
-    "win_rate": 35.0,
-    "total_pnl": 1439.0,
-    "avg_win": 439.0,
+    "win_rate": 36.6,
+    "total_pnl": 1939.0,
+    "avg_win": 443.0,
     "avg_loss": -181.0
   },
   "trades": [
@@ -609,6 +609,21 @@
       "option_type": "CE",
       "invested": 9906.0,
       "lots": 1
+    },
+    {
+      "id": 43,
+      "date": "2026-07-07",
+      "time": "11:08",
+      "score": 54,
+      "entry": 24484.2,
+      "exit": 24500.5,
+      "pnl": 500.0,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9782.5,
+      "lots": 1
     }
   ],
   "daily_pnl": {
@@ -617,12 +632,22 @@
     "2026-07-02": -150.0,
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
-    "2026-07-07": 50.0
+    "2026-07-07": 550.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:08:08",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.558 Booked:Rs.500 | Capital:Rs.16267 Lots->1L",
+      "cls": "ok"
+    },
+    {
+      "time": "11:07:07",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:07:05",
       "msg": "RIDING NIFTY CE | Peak:Rs.558 Now:Rs.558 | staircase floor Rs.500",
@@ -711,16 +736,6 @@
     {
       "time": "11:00:23",
       "msg": "STAIR UP NIFTY CE | Peak:Rs.267 \u2014 floor locked at Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "10:59:00",
-      "msg": "Kite: loaded 1632 NIFTY option contracts",
-      "cls": "info"
-    },
-    {
-      "time": "10:58:44",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
   ],
