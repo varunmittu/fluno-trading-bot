@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07 11:17",
+  "last_updated": "2026-07-07 11:23",
   "summary": {
     "total_trades": 42,
     "wins": 16,
@@ -654,6 +654,21 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "11:23:12",
+      "msg": "RIDING NIFTY CE | Peak:Rs.183 Now:Rs.183 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:23:11",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.183 \u2014 floor locked at Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:17:57",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:14:49",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -736,21 +751,6 @@
     {
       "time": "11:08:08",
       "msg": "STAIR BOOK NIFTY CE | Peak:Rs.558 Booked:Rs.500 | Capital:Rs.16267 Lots->1L",
-      "cls": "ok"
-    },
-    {
-      "time": "11:07:07",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:07:05",
-      "msg": "RIDING NIFTY CE | Peak:Rs.558 Now:Rs.558 | staircase floor Rs.500",
-      "cls": "ok"
-    },
-    {
-      "time": "11:06:01",
-      "msg": "RIDING NIFTY CE | Peak:Rs.521 Now:Rs.521 | staircase floor Rs.500",
       "cls": "ok"
     }
   ],
