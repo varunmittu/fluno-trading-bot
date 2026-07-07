@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-07 11:48",
+  "last_updated": "2026-07-07 11:50",
   "summary": {
-    "total_trades": 44,
+    "total_trades": 45,
     "wins": 18,
-    "losses": 26,
-    "win_rate": 40.9,
-    "total_pnl": 2539.0,
+    "losses": 27,
+    "win_rate": 40.0,
+    "total_pnl": 2215.0,
     "avg_win": 403.0,
-    "avg_loss": -181.0
+    "avg_loss": -186.0
   },
   "trades": [
     {
@@ -757,6 +757,23 @@
       "lots": 1,
       "gross": null,
       "charges": null
+    },
+    {
+      "id": 47,
+      "date": "2026-07-07",
+      "time": "11:50",
+      "score": 71,
+      "entry": 24516.8,
+      "exit": 24506.85,
+      "pnl": -324.24,
+      "status": "MANUAL_EXIT",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9899.5,
+      "lots": 1,
+      "gross": -259.0,
+      "charges": 65.24
     }
   ],
   "daily_pnl": {
@@ -765,12 +782,17 @@
     "2026-07-02": -150.0,
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
-    "2026-07-07": 1150.0
+    "2026-07-07": 826.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:48:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:48:12",
       "msg": "Kite: loaded 1632 NIFTY option contracts",
