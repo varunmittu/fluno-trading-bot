@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-07 11:12",
+  "last_updated": "2026-07-07 11:14",
   "summary": {
-    "total_trades": 41,
-    "wins": 15,
+    "total_trades": 42,
+    "wins": 16,
     "losses": 26,
-    "win_rate": 36.6,
-    "total_pnl": 1939.0,
-    "avg_win": 443.0,
+    "win_rate": 38.1,
+    "total_pnl": 2239.0,
+    "avg_win": 434.0,
     "avg_loss": -181.0
   },
   "trades": [
@@ -624,6 +624,21 @@
       "option_type": "CE",
       "invested": 9782.5,
       "lots": 1
+    },
+    {
+      "id": 44,
+      "date": "2026-07-07",
+      "time": "11:14",
+      "score": 54,
+      "entry": 24500.5,
+      "exit": 24510.5,
+      "pnl": 300.0,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9841.0,
+      "lots": 1
     }
   ],
   "daily_pnl": {
@@ -632,12 +647,32 @@
     "2026-07-02": -150.0,
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
-    "2026-07-07": 550.0
+    "2026-07-07": 850.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:14:39",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.313 Booked:Rs.300 | Capital:Rs.16567 Lots->1L",
+      "cls": "ok"
+    },
+    {
+      "time": "11:13:37",
+      "msg": "RIDING NIFTY CE | Peak:Rs.313 Now:Rs.313 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "11:13:37",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.313 \u2014 floor locked at Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "11:12:37",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:12:33",
       "msg": "RIDING NIFTY CE | Peak:Rs.267 Now:Rs.267 | staircase floor Rs.150",
@@ -717,26 +752,6 @@
       "time": "11:02:50",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "11:02:41",
-      "msg": "[PAPER] #4 BULLISH \u2014 BUY CALL (CE) | NIFTY 24550 @ Rs.150.5 | BREAK HIGH 24459 | Conf:54% SL:Rs.300 | 1L Inv:Rs.9782",
-      "cls": "ok"
-    },
-    {
-      "time": "11:02:38",
-      "msg": "AUTO trade #4: BREAK HIGH 24459 conf 54% \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "11:02:38",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:02:38",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
