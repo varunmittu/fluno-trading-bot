@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-07 10:16",
+  "last_updated": "2026-07-07 10:21",
   "summary": {
-    "total_trades": 37,
-    "wins": 12,
+    "total_trades": 38,
+    "wins": 13,
     "losses": 25,
-    "win_rate": 32.4,
-    "total_pnl": 1389.0,
-    "avg_win": 475.0,
+    "win_rate": 34.2,
+    "total_pnl": 1539.0,
+    "avg_win": 450.0,
     "avg_loss": -172.0
   },
   "trades": [
@@ -564,6 +564,21 @@
       "option_type": "CE",
       "invested": 9795.5,
       "lots": 2
+    },
+    {
+      "id": 40,
+      "date": "2026-07-07",
+      "time": "10:21",
+      "score": 71,
+      "entry": 24486.55,
+      "exit": 24492.05,
+      "pnl": 150.0,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9789.0,
+      "lots": 1
     }
   ],
   "daily_pnl": {
@@ -571,12 +586,33 @@
     "2026-07-01": 2034.0,
     "2026-07-02": -150.0,
     "2026-07-03": -396.0,
-    "2026-07-06": 1113.0
+    "2026-07-06": 1113.0,
+    "2026-07-07": 150.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "10:21:02",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.195 Booked:Rs.150 | Capital:Rs.15867 Lots->1L",
+      "cls": "ok"
+    },
+    {
+      "time": "10:19:59",
+      "msg": "RIDING NIFTY CE | Peak:Rs.195 Now:Rs.195 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "10:19:52",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.195 \u2014 floor locked at Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "10:16:48",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:15:45",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -655,26 +691,6 @@
     {
       "time": "10:06:25",
       "msg": "NIFTY:24476 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:05:25",
-      "msg": "NIFTY:24479 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:04:25",
-      "msg": "NIFTY:24484 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:03:22",
-      "msg": "NIFTY:24485 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:02:22",
-      "msg": "NIFTY:24480 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
       "cls": ""
     }
   ],
