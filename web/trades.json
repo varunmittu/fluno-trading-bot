@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-07 11:01",
+  "last_updated": "2026-07-07 11:02",
   "summary": {
-    "total_trades": 39,
-    "wins": 13,
+    "total_trades": 40,
+    "wins": 14,
     "losses": 26,
-    "win_rate": 33.3,
-    "total_pnl": 1139.0,
-    "avg_win": 450.0,
+    "win_rate": 35.0,
+    "total_pnl": 1439.0,
+    "avg_win": 439.0,
     "avg_loss": -181.0
   },
   "trades": [
@@ -594,6 +594,21 @@
       "option_type": "CE",
       "invested": 9841.0,
       "lots": 1
+    },
+    {
+      "id": 42,
+      "date": "2026-07-07",
+      "time": "11:02",
+      "score": 54,
+      "entry": 24474.05,
+      "exit": 24484.2,
+      "pnl": 300.0,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9906.0,
+      "lots": 1
     }
   ],
   "daily_pnl": {
@@ -602,12 +617,22 @@
     "2026-07-02": -150.0,
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
-    "2026-07-07": -250.0
+    "2026-07-07": 50.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:02:29",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.349 Booked:Rs.300 | Capital:Rs.15767 Lots->1L",
+      "cls": "ok"
+    },
+    {
+      "time": "11:01:29",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:01:27",
       "msg": "RIDING NIFTY CE | Peak:Rs.349 Now:Rs.349 | staircase floor Rs.300",
