@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06 15:31",
+  "last_updated": "2026-07-07 09:15",
   "summary": {
     "total_trades": 37,
     "wins": 12,
@@ -578,103 +578,28 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "15:31:43",
-      "msg": "NIFTY:24424 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
+      "time": "09:15:43",
+      "msg": "NIFTY:24447 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "15:30:44",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "09:10:40",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
     },
     {
-      "time": "15:30:41",
-      "msg": "SETTLEMENT | Day P&L:Rs.+1113 | Capital:Rs.15717 | Next:1L",
-      "cls": "ok"
+      "time": "01:38:37",
+      "msg": "Capital: Rs.15717 | Lots: 1L (65 units)",
+      "cls": "info"
     },
     {
-      "time": "15:29:39",
-      "msg": "NIFTY:24420 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
+      "time": "01:38:37",
+      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT v4.4 (staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: dynamic Rs.100-500",
+      "cls": "info"
     },
     {
-      "time": "15:28:38",
-      "msg": "NIFTY:24427 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:27:29",
-      "msg": "NIFTY:24432 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:26:27",
-      "msg": "NIFTY:24439 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:25:30",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:25:27",
-      "msg": "NIFTY:24436 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:24:25",
-      "msg": "NIFTY:24433 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:23:24",
-      "msg": "NIFTY:24433 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:22:23",
-      "msg": "NIFTY:24434 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:21:21",
-      "msg": "NIFTY:24436 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:20:23",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:20:20",
-      "msg": "NIFTY:24435 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:19:20",
-      "msg": "NIFTY:24435 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:18:18",
-      "msg": "NIFTY:24433 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:17:17",
-      "msg": "NIFTY:24433 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:16:16",
-      "msg": "NIFTY:24433 YdH:24378/YdL:24252 Sig:FADE 24458->24404 T:6/99 Lots:1L Cap:Rs.15717 Daily:Rs.1113",
-      "cls": ""
-    },
-    {
-      "time": "15:15:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "time": "01:38:36",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
   ],
