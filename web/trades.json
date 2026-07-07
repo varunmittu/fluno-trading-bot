@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07 09:30",
+  "last_updated": "2026-07-07 09:36",
   "summary": {
     "total_trades": 37,
     "wins": 12,
@@ -578,6 +578,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:36:00",
+      "msg": "NIFTY:24445 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:35:00",
+      "msg": "NIFTY:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:34:00",
+      "msg": "NIFTY:24434 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:32:57",
+      "msg": "NIFTY:24436 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:31:57",
+      "msg": "NIFTY:24444 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:30:59",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:30:57",
       "msg": "NIFTY:24446 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
       "cls": ""
@@ -646,36 +676,6 @@
       "time": "09:19:46",
       "msg": "NIFTY:24456 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:18:46",
-      "msg": "NIFTY:24465 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:17:44",
-      "msg": "NIFTY:24469 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:16:43",
-      "msg": "NIFTY:24454 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:15:47",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:15:43",
-      "msg": "NIFTY:24447 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:10:40",
-      "msg": "Morning Telegram ping sent",
-      "cls": "info"
     }
   ],
   "vix": null,
