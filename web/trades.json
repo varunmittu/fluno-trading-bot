@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-07 10:37",
+  "last_updated": "2026-07-07 10:40",
   "summary": {
-    "total_trades": 38,
+    "total_trades": 39,
     "wins": 13,
-    "losses": 25,
-    "win_rate": 34.2,
-    "total_pnl": 1539.0,
+    "losses": 26,
+    "win_rate": 33.3,
+    "total_pnl": 1139.0,
     "avg_win": 450.0,
-    "avg_loss": -172.0
+    "avg_loss": -181.0
   },
   "trades": [
     {
@@ -579,6 +579,21 @@
       "option_type": "CE",
       "invested": 9789.0,
       "lots": 1
+    },
+    {
+      "id": 41,
+      "date": "2026-07-07",
+      "time": "10:40",
+      "score": 71,
+      "entry": 24500.65,
+      "exit": 24481.4,
+      "pnl": -400.0,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9841.0,
+      "lots": 1
     }
   ],
   "daily_pnl": {
@@ -587,12 +602,32 @@
     "2026-07-02": -150.0,
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
-    "2026-07-07": 150.0
+    "2026-07-07": -250.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "10:40:58",
+      "msg": "NIFTY:24481 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:2/99 Lots:1L Cap:Rs.15467 Daily:Rs.-250",
+      "cls": ""
+    },
+    {
+      "time": "10:40:58",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:40:56",
+      "msg": "STOP LOSS NIFTY CE | Entry:24501 Exit:24481 SL:Rs.-400 | Capital:Rs.15467 Lots->1L",
+      "cls": "err"
+    },
+    {
+      "time": "10:37:51",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:32:39",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -672,26 +707,6 @@
       "time": "10:15:41",
       "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24550 @ Rs.150.6 | BREAK HIGH 24459 | Conf:71% SL:Rs.400 | 1L Inv:Rs.9789",
       "cls": "ok"
-    },
-    {
-      "time": "10:15:37",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:15:37",
-      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
-      "cls": "info"
-    },
-    {
-      "time": "10:15:37",
-      "msg": "Kite: loaded 1632 NIFTY option contracts",
-      "cls": "info"
-    },
-    {
-      "time": "10:14:33",
-      "msg": "NIFTY:24490 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
