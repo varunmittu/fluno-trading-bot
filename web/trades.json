@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07 09:25",
+  "last_updated": "2026-07-07 09:30",
   "summary": {
     "total_trades": 37,
     "wins": 12,
@@ -578,6 +578,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:30:57",
+      "msg": "NIFTY:24446 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:29:55",
+      "msg": "NIFTY:24456 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:28:55",
+      "msg": "NIFTY:24451 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:27:55",
+      "msg": "NIFTY:24434 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:26:52",
+      "msg": "NIFTY:24443 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:25:54",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:25:52",
       "msg": "NIFTY:24456 Sig:-- T:0/99 Lots:1L Cap:Rs.15717 Daily:Rs.0",
       "cls": ""
@@ -646,21 +676,6 @@
       "time": "09:10:40",
       "msg": "Morning Telegram ping sent",
       "cls": "info"
-    },
-    {
-      "time": "01:38:37",
-      "msg": "Capital: Rs.15717 | Lots: 1L (65 units)",
-      "cls": "info"
-    },
-    {
-      "time": "01:38:37",
-      "msg": "Bot started | PAPER TRADE | Strategy: BREAKOUT v4.4 (staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: dynamic Rs.100-500",
-      "cls": "info"
-    },
-    {
-      "time": "01:38:36",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
     }
   ],
   "vix": null,
