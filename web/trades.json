@@ -624,6 +624,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:02:41",
+      "msg": "[PAPER] #4 BULLISH \u2014 BUY CALL (CE) | NIFTY 24550 @ Rs.150.5 | BREAK HIGH 24459 | Conf:54% SL:Rs.300 | 1L Inv:Rs.9782",
+      "cls": "ok"
+    },
+    {
+      "time": "11:02:38",
+      "msg": "AUTO trade #4: BREAK HIGH 24459 conf 54% \u2014 entering",
+      "cls": "ok"
+    },
+    {
+      "time": "11:02:38",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "11:02:38",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:02:37",
+      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
+      "cls": "info"
+    },
+    {
       "time": "11:02:29",
       "msg": "STAIR BOOK NIFTY CE | Peak:Rs.349 Booked:Rs.300 | Capital:Rs.15767 Lots->1L",
       "cls": "ok"
