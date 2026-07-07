@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07 10:43",
+  "last_updated": "2026-07-07 10:48",
   "summary": {
     "total_trades": 39,
     "wins": 13,
@@ -609,6 +609,61 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:48:07",
+      "msg": "NIFTY:24476 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:2/99 Lots:1L Cap:Rs.15467 Daily:Rs.-250",
+      "cls": ""
+    },
+    {
+      "time": "10:48:07",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:47:04",
+      "msg": "NIFTY:24479 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:2/99 Lots:1L Cap:Rs.15467 Daily:Rs.-250",
+      "cls": ""
+    },
+    {
+      "time": "10:47:04",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:46:04",
+      "msg": "NIFTY:24472 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:2/99 Lots:1L Cap:Rs.15467 Daily:Rs.-250",
+      "cls": ""
+    },
+    {
+      "time": "10:46:04",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:45:03",
+      "msg": "NIFTY:24470 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:2/99 Lots:1L Cap:Rs.15467 Daily:Rs.-250",
+      "cls": ""
+    },
+    {
+      "time": "10:45:03",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:44:00",
+      "msg": "NIFTY:24485 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:2/99 Lots:1L Cap:Rs.15467 Daily:Rs.-250",
+      "cls": ""
+    },
+    {
+      "time": "10:44:00",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:43:02",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:43:00",
       "msg": "NIFTY:24489 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:2/99 Lots:1L Cap:Rs.15467 Daily:Rs.-250",
       "cls": ""
@@ -651,61 +706,6 @@
     {
       "time": "10:37:51",
       "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:32:39",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:27:26",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:23:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:23:12",
-      "msg": "[PAPER] #2 BULLISH \u2014 BUY CALL (CE) | NIFTY 24550 @ Rs.151.4 | BREAK HIGH 24459 | Conf:71% SL:Rs.400 | 1L Inv:Rs.9841",
-      "cls": "ok"
-    },
-    {
-      "time": "10:22:09",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:22:07",
-      "msg": "NIFTY:24500 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:1/99 Lots:1L Cap:Rs.15867 Daily:Rs.150",
-      "cls": ""
-    },
-    {
-      "time": "10:21:06",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:21:06",
-      "msg": "NIFTY:24492 YdH:24459/YdL:24287 Sig:BREAK HIGH 24459 T:1/99 Lots:1L Cap:Rs.15867 Daily:Rs.150",
-      "cls": ""
-    },
-    {
-      "time": "10:21:06",
-      "msg": "Trade #2 gate: conf 71% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "10:21:04",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:21:02",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.195 Booked:Rs.150 | Capital:Rs.15867 Lots->1L",
       "cls": "ok"
     }
   ],
