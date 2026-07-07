@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07 11:44",
+  "last_updated": "2026-07-07 11:48",
   "summary": {
     "total_trades": 44,
     "wins": 18,
@@ -23,7 +23,9 @@
       "instrument": "SENSEX",
       "option_type": "PE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 2,
@@ -38,7 +40,9 @@
       "instrument": "SENSEX",
       "option_type": "PE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 3,
@@ -53,7 +57,9 @@
       "instrument": "SENSEX",
       "option_type": "CE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 4,
@@ -68,7 +74,9 @@
       "instrument": "BANKNIFTY",
       "option_type": "PE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 5,
@@ -83,7 +91,9 @@
       "instrument": "BANKNIFTY",
       "option_type": "PE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 6,
@@ -98,7 +108,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 7,
@@ -113,7 +125,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 8,
@@ -128,7 +142,9 @@
       "instrument": "BANKNIFTY",
       "option_type": "PE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 9,
@@ -143,7 +159,9 @@
       "instrument": "SENSEX",
       "option_type": "CE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 10,
@@ -158,7 +176,9 @@
       "instrument": "BANKNIFTY",
       "option_type": "PE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 11,
@@ -173,7 +193,9 @@
       "instrument": "SENSEX",
       "option_type": "CE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 12,
@@ -188,7 +210,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 13,
@@ -203,7 +227,9 @@
       "instrument": "BANKNIFTY",
       "option_type": "PE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 14,
@@ -218,7 +244,9 @@
       "instrument": "BANKNIFTY",
       "option_type": "PE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 15,
@@ -233,7 +261,9 @@
       "instrument": "BANKNIFTY",
       "option_type": "PE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 16,
@@ -248,7 +278,9 @@
       "instrument": "SENSEX",
       "option_type": "PE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 17,
@@ -263,7 +295,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 18,
@@ -278,7 +312,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 0.0,
-      "lots": 0
+      "lots": 0,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 19,
@@ -293,7 +329,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 10335.0,
-      "lots": 3
+      "lots": 3,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 20,
@@ -308,7 +346,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 10335.0,
-      "lots": 3
+      "lots": 3,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 21,
@@ -323,7 +363,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 10327.5,
-      "lots": 3
+      "lots": 3,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 22,
@@ -338,7 +380,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 10327.5,
-      "lots": 3
+      "lots": 3,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 23,
@@ -353,7 +397,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 10335.0,
-      "lots": 3
+      "lots": 3,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 24,
@@ -368,7 +414,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 10327.5,
-      "lots": 3
+      "lots": 3,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 25,
@@ -383,7 +431,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 10372.5,
-      "lots": 3
+      "lots": 3,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 26,
@@ -398,7 +448,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 10380.0,
-      "lots": 3
+      "lots": 3,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 27,
@@ -413,7 +465,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 10387.5,
-      "lots": 3
+      "lots": 3,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 28,
@@ -428,7 +482,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 10395.0,
-      "lots": 3
+      "lots": 3,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 29,
@@ -443,7 +499,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 14940.0,
-      "lots": 4
+      "lots": 4,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 31,
@@ -458,7 +516,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 11257.5,
-      "lots": 3
+      "lots": 3,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 33,
@@ -473,7 +533,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 11355.0,
-      "lots": 3
+      "lots": 3,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 34,
@@ -488,7 +550,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9730.5,
-      "lots": 2
+      "lots": 2,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 35,
@@ -503,7 +567,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9789.0,
-      "lots": 2
+      "lots": 2,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 36,
@@ -518,7 +584,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9860.5,
-      "lots": 2
+      "lots": 2,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 37,
@@ -533,7 +601,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9795.5,
-      "lots": 2
+      "lots": 2,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 38,
@@ -548,7 +618,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9821.5,
-      "lots": 2
+      "lots": 2,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 39,
@@ -563,7 +635,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9795.5,
-      "lots": 2
+      "lots": 2,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 40,
@@ -578,7 +652,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9789.0,
-      "lots": 1
+      "lots": 1,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 41,
@@ -593,7 +669,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9841.0,
-      "lots": 1
+      "lots": 1,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 42,
@@ -608,7 +686,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9906.0,
-      "lots": 1
+      "lots": 1,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 43,
@@ -623,7 +703,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9782.5,
-      "lots": 1
+      "lots": 1,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 44,
@@ -638,7 +720,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9841.0,
-      "lots": 1
+      "lots": 1,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 45,
@@ -653,7 +737,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9880.0,
-      "lots": 1
+      "lots": 1,
+      "gross": null,
+      "charges": null
     },
     {
       "id": 46,
@@ -668,7 +754,9 @@
       "instrument": "NIFTY",
       "option_type": "CE",
       "invested": 9880.0,
-      "lots": 1
+      "lots": 1,
+      "gross": null,
+      "charges": null
     }
   ],
   "daily_pnl": {
@@ -684,103 +772,33 @@
   "open_positions": 1,
   "bot_log": [
     {
-      "time": "11:39:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:34:02",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:28:49",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:28:45",
-      "msg": "[PAPER] #8 BULLISH \u2014 BUY CALL (CE) | NIFTY 24550 @ Rs.152.3 | BREAK HIGH 24459 | Conf:71% SL:Rs.400 | 1L Inv:Rs.9900",
-      "cls": "ok"
-    },
-    {
-      "time": "11:28:42",
-      "msg": "AUTO trade #8: BREAK HIGH 24459 conf 71% \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "11:28:42",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:28:38",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.230 Booked:Rs.150 | Capital:Rs.16867 Lots->1L",
-      "cls": "ok"
-    },
-    {
-      "time": "11:27:36",
-      "msg": "RIDING NIFTY CE | Peak:Rs.230 Now:Rs.192 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "11:26:34",
-      "msg": "RIDING NIFTY CE | Peak:Rs.230 Now:Rs.230 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "11:26:32",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.230 \u2014 floor locked at Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "11:24:28",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:24:20",
-      "msg": "[PAPER] #7 BULLISH \u2014 BUY CALL (CE) | NIFTY 24550 @ Rs.152.0 | BREAK HIGH 24459 | Conf:71% SL:Rs.400 | 1L Inv:Rs.9880",
-      "cls": "ok"
-    },
-    {
-      "time": "11:24:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:24:16",
-      "msg": "AUTO trade #7: BREAK HIGH 24459 conf 71% \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "11:24:16",
-      "msg": "Fetching 5-min candles [^NSEI]...",
+      "time": "11:48:12",
+      "msg": "Kite: loaded 1632 NIFTY option contracts",
       "cls": "info"
     },
     {
-      "time": "11:24:14",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.183 Booked:Rs.150 | Capital:Rs.16717 Lots->1L",
-      "cls": "ok"
+      "time": "11:48:07",
+      "msg": "Restored today's booked P&L from DB: Rs.+1,150.0",
+      "cls": "info"
     },
     {
-      "time": "11:23:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "11:48:07",
+      "msg": "Restored 1 open position(s) from disk.",
+      "cls": "info"
     },
     {
-      "time": "11:23:12",
-      "msg": "RIDING NIFTY CE | Peak:Rs.183 Now:Rs.183 | staircase floor Rs.150",
-      "cls": "ok"
+      "time": "11:48:07",
+      "msg": "Capital: Rs.16867 | Lots: 1L (65 units)",
+      "cls": "info"
     },
     {
-      "time": "11:23:11",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.183 \u2014 floor locked at Rs.150",
-      "cls": "ok"
+      "time": "11:48:07",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.4 (staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: dynamic Rs.100-500",
+      "cls": "info"
     },
     {
-      "time": "11:17:57",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "time": "11:48:06",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
   ],
