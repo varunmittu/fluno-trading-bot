@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07 10:56",
+  "last_updated": "2026-07-07 11:01",
   "summary": {
     "total_trades": 39,
     "wins": 13,
@@ -608,6 +608,41 @@
   "score_breakdown": {},
   "open_positions": 1,
   "bot_log": [
+    {
+      "time": "11:01:27",
+      "msg": "RIDING NIFTY CE | Peak:Rs.349 Now:Rs.349 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "11:01:27",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.349 \u2014 floor locked at Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "11:00:25",
+      "msg": "RIDING NIFTY CE | Peak:Rs.267 Now:Rs.267 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "11:00:23",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.267 \u2014 floor locked at Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "10:59:00",
+      "msg": "Kite: loaded 1632 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:58:44",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
+      "cls": "ok"
+    },
+    {
+      "time": "10:56:15",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:56:08",
       "msg": "Restored today's booked P&L from DB: Rs.-250.0",
