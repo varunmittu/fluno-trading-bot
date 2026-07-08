@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 14:35",
+  "last_updated": "2026-07-08 14:36",
   "summary": {
     "total_trades": 56,
     "wins": 22,
@@ -974,8 +974,23 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "14:36:46",
+      "msg": "RIDING NIFTY PE | Peak:Rs.616 Now:Rs.616 | staircase floor Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "14:36:44",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.616 \u2014 floor locked at Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "14:35:45",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "14:35:41",
       "msg": "[PAPER] #9 BEARISH \u2014 BUY PUT (PE) | NIFTY 23850 @ Rs.147.9 | BREAK LOW 24349 | Conf:71% SL:Rs.1000 | 1L Inv:Rs.9614",
@@ -1060,21 +1075,6 @@
       "time": "14:27:52",
       "msg": "AUTO trade #7: BREAK LOW 24349 conf 71% \u2014 entering",
       "cls": "ok"
-    },
-    {
-      "time": "14:27:52",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:26:49",
-      "msg": "NIFTY:23895 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
-      "cls": ""
-    },
-    {
-      "time": "14:26:49",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
     }
   ],
   "vix": null,
