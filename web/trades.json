@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 14:25",
+  "last_updated": "2026-07-08 14:27",
   "summary": {
     "total_trades": 54,
     "wins": 20,
@@ -943,6 +943,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:27:55",
+      "msg": "[PAPER] #7 BEARISH \u2014 BUY PUT (PE) | NIFTY 23850 @ Rs.148.3 | BREAK LOW 24349 | Conf:71% SL:Rs.1000 | 1L Inv:Rs.9640",
+      "cls": "ok"
+    },
+    {
+      "time": "14:27:52",
+      "msg": "AUTO trade #7: BREAK LOW 24349 conf 71% \u2014 entering",
+      "cls": "ok"
+    },
+    {
+      "time": "14:27:52",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:26:49",
+      "msg": "NIFTY:23895 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
+      "cls": ""
+    },
+    {
+      "time": "14:26:49",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "14:25:52",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:25:49",
       "msg": "NIFTY:23906 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
       "cls": ""
@@ -1011,36 +1041,6 @@
       "time": "14:19:43",
       "msg": "NIFTY:23903 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
       "cls": ""
-    },
-    {
-      "time": "14:19:43",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "14:18:42",
-      "msg": "NIFTY:23926 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
-      "cls": ""
-    },
-    {
-      "time": "14:18:42",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "14:17:43",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:17:40",
-      "msg": "NIFTY:23933 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
-      "cls": ""
-    },
-    {
-      "time": "14:17:40",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
     }
   ],
   "vix": null,
