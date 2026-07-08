@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 11:59",
+  "last_updated": "2026-07-08 14:15",
   "summary": {
     "total_trades": 53,
     "wins": 20,
@@ -926,79 +926,49 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "11:59:57",
-      "msg": "NIFTY:24247 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:5/99 Lots:1L Cap:Rs.14461 Daily:Rs.-1225",
-      "cls": ""
-    },
-    {
-      "time": "11:59:57",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "11:59:56",
-      "msg": "STOP LOSS NIFTY PE | SL:Rs.-300 Charges:Rs.65 NET:Rs.-345 | Capital:Rs.14461",
-      "cls": "err"
-    },
-    {
-      "time": "11:57:53",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "time": "14:15:32",
+      "msg": "[PAPER] #6 BEARISH \u2014 BUY PUT (PE) | NIFTY 23850 @ Rs.147.9 | BREAK LOW 24349 | Conf:71% SL:Rs.970 | 1L Inv:Rs.9614",
       "cls": "ok"
     },
     {
-      "time": "11:57:48",
-      "msg": "[PAPER] #5 BEARISH \u2014 BUY PUT (PE) | NIFTY 24200 @ Rs.150.4 | BREAK LOW 24349 | Conf:50% SL:Rs.300 | 1L Inv:Rs.9776",
+      "time": "14:15:29",
+      "msg": "AUTO trade #6: BREAK LOW 24349 conf 71% \u2014 entering",
       "cls": "ok"
     },
     {
-      "time": "11:56:44",
-      "msg": "NIFTY:24240 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:4/99 Lots:1L Cap:Rs.14806 Daily:Rs.-880",
-      "cls": ""
-    },
-    {
-      "time": "11:55:46",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:55:43",
-      "msg": "NIFTY:24253 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:4/99 Lots:1L Cap:Rs.14806 Daily:Rs.-880",
-      "cls": ""
-    },
-    {
-      "time": "11:55:43",
-      "msg": "Trade #5 gate: conf 50% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "11:55:41",
+      "time": "14:15:28",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "11:55:38",
-      "msg": "Restored today's booked P&L from DB: Rs.-880.4",
+      "time": "14:15:27",
+      "msg": "Kite: loaded 1574 NIFTY option contracts",
       "cls": "info"
     },
     {
-      "time": "11:55:38",
-      "msg": "4 trade(s) done today (from DB) \u2014 95 gated slot(s) left.",
+      "time": "14:15:21",
+      "msg": "Restored today's booked P&L from DB: Rs.-1,225.4",
       "cls": "info"
     },
     {
-      "time": "11:55:37",
-      "msg": "Capital: Rs.14806 | Lots: 1L (65 units)",
+      "time": "14:15:21",
+      "msg": "5 trade(s) done today (from DB) \u2014 94 gated slot(s) left.",
       "cls": "info"
     },
     {
-      "time": "11:55:37",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.4 (staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: dynamic Rs.100-500",
+      "time": "14:15:21",
+      "msg": "Capital: Rs.14461 | Lots: 1L (65 units)",
       "cls": "info"
     },
     {
-      "time": "11:55:36",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
-      "cls": "err"
+      "time": "14:15:21",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
+      "cls": "info"
+    },
+    {
+      "time": "14:15:20",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
+      "cls": "ok"
     }
   ],
   "vix": null,
