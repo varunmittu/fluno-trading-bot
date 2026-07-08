@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-08 11:57",
+  "last_updated": "2026-07-08 11:59",
   "summary": {
-    "total_trades": 52,
+    "total_trades": 53,
     "wins": 20,
-    "losses": 32,
-    "win_rate": 38.5,
-    "total_pnl": 478.0,
+    "losses": 33,
+    "win_rate": 37.7,
+    "total_pnl": 133.0,
     "avg_win": 374.0,
-    "avg_loss": -219.0
+    "avg_loss": -223.0
   },
   "trades": [
     {
@@ -893,6 +893,23 @@
       "lots": 1,
       "gross": -380.0,
       "charges": 64.63
+    },
+    {
+      "id": 55,
+      "date": "2026-07-08",
+      "time": "11:59",
+      "score": 50,
+      "entry": 24236.25,
+      "exit": 24247.3,
+      "pnl": -344.98,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 9776.0,
+      "lots": 1,
+      "gross": -280.0,
+      "charges": 64.98
     }
   ],
   "daily_pnl": {
@@ -902,12 +919,32 @@
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
     "2026-07-07": -31.0,
-    "2026-07-08": -881.0
+    "2026-07-08": -1226.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:59:57",
+      "msg": "NIFTY:24247 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:5/99 Lots:1L Cap:Rs.14461 Daily:Rs.-1225",
+      "cls": ""
+    },
+    {
+      "time": "11:59:57",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "11:59:56",
+      "msg": "STOP LOSS NIFTY PE | SL:Rs.-300 Charges:Rs.65 NET:Rs.-345 | Capital:Rs.14461",
+      "cls": "err"
+    },
+    {
+      "time": "11:57:53",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:57:48",
       "msg": "[PAPER] #5 BEARISH \u2014 BUY PUT (PE) | NIFTY 24200 @ Rs.150.4 | BREAK LOW 24349 | Conf:50% SL:Rs.300 | 1L Inv:Rs.9776",
