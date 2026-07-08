@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 11:00",
+  "last_updated": "2026-07-08 11:55",
   "summary": {
     "total_trades": 52,
     "wins": 20,
@@ -909,104 +909,44 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "11:00:25",
-      "msg": "STOP LOSS NIFTY PE | SL:Rs.-400 Charges:Rs.65 NET:Rs.-445 | Capital:Rs.14806",
-      "cls": "err"
-    },
-    {
-      "time": "10:58:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:53:07",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:53:03",
-      "msg": "[PAPER] #4 BEARISH \u2014 BUY PUT (PE) | NIFTY 24200 @ Rs.148.7 | BREAK LOW 24349 | Conf:76% SL:Rs.400 | 1L Inv:Rs.9666",
-      "cls": "ok"
-    },
-    {
-      "time": "10:51:54",
-      "msg": "NIFTY:24281 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:3/99 Lots:1L Cap:Rs.15251 Daily:Rs.-436",
+      "time": "11:55:43",
+      "msg": "NIFTY:24253 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:4/99 Lots:1L Cap:Rs.14806 Daily:Rs.-880",
       "cls": ""
     },
     {
-      "time": "10:50:53",
-      "msg": "NIFTY:24277 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:3/99 Lots:1L Cap:Rs.15251 Daily:Rs.-436",
-      "cls": ""
-    },
-    {
-      "time": "10:50:53",
-      "msg": "Trade #4 gate: conf 76% \u2014 awaiting /confirm",
+      "time": "11:55:43",
+      "msg": "Trade #5 gate: conf 50% \u2014 awaiting /confirm",
       "cls": "info"
     },
     {
-      "time": "10:50:51",
+      "time": "11:55:41",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "10:50:51",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "11:55:38",
+      "msg": "Restored today's booked P&L from DB: Rs.-880.4",
+      "cls": "info"
     },
     {
-      "time": "10:50:47",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.414 Floor:Rs.300 Charges:Rs.66 NET:Rs.+254 | Capital:Rs.15251",
-      "cls": "ok"
+      "time": "11:55:38",
+      "msg": "4 trade(s) done today (from DB) \u2014 95 gated slot(s) left.",
+      "cls": "info"
     },
     {
-      "time": "10:49:45",
-      "msg": "RIDING NIFTY PE | Peak:Rs.414 Now:Rs.305 | staircase floor Rs.300",
-      "cls": "ok"
+      "time": "11:55:37",
+      "msg": "Capital: Rs.14806 | Lots: 1L (65 units)",
+      "cls": "info"
     },
     {
-      "time": "10:48:42",
-      "msg": "RIDING NIFTY PE | Peak:Rs.414 Now:Rs.414 | staircase floor Rs.300",
-      "cls": "ok"
+      "time": "11:55:37",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.4 (staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: dynamic Rs.100-500",
+      "cls": "info"
     },
     {
-      "time": "10:47:42",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:47:39",
-      "msg": "RIDING NIFTY PE | Peak:Rs.304 Now:Rs.304 | staircase floor Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "10:47:39",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.304 \u2014 floor locked at Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "10:46:36",
-      "msg": "RIDING NIFTY PE | Peak:Rs.286 Now:Rs.249 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "10:45:34",
-      "msg": "RIDING NIFTY PE | Peak:Rs.286 Now:Rs.286 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "10:45:27",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.286 \u2014 floor locked at Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "10:44:27",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:44:24",
-      "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24250 @ Rs.150.6 | BREAK LOW 24349 | Conf:76% SL:Rs.400 | 1L Inv:Rs.9789",
-      "cls": "ok"
+      "time": "11:55:36",
+      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
+      "cls": "err"
     }
   ],
   "vix": null,
