@@ -994,6 +994,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:38:58",
+      "msg": "[PAPER] #10 BEARISH \u2014 BUY PUT (PE) | NIFTY 23800 @ Rs.146.2 | BREAK LOW 24349 | Conf:71% SL:Rs.1000 | 1L Inv:Rs.9503",
+      "cls": "ok"
+    },
+    {
+      "time": "14:38:56",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "14:38:54",
+      "msg": "AUTO trade #10: BREAK LOW 24349 conf 71% \u2014 entering",
+      "cls": "ok"
+    },
+    {
       "time": "14:38:53",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.1121 Floor:Rs.1050 Charges:Rs.67 NET:Rs.+1003 | Capital:Rs.14810",
       "cls": "ok"
@@ -1076,21 +1091,6 @@
     {
       "time": "14:31:14",
       "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:31:14",
-      "msg": "AUTO trade #8: BREAK LOW 24349 conf 71% \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "14:31:05",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.220 Floor:Rs.150 Charges:Rs.65 NET:Rs.+105 | Capital:Rs.13552",
-      "cls": "ok"
-    },
-    {
-      "time": "14:30:03",
-      "msg": "RIDING NIFTY PE | Peak:Rs.220 Now:Rs.220 | staircase floor Rs.150",
       "cls": "ok"
     }
   ],
