@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-08 14:58",
+  "last_updated": "2026-07-08 15:01",
   "summary": {
-    "total_trades": 60,
+    "total_trades": 61,
     "wins": 26,
-    "losses": 34,
-    "win_rate": 43.3,
-    "total_pnl": 2044.0,
+    "losses": 35,
+    "win_rate": 42.6,
+    "total_pnl": 1001.0,
     "avg_win": 400.0,
-    "avg_loss": -246.0
+    "avg_loss": -269.0
   },
   "trades": [
     {
@@ -1029,6 +1029,23 @@
       "lots": 1,
       "gross": 720.0,
       "charges": 66.07
+    },
+    {
+      "id": 63,
+      "date": "2026-07-08",
+      "time": "15:01",
+      "score": 71,
+      "entry": 23813.3,
+      "exit": 23859.35,
+      "pnl": -1043.5,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 9516.0,
+      "lots": 1,
+      "gross": -980.0,
+      "charges": 63.5
     }
   ],
   "daily_pnl": {
@@ -1038,12 +1055,22 @@
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
     "2026-07-07": -31.0,
-    "2026-07-08": 685.0
+    "2026-07-08": -358.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "15:01:29",
+      "msg": "STOP LOSS NIFTY PE | SL:Rs.-1000 Charges:Rs.64 NET:Rs.-1044 | Capital:Rs.15329",
+      "cls": "err"
+    },
+    {
+      "time": "14:58:22",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "14:53:08",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -1132,16 +1159,6 @@
     {
       "time": "14:47:35",
       "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:47:31",
-      "msg": "RIDING NIFTY PE | Peak:Rs.577 Now:Rs.505 | staircase floor Rs.500",
-      "cls": "ok"
-    },
-    {
-      "time": "14:46:29",
-      "msg": "RIDING NIFTY PE | Peak:Rs.577 Now:Rs.577 | staircase floor Rs.500",
       "cls": "ok"
     }
   ],
