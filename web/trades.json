@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 10:42",
+  "last_updated": "2026-07-08 10:44",
   "summary": {
     "total_trades": 50,
     "wins": 19,
@@ -875,6 +875,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:44:24",
+      "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24250 @ Rs.150.6 | BREAK LOW 24349 | Conf:76% SL:Rs.400 | 1L Inv:Rs.9789",
+      "cls": "ok"
+    },
+    {
+      "time": "10:43:18",
+      "msg": "NIFTY:24293 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:2/99 Lots:1L Cap:Rs.14997 Daily:Rs.-690",
+      "cls": ""
+    },
+    {
+      "time": "10:42:19",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:42:17",
       "msg": "NIFTY:24290 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:2/99 Lots:1L Cap:Rs.14997 Daily:Rs.-690",
       "cls": ""
@@ -958,21 +973,6 @@
       "time": "10:35:07",
       "msg": "NIFTY:24254 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:2/99 Lots:1L Cap:Rs.14997 Daily:Rs.-690",
       "cls": ""
-    },
-    {
-      "time": "10:35:07",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "10:34:05",
-      "msg": "NIFTY:24257 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:2/99 Lots:1L Cap:Rs.14997 Daily:Rs.-690",
-      "cls": ""
-    },
-    {
-      "time": "10:34:05",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
     }
   ],
   "vix": null,
