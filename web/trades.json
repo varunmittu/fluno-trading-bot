@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 15:24",
+  "last_updated": "2026-07-08 15:29",
   "summary": {
     "total_trades": 61,
     "wins": 26,
@@ -1062,6 +1062,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:29:05",
+      "msg": "NIFTY:23895 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:28:04",
+      "msg": "NIFTY:23895 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:27:04",
+      "msg": "NIFTY:23893 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:26:01",
+      "msg": "NIFTY:23888 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:25:01",
+      "msg": "NIFTY:23900 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:24:03",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:24:00",
       "msg": "NIFTY:23911 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
       "cls": ""
@@ -1130,36 +1160,6 @@
       "time": "15:12:49",
       "msg": "NIFTY:23879 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
       "cls": ""
-    },
-    {
-      "time": "15:11:48",
-      "msg": "NIFTY:23878 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
-      "cls": ""
-    },
-    {
-      "time": "15:10:46",
-      "msg": "NIFTY:23862 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
-      "cls": ""
-    },
-    {
-      "time": "15:09:45",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
-    },
-    {
-      "time": "15:08:36",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:08:34",
-      "msg": "NIFTY:23863 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
-      "cls": ""
-    },
-    {
-      "time": "15:08:31",
-      "msg": "Restored today's booked P&L from DB: Rs.-357.4",
-      "cls": "info"
     }
   ],
   "vix": null,
