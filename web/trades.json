@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 15:29",
+  "last_updated": "2026-07-08 15:34",
   "summary": {
     "total_trades": 61,
     "wins": 26,
@@ -1062,6 +1062,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:34:11",
+      "msg": "NIFTY:23897 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:33:09",
+      "msg": "NIFTY:23897 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:32:08",
+      "msg": "NIFTY:23897 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:31:08",
+      "msg": "NIFTY:23897 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:30:05",
+      "msg": "Error: No item with that key",
+      "cls": "err"
+    },
+    {
+      "time": "15:29:08",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:29:05",
       "msg": "NIFTY:23895 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
       "cls": ""
@@ -1129,36 +1159,6 @@
     {
       "time": "15:17:54",
       "msg": "NIFTY:23895 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
-      "cls": ""
-    },
-    {
-      "time": "15:16:52",
-      "msg": "NIFTY:23895 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
-      "cls": ""
-    },
-    {
-      "time": "15:15:51",
-      "msg": "NIFTY:23900 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
-      "cls": ""
-    },
-    {
-      "time": "15:14:51",
-      "msg": "NIFTY:23883 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
-      "cls": ""
-    },
-    {
-      "time": "15:13:51",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:13:49",
-      "msg": "NIFTY:23874 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
-      "cls": ""
-    },
-    {
-      "time": "15:12:49",
-      "msg": "NIFTY:23879 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
       "cls": ""
     }
   ],
