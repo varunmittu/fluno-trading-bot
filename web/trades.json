@@ -960,6 +960,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:31:17",
+      "msg": "[PAPER] #8 BEARISH \u2014 BUY PUT (PE) | NIFTY 23850 @ Rs.147.8 | BREAK LOW 24349 | Conf:71% SL:Rs.1000 | 1L Inv:Rs.9607",
+      "cls": "ok"
+    },
+    {
+      "time": "14:31:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "14:31:14",
+      "msg": "AUTO trade #8: BREAK LOW 24349 conf 71% \u2014 entering",
+      "cls": "ok"
+    },
+    {
       "time": "14:31:05",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.220 Floor:Rs.150 Charges:Rs.65 NET:Rs.+105 | Capital:Rs.13552",
       "cls": "ok"
@@ -1043,21 +1058,6 @@
       "time": "14:22:46",
       "msg": "NIFTY:23895 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
       "cls": ""
-    },
-    {
-      "time": "14:22:46",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "14:21:45",
-      "msg": "NIFTY:23907 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
-      "cls": ""
-    },
-    {
-      "time": "14:21:45",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
     }
   ],
   "vix": null,
