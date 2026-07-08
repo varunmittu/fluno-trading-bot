@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 14:38",
+  "last_updated": "2026-07-08 14:42",
   "summary": {
     "total_trades": 57,
     "wins": 23,
@@ -991,8 +991,33 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "14:42:09",
+      "msg": "RIDING NIFTY PE | Peak:Rs.486 Now:Rs.465 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:41:05",
+      "msg": "RIDING NIFTY PE | Peak:Rs.486 Now:Rs.486 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:40:03",
+      "msg": "RIDING NIFTY PE | Peak:Rs.406 Now:Rs.406 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:40:01",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.406 \u2014 floor locked at Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:39:01",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "14:38:58",
       "msg": "[PAPER] #10 BEARISH \u2014 BUY PUT (PE) | NIFTY 23800 @ Rs.146.2 | BREAK LOW 24349 | Conf:71% SL:Rs.1000 | 1L Inv:Rs.9503",
@@ -1066,31 +1091,6 @@
     {
       "time": "14:35:31",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.301 Floor:Rs.300 Charges:Rs.66 NET:Rs.+254 | Capital:Rs.13807",
-      "cls": "ok"
-    },
-    {
-      "time": "14:34:27",
-      "msg": "RIDING NIFTY PE | Peak:Rs.301 Now:Rs.301 | staircase floor Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "14:34:25",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.301 \u2014 floor locked at Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "14:31:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:31:17",
-      "msg": "[PAPER] #8 BEARISH \u2014 BUY PUT (PE) | NIFTY 23850 @ Rs.147.8 | BREAK LOW 24349 | Conf:71% SL:Rs.1000 | 1L Inv:Rs.9607",
-      "cls": "ok"
-    },
-    {
-      "time": "14:31:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
   ],
