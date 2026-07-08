@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 15:03",
+  "last_updated": "2026-07-08 15:08",
   "summary": {
     "total_trades": 61,
     "wins": 26,
@@ -1062,104 +1062,34 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "15:03:33",
-      "msg": "NIFTY:23883 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "time": "15:08:34",
+      "msg": "NIFTY:23863 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
       "cls": ""
     },
     {
-      "time": "15:02:30",
-      "msg": "NIFTY:23871 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
-      "cls": ""
-    },
-    {
-      "time": "15:01:32",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:01:30",
-      "msg": "NIFTY:23859 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
-      "cls": ""
-    },
-    {
-      "time": "15:01:29",
-      "msg": "STOP LOSS NIFTY PE | SL:Rs.-1000 Charges:Rs.64 NET:Rs.-1044 | Capital:Rs.15329",
-      "cls": "err"
-    },
-    {
-      "time": "14:58:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:53:08",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:53:00",
-      "msg": "[PAPER] #13 BEARISH \u2014 BUY PUT (PE) | NIFTY 23750 @ Rs.146.4 | BREAK LOW 24349 | Conf:71% SL:Rs.1000 | 1L Inv:Rs.9516",
-      "cls": "ok"
-    },
-    {
-      "time": "14:52:58",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:52:57",
-      "msg": "AUTO trade #13: BREAK LOW 24349 conf 71% \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "14:52:55",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.798 Floor:Rs.700 Charges:Rs.66 NET:Rs.+654 | Capital:Rs.16373",
-      "cls": "ok"
-    },
-    {
-      "time": "14:51:52",
-      "msg": "RIDING NIFTY PE | Peak:Rs.798 Now:Rs.798 | staircase floor Rs.700",
-      "cls": "ok"
-    },
-    {
-      "time": "14:51:52",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.798 \u2014 floor locked at Rs.700",
-      "cls": "ok"
-    },
-    {
-      "time": "14:50:48",
-      "msg": "RIDING NIFTY PE | Peak:Rs.167 Now:Rs.167 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "14:50:47",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.167 \u2014 floor locked at Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "14:49:47",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:49:43",
-      "msg": "[PAPER] #12 BEARISH \u2014 BUY PUT (PE) | NIFTY 23800 @ Rs.147.7 | BREAK LOW 24349 | Conf:71% SL:Rs.1000 | 1L Inv:Rs.9600",
-      "cls": "ok"
-    },
-    {
-      "time": "14:49:41",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:49:40",
-      "msg": "AUTO trade #12: BREAK LOW 24349 conf 71% \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "14:49:39",
-      "msg": "Fetching 5-min candles [^NSEI]...",
+      "time": "15:08:31",
+      "msg": "Restored today's booked P&L from DB: Rs.-357.4",
       "cls": "info"
+    },
+    {
+      "time": "15:08:31",
+      "msg": "13 trade(s) done today (from DB) \u2014 86 gated slot(s) left.",
+      "cls": "info"
+    },
+    {
+      "time": "15:08:31",
+      "msg": "Capital: Rs.15329 | Lots: 1L (65 units)",
+      "cls": "info"
+    },
+    {
+      "time": "15:08:31",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
+      "cls": "info"
+    },
+    {
+      "time": "15:08:29",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
+      "cls": "ok"
     }
   ],
   "vix": null,
