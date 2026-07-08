@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 10:11",
+  "last_updated": "2026-07-08 10:15",
   "summary": {
     "total_trades": 48,
     "wins": 19,
@@ -840,6 +840,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:15:17",
+      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24200 @ Rs.150.6 | BREAK LOW 24349 | Conf:54% SL:Rs.300 | 1L Inv:Rs.9789",
+      "cls": "ok"
+    },
+    {
+      "time": "10:15:13",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:12",
+      "msg": "Kite: loaded 1574 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:14:08",
+      "msg": "NIFTY:24239 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:13:08",
+      "msg": "NIFTY:24248 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:12:06",
+      "msg": "NIFTY:24251 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:11:07",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:11:05",
       "msg": "NIFTY:24253 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
       "cls": ""
@@ -902,41 +937,6 @@
     {
       "time": "10:00:56",
       "msg": "NIFTY:24248 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:59:54",
-      "msg": "NIFTY:24252 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:58:54",
-      "msg": "NIFTY:24250 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:57:54",
-      "msg": "NIFTY:24252 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:56:52",
-      "msg": "NIFTY:24259 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:55:54",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:55:51",
-      "msg": "NIFTY:24262 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:54:51",
-      "msg": "NIFTY:24253 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
       "cls": ""
     }
   ],
