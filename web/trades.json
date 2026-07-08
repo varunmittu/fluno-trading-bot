@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-08 14:42",
+  "last_updated": "2026-07-08 14:44",
   "summary": {
-    "total_trades": 57,
-    "wins": 23,
+    "total_trades": 58,
+    "wins": 24,
     "losses": 34,
-    "win_rate": 40.4,
-    "total_pnl": 482.0,
-    "avg_win": 384.0,
+    "win_rate": 41.4,
+    "total_pnl": 736.0,
+    "avg_win": 379.0,
     "avg_loss": -246.0
   },
   "trades": [
@@ -978,6 +978,23 @@
       "lots": 1,
       "gross": 1070.0,
       "charges": 66.59
+    },
+    {
+      "id": 60,
+      "date": "2026-07-08",
+      "time": "14:44",
+      "score": 71,
+      "entry": 23874.9,
+      "exit": 23864.45,
+      "pnl": 254.68,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 9503.0,
+      "lots": 1,
+      "gross": 320.0,
+      "charges": 65.32
     }
   ],
   "daily_pnl": {
@@ -987,12 +1004,27 @@
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
     "2026-07-07": -31.0,
-    "2026-07-08": -878.0
+    "2026-07-08": -623.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "14:44:14",
+      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.486 Floor:Rs.300 Charges:Rs.65 NET:Rs.+255 | Capital:Rs.15065",
+      "cls": "ok"
+    },
+    {
+      "time": "14:43:12",
+      "msg": "RIDING NIFTY PE | Peak:Rs.486 Now:Rs.443 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:42:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "14:42:09",
       "msg": "RIDING NIFTY PE | Peak:Rs.486 Now:Rs.465 | staircase floor Rs.300",
@@ -1076,21 +1108,6 @@
     {
       "time": "14:35:39",
       "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:35:38",
-      "msg": "AUTO trade #9: BREAK LOW 24349 conf 71% \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "14:35:37",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:35:31",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.301 Floor:Rs.300 Charges:Rs.66 NET:Rs.+254 | Capital:Rs.13807",
       "cls": "ok"
     }
   ],
