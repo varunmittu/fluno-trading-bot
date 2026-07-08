@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 10:19",
+  "last_updated": "2026-07-08 10:21",
   "summary": {
     "total_trades": 49,
     "wins": 19,
@@ -858,6 +858,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:21:38",
+      "msg": "NIFTY:24242 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:1/99 Lots:1L Cap:Rs.15342 Daily:Rs.-345",
+      "cls": ""
+    },
+    {
+      "time": "10:21:38",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:20:38",
+      "msg": "NIFTY:24244 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:1/99 Lots:1L Cap:Rs.15342 Daily:Rs.-345",
+      "cls": ""
+    },
+    {
+      "time": "10:20:38",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:19:38",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "10:19:38",
+      "msg": "NIFTY:24247 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:1/99 Lots:1L Cap:Rs.15342 Daily:Rs.-345",
+      "cls": ""
+    },
+    {
+      "time": "10:19:38",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
       "time": "10:19:35",
       "msg": "STOP LOSS NIFTY PE | SL:Rs.-300 Charges:Rs.65 NET:Rs.-345 | Capital:Rs.15342",
       "cls": "err"
@@ -920,41 +955,6 @@
     {
       "time": "10:09:03",
       "msg": "NIFTY:24236 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:08:02",
-      "msg": "NIFTY:24244 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:07:02",
-      "msg": "NIFTY:24245 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:06:02",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:06:00",
-      "msg": "NIFTY:24239 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:05:00",
-      "msg": "NIFTY:24241 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:03:59",
-      "msg": "NIFTY:24244 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:02:57",
-      "msg": "NIFTY:24248 Sig:-- T:0/99 Lots:1L Cap:Rs.15687 Daily:Rs.0",
       "cls": ""
     }
   ],
