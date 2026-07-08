@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 10:32",
+  "last_updated": "2026-07-08 10:37",
   "summary": {
     "total_trades": 50,
     "wins": 19,
@@ -875,6 +875,71 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:37:08",
+      "msg": "NIFTY:24264 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:2/99 Lots:1L Cap:Rs.14997 Daily:Rs.-690",
+      "cls": ""
+    },
+    {
+      "time": "10:37:08",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:36:08",
+      "msg": "NIFTY:24260 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:2/99 Lots:1L Cap:Rs.14997 Daily:Rs.-690",
+      "cls": ""
+    },
+    {
+      "time": "10:36:08",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:35:07",
+      "msg": "NIFTY:24254 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:2/99 Lots:1L Cap:Rs.14997 Daily:Rs.-690",
+      "cls": ""
+    },
+    {
+      "time": "10:35:07",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:34:05",
+      "msg": "NIFTY:24257 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:2/99 Lots:1L Cap:Rs.14997 Daily:Rs.-690",
+      "cls": ""
+    },
+    {
+      "time": "10:34:05",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:33:05",
+      "msg": "NIFTY:24260 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:2/99 Lots:1L Cap:Rs.14997 Daily:Rs.-690",
+      "cls": ""
+    },
+    {
+      "time": "10:33:05",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "10:32:05",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "10:32:04",
+      "msg": "NIFTY:24261 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:2/99 Lots:1L Cap:Rs.14997 Daily:Rs.-690",
+      "cls": ""
+    },
+    {
+      "time": "10:32:04",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
       "time": "10:31:58",
       "msg": "STOP LOSS NIFTY PE | SL:Rs.-300 Charges:Rs.65 NET:Rs.-345 | Capital:Rs.14997",
       "cls": "err"
@@ -906,71 +971,6 @@
     },
     {
       "time": "10:28:47",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "10:27:45",
-      "msg": "NIFTY:24233 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:1/99 Lots:1L Cap:Rs.15342 Daily:Rs.-345",
-      "cls": ""
-    },
-    {
-      "time": "10:27:45",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "10:26:46",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:26:44",
-      "msg": "NIFTY:24230 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:1/99 Lots:1L Cap:Rs.15342 Daily:Rs.-345",
-      "cls": ""
-    },
-    {
-      "time": "10:26:44",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "10:25:44",
-      "msg": "NIFTY:24221 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:1/99 Lots:1L Cap:Rs.15342 Daily:Rs.-345",
-      "cls": ""
-    },
-    {
-      "time": "10:25:44",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "10:24:42",
-      "msg": "NIFTY:24229 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:1/99 Lots:1L Cap:Rs.15342 Daily:Rs.-345",
-      "cls": ""
-    },
-    {
-      "time": "10:24:42",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "10:23:41",
-      "msg": "NIFTY:24234 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:1/99 Lots:1L Cap:Rs.15342 Daily:Rs.-345",
-      "cls": ""
-    },
-    {
-      "time": "10:23:41",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "10:22:41",
-      "msg": "NIFTY:24239 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:1/99 Lots:1L Cap:Rs.15342 Daily:Rs.-345",
-      "cls": ""
-    },
-    {
-      "time": "10:22:41",
       "msg": "NIFTY in SL cooldown \u2014 waiting",
       "cls": "info"
     }
