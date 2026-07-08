@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 14:17",
+  "last_updated": "2026-07-08 14:20",
   "summary": {
     "total_trades": 54,
     "wins": 20,
@@ -942,6 +942,51 @@
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "14:20:43",
+      "msg": "NIFTY:23925 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
+      "cls": ""
+    },
+    {
+      "time": "14:20:43",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "14:19:43",
+      "msg": "NIFTY:23903 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
+      "cls": ""
+    },
+    {
+      "time": "14:19:43",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "14:18:42",
+      "msg": "NIFTY:23926 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
+      "cls": ""
+    },
+    {
+      "time": "14:18:42",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "14:17:43",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "14:17:40",
+      "msg": "NIFTY:23933 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
+      "cls": ""
+    },
+    {
+      "time": "14:17:40",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
     {
       "time": "14:17:38",
       "msg": "STOP LOSS NIFTY PE | SL:Rs.-970 Charges:Rs.64 NET:Rs.-1014 | Capital:Rs.13447",
