@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-08 14:31",
+  "last_updated": "2026-07-08 14:35",
   "summary": {
-    "total_trades": 55,
-    "wins": 21,
+    "total_trades": 56,
+    "wins": 22,
     "losses": 34,
-    "win_rate": 38.2,
-    "total_pnl": -776.0,
-    "avg_win": 361.0,
+    "win_rate": 39.3,
+    "total_pnl": -522.0,
+    "avg_win": 356.0,
     "avg_loss": -246.0
   },
   "trades": [
@@ -944,6 +944,23 @@
       "lots": 1,
       "gross": 170.0,
       "charges": 65.36
+    },
+    {
+      "id": 58,
+      "date": "2026-07-08",
+      "time": "14:35",
+      "score": 71,
+      "entry": 23895.3,
+      "exit": 23892.7,
+      "pnl": 254.49,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 9607.0,
+      "lots": 1,
+      "gross": 320.0,
+      "charges": 65.51
     }
   ],
   "daily_pnl": {
@@ -953,12 +970,32 @@
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
     "2026-07-07": -31.0,
-    "2026-07-08": -2135.0
+    "2026-07-08": -1881.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "14:35:31",
+      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.301 Floor:Rs.300 Charges:Rs.66 NET:Rs.+254 | Capital:Rs.13807",
+      "cls": "ok"
+    },
+    {
+      "time": "14:34:27",
+      "msg": "RIDING NIFTY PE | Peak:Rs.301 Now:Rs.301 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:34:25",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.301 \u2014 floor locked at Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:31:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "14:31:17",
       "msg": "[PAPER] #8 BEARISH \u2014 BUY PUT (PE) | NIFTY 23850 @ Rs.147.8 | BREAK LOW 24349 | Conf:71% SL:Rs.1000 | 1L Inv:Rs.9607",
@@ -1037,26 +1074,6 @@
     {
       "time": "14:24:48",
       "msg": "NIFTY:23901 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
-      "cls": ""
-    },
-    {
-      "time": "14:24:48",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "14:23:46",
-      "msg": "NIFTY:23920 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
-      "cls": ""
-    },
-    {
-      "time": "14:23:46",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "14:22:46",
-      "msg": "NIFTY:23895 YdH:24531/YdL:24349 Sig:BREAK LOW 24349 T:6/99 Lots:1L Cap:Rs.13447 Daily:Rs.-2239",
       "cls": ""
     }
   ],
