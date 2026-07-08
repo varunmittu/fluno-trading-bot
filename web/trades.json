@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-08 15:18",
+  "last_updated": "2026-07-08 15:24",
   "summary": {
     "total_trades": 61,
     "wins": 26,
@@ -1062,6 +1062,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:24:00",
+      "msg": "NIFTY:23911 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:22:58",
+      "msg": "NIFTY:23911 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:21:58",
+      "msg": "NIFTY:23911 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:20:57",
+      "msg": "NIFTY:23917 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:19:55",
+      "msg": "NIFTY:23904 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
+      "cls": ""
+    },
+    {
+      "time": "15:18:57",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:18:55",
       "msg": "NIFTY:23913 Sig:-- T:13/99 Lots:1L Cap:Rs.15329 Daily:Rs.-357",
       "cls": ""
@@ -1130,26 +1160,6 @@
       "time": "15:08:31",
       "msg": "Restored today's booked P&L from DB: Rs.-357.4",
       "cls": "info"
-    },
-    {
-      "time": "15:08:31",
-      "msg": "13 trade(s) done today (from DB) \u2014 86 gated slot(s) left.",
-      "cls": "info"
-    },
-    {
-      "time": "15:08:31",
-      "msg": "Capital: Rs.15329 | Lots: 1L (65 units)",
-      "cls": "info"
-    },
-    {
-      "time": "15:08:31",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
-      "cls": "info"
-    },
-    {
-      "time": "15:08:29",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
     }
   ],
   "vix": null,
