@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-09 10:14",
+  "last_updated": "2026-07-09 10:19",
   "summary": {
     "total_trades": 61,
     "wins": 26,
@@ -1062,6 +1062,46 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:19:32",
+      "msg": "NIFTY:24035 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:18:30",
+      "msg": "NIFTY:24046 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:17:29",
+      "msg": "NIFTY:24046 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:16:28",
+      "msg": "NIFTY:24051 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:15:25",
+      "msg": "NIFTY:24046 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:15:24",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:24",
+      "msg": "Kite: loaded 1672 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:14:24",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:14:21",
       "msg": "NIFTY:24046 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
       "cls": ""
@@ -1120,46 +1160,6 @@
       "time": "10:04:16",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "10:04:13",
-      "msg": "NIFTY:24061 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:03:11",
-      "msg": "NIFTY:24059 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:02:10",
-      "msg": "NIFTY:24067 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:01:10",
-      "msg": "NIFTY:24061 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:00:08",
-      "msg": "NIFTY:24043 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:59:10",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:59:08",
-      "msg": "NIFTY:24037 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:58:07",
-      "msg": "NIFTY:24043 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
