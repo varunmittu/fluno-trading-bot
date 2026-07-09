@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-09 12:39",
+  "last_updated": "2026-07-09 12:44",
   "summary": {
     "total_trades": 62,
     "wins": 26,
@@ -1080,6 +1080,56 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:44:13",
+      "msg": "NIFTY:24020 YdH:24300/YdL:23805 Sig:FADE 24133->24020 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "12:44:13",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "12:44:12",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:43:12",
+      "msg": "NIFTY:24025 YdH:24300/YdL:23805 Sig:FADE 24133->24025 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "12:42:08",
+      "msg": "NIFTY:24019 YdH:24300/YdL:23805 Sig:FADE 24133->24019 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "12:42:08",
+      "msg": "Kite: loaded 1672 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "12:41:53",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
+      "cls": "ok"
+    },
+    {
+      "time": "12:41:04",
+      "msg": "NIFTY:24026 YdH:24300/YdL:23805 Sig:FADE 24133->24026 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "12:40:03",
+      "msg": "NIFTY:24038 YdH:24300/YdL:23805 Sig:FADE 24133->24038 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "12:39:04",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:39:01",
       "msg": "NIFTY:24042 YdH:24300/YdL:23805 Sig:FADE 24133->24042 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
       "cls": ""
@@ -1128,36 +1178,6 @@
       "time": "12:33:53",
       "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
       "cls": "info"
-    },
-    {
-      "time": "12:33:52",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:33:41",
-      "msg": "Restored today's booked P&L from DB: Rs.-724.3",
-      "cls": "info"
-    },
-    {
-      "time": "12:33:41",
-      "msg": "1 trade(s) done today (from DB) \u2014 98 gated slot(s) left.",
-      "cls": "info"
-    },
-    {
-      "time": "12:33:41",
-      "msg": "Capital: Rs.22233 | Lots: 1L (65 units)",
-      "cls": "info"
-    },
-    {
-      "time": "12:33:41",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
-      "cls": "info"
-    },
-    {
-      "time": "12:33:40",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
-      "cls": "err"
     }
   ],
   "vix": null,
