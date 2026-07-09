@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-09 11:31",
+  "last_updated": "2026-07-09 11:36",
   "summary": {
     "total_trades": 62,
     "wins": 26,
@@ -1080,6 +1080,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:36:43",
+      "msg": "NIFTY:24051 YdH:24300/YdL:23805 Sig:-- T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "11:35:40",
+      "msg": "NIFTY:24054 YdH:24300/YdL:23805 Sig:-- T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "11:35:39",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:34:38",
+      "msg": "NIFTY:24057 YdH:24300/YdL:23805 Sig:-- T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "11:33:37",
+      "msg": "NIFTY:24060 YdH:24300/YdL:23805 Sig:-- T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "11:32:35",
+      "msg": "NIFTY:24061 YdH:24300/YdL:23805 Sig:-- T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "11:31:37",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:31:34",
       "msg": "NIFTY:24067 YdH:24300/YdL:23805 Sig:-- T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
       "cls": ""
@@ -1142,41 +1177,6 @@
     {
       "time": "11:23:18",
       "msg": "NIFTY:24022 YdH:24300/YdL:23805 Sig:-- T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "11:22:17",
-      "msg": "NIFTY:24027 YdH:24300/YdL:23805 Sig:-- T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "11:21:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:21:16",
-      "msg": "NIFTY:24022 YdH:24300/YdL:23805 Sig:-- T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "11:20:13",
-      "msg": "NIFTY:24031 YdH:24300/YdL:23805 Sig:-- T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "11:20:13",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:19:12",
-      "msg": "NIFTY:24012 YdH:24300/YdL:23805 Sig:-- T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "11:18:11",
-      "msg": "NIFTY:24013 YdH:24300/YdL:23805 Sig:-- T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
       "cls": ""
     }
   ],
