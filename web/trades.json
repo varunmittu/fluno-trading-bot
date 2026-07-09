@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-09 13:32",
+  "last_updated": "2026-07-09 13:38",
   "summary": {
     "total_trades": 62,
     "wins": 26,
@@ -1080,6 +1080,46 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:38:09",
+      "msg": "NIFTY:24066 YdH:24300/YdL:23805 Sig:FADE 24133->24066 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "13:38:09",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:38:08",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:37:07",
+      "msg": "NIFTY:24062 YdH:24300/YdL:23805 Sig:FADE 24133->24062 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "13:36:04",
+      "msg": "NIFTY:24071 YdH:24300/YdL:23805 Sig:FADE 24133->24071 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "13:35:03",
+      "msg": "NIFTY:24060 YdH:24300/YdL:23805 Sig:FADE 24133->24060 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "13:34:02",
+      "msg": "NIFTY:24059 YdH:24300/YdL:23805 Sig:FADE 24133->24059 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "cls": ""
+    },
+    {
+      "time": "13:33:01",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:32:58",
       "msg": "NIFTY:24058 YdH:24300/YdL:23805 Sig:FADE 24133->24058 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
       "cls": ""
@@ -1138,31 +1178,6 @@
       "time": "13:27:50",
       "msg": "Kite: loaded 1672 NIFTY option contracts",
       "cls": "info"
-    },
-    {
-      "time": "13:27:44",
-      "msg": "Restored today's booked P&L from DB: Rs.-724.3",
-      "cls": "info"
-    },
-    {
-      "time": "13:27:44",
-      "msg": "1 trade(s) done today (from DB) \u2014 98 gated slot(s) left.",
-      "cls": "info"
-    },
-    {
-      "time": "13:27:44",
-      "msg": "Capital: Rs.22233 | Lots: 1L (65 units)",
-      "cls": "info"
-    },
-    {
-      "time": "13:27:44",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
-      "cls": "info"
-    },
-    {
-      "time": "13:27:43",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
     }
   ],
   "vix": null,
