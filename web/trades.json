@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-09 12:59",
+  "last_updated": "2026-07-09 13:02",
   "summary": {
     "total_trades": 62,
     "wins": 26,
@@ -1080,104 +1080,49 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "12:59:42",
-      "msg": "NIFTY:24040 YdH:24300/YdL:23805 Sig:FADE 24133->24040 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
+      "time": "13:02:07",
+      "msg": "NIFTY:24038 YdH:24300/YdL:23805 Sig:FADE 24133->24038 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
       "cls": ""
     },
     {
-      "time": "12:59:42",
+      "time": "13:02:07",
       "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
       "cls": "info"
     },
     {
-      "time": "12:59:42",
+      "time": "13:02:06",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "12:58:41",
-      "msg": "NIFTY:24047 YdH:24300/YdL:23805 Sig:FADE 24133->24047 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
+      "time": "13:02:06",
+      "msg": "Kite: loaded 1672 NIFTY option contracts",
+      "cls": "info"
     },
     {
-      "time": "12:57:38",
-      "msg": "NIFTY:24043 YdH:24300/YdL:23805 Sig:FADE 24133->24043 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
+      "time": "13:02:02",
+      "msg": "Restored today's booked P&L from DB: Rs.-724.3",
+      "cls": "info"
     },
     {
-      "time": "12:56:37",
-      "msg": "NIFTY:24045 YdH:24300/YdL:23805 Sig:FADE 24133->24045 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
+      "time": "13:02:02",
+      "msg": "1 trade(s) done today (from DB) \u2014 98 gated slot(s) left.",
+      "cls": "info"
     },
     {
-      "time": "12:55:35",
-      "msg": "NIFTY:24052 YdH:24300/YdL:23805 Sig:FADE 24133->24052 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
+      "time": "13:02:02",
+      "msg": "Capital: Rs.22233 | Lots: 1L (65 units)",
+      "cls": "info"
     },
     {
-      "time": "12:54:36",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "time": "13:02:02",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
+      "cls": "info"
+    },
+    {
+      "time": "13:02:01",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
-    },
-    {
-      "time": "12:54:32",
-      "msg": "NIFTY:24048 YdH:24300/YdL:23805 Sig:FADE 24133->24048 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "12:54:32",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:54:32",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:53:30",
-      "msg": "NIFTY:24041 YdH:24300/YdL:23805 Sig:FADE 24133->24041 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "12:52:28",
-      "msg": "NIFTY:24034 YdH:24300/YdL:23805 Sig:FADE 24133->24034 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "12:51:26",
-      "msg": "NIFTY:24031 YdH:24300/YdL:23805 Sig:FADE 24133->24031 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "12:50:25",
-      "msg": "NIFTY:24030 YdH:24300/YdL:23805 Sig:FADE 24133->24030 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "12:49:26",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:49:24",
-      "msg": "NIFTY:24035 YdH:24300/YdL:23805 Sig:FADE 24133->24035 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "12:49:24",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:49:23",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:48:21",
-      "msg": "NIFTY:24031 YdH:24300/YdL:23805 Sig:FADE 24133->24031 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
     }
   ],
   "vix": null,
