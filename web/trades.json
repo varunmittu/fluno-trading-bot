@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-09 10:40",
+  "last_updated": "2026-07-09 10:42",
   "summary": {
     "total_trades": 61,
     "wins": 26,
@@ -1062,6 +1062,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:42:11",
+      "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24150 @ Rs.149.4 | OR BREAK HIGH 24075 | Conf:57% SL:Rs.680 | 1L Inv:Rs.9711",
+      "cls": "ok"
+    },
+    {
+      "time": "10:41:07",
+      "msg": "NIFTY:24043 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:41:06",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:40:06",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:40:03",
       "msg": "NIFTY:24038 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
       "cls": ""
@@ -1140,26 +1160,6 @@
       "time": "10:28:46",
       "msg": "NIFTY:24042 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "10:27:44",
-      "msg": "NIFTY:24048 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:26:43",
-      "msg": "NIFTY:24047 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:25:42",
-      "msg": "NIFTY:24058 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:25:42",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
