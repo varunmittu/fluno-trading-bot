@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-09 10:42",
+  "last_updated": "2026-07-09 10:44",
   "summary": {
-    "total_trades": 61,
+    "total_trades": 62,
     "wins": 26,
-    "losses": 35,
-    "win_rate": 42.6,
-    "total_pnl": 1001.0,
+    "losses": 36,
+    "win_rate": 41.9,
+    "total_pnl": 276.0,
     "avg_win": 400.0,
-    "avg_loss": -269.0
+    "avg_loss": -281.0
   },
   "trades": [
     {
@@ -1046,6 +1046,23 @@
       "lots": 1,
       "gross": -980.0,
       "charges": 63.5
+    },
+    {
+      "id": 64,
+      "date": "2026-07-09",
+      "time": "10:44",
+      "score": 57,
+      "entry": 24109.85,
+      "exit": 24077.65,
+      "pnl": -724.32,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9711.0,
+      "lots": 1,
+      "gross": -660.0,
+      "charges": 64.32
     }
   ],
   "daily_pnl": {
@@ -1055,12 +1072,23 @@
     "2026-07-03": -396.0,
     "2026-07-06": 1113.0,
     "2026-07-07": -31.0,
-    "2026-07-08": -358.0
+    "2026-07-08": -358.0,
+    "2026-07-09": -724.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "10:44:16",
+      "msg": "STOP LOSS NIFTY CE | SL:Rs.-680 Charges:Rs.64 NET:Rs.-724 | Capital:Rs.22233",
+      "cls": "err"
+    },
+    {
+      "time": "10:42:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:42:11",
       "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24150 @ Rs.149.4 | OR BREAK HIGH 24075 | Conf:57% SL:Rs.680 | 1L Inv:Rs.9711",
@@ -1150,16 +1178,6 @@
       "time": "10:29:50",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "10:29:47",
-      "msg": "NIFTY:24044 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:28:46",
-      "msg": "NIFTY:24042 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22958 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
