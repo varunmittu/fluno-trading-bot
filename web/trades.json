@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-10 11:08",
+  "last_updated": "2026-07-10 11:11",
   "summary": {
-    "total_trades": 62,
+    "total_trades": 63,
     "wins": 26,
-    "losses": 36,
-    "win_rate": 41.9,
-    "total_pnl": 276.0,
+    "losses": 37,
+    "win_rate": 41.3,
+    "total_pnl": -598.0,
     "avg_win": 400.0,
-    "avg_loss": -281.0
+    "avg_loss": -297.0
   },
   "trades": [
     {
@@ -1063,6 +1063,23 @@
       "lots": 1,
       "gross": -660.0,
       "charges": 64.32
+    },
+    {
+      "id": 65,
+      "date": "2026-07-10",
+      "time": "11:11",
+      "score": 71,
+      "entry": 24212.45,
+      "exit": 24179.55,
+      "pnl": -874.2,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9763.0,
+      "lots": 1,
+      "gross": -810.0,
+      "charges": 64.2
     }
   ],
   "daily_pnl": {
@@ -1073,12 +1090,33 @@
     "2026-07-06": 1113.0,
     "2026-07-07": -31.0,
     "2026-07-08": -358.0,
-    "2026-07-09": -724.0
+    "2026-07-09": -724.0,
+    "2026-07-10": -874.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:11:37",
+      "msg": "NIFTY:24180 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:1/99 Lots:1L Cap:Rs.21359 Daily:Rs.-874",
+      "cls": ""
+    },
+    {
+      "time": "11:11:37",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "11:11:36",
+      "msg": "STOP LOSS NIFTY CE | SL:Rs.-830 Charges:Rs.64 NET:Rs.-874 | Capital:Rs.21359",
+      "cls": "err"
+    },
+    {
+      "time": "11:08:31",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:03:16",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -1157,26 +1195,6 @@
     {
       "time": "10:12:45",
       "msg": "NIFTY:24210 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:11:45",
-      "msg": "NIFTY:24215 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:10:47",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:10:45",
-      "msg": "NIFTY:24223 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:09:42",
-      "msg": "NIFTY:24205 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
       "cls": ""
     }
   ],
