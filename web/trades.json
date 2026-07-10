@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10 12:12",
+  "last_updated": "2026-07-10 12:16",
   "summary": {
     "total_trades": 67,
     "wins": 27,
@@ -1166,6 +1166,51 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:16:06",
+      "msg": "NIFTY:24166 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:5/99 Lots:1L Cap:Rs.19932 Daily:Rs.-2302",
+      "cls": ""
+    },
+    {
+      "time": "12:16:06",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:15:04",
+      "msg": "NIFTY:24164 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:5/99 Lots:1L Cap:Rs.19932 Daily:Rs.-2302",
+      "cls": ""
+    },
+    {
+      "time": "12:15:04",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:14:03",
+      "msg": "NIFTY:24162 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:5/99 Lots:1L Cap:Rs.19932 Daily:Rs.-2302",
+      "cls": ""
+    },
+    {
+      "time": "12:14:03",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:13:03",
+      "msg": "NIFTY:24165 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:5/99 Lots:1L Cap:Rs.19932 Daily:Rs.-2302",
+      "cls": ""
+    },
+    {
+      "time": "12:13:03",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:12:04",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:12:00",
       "msg": "NIFTY:24164 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:5/99 Lots:1L Cap:Rs.19932 Daily:Rs.-2302",
       "cls": ""
@@ -1218,51 +1263,6 @@
     {
       "time": "12:04:35",
       "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:03:35",
-      "msg": "NIFTY:24183 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:4/99 Lots:1L Cap:Rs.20356 Daily:Rs.-1877",
-      "cls": ""
-    },
-    {
-      "time": "12:03:35",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "12:02:32",
-      "msg": "NIFTY:24181 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:4/99 Lots:1L Cap:Rs.20356 Daily:Rs.-1877",
-      "cls": ""
-    },
-    {
-      "time": "12:02:32",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "12:01:32",
-      "msg": "NIFTY:24183 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:4/99 Lots:1L Cap:Rs.20356 Daily:Rs.-1877",
-      "cls": ""
-    },
-    {
-      "time": "12:01:32",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "12:00:35",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:00:32",
-      "msg": "NIFTY:24178 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:4/99 Lots:1L Cap:Rs.20356 Daily:Rs.-1877",
-      "cls": ""
-    },
-    {
-      "time": "12:00:32",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
       "cls": "info"
     }
   ],
