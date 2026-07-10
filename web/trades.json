@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10 15:07",
+  "last_updated": "2026-07-10 15:12",
   "summary": {
     "total_trades": 69,
     "wins": 28,
@@ -1200,6 +1200,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:12:19",
+      "msg": "NIFTY:24215 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
+      "cls": ""
+    },
+    {
+      "time": "15:11:19",
+      "msg": "NIFTY:24217 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
+      "cls": ""
+    },
+    {
+      "time": "15:10:19",
+      "msg": "NIFTY:24212 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
+      "cls": ""
+    },
+    {
+      "time": "15:09:16",
+      "msg": "NIFTY:24205 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
+      "cls": ""
+    },
+    {
+      "time": "15:08:16",
+      "msg": "NIFTY:24206 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
+      "cls": ""
+    },
+    {
+      "time": "15:07:19",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:07:15",
       "msg": "NIFTY:24199 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
       "cls": ""
@@ -1268,36 +1298,6 @@
       "time": "14:57:02",
       "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
       "cls": "info"
-    },
-    {
-      "time": "14:57:01",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:56:01",
-      "msg": "NIFTY:24204 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "14:55:00",
-      "msg": "NIFTY:24202 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "14:53:57",
-      "msg": "NIFTY:24205 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "14:52:56",
-      "msg": "NIFTY:24206 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "14:51:58",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
