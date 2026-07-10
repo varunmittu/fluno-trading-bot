@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10 12:46",
+  "last_updated": "2026-07-10 12:47",
   "summary": {
     "total_trades": 68,
     "wins": 28,
@@ -1183,6 +1183,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:47:40",
+      "msg": "NIFTY:24192 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:6/99 Lots:2L Cap:Rs.20036 Daily:Rs.-2197",
+      "cls": ""
+    },
+    {
+      "time": "12:46:37",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "12:46:37",
+      "msg": "NIFTY:24192 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:6/99 Lots:2L Cap:Rs.20036 Daily:Rs.-2197",
+      "cls": ""
+    },
+    {
+      "time": "12:46:37",
+      "msg": "Trade #7 gate: conf 57% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "12:46:35",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "12:46:33",
       "msg": "STAIR BOOK NIFTY CE | Peak:Rs.153 Floor:Rs.150 Charges:Rs.65 NET:Rs.+105 | Capital:Rs.20036",
       "cls": "ok"
@@ -1256,31 +1281,6 @@
       "time": "12:22:18",
       "msg": "NIFTY:24165 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:5/99 Lots:1L Cap:Rs.19932 Daily:Rs.-2302",
       "cls": ""
-    },
-    {
-      "time": "12:22:18",
-      "msg": "Trade #6 gate: conf 57% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "12:22:16",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:21:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:21:13",
-      "msg": "NIFTY:24165 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:5/99 Lots:1L Cap:Rs.19932 Daily:Rs.-2302",
-      "cls": ""
-    },
-    {
-      "time": "12:21:13",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
     }
   ],
   "vix": null,
