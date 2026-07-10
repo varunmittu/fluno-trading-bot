@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10 10:00",
+  "last_updated": "2026-07-10 10:05",
   "summary": {
     "total_trades": 62,
     "wins": 26,
@@ -1080,6 +1080,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:05:39",
+      "msg": "NIFTY:24212 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:04:39",
+      "msg": "NIFTY:24212 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:03:36",
+      "msg": "NIFTY:24211 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:02:36",
+      "msg": "NIFTY:24215 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:01:36",
+      "msg": "NIFTY:24220 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:00:36",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:00:33",
       "msg": "NIFTY:24224 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
       "cls": ""
@@ -1147,36 +1177,6 @@
     {
       "time": "15:31:05",
       "msg": "NIFTY:23982 YdH:24300/YdL:23805 Sig:FADE 24133->24040 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "15:30:03",
-      "msg": "Error: No item with that key",
-      "cls": "err"
-    },
-    {
-      "time": "15:29:02",
-      "msg": "NIFTY:23974 YdH:24300/YdL:23805 Sig:FADE 24133->24040 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "15:28:02",
-      "msg": "NIFTY:23976 YdH:24300/YdL:23805 Sig:FADE 24133->24040 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "15:26:59",
-      "msg": "NIFTY:23982 YdH:24300/YdL:23805 Sig:FADE 24133->24040 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
-      "cls": ""
-    },
-    {
-      "time": "15:26:02",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:25:59",
-      "msg": "NIFTY:23973 YdH:24300/YdL:23805 Sig:FADE 24133->24040 T:1/99 Lots:1L Cap:Rs.22233 Daily:Rs.-724",
       "cls": ""
     }
   ],
