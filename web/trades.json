@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-10 12:10",
+  "last_updated": "2026-07-10 12:12",
   "summary": {
-    "total_trades": 66,
+    "total_trades": 67,
     "wins": 27,
-    "losses": 39,
-    "win_rate": 40.9,
-    "total_pnl": -1601.0,
+    "losses": 40,
+    "win_rate": 40.3,
+    "total_pnl": -2025.0,
     "avg_win": 389.0,
-    "avg_loss": -310.0
+    "avg_loss": -313.0
   },
   "trades": [
     {
@@ -1131,6 +1131,23 @@
       "lots": 2,
       "gross": -660.0,
       "charges": 82.64
+    },
+    {
+      "id": 69,
+      "date": "2026-07-10",
+      "time": "12:11",
+      "score": 57,
+      "entry": 24180.15,
+      "exit": 24163.55,
+      "pnl": -424.62,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9646.0,
+      "lots": 1,
+      "gross": -360.0,
+      "charges": 64.62
     }
   ],
   "daily_pnl": {
@@ -1142,12 +1159,32 @@
     "2026-07-07": -31.0,
     "2026-07-08": -358.0,
     "2026-07-09": -724.0,
-    "2026-07-10": -1878.0
+    "2026-07-10": -2303.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:12:00",
+      "msg": "NIFTY:24164 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:5/99 Lots:1L Cap:Rs.19932 Daily:Rs.-2302",
+      "cls": ""
+    },
+    {
+      "time": "12:12:00",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:11:59",
+      "msg": "STOP LOSS NIFTY CE | SL:Rs.-380 Charges:Rs.65 NET:Rs.-425 | Capital:Rs.19932",
+      "cls": "err"
+    },
+    {
+      "time": "12:11:00",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:06:49",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -1225,26 +1262,6 @@
     },
     {
       "time": "12:00:32",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "11:59:29",
-      "msg": "NIFTY:24171 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:4/99 Lots:1L Cap:Rs.20356 Daily:Rs.-1877",
-      "cls": ""
-    },
-    {
-      "time": "11:59:29",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "11:58:29",
-      "msg": "NIFTY:24164 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:4/99 Lots:1L Cap:Rs.20356 Daily:Rs.-1877",
-      "cls": ""
-    },
-    {
-      "time": "11:58:29",
       "msg": "NIFTY in SL cooldown \u2014 waiting",
       "cls": "info"
     }
