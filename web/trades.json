@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10 12:06",
+  "last_updated": "2026-07-10 12:10",
   "summary": {
     "total_trades": 66,
     "wins": 27,
@@ -1146,8 +1146,13 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "12:06:49",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:06:44",
       "msg": "[PAPER] #5 BULLISH \u2014 BUY CALL (CE) | NIFTY 24250 @ Rs.148.4 | BREAK HIGH 24135 | Conf:57% SL:Rs.380 | 1L Inv:Rs.9646",
@@ -1242,11 +1247,6 @@
       "time": "11:58:29",
       "msg": "NIFTY in SL cooldown \u2014 waiting",
       "cls": "info"
-    },
-    {
-      "time": "11:57:29",
-      "msg": "NIFTY:24161 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:4/99 Lots:1L Cap:Rs.20356 Daily:Rs.-1877",
-      "cls": ""
     }
   ],
   "vix": null,
