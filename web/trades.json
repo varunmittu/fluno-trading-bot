@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10 11:11",
+  "last_updated": "2026-07-10 11:13",
   "summary": {
     "total_trades": 63,
     "wins": 26,
@@ -1098,6 +1098,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:13:40",
+      "msg": "NIFTY:24183 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:1/99 Lots:1L Cap:Rs.21359 Daily:Rs.-874",
+      "cls": ""
+    },
+    {
+      "time": "11:13:40",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "11:12:38",
+      "msg": "NIFTY:24180 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:1/99 Lots:1L Cap:Rs.21359 Daily:Rs.-874",
+      "cls": ""
+    },
+    {
+      "time": "11:12:38",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "11:11:40",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:11:37",
       "msg": "NIFTY:24180 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:1/99 Lots:1L Cap:Rs.21359 Daily:Rs.-874",
       "cls": ""
@@ -1171,31 +1196,6 @@
       "time": "10:15:57",
       "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24250 @ Rs.150.2 | BREAK HIGH 24135 | Conf:71% SL:Rs.830 | 1L Inv:Rs.9763",
       "cls": "ok"
-    },
-    {
-      "time": "10:15:52",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:15:52",
-      "msg": "Kite: loaded 1672 NIFTY option contracts",
-      "cls": "info"
-    },
-    {
-      "time": "10:14:48",
-      "msg": "NIFTY:24210 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:13:48",
-      "msg": "NIFTY:24213 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:12:45",
-      "msg": "NIFTY:24210 YdH:24300/YdL:23805 Sig:-- T:0/99 Lots:1L Cap:Rs.22233 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
