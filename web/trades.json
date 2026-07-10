@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10 14:57",
+  "last_updated": "2026-07-10 15:02",
   "summary": {
     "total_trades": 69,
     "wins": 28,
@@ -1200,6 +1200,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:02:10",
+      "msg": "NIFTY:24212 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
+      "cls": ""
+    },
+    {
+      "time": "15:01:09",
+      "msg": "NIFTY:24213 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
+      "cls": ""
+    },
+    {
+      "time": "15:00:07",
+      "msg": "NIFTY:24188 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
+      "cls": ""
+    },
+    {
+      "time": "14:59:06",
+      "msg": "NIFTY:24193 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
+      "cls": ""
+    },
+    {
+      "time": "14:58:05",
+      "msg": "NIFTY:24210 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
+      "cls": ""
+    },
+    {
+      "time": "14:57:05",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:57:02",
       "msg": "NIFTY:24208 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
       "cls": ""
@@ -1267,36 +1297,6 @@
     {
       "time": "14:48:49",
       "msg": "NIFTY:24220 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "14:47:47",
-      "msg": "NIFTY:24216 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "14:46:50",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:46:46",
-      "msg": "NIFTY:24209 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "14:46:46",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:46:45",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:45:44",
-      "msg": "NIFTY:24207 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
       "cls": ""
     }
   ],
