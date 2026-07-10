@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-10 13:13",
+  "last_updated": "2026-07-10 13:19",
   "summary": {
-    "total_trades": 68,
+    "total_trades": 69,
     "wins": 28,
-    "losses": 40,
-    "win_rate": 41.2,
-    "total_pnl": -1921.0,
+    "losses": 41,
+    "win_rate": 40.6,
+    "total_pnl": -2683.0,
     "avg_win": 379.0,
-    "avg_loss": -313.0
+    "avg_loss": -324.0
   },
   "trades": [
     {
@@ -1165,6 +1165,23 @@
       "lots": 1,
       "gross": 170.0,
       "charges": 65.41
+    },
+    {
+      "id": 71,
+      "date": "2026-07-10",
+      "time": "13:19",
+      "score": 57,
+      "entry": 24191.35,
+      "exit": 24176.05,
+      "pnl": -762.25,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 19370.0,
+      "lots": 2,
+      "gross": -680.0,
+      "charges": 82.25
     }
   ],
   "daily_pnl": {
@@ -1176,12 +1193,22 @@
     "2026-07-07": -31.0,
     "2026-07-08": -358.0,
     "2026-07-09": -724.0,
-    "2026-07-10": -2198.0
+    "2026-07-10": -2960.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "13:19:10",
+      "msg": "STOP LOSS NIFTY CE | SL:Rs.-700 Charges:Rs.82 NET:Rs.-762 | Capital:Rs.19274",
+      "cls": "err"
+    },
+    {
+      "time": "13:14:00",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:08:44",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -1270,16 +1297,6 @@
     {
       "time": "12:31:52",
       "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:27:39",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:27:29",
-      "msg": "[PAPER] #6 BULLISH \u2014 BUY CALL (CE) | NIFTY 24250 @ Rs.148.7 | BREAK HIGH 24135 | Conf:57% SL:Rs.370 | 1L Inv:Rs.9666",
       "cls": "ok"
     }
   ],
