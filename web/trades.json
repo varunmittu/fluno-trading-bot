@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13 11:07",
+  "last_updated": "2026-07-13 11:10",
   "summary": {
     "total_trades": 70,
     "wins": 28,
@@ -1218,6 +1218,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:10:26",
+      "msg": "NIFTY:24145 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
+      "cls": ""
+    },
+    {
+      "time": "11:10:26",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "11:09:26",
+      "msg": "NIFTY:24144 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
+      "cls": ""
+    },
+    {
+      "time": "11:09:26",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "11:08:25",
+      "msg": "NIFTY:24146 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
+      "cls": ""
+    },
+    {
+      "time": "11:08:25",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "11:07:26",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:07:23",
       "msg": "NIFTY:24145 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
       "cls": ""
@@ -1281,41 +1316,6 @@
       "time": "10:51:25",
       "msg": "NIFTY:24140 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "10:50:25",
-      "msg": "NIFTY:24134 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:49:27",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:49:24",
-      "msg": "NIFTY:24140 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:49:24",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "10:49:23",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:49:13",
-      "msg": "Capital: Rs.19000 | Lots: 1L (65 units)",
-      "cls": "info"
-    },
-    {
-      "time": "10:49:13",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
-      "cls": "info"
     }
   ],
   "vix": null,
