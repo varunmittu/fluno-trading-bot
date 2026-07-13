@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-13 12:50",
+  "last_updated": "2026-07-13 13:00",
   "summary": {
-    "total_trades": 69,
-    "wins": 28,
+    "total_trades": 70,
+    "wins": 29,
     "losses": 41,
-    "win_rate": 40.6,
-    "total_pnl": -2683.0,
-    "avg_win": 379.0,
+    "win_rate": 41.4,
+    "total_pnl": -2229.0,
+    "avg_win": 382.0,
     "avg_loss": -324.0
   },
   "trades": [
@@ -1182,6 +1182,23 @@
       "lots": 2,
       "gross": -680.0,
       "charges": 82.25
+    },
+    {
+      "id": 73,
+      "date": "2026-07-13",
+      "time": "13:00",
+      "score": 57,
+      "entry": 24210.6,
+      "exit": 24220.25,
+      "pnl": 453.93,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9756.5,
+      "lots": 1,
+      "gross": 520.0,
+      "charges": 66.07
     }
   ],
   "daily_pnl": {
@@ -1193,12 +1210,33 @@
     "2026-07-07": -31.0,
     "2026-07-08": -358.0,
     "2026-07-09": -724.0,
-    "2026-07-10": -2960.0
+    "2026-07-10": -2960.0,
+    "2026-07-13": 454.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "13:00:17",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.687 Floor:Rs.500 Charges:Rs.66 NET:Rs.+454 | Capital:Rs.19454",
+      "cls": "ok"
+    },
+    {
+      "time": "12:55:07",
+      "msg": "RIDING NIFTY CE | Peak:Rs.687 Now:Rs.687 | staircase floor Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "12:55:05",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.687 \u2014 floor locked at Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "12:50:24",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:45:07",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -1276,26 +1314,6 @@
     },
     {
       "time": "12:20:10",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:26",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:15:23",
-      "msg": "NIFTY:24181 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:15:23",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:22",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     }
