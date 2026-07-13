@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13 13:30",
+  "last_updated": "2026-07-13 13:35",
   "summary": {
     "total_trades": 71,
     "wins": 29,
@@ -1235,6 +1235,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:35:07",
+      "msg": "NIFTY:24183 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:2/99 Lots:1L Cap:Rs.18869 Daily:Rs.-131",
+      "cls": ""
+    },
+    {
+      "time": "13:35:07",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "13:30:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "13:30:17",
+      "msg": "NIFTY:24174 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:2/99 Lots:1L Cap:Rs.18869 Daily:Rs.-131",
+      "cls": ""
+    },
+    {
+      "time": "13:30:17",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
       "time": "13:30:13",
       "msg": "STOP LOSS NIFTY CE | SL:Rs.-540 Charges:Rs.65 NET:Rs.-585 | Capital:Rs.18869",
       "cls": "err"
@@ -1308,31 +1333,6 @@
       "time": "12:40:19",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "12:40:13",
-      "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24250 @ Rs.150.1 | OR BREAK HIGH 24129 | Conf:57% SL:Rs.490 | 1L Inv:Rs.9756",
-      "cls": "ok"
-    },
-    {
-      "time": "12:40:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:35:25",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:35:22",
-      "msg": "NIFTY:24200 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:35:22",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
     }
   ],
   "vix": null,
