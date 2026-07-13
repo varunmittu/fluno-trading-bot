@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13 11:45",
+  "last_updated": "2026-07-13 11:50",
   "summary": {
     "total_trades": 69,
     "wins": 28,
@@ -1200,6 +1200,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:50:22",
+      "msg": "NIFTY:24146 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:50:22",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "11:50:21",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:45:16",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:45:14",
       "msg": "NIFTY:24131 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
       "cls": ""
@@ -1278,26 +1298,6 @@
       "time": "11:21:56",
       "msg": "NIFTY:24149 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "11:21:56",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "11:21:55",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:21:55",
-      "msg": "Kite: loaded 1672 NIFTY option contracts",
-      "cls": "info"
-    },
-    {
-      "time": "11:21:50",
-      "msg": "Capital: Rs.19000 | Lots: 1L (65 units)",
-      "cls": "info"
     }
   ],
   "vix": null,
