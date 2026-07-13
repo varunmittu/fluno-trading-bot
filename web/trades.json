@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-10 15:32",
+  "last_updated": "2026-07-13 09:16",
   "summary": {
     "total_trades": 69,
     "wins": 28,
@@ -1200,104 +1200,39 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "15:32:39",
-      "msg": "NIFTY:24212 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
+      "time": "09:16:05",
+      "msg": "NIFTY:24020 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "15:31:39",
-      "msg": "NIFTY:24212 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "15:30:37",
-      "msg": "Error: No item with that key",
+      "time": "09:15:02",
+      "msg": "Could not fetch any live prices. Retrying...",
       "cls": "err"
     },
     {
-      "time": "15:29:36",
-      "msg": "NIFTY:24213 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
+      "time": "09:10:02",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
     },
     {
-      "time": "15:28:36",
-      "msg": "NIFTY:24215 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
+      "time": "00:00:40",
+      "msg": "New trading day | Capital: Rs.7317 | Lots: 1L",
+      "cls": "info"
     },
     {
-      "time": "15:27:37",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "09:46:23",
+      "msg": "Capital: Rs.7317 | Lots: 1L (65 units)",
+      "cls": "info"
     },
     {
-      "time": "15:27:34",
-      "msg": "NIFTY:24216 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
+      "time": "09:46:23",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
+      "cls": "info"
     },
     {
-      "time": "15:26:33",
-      "msg": "NIFTY:24210 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "15:25:33",
-      "msg": "NIFTY:24208 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "15:24:31",
-      "msg": "NIFTY:24209 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "15:23:30",
-      "msg": "NIFTY:24213 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "15:22:33",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:22:30",
-      "msg": "NIFTY:24206 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "15:21:28",
-      "msg": "NIFTY:24203 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "15:20:27",
-      "msg": "NIFTY:24200 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "15:19:27",
-      "msg": "NIFTY:24202 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "15:18:25",
-      "msg": "NIFTY:24200 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "15:17:28",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:17:25",
-      "msg": "NIFTY:24200 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
-    },
-    {
-      "time": "15:16:24",
-      "msg": "NIFTY:24201 YdH:24135/YdL:23926 Sig:BREAK HIGH 24135 T:7/99 Lots:1L Cap:Rs.19274 Daily:Rs.-2959",
-      "cls": ""
+      "time": "09:46:22",
+      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
+      "cls": "err"
     }
   ],
   "vix": null,
