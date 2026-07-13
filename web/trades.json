@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-13 11:05",
+  "last_updated": "2026-07-13 11:07",
   "summary": {
-    "total_trades": 69,
+    "total_trades": 70,
     "wins": 28,
-    "losses": 41,
-    "win_rate": 40.6,
-    "total_pnl": -2683.0,
+    "losses": 42,
+    "win_rate": 40.0,
+    "total_pnl": -3337.0,
     "avg_win": 379.0,
-    "avg_loss": -324.0
+    "avg_loss": -332.0
   },
   "trades": [
     {
@@ -1182,6 +1182,23 @@
       "lots": 2,
       "gross": -680.0,
       "charges": 82.25
+    },
+    {
+      "id": 72,
+      "date": "2026-07-13",
+      "time": "11:07",
+      "score": 61,
+      "entry": 24119.1,
+      "exit": 24144.9,
+      "pnl": -654.25,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 9620.0,
+      "lots": 1,
+      "gross": -590.0,
+      "charges": 64.25
     }
   ],
   "daily_pnl": {
@@ -1193,12 +1210,33 @@
     "2026-07-07": -31.0,
     "2026-07-08": -358.0,
     "2026-07-09": -724.0,
-    "2026-07-10": -2960.0
+    "2026-07-10": -2960.0,
+    "2026-07-13": -654.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:07:23",
+      "msg": "NIFTY:24145 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
+      "cls": ""
+    },
+    {
+      "time": "11:07:23",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "11:07:21",
+      "msg": "STOP LOSS NIFTY PE | SL:Rs.-610 Charges:Rs.64 NET:Rs.-654 | Capital:Rs.18346",
+      "cls": "err"
+    },
+    {
+      "time": "11:05:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:00:04",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -1278,11 +1316,6 @@
       "time": "10:49:13",
       "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
       "cls": "info"
-    },
-    {
-      "time": "10:49:12",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
-      "cls": "err"
     }
   ],
   "vix": null,
