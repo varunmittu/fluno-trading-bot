@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13 12:00",
+  "last_updated": "2026-07-13 12:10",
   "summary": {
     "total_trades": 69,
     "wins": 28,
@@ -1200,6 +1200,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:10:14",
+      "msg": "NIFTY:24156 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:10:14",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "12:10:13",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:05:05",
+      "msg": "NIFTY:24154 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:05:04",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:00:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:00:18",
       "msg": "NIFTY:24141 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
       "cls": ""
@@ -1268,36 +1298,6 @@
       "time": "11:40:05",
       "msg": "NIFTY:24136 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "11:40:05",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:35:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:35:18",
-      "msg": "NIFTY:24147 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:35:18",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "11:35:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:30:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
