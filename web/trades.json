@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13 10:17",
+  "last_updated": "2026-07-13 10:22",
   "summary": {
     "total_trades": 69,
     "wins": 28,
@@ -1200,6 +1200,61 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:22:29",
+      "msg": "NIFTY:24122 YdH:24228/YdL:24120 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:21:28",
+      "msg": "NIFTY:24116 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:21:27",
+      "msg": "SKIP \u2014 capital Rs.7317 can't afford 1 lot (needs Rs.9633)",
+      "cls": "err"
+    },
+    {
+      "time": "10:21:24",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:20:24",
+      "msg": "NIFTY:24118 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:20:17",
+      "msg": "SKIP \u2014 capital Rs.7317 can't afford 1 lot (needs Rs.9626)",
+      "cls": "err"
+    },
+    {
+      "time": "10:19:13",
+      "msg": "NIFTY:24112 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:19:12",
+      "msg": "SKIP \u2014 capital Rs.7317 can't afford 1 lot (needs Rs.9640)",
+      "cls": "err"
+    },
+    {
+      "time": "10:18:09",
+      "msg": "NIFTY:24109 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:18:08",
+      "msg": "SKIP \u2014 capital Rs.7317 can't afford 1 lot (needs Rs.9652)",
+      "cls": "err"
+    },
+    {
+      "time": "10:17:08",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:17:06",
       "msg": "NIFTY:24109 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
       "cls": ""
@@ -1243,61 +1298,6 @@
       "time": "10:11:51",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "10:11:49",
-      "msg": "NIFTY:24110 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:10:49",
-      "msg": "NIFTY:24106 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:09:46",
-      "msg": "NIFTY:24113 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:08:46",
-      "msg": "NIFTY:24112 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:07:46",
-      "msg": "NIFTY:24098 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:06:47",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:06:44",
-      "msg": "NIFTY:24107 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:05:44",
-      "msg": "NIFTY:24111 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:04:44",
-      "msg": "NIFTY:24113 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:03:42",
-      "msg": "NIFTY:24114 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:02:42",
-      "msg": "NIFTY:24120 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
