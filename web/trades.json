@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13 09:31",
+  "last_updated": "2026-07-13 09:36",
   "summary": {
     "total_trades": 69,
     "wins": 28,
@@ -1200,6 +1200,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:36:20",
+      "msg": "NIFTY:24036 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:35:20",
+      "msg": "NIFTY:24028 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:34:19",
+      "msg": "NIFTY:24023 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:33:18",
+      "msg": "NIFTY:24035 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:32:17",
+      "msg": "NIFTY:24030 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:31:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:31:17",
       "msg": "NIFTY:24029 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
       "cls": ""
@@ -1268,36 +1298,6 @@
       "time": "09:20:08",
       "msg": "NIFTY:24023 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:19:07",
-      "msg": "NIFTY:24026 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:18:05",
-      "msg": "NIFTY:24036 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:17:05",
-      "msg": "NIFTY:24032 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:16:08",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:16:05",
-      "msg": "NIFTY:24020 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:15:02",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
     }
   ],
   "vix": null,
