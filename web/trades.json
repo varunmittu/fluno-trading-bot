@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-13 14:50",
+  "last_updated": "2026-07-13 15:00",
   "summary": {
-    "total_trades": 71,
-    "wins": 29,
+    "total_trades": 72,
+    "wins": 30,
     "losses": 42,
-    "win_rate": 40.8,
-    "total_pnl": -2814.0,
-    "avg_win": 382.0,
+    "win_rate": 41.7,
+    "total_pnl": -2709.0,
+    "avg_win": 372.0,
     "avg_loss": -330.0
   },
   "trades": [
@@ -1216,6 +1216,23 @@
       "lots": 1,
       "gross": -520.0,
       "charges": 64.66
+    },
+    {
+      "id": 75,
+      "date": "2026-07-13",
+      "time": "15:00",
+      "score": 57,
+      "entry": 24239.25,
+      "exit": 24230.95,
+      "pnl": 104.53,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9698.0,
+      "lots": 1,
+      "gross": 170.0,
+      "charges": 65.47
     }
   ],
   "daily_pnl": {
@@ -1228,12 +1245,32 @@
     "2026-07-08": -358.0,
     "2026-07-09": -724.0,
     "2026-07-10": -2960.0,
-    "2026-07-13": -131.0
+    "2026-07-13": -26.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "15:00:17",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.180 Floor:Rs.150 Charges:Rs.65 NET:Rs.+105 | Capital:Rs.18974",
+      "cls": "ok"
+    },
+    {
+      "time": "14:55:08",
+      "msg": "RIDING NIFTY CE | Peak:Rs.180 Now:Rs.180 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "14:55:07",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.180 \u2014 floor locked at Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "14:50:22",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "14:50:18",
       "msg": "[PAPER] #3 BULLISH \u2014 BUY CALL (CE) | NIFTY 24300 @ Rs.149.2 | OR BREAK HIGH 24129 | Conf:57% SL:Rs.360 | 1L Inv:Rs.9698",
@@ -1313,26 +1350,6 @@
       "time": "14:25:18",
       "msg": "NIFTY:24226 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:2/99 Lots:1L Cap:Rs.18869 Daily:Rs.-131",
       "cls": ""
-    },
-    {
-      "time": "14:25:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:20:10",
-      "msg": "NIFTY:24224 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:2/99 Lots:1L Cap:Rs.18869 Daily:Rs.-131",
-      "cls": ""
-    },
-    {
-      "time": "14:20:10",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:15:28",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
