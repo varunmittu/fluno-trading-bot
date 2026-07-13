@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13 11:15",
+  "last_updated": "2026-07-13 11:17",
   "summary": {
     "total_trades": 70,
     "wins": 28,
@@ -1218,104 +1218,49 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "11:15:33",
-      "msg": "NIFTY:24145 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
+      "time": "11:17:12",
+      "msg": "NIFTY:24140 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
       "cls": ""
     },
     {
-      "time": "11:15:33",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "time": "11:17:12",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
       "cls": "info"
     },
     {
-      "time": "11:14:32",
-      "msg": "NIFTY:24149 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "11:14:32",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "time": "11:17:11",
+      "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "11:13:29",
-      "msg": "NIFTY:24154 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "11:13:29",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "time": "11:17:11",
+      "msg": "Kite: loaded 1672 NIFTY option contracts",
       "cls": "info"
     },
     {
-      "time": "11:12:29",
-      "msg": "NIFTY:24156 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "11:12:29",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "time": "11:17:06",
+      "msg": "Restored today's booked P&L from DB: Rs.-654.2",
       "cls": "info"
     },
     {
-      "time": "11:11:28",
-      "msg": "NIFTY:24147 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "11:11:28",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "time": "11:17:06",
+      "msg": "1 trade(s) done today (from DB) \u2014 98 gated slot(s) left.",
       "cls": "info"
     },
     {
-      "time": "11:10:29",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "time": "11:17:06",
+      "msg": "Capital: Rs.18346 | Lots: 1L (65 units)",
+      "cls": "info"
+    },
+    {
+      "time": "11:17:06",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
+      "cls": "info"
+    },
+    {
+      "time": "11:17:00",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
-    },
-    {
-      "time": "11:10:26",
-      "msg": "NIFTY:24145 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "11:10:26",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "11:09:26",
-      "msg": "NIFTY:24144 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "11:09:26",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "11:08:25",
-      "msg": "NIFTY:24146 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "11:08:25",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "11:07:26",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:07:23",
-      "msg": "NIFTY:24145 YdH:24228/YdL:24120 Sig:BREAK LOW 24120 T:1/99 Lots:1L Cap:Rs.18346 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "11:07:23",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
     }
   ],
   "vix": null,
