@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13 10:48",
+  "last_updated": "2026-07-13 10:49",
   "summary": {
     "total_trades": 69,
     "wins": 28,
@@ -1200,104 +1200,34 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "10:48:24",
-      "msg": "NIFTY:24144 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "time": "10:49:24",
+      "msg": "NIFTY:24140 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "10:48:24",
+      "time": "10:49:24",
       "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
       "cls": "info"
     },
     {
-      "time": "10:47:21",
-      "msg": "NIFTY:24146 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:47:20",
+      "time": "10:49:23",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "10:46:19",
-      "msg": "NIFTY:24141 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:45:18",
-      "msg": "NIFTY:24141 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:44:16",
-      "msg": "NIFTY:24141 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:43:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:43:15",
-      "msg": "NIFTY:24145 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:43:15",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "time": "10:49:13",
+      "msg": "Capital: Rs.19000 | Lots: 1L (65 units)",
       "cls": "info"
     },
     {
-      "time": "10:42:15",
-      "msg": "NIFTY:24137 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:42:14",
-      "msg": "Fetching 5-min candles [^NSEI]...",
+      "time": "10:49:13",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
       "cls": "info"
     },
     {
-      "time": "10:41:11",
-      "msg": "NIFTY:24140 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:40:10",
-      "msg": "NIFTY:24139 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:39:10",
-      "msg": "NIFTY:24139 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:38:11",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:38:07",
-      "msg": "NIFTY:24143 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:38:07",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "10:37:07",
-      "msg": "NIFTY:24142 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:37:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
+      "time": "10:49:12",
+      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
+      "cls": "err"
     }
   ],
   "vix": null,
