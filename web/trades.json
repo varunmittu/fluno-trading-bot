@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13 13:40",
+  "last_updated": "2026-07-13 13:50",
   "summary": {
     "total_trades": 71,
     "wins": 29,
@@ -1235,6 +1235,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:50:23",
+      "msg": "NIFTY:24198 YdH:24228/YdL:24120 Sig:FADE 24260->24198 T:2/99 Lots:1L Cap:Rs.18869 Daily:Rs.-131",
+      "cls": ""
+    },
+    {
+      "time": "13:50:23",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:50:22",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:45:05",
+      "msg": "NIFTY:24192 YdH:24228/YdL:24120 Sig:FADE 24260->24192 T:2/99 Lots:1L Cap:Rs.18869 Daily:Rs.-131",
+      "cls": ""
+    },
+    {
+      "time": "13:45:04",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:40:19",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:40:16",
       "msg": "NIFTY:24198 YdH:24228/YdL:24120 Sig:FADE 24260->24198 T:2/99 Lots:1L Cap:Rs.18869 Daily:Rs.-131",
       "cls": ""
@@ -1302,36 +1332,6 @@
     {
       "time": "13:00:35",
       "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:30",
-      "msg": "[PAPER] #2 BULLISH \u2014 BUY CALL (CE) | NIFTY 24250 @ Rs.150.6 | OR BREAK HIGH 24129 | Conf:57% SL:Rs.540 | 1L Inv:Rs.9789",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:22",
-      "msg": "AUTO trade #2: OR BREAK HIGH 24129 conf 57% \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:21",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:00:17",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.687 Floor:Rs.500 Charges:Rs.66 NET:Rs.+454 | Capital:Rs.19454",
-      "cls": "ok"
-    },
-    {
-      "time": "12:55:07",
-      "msg": "RIDING NIFTY CE | Peak:Rs.687 Now:Rs.687 | staircase floor Rs.500",
       "cls": "ok"
     }
   ],
