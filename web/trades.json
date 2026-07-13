@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13 09:51",
+  "last_updated": "2026-07-13 09:56",
   "summary": {
     "total_trades": 69,
     "wins": 28,
@@ -1200,6 +1200,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:56:37",
+      "msg": "NIFTY:24116 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:55:36",
+      "msg": "NIFTY:24116 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:54:34",
+      "msg": "NIFTY:24112 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:53:34",
+      "msg": "NIFTY:24114 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:52:34",
+      "msg": "NIFTY:24106 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:51:35",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:51:32",
       "msg": "NIFTY:24098 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
       "cls": ""
@@ -1267,36 +1297,6 @@
     {
       "time": "09:40:24",
       "msg": "NIFTY:24072 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:39:22",
-      "msg": "NIFTY:24059 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:38:22",
-      "msg": "NIFTY:24056 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:37:22",
-      "msg": "NIFTY:24045 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:36:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:36:20",
-      "msg": "NIFTY:24036 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:35:20",
-      "msg": "NIFTY:24028 Sig:-- T:0/99 Lots:1L Cap:Rs.7317 Daily:Rs.0",
       "cls": ""
     }
   ],
