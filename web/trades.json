@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13 10:49",
+  "last_updated": "2026-07-13 10:54",
   "summary": {
     "total_trades": 69,
     "wins": 28,
@@ -1199,6 +1199,51 @@
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "10:54:38",
+      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24050 @ Rs.148.0 | BREAK LOW 24120 | Conf:61% SL:Rs.610 | 1L Inv:Rs.9620",
+      "cls": "ok"
+    },
+    {
+      "time": "10:54:34",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:53:33",
+      "msg": "NIFTY:24131 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:53:33",
+      "msg": "Kite: loaded 1672 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:53:06",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
+      "cls": "ok"
+    },
+    {
+      "time": "10:52:28",
+      "msg": "NIFTY:24135 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:51:25",
+      "msg": "NIFTY:24140 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:50:25",
+      "msg": "NIFTY:24134 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:49:27",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:49:24",
       "msg": "NIFTY:24140 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
