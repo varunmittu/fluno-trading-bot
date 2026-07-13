@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-13 13:25",
+  "last_updated": "2026-07-13 13:30",
   "summary": {
-    "total_trades": 70,
+    "total_trades": 71,
     "wins": 29,
-    "losses": 41,
-    "win_rate": 41.4,
-    "total_pnl": -2229.0,
+    "losses": 42,
+    "win_rate": 40.8,
+    "total_pnl": -2814.0,
     "avg_win": 382.0,
-    "avg_loss": -324.0
+    "avg_loss": -330.0
   },
   "trades": [
     {
@@ -1199,6 +1199,23 @@
       "lots": 1,
       "gross": 520.0,
       "charges": 66.07
+    },
+    {
+      "id": 74,
+      "date": "2026-07-13",
+      "time": "13:30",
+      "score": 57,
+      "entry": 24220.25,
+      "exit": 24174.0,
+      "pnl": -584.66,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9789.0,
+      "lots": 1,
+      "gross": -520.0,
+      "charges": 64.66
     }
   ],
   "daily_pnl": {
@@ -1211,12 +1228,22 @@
     "2026-07-08": -358.0,
     "2026-07-09": -724.0,
     "2026-07-10": -2960.0,
-    "2026-07-13": 454.0
+    "2026-07-13": -131.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "13:30:13",
+      "msg": "STOP LOSS NIFTY CE | SL:Rs.-540 Charges:Rs.65 NET:Rs.-585 | Capital:Rs.18869",
+      "cls": "err"
+    },
+    {
+      "time": "13:25:32",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:15:25",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -1306,16 +1333,6 @@
       "time": "12:35:22",
       "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
       "cls": "info"
-    },
-    {
-      "time": "12:35:21",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:30:11",
-      "msg": "NIFTY:24187 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:0/99 Lots:1L Cap:Rs.19000 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
