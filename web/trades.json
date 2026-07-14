@@ -1321,6 +1321,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:15:32",
+      "msg": "NIFTY:24065 YdH:24260/YdL:24000 Sig:FADE 24156->24065 T:4/99 Lots:1L Cap:Rs.19532 Daily:Rs.558",
+      "cls": ""
+    },
+    {
+      "time": "14:15:32",
+      "msg": "Trade #5 gate: conf 40% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "14:15:30",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "14:15:30",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "14:15:25",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.244 Floor:Rs.150 Charges:Rs.65 NET:Rs.+105 | Capital:Rs.19532",
       "cls": "ok"
@@ -1398,26 +1418,6 @@
     {
       "time": "13:40:05",
       "msg": "RIDING NIFTY PE | Peak:Rs.972 Now:Rs.972 | staircase floor Rs.900",
-      "cls": "ok"
-    },
-    {
-      "time": "13:40:05",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.972 \u2014 floor locked at Rs.900",
-      "cls": "ok"
-    },
-    {
-      "time": "13:35:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:35:17",
-      "msg": "RIDING NIFTY PE | Peak:Rs.288 Now:Rs.288 | staircase floor Rs.250",
-      "cls": "ok"
-    },
-    {
-      "time": "13:35:15",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.288 \u2014 floor locked at Rs.250",
       "cls": "ok"
     }
   ],
