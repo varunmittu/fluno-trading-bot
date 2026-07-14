@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-14 12:25",
+  "last_updated": "2026-07-14 12:35",
   "summary": {
     "total_trades": 72,
     "wins": 30,
@@ -1252,6 +1252,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:35:25",
+      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24000 @ Rs.147.8 | FADE 24156->24066 | Conf:57% SL:Rs.460 | 1L Inv:Rs.9607",
+      "cls": "ok"
+    },
+    {
+      "time": "12:35:20",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:30:11",
+      "msg": "NIFTY:24060 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.18974 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:30:10",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:25:27",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:25:22",
       "msg": "NIFTY:24078 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.18974 Daily:Rs.0",
       "cls": ""
@@ -1324,31 +1349,6 @@
     {
       "time": "12:00:21",
       "msg": "NIFTY:24103 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.18974 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:00:21",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:55:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:55:14",
-      "msg": "NIFTY:24107 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.18974 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:55:13",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:50:07",
-      "msg": "NIFTY:24109 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.18974 Daily:Rs.0",
       "cls": ""
     }
   ],
