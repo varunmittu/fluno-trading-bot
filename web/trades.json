@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-14 14:50",
+  "last_updated": "2026-07-14 14:55",
   "summary": {
     "total_trades": 76,
     "wins": 33,
@@ -1321,6 +1321,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:55:11",
+      "msg": "[PAPER] #5 BEARISH \u2014 BUY PUT (PE) | NIFTY 24000 @ Rs.149.4 | OR BREAK LOW 24051 | Conf:57% SL:Rs.430 | 1L Inv:Rs.9711",
+      "cls": "ok"
+    },
+    {
+      "time": "14:55:06",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:50:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:50:17",
       "msg": "NIFTY:24031 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24051 T:4/99 Lots:1L Cap:Rs.19532 Daily:Rs.558",
       "cls": ""
@@ -1403,21 +1418,6 @@
     {
       "time": "14:25:08",
       "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:20:21",
-      "msg": "NIFTY:24054 YdH:24260/YdL:24000 Sig:FADE 24156->24054 T:4/99 Lots:1L Cap:Rs.19532 Daily:Rs.558",
-      "cls": ""
-    },
-    {
-      "time": "14:20:20",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:20:19",
-      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
       "cls": "info"
     }
   ],
