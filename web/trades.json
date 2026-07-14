@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-14 13:25",
+  "last_updated": "2026-07-14 13:35",
   "summary": {
     "total_trades": 74,
     "wins": 31,
@@ -1284,8 +1284,23 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "13:35:17",
+      "msg": "RIDING NIFTY PE | Peak:Rs.288 Now:Rs.288 | staircase floor Rs.250",
+      "cls": "ok"
+    },
+    {
+      "time": "13:35:15",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.288 \u2014 floor locked at Rs.250",
+      "cls": "ok"
+    },
+    {
+      "time": "13:25:25",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:25:20",
       "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24050 @ Rs.149.5 | FADE 24156->24089 | Conf:61% SL:Rs.430 | 1L Inv:Rs.9718",
@@ -1368,21 +1383,6 @@
     },
     {
       "time": "13:00:13",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "12:55:27",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:55:24",
-      "msg": "NIFTY:24083 YdH:24260/YdL:24000 Sig:FADE 24156->24066 T:1/99 Lots:1L Cap:Rs.18469 Daily:Rs.-504",
-      "cls": ""
-    },
-    {
-      "time": "12:55:24",
       "msg": "NIFTY in SL cooldown \u2014 waiting",
       "cls": "info"
     }
