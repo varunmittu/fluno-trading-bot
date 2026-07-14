@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-14 12:55",
+  "last_updated": "2026-07-14 13:05",
   "summary": {
     "total_trades": 73,
     "wins": 30,
@@ -1270,6 +1270,46 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:05:25",
+      "msg": "[PAPER] #2 BEARISH \u2014 BUY PUT (PE) | NIFTY 24050 @ Rs.149.5 | FADE 24156->24084 | Conf:40% SL:Rs.440 | 1L Inv:Rs.9718",
+      "cls": "ok"
+    },
+    {
+      "time": "13:05:22",
+      "msg": "AUTO trade #2: FADE 24156->24084 conf 40% \u2014 entering",
+      "cls": "ok"
+    },
+    {
+      "time": "13:05:21",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:00:13",
+      "msg": "NIFTY:24074 YdH:24260/YdL:24000 Sig:FADE 24156->24066 T:1/99 Lots:1L Cap:Rs.18469 Daily:Rs.-504",
+      "cls": ""
+    },
+    {
+      "time": "13:00:13",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "12:55:27",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "12:55:24",
+      "msg": "NIFTY:24083 YdH:24260/YdL:24000 Sig:FADE 24156->24066 T:1/99 Lots:1L Cap:Rs.18469 Daily:Rs.-504",
+      "cls": ""
+    },
+    {
+      "time": "12:55:24",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
       "time": "12:55:20",
       "msg": "STOP LOSS NIFTY PE | SL:Rs.-460 Charges:Rs.64 NET:Rs.-504 | Capital:Rs.18469",
       "cls": "err"
@@ -1328,46 +1368,6 @@
       "time": "12:20:16",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "12:20:13",
-      "msg": "NIFTY:24085 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.18974 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:20:13",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:20:12",
-      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:06",
-      "msg": "NIFTY:24092 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.18974 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:15:04",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:10:20",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:10:17",
-      "msg": "NIFTY:24094 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.18974 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:10:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
