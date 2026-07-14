@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13 15:31",
+  "last_updated": "2026-07-14 09:15",
   "summary": {
     "total_trades": 72,
     "wins": 30,
@@ -1252,104 +1252,44 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "15:31:07",
-      "msg": "NIFTY:24209 YdH:24228/YdL:24120 Sig:BREAK HIGH 24228 T:3/99 Lots:1L Cap:Rs.18974 Daily:Rs.-26",
+      "time": "09:15:51",
+      "msg": "NIFTY:24062 Sig:-- T:0/99 Lots:1L Cap:Rs.18974 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "15:30:04",
-      "msg": "Error: No item with that key",
-      "cls": "err"
-    },
-    {
-      "time": "15:25:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:25:17",
-      "msg": "NIFTY:24205 YdH:24228/YdL:24120 Sig:BREAK HIGH 24228 T:3/99 Lots:1L Cap:Rs.18974 Daily:Rs.-26",
-      "cls": ""
-    },
-    {
-      "time": "15:20:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:20:09",
-      "msg": "NIFTY:24196 YdH:24228/YdL:24120 Sig:BREAK HIGH 24228 T:3/99 Lots:1L Cap:Rs.18974 Daily:Rs.-26",
-      "cls": ""
-    },
-    {
-      "time": "15:15:02",
-      "msg": "NIFTY:24205 YdH:24228/YdL:24120 Sig:BREAK HIGH 24228 T:3/99 Lots:1L Cap:Rs.18974 Daily:Rs.-26",
-      "cls": ""
-    },
-    {
-      "time": "15:10:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:10:15",
-      "msg": "NIFTY:24213 YdH:24228/YdL:24120 Sig:BREAK HIGH 24228 T:3/99 Lots:1L Cap:Rs.18974 Daily:Rs.-26",
-      "cls": ""
-    },
-    {
-      "time": "15:05:07",
-      "msg": "NIFTY:24227 YdH:24228/YdL:24120 Sig:BREAK HIGH 24228 T:3/99 Lots:1L Cap:Rs.18974 Daily:Rs.-26",
-      "cls": ""
-    },
-    {
-      "time": "15:00:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:00:21",
-      "msg": "NIFTY:24231 YdH:24228/YdL:24120 Sig:BREAK HIGH 24228 T:3/99 Lots:1L Cap:Rs.18974 Daily:Rs.-26",
-      "cls": ""
-    },
-    {
-      "time": "15:00:17",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.180 Floor:Rs.150 Charges:Rs.65 NET:Rs.+105 | Capital:Rs.18974",
-      "cls": "ok"
-    },
-    {
-      "time": "14:55:08",
-      "msg": "RIDING NIFTY CE | Peak:Rs.180 Now:Rs.180 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "14:55:07",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.180 \u2014 floor locked at Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "14:50:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:50:18",
-      "msg": "[PAPER] #3 BULLISH \u2014 BUY CALL (CE) | NIFTY 24300 @ Rs.149.2 | OR BREAK HIGH 24129 | Conf:57% SL:Rs.360 | 1L Inv:Rs.9698",
-      "cls": "ok"
-    },
-    {
-      "time": "14:50:15",
-      "msg": "Fetching 5-min candles [^NSEI]...",
+      "time": "09:10:49",
+      "msg": "Morning Telegram ping sent",
       "cls": "info"
     },
     {
-      "time": "14:45:07",
-      "msg": "NIFTY:24228 YdH:24228/YdL:24120 Sig:OR BREAK HIGH 24129 T:2/99 Lots:1L Cap:Rs.18869 Daily:Rs.-131",
-      "cls": ""
+      "time": "00:00:44",
+      "msg": "New trading day | Capital: Rs.18974 | Lots: 1L",
+      "cls": "info"
     },
     {
-      "time": "14:45:07",
-      "msg": "Trade #3 gate: conf 57% \u2014 awaiting /confirm",
+      "time": "18:20:43",
+      "msg": "Restored today's booked P&L from DB: Rs.-26.2",
       "cls": "info"
+    },
+    {
+      "time": "18:20:43",
+      "msg": "3 trade(s) done today (from DB) \u2014 96 gated slot(s) left.",
+      "cls": "info"
+    },
+    {
+      "time": "18:20:43",
+      "msg": "Capital: Rs.18974 | Lots: 1L (65 units)",
+      "cls": "info"
+    },
+    {
+      "time": "18:20:43",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
+      "cls": "info"
+    },
+    {
+      "time": "18:20:42",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
+      "cls": "ok"
     }
   ],
   "vix": null,
