@@ -1304,6 +1304,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:45:19",
+      "msg": "NIFTY:24059 YdH:24260/YdL:24000 Sig:FADE 24156->24059 T:3/99 Lots:1L Cap:Rs.19427 Daily:Rs.453",
+      "cls": ""
+    },
+    {
+      "time": "13:45:19",
+      "msg": "Trade #4 gate: conf 57% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "13:45:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "13:45:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "13:45:14",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.972 Floor:Rs.900 Charges:Rs.67 NET:Rs.+853 | Capital:Rs.19427",
       "cls": "ok"
@@ -1381,26 +1401,6 @@
     {
       "time": "13:15:29",
       "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:15:23",
-      "msg": "RIDING NIFTY PE | Peak:Rs.227 Now:Rs.227 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "13:15:21",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.227 \u2014 floor locked at Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "13:05:31",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:05:25",
-      "msg": "[PAPER] #2 BEARISH \u2014 BUY PUT (PE) | NIFTY 24050 @ Rs.149.5 | FADE 24156->24084 | Conf:40% SL:Rs.440 | 1L Inv:Rs.9718",
       "cls": "ok"
     }
   ],
