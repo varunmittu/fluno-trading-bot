@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-14 15:00",
+  "last_updated": "2026-07-14 15:10",
   "summary": {
     "total_trades": 77,
     "wins": 33,
@@ -1338,6 +1338,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:10:19",
+      "msg": "NIFTY:24064 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24051 T:5/99 Lots:1L Cap:Rs.19057 Daily:Rs.83",
+      "cls": ""
+    },
+    {
+      "time": "15:05:11",
+      "msg": "NIFTY:24061 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24051 T:5/99 Lots:1L Cap:Rs.19057 Daily:Rs.83",
+      "cls": ""
+    },
+    {
+      "time": "15:00:26",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "15:00:24",
+      "msg": "NIFTY:24057 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24051 T:5/99 Lots:1L Cap:Rs.19057 Daily:Rs.83",
+      "cls": ""
+    },
+    {
       "time": "15:00:21",
       "msg": "STOP LOSS NIFTY PE | SL:Rs.-430 Charges:Rs.65 NET:Rs.-475 | Capital:Rs.19057",
       "cls": "err"
@@ -1414,26 +1434,6 @@
     },
     {
       "time": "14:30:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:30:19",
-      "msg": "NIFTY:24050 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24051 T:4/99 Lots:1L Cap:Rs.19532 Daily:Rs.558",
-      "cls": ""
-    },
-    {
-      "time": "14:30:19",
-      "msg": "Gated trade skipped \u2014 confirmation timeout",
-      "cls": "info"
-    },
-    {
-      "time": "14:30:16",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:25:12",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
