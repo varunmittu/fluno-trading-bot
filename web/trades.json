@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-15 14:25",
+  "last_updated": "2026-07-15 14:30",
   "summary": {
-    "total_trades": 78,
-    "wins": 33,
+    "total_trades": 79,
+    "wins": 34,
     "losses": 45,
-    "win_rate": 42.3,
-    "total_pnl": -3280.0,
-    "avg_win": 371.0,
+    "win_rate": 43.0,
+    "total_pnl": -3176.0,
+    "avg_win": 363.0,
     "avg_loss": -345.0
   },
   "trades": [
@@ -1335,6 +1335,23 @@
       "lots": 1,
       "gross": -590.0,
       "charges": 64.32
+    },
+    {
+      "id": 82,
+      "date": "2026-07-15",
+      "time": "14:30",
+      "score": 57,
+      "entry": 24080.8,
+      "exit": 24078.8,
+      "pnl": 104.47,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 9730.5,
+      "lots": 1,
+      "gross": 170.0,
+      "charges": 65.53
     }
   ],
   "daily_pnl": {
@@ -1349,12 +1366,22 @@
     "2026-07-10": -2960.0,
     "2026-07-13": -26.0,
     "2026-07-14": 83.0,
-    "2026-07-15": -654.0
+    "2026-07-15": -550.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "14:30:08",
+      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.182 Floor:Rs.150 Charges:Rs.66 NET:Rs.+104 | Capital:Rs.18507",
+      "cls": "ok"
+    },
+    {
+      "time": "14:25:25",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "14:25:21",
       "msg": "RIDING NIFTY PE | Peak:Rs.182 Now:Rs.182 | staircase floor Rs.150",
@@ -1442,16 +1469,6 @@
     },
     {
       "time": "13:45:11",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:40:04",
-      "msg": "NIFTY:24064 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "13:40:04",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     }
