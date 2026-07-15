@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15 13:20",
+  "last_updated": "2026-07-15 13:30",
   "summary": {
     "total_trades": 78,
     "wins": 33,
@@ -1356,6 +1356,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:30:11",
+      "msg": "NIFTY:24075 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
+      "cls": ""
+    },
+    {
+      "time": "13:30:11",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "13:25:05",
+      "msg": "NIFTY:24072 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
+      "cls": ""
+    },
+    {
+      "time": "13:25:05",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "13:20:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "13:20:20",
+      "msg": "NIFTY:24079 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
+      "cls": ""
+    },
+    {
+      "time": "13:20:20",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
       "time": "13:20:17",
       "msg": "STOP LOSS NIFTY PE | SL:Rs.-610 Charges:Rs.64 NET:Rs.-654 | Capital:Rs.18403",
       "cls": "err"
@@ -1418,41 +1453,6 @@
     {
       "time": "12:50:11",
       "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:50:10",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:45:03",
-      "msg": "NIFTY:24160 YdH:24260/YdL:24000 Sig:FADE 24220->24160 T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:45:02",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:40:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:40:17",
-      "msg": "NIFTY:24147 YdH:24260/YdL:24000 Sig:FADE 24220->24147 T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:40:17",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:40:16",
-      "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     }
   ],
