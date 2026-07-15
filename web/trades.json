@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15 11:30",
+  "last_updated": "2026-07-15 11:40",
   "summary": {
     "total_trades": 77,
     "wins": 33,
@@ -1338,6 +1338,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:40:15",
+      "msg": "NIFTY:24193 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:40:13",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:35:04",
+      "msg": "NIFTY:24211 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:35:04",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:30:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:30:18",
       "msg": "NIFTY:24202 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
       "cls": ""
@@ -1409,31 +1434,6 @@
     },
     {
       "time": "11:09:00",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
-    },
-    {
-      "time": "11:07:13",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
-    },
-    {
-      "time": "11:05:27",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
-    },
-    {
-      "time": "11:03:35",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
-    },
-    {
-      "time": "11:01:49",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
-    },
-    {
-      "time": "10:59:56",
       "msg": "Could not fetch any live prices. Retrying...",
       "cls": "err"
     }
