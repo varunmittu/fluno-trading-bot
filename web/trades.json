@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15 14:30",
+  "last_updated": "2026-07-15 14:35",
   "summary": {
     "total_trades": 79,
     "wins": 34,
@@ -1373,6 +1373,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:35:23",
+      "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24050 @ Rs.149.7 | FADE 24220->24079 | Conf:61% SL:Rs.480 | 1L Inv:Rs.9730",
+      "cls": "ok"
+    },
+    {
+      "time": "14:35:20",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:30:14",
+      "msg": "NIFTY:24079 YdH:24260/YdL:24000 Sig:FADE 24220->24079 T:2/99 Lots:1L Cap:Rs.18507 Daily:Rs.-550",
+      "cls": ""
+    },
+    {
+      "time": "14:30:14",
+      "msg": "Trade #3 gate: conf 61% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "14:30:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "14:30:12",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "14:30:08",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.182 Floor:Rs.150 Charges:Rs.66 NET:Rs.+104 | Capital:Rs.18507",
       "cls": "ok"
@@ -1441,36 +1471,6 @@
       "time": "13:50:18",
       "msg": "NIFTY:24069 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
       "cls": ""
-    },
-    {
-      "time": "13:50:18",
-      "msg": "Confidence gate: OR BREAK LOW 24075 scored 6.5/9 (< 7) \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "13:50:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:45:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:45:12",
-      "msg": "NIFTY:24063 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "13:45:12",
-      "msg": "Confidence gate: OR BREAK LOW 24075 scored 6.5/9 (< 7) \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "13:45:11",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
