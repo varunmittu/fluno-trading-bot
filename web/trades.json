@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15 14:15",
+  "last_updated": "2026-07-15 14:25",
   "summary": {
     "total_trades": 78,
     "wins": 33,
@@ -1356,6 +1356,21 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "14:25:21",
+      "msg": "RIDING NIFTY PE | Peak:Rs.182 Now:Rs.182 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "14:25:15",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.182 \u2014 floor locked at Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "14:15:24",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:10:17",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -1438,21 +1453,6 @@
     {
       "time": "13:40:04",
       "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:35:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:35:17",
-      "msg": "NIFTY:24064 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "13:35:17",
-      "msg": "Confidence gate: OR BREAK LOW 24075 scored 6.5/9 (< 7) \u2014 no alert, no entry",
       "cls": "info"
     }
   ],
