@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15 13:45",
+  "last_updated": "2026-07-15 13:50",
   "summary": {
     "total_trades": 78,
     "wins": 33,
@@ -1356,6 +1356,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:50:18",
+      "msg": "NIFTY:24069 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
+      "cls": ""
+    },
+    {
+      "time": "13:50:18",
+      "msg": "Confidence gate: OR BREAK LOW 24075 scored 6.5/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "13:50:18",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:45:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:45:12",
       "msg": "NIFTY:24063 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
       "cls": ""
@@ -1434,26 +1454,6 @@
       "time": "13:20:20",
       "msg": "NIFTY:24079 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
       "cls": ""
-    },
-    {
-      "time": "13:20:20",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "13:20:17",
-      "msg": "STOP LOSS NIFTY PE | SL:Rs.-610 Charges:Rs.64 NET:Rs.-654 | Capital:Rs.18403",
-      "cls": "err"
-    },
-    {
-      "time": "13:15:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:05:20",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
