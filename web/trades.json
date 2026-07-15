@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-15 14:35",
+  "last_updated": "2026-07-15 14:40",
   "summary": {
-    "total_trades": 79,
+    "total_trades": 80,
     "wins": 34,
-    "losses": 45,
-    "win_rate": 43.0,
-    "total_pnl": -3176.0,
+    "losses": 46,
+    "win_rate": 42.5,
+    "total_pnl": -3700.0,
     "avg_win": 363.0,
-    "avg_loss": -345.0
+    "avg_loss": -349.0
   },
   "trades": [
     {
@@ -1352,6 +1352,23 @@
       "lots": 1,
       "gross": 170.0,
       "charges": 65.53
+    },
+    {
+      "id": 83,
+      "date": "2026-07-15",
+      "time": "14:40",
+      "score": 61,
+      "entry": 24080.0,
+      "exit": 24104.3,
+      "pnl": -524.64,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 9730.5,
+      "lots": 1,
+      "gross": -460.0,
+      "charges": 64.64
     }
   ],
   "daily_pnl": {
@@ -1366,12 +1383,22 @@
     "2026-07-10": -2960.0,
     "2026-07-13": -26.0,
     "2026-07-14": 83.0,
-    "2026-07-15": -550.0
+    "2026-07-15": -1075.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "14:40:11",
+      "msg": "STOP LOSS NIFTY PE | SL:Rs.-480 Charges:Rs.65 NET:Rs.-525 | Capital:Rs.17983",
+      "cls": "err"
+    },
+    {
+      "time": "14:35:27",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "14:35:23",
       "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24050 @ Rs.149.7 | FADE 24220->24079 | Conf:61% SL:Rs.480 | 1L Inv:Rs.9730",
@@ -1461,16 +1488,6 @@
       "time": "13:55:05",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "13:50:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:50:18",
-      "msg": "NIFTY:24069 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
-      "cls": ""
     }
   ],
   "vix": null,
