@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15 09:55",
+  "last_updated": "2026-07-15 11:10",
   "summary": {
     "total_trades": 77,
     "wins": 33,
@@ -1338,103 +1338,103 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "09:55:20",
-      "msg": "NIFTY:24199 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
+      "time": "11:10:07",
+      "msg": "NIFTY:24195 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "09:50:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:50:15",
-      "msg": "NIFTY:24194 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:45:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:45:10",
-      "msg": "NIFTY:24199 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:40:05",
-      "msg": "NIFTY:24200 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:35:23",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:35:20",
-      "msg": "NIFTY:24202 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:30:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:30:15",
-      "msg": "NIFTY:24197 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:25:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:25:10",
-      "msg": "NIFTY:24192 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:20:57",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
-    },
-    {
-      "time": "09:20:05",
-      "msg": "NIFTY:24155 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:19:08",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:19:04",
-      "msg": "NIFTY:24142 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:19:03",
-      "msg": "Morning Telegram ping sent",
+      "time": "11:10:07",
+      "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "09:19:00",
-      "msg": "Capital: Rs.19057 | Lots: 1L (65 units)",
+      "time": "11:10:06",
+      "msg": "Kite: loaded 1616 NIFTY option contracts",
       "cls": "info"
     },
     {
-      "time": "09:19:00",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
-      "cls": "info"
+      "time": "11:09:00",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
     },
     {
-      "time": "09:18:59",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
+      "time": "11:07:13",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "11:05:27",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "11:03:35",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "11:01:49",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "10:59:56",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "10:58:10",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "10:56:24",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "10:54:33",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "10:52:39",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "10:50:53",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "10:49:07",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "10:47:21",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "10:45:35",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "10:43:48",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "10:42:02",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "10:40:16",
+      "msg": "Could not fetch any live prices. Retrying...",
       "cls": "err"
     }
   ],
