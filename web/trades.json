@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15 13:50",
+  "last_updated": "2026-07-15 14:00",
   "summary": {
     "total_trades": 78,
     "wins": 33,
@@ -1356,6 +1356,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:00:18",
+      "msg": "[PAPER] #2 BEARISH \u2014 BUY PUT (PE) | NIFTY 24050 @ Rs.149.7 | OR BREAK LOW 24075 | Conf:57% SL:Rs.750 | 1L Inv:Rs.9730",
+      "cls": "ok"
+    },
+    {
+      "time": "14:00:14",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:55:07",
+      "msg": "NIFTY:24053 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
+      "cls": ""
+    },
+    {
+      "time": "13:55:07",
+      "msg": "Trade #2 gate: conf 57% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "13:55:05",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:50:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:50:18",
       "msg": "NIFTY:24069 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
       "cls": ""
@@ -1424,36 +1454,6 @@
       "time": "13:30:13",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "13:30:11",
-      "msg": "NIFTY:24075 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "13:30:11",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "13:25:05",
-      "msg": "NIFTY:24072 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "13:25:05",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "13:20:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:20:20",
-      "msg": "NIFTY:24079 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
-      "cls": ""
     }
   ],
   "vix": null,
