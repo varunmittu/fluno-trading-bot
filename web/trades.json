@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15 11:10",
+  "last_updated": "2026-07-15 11:15",
   "summary": {
     "total_trades": 77,
     "wins": 33,
@@ -1338,6 +1338,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:15:14",
+      "msg": "NIFTY:24173 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:15:13",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:10:10",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:10:07",
       "msg": "NIFTY:24195 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.19057 Daily:Rs.0",
       "cls": ""
@@ -1419,21 +1434,6 @@
     },
     {
       "time": "10:45:35",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
-    },
-    {
-      "time": "10:43:48",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
-    },
-    {
-      "time": "10:42:02",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
-    },
-    {
-      "time": "10:40:16",
       "msg": "Could not fetch any live prices. Retrying...",
       "cls": "err"
     }
