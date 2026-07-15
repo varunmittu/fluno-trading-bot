@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15 13:00",
+  "last_updated": "2026-07-15 13:05",
   "summary": {
     "total_trades": 77,
     "wins": 33,
@@ -1335,8 +1335,13 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "13:00:13",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:00:09",
       "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24000 @ Rs.148.6 | OR BREAK LOW 24075 | Conf:57% SL:Rs.610 | 1L Inv:Rs.9659",
@@ -1431,11 +1436,6 @@
       "time": "12:35:09",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "12:30:25",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
