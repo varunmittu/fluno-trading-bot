@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16 09:45",
+  "last_updated": "2026-07-16 09:55",
   "summary": {
     "total_trades": 80,
     "wins": 34,
@@ -1390,6 +1390,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:55:07",
+      "msg": "NIFTY:24125 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:50:02",
+      "msg": "NIFTY:24123 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:45:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:45:17",
       "msg": "NIFTY:24142 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
       "cls": ""
@@ -1471,21 +1486,6 @@
     },
     {
       "time": "15:16:19",
-      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "15:11:19",
-      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "15:06:19",
-      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "15:01:19",
       "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
       "cls": "err"
     }
