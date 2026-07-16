@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16 09:15",
+  "last_updated": "2026-07-16 09:25",
   "summary": {
     "total_trades": 80,
     "wins": 34,
@@ -1390,6 +1390,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:25:17",
+      "msg": "NIFTY:24144 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:20:13",
+      "msg": "NIFTY:24164 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:15:32",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:15:28",
       "msg": "NIFTY:24134 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
       "cls": ""
@@ -1473,21 +1488,6 @@
       "time": "14:40:19",
       "msg": "NIFTY in SL cooldown \u2014 waiting",
       "cls": "info"
-    },
-    {
-      "time": "14:40:11",
-      "msg": "STOP LOSS NIFTY PE | SL:Rs.-480 Charges:Rs.65 NET:Rs.-525 | Capital:Rs.17983",
-      "cls": "err"
-    },
-    {
-      "time": "14:35:27",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:35:23",
-      "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24050 @ Rs.149.7 | FADE 24220->24079 | Conf:61% SL:Rs.480 | 1L Inv:Rs.9730",
-      "cls": "ok"
     }
   ],
   "vix": null,
