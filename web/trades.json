@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16 09:25",
+  "last_updated": "2026-07-16 09:35",
   "summary": {
     "total_trades": 80,
     "wins": 34,
@@ -1390,6 +1390,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:35:08",
+      "msg": "NIFTY:24111 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:30:02",
+      "msg": "NIFTY:24128 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:25:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:25:17",
       "msg": "NIFTY:24144 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
       "cls": ""
@@ -1473,21 +1488,6 @@
       "time": "14:41:19",
       "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
       "cls": "err"
-    },
-    {
-      "time": "14:40:20",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:40:19",
-      "msg": "NIFTY:24104 YdH:24260/YdL:24000 Sig:FADE 24220->24080 T:3/99 Lots:1L Cap:Rs.17983 Daily:Rs.-1074",
-      "cls": ""
-    },
-    {
-      "time": "14:40:19",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
     }
   ],
   "vix": null,
