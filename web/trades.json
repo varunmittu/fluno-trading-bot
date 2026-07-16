@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-16 13:45",
+  "last_updated": "2026-07-16 13:50",
   "summary": {
-    "total_trades": 80,
-    "wins": 34,
+    "total_trades": 81,
+    "wins": 35,
     "losses": 46,
-    "win_rate": 42.5,
-    "total_pnl": -3700.0,
-    "avg_win": 363.0,
+    "win_rate": 43.2,
+    "total_pnl": -2247.0,
+    "avg_win": 394.0,
     "avg_loss": -349.0
   },
   "trades": [
@@ -1369,6 +1369,23 @@
       "lots": 1,
       "gross": -460.0,
       "charges": 64.64
+    },
+    {
+      "id": 84,
+      "date": "2026-07-16",
+      "time": "13:50",
+      "score": 57,
+      "entry": 24116.3,
+      "exit": 24062.05,
+      "pnl": 1452.75,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 9626.5,
+      "lots": 1,
+      "gross": 1520.0,
+      "charges": 67.25
     }
   ],
   "daily_pnl": {
@@ -1383,12 +1400,23 @@
     "2026-07-10": -2960.0,
     "2026-07-13": -26.0,
     "2026-07-14": 83.0,
-    "2026-07-15": -1075.0
+    "2026-07-15": -1075.0,
+    "2026-07-16": 1453.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "13:50:08",
+      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.1640 Floor:Rs.1500 Charges:Rs.67 NET:Rs.+1453 | Capital:Rs.19436",
+      "cls": "ok"
+    },
+    {
+      "time": "13:45:24",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:45:20",
       "msg": "RIDING NIFTY PE | Peak:Rs.1640 Now:Rs.1640 | staircase floor Rs.1500",
@@ -1476,16 +1504,6 @@
     },
     {
       "time": "13:10:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:05:08",
-      "msg": "NIFTY:24127 YdH:24220/YdL:24011 Sig:FADE 24186->24127 T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:05:07",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     }
