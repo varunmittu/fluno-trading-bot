@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16 13:20",
+  "last_updated": "2026-07-16 13:30",
   "summary": {
     "total_trades": 80,
     "wins": 34,
@@ -1387,8 +1387,23 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "13:30:17",
+      "msg": "RIDING NIFTY PE | Peak:Rs.625 Now:Rs.625 | staircase floor Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "13:30:16",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.625 \u2014 floor locked at Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "13:20:24",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:20:20",
       "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24050 @ Rs.148.1 | FADE 24186->24116 | Conf:57% SL:Rs.320 | 1L Inv:Rs.9626",
@@ -1472,21 +1487,6 @@
     {
       "time": "12:55:13",
       "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:55:12",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:50:06",
-      "msg": "NIFTY:24132 YdH:24220/YdL:24011 Sig:FADE 24186->24132 T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:50:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     }
   ],
