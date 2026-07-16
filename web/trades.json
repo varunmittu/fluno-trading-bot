@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15 14:40",
+  "last_updated": "2026-07-16 09:15",
   "summary": {
     "total_trades": 80,
     "wins": 34,
@@ -1390,6 +1390,91 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:15:28",
+      "msg": "NIFTY:24134 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:10:24",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:20",
+      "msg": "New trading day | Capital: Rs.17983 | Lots: 1L",
+      "cls": "info"
+    },
+    {
+      "time": "15:31:19",
+      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "15:26:19",
+      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "15:21:19",
+      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "15:16:19",
+      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "15:11:19",
+      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "15:06:19",
+      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "15:01:19",
+      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "14:56:19",
+      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "14:51:19",
+      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "14:46:19",
+      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "14:41:19",
+      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "14:40:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "14:40:19",
+      "msg": "NIFTY:24104 YdH:24260/YdL:24000 Sig:FADE 24220->24080 T:3/99 Lots:1L Cap:Rs.17983 Daily:Rs.-1074",
+      "cls": ""
+    },
+    {
+      "time": "14:40:19",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
       "time": "14:40:11",
       "msg": "STOP LOSS NIFTY PE | SL:Rs.-480 Charges:Rs.65 NET:Rs.-525 | Capital:Rs.17983",
       "cls": "err"
@@ -1403,91 +1488,6 @@
       "time": "14:35:23",
       "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24050 @ Rs.149.7 | FADE 24220->24079 | Conf:61% SL:Rs.480 | 1L Inv:Rs.9730",
       "cls": "ok"
-    },
-    {
-      "time": "14:35:20",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:30:14",
-      "msg": "NIFTY:24079 YdH:24260/YdL:24000 Sig:FADE 24220->24079 T:2/99 Lots:1L Cap:Rs.18507 Daily:Rs.-550",
-      "cls": ""
-    },
-    {
-      "time": "14:30:14",
-      "msg": "Trade #3 gate: conf 61% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "14:30:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:30:12",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:30:08",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.182 Floor:Rs.150 Charges:Rs.66 NET:Rs.+104 | Capital:Rs.18507",
-      "cls": "ok"
-    },
-    {
-      "time": "14:25:25",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:25:21",
-      "msg": "RIDING NIFTY PE | Peak:Rs.182 Now:Rs.182 | staircase floor Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "14:25:15",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.182 \u2014 floor locked at Rs.150",
-      "cls": "ok"
-    },
-    {
-      "time": "14:15:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:10:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:00:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:00:18",
-      "msg": "[PAPER] #2 BEARISH \u2014 BUY PUT (PE) | NIFTY 24050 @ Rs.149.7 | OR BREAK LOW 24075 | Conf:57% SL:Rs.750 | 1L Inv:Rs.9730",
-      "cls": "ok"
-    },
-    {
-      "time": "14:00:14",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:55:07",
-      "msg": "NIFTY:24053 YdH:24260/YdL:24000 Sig:OR BREAK LOW 24075 T:1/99 Lots:1L Cap:Rs.18403 Daily:Rs.-654",
-      "cls": ""
-    },
-    {
-      "time": "13:55:07",
-      "msg": "Trade #2 gate: conf 57% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "13:55:05",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
