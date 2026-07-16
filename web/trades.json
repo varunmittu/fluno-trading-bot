@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16 14:35",
+  "last_updated": "2026-07-16 14:40",
   "summary": {
     "total_trades": 81,
     "wins": 35,
@@ -1408,6 +1408,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:40:21",
+      "msg": "NIFTY:24097 YdH:24220/YdL:24011 Sig:OR BREAK LOW 24097 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
+      "cls": ""
+    },
+    {
+      "time": "14:40:21",
+      "msg": "Confidence gate: OR BREAK LOW 24097 scored 6.5/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "14:40:21",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:35:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:35:15",
       "msg": "NIFTY:24098 YdH:24220/YdL:24011 Sig:FADE 24186->24098 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
       "cls": ""
@@ -1484,26 +1504,6 @@
     },
     {
       "time": "14:10:25",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:10:22",
-      "msg": "NIFTY:24089 YdH:24220/YdL:24011 Sig:OR BREAK LOW 24097 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
-      "cls": ""
-    },
-    {
-      "time": "14:10:22",
-      "msg": "Confidence gate: OR BREAK LOW 24097 scored 6.5/9 (< 7) \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "14:10:22",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:05:18",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
