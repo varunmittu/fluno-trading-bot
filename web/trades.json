@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16 13:55",
+  "last_updated": "2026-07-16 14:05",
   "summary": {
     "total_trades": 81,
     "wins": 35,
@@ -1408,6 +1408,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:05:15",
+      "msg": "NIFTY:24092 YdH:24220/YdL:24011 Sig:OR BREAK LOW 24097 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
+      "cls": ""
+    },
+    {
+      "time": "14:05:15",
+      "msg": "Gated trade skipped \u2014 confirmation timeout",
+      "cls": "info"
+    },
+    {
+      "time": "14:05:13",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:00:08",
+      "msg": "NIFTY:24098 YdH:24220/YdL:24011 Sig:FADE 24186->24098 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
+      "cls": ""
+    },
+    {
+      "time": "14:00:07",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:55:23",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:55:21",
       "msg": "NIFTY:24079 YdH:24220/YdL:24011 Sig:OR BREAK LOW 24097 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
       "cls": ""
@@ -1476,36 +1506,6 @@
       "time": "13:35:04",
       "msg": "RIDING NIFTY PE | Peak:Rs.630 Now:Rs.630 | staircase floor Rs.500",
       "cls": "ok"
-    },
-    {
-      "time": "13:30:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:30:17",
-      "msg": "RIDING NIFTY PE | Peak:Rs.625 Now:Rs.625 | staircase floor Rs.500",
-      "cls": "ok"
-    },
-    {
-      "time": "13:30:16",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.625 \u2014 floor locked at Rs.500",
-      "cls": "ok"
-    },
-    {
-      "time": "13:20:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:20:20",
-      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24050 @ Rs.148.1 | FADE 24186->24116 | Conf:57% SL:Rs.320 | 1L Inv:Rs.9626",
-      "cls": "ok"
-    },
-    {
-      "time": "13:20:11",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
