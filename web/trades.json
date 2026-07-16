@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16 09:35",
+  "last_updated": "2026-07-16 09:40",
   "summary": {
     "total_trades": 80,
     "wins": 34,
@@ -1390,6 +1390,16 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:40:12",
+      "msg": "NIFTY:24108 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:35:11",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:35:08",
       "msg": "NIFTY:24111 YdH:24260/YdL:24000 Sig:-- T:0/99 Lots:1L Cap:Rs.17983 Daily:Rs.0",
       "cls": ""
@@ -1476,16 +1486,6 @@
     },
     {
       "time": "14:51:19",
-      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "14:46:19",
-      "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "14:41:19",
       "msg": "Daily loss limit hit (Rs.-1074). Stopped for today.",
       "cls": "err"
     }
