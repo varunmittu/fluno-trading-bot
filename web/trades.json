@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16 14:05",
+  "last_updated": "2026-07-16 14:10",
   "summary": {
     "total_trades": 81,
     "wins": 35,
@@ -1408,6 +1408,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:10:22",
+      "msg": "NIFTY:24089 YdH:24220/YdL:24011 Sig:OR BREAK LOW 24097 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
+      "cls": ""
+    },
+    {
+      "time": "14:10:22",
+      "msg": "Confidence gate: OR BREAK LOW 24097 scored 6.5/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "14:10:22",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:05:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:05:15",
       "msg": "NIFTY:24092 YdH:24220/YdL:24011 Sig:OR BREAK LOW 24097 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
       "cls": ""
@@ -1485,26 +1505,6 @@
     {
       "time": "13:45:20",
       "msg": "STAIR UP NIFTY PE | Peak:Rs.1640 \u2014 floor locked at Rs.1500",
-      "cls": "ok"
-    },
-    {
-      "time": "13:40:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:40:12",
-      "msg": "RIDING NIFTY PE | Peak:Rs.1276 Now:Rs.1276 | staircase floor Rs.1200",
-      "cls": "ok"
-    },
-    {
-      "time": "13:40:12",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.1276 \u2014 floor locked at Rs.1200",
-      "cls": "ok"
-    },
-    {
-      "time": "13:35:04",
-      "msg": "RIDING NIFTY PE | Peak:Rs.630 Now:Rs.630 | staircase floor Rs.500",
       "cls": "ok"
     }
   ],
