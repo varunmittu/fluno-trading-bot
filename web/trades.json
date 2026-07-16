@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16 14:55",
+  "last_updated": "2026-07-16 15:05",
   "summary": {
     "total_trades": 81,
     "wins": 35,
@@ -1408,6 +1408,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:05:15",
+      "msg": "NIFTY:24073 YdH:24220/YdL:24011 Sig:FADE 24186->24099 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
+      "cls": ""
+    },
+    {
+      "time": "15:00:10",
+      "msg": "NIFTY:24113 YdH:24220/YdL:24011 Sig:FADE 24186->24099 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
+      "cls": ""
+    },
+    {
+      "time": "15:00:10",
+      "msg": "Pending trade #2 cancelled \u2014 entry window closed",
+      "cls": "info"
+    },
+    {
+      "time": "14:55:25",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:55:23",
       "msg": "NIFTY:24099 YdH:24220/YdL:24011 Sig:FADE 24186->24099 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
       "cls": ""
@@ -1486,26 +1506,6 @@
       "time": "14:35:15",
       "msg": "Confidence gate: FADE 24186->24098 scored 6.5/9 (< 7) \u2014 no alert, no entry",
       "cls": "info"
-    },
-    {
-      "time": "14:35:14",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:30:08",
-      "msg": "NIFTY:24089 YdH:24220/YdL:24011 Sig:OR BREAK LOW 24097 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
-      "cls": ""
-    },
-    {
-      "time": "14:30:07",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:25:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
