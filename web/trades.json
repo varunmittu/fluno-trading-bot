@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-17 13:25",
+  "last_updated": "2026-07-17 13:35",
   "summary": {
     "total_trades": 81,
     "wins": 35,
@@ -1408,6 +1408,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "13:25:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:20:10",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -1501,11 +1506,6 @@
       "time": "12:55:16",
       "msg": "NIFTY:24274 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:0/99 Lots:1L Cap:Rs.19436 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "12:55:16",
-      "msg": "Confidence gate: BREAK HIGH 24186 scored 6.5/9 (< 7) \u2014 no alert, no entry",
-      "cls": "info"
     }
   ],
   "vix": null,
