@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-17 14:55",
+  "last_updated": "2026-07-17 15:05",
   "summary": {
     "total_trades": 82,
     "wins": 35,
@@ -1426,6 +1426,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:05:18",
+      "msg": "NIFTY:24327 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:1/99 Lots:1L Cap:Rs.19021 Daily:Rs.-415",
+      "cls": ""
+    },
+    {
+      "time": "15:00:10",
+      "msg": "NIFTY:24313 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:1/99 Lots:1L Cap:Rs.19021 Daily:Rs.-415",
+      "cls": ""
+    },
+    {
+      "time": "15:00:10",
+      "msg": "Pending trade #2 cancelled \u2014 entry window closed",
+      "cls": "info"
+    },
+    {
+      "time": "14:55:24",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:55:21",
       "msg": "NIFTY:24323 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:1/99 Lots:1L Cap:Rs.19021 Daily:Rs.-415",
       "cls": ""
@@ -1504,26 +1524,6 @@
       "time": "14:30:20",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "14:30:18",
-      "msg": "NIFTY:24294 YdH:24186/YdL:24050 Sig:FADE 24367->24294 T:1/99 Lots:1L Cap:Rs.19021 Daily:Rs.-415",
-      "cls": ""
-    },
-    {
-      "time": "14:30:18",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:30:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:25:09",
-      "msg": "NIFTY:24293 YdH:24186/YdL:24050 Sig:FADE 24367->24293 T:1/99 Lots:1L Cap:Rs.19021 Daily:Rs.-415",
-      "cls": ""
     }
   ],
   "vix": null,
