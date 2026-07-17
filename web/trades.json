@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16 15:31",
+  "last_updated": "2026-07-17 12:17",
   "summary": {
     "total_trades": 81,
     "wins": 35,
@@ -1408,104 +1408,34 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "15:31:21",
-      "msg": "NIFTY:24081 YdH:24220/YdL:24011 Sig:FADE 24186->24099 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
+      "time": "12:17:39",
+      "msg": "NIFTY:24269 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:0/99 Lots:1L Cap:Rs.19436 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "15:30:19",
-      "msg": "Error: No item with that key",
-      "cls": "err"
-    },
-    {
-      "time": "15:25:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:25:16",
-      "msg": "NIFTY:24059 YdH:24220/YdL:24011 Sig:FADE 24186->24099 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
-      "cls": ""
-    },
-    {
-      "time": "15:20:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:20:10",
-      "msg": "NIFTY:24064 YdH:24220/YdL:24011 Sig:FADE 24186->24099 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
-      "cls": ""
-    },
-    {
-      "time": "15:15:05",
-      "msg": "NIFTY:24071 YdH:24220/YdL:24011 Sig:FADE 24186->24099 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
-      "cls": ""
-    },
-    {
-      "time": "15:10:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:10:20",
-      "msg": "NIFTY:24075 YdH:24220/YdL:24011 Sig:FADE 24186->24099 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
-      "cls": ""
-    },
-    {
-      "time": "15:05:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:05:15",
-      "msg": "NIFTY:24073 YdH:24220/YdL:24011 Sig:FADE 24186->24099 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
-      "cls": ""
-    },
-    {
-      "time": "15:00:10",
-      "msg": "NIFTY:24113 YdH:24220/YdL:24011 Sig:FADE 24186->24099 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
-      "cls": ""
-    },
-    {
-      "time": "15:00:10",
-      "msg": "Pending trade #2 cancelled \u2014 entry window closed",
+      "time": "12:17:39",
+      "msg": "Confidence gate: BREAK HIGH 24186 scored 6/9 (< 7) \u2014 no alert, no entry",
       "cls": "info"
     },
     {
-      "time": "14:55:25",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:55:23",
-      "msg": "NIFTY:24099 YdH:24220/YdL:24011 Sig:FADE 24186->24099 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
-      "cls": ""
-    },
-    {
-      "time": "14:55:23",
-      "msg": "Trade #2 gate: conf 61% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "14:55:21",
+      "time": "12:17:38",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "14:50:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:50:15",
-      "msg": "NIFTY:24093 YdH:24220/YdL:24011 Sig:OR BREAK LOW 24097 T:1/99 Lots:1L Cap:Rs.19436 Daily:Rs.1453",
-      "cls": ""
-    },
-    {
-      "time": "14:50:15",
-      "msg": "Confidence gate: OR BREAK LOW 24097 scored 6.5/9 (< 7) \u2014 no alert, no entry",
+      "time": "12:17:35",
+      "msg": "Capital: Rs.19436 | Lots: 1L (65 units)",
       "cls": "info"
+    },
+    {
+      "time": "12:17:35",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
+      "cls": "info"
+    },
+    {
+      "time": "12:17:33",
+      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
+      "cls": "err"
     }
   ],
   "vix": null,
