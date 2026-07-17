@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-17 12:17",
+  "last_updated": "2026-07-17 12:25",
   "summary": {
     "total_trades": 81,
     "wins": 35,
@@ -1407,6 +1407,31 @@
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:25:09",
+      "msg": "NIFTY:24283 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:0/99 Lots:1L Cap:Rs.19436 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:25:09",
+      "msg": "Confidence gate: BREAK HIGH 24186 scored 6/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "12:25:07",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:20:01",
+      "msg": "NIFTY:24275 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:0/99 Lots:1L Cap:Rs.19436 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:17:43",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:17:39",
       "msg": "NIFTY:24269 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:0/99 Lots:1L Cap:Rs.19436 Daily:Rs.0",
