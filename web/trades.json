@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-17 13:05",
+  "last_updated": "2026-07-17 13:15",
   "summary": {
     "total_trades": 81,
     "wins": 35,
@@ -1408,6 +1408,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:15:13",
+      "msg": "NIFTY:24281 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:0/99 Lots:1L Cap:Rs.19436 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:15:13",
+      "msg": "Confidence gate: BREAK HIGH 24186 scored 6.5/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "13:15:12",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:10:03",
+      "msg": "NIFTY:24278 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:0/99 Lots:1L Cap:Rs.19436 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:10:03",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:05:17",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:05:14",
       "msg": "NIFTY:24281 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:0/99 Lots:1L Cap:Rs.19436 Daily:Rs.0",
       "cls": ""
@@ -1476,36 +1506,6 @@
       "time": "12:45:25",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "12:45:22",
-      "msg": "NIFTY:24282 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:0/99 Lots:1L Cap:Rs.19436 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:45:22",
-      "msg": "Confidence gate: BREAK HIGH 24186 scored 6/9 (< 7) \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "12:45:21",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:40:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:40:14",
-      "msg": "NIFTY:24275 YdH:24186/YdL:24050 Sig:BREAK HIGH 24186 T:0/99 Lots:1L Cap:Rs.19436 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:40:14",
-      "msg": "Confidence gate: BREAK HIGH 24186 scored 6/9 (< 7) \u2014 no alert, no entry",
-      "cls": "info"
     }
   ],
   "vix": null,
