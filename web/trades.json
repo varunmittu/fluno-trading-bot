@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-20 13:30",
+  "last_updated": "2026-07-20 13:40",
   "summary": {
     "total_trades": 84,
     "wins": 37,
@@ -1461,6 +1461,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:40:12",
+      "msg": "NIFTY:24239 YdH:24367/YdL:24099 Sig:-- T:2/99 Lots:1L Cap:Rs.19779 Daily:Rs.758",
+      "cls": ""
+    },
+    {
+      "time": "13:40:12",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:35:04",
+      "msg": "NIFTY:24236 YdH:24367/YdL:24099 Sig:-- T:2/99 Lots:1L Cap:Rs.19779 Daily:Rs.758",
+      "cls": ""
+    },
+    {
+      "time": "13:35:04",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:30:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:30:17",
       "msg": "NIFTY:24245 YdH:24367/YdL:24099 Sig:-- T:2/99 Lots:1L Cap:Rs.19779 Daily:Rs.758",
       "cls": ""
@@ -1532,31 +1557,6 @@
     },
     {
       "time": "13:00:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:18",
-      "msg": "[PAPER] #2 BEARISH \u2014 BUY PUT (PE) | NIFTY 24150 @ Rs.150.0 | FADE 24262->24165 | Conf:57% SL:Rs.400 | 1L Inv:Rs.9750",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:14",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:55:07",
-      "msg": "NIFTY:24165 YdH:24367/YdL:24099 Sig:FADE 24262->24165 T:1/99 Lots:1L Cap:Rs.19674 Daily:Rs.654",
-      "cls": ""
-    },
-    {
-      "time": "12:55:07",
-      "msg": "Trade #2 gate: conf 57% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "12:55:06",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
