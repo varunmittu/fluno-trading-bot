@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-20 12:45",
+  "last_updated": "2026-07-20 12:50",
   "summary": {
     "total_trades": 82,
     "wins": 35,
@@ -1426,6 +1426,21 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "12:50:12",
+      "msg": "RIDING NIFTY PE | Peak:Rs.843 Now:Rs.843 | staircase floor Rs.700",
+      "cls": "ok"
+    },
+    {
+      "time": "12:50:12",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.843 \u2014 floor locked at Rs.700",
+      "cls": "ok"
+    },
+    {
+      "time": "12:45:07",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:45:02",
       "msg": "RIDING NIFTY PE | Peak:Rs.505 Now:Rs.505 | staircase floor Rs.500",
       "cls": "ok"
@@ -1509,21 +1524,6 @@
       "time": "12:15:17",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "12:10:10",
-      "msg": "NIFTY:24180 YdH:24367/YdL:24099 Sig:-- T:0/99 Lots:1L Cap:Rs.19021 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:10:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:05:25",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
