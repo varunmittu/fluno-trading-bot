@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-20 15:28",
+  "last_updated": "2026-07-21 09:16",
   "summary": {
     "total_trades": 84,
     "wins": 37,
@@ -1461,32 +1461,47 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "15:28:43",
-      "msg": "NIFTY:24245 Sig:-- T:2/99 Lots:1L Cap:Rs.19779 Daily:Rs.758",
+      "time": "09:16:05",
+      "msg": "NIFTY:24238 Sig:-- T:0/99 Lots:1L Cap:Rs.19779 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "15:28:40",
+      "time": "09:15:03",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "09:10:02",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:58",
+      "msg": "New trading day | Capital: Rs.19779 | Lots: 1L",
+      "cls": "info"
+    },
+    {
+      "time": "16:43:56",
       "msg": "Restored today's booked P&L from DB: Rs.+758.0",
       "cls": "info"
     },
     {
-      "time": "15:28:40",
+      "time": "16:43:56",
       "msg": "2 trade(s) done today (from DB) \u2014 97 gated slot(s) left.",
       "cls": "info"
     },
     {
-      "time": "15:28:40",
+      "time": "16:43:56",
       "msg": "Capital: Rs.19779 | Lots: 1L (65 units)",
       "cls": "info"
     },
     {
-      "time": "15:28:40",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v4.5 (ATR stop + staircase + 0.2% fade + expiry-day next-week + window 10:15-15:00) | SL: 1.0xATR, Rs.200-1000/lot",
+      "time": "16:43:56",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
       "cls": "info"
     },
     {
-      "time": "15:28:39",
+      "time": "16:43:50",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
