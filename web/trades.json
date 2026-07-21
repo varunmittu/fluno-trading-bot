@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 11:45",
+  "last_updated": "2026-07-21 11:50",
   "summary": {
     "total_trades": 87,
     "wins": 40,
@@ -1513,6 +1513,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:50:26",
+      "msg": "[PAPER] #4 BEARISH \u2014 BUY PUT (PE) | NIFTY 24100 @ Rs.148.4 | OR BREAK LOW 24207 | Conf:57% SL:Rs.1120 | 2L Inv:Rs.19292",
+      "cls": "ok"
+    },
+    {
+      "time": "11:50:20",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:45:17",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:45:13",
       "msg": "NIFTY:24162 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:3/99 Lots:2L Cap:Rs.21286 Daily:Rs.1507",
       "cls": ""
@@ -1596,21 +1611,6 @@
       "time": "11:20:08",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "11:15:20",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:15:15",
-      "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24150 @ Rs.150.1 | OR BREAK LOW 24207 | Conf:57% SL:Rs.1160 | 2L Inv:Rs.19513",
-      "cls": "ok"
-    },
-    {
-      "time": "11:15:11",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
