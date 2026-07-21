@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 10:45",
+  "last_updated": "2026-07-21 10:55",
   "summary": {
     "total_trades": 85,
     "wins": 38,
@@ -1476,8 +1476,33 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "10:55:21",
+      "msg": "RIDING NIFTY PE | Peak:Rs.963 Now:Rs.963 | staircase floor Rs.900",
+      "cls": "ok"
+    },
+    {
+      "time": "10:55:21",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.963 \u2014 floor locked at Rs.900",
+      "cls": "ok"
+    },
+    {
+      "time": "10:50:09",
+      "msg": "RIDING NIFTY PE | Peak:Rs.508 Now:Rs.508 | staircase floor Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "10:50:08",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.508 \u2014 floor locked at Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "10:45:23",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:45:19",
       "msg": "[PAPER] #2 BEARISH \u2014 BUY PUT (PE) | NIFTY 24150 @ Rs.150.0 | OR BREAK LOW 24207 | Conf:57% SL:Rs.1200 | 2L Inv:Rs.19500",
@@ -1552,31 +1577,6 @@
       "time": "10:25:20",
       "msg": "Confidence gate: OR BREAK LOW 24207 scored 5.5/9 (< 7) \u2014 no alert, no entry",
       "cls": "info"
-    },
-    {
-      "time": "10:25:19",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:20:10",
-      "msg": "NIFTY:24207 YdH:24266/YdL:24136 Sig:-- T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:20:10",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:15:26",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:15:23",
-      "msg": "NIFTY:24210 YdH:24266/YdL:24136 Sig:-- T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
