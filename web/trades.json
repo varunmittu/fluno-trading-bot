@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 13:50",
+  "last_updated": "2026-07-21 14:00",
   "summary": {
     "total_trades": 88,
     "wins": 41,
@@ -1530,6 +1530,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:00:10",
+      "msg": "NIFTY:24164 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
+      "cls": ""
+    },
+    {
+      "time": "14:00:10",
+      "msg": "Confidence gate: OR BREAK LOW 24207 scored 5.5/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "14:00:09",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:55:04",
+      "msg": "NIFTY:24180 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
+      "cls": ""
+    },
+    {
+      "time": "13:55:04",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:55:03",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:50:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:50:18",
       "msg": "NIFTY:24191 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
       "cls": ""
@@ -1593,41 +1628,6 @@
       "time": "13:31:50",
       "msg": "NIFTY:24174 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
       "cls": ""
-    },
-    {
-      "time": "13:31:50",
-      "msg": "Trade #5 gate: conf 57% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "13:31:48",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:31:48",
-      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
-      "cls": "info"
-    },
-    {
-      "time": "13:31:36",
-      "msg": "Restored today's booked P&L from DB: Rs.+2,442.6",
-      "cls": "info"
-    },
-    {
-      "time": "13:31:36",
-      "msg": "4 trade(s) done today (from DB) \u2014 95 gated slot(s) left.",
-      "cls": "info"
-    },
-    {
-      "time": "13:31:35",
-      "msg": "Capital: Rs.22221 | Lots: 2L (130 units)",
-      "cls": "info"
-    },
-    {
-      "time": "13:31:35",
-      "msg": "Bot started | PAPER TRADE | MANUAL /confirm mode \u2014 send /auto for hands-free | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
-      "cls": "err"
     }
   ],
   "vix": null,
