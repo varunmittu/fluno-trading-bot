@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 12:05",
+  "last_updated": "2026-07-21 12:15",
   "summary": {
     "total_trades": 87,
     "wins": 40,
@@ -1513,6 +1513,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "12:05:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:00:07",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -1605,11 +1610,6 @@
     {
       "time": "11:25:19",
       "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:25:14",
-      "msg": "RIDING NIFTY PE | Peak:Rs.339 Now:Rs.339 | staircase floor Rs.300",
       "cls": "ok"
     }
   ],
