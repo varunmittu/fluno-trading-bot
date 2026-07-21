@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 15:00",
+  "last_updated": "2026-07-21 15:05",
   "summary": {
     "total_trades": 88,
     "wins": 41,
@@ -1530,6 +1530,16 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:05:16",
+      "msg": "NIFTY:24186 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
+      "cls": ""
+    },
+    {
+      "time": "15:00:13",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:00:10",
       "msg": "NIFTY:24183 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
       "cls": ""
@@ -1618,16 +1628,6 @@
       "time": "14:35:18",
       "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
       "cls": "info"
-    },
-    {
-      "time": "14:30:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:30:13",
-      "msg": "NIFTY:24168 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
     }
   ],
   "vix": null,
