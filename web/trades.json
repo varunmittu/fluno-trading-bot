@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-21 13:00",
+  "last_updated": "2026-07-21 13:10",
   "summary": {
-    "total_trades": 87,
-    "wins": 40,
+    "total_trades": 88,
+    "wins": 41,
     "losses": 47,
-    "win_rate": 46.0,
-    "total_pnl": -397.0,
-    "avg_win": 401.0,
+    "win_rate": 46.6,
+    "total_pnl": 538.0,
+    "avg_win": 414.0,
     "avg_loss": -350.0
   },
   "trades": [
@@ -1488,6 +1488,23 @@
       "lots": 2,
       "gross": 520.0,
       "charges": 84.21
+    },
+    {
+      "id": 91,
+      "date": "2026-07-21",
+      "time": "13:10",
+      "score": 57,
+      "entry": 24166.75,
+      "exit": 24154.6,
+      "pnl": 935.49,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 19292.0,
+      "lots": 2,
+      "gross": 1020.0,
+      "charges": 84.51
     }
   ],
   "daily_pnl": {
@@ -1506,12 +1523,32 @@
     "2026-07-16": 1453.0,
     "2026-07-17": -415.0,
     "2026-07-20": 758.0,
-    "2026-07-21": 1507.0
+    "2026-07-21": 2442.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "13:10:15",
+      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.1176 Floor:Rs.1000 Charges:Rs.85 NET:Rs.+935 | Capital:Rs.22221",
+      "cls": "ok"
+    },
+    {
+      "time": "13:05:04",
+      "msg": "RIDING NIFTY PE | Peak:Rs.1176 Now:Rs.1176 | staircase floor Rs.1000",
+      "cls": "ok"
+    },
+    {
+      "time": "13:05:04",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.1176 \u2014 floor locked at Rs.1000",
+      "cls": "ok"
+    },
+    {
+      "time": "13:00:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:00:15",
       "msg": "RIDING NIFTY PE | Peak:Rs.778 Now:Rs.778 | staircase floor Rs.600",
@@ -1591,26 +1628,6 @@
       "time": "11:45:11",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "11:40:04",
-      "msg": "NIFTY:24171 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:3/99 Lots:2L Cap:Rs.21286 Daily:Rs.1507",
-      "cls": ""
-    },
-    {
-      "time": "11:40:03",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:35:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:35:15",
-      "msg": "NIFTY:24185 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:3/99 Lots:2L Cap:Rs.21286 Daily:Rs.1507",
-      "cls": ""
     }
   ],
   "vix": null,
