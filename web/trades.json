@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 13:45",
+  "last_updated": "2026-07-21 13:50",
   "summary": {
     "total_trades": 88,
     "wins": 41,
@@ -1530,6 +1530,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:50:18",
+      "msg": "NIFTY:24191 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
+      "cls": ""
+    },
+    {
+      "time": "13:50:18",
+      "msg": "Confidence gate: OR BREAK LOW 24207 scored 5/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "13:50:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:45:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:45:11",
       "msg": "NIFTY:24190 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
       "cls": ""
@@ -1607,11 +1627,6 @@
     {
       "time": "13:31:35",
       "msg": "Bot started | PAPER TRADE | MANUAL /confirm mode \u2014 send /auto for hands-free | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
-      "cls": "err"
-    },
-    {
-      "time": "13:31:34",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
       "cls": "err"
     }
   ],
