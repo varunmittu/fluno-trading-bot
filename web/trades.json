@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 09:55",
+  "last_updated": "2026-07-21 10:00",
   "summary": {
     "total_trades": 84,
     "wins": 37,
@@ -1461,6 +1461,16 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:00:17",
+      "msg": "NIFTY:24232 Sig:-- T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:55:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:55:10",
       "msg": "NIFTY:24231 Sig:-- T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
       "cls": ""
@@ -1548,16 +1558,6 @@
     {
       "time": "16:43:56",
       "msg": "Restored today's booked P&L from DB: Rs.+758.0",
-      "cls": "info"
-    },
-    {
-      "time": "16:43:56",
-      "msg": "2 trade(s) done today (from DB) \u2014 97 gated slot(s) left.",
-      "cls": "info"
-    },
-    {
-      "time": "16:43:56",
-      "msg": "Capital: Rs.19779 | Lots: 1L (65 units)",
       "cls": "info"
     }
   ],
