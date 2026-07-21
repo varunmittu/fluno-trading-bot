@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 14:00",
+  "last_updated": "2026-07-21 14:05",
   "summary": {
     "total_trades": 88,
     "wins": 41,
@@ -1530,6 +1530,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:05:19",
+      "msg": "NIFTY:24177 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
+      "cls": ""
+    },
+    {
+      "time": "14:05:19",
+      "msg": "Confidence gate: OR BREAK LOW 24207 scored 6/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "14:05:18",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:00:13",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:00:10",
       "msg": "NIFTY:24164 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
       "cls": ""
@@ -1607,26 +1627,6 @@
     {
       "time": "13:40:03",
       "msg": "NIFTY:24190 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "13:40:02",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:35:17",
-      "msg": "NIFTY:24183 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "13:31:53",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:31:50",
-      "msg": "NIFTY:24174 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
       "cls": ""
     }
   ],
