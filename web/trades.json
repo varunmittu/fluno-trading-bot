@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 14:35",
+  "last_updated": "2026-07-21 14:45",
   "summary": {
     "total_trades": 88,
     "wins": 41,
@@ -1530,6 +1530,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:45:13",
+      "msg": "NIFTY:24172 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
+      "cls": ""
+    },
+    {
+      "time": "14:45:13",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "14:45:12",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:40:06",
+      "msg": "NIFTY:24161 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
+      "cls": ""
+    },
+    {
+      "time": "14:40:05",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:35:23",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:35:20",
       "msg": "NIFTY:24169 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
       "cls": ""
@@ -1598,36 +1628,6 @@
       "time": "14:20:19",
       "msg": "Confidence gate: OR BREAK LOW 24207 scored 6/9 (< 7) \u2014 no alert, no entry",
       "cls": "info"
-    },
-    {
-      "time": "14:20:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:15:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:15:13",
-      "msg": "NIFTY:24167 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "14:15:13",
-      "msg": "Confidence gate: OR BREAK LOW 24207 scored 6/9 (< 7) \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "14:15:12",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:10:05",
-      "msg": "NIFTY:24167 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
     }
   ],
   "vix": null,
