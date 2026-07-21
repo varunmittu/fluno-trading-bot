@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 12:15",
+  "last_updated": "2026-07-21 12:20",
   "summary": {
     "total_trades": 87,
     "wins": 40,
@@ -1513,6 +1513,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "12:15:19",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:05:21",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -1605,11 +1610,6 @@
     {
       "time": "11:30:02",
       "msg": "STAIR UP NIFTY PE | Peak:Rs.583 \u2014 floor locked at Rs.500",
-      "cls": "ok"
-    },
-    {
-      "time": "11:25:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
   ],
