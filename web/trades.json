@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 10:10",
+  "last_updated": "2026-07-21 10:15",
   "summary": {
     "total_trades": 84,
     "wins": 37,
@@ -1461,6 +1461,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:15:23",
+      "msg": "NIFTY:24210 YdH:24266/YdL:24136 Sig:-- T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:15:22",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:22",
+      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:22",
+      "msg": "Kite: loaded 1628 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:10:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:10:11",
       "msg": "NIFTY:24226 Sig:-- T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
       "cls": ""
@@ -1534,31 +1559,6 @@
       "time": "09:25:18",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "09:25:15",
-      "msg": "NIFTY:24231 Sig:-- T:0/99 Lots:1L Cap:Rs.19779 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:20:10",
-      "msg": "NIFTY:24255 Sig:-- T:0/99 Lots:1L Cap:Rs.19779 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:16:08",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:16:05",
-      "msg": "NIFTY:24238 Sig:-- T:0/99 Lots:1L Cap:Rs.19779 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:15:03",
-      "msg": "Could not fetch any live prices. Retrying...",
-      "cls": "err"
     }
   ],
   "vix": null,
