@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 13:30",
+  "last_updated": "2026-07-21 13:31",
   "summary": {
     "total_trades": 88,
     "wins": 41,
@@ -1530,104 +1530,49 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "13:30:23",
+      "time": "13:31:50",
       "msg": "NIFTY:24174 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
       "cls": ""
     },
     {
-      "time": "13:30:23",
-      "msg": "Confidence gate: OR BREAK LOW 24207 scored 6.5/9 (< 7) \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "13:30:22",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:25:11",
-      "msg": "NIFTY:24165 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "13:25:11",
-      "msg": "Confidence gate: OR BREAK LOW 24207 scored 6.5/9 (< 7) \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "13:25:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:20:25",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:20:23",
-      "msg": "NIFTY:24155 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "13:20:23",
-      "msg": "Gated trade skipped \u2014 confirmation timeout",
-      "cls": "info"
-    },
-    {
-      "time": "13:20:21",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:15:14",
-      "msg": "NIFTY:24152 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "13:15:13",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:10:28",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:10:26",
-      "msg": "NIFTY:24155 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "13:10:26",
+      "time": "13:31:50",
       "msg": "Trade #5 gate: conf 57% \u2014 awaiting /confirm",
       "cls": "info"
     },
     {
-      "time": "13:10:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:10:18",
+      "time": "13:31:48",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "13:10:18",
+      "time": "13:31:48",
       "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
       "cls": "info"
     },
     {
-      "time": "13:10:15",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.1176 Floor:Rs.1000 Charges:Rs.85 NET:Rs.+935 | Capital:Rs.22221",
-      "cls": "ok"
+      "time": "13:31:36",
+      "msg": "Restored today's booked P&L from DB: Rs.+2,442.6",
+      "cls": "info"
     },
     {
-      "time": "13:05:04",
-      "msg": "RIDING NIFTY PE | Peak:Rs.1176 Now:Rs.1176 | staircase floor Rs.1000",
-      "cls": "ok"
+      "time": "13:31:36",
+      "msg": "4 trade(s) done today (from DB) \u2014 95 gated slot(s) left.",
+      "cls": "info"
+    },
+    {
+      "time": "13:31:35",
+      "msg": "Capital: Rs.22221 | Lots: 2L (130 units)",
+      "cls": "info"
+    },
+    {
+      "time": "13:31:35",
+      "msg": "Bot started | PAPER TRADE | MANUAL /confirm mode \u2014 send /auto for hands-free | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
+      "cls": "err"
+    },
+    {
+      "time": "13:31:34",
+      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
+      "cls": "err"
     }
   ],
   "vix": null,
