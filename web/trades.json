@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 12:30",
+  "last_updated": "2026-07-21 12:40",
   "summary": {
     "total_trades": 87,
     "wins": 40,
@@ -1513,6 +1513,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "12:30:23",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:20:26",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -1605,11 +1610,6 @@
     {
       "time": "11:35:11",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.583 Floor:Rs.500 Charges:Rs.84 NET:Rs.+436 | Capital:Rs.21286",
-      "cls": "ok"
-    },
-    {
-      "time": "11:30:02",
-      "msg": "RIDING NIFTY PE | Peak:Rs.583 Now:Rs.583 | staircase floor Rs.500",
       "cls": "ok"
     }
   ],
