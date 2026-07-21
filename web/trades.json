@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 13:20",
+  "last_updated": "2026-07-21 13:30",
   "summary": {
     "total_trades": 88,
     "wins": 41,
@@ -1530,6 +1530,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:30:23",
+      "msg": "NIFTY:24174 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
+      "cls": ""
+    },
+    {
+      "time": "13:30:23",
+      "msg": "Confidence gate: OR BREAK LOW 24207 scored 6.5/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "13:30:22",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:25:11",
+      "msg": "NIFTY:24165 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
+      "cls": ""
+    },
+    {
+      "time": "13:25:11",
+      "msg": "Confidence gate: OR BREAK LOW 24207 scored 6.5/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "13:25:09",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:20:25",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:20:23",
       "msg": "NIFTY:24155 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
       "cls": ""
@@ -1592,41 +1627,6 @@
     {
       "time": "13:05:04",
       "msg": "RIDING NIFTY PE | Peak:Rs.1176 Now:Rs.1176 | staircase floor Rs.1000",
-      "cls": "ok"
-    },
-    {
-      "time": "13:05:04",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.1176 \u2014 floor locked at Rs.1000",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:20",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:15",
-      "msg": "RIDING NIFTY PE | Peak:Rs.778 Now:Rs.778 | staircase floor Rs.600",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:14",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.778 \u2014 floor locked at Rs.600",
-      "cls": "ok"
-    },
-    {
-      "time": "12:50:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:40:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:30:23",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
   ],
