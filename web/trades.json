@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 10:25",
+  "last_updated": "2026-07-21 10:35",
   "summary": {
     "total_trades": 84,
     "wins": 37,
@@ -1461,6 +1461,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:35:32",
+      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24150 @ Rs.150.1 | OR BREAK LOW 24207 | Conf:57% SL:Rs.1300 | 2L Inv:Rs.19513",
+      "cls": "ok"
+    },
+    {
+      "time": "10:35:25",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:30:07",
+      "msg": "NIFTY:24200 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:30:06",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:25:24",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:25:20",
       "msg": "NIFTY:24195 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
       "cls": ""
@@ -1533,31 +1558,6 @@
     {
       "time": "10:00:17",
       "msg": "NIFTY:24232 Sig:-- T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:55:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:55:10",
-      "msg": "NIFTY:24231 Sig:-- T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:50:01",
-      "msg": "NIFTY:24223 Sig:-- T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:45:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:45:17",
-      "msg": "NIFTY:24234 Sig:-- T:0/99 Lots:1L Cap:Rs.19779 Daily:Rs.0",
       "cls": ""
     }
   ],
