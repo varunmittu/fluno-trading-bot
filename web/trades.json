@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 11:15",
+  "last_updated": "2026-07-21 11:20",
   "summary": {
     "total_trades": 86,
     "wins": 39,
@@ -1493,8 +1493,13 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "11:15:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:15:15",
       "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24150 @ Rs.150.1 | OR BREAK LOW 24207 | Conf:57% SL:Rs.1160 | 2L Inv:Rs.19513",
@@ -1588,11 +1593,6 @@
     {
       "time": "10:50:09",
       "msg": "RIDING NIFTY PE | Peak:Rs.508 Now:Rs.508 | staircase floor Rs.500",
-      "cls": "ok"
-    },
-    {
-      "time": "10:50:08",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.508 \u2014 floor locked at Rs.500",
       "cls": "ok"
     }
   ],
