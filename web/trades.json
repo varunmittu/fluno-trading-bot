@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 12:40",
+  "last_updated": "2026-07-21 12:50",
   "summary": {
     "total_trades": 87,
     "wins": 40,
@@ -1513,6 +1513,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "12:40:19",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:30:23",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -1606,11 +1611,6 @@
       "time": "11:35:14",
       "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
       "cls": "info"
-    },
-    {
-      "time": "11:35:11",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.583 Floor:Rs.500 Charges:Rs.84 NET:Rs.+436 | Capital:Rs.21286",
-      "cls": "ok"
     }
   ],
   "vix": null,
