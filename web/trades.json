@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 10:15",
+  "last_updated": "2026-07-21 10:25",
   "summary": {
     "total_trades": 84,
     "wins": 37,
@@ -1461,6 +1461,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:25:20",
+      "msg": "NIFTY:24195 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:25:20",
+      "msg": "Confidence gate: OR BREAK LOW 24207 scored 5.5/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "10:25:19",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:20:10",
+      "msg": "NIFTY:24207 YdH:24266/YdL:24136 Sig:-- T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:20:10",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:26",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:15:23",
       "msg": "NIFTY:24210 YdH:24266/YdL:24136 Sig:-- T:0/99 Lots:2L Cap:Rs.19779 Daily:Rs.0",
       "cls": ""
@@ -1529,36 +1559,6 @@
       "time": "09:45:17",
       "msg": "NIFTY:24234 Sig:-- T:0/99 Lots:1L Cap:Rs.19779 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:40:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:40:11",
-      "msg": "NIFTY:24225 Sig:-- T:0/99 Lots:1L Cap:Rs.19779 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:35:06",
-      "msg": "NIFTY:24228 Sig:-- T:0/99 Lots:1L Cap:Rs.19779 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:30:23",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:30:20",
-      "msg": "NIFTY:24254 Sig:-- T:0/99 Lots:1L Cap:Rs.19779 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:25:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
