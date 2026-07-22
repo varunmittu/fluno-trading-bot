@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 11:00",
+  "last_updated": "2026-07-22 11:05",
   "summary": {
     "total_trades": 90,
     "wins": 43,
@@ -1565,6 +1565,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "11:00:10",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:55:22",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -1657,11 +1662,6 @@
     {
       "time": "10:30:25",
       "msg": "AUTO trade #2: BREAK LOW 24136 conf 71% score 7/9 \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "10:30:25",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
   ],
