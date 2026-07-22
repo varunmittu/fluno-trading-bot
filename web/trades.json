@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-22 10:45",
+  "last_updated": "2026-07-22 10:50",
   "summary": {
-    "total_trades": 89,
-    "wins": 42,
+    "total_trades": 90,
+    "wins": 43,
     "losses": 47,
-    "win_rate": 47.2,
-    "total_pnl": 1873.0,
-    "avg_win": 436.0,
+    "win_rate": 47.8,
+    "total_pnl": 2409.0,
+    "avg_win": 439.0,
     "avg_loss": -350.0
   },
   "trades": [
@@ -1522,6 +1522,23 @@
       "lots": 2,
       "gross": 1420.0,
       "charges": 85.32
+    },
+    {
+      "id": 93,
+      "date": "2026-07-22",
+      "time": "10:50",
+      "score": 71,
+      "entry": 24007.1,
+      "exit": 24010.9,
+      "pnl": 536.18,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 19227.0,
+      "lots": 2,
+      "gross": 620.0,
+      "charges": 83.82
     }
   ],
   "daily_pnl": {
@@ -1541,12 +1558,22 @@
     "2026-07-17": -415.0,
     "2026-07-20": 758.0,
     "2026-07-21": 2442.0,
-    "2026-07-22": 1335.0
+    "2026-07-22": 1871.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "10:50:20",
+      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.833 Floor:Rs.600 Charges:Rs.84 NET:Rs.+536 | Capital:Rs.24092",
+      "cls": "ok"
+    },
+    {
+      "time": "10:45:17",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:45:13",
       "msg": "RIDING NIFTY PE | Peak:Rs.833 Now:Rs.833 | staircase floor Rs.600",
@@ -1636,16 +1663,6 @@
       "time": "10:15:29",
       "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24000 @ Rs.149.4 | BREAK LOW 24136 | Conf:71% SL:Rs.2000 | 2L Inv:Rs.19422",
       "cls": "ok"
-    },
-    {
-      "time": "10:15:24",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:15:24",
-      "msg": "Kite: loaded 1584 NIFTY option contracts",
-      "cls": "info"
     }
   ],
   "vix": null,
