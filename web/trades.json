@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21 15:31",
+  "last_updated": "2026-07-22 09:15",
   "summary": {
     "total_trades": 88,
     "wins": 41,
@@ -1530,103 +1530,33 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "15:31:05",
-      "msg": "NIFTY:24194 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
+      "time": "09:15:53",
+      "msg": "NIFTY:24102 Sig:-- T:0/99 Lots:2L Cap:Rs.22221 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "15:30:02",
-      "msg": "Error: No item with that key",
-      "cls": "err"
-    },
-    {
-      "time": "15:25:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:25:18",
-      "msg": "NIFTY:24188 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "15:20:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:20:12",
-      "msg": "NIFTY:24184 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "15:15:06",
-      "msg": "NIFTY:24183 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "15:10:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:10:21",
-      "msg": "NIFTY:24184 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "15:05:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:05:16",
-      "msg": "NIFTY:24186 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "15:00:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:00:10",
-      "msg": "NIFTY:24183 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "14:55:05",
-      "msg": "NIFTY:24181 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "14:55:04",
-      "msg": "Fetching 5-min candles [^NSEI]...",
+      "time": "09:10:50",
+      "msg": "Morning Telegram ping sent",
       "cls": "info"
     },
     {
-      "time": "14:50:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:50:20",
-      "msg": "NIFTY:24182 YdH:24266/YdL:24136 Sig:OR BREAK LOW 24207 T:4/99 Lots:2L Cap:Rs.22221 Daily:Rs.2443",
-      "cls": ""
-    },
-    {
-      "time": "14:50:20",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "time": "01:15:16",
+      "msg": "Validation: trust 2.8/10 (n=16)",
       "cls": "info"
     },
     {
-      "time": "14:50:19",
-      "msg": "Fetching 5-min candles [^NSEI]...",
+      "time": "01:14:47",
+      "msg": "Capital: Rs.22221 | Lots: 2L (130 units)",
       "cls": "info"
     },
     {
-      "time": "14:45:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "time": "01:14:47",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
+      "cls": "info"
+    },
+    {
+      "time": "01:14:46",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
   ],
