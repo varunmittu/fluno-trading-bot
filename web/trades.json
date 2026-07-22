@@ -1616,6 +1616,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:30:18",
+      "msg": "NIFTY:23980 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:5/99 Lots:2L Cap:Rs.23084 Daily:Rs.863",
+      "cls": ""
+    },
+    {
+      "time": "13:30:18",
+      "msg": "Confidence gate: BREAK LOW 24136 scored 6.5/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "13:30:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "13:30:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "13:30:14",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.302 Floor:Rs.300 Charges:Rs.84 NET:Rs.+236 | Capital:Rs.23084",
       "cls": "ok"
@@ -1693,26 +1713,6 @@
     {
       "time": "12:40:22",
       "msg": "RIDING NIFTY PE | Peak:Rs.448 Now:Rs.448 | staircase floor Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "12:40:21",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.448 \u2014 floor locked at Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "12:35:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:30:10",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:20:37",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
   ],
