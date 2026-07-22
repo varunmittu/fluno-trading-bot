@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 10:10",
+  "last_updated": "2026-07-22 10:15",
   "summary": {
     "total_trades": 88,
     "wins": 41,
@@ -1530,6 +1530,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:15:29",
+      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24000 @ Rs.149.4 | BREAK LOW 24136 | Conf:71% SL:Rs.2000 | 2L Inv:Rs.19422",
+      "cls": "ok"
+    },
+    {
+      "time": "10:15:24",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:24",
+      "msg": "Kite: loaded 1584 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:10:16",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:10:14",
       "msg": "NIFTY:24050 Sig:-- T:0/99 Lots:2L Cap:Rs.22221 Daily:Rs.0",
       "cls": ""
@@ -1608,26 +1628,6 @@
       "time": "09:25:08",
       "msg": "NIFTY:24097 Sig:-- T:0/99 Lots:2L Cap:Rs.22221 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:20:22",
-      "msg": "NIFTY:24094 Sig:-- T:0/99 Lots:2L Cap:Rs.22221 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:15:56",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:15:53",
-      "msg": "NIFTY:24102 Sig:-- T:0/99 Lots:2L Cap:Rs.22221 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:10:50",
-      "msg": "Morning Telegram ping sent",
-      "cls": "info"
     }
   ],
   "vix": null,
