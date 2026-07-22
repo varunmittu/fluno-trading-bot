@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-22 13:20",
+  "last_updated": "2026-07-22 13:30",
   "summary": {
-    "total_trades": 92,
-    "wins": 44,
+    "total_trades": 93,
+    "wins": 45,
     "losses": 48,
-    "win_rate": 47.8,
-    "total_pnl": 1165.0,
-    "avg_win": 434.0,
+    "win_rate": 48.4,
+    "total_pnl": 1401.0,
+    "avg_win": 430.0,
     "avg_loss": -374.0
   },
   "trades": [
@@ -1573,6 +1573,23 @@
       "lots": 2,
       "gross": 320.0,
       "charges": 83.18
+    },
+    {
+      "id": 96,
+      "date": "2026-07-22",
+      "time": "13:30",
+      "score": 71,
+      "entry": 23984.85,
+      "exit": 23980.2,
+      "pnl": 236.36,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 19357.0,
+      "lots": 2,
+      "gross": 320.0,
+      "charges": 83.64
     }
   ],
   "daily_pnl": {
@@ -1592,12 +1609,32 @@
     "2026-07-17": -415.0,
     "2026-07-20": 758.0,
     "2026-07-21": 2442.0,
-    "2026-07-22": 627.0
+    "2026-07-22": 863.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "13:30:14",
+      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.302 Floor:Rs.300 Charges:Rs.84 NET:Rs.+236 | Capital:Rs.23084",
+      "cls": "ok"
+    },
+    {
+      "time": "13:25:05",
+      "msg": "RIDING NIFTY PE | Peak:Rs.302 Now:Rs.302 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "13:25:03",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.302 \u2014 floor locked at Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "13:20:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:10:25",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -1677,26 +1714,6 @@
       "time": "12:20:37",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "12:20:32",
-      "msg": "[PAPER] #4 BEARISH \u2014 BUY PUT (PE) | NIFTY 23900 @ Rs.147.0 | BREAK LOW 24136 | Conf:71% SL:Rs.1080 | 2L Inv:Rs.19110",
-      "cls": "ok"
-    },
-    {
-      "time": "12:20:23",
-      "msg": "AUTO trade #4: BREAK LOW 24136 conf 71% score 7/9 \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "12:20:22",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:15",
-      "msg": "NIFTY:23993 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:2L Cap:Rs.22611 Daily:Rs.390",
-      "cls": ""
     }
   ],
   "vix": null,
