@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 11:55",
+  "last_updated": "2026-07-22 12:00",
   "summary": {
     "total_trades": 91,
     "wins": 43,
@@ -1582,6 +1582,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:00:21",
+      "msg": "NIFTY:24023 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:2L Cap:Rs.22611 Daily:Rs.390",
+      "cls": ""
+    },
+    {
+      "time": "12:00:21",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "11:55:17",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:55:13",
       "msg": "NIFTY:24027 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:3L Cap:Rs.22611 Daily:Rs.390",
       "cls": ""
@@ -1664,21 +1679,6 @@
     {
       "time": "11:00:10",
       "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:55:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:55:18",
-      "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 23950 @ Rs.147.3 | BREAK LOW 24136 | Conf:76% SL:Rs.1420 | 2L Inv:Rs.19149",
-      "cls": "ok"
-    },
-    {
-      "time": "10:55:13",
-      "msg": "AUTO trade #3: BREAK LOW 24136 conf 76% score 7/9 \u2014 entering",
       "cls": "ok"
     }
   ],
