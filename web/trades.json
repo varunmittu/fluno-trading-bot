@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 15:10",
+  "last_updated": "2026-07-22 15:20",
   "summary": {
     "total_trades": 94,
     "wins": 46,
@@ -1633,6 +1633,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:20:07",
+      "msg": "NIFTY:24014 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
+      "cls": ""
+    },
+    {
+      "time": "15:15:03",
+      "msg": "NIFTY:24021 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
+      "cls": ""
+    },
+    {
+      "time": "15:10:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:10:18",
       "msg": "NIFTY:23998 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
       "cls": ""
@@ -1715,21 +1730,6 @@
     {
       "time": "14:40:03",
       "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:35:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:35:18",
-      "msg": "NIFTY:23984 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
-      "cls": ""
-    },
-    {
-      "time": "14:35:18",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
       "cls": "info"
     }
   ],
