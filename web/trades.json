@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-22 12:40",
+  "last_updated": "2026-07-22 12:45",
   "summary": {
-    "total_trades": 91,
-    "wins": 43,
+    "total_trades": 92,
+    "wins": 44,
     "losses": 48,
-    "win_rate": 47.3,
-    "total_pnl": 928.0,
-    "avg_win": 439.0,
+    "win_rate": 47.8,
+    "total_pnl": 1165.0,
+    "avg_win": 434.0,
     "avg_loss": -374.0
   },
   "trades": [
@@ -1556,6 +1556,23 @@
       "lots": 2,
       "gross": -1400.0,
       "charges": 80.82
+    },
+    {
+      "id": 95,
+      "date": "2026-07-22",
+      "time": "12:45",
+      "score": 71,
+      "entry": 23971.65,
+      "exit": 23984.85,
+      "pnl": 236.82,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 19110.0,
+      "lots": 2,
+      "gross": 320.0,
+      "charges": 83.18
     }
   ],
   "daily_pnl": {
@@ -1575,12 +1592,22 @@
     "2026-07-17": -415.0,
     "2026-07-20": 758.0,
     "2026-07-21": 2442.0,
-    "2026-07-22": 390.0
+    "2026-07-22": 627.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:45:09",
+      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.448 Floor:Rs.300 Charges:Rs.83 NET:Rs.+237 | Capital:Rs.22848",
+      "cls": "ok"
+    },
+    {
+      "time": "12:40:27",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:40:22",
       "msg": "RIDING NIFTY PE | Peak:Rs.448 Now:Rs.448 | staircase floor Rs.300",
@@ -1670,11 +1697,6 @@
       "time": "12:12:59",
       "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
       "cls": "info"
-    },
-    {
-      "time": "12:12:58",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
-      "cls": "err"
     }
   ],
   "vix": null,
