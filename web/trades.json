@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 12:10",
+  "last_updated": "2026-07-22 12:13",
   "summary": {
     "total_trades": 91,
     "wins": 43,
@@ -1582,104 +1582,44 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "12:10:18",
+      "time": "12:13:12",
       "msg": "NIFTY:23998 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:2L Cap:Rs.22611 Daily:Rs.390",
       "cls": ""
     },
     {
-      "time": "12:10:18",
+      "time": "12:13:12",
       "msg": "Confidence gate: BREAK LOW 24136 scored 6.5/9 (< 7) \u2014 no alert, no entry",
       "cls": "info"
     },
     {
-      "time": "12:10:15",
+      "time": "12:13:11",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "12:05:07",
-      "msg": "NIFTY:24010 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:2L Cap:Rs.22611 Daily:Rs.390",
-      "cls": ""
-    },
-    {
-      "time": "12:05:07",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "time": "12:12:59",
+      "msg": "Restored today's booked P&L from DB: Rs.+390.0",
       "cls": "info"
     },
     {
-      "time": "12:00:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:00:21",
-      "msg": "NIFTY:24023 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:2L Cap:Rs.22611 Daily:Rs.390",
-      "cls": ""
-    },
-    {
-      "time": "12:00:21",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "time": "12:12:59",
+      "msg": "3 trade(s) done today (from DB) \u2014 96 gated slot(s) left.",
       "cls": "info"
     },
     {
-      "time": "11:55:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:55:13",
-      "msg": "NIFTY:24027 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:3L Cap:Rs.22611 Daily:Rs.390",
-      "cls": ""
-    },
-    {
-      "time": "11:55:13",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "time": "12:12:59",
+      "msg": "Capital: Rs.22611 | Lots: 2L (130 units)",
       "cls": "info"
     },
     {
-      "time": "11:50:06",
-      "msg": "NIFTY:24040 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:3L Cap:Rs.22611 Daily:Rs.390",
-      "cls": ""
-    },
-    {
-      "time": "11:50:06",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "time": "12:12:59",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
       "cls": "info"
     },
     {
-      "time": "11:45:23",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:45:19",
-      "msg": "NIFTY:24047 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:1L Cap:Rs.22611 Daily:Rs.390",
-      "cls": ""
-    },
-    {
-      "time": "11:45:19",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "11:40:12",
-      "msg": "NIFTY:24042 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:1L Cap:Rs.22611 Daily:Rs.390",
-      "cls": ""
-    },
-    {
-      "time": "11:40:12",
-      "msg": "NIFTY in SL cooldown \u2014 waiting",
-      "cls": "info"
-    },
-    {
-      "time": "11:35:26",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:35:24",
-      "msg": "NIFTY:24048 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:1L Cap:Rs.22611 Daily:Rs.390",
-      "cls": ""
+      "time": "12:12:58",
+      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
+      "cls": "err"
     }
   ],
   "vix": null,
