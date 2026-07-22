@@ -1599,6 +1599,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:45:17",
+      "msg": "[PAPER] #5 BEARISH \u2014 BUY PUT (PE) | NIFTY 23950 @ Rs.148.9 | BREAK LOW 24136 | Conf:71% SL:Rs.1220 | 2L Inv:Rs.19357",
+      "cls": "ok"
+    },
+    {
+      "time": "12:45:14",
+      "msg": "AUTO trade #5: BREAK LOW 24136 conf 71% score 7/9 \u2014 entering",
+      "cls": "ok"
+    },
+    {
+      "time": "12:45:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "12:45:13",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "12:45:09",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.448 Floor:Rs.300 Charges:Rs.83 NET:Rs.+237 | Capital:Rs.22848",
       "cls": "ok"
@@ -1676,26 +1696,6 @@
     {
       "time": "12:13:11",
       "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:12:59",
-      "msg": "Restored today's booked P&L from DB: Rs.+390.0",
-      "cls": "info"
-    },
-    {
-      "time": "12:12:59",
-      "msg": "3 trade(s) done today (from DB) \u2014 96 gated slot(s) left.",
-      "cls": "info"
-    },
-    {
-      "time": "12:12:59",
-      "msg": "Capital: Rs.22611 | Lots: 2L (130 units)",
-      "cls": "info"
-    },
-    {
-      "time": "12:12:59",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
       "cls": "info"
     }
   ],
