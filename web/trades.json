@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 14:35",
+  "last_updated": "2026-07-22 14:45",
   "summary": {
     "total_trades": 94,
     "wins": 46,
@@ -1633,6 +1633,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:45:13",
+      "msg": "NIFTY:23977 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
+      "cls": ""
+    },
+    {
+      "time": "14:45:13",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "14:45:11",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:40:04",
+      "msg": "NIFTY:23983 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
+      "cls": ""
+    },
+    {
+      "time": "14:40:03",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:35:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:35:18",
       "msg": "NIFTY:23984 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
       "cls": ""
@@ -1700,36 +1730,6 @@
     {
       "time": "14:20:14",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.1319 Floor:Rs.1000 Charges:Rs.84 NET:Rs.+936 | Capital:Rs.24020",
-      "cls": "ok"
-    },
-    {
-      "time": "14:15:04",
-      "msg": "RIDING NIFTY PE | Peak:Rs.1319 Now:Rs.1293 | staircase floor Rs.1000",
-      "cls": "ok"
-    },
-    {
-      "time": "14:10:20",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:10:15",
-      "msg": "RIDING NIFTY PE | Peak:Rs.1319 Now:Rs.1062 | staircase floor Rs.1000",
-      "cls": "ok"
-    },
-    {
-      "time": "14:05:08",
-      "msg": "RIDING NIFTY PE | Peak:Rs.1319 Now:Rs.1088 | staircase floor Rs.1000",
-      "cls": "ok"
-    },
-    {
-      "time": "14:01:54",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:00:20",
-      "msg": "RIDING NIFTY PE | Peak:Rs.1319 Now:Rs.1319 | staircase floor Rs.1000",
       "cls": "ok"
     }
   ],
