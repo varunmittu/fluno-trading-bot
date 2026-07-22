@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 12:45",
+  "last_updated": "2026-07-22 12:50",
   "summary": {
     "total_trades": 92,
     "wins": 44,
@@ -1596,8 +1596,13 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "12:45:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:45:17",
       "msg": "[PAPER] #5 BEARISH \u2014 BUY PUT (PE) | NIFTY 23950 @ Rs.148.9 | BREAK LOW 24136 | Conf:71% SL:Rs.1220 | 2L Inv:Rs.19357",
@@ -1691,11 +1696,6 @@
     {
       "time": "12:13:12",
       "msg": "Confidence gate: BREAK LOW 24136 scored 6.5/9 (< 7) \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "12:13:11",
-      "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     }
   ],
