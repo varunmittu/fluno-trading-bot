@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 15:20",
+  "last_updated": "2026-07-22 15:25",
   "summary": {
     "total_trades": 94,
     "wins": 46,
@@ -1633,6 +1633,16 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:25:12",
+      "msg": "NIFTY:23998 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
+      "cls": ""
+    },
+    {
+      "time": "15:20:10",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:20:07",
       "msg": "NIFTY:24014 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
       "cls": ""
@@ -1719,16 +1729,6 @@
     },
     {
       "time": "14:45:11",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:40:04",
-      "msg": "NIFTY:23983 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
-      "cls": ""
-    },
-    {
-      "time": "14:40:03",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     }
