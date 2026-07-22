@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 13:50",
+  "last_updated": "2026-07-22 14:00",
   "summary": {
     "total_trades": 93,
     "wins": 45,
@@ -1616,6 +1616,26 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "14:00:20",
+      "msg": "RIDING NIFTY PE | Peak:Rs.1319 Now:Rs.1319 | staircase floor Rs.1000",
+      "cls": "ok"
+    },
+    {
+      "time": "13:55:06",
+      "msg": "RIDING NIFTY PE | Peak:Rs.1041 Now:Rs.1041 | staircase floor Rs.1000",
+      "cls": "ok"
+    },
+    {
+      "time": "13:55:06",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.1041 \u2014 floor locked at Rs.1000",
+      "cls": "ok"
+    },
+    {
+      "time": "13:50:23",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:50:18",
       "msg": "RIDING NIFTY PE | Peak:Rs.796 Now:Rs.796 | staircase floor Rs.600",
       "cls": "ok"
@@ -1693,26 +1713,6 @@
     {
       "time": "13:25:03",
       "msg": "STAIR UP NIFTY PE | Peak:Rs.302 \u2014 floor locked at Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "13:20:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:10:25",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:55:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
   ],
