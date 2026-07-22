@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 11:45",
+  "last_updated": "2026-07-22 11:55",
   "summary": {
     "total_trades": 91,
     "wins": 43,
@@ -1582,6 +1582,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:55:13",
+      "msg": "NIFTY:24027 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:3L Cap:Rs.22611 Daily:Rs.390",
+      "cls": ""
+    },
+    {
+      "time": "11:55:13",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "11:50:06",
+      "msg": "NIFTY:24040 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:3L Cap:Rs.22611 Daily:Rs.390",
+      "cls": ""
+    },
+    {
+      "time": "11:50:06",
+      "msg": "NIFTY in SL cooldown \u2014 waiting",
+      "cls": "info"
+    },
+    {
+      "time": "11:45:23",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:45:19",
       "msg": "NIFTY:24047 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:3/99 Lots:1L Cap:Rs.22611 Daily:Rs.390",
       "cls": ""
@@ -1654,31 +1679,6 @@
     {
       "time": "10:55:13",
       "msg": "AUTO trade #3: BREAK LOW 24136 conf 76% score 7/9 \u2014 entering",
-      "cls": "ok"
-    },
-    {
-      "time": "10:55:12",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:50:26",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:50:24",
-      "msg": "NIFTY:24011 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:2/99 Lots:2L Cap:Rs.24092 Daily:Rs.1871",
-      "cls": ""
-    },
-    {
-      "time": "10:50:24",
-      "msg": "Confidence gate: BREAK LOW 24136 scored 6.5/9 (< 7) \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "10:50:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
   ],
