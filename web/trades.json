@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 10:40",
+  "last_updated": "2026-07-22 10:45",
   "summary": {
     "total_trades": 89,
     "wins": 42,
@@ -1548,6 +1548,21 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "10:45:13",
+      "msg": "RIDING NIFTY PE | Peak:Rs.833 Now:Rs.833 | staircase floor Rs.600",
+      "cls": "ok"
+    },
+    {
+      "time": "10:45:13",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.833 \u2014 floor locked at Rs.600",
+      "cls": "ok"
+    },
+    {
+      "time": "10:40:09",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:40:05",
       "msg": "RIDING NIFTY PE | Peak:Rs.599 Now:Rs.599 | staircase floor Rs.500",
       "cls": "ok"
@@ -1631,21 +1646,6 @@
       "time": "10:15:24",
       "msg": "Kite: loaded 1584 NIFTY option contracts",
       "cls": "info"
-    },
-    {
-      "time": "10:10:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:10:14",
-      "msg": "NIFTY:24050 Sig:-- T:0/99 Lots:2L Cap:Rs.22221 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:05:06",
-      "msg": "NIFTY:24025 Sig:-- T:0/99 Lots:2L Cap:Rs.22221 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
