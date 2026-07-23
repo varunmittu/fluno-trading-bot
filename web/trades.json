@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23 14:05",
+  "last_updated": "2026-07-23 14:15",
   "summary": {
     "total_trades": 96,
     "wins": 48,
@@ -1668,6 +1668,26 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "14:15:06",
+      "msg": "RIDING NIFTY PE | Peak:Rs.357 Now:Rs.357 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:10:16",
+      "msg": "RIDING NIFTY PE | Peak:Rs.302 Now:Rs.302 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:10:15",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.302 \u2014 floor locked at Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:05:27",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:00:12",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -1745,26 +1765,6 @@
     {
       "time": "13:40:14",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.370 Floor:Rs.300 Charges:Rs.83 NET:Rs.+237 | Capital:Rs.26890",
-      "cls": "ok"
-    },
-    {
-      "time": "13:35:27",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:35:22",
-      "msg": "RIDING NIFTY PE | Peak:Rs.370 Now:Rs.370 | staircase floor Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "13:35:21",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.370 \u2014 floor locked at Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "13:30:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
   ],
