@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23 13:50",
+  "last_updated": "2026-07-23 13:55",
   "summary": {
     "total_trades": 96,
     "wins": 48,
@@ -1668,6 +1668,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:55:13",
+      "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 23800 @ Rs.146.9 | BREAK LOW 23961 | Conf:76% SL:Rs.1280 | 2L Inv:Rs.19097",
+      "cls": "ok"
+    },
+    {
+      "time": "13:55:09",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:50:24",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:50:21",
       "msg": "NIFTY:23866 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:2/99 Lots:2L Cap:Rs.26890 Daily:Rs.2870",
       "cls": ""
@@ -1751,21 +1766,6 @@
       "time": "13:30:07",
       "msg": "Lots capped by capital: 3L -> 2L (premium Rs.147.8 x 25/lot, capital Rs.26653)",
       "cls": "info"
-    },
-    {
-      "time": "13:30:03",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:25:35",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:25:32",
-      "msg": "NIFTY:23840 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:1/99 Lots:2L Cap:Rs.26653 Daily:Rs.2633",
-      "cls": ""
     }
   ],
   "vix": null,
