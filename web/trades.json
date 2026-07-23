@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23 09:40",
+  "last_updated": "2026-07-23 09:45",
   "summary": {
     "total_trades": 94,
     "wins": 46,
@@ -1632,6 +1632,21 @@
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "09:45:20",
+      "msg": "NIFTY:23916 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:43:18",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
+      "cls": "ok"
+    },
+    {
+      "time": "09:40:15",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "09:40:12",
       "msg": "NIFTY:23915 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
