@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23 14:35",
+  "last_updated": "2026-07-23 14:45",
   "summary": {
     "total_trades": 97,
     "wins": 49,
@@ -1685,6 +1685,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:45:20",
+      "msg": "NIFTY:23838 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
+      "cls": ""
+    },
+    {
+      "time": "14:45:20",
+      "msg": "Confidence gate: BREAK LOW 23961 scored 5.5/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "14:45:19",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:40:11",
+      "msg": "NIFTY:23851 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
+      "cls": ""
+    },
+    {
+      "time": "14:40:11",
+      "msg": "Confidence gate: BREAK LOW 23961 scored 6/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "14:40:10",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:35:26",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:35:22",
       "msg": "NIFTY:23888 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
       "cls": ""
@@ -1748,41 +1783,6 @@
       "time": "14:20:27",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "14:20:18",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.357 Floor:Rs.300 Charges:Rs.83 NET:Rs.+237 | Capital:Rs.27127",
-      "cls": "ok"
-    },
-    {
-      "time": "14:15:11",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:15:06",
-      "msg": "RIDING NIFTY PE | Peak:Rs.357 Now:Rs.357 | staircase floor Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "14:10:16",
-      "msg": "RIDING NIFTY PE | Peak:Rs.302 Now:Rs.302 | staircase floor Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "14:10:15",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.302 \u2014 floor locked at Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "14:05:27",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:00:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
