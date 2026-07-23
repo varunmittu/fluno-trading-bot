@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23 12:35",
+  "last_updated": "2026-07-23 12:40",
   "summary": {
     "total_trades": 94,
     "wins": 46,
@@ -1633,6 +1633,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:40:29",
+      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 23850 @ Rs.148.3 | BREAK LOW 23961 | Conf:71% SL:Rs.1280 | 2L Inv:Rs.19279",
+      "cls": "ok"
+    },
+    {
+      "time": "12:40:22",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:35:16",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:35:13",
       "msg": "NIFTY:23899 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
       "cls": ""
@@ -1715,21 +1730,6 @@
     {
       "time": "12:10:09",
       "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:05:26",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:05:22",
-      "msg": "NIFTY:23947 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:05:22",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
       "cls": "info"
     }
   ],
