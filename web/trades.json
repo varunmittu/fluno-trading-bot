@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23 10:20",
+  "last_updated": "2026-07-23 10:25",
   "summary": {
     "total_trades": 94,
     "wins": 46,
@@ -1633,6 +1633,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:25:23",
+      "msg": "NIFTY:23952 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:25:23",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "10:25:22",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:20:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:20:14",
       "msg": "NIFTY:23958 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
       "cls": ""
@@ -1711,26 +1731,6 @@
       "time": "09:45:23",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "09:45:20",
-      "msg": "NIFTY:23916 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:43:18",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
-    },
-    {
-      "time": "09:40:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:40:12",
-      "msg": "NIFTY:23915 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
