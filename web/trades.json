@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23 09:55",
+  "last_updated": "2026-07-23 10:05",
   "summary": {
     "total_trades": 94,
     "wins": 46,
@@ -1633,6 +1633,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:05:08",
+      "msg": "NIFTY:23961 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:00:02",
+      "msg": "NIFTY:23944 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:55:19",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:55:16",
       "msg": "NIFTY:23927 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
       "cls": ""
@@ -1716,21 +1731,6 @@
       "time": "04:38:57",
       "msg": "Validation: trust 3.1/10 (n=22)",
       "cls": "info"
-    },
-    {
-      "time": "04:38:27",
-      "msg": "Capital: Rs.24020 | Lots: 2L (130 units)",
-      "cls": "info"
-    },
-    {
-      "time": "04:38:27",
-      "msg": "Bot started | PAPER TRADE | MANUAL /confirm mode \u2014 send /auto for hands-free | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
-      "cls": "err"
-    },
-    {
-      "time": "04:38:26",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
-      "cls": "err"
     }
   ],
   "vix": null,
