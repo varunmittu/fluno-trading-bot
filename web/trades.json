@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23 13:40",
+  "last_updated": "2026-07-23 13:45",
   "summary": {
     "total_trades": 96,
     "wins": 48,
@@ -1668,6 +1668,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:45:10",
+      "msg": "NIFTY:23855 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:2/99 Lots:2L Cap:Rs.26890 Daily:Rs.2870",
+      "cls": ""
+    },
+    {
+      "time": "13:45:09",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:40:20",
+      "msg": "NIFTY:23858 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:2/99 Lots:2L Cap:Rs.26890 Daily:Rs.2870",
+      "cls": ""
+    },
+    {
+      "time": "13:40:20",
+      "msg": "Confidence gate: BREAK LOW 23961 scored 6/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "13:40:19",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "13:40:18",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "13:40:14",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.370 Floor:Rs.300 Charges:Rs.83 NET:Rs.+237 | Capital:Rs.26890",
       "cls": "ok"
@@ -1735,36 +1765,6 @@
     {
       "time": "13:25:20",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.2754 Floor:Rs.2700 Charges:Rs.87 NET:Rs.+2633 | Capital:Rs.26653",
-      "cls": "ok"
-    },
-    {
-      "time": "13:20:08",
-      "msg": "RIDING NIFTY PE | Peak:Rs.2754 Now:Rs.2715 | staircase floor Rs.2700",
-      "cls": "ok"
-    },
-    {
-      "time": "13:15:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:15:18",
-      "msg": "RIDING NIFTY PE | Peak:Rs.2754 Now:Rs.2754 | staircase floor Rs.2700",
-      "cls": "ok"
-    },
-    {
-      "time": "13:15:18",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.2754 \u2014 floor locked at Rs.2700",
-      "cls": "ok"
-    },
-    {
-      "time": "13:10:09",
-      "msg": "RIDING NIFTY PE | Peak:Rs.2694 Now:Rs.2694 | staircase floor Rs.2400",
-      "cls": "ok"
-    },
-    {
-      "time": "13:10:09",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.2694 \u2014 floor locked at Rs.2400",
       "cls": "ok"
     }
   ],
