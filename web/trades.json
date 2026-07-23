@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 15:31",
+  "last_updated": "2026-07-23 09:15",
   "summary": {
     "total_trades": 94,
     "wins": 46,
@@ -1633,104 +1633,34 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "15:31:20",
-      "msg": "NIFTY:23991 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
+      "time": "09:15:33",
+      "msg": "NIFTY:23881 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "15:30:17",
-      "msg": "Error: No item with that key",
+      "time": "09:10:30",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
+    },
+    {
+      "time": "04:38:57",
+      "msg": "Validation: trust 3.1/10 (n=22)",
+      "cls": "info"
+    },
+    {
+      "time": "04:38:27",
+      "msg": "Capital: Rs.24020 | Lots: 2L (130 units)",
+      "cls": "info"
+    },
+    {
+      "time": "04:38:27",
+      "msg": "Bot started | PAPER TRADE | MANUAL /confirm mode \u2014 send /auto for hands-free | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
       "cls": "err"
     },
     {
-      "time": "15:25:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:25:12",
-      "msg": "NIFTY:23998 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
-      "cls": ""
-    },
-    {
-      "time": "15:20:10",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:20:07",
-      "msg": "NIFTY:24014 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
-      "cls": ""
-    },
-    {
-      "time": "15:15:03",
-      "msg": "NIFTY:24021 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
-      "cls": ""
-    },
-    {
-      "time": "15:10:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:10:18",
-      "msg": "NIFTY:23998 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
-      "cls": ""
-    },
-    {
-      "time": "15:05:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:05:14",
-      "msg": "NIFTY:23990 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
-      "cls": ""
-    },
-    {
-      "time": "15:00:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:00:09",
-      "msg": "NIFTY:23986 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
-      "cls": ""
-    },
-    {
-      "time": "14:55:04",
-      "msg": "NIFTY:23987 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
-      "cls": ""
-    },
-    {
-      "time": "14:55:04",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:50:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:50:18",
-      "msg": "NIFTY:23981 YdH:24262/YdL:24136 Sig:BREAK LOW 24136 T:6/99 Lots:2L Cap:Rs.24020 Daily:Rs.1799",
-      "cls": ""
-    },
-    {
-      "time": "14:50:18",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:50:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:45:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "04:38:26",
+      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
+      "cls": "err"
     }
   ],
   "vix": null,
