@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23 11:15",
+  "last_updated": "2026-07-23 11:20",
   "summary": {
     "total_trades": 94,
     "wins": 46,
@@ -1633,6 +1633,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:20:22",
+      "msg": "NIFTY:23958 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:20:22",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "11:20:21",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:15:16",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:15:12",
       "msg": "NIFTY:23970 YdH:24166/YdL:23961 Sig:OR BREAK HIGH 23970 T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
       "cls": ""
@@ -1711,26 +1731,6 @@
       "time": "10:50:07",
       "msg": "NIFTY:23980 YdH:24166/YdL:23961 Sig:OR BREAK HIGH 23970 T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "10:50:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:45:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:45:19",
-      "msg": "NIFTY:23970 YdH:24166/YdL:23961 Sig:OR BREAK HIGH 23970 T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:45:19",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
     }
   ],
   "vix": null,
