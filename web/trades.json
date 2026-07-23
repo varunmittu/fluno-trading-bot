@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23 10:10",
+  "last_updated": "2026-07-23 10:20",
   "summary": {
     "total_trades": 94,
     "wins": 46,
@@ -1633,6 +1633,46 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:20:14",
+      "msg": "NIFTY:23958 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:20:14",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "10:20:14",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:06",
+      "msg": "NIFTY:23957 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:15:06",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:05",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:05",
+      "msg": "Kite: loaded 1594 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:10:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:10:15",
       "msg": "NIFTY:23965 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
       "cls": ""
@@ -1690,46 +1730,6 @@
     {
       "time": "09:40:12",
       "msg": "NIFTY:23915 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:35:09",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:35:07",
-      "msg": "NIFTY:23917 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:30:03",
-      "msg": "NIFTY:23922 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:25:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:25:20",
-      "msg": "NIFTY:23946 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:20:16",
-      "msg": "NIFTY:23919 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:15:36",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:15:33",
-      "msg": "NIFTY:23881 Sig:-- T:0/99 Lots:2L Cap:Rs.24020 Daily:Rs.0",
       "cls": ""
     }
   ],
