@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24 11:52",
+  "last_updated": "2026-07-24 12:00",
   "summary": {
     "total_trades": 99,
     "wins": 49,
@@ -1720,47 +1720,47 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "11:52:41",
-      "msg": "NIFTY:23705 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:2L Cap:Rs.24862 Daily:Rs.-2264",
+      "time": "12:00:25",
+      "msg": "NIFTY:23691 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:2L Cap:Rs.24862 Daily:Rs.-2264",
       "cls": ""
     },
     {
-      "time": "11:52:41",
-      "msg": "Confidence gate: BREAK LOW 23807 scored 6/9 (< 7) and conf 57% <= 72 \u2014 no alert, no entry",
+      "time": "12:00:25",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
       "cls": "info"
     },
     {
-      "time": "11:52:40",
+      "time": "12:00:24",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "11:52:40",
+      "time": "12:00:23",
       "msg": "Kite: loaded 1606 NIFTY option contracts",
       "cls": "info"
     },
     {
-      "time": "11:52:32",
+      "time": "12:00:15",
       "msg": "Restored today's booked P&L from DB: Rs.-2,264.4",
       "cls": "info"
     },
     {
-      "time": "11:52:32",
+      "time": "12:00:15",
       "msg": "2 trade(s) done today (from DB) \u2014 97 gated slot(s) left.",
       "cls": "info"
     },
     {
-      "time": "11:52:32",
+      "time": "12:00:15",
       "msg": "Capital: Rs.24862 | Lots: 2L (130 units)",
       "cls": "info"
     },
     {
-      "time": "11:52:32",
+      "time": "12:00:15",
       "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-10000000",
       "cls": "info"
     },
     {
-      "time": "11:52:31",
+      "time": "12:00:14",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
