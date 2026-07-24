@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24 12:55",
+  "last_updated": "2026-07-24 13:05",
   "summary": {
     "total_trades": 99,
     "wins": 49,
@@ -1720,6 +1720,46 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:05:09",
+      "msg": "NIFTY:23774 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:1L Cap:Rs.24862 Daily:Rs.-2264",
+      "cls": ""
+    },
+    {
+      "time": "13:05:09",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:05:07",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:03:21",
+      "msg": "PRE-ALERT: NIFTY 23785 near or_hi 23763",
+      "cls": "info"
+    },
+    {
+      "time": "13:00:15",
+      "msg": "NIFTY:23796 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:1L Cap:Rs.24862 Daily:Rs.-2264",
+      "cls": ""
+    },
+    {
+      "time": "13:00:14",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:59:51",
+      "msg": "PRE-ALERT: NIFTY 23800 near yd_low 23807",
+      "cls": "info"
+    },
+    {
+      "time": "12:55:26",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:55:23",
       "msg": "NIFTY:23793 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:1L Cap:Rs.24862 Daily:Rs.-2264",
       "cls": ""
@@ -1778,46 +1818,6 @@
       "time": "12:41:11",
       "msg": "PRE-ALERT: NIFTY 23775 near or_hi 23763",
       "cls": "info"
-    },
-    {
-      "time": "12:40:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:40:09",
-      "msg": "NIFTY:23771 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:1L Cap:Rs.24862 Daily:Rs.-2264",
-      "cls": ""
-    },
-    {
-      "time": "12:40:09",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:40:08",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:35:20",
-      "msg": "NIFTY:23770 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:1L Cap:Rs.24862 Daily:Rs.-2264",
-      "cls": ""
-    },
-    {
-      "time": "12:35:19",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:33:54",
-      "msg": "PRE-ALERT: NIFTY 23777 near fade 23756",
-      "cls": "info"
-    },
-    {
-      "time": "12:30:27",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
