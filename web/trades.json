@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23 15:31",
+  "last_updated": "2026-07-24 09:59",
   "summary": {
     "total_trades": 97,
     "wins": 49,
@@ -1685,104 +1685,74 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "15:31:13",
-      "msg": "NIFTY:23872 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
+      "time": "09:59:21",
+      "msg": "NIFTY:23653 Sig:-- T:0/99 Lots:2L Cap:Rs.27127 Daily:Rs.0",
       "cls": ""
     },
     {
-      "time": "15:30:11",
-      "msg": "Error: No item with that key",
+      "time": "09:58:13",
+      "msg": "Could not fetch any live prices. Retrying...",
       "cls": "err"
     },
     {
-      "time": "15:25:04",
-      "msg": "NIFTY:23883 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
-      "cls": ""
+      "time": "09:57:13",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
     },
     {
-      "time": "15:20:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "09:56:13",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
     },
     {
-      "time": "15:20:17",
-      "msg": "NIFTY:23867 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
-      "cls": ""
+      "time": "09:55:13",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
     },
     {
-      "time": "15:15:09",
-      "msg": "NIFTY:23873 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
-      "cls": ""
+      "time": "09:54:13",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
     },
     {
-      "time": "15:10:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
+      "time": "09:53:13",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
     },
     {
-      "time": "15:10:21",
-      "msg": "NIFTY:23869 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
-      "cls": ""
+      "time": "09:52:13",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
     },
     {
-      "time": "15:05:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:05:14",
-      "msg": "NIFTY:23849 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
-      "cls": ""
-    },
-    {
-      "time": "15:00:07",
-      "msg": "NIFTY:23837 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
-      "cls": ""
-    },
-    {
-      "time": "14:55:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:55:17",
-      "msg": "NIFTY:23828 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
-      "cls": ""
-    },
-    {
-      "time": "14:55:17",
-      "msg": "Confidence gate: BREAK LOW 23961 scored 6/9 (< 7) \u2014 no alert, no entry",
+      "time": "09:51:36",
+      "msg": "Validation: trust 6.2/10 (n=25)",
       "cls": "info"
     },
     {
-      "time": "14:55:16",
-      "msg": "Fetching 5-min candles [^NSEI]...",
+      "time": "09:51:13",
+      "msg": "Could not fetch any live prices. Retrying...",
+      "cls": "err"
+    },
+    {
+      "time": "09:51:13",
+      "msg": "Morning Telegram ping sent",
       "cls": "info"
     },
     {
-      "time": "14:50:09",
-      "msg": "NIFTY:23817 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
-      "cls": ""
-    },
-    {
-      "time": "14:50:07",
-      "msg": "Fetching 5-min candles [^NSEI]...",
+      "time": "09:51:06",
+      "msg": "Capital: Rs.27127 | Lots: 2L (130 units)",
       "cls": "info"
     },
     {
-      "time": "14:45:23",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:45:20",
-      "msg": "NIFTY:23838 YdH:24166/YdL:23961 Sig:BREAK LOW 23961 T:3/99 Lots:2L Cap:Rs.27127 Daily:Rs.3107",
-      "cls": ""
-    },
-    {
-      "time": "14:45:20",
-      "msg": "Confidence gate: BREAK LOW 23961 scored 5.5/9 (< 7) \u2014 no alert, no entry",
+      "time": "09:51:06",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
       "cls": "info"
+    },
+    {
+      "time": "09:51:06",
+      "msg": "Kite offline (HTTPSConnectionPool(host='api.kite.trade', port=443): Max retries exceeded with url: /user/profile (Caused by NameResolutionError(\"HTTPSConnection(host='api.kite.trade', port=443): Failed to resolve 'api.kite.trade' ([Errno 11001] getaddrinfo failed)\"))) \u2014 using yfinance backup. Send /token on Telegram to fix.",
+      "cls": "err"
     }
   ],
   "vix": null,
