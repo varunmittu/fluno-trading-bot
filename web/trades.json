@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24 10:50",
+  "last_updated": "2026-07-24 11:04",
   "summary": {
     "total_trades": 98,
     "wins": 49,
@@ -1703,104 +1703,49 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "10:50:20",
-      "msg": "NIFTY:23650 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:1/99 Lots:1L Cap:Rs.26083 Daily:Rs.-1043",
+      "time": "11:04:48",
+      "msg": "NIFTY:23628 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:1/99 Lots:2L Cap:Rs.26083 Daily:Rs.-1043",
       "cls": ""
     },
     {
-      "time": "10:50:20",
+      "time": "11:04:48",
       "msg": "Confidence gate: BREAK LOW 23807 scored 6.5/9 (< 7) \u2014 no alert, no entry",
       "cls": "info"
     },
     {
-      "time": "10:50:20",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:50:19",
+      "time": "11:04:47",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "10:50:16",
-      "msg": "STOP LOSS NIFTY PE | SL:Rs.-1000 Charges:Rs.63 NET:Rs.-1043 | Capital:Rs.26083",
-      "cls": "err"
-    },
-    {
-      "time": "10:40:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:35:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:25:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:15:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:15:13",
-      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 23550 @ Rs.145.3 | BREAK LOW 23807 | Conf:71% SL:Rs.1000 | 1L Inv:Rs.9444",
-      "cls": "ok"
-    },
-    {
-      "time": "10:15:07",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:15:05",
+      "time": "11:04:47",
       "msg": "Kite: loaded 1606 NIFTY option contracts",
       "cls": "info"
     },
     {
-      "time": "10:10:14",
-      "msg": "NIFTY:23621 Sig:-- T:0/99 Lots:1L Cap:Rs.27127 Daily:Rs.0",
-      "cls": ""
+      "time": "11:04:39",
+      "msg": "Restored today's booked P&L from DB: Rs.-1,043.4",
+      "cls": "info"
     },
     {
-      "time": "10:09:41",
+      "time": "11:04:39",
+      "msg": "1 trade(s) done today (from DB) \u2014 98 gated slot(s) left.",
+      "cls": "info"
+    },
+    {
+      "time": "11:04:39",
+      "msg": "Capital: Rs.26083 | Lots: 2L (130 units)",
+      "cls": "info"
+    },
+    {
+      "time": "11:04:39",
+      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-2000",
+      "cls": "info"
+    },
+    {
+      "time": "11:04:33",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
-    },
-    {
-      "time": "10:07:08",
-      "msg": "Validation: trust 6.2/10 (n=25)",
-      "cls": "info"
-    },
-    {
-      "time": "10:06:51",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:06:49",
-      "msg": "NIFTY:23616 Sig:-- T:0/99 Lots:1L Cap:Rs.27127 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:06:39",
-      "msg": "Capital: Rs.27127 | Lots: 1L (65 units)",
-      "cls": "info"
-    },
-    {
-      "time": "10:06:39",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
-      "cls": "info"
-    },
-    {
-      "time": "10:06:38",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
-      "cls": "err"
     }
   ],
   "vix": null,
