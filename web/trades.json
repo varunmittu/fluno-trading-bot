@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24 15:00",
+  "last_updated": "2026-07-24 15:05",
   "summary": {
     "total_trades": 100,
     "wins": 49,
@@ -1737,6 +1737,16 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:05:12",
+      "msg": "NIFTY:23754 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:3/99 Lots:2L Cap:Rs.24028 Daily:Rs.-3098",
+      "cls": ""
+    },
+    {
+      "time": "15:00:07",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:00:05",
       "msg": "NIFTY:23782 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:3/99 Lots:2L Cap:Rs.24028 Daily:Rs.-3098",
       "cls": ""
@@ -1825,16 +1835,6 @@
       "time": "14:40:03",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "14:36:17",
-      "msg": "PRE-ALERT: NIFTY 23768 near fade 23788",
-      "cls": "info"
-    },
-    {
-      "time": "14:35:15",
-      "msg": "NIFTY:23762 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:3/99 Lots:2L Cap:Rs.24028 Daily:Rs.-3098",
-      "cls": ""
     }
   ],
   "vix": null,
