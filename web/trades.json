@@ -1720,6 +1720,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:25:19",
+      "msg": "NIFTY:23671 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:1L Cap:Rs.24862 Daily:Rs.-2264",
+      "cls": ""
+    },
+    {
+      "time": "11:25:19",
+      "msg": "ENTRY BLOCKED \u2014 daily loss limit reached (Rs.-2264)",
+      "cls": "err"
+    },
+    {
+      "time": "11:25:19",
+      "msg": "AUTO trade #3: BREAK LOW 23807 conf 71% score 7/9 \u2014 entering",
+      "cls": "ok"
+    },
+    {
+      "time": "11:25:17",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "11:25:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "11:25:13",
       "msg": "STOP LOSS NIFTY PE | SL:Rs.-1160 Charges:Rs.81 NET:Rs.-1221 | Capital:Rs.24862",
       "cls": "err"
@@ -1793,26 +1818,6 @@
       "time": "11:04:39",
       "msg": "Restored today's booked P&L from DB: Rs.-1,043.4",
       "cls": "info"
-    },
-    {
-      "time": "11:04:39",
-      "msg": "1 trade(s) done today (from DB) \u2014 98 gated slot(s) left.",
-      "cls": "info"
-    },
-    {
-      "time": "11:04:39",
-      "msg": "Capital: Rs.26083 | Lots: 2L (130 units)",
-      "cls": "info"
-    },
-    {
-      "time": "11:04:39",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-2000",
-      "cls": "info"
-    },
-    {
-      "time": "11:04:33",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
     }
   ],
   "vix": null,
