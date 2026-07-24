@@ -1703,6 +1703,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:50:20",
+      "msg": "NIFTY:23650 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:1/99 Lots:1L Cap:Rs.26083 Daily:Rs.-1043",
+      "cls": ""
+    },
+    {
+      "time": "10:50:20",
+      "msg": "Confidence gate: BREAK LOW 23807 scored 6.5/9 (< 7) \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "10:50:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "10:50:19",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "10:50:16",
       "msg": "STOP LOSS NIFTY PE | SL:Rs.-1000 Charges:Rs.63 NET:Rs.-1043 | Capital:Rs.26083",
       "cls": "err"
