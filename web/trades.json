@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24 12:00",
+  "last_updated": "2026-07-24 12:10",
   "summary": {
     "total_trades": 99,
     "wins": 49,
@@ -1719,6 +1719,41 @@
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:10:22",
+      "msg": "NIFTY:23713 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:1L Cap:Rs.24862 Daily:Rs.-2264",
+      "cls": ""
+    },
+    {
+      "time": "12:10:22",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "12:10:22",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:05:12",
+      "msg": "NIFTY:23715 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:1L Cap:Rs.24862 Daily:Rs.-2264",
+      "cls": ""
+    },
+    {
+      "time": "12:05:12",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:00:44",
+      "msg": "Validation: trust 3.4/10 (n=27)",
+      "cls": "info"
+    },
+    {
+      "time": "12:00:28",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:00:25",
       "msg": "NIFTY:23691 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:2L Cap:Rs.24862 Daily:Rs.-2264",
