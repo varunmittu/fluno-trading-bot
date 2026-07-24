@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24 12:10",
+  "last_updated": "2026-07-24 12:20",
   "summary": {
     "total_trades": 99,
     "wins": 49,
@@ -1720,6 +1720,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:20:21",
+      "msg": "NIFTY:23717 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:1L Cap:Rs.24862 Daily:Rs.-2264",
+      "cls": ""
+    },
+    {
+      "time": "12:20:21",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "12:20:20",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:15:11",
+      "msg": "NIFTY:23703 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:1L Cap:Rs.24862 Daily:Rs.-2264",
+      "cls": ""
+    },
+    {
+      "time": "12:15:10",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:10:25",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:10:22",
       "msg": "NIFTY:23713 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:2/99 Lots:1L Cap:Rs.24862 Daily:Rs.-2264",
       "cls": ""
@@ -1788,16 +1818,6 @@
       "time": "12:00:15",
       "msg": "Capital: Rs.24862 | Lots: 2L (130 units)",
       "cls": "info"
-    },
-    {
-      "time": "12:00:15",
-      "msg": "Bot started | PAPER TRADE | AUTO mode | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-10000000",
-      "cls": "info"
-    },
-    {
-      "time": "12:00:14",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
     }
   ],
   "vix": null,
