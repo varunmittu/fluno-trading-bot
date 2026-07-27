@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27 15:25",
+  "last_updated": "2026-07-27 15:31",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:31:09",
+      "msg": "NIFTY:24002 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
+      "cls": ""
+    },
+    {
+      "time": "15:30:07",
+      "msg": "Error: No item with that key",
+      "cls": "err"
+    },
+    {
+      "time": "15:25:08",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:25:05",
       "msg": "NIFTY:24001 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
       "cls": ""
@@ -1906,21 +1921,6 @@
       "time": "14:50:18",
       "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
       "cls": "info"
-    },
-    {
-      "time": "14:50:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:50:16",
-      "msg": "Kite: loaded 1614 NIFTY option contracts",
-      "cls": "info"
-    },
-    {
-      "time": "14:47:42",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
     }
   ],
   "vix": null,
