@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27 13:15",
+  "last_updated": "2026-07-27 13:25",
   "summary": {
     "total_trades": 104,
     "wins": 52,
@@ -1806,6 +1806,21 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "13:25:21",
+      "msg": "RIDING NIFTY CE | Peak:Rs.1163 Now:Rs.1054 | staircase floor Rs.1000",
+      "cls": "ok"
+    },
+    {
+      "time": "13:20:07",
+      "msg": "RIDING NIFTY CE | Peak:Rs.1163 Now:Rs.1163 | staircase floor Rs.1000",
+      "cls": "ok"
+    },
+    {
+      "time": "13:15:25",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:15:20",
       "msg": "RIDING NIFTY CE | Peak:Rs.1095 Now:Rs.1095 | staircase floor Rs.1000",
       "cls": "ok"
@@ -1889,21 +1904,6 @@
       "time": "12:30:15",
       "msg": "NIFTY:23952 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:4/99 Lots:2L Cap:Rs.24893 Daily:Rs.865",
       "cls": ""
-    },
-    {
-      "time": "12:30:15",
-      "msg": "Confidence gate: BREAK HIGH 23824 scored 6.5/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "12:30:14",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:26:27",
-      "msg": "PRE-ALERT: NIFTY 23960 near or_hi 23963",
-      "cls": "info"
     }
   ],
   "vix": null,
