@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27 10:50",
+  "last_updated": "2026-07-27 10:55",
   "summary": {
     "total_trades": 102,
     "wins": 50,
@@ -1772,6 +1772,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:55:22",
+      "msg": "[PAPER] #3 BULLISH \u2014 BUY CALL (CE) | NIFTY 23950 @ Rs.148.5 | BREAK HIGH 23824 | Conf:76% SL:Rs.1380 | 2L Inv:Rs.19305",
+      "cls": "ok"
+    },
+    {
+      "time": "10:55:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:50:10",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:50:08",
       "msg": "NIFTY:23917 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:2/99 Lots:2L Cap:Rs.22622 Daily:Rs.-1406",
       "cls": ""
@@ -1854,21 +1869,6 @@
     {
       "time": "10:15:28",
       "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24000 @ Rs.147.0 | BREAK HIGH 23824 | Conf:71% SL:Rs.2000 | 2L Inv:Rs.19110",
-      "cls": "ok"
-    },
-    {
-      "time": "10:15:24",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:15:23",
-      "msg": "Kite: loaded 1614 NIFTY option contracts",
-      "cls": "info"
-    },
-    {
-      "time": "10:10:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
   ],
