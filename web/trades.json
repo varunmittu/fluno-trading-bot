@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27 09:16",
+  "last_updated": "2026-07-27 09:25",
   "summary": {
     "total_trades": 100,
     "wins": 49,
@@ -1737,6 +1737,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:25:10",
+      "msg": "NIFTY:23927 YdH:23991/YdL:23807 Sig:-- T:0/99 Lots:2L Cap:Rs.24028 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:20:05",
+      "msg": "NIFTY:23913 YdH:23991/YdL:23807 Sig:-- T:0/99 Lots:2L Cap:Rs.24028 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:16:05",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:16:01",
       "msg": "NIFTY:23942 YdH:23991/YdL:23807 Sig:-- T:0/99 Lots:2L Cap:Rs.24028 Daily:Rs.0",
       "cls": ""
@@ -1819,21 +1834,6 @@
     {
       "time": "15:05:12",
       "msg": "NIFTY:23754 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:3/99 Lots:2L Cap:Rs.24028 Daily:Rs.-3098",
-      "cls": ""
-    },
-    {
-      "time": "15:00:07",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:00:05",
-      "msg": "NIFTY:23782 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:3/99 Lots:2L Cap:Rs.24028 Daily:Rs.-3098",
-      "cls": ""
-    },
-    {
-      "time": "14:55:17",
-      "msg": "NIFTY:23791 YdH:23991/YdL:23807 Sig:BREAK LOW 23807 T:3/99 Lots:2L Cap:Rs.24028 Daily:Rs.-3098",
       "cls": ""
     }
   ],
