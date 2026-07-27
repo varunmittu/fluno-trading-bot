@@ -1755,6 +1755,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:40:24",
+      "msg": "[PAPER] #2 BULLISH \u2014 BUY CALL (CE) | NIFTY 23950 @ Rs.147.3 | BREAK HIGH 23824 | Conf:76% SL:Rs.630 | 1L Inv:Rs.9574",
+      "cls": "ok"
+    },
+    {
+      "time": "10:40:21",
+      "msg": "AUTO trade #2: BREAK HIGH 23824 conf 76% score 7/9 \u2014 entering",
+      "cls": "ok"
+    },
+    {
+      "time": "10:40:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "10:40:20",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "10:40:17",
       "msg": "STOP LOSS NIFTY CE | SL:Rs.-2000 Charges:Rs.80 NET:Rs.-2060 | Capital:Rs.21968",
       "cls": "err"
@@ -1833,26 +1853,6 @@
       "time": "09:45:16",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "09:45:13",
-      "msg": "NIFTY:23953 YdH:23991/YdL:23807 Sig:-- T:0/99 Lots:2L Cap:Rs.24028 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:40:07",
-      "msg": "NIFTY:23946 YdH:23991/YdL:23807 Sig:-- T:0/99 Lots:2L Cap:Rs.24028 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:35:24",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:35:21",
-      "msg": "NIFTY:23938 YdH:23991/YdL:23807 Sig:-- T:0/99 Lots:2L Cap:Rs.24028 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
