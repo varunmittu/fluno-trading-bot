@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-27 13:25",
+  "last_updated": "2026-07-27 13:30",
   "summary": {
-    "total_trades": 104,
-    "wins": 52,
+    "total_trades": 105,
+    "wins": 53,
     "losses": 52,
-    "win_rate": 50.0,
-    "total_pnl": 3210.0,
-    "avg_win": 506.0,
+    "win_rate": 50.5,
+    "total_pnl": 4145.0,
+    "avg_win": 514.0,
     "avg_loss": -444.0
   },
   "trades": [
@@ -1777,6 +1777,23 @@
       "lots": 2,
       "gross": 1420.0,
       "charges": 84.76
+    },
+    {
+      "id": 108,
+      "date": "2026-07-27",
+      "time": "13:30",
+      "score": 76,
+      "entry": 23949.15,
+      "exit": 23955.45,
+      "pnl": 935.61,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 19227.0,
+      "lots": 2,
+      "gross": 1020.0,
+      "charges": 84.39
     }
   ],
   "daily_pnl": {
@@ -1799,12 +1816,22 @@
     "2026-07-22": 1799.0,
     "2026-07-23": 3107.0,
     "2026-07-24": -3098.0,
-    "2026-07-27": 864.0
+    "2026-07-27": 1800.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "13:30:15",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.1163 Floor:Rs.1000 Charges:Rs.84 NET:Rs.+936 | Capital:Rs.25829",
+      "cls": "ok"
+    },
+    {
+      "time": "13:25:33",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:25:21",
       "msg": "RIDING NIFTY CE | Peak:Rs.1163 Now:Rs.1054 | staircase floor Rs.1000",
@@ -1894,16 +1921,6 @@
       "time": "12:31:58",
       "msg": "PRE-ALERT: NIFTY 23960 near fade 23937",
       "cls": "info"
-    },
-    {
-      "time": "12:30:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:30:15",
-      "msg": "NIFTY:23952 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:4/99 Lots:2L Cap:Rs.24893 Daily:Rs.865",
-      "cls": ""
     }
   ],
   "vix": null,
