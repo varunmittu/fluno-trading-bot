@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27 11:05",
+  "last_updated": "2026-07-27 11:09",
   "summary": {
     "total_trades": 103,
     "wins": 51,
@@ -1789,104 +1789,44 @@
   "open_positions": 0,
   "bot_log": [
     {
-      "time": "11:05:25",
-      "msg": "NIFTY:23931 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:3/99 Lots:2L Cap:Rs.23558 Daily:Rs.-470",
-      "cls": ""
-    },
-    {
-      "time": "11:05:25",
-      "msg": "Trade #4 gate: conf 71% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "11:05:23",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "time": "11:09:53",
+      "msg": "[PAPER] #4 BULLISH \u2014 BUY CALL (CE) | NIFTY 24000 @ Rs.147.1 | BREAK HIGH 23824 | Conf:71% SL:Rs.1380 | 2L Inv:Rs.19123",
       "cls": "ok"
     },
     {
-      "time": "11:05:22",
+      "time": "11:09:49",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
     },
     {
-      "time": "11:05:19",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.1124 Floor:Rs.1000 Charges:Rs.85 NET:Rs.+935 | Capital:Rs.23558",
-      "cls": "ok"
-    },
-    {
-      "time": "11:00:11",
-      "msg": "RIDING NIFTY CE | Peak:Rs.1124 Now:Rs.1124 | staircase floor Rs.1000",
-      "cls": "ok"
-    },
-    {
-      "time": "11:00:09",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.1124 \u2014 floor locked at Rs.1000",
-      "cls": "ok"
-    },
-    {
-      "time": "10:55:26",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:55:22",
-      "msg": "[PAPER] #3 BULLISH \u2014 BUY CALL (CE) | NIFTY 23950 @ Rs.148.5 | BREAK HIGH 23824 | Conf:76% SL:Rs.1380 | 2L Inv:Rs.19305",
-      "cls": "ok"
-    },
-    {
-      "time": "10:55:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
+      "time": "11:09:40",
+      "msg": "Restored today's booked P&L from DB: Rs.-470.5",
       "cls": "info"
     },
     {
-      "time": "10:50:10",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:50:08",
-      "msg": "NIFTY:23917 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:2/99 Lots:2L Cap:Rs.22622 Daily:Rs.-1406",
-      "cls": ""
-    },
-    {
-      "time": "10:50:08",
-      "msg": "Trade #3 gate: conf 76% \u2014 awaiting /confirm",
+      "time": "11:09:40",
+      "msg": "3 trade(s) done today (from DB) \u2014 96 gated slot(s) left.",
       "cls": "info"
     },
     {
-      "time": "10:50:06",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:50:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
+      "time": "11:09:40",
+      "msg": "Restored pending trade #4 after restart (already confirmed)",
       "cls": "info"
     },
     {
-      "time": "10:50:02",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.780 Floor:Rs.700 Charges:Rs.66 NET:Rs.+654 | Capital:Rs.22622",
-      "cls": "ok"
+      "time": "11:09:38",
+      "msg": "Capital: Rs.23558 | Lots: 2L (130 units)",
+      "cls": "info"
     },
     {
-      "time": "10:45:14",
-      "msg": "RIDING NIFTY CE | Peak:Rs.780 Now:Rs.780 | staircase floor Rs.700",
-      "cls": "ok"
+      "time": "11:09:38",
+      "msg": "Bot started | PAPER TRADE | MANUAL /confirm mode \u2014 send /auto for hands-free | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
+      "cls": "err"
     },
     {
-      "time": "10:45:13",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.780 \u2014 floor locked at Rs.700",
-      "cls": "ok"
-    },
-    {
-      "time": "10:40:28",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:40:24",
-      "msg": "[PAPER] #2 BULLISH \u2014 BUY CALL (CE) | NIFTY 23950 @ Rs.147.3 | BREAK HIGH 23824 | Conf:76% SL:Rs.630 | 1L Inv:Rs.9574",
-      "cls": "ok"
+      "time": "11:09:37",
+      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
+      "cls": "err"
     }
   ],
   "vix": null,
