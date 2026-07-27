@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27 11:45",
+  "last_updated": "2026-07-27 11:55",
   "summary": {
     "total_trades": 104,
     "wins": 52,
@@ -1806,6 +1806,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:55:18",
+      "msg": "NIFTY:23966 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:4/99 Lots:2L Cap:Rs.24893 Daily:Rs.865",
+      "cls": ""
+    },
+    {
+      "time": "11:55:18",
+      "msg": "Confidence gate: BREAK HIGH 23824 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "11:55:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:50:09",
+      "msg": "NIFTY:23954 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:4/99 Lots:2L Cap:Rs.24893 Daily:Rs.865",
+      "cls": ""
+    },
+    {
+      "time": "11:50:08",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:45:26",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:45:22",
       "msg": "NIFTY:23962 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:4/99 Lots:2L Cap:Rs.24893 Daily:Rs.865",
       "cls": ""
@@ -1872,36 +1902,6 @@
     },
     {
       "time": "11:25:23",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:25:17",
-      "msg": "RIDING NIFTY CE | Peak:Rs.838 Now:Rs.838 | staircase floor Rs.600",
-      "cls": "ok"
-    },
-    {
-      "time": "11:25:17",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.838 \u2014 floor locked at Rs.600",
-      "cls": "ok"
-    },
-    {
-      "time": "11:20:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:20:10",
-      "msg": "RIDING NIFTY CE | Peak:Rs.505 Now:Rs.505 | staircase floor Rs.500",
-      "cls": "ok"
-    },
-    {
-      "time": "11:20:08",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.505 \u2014 floor locked at Rs.500",
-      "cls": "ok"
-    },
-    {
-      "time": "11:15:06",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
     }
