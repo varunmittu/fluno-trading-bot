@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27 15:15",
+  "last_updated": "2026-07-27 15:25",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:25:05",
+      "msg": "NIFTY:24001 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
+      "cls": ""
+    },
+    {
+      "time": "15:20:02",
+      "msg": "NIFTY:23995 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
+      "cls": ""
+    },
+    {
+      "time": "15:15:22",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:15:19",
       "msg": "NIFTY:23988 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
       "cls": ""
@@ -1906,21 +1921,6 @@
       "time": "14:47:42",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
-    },
-    {
-      "time": "14:45:07",
-      "msg": "NIFTY:23997 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
-      "cls": ""
-    },
-    {
-      "time": "14:44:06",
-      "msg": "PRE-ALERT: NIFTY 23991 near fade 23975",
-      "cls": "info"
-    },
-    {
-      "time": "14:43:27",
-      "msg": "Validation: trust 3.7/10 (n=33)",
-      "cls": "info"
     }
   ],
   "vix": null,
