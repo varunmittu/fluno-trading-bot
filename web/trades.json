@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27 14:15",
+  "last_updated": "2026-07-27 14:25",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:25:19",
+      "msg": "NIFTY:23999 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
+      "cls": ""
+    },
+    {
+      "time": "14:25:19",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "14:25:18",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:20:11",
+      "msg": "NIFTY:23990 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
+      "cls": ""
+    },
+    {
+      "time": "14:20:10",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:18:06",
+      "msg": "PRE-ALERT: NIFTY 23986 near fade 23962",
+      "cls": "info"
+    },
+    {
+      "time": "14:15:25",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:15:22",
       "msg": "NIFTY:23996 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
       "cls": ""
@@ -1886,41 +1921,6 @@
       "time": "14:00:14",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "14:00:10",
-      "msg": "NIFTY:23971 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
-      "cls": ""
-    },
-    {
-      "time": "14:00:10",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:00:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:55:21",
-      "msg": "NIFTY:23964 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
-      "cls": ""
-    },
-    {
-      "time": "13:53:49",
-      "msg": "PRE-ALERT: NIFTY 23964 near fade 23943",
-      "cls": "info"
-    },
-    {
-      "time": "13:53:27",
-      "msg": "PRE-ALERT: NIFTY 23964 near or_hi 23963",
-      "cls": "info"
-    },
-    {
-      "time": "13:52:36",
-      "msg": "Validation: trust 3.7/10 (n=33)",
-      "cls": "info"
     }
   ],
   "vix": null,
