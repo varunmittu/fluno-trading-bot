@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-27 10:30",
+  "last_updated": "2026-07-27 10:40",
   "summary": {
-    "total_trades": 100,
+    "total_trades": 101,
     "wins": 49,
-    "losses": 51,
-    "win_rate": 49.0,
-    "total_pnl": 2345.0,
+    "losses": 52,
+    "win_rate": 48.5,
+    "total_pnl": 285.0,
     "avg_win": 477.0,
-    "avg_loss": -412.0
+    "avg_loss": -444.0
   },
   "trades": [
     {
@@ -1709,6 +1709,23 @@
       "lots": 1,
       "gross": -770.0,
       "charges": 63.96
+    },
+    {
+      "id": 104,
+      "date": "2026-07-27",
+      "time": "10:40",
+      "score": 71,
+      "entry": 23934.45,
+      "exit": 23895.35,
+      "pnl": -2059.93,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 19110.0,
+      "lots": 2,
+      "gross": -1980.0,
+      "charges": 79.93
     }
   ],
   "daily_pnl": {
@@ -1730,12 +1747,23 @@
     "2026-07-21": 2442.0,
     "2026-07-22": 1799.0,
     "2026-07-23": 3107.0,
-    "2026-07-24": -3098.0
+    "2026-07-24": -3098.0,
+    "2026-07-27": -2060.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "10:40:17",
+      "msg": "STOP LOSS NIFTY CE | SL:Rs.-2000 Charges:Rs.80 NET:Rs.-2060 | Capital:Rs.21968",
+      "cls": "err"
+    },
+    {
+      "time": "10:30:22",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:25:11",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -1824,16 +1852,6 @@
     {
       "time": "09:35:21",
       "msg": "NIFTY:23938 YdH:23991/YdL:23807 Sig:-- T:0/99 Lots:2L Cap:Rs.24028 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:30:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:30:16",
-      "msg": "NIFTY:23944 YdH:23991/YdL:23807 Sig:-- T:0/99 Lots:2L Cap:Rs.24028 Daily:Rs.0",
       "cls": ""
     }
   ],
