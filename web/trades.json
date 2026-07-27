@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27 15:10",
+  "last_updated": "2026-07-27 15:15",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,16 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:15:19",
+      "msg": "NIFTY:23988 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
+      "cls": ""
+    },
+    {
+      "time": "15:10:19",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:10:16",
       "msg": "NIFTY:23996 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
       "cls": ""
@@ -1911,16 +1921,6 @@
       "time": "14:43:27",
       "msg": "Validation: trust 3.7/10 (n=33)",
       "cls": "info"
-    },
-    {
-      "time": "14:43:06",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:43:04",
-      "msg": "NIFTY:23994 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
-      "cls": ""
     }
   ],
   "vix": null,
