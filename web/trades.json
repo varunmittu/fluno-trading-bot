@@ -1925,5 +1925,40 @@
   ],
   "vix": null,
   "supertrend_bullish": null,
-  "oi_nifty": null
+  "oi_nifty": null,
+  "running_capital": 25828.0,
+  "trade_mode": "paper",
+  "validation": {
+    "start": "2026-07-14",
+    "empty": false,
+    "as_of": "2026-07-27 21:13",
+    "n": 33,
+    "target_n": 60,
+    "live_net": 6855.0,
+    "live_per": 208.0,
+    "live_wr": 70,
+    "sd": 949,
+    "ci_lo": -116,
+    "ci_hi": 532,
+    "t_stat": 1.26,
+    "green": 7,
+    "red": 3,
+    "live_chg": 2485,
+    "edge_real": false,
+    "bt_ok": true,
+    "bt_per": 11,
+    "gap": 196,
+    "trust": 3.7,
+    "components": {
+      "data": 1.7,
+      "profitable": 1,
+      "tracking": 1,
+      "edge_real": 0,
+      "full_sample": 0
+    },
+    "verdict": "Not ready - need ~27 more trades, surviving a bad week.",
+    "capped": false
+  },
+  "market_open": false,
+  "nifty_price": "--"
 }
