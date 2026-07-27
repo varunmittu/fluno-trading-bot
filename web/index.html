@@ -3,159 +3,255 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fluno Bot — Live</title>
+<title>Fluno Trading — Live</title>
 <style>
   :root{
-    --bg:#0d1117; --card:#161b22; --line:#232a34; --ink:#e6edf3; --ink2:#9fb0c3;
-    --mut:#6b7683; --good:#2ecc71; --bad:#e5534b; --gold:#e3b341; --acc:#58a6ff;
+    --ink:#0b1020; --ink2:#5a6478; --mut:#8a93a6; --line:rgba(255,255,255,.14);
+    --good:#12b76a; --goodbg:rgba(18,183,106,.14);
+    --bad:#f04438; --badbg:rgba(240,68,56,.14);
+    --gold:#f2b705; --acc:#6366f1; --acc2:#22d3ee;
+    --glass:rgba(255,255,255,.9);
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-       padding:12px;max-width:640px;margin:0 auto;-webkit-font-smoothing:antialiased}
-  h1{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px}
-  .dot{width:9px;height:9px;border-radius:50%;background:var(--mut);display:inline-block}
-  .dot.live{background:var(--good);box-shadow:0 0 8px var(--good);animation:pulse 2s infinite}
-  @keyframes pulse{50%{opacity:.4}}
-  .sub{color:var(--mut);font-size:11px;margin-top:2px}
-  .pill{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:.5px}
-  .pill.paper{background:#1f2d3d;color:var(--acc)} .pill.real{background:#3d1f22;color:var(--bad)}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
-  .k{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px}
-  .v{font-size:22px;font-weight:700;margin-top:3px;font-variant-numeric:tabular-nums}
-  .v.sm{font-size:16px}
-  .full{grid-column:1/3}
-  .ct{font-size:12px;font-weight:600;color:var(--ink2);margin-bottom:8px;display:flex;justify-content:space-between}
-  table{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}
-  th{text-align:left;color:var(--mut);font-weight:600;font-size:10px;text-transform:uppercase;padding:4px 6px;border-bottom:1px solid var(--line)}
-  td{padding:6px;border-bottom:1px solid var(--line)}
-  tr:last-child td{border-bottom:none}
-  .tag{font-size:9px;font-weight:700;padding:1px 6px;border-radius:4px}
-  .ce{background:#132b1e;color:var(--good)} .pe{background:#2b1516;color:var(--bad)}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    color:var(--ink);min-height:100vh;padding:14px;
+    background:linear-gradient(160deg,#eef2ff 0%,#f7f8fc 40%,#fef6f0 100%);
+    background-attachment:fixed;max-width:680px;margin:0 auto;
+  }
+  body.real{background:linear-gradient(160deg,#fff1f0 0%,#fff8ec 55%,#fff 100%)}
+  .num{font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:17px}
+  .logo{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--acc),var(--acc2));
+        display:grid;place-items:center;color:#fff;font-size:14px;box-shadow:0 4px 12px rgba(99,102,241,.4)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--mut);display:inline-block}
+  .dot.live{background:var(--good);box-shadow:0 0 0 0 rgba(18,183,106,.6);animation:pulse 1.8s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 8px rgba(18,183,106,0)}100%{box-shadow:0 0 0 0 rgba(18,183,106,0)}}
+  .badge{font-size:10px;font-weight:800;padding:4px 10px;border-radius:20px;letter-spacing:.6px;
+         background:rgba(99,102,241,.14);color:var(--acc)}
+  .badge.real{background:var(--badbg);color:var(--bad);animation:pulse2 1.5s infinite}
+  @keyframes pulse2{50%{opacity:.55}}
+
+  .hero{border-radius:20px;padding:20px;color:#fff;position:relative;overflow:hidden;
+        background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 60%,#2563eb 100%);
+        box-shadow:0 12px 30px rgba(79,70,229,.35)}
+  .hero.real{background:linear-gradient(135deg,#e11d48 0%,#b91c1c 55%,#f59e0b 120%);box-shadow:0 12px 30px rgba(225,29,72,.4)}
+  .hero .lbl{font-size:11px;opacity:.85;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+  .hero .cap{font-size:40px;font-weight:800;margin-top:2px}
+  .hero .sub{font-size:13px;opacity:.9;margin-top:6px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .chip{background:rgba(255,255,255,.18);padding:3px 10px;border-radius:20px;font-weight:600}
+
+  .row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:12px 0}
+  .stat{background:#fff;border-radius:16px;padding:13px 12px;box-shadow:0 4px 14px rgba(20,30,60,.06)}
+  .stat .k{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+  .stat .v{font-size:19px;font-weight:800;margin-top:4px}
   .pos{color:var(--good)} .neg{color:var(--bad)}
-  .cal{display:flex;flex-wrap:wrap;gap:5px}
-  .day{width:calc(20% - 4px);border-radius:7px;padding:6px 4px;text-align:center;font-size:9px;line-height:1.3}
-  .day .d{color:var(--mut)} .day .p{font-weight:700;font-size:11px;margin-top:1px}
-  .day.g{background:rgba(46,204,113,.12)} .day.r{background:rgba(229,83,75,.12)}
-  .log{font-family:ui-monospace,Menlo,monospace;font-size:10px;line-height:1.7;max-height:180px;overflow-y:auto;color:var(--ink2)}
-  .log .t{color:var(--mut);margin-right:6px} .log .err{color:var(--bad)} .log .ok{color:var(--good)}
-  .trust{display:flex;align-items:baseline;gap:8px}
-  .trust .big{font-size:26px;font-weight:800}
-  .bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:8px}
-  .bar > i{display:block;height:100%;border-radius:3px}
-  .chk{font-size:10px;color:var(--ink2);line-height:1.9;margin-top:6px}
-  .foot{text-align:center;color:var(--mut);font-size:10px;margin:16px 0 4px}
+
+  .card{background:#fff;border-radius:18px;padding:16px;margin:12px 0;box-shadow:0 6px 18px rgba(20,30,60,.07)}
+  .ct{font-size:13px;font-weight:800;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+  .ct .side{font-size:11px;color:var(--mut);font-weight:600}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .sec{border-radius:14px;padding:13px;border:1.5px solid var(--line)}
+  .sec.paper{background:rgba(99,102,241,.06);border-color:rgba(99,102,241,.25)}
+  .sec.realsec{background:var(--badbg);border-color:rgba(240,68,56,.35)}
+  .sec .tag{font-size:10px;font-weight:800;letter-spacing:.5px}
+  .sec .big{font-size:22px;font-weight:800;margin:4px 0 2px}
+  .sec .meta{font-size:11px;color:var(--ink2)}
+  .sec.dim{opacity:.5}
+
+  .trustwrap{display:flex;align-items:center;gap:14px}
+  .ring{--p:0;--c:var(--bad);width:74px;height:74px;border-radius:50%;flex:none;
+        background:conic-gradient(var(--c) calc(var(--p)*1%),#eceef3 0);display:grid;place-items:center}
+  .ring::before{content:"";position:absolute;width:56px;height:56px;border-radius:50%;background:#fff}
+  .ring b{position:relative;font-size:19px;font-weight:800}
+  .ring{position:relative}
+  .chk{font-size:11px;color:var(--ink2);line-height:1.9}
+  .verdict{font-size:11.5px;color:var(--ink2);margin-top:8px;line-height:1.4}
+
+  .cal{display:flex;flex-wrap:wrap;gap:6px}
+  .day{width:calc(20% - 5px);border-radius:10px;padding:7px 3px;text-align:center}
+  .day .d{font-size:9px;color:var(--mut)} .day .p{font-size:12px;font-weight:800;margin-top:1px}
+  .day.g{background:var(--goodbg)} .day.r{background:var(--badbg)} .day.z{background:#f1f3f7}
+
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  th{text-align:left;color:var(--mut);font-weight:700;font-size:10px;text-transform:uppercase;padding:5px 6px;border-bottom:1.5px solid #eef0f5}
+  td{padding:8px 6px;border-bottom:1px solid #f2f4f8}
+  tr:last-child td{border-bottom:none}
+  .pill{font-size:9px;font-weight:800;padding:2px 7px;border-radius:6px}
+  .cepill{background:var(--goodbg);color:var(--good)} .pepill{background:var(--badbg);color:var(--bad)}
+  .modep{font-size:8px;font-weight:800;padding:1px 5px;border-radius:4px;margin-left:5px}
+  .m-paper{background:rgba(99,102,241,.14);color:var(--acc)} .m-real{background:var(--badbg);color:var(--bad)}
+
+  .log{font-family:ui-monospace,Menlo,monospace;font-size:10.5px;line-height:1.75;max-height:190px;overflow-y:auto;color:var(--ink2)}
+  .log .t{color:var(--mut);margin-right:7px} .log .err{color:var(--bad)} .log .ok{color:var(--good)} .log .info{color:var(--acc)}
+  .foot{text-align:center;color:var(--mut);font-size:10.5px;margin:18px 0 6px;line-height:1.6}
 </style>
 </head>
 <body>
-  <h1><span class="dot" id="live"></span> Fluno Trading Bot <span class="pill paper" id="mode">PAPER</span></h1>
-  <div class="sub" id="updated">loading…</div>
-
-  <div class="grid">
-    <div class="card"><div class="k">Capital</div><div class="v" id="cap">—</div></div>
-    <div class="card"><div class="k">Total P&amp;L</div><div class="v" id="pnl">—</div></div>
-    <div class="card"><div class="k">Today</div><div class="v sm" id="today">—</div></div>
-    <div class="card"><div class="k">Win rate</div><div class="v sm" id="wr">—</div></div>
-
-    <div class="card full">
-      <div class="ct"><span>Real-Money Trust</span><span id="nifty" class="k"></span></div>
-      <div class="trust"><span class="big" id="trust">—</span><span class="k" id="trustn"></span></div>
-      <div class="bar"><i id="trustbar" style="width:0%;background:var(--bad)"></i></div>
-      <div class="chk" id="chk"></div>
-      <div class="k" id="verdict" style="margin-top:6px;text-transform:none;font-size:11px"></div>
-    </div>
-
-    <div class="card full">
-      <div class="ct"><span>Daily P&amp;L</span><span id="gr" class="k"></span></div>
-      <div class="cal" id="cal"></div>
-    </div>
-
-    <div class="card full">
-      <div class="ct"><span>Recent trades</span><span class="k" id="ntr"></span></div>
-      <div style="overflow-x:auto">
-        <table><thead><tr><th>Date</th><th>Time</th><th>Bet</th><th>Entry</th><th>Exit</th><th style="text-align:right">P&amp;L</th></tr></thead>
-        <tbody id="trades"></tbody></table>
-      </div>
-    </div>
-
-    <div class="card full">
-      <div class="ct">Bot Log</div>
-      <div class="log" id="log"></div>
+  <div class="top">
+    <div class="brand"><span class="logo">₹</span> Fluno Bot</div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="dot" id="live"></span>
+      <span class="badge" id="mode">PAPER</span>
     </div>
   </div>
 
-  <div class="foot">Auto-refreshes every 30s · read-only mirror of the bot on Sai's machine</div>
+  <div class="hero" id="hero">
+    <div class="lbl" id="herolbl">Paper Capital</div>
+    <div class="cap num" id="cap">₹—</div>
+    <div class="sub">
+      <span class="chip" id="today">Today —</span>
+      <span class="chip" id="allpnl">All-time —</span>
+      <span class="chip" id="nifty" style="display:none"></span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="stat"><div class="k">Win rate</div><div class="v" id="wr">—</div></div>
+    <div class="stat"><div class="k">Trades</div><div class="v" id="ntr">—</div></div>
+    <div class="stat"><div class="k">Green/Red</div><div class="v" id="gr">—</div></div>
+  </div>
+
+  <!-- PAPER vs REAL split -->
+  <div class="card">
+    <div class="ct">Performance <span class="side">paper &amp; real, kept separate</span></div>
+    <div class="split">
+      <div class="sec paper">
+        <div class="tag" style="color:var(--acc)">📝 PAPER</div>
+        <div class="big num" id="ppnl">—</div>
+        <div class="meta" id="pmeta">—</div>
+      </div>
+      <div class="sec realsec dim" id="realbox">
+        <div class="tag" style="color:var(--bad)">🔴 REAL MONEY</div>
+        <div class="big num" id="rpnl">—</div>
+        <div class="meta" id="rmeta">not live yet</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUST -->
+  <div class="card">
+    <div class="ct">Real-Money Trust <span class="side" id="trustverdict"></span></div>
+    <div class="trustwrap">
+      <div class="ring" id="ring"><b id="trust">—</b></div>
+      <div>
+        <div class="chk" id="chk">waiting for validation…</div>
+      </div>
+    </div>
+    <div class="verdict" id="verdict"></div>
+  </div>
+
+  <!-- DAILY -->
+  <div class="card">
+    <div class="ct">Daily P&amp;L <span class="side" id="caldays"></span></div>
+    <div class="cal" id="cal"></div>
+  </div>
+
+  <!-- TRADES -->
+  <div class="card">
+    <div class="ct">Recent trades</div>
+    <div style="overflow-x:auto">
+      <table><thead><tr><th>Date</th><th>Time</th><th>Bet</th><th>Entry</th><th>Exit</th><th style="text-align:right">P&amp;L</th></tr></thead>
+      <tbody id="trades"></tbody></table>
+    </div>
+  </div>
+
+  <!-- LOG -->
+  <div class="card">
+    <div class="ct">Live activity</div>
+    <div class="log" id="log"></div>
+  </div>
+
+  <div class="foot">Live mirror of the bot on Sai's machine · refreshes every 20s<br>Fluno Trading Bot v5.1</div>
 
 <script>
-const rs = n => 'Rs.' + Math.abs(Math.round(n)).toLocaleString('en-IN');
-const sg = n => (n>=0?'+':'-') + rs(n);
-function cls(n){return n>0?'pos':(n<0?'neg':'')}
+const R = n => '₹' + Math.abs(Math.round(n)).toLocaleString('en-IN');
+const S = n => (n>=0?'+':'−') + R(n);
+const cls = n => n>0?'pos':(n<0?'neg':'');
 
 async function load(){
   let d;
-  try{ d = await fetch('trades.json?t='+Date.now()).then(r=>r.json()); }
-  catch(e){ document.getElementById('updated').textContent='could not load data'; return; }
+  try{ d = await fetch('trades.json?t='+Date.now()).then(r=>r.json()); }catch(e){ return; }
 
-  document.getElementById('updated').textContent = 'updated ' + (d.last_updated||'');
-  document.getElementById('live').className = 'dot' + (d.market_open?' live':'');
-  const m = (d.trade_mode||'paper');
-  const mp = document.getElementById('mode');
-  mp.textContent = m.toUpperCase(); mp.className = 'pill ' + (m==='real'?'real':'paper');
+  const real = (d.trade_mode==='real');
+  document.body.classList.toggle('real', real);
+  document.getElementById('hero').classList.toggle('real', real);
+  const mb = document.getElementById('mode');
+  mb.textContent = real?'REAL MONEY':'PAPER'; mb.className = 'badge'+(real?' real':'');
+  document.getElementById('live').className = 'dot'+(d.market_open?' live':'');
+  document.getElementById('herolbl').textContent = real?'Real Capital':'Paper Capital';
 
+  // hero
+  document.getElementById('cap').textContent = d.running_capital ? R(d.running_capital) : '₹—';
+  const dp = d.daily_pnl||{}; const dates = Object.keys(dp).sort();
+  const tk = dates[dates.length-1];
+  document.getElementById('today').textContent = 'Today ' + (tk?S(dp[tk]):'—');
   const s = d.summary||{};
-  document.getElementById('cap').textContent = d.running_capital ? rs(d.running_capital) : '—';
-  const pnlEl = document.getElementById('pnl');
-  pnlEl.textContent = sg(s.total_pnl||0); pnlEl.className = 'v ' + cls(s.total_pnl||0);
-  document.getElementById('wr').textContent = (s.win_rate||0) + '%';
+  document.getElementById('allpnl').textContent = 'All-time ' + S(s.total_pnl||0);
+  if(d.nifty_price && d.nifty_price!=='--'){ const n=document.getElementById('nifty'); n.style.display=''; n.textContent='NIFTY '+Math.round(d.nifty_price);}
 
-  const dp = d.daily_pnl||{};
-  const dates = Object.keys(dp).sort();
-  const tkey = dates[dates.length-1];
-  const tEl = document.getElementById('today');
-  if(tkey){ tEl.textContent = sg(dp[tkey]); tEl.className='v sm '+cls(dp[tkey]); }
+  document.getElementById('wr').textContent = (s.win_rate||0)+'%';
+  document.getElementById('ntr').textContent = s.total_trades||0;
 
-  document.getElementById('nifty').textContent = (d.nifty_price && d.nifty_price!=='--') ? ('NIFTY '+Math.round(d.nifty_price)) : '';
-
-  const v = d.validation;
-  if(v && !v.empty){
-    document.getElementById('trust').textContent = v.trust;
-    document.getElementById('trustn').textContent = '/ 10  ·  '+v.n+'/'+v.target_n+' trades · '+v.live_wr+'% win';
-    const col = v.trust>=7?'var(--good)':(v.trust>=5?'var(--gold)':'var(--bad)');
-    const bar = document.getElementById('trustbar');
-    bar.style.width = Math.min(100, v.trust*10)+'%'; bar.style.background = col;
-    document.getElementById('trust').style.color = col;
-    const c = v.components||{};
-    const ic = ok => ok?'<span style="color:var(--good)">&#10003;</span>':'<span style="color:var(--bad)">&#10007;</span>';
-    document.getElementById('chk').innerHTML =
-      ic(c.data>=3)+' data '+v.n+'/'+v.target_n+' &nbsp; '+ic(c.profitable)+' profitable &nbsp; '+ic(c.tracking)+' tracks backtest<br>'+
-      ic(c.edge_real)+' edge real (CI&gt;0) &nbsp; '+ic(c.full_sample)+' full sample';
-    document.getElementById('verdict').textContent = v.verdict||'';
+  // paper vs real split (by trade mode field)
+  const tr = d.trades||[];
+  const grp = (m)=>{const a=tr.filter(t=>(t.mode||'PAPER')===m); const p=a.reduce((x,t)=>x+t.pnl,0); const w=a.filter(t=>t.pnl>0).length; return {n:a.length,pnl:p,wr:a.length?Math.round(w/a.length*100):0};};
+  const P=grp('PAPER'), L=grp('LIVE');
+  const pe=document.getElementById('ppnl'); pe.textContent=S(P.pnl); pe.className='big num '+cls(P.pnl);
+  document.getElementById('pmeta').textContent = P.n+' trades · '+P.wr+'% win';
+  const rb=document.getElementById('realbox');
+  if(L.n>0){
+    rb.classList.remove('dim');
+    const re=document.getElementById('rpnl'); re.textContent=S(L.pnl); re.className='big num '+cls(L.pnl);
+    document.getElementById('rmeta').textContent = L.n+' trades · '+L.wr+'% win';
   } else {
-    document.getElementById('trust').textContent = '—';
-    document.getElementById('verdict').textContent = 'waiting for validation data';
+    document.getElementById('rpnl').textContent='₹0';
+    document.getElementById('rmeta').textContent='not live yet';
   }
 
-  let green=0, red=0;
-  const cal = dates.slice(-15).map(dt=>{
-    const p = dp[dt]; if(p>0)green++; else if(p<0)red++;
-    return `<div class="day ${p>0?'g':(p<0?'r':'')}"><div class="d">${dt.slice(5)}</div><div class="p ${cls(p)}">${p>0?'+':''}${Math.round(p)}</div></div>`;
-  }).join('');
-  document.getElementById('cal').innerHTML = cal;
-  document.getElementById('gr').textContent = green+' green / '+red+' red';
+  // trust ring
+  const v=d.validation;
+  if(v && !v.empty){
+    const col = v.trust>=7?'var(--good)':(v.trust>=5?'var(--gold)':'var(--bad)');
+    const ring=document.getElementById('ring');
+    ring.style.setProperty('--p', Math.min(100,v.trust*10)); ring.style.setProperty('--c',col);
+    document.getElementById('trust').textContent=v.trust;
+    document.getElementById('trust').style.color=col;
+    document.getElementById('trustverdict').textContent = v.n+'/'+v.target_n+' trades';
+    const c=v.components||{};
+    const ic=ok=>ok?'<span style="color:var(--good)">✓</span>':'<span style="color:var(--bad)">✗</span>';
+    document.getElementById('chk').innerHTML =
+      ic(c.data>=3)+' data &nbsp; '+ic(c.profitable)+' profitable &nbsp; '+ic(c.tracking)+' tracks backtest<br>'+
+      ic(c.edge_real)+' edge proven &nbsp; '+ic(c.full_sample)+' full sample (60)';
+    document.getElementById('verdict').textContent = (v.trust>=6?'✅ Ready to consider real money.':'🎯 Goal: cross 6/10. ')+' '+(v.verdict||'');
+  }
 
-  const tr = (d.trades||[]).slice(-12).reverse().map(t=>{
-    const bet = t.option_type==='CE'?'<span class="tag ce">CALL</span>':'<span class="tag pe">PUT</span>';
-    return `<tr><td>${(t.date||'').slice(5)}</td><td>${t.time||''}</td><td>${bet}</td>
+  // calendar
+  let g=0,r=0;
+  document.getElementById('cal').innerHTML = dates.slice(-15).map(dt=>{
+    const p=dp[dt]; if(p>0)g++;else if(p<0)r++;
+    const c=p>0?'g':(p<0?'r':'z');
+    return `<div class="day ${c}"><div class="d">${dt.slice(5)}</div><div class="p ${cls(p)}">${p>0?'+':''}${Math.round(p)}</div></div>`;
+  }).join('');
+  document.getElementById('gr').textContent = g+'/'+r;
+  document.getElementById('caldays').textContent = 'last '+Math.min(15,dates.length)+' days';
+
+  // trades
+  document.getElementById('trades').innerHTML = tr.slice(-14).reverse().map(t=>{
+    const bet=t.option_type==='CE'?'<span class="pill cepill">CALL</span>':'<span class="pill pepill">PUT</span>';
+    const md=(t.mode==='LIVE')?'<span class="modep m-real">REAL</span>':'';
+    return `<tr><td>${(t.date||'').slice(5)}</td><td>${t.time||''}</td><td>${bet}${md}</td>
       <td>${Math.round(t.entry)}</td><td>${Math.round(t.exit)}</td>
-      <td style="text-align:right" class="${cls(t.pnl)}">${t.pnl>=0?'+':''}${Math.round(t.pnl)}</td></tr>`;
-  }).join('');
-  document.getElementById('trades').innerHTML = tr || '<tr><td colspan="6" style="color:var(--mut)">no trades yet</td></tr>';
-  document.getElementById('ntr').textContent = (s.total_trades||0)+' all-time';
+      <td style="text-align:right;font-weight:700" class="${cls(t.pnl)}">${t.pnl>=0?'+':''}${Math.round(t.pnl)}</td></tr>`;
+  }).join('') || '<tr><td colspan="6" style="color:var(--mut)">no trades yet</td></tr>';
 
-  document.getElementById('log').innerHTML = (d.bot_log||[]).map(e=>
+  // log
+  document.getElementById('log').innerHTML=(d.bot_log||[]).map(e=>
     `<div><span class="t">${e.time}</span><span class="${e.cls||''}">${(e.msg||'').replace(/</g,'&lt;')}</span></div>`).join('');
 }
-load(); setInterval(load, 30000);
+load(); setInterval(load, 20000);
 </script>
 </body>
 </html>
