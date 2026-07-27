@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-27 10:55",
+  "last_updated": "2026-07-27 11:05",
   "summary": {
-    "total_trades": 102,
-    "wins": 50,
+    "total_trades": 103,
+    "wins": 51,
     "losses": 52,
-    "win_rate": 49.0,
-    "total_pnl": 939.0,
-    "avg_win": 481.0,
+    "win_rate": 49.5,
+    "total_pnl": 1875.0,
+    "avg_win": 490.0,
     "avg_loss": -444.0
   },
   "trades": [
@@ -1743,6 +1743,23 @@
       "lots": 1,
       "gross": 720.0,
       "charges": 66.02
+    },
+    {
+      "id": 106,
+      "date": "2026-07-27",
+      "time": "11:05",
+      "score": 76,
+      "entry": 23914.95,
+      "exit": 23930.95,
+      "pnl": 935.47,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 19305.0,
+      "lots": 2,
+      "gross": 1020.0,
+      "charges": 84.53
     }
   ],
   "daily_pnl": {
@@ -1765,12 +1782,32 @@
     "2026-07-22": 1799.0,
     "2026-07-23": 3107.0,
     "2026-07-24": -3098.0,
-    "2026-07-27": -1406.0
+    "2026-07-27": -471.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:05:19",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.1124 Floor:Rs.1000 Charges:Rs.85 NET:Rs.+935 | Capital:Rs.23558",
+      "cls": "ok"
+    },
+    {
+      "time": "11:00:11",
+      "msg": "RIDING NIFTY CE | Peak:Rs.1124 Now:Rs.1124 | staircase floor Rs.1000",
+      "cls": "ok"
+    },
+    {
+      "time": "11:00:09",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.1124 \u2014 floor locked at Rs.1000",
+      "cls": "ok"
+    },
+    {
+      "time": "10:55:26",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:55:22",
       "msg": "[PAPER] #3 BULLISH \u2014 BUY CALL (CE) | NIFTY 23950 @ Rs.148.5 | BREAK HIGH 23824 | Conf:76% SL:Rs.1380 | 2L Inv:Rs.19305",
@@ -1850,26 +1887,6 @@
       "time": "10:40:17",
       "msg": "STOP LOSS NIFTY CE | SL:Rs.-2000 Charges:Rs.80 NET:Rs.-2060 | Capital:Rs.21968",
       "cls": "err"
-    },
-    {
-      "time": "10:30:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:25:11",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:15:32",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:15:28",
-      "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24000 @ Rs.147.0 | BREAK HIGH 23824 | Conf:71% SL:Rs.2000 | 2L Inv:Rs.19110",
-      "cls": "ok"
     }
   ],
   "vix": null,
