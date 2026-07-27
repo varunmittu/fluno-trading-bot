@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-27 11:35",
+  "last_updated": "2026-07-27 11:40",
   "summary": {
-    "total_trades": 103,
-    "wins": 51,
+    "total_trades": 104,
+    "wins": 52,
     "losses": 52,
-    "win_rate": 49.5,
-    "total_pnl": 1875.0,
-    "avg_win": 490.0,
+    "win_rate": 50.0,
+    "total_pnl": 3210.0,
+    "avg_win": 506.0,
     "avg_loss": -444.0
   },
   "trades": [
@@ -1760,6 +1760,23 @@
       "lots": 2,
       "gross": 1020.0,
       "charges": 84.53
+    },
+    {
+      "id": 107,
+      "date": "2026-07-27",
+      "time": "11:40",
+      "score": 71,
+      "entry": 23934.65,
+      "exit": 23960.45,
+      "pnl": 1335.24,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 19123.0,
+      "lots": 2,
+      "gross": 1420.0,
+      "charges": 84.76
     }
   ],
   "daily_pnl": {
@@ -1782,12 +1799,22 @@
     "2026-07-22": 1799.0,
     "2026-07-23": 3107.0,
     "2026-07-24": -3098.0,
-    "2026-07-27": -471.0
+    "2026-07-27": 864.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:40:05",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.1530 Floor:Rs.1400 Charges:Rs.85 NET:Rs.+1335 | Capital:Rs.24893",
+      "cls": "ok"
+    },
+    {
+      "time": "11:35:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:35:17",
       "msg": "RIDING NIFTY CE | Peak:Rs.1530 Now:Rs.1530 | staircase floor Rs.1400",
@@ -1877,16 +1904,6 @@
       "time": "11:09:38",
       "msg": "Capital: Rs.23558 | Lots: 2L (130 units)",
       "cls": "info"
-    },
-    {
-      "time": "11:09:38",
-      "msg": "Bot started | PAPER TRADE | MANUAL /confirm mode \u2014 send /auto for hands-free | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
-      "cls": "err"
-    },
-    {
-      "time": "11:09:37",
-      "msg": "Kite offline (Incorrect `api_key` or `access_token`.) \u2014 using yfinance backup. Send /token on Telegram to fix.",
-      "cls": "err"
     }
   ],
   "vix": null,
