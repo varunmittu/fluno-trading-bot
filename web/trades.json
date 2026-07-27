@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27 11:40",
+  "last_updated": "2026-07-27 11:45",
   "summary": {
     "total_trades": 104,
     "wins": 52,
@@ -1806,6 +1806,46 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:45:22",
+      "msg": "NIFTY:23962 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:4/99 Lots:2L Cap:Rs.24893 Daily:Rs.865",
+      "cls": ""
+    },
+    {
+      "time": "11:45:22",
+      "msg": "Confidence gate: BREAK HIGH 23824 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "11:45:20",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:41:12",
+      "msg": "PRE-ALERT: NIFTY 23962 near or_hi 23963",
+      "cls": "info"
+    },
+    {
+      "time": "11:40:10",
+      "msg": "NIFTY:23960 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:4/99 Lots:2L Cap:Rs.24893 Daily:Rs.865",
+      "cls": ""
+    },
+    {
+      "time": "11:40:10",
+      "msg": "Confidence gate: BREAK HIGH 23824 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "11:40:10",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "11:40:09",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "11:40:05",
       "msg": "STAIR BOOK NIFTY CE | Peak:Rs.1530 Floor:Rs.1400 Charges:Rs.85 NET:Rs.+1335 | Capital:Rs.24893",
       "cls": "ok"
@@ -1864,46 +1904,6 @@
       "time": "11:15:06",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "11:10:09",
-      "msg": "Validation: trust 3.6/10 (n=31)",
-      "cls": "info"
-    },
-    {
-      "time": "11:09:57",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:09:53",
-      "msg": "[PAPER] #4 BULLISH \u2014 BUY CALL (CE) | NIFTY 24000 @ Rs.147.1 | BREAK HIGH 23824 | Conf:71% SL:Rs.1380 | 2L Inv:Rs.19123",
-      "cls": "ok"
-    },
-    {
-      "time": "11:09:49",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:09:40",
-      "msg": "Restored today's booked P&L from DB: Rs.-470.5",
-      "cls": "info"
-    },
-    {
-      "time": "11:09:40",
-      "msg": "3 trade(s) done today (from DB) \u2014 96 gated slot(s) left.",
-      "cls": "info"
-    },
-    {
-      "time": "11:09:40",
-      "msg": "Restored pending trade #4 after restart (already confirmed)",
-      "cls": "info"
-    },
-    {
-      "time": "11:09:38",
-      "msg": "Capital: Rs.23558 | Lots: 2L (130 units)",
-      "cls": "info"
     }
   ],
   "vix": null,
