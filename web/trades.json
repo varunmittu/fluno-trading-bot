@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27 14:43",
+  "last_updated": "2026-07-27 14:50",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1822,6 +1822,51 @@
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "14:50:18",
+      "msg": "NIFTY:23995 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
+      "cls": ""
+    },
+    {
+      "time": "14:50:18",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "14:50:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:50:16",
+      "msg": "Kite: loaded 1614 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "14:47:42",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
+      "cls": "ok"
+    },
+    {
+      "time": "14:45:07",
+      "msg": "NIFTY:23997 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
+      "cls": ""
+    },
+    {
+      "time": "14:44:06",
+      "msg": "PRE-ALERT: NIFTY 23991 near fade 23975",
+      "cls": "info"
+    },
+    {
+      "time": "14:43:27",
+      "msg": "Validation: trust 3.7/10 (n=33)",
+      "cls": "info"
+    },
+    {
+      "time": "14:43:06",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "14:43:04",
       "msg": "NIFTY:23994 YdH:23824/YdL:23606 Sig:BREAK HIGH 23824 T:5/99 Lots:2L Cap:Rs.25828 Daily:Rs.1800",
