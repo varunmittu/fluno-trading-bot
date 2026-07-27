@@ -4,5 +4,8 @@
     { "src": "index.html", "use": "@vercel/static" },
     { "src": "trades.json", "use": "@vercel/static" }
   ],
-  "routes": [{ "src": "/(.*)", "dest": "/$1" }]
+  "routes": [
+    { "src": "/trades.json", "headers": { "cache-control": "no-store, max-age=0" }, "dest": "/trades.json" },
+    { "src": "/(.*)", "headers": { "cache-control": "no-store, max-age=0" }, "dest": "/$1" }
+  ]
 }
