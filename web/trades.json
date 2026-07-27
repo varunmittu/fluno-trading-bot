@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-27 10:40",
+  "last_updated": "2026-07-27 10:50",
   "summary": {
-    "total_trades": 101,
-    "wins": 49,
+    "total_trades": 102,
+    "wins": 50,
     "losses": 52,
-    "win_rate": 48.5,
-    "total_pnl": 285.0,
-    "avg_win": 477.0,
+    "win_rate": 49.0,
+    "total_pnl": 939.0,
+    "avg_win": 481.0,
     "avg_loss": -444.0
   },
   "trades": [
@@ -1726,6 +1726,23 @@
       "lots": 2,
       "gross": -1980.0,
       "charges": 79.93
+    },
+    {
+      "id": 105,
+      "date": "2026-07-27",
+      "time": "10:50",
+      "score": 76,
+      "entry": 23895.35,
+      "exit": 23917.3,
+      "pnl": 653.98,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 9574.5,
+      "lots": 1,
+      "gross": 720.0,
+      "charges": 66.02
     }
   ],
   "daily_pnl": {
@@ -1748,12 +1765,32 @@
     "2026-07-22": 1799.0,
     "2026-07-23": 3107.0,
     "2026-07-24": -3098.0,
-    "2026-07-27": -2060.0
+    "2026-07-27": -1406.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "10:50:02",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.780 Floor:Rs.700 Charges:Rs.66 NET:Rs.+654 | Capital:Rs.22622",
+      "cls": "ok"
+    },
+    {
+      "time": "10:45:14",
+      "msg": "RIDING NIFTY CE | Peak:Rs.780 Now:Rs.780 | staircase floor Rs.700",
+      "cls": "ok"
+    },
+    {
+      "time": "10:45:13",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.780 \u2014 floor locked at Rs.700",
+      "cls": "ok"
+    },
+    {
+      "time": "10:40:28",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:40:24",
       "msg": "[PAPER] #2 BULLISH \u2014 BUY CALL (CE) | NIFTY 23950 @ Rs.147.3 | BREAK HIGH 23824 | Conf:76% SL:Rs.630 | 1L Inv:Rs.9574",
@@ -1833,26 +1870,6 @@
       "time": "10:00:15",
       "msg": "NIFTY:23932 YdH:23991/YdL:23807 Sig:-- T:0/99 Lots:2L Cap:Rs.24028 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:55:08",
-      "msg": "NIFTY:23932 YdH:23991/YdL:23807 Sig:-- T:0/99 Lots:2L Cap:Rs.24028 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:50:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:50:20",
-      "msg": "NIFTY:23951 YdH:23991/YdL:23807 Sig:-- T:0/99 Lots:2L Cap:Rs.24028 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:45:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
