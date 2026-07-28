@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 14:50",
+  "last_updated": "2026-07-28 15:00",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:00:12",
+      "msg": "NIFTY:23974 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:59:10",
+      "msg": "PRE-ALERT: NIFTY 23979 near or_lo 23962",
+      "cls": "info"
+    },
+    {
+      "time": "14:55:07",
+      "msg": "NIFTY:23987 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:55:06",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:55:03",
+      "msg": "PRE-ALERT: NIFTY 23987 near yd_high 24012",
+      "cls": "info"
+    },
+    {
+      "time": "14:52:21",
+      "msg": "PRE-ALERT: NIFTY 23983 near fade 24005",
+      "cls": "info"
+    },
+    {
+      "time": "14:50:22",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:50:19",
       "msg": "NIFTY:23975 YdH:24012/YdL:23892 Sig:FADE 24041->23975 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
@@ -1886,41 +1921,6 @@
       "time": "14:36:17",
       "msg": "PRE-ALERT: NIFTY 23981 near fade 24005",
       "cls": "info"
-    },
-    {
-      "time": "14:35:16",
-      "msg": "NIFTY:23975 YdH:24012/YdL:23892 Sig:FADE 24041->23975 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:35:16",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:35:15",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:30:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:30:12",
-      "msg": "NIFTY:23985 YdH:24012/YdL:23892 Sig:FADE 24041->23985 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:30:12",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:30:11",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1928,7 +1928,7 @@
   "oi_nifty": null,
   "running_capital": 25828.0,
   "trade_mode": "paper",
-  "nifty_price": 23974.6,
+  "nifty_price": 23974.35,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
