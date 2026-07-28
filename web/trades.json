@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 14:00",
+  "last_updated": "2026-07-28 14:05",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:05:20",
+      "msg": "NIFTY:24003 YdH:24012/YdL:23892 Sig:FADE 24041->24003 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:05:20",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "14:05:19",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:04:56",
+      "msg": "PRE-ALERT: NIFTY 24002 near fade 24005",
+      "cls": "info"
+    },
+    {
+      "time": "14:00:16",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:00:13",
       "msg": "NIFTY:24002 YdH:24012/YdL:23892 Sig:FADE 24041->24002 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
@@ -1896,31 +1921,6 @@
       "time": "13:45:11",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "13:44:48",
-      "msg": "PRE-ALERT: NIFTY 23984 near or_lo 23962",
-      "cls": "info"
-    },
-    {
-      "time": "13:40:05",
-      "msg": "NIFTY:23987 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:40:04",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:38:21",
-      "msg": "PRE-ALERT: NIFTY 23987 near yd_high 24012",
-      "cls": "info"
-    },
-    {
-      "time": "13:35:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -1928,7 +1928,7 @@
   "oi_nifty": null,
   "running_capital": 25828.0,
   "trade_mode": "paper",
-  "nifty_price": 24001.5,
+  "nifty_price": 24003.25,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
