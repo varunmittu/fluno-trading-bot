@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 10:05",
+  "last_updated": "2026-07-28 10:10",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,16 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:10:17",
+      "msg": "NIFTY:23970 Sig:-- T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:05:19",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:05:14",
       "msg": "NIFTY:23973 Sig:-- T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
@@ -1911,16 +1921,6 @@
       "time": "09:18:22",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
-    },
-    {
-      "time": "09:15:46",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:15:43",
-      "msg": "NIFTY:23996 Sig:-- T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -1928,7 +1928,7 @@
   "oi_nifty": null,
   "running_capital": 25828.0,
   "trade_mode": "paper",
-  "nifty_price": 23972.9,
+  "nifty_price": 23969.95,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
