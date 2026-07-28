@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 13:35",
+  "last_updated": "2026-07-28 13:45",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,46 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:45:11",
+      "msg": "NIFTY:23984 YdH:24012/YdL:23892 Sig:FADE 24041->23984 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:45:11",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:45:11",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:44:48",
+      "msg": "PRE-ALERT: NIFTY 23984 near or_lo 23962",
+      "cls": "info"
+    },
+    {
+      "time": "13:40:05",
+      "msg": "NIFTY:23987 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:40:04",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:38:21",
+      "msg": "PRE-ALERT: NIFTY 23987 near yd_high 24012",
+      "cls": "info"
+    },
+    {
+      "time": "13:35:22",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:35:19",
       "msg": "NIFTY:23986 YdH:24012/YdL:23892 Sig:FADE 24041->23986 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
@@ -1881,46 +1921,6 @@
       "time": "13:22:43",
       "msg": "PRE-ALERT: NIFTY 23987 near yd_high 24012",
       "cls": "info"
-    },
-    {
-      "time": "13:20:23",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:20:19",
-      "msg": "NIFTY:23978 YdH:24012/YdL:23892 Sig:FADE 24041->23978 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:20:19",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "13:20:19",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:20:18",
-      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
-      "cls": "info"
-    },
-    {
-      "time": "13:18:56",
-      "msg": "PRE-ALERT: NIFTY 23980 near fade 24005",
-      "cls": "info"
-    },
-    {
-      "time": "13:15:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:15:12",
-      "msg": "NIFTY:23981 YdH:24012/YdL:23892 Sig:FADE 24041->23981 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -1928,7 +1928,7 @@
   "oi_nifty": null,
   "running_capital": 25828.0,
   "trade_mode": "paper",
-  "nifty_price": 23986.15,
+  "nifty_price": 23983.55,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
