@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 13:05",
+  "last_updated": "2026-07-28 13:15",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:15:12",
+      "msg": "NIFTY:23981 YdH:24012/YdL:23892 Sig:FADE 24041->23981 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:15:12",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:15:11",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:14:28",
+      "msg": "PRE-ALERT: NIFTY 23985 near or_lo 23962",
+      "cls": "info"
+    },
+    {
+      "time": "13:10:04",
+      "msg": "NIFTY:24006 YdH:24012/YdL:23892 Sig:-- T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:10:04",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:05:23",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:05:19",
       "msg": "NIFTY:24004 YdH:24012/YdL:23892 Sig:FADE 24041->24004 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
@@ -1886,41 +1921,6 @@
       "time": "12:50:27",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "12:50:18",
-      "msg": "NIFTY:24015 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:50:18",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:50:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:48:54",
-      "msg": "PRE-ALERT: NIFTY 24013 near yd_high 24012",
-      "cls": "info"
-    },
-    {
-      "time": "12:46:12",
-      "msg": "PRE-ALERT: NIFTY 24019 near fade 24005",
-      "cls": "info"
-    },
-    {
-      "time": "12:45:10",
-      "msg": "NIFTY:24015 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:45:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1928,7 +1928,7 @@
   "oi_nifty": null,
   "running_capital": 25828.0,
   "trade_mode": "paper",
-  "nifty_price": 24003.8,
+  "nifty_price": 23980.85,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
