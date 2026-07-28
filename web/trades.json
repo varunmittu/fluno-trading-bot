@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 15:20",
+  "last_updated": "2026-07-28 15:25",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,16 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:25:10",
+      "msg": "NIFTY:23994 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:20:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:20:07",
       "msg": "NIFTY:24003 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
@@ -1911,16 +1921,6 @@
       "time": "14:45:18",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "14:45:15",
-      "msg": "NIFTY:23991 YdH:24012/YdL:23892 Sig:FADE 24041->23991 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:45:15",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1928,7 +1928,7 @@
   "oi_nifty": null,
   "running_capital": 25828.0,
   "trade_mode": "paper",
-  "nifty_price": 24002.95,
+  "nifty_price": 23994.45,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
