@@ -121,9 +121,25 @@
   .log{font-family:ui-monospace,Menlo,monospace;font-size:11px;line-height:1.85;max-height:340px;overflow-y:auto;color:var(--ink2)}
   .log .t{color:var(--mut);margin-right:8px} .log .err{color:var(--bad)} .log .ok{color:var(--good)} .log .info{color:var(--accent)}
   .foot{text-align:center;color:var(--mut);font-size:10.5px;margin:22px 0 8px;line-height:1.7}
+  #gate{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px}
+  #gate .lk{font-size:44px}
+  #gate h2{font-size:19px;font-weight:800}
+  #gate p{font-size:12.5px;color:var(--mut);text-align:center;max-width:260px}
+  #gate input{padding:13px 16px;border-radius:13px;border:1px solid var(--line);background:var(--surf);color:var(--ink);font-size:16px;width:min(280px,80vw);text-align:center;outline:none}
+  #gate input:focus{border-color:var(--accent)}
+  #gate button{padding:12px 30px;border-radius:13px;border:none;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:800;font-size:15px;cursor:pointer}
+  #gate .err{color:var(--bad);font-size:12px;height:15px;font-weight:600}
 </style>
 </head>
 <body>
+  <div id="gate">
+    <div class="lk">🔒</div>
+    <h2>Fluno Trading — Private</h2>
+    <p>This dashboard is private. Enter your password to view it.</p>
+    <input id="gpw" type="password" placeholder="password" autocomplete="off" autocapitalize="off">
+    <button id="gbtn">Unlock</button>
+    <div class="err" id="gerr"></div>
+  </div>
   <header>
     <div class="hd">
       <div class="brand"><span class="logo">₹</span> Fluno Trading</div>
@@ -352,7 +368,18 @@ async function load(){
   document.getElementById('upd').textContent='updated '+(d.last_updated||'');
   animated=true;
 }
-load();setInterval(load,20000);
+// ===== PRIVATE PASSWORD GATE =====
+// Sai: change the password below to whatever you like (keep the quotes).
+const PASSWORD = "fluno2026";
+let _timer=null;
+function startDash(){document.getElementById('gate').style.display='none';load();if(!_timer)_timer=setInterval(load,20000);}
+function tryPw(){
+  if(document.getElementById('gpw').value===PASSWORD){sessionStorage.setItem('fluno-ok','1');startDash();}
+  else{document.getElementById('gerr').textContent='Wrong password — try again';}
+}
+document.getElementById('gbtn').onclick=tryPw;
+document.getElementById('gpw').addEventListener('keydown',e=>{if(e.key==='Enter')tryPw();});
+if(sessionStorage.getItem('fluno-ok')==='1'){startDash();}else{setTimeout(()=>document.getElementById('gpw').focus(),100);}
 </script>
 </body>
 </html>
