@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 13:45",
+  "last_updated": "2026-07-28 13:50",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:50:17",
+      "msg": "NIFTY:23982 YdH:24012/YdL:23892 Sig:FADE 24041->23982 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:50:17",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:50:16",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:49:54",
+      "msg": "PRE-ALERT: NIFTY 23981 near fade 24005",
+      "cls": "info"
+    },
+    {
+      "time": "13:45:15",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:45:11",
       "msg": "NIFTY:23984 YdH:24012/YdL:23892 Sig:FADE 24041->23984 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
@@ -1896,31 +1921,6 @@
       "time": "13:30:12",
       "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
       "cls": "info"
-    },
-    {
-      "time": "13:30:12",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:29:29",
-      "msg": "PRE-ALERT: NIFTY 23985 near or_lo 23962",
-      "cls": "info"
-    },
-    {
-      "time": "13:25:06",
-      "msg": "NIFTY:23990 YdH:24012/YdL:23892 Sig:FADE 24041->23990 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:25:05",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:22:43",
-      "msg": "PRE-ALERT: NIFTY 23987 near yd_high 24012",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1928,7 +1928,7 @@
   "oi_nifty": null,
   "running_capital": 25828.0,
   "trade_mode": "paper",
-  "nifty_price": 23983.55,
+  "nifty_price": 23981.85,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
