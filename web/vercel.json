@@ -1,11 +1,10 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "index.html", "use": "@vercel/static" },
-    { "src": "trades.json", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/trades.json", "headers": { "cache-control": "no-store, max-age=0" }, "dest": "/trades.json" },
-    { "src": "/(.*)", "headers": { "cache-control": "no-store, max-age=0" }, "dest": "/$1" }
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0, must-revalidate" }
+      ]
+    }
   ]
 }
