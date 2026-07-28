@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 11:55",
+  "last_updated": "2026-07-28 12:00",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:00:17",
+      "msg": "NIFTY:24011 YdH:24012/YdL:23892 Sig:-- T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:00:15",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:55:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:55:11",
       "msg": "NIFTY:24013 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
@@ -1906,21 +1921,6 @@
       "time": "11:35:12",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "11:32:49",
-      "msg": "PRE-ALERT: NIFTY 24008 near yd_high 24012",
-      "cls": "info"
-    },
-    {
-      "time": "11:30:07",
-      "msg": "NIFTY:24014 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:30:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1928,7 +1928,7 @@
   "oi_nifty": null,
   "running_capital": 25828.0,
   "trade_mode": "paper",
-  "nifty_price": 24013.45,
+  "nifty_price": 24011.35,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
