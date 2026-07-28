@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 12:15",
+  "last_updated": "2026-07-28 12:20",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:20:18",
+      "msg": "NIFTY:24017 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:20:18",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "12:20:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:20:17",
+      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
+      "cls": "info"
+    },
+    {
+      "time": "12:18:34",
+      "msg": "PRE-ALERT: NIFTY 24017 near yd_high 24012",
+      "cls": "info"
+    },
+    {
+      "time": "12:15:15",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:15:12",
       "msg": "NIFTY:24026 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
@@ -1891,36 +1921,6 @@
       "time": "12:00:15",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "11:55:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:55:11",
-      "msg": "NIFTY:24013 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:55:11",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "11:55:11",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:50:08",
-      "msg": "NIFTY:24029 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:50:07",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1928,7 +1928,7 @@
   "oi_nifty": null,
   "running_capital": 25828.0,
   "trade_mode": "paper",
-  "nifty_price": 24026.15,
+  "nifty_price": 24016.95,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
