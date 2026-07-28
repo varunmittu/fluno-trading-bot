@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 15:30",
+  "last_updated": "2026-07-28 15:31",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,16 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:31:15",
+      "msg": "NIFTY:23988 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:30:16",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:30:13",
       "msg": "SETTLEMENT | Day P&L:Rs.+0 | Capital:Rs.25828 | Next:2L",
       "cls": "ok"
@@ -1911,16 +1921,6 @@
       "time": "14:50:22",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "14:50:19",
-      "msg": "NIFTY:23975 YdH:24012/YdL:23892 Sig:FADE 24041->23975 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:50:19",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
     }
   ],
   "vix": null,
