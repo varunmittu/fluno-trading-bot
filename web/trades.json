@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 12:30",
+  "last_updated": "2026-07-28 12:35",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:35:16",
+      "msg": "NIFTY:24017 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:35:16",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "12:35:15",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:33:52",
+      "msg": "PRE-ALERT: NIFTY 24022 near yd_high 24012",
+      "cls": "info"
+    },
+    {
+      "time": "12:31:10",
+      "msg": "PRE-ALERT: NIFTY 24023 near fade 24005",
+      "cls": "info"
+    },
+    {
+      "time": "12:30:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:30:09",
       "msg": "NIFTY:24025 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
@@ -1891,36 +1921,6 @@
       "time": "12:15:12",
       "msg": "NIFTY:24026 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "12:15:12",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:11",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:10:08",
-      "msg": "NIFTY:24020 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:10:08",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:10:07",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:06:24",
-      "msg": "PRE-ALERT: NIFTY 24019 near or_hi 24040",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1928,7 +1928,7 @@
   "oi_nifty": null,
   "running_capital": 25828.0,
   "trade_mode": "paper",
-  "nifty_price": 24024.6,
+  "nifty_price": 24017.0,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
