@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 10:45",
+  "last_updated": "2026-07-28 10:55",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:55:09",
+      "msg": "NIFTY:24036 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:55:09",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "10:55:08",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:50:05",
+      "msg": "NIFTY:24031 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:50:03",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:47:00",
+      "msg": "PRE-ALERT: NIFTY 24025 near yd_high 24012",
+      "cls": "info"
+    },
+    {
+      "time": "10:45:22",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:45:18",
       "msg": "NIFTY:24023 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
@@ -1886,41 +1921,6 @@
       "time": "10:30:20",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "10:25:20",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:25:17",
-      "msg": "NIFTY:23996 YdH:24012/YdL:23892 Sig:-- T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:25:16",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:22:54",
-      "msg": "PRE-ALERT: NIFTY 23987 near or_lo 23962",
-      "cls": "info"
-    },
-    {
-      "time": "10:20:12",
-      "msg": "NIFTY:23996 YdH:24012/YdL:23892 Sig:-- T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:20:11",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:16:26",
-      "msg": "PRE-ALERT: NIFTY 23992 near yd_high 24012",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1928,7 +1928,7 @@
   "oi_nifty": null,
   "running_capital": 25828.0,
   "trade_mode": "paper",
-  "nifty_price": 24023.05,
+  "nifty_price": 24036.45,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
