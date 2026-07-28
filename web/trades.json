@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-28 11:35",
+  "last_updated": "2026-07-28 11:40",
   "summary": {
     "total_trades": 105,
     "wins": 53,
@@ -1823,6 +1823,21 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:40:16",
+      "msg": "NIFTY:24008 YdH:24012/YdL:23892 Sig:-- T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:40:16",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:35:16",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:35:12",
       "msg": "NIFTY:24003 YdH:24012/YdL:23892 Sig:-- T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
@@ -1906,21 +1921,6 @@
       "time": "11:15:12",
       "msg": "NIFTY:24017 YdH:24012/YdL:23892 Sig:BREAK HIGH 24012 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "11:15:12",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "11:15:12",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:15:09",
-      "msg": "PRE-ALERT: NIFTY 24017 near or_hi 24040",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1928,7 +1928,7 @@
   "oi_nifty": null,
   "running_capital": 25828.0,
   "trade_mode": "paper",
-  "nifty_price": 24003.25,
+  "nifty_price": 24008.15,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
