@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29 13:45",
+  "last_updated": "2026-07-29 13:55",
   "summary": {
     "total_trades": 108,
     "wins": 55,
@@ -1875,6 +1875,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:55:03",
+      "msg": "NIFTY:24258 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:3/99 Lots:1L Cap:Rs.25569 Daily:Rs.-259",
+      "cls": ""
+    },
+    {
+      "time": "13:55:03",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:55:02",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:50:01",
+      "msg": "NIFTY:24246 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:3/99 Lots:1L Cap:Rs.25569 Daily:Rs.-259",
+      "cls": ""
+    },
+    {
+      "time": "13:50:01",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:49:20",
+      "msg": "PRE-ALERT: NIFTY 24249 near fade 24225",
+      "cls": "info"
+    },
+    {
+      "time": "13:45:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:45:19",
       "msg": "NIFTY:24237 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:3/99 Lots:1L Cap:Rs.25569 Daily:Rs.-259",
       "cls": ""
@@ -1938,41 +1973,6 @@
       "time": "13:32:14",
       "msg": "PRE-ALERT: NIFTY 24250 near fade 24225",
       "cls": "info"
-    },
-    {
-      "time": "13:30:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:30:13",
-      "msg": "NIFTY:24247 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:3/99 Lots:1L Cap:Rs.25569 Daily:Rs.-259",
-      "cls": ""
-    },
-    {
-      "time": "13:30:13",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "13:30:12",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:25:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:25:11",
-      "msg": "NIFTY:24247 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:3/99 Lots:1L Cap:Rs.25569 Daily:Rs.-259",
-      "cls": ""
-    },
-    {
-      "time": "13:25:11",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1980,7 +1980,7 @@
   "oi_nifty": null,
   "running_capital": 25569.0,
   "trade_mode": "paper",
-  "nifty_price": 24236.7,
+  "nifty_price": 24258.3,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
