@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-07-28 15:31",
+  "last_updated": "2026-07-29 11:14",
   "summary": {
-    "total_trades": 105,
-    "wins": 53,
+    "total_trades": 106,
+    "wins": 54,
     "losses": 52,
-    "win_rate": 50.5,
-    "total_pnl": 4145.0,
+    "win_rate": 50.9,
+    "total_pnl": 4688.0,
     "avg_win": 514.0,
     "avg_loss": -444.0
   },
@@ -1794,6 +1794,23 @@
       "lots": 2,
       "gross": 1020.0,
       "charges": 84.39
+    },
+    {
+      "id": 109,
+      "date": "2026-07-29",
+      "time": "10:30",
+      "score": 71,
+      "entry": 24219.1,
+      "exit": 24227.55,
+      "pnl": 542.9,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 15613.0,
+      "lots": 2,
+      "gross": 620.0,
+      "charges": 77.1
     }
   ],
   "daily_pnl": {
@@ -1816,124 +1833,55 @@
     "2026-07-22": 1799.0,
     "2026-07-23": 3107.0,
     "2026-07-24": -3098.0,
-    "2026-07-27": 1800.0
+    "2026-07-27": 1800.0,
+    "2026-07-29": 543.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
     {
-      "time": "15:31:15",
-      "msg": "NIFTY:23988 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:30:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:30:13",
-      "msg": "SETTLEMENT | Day P&L:Rs.+0 | Capital:Rs.25828 | Next:2L",
-      "cls": "ok"
-    },
-    {
-      "time": "15:25:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:25:10",
-      "msg": "NIFTY:23994 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:20:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:20:07",
-      "msg": "NIFTY:24003 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:15:02",
-      "msg": "NIFTY:23969 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:10:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:10:19",
-      "msg": "NIFTY:23966 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:05:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:05:15",
-      "msg": "NIFTY:23969 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:00:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:00:12",
-      "msg": "NIFTY:23974 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:59:10",
-      "msg": "PRE-ALERT: NIFTY 23979 near or_lo 23962",
+      "time": "11:14:51",
+      "msg": "Kite: loaded 1546 NIFTY option contracts",
       "cls": "info"
     },
     {
-      "time": "14:55:07",
-      "msg": "NIFTY:23987 YdH:24012/YdL:23892 Sig:FADE 24041->23987 T:0/99 Lots:2L Cap:Rs.25828 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:55:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
+      "time": "11:14:47",
+      "msg": "Restored today's booked P&L from DB: Rs.+542.9",
       "cls": "info"
     },
     {
-      "time": "14:55:03",
-      "msg": "PRE-ALERT: NIFTY 23987 near yd_high 24012",
+      "time": "11:14:47",
+      "msg": "Restored 1 open position(s) from disk.",
       "cls": "info"
     },
     {
-      "time": "14:52:21",
-      "msg": "PRE-ALERT: NIFTY 23983 near fade 24005",
+      "time": "11:14:45",
+      "msg": "Capital: Rs.26371 | Lots: 2L (130 units)",
       "cls": "info"
     },
     {
-      "time": "14:50:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "time": "11:14:45",
+      "msg": "Bot started | PAPER TRADE | MANUAL /confirm mode \u2014 send /auto for hands-free | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
+      "cls": "err"
+    },
+    {
+      "time": "11:14:44",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
     }
   ],
   "vix": null,
   "supertrend_bullish": null,
   "oi_nifty": null,
-  "running_capital": 25828.0,
+  "running_capital": 26371.0,
   "trade_mode": "paper",
-  "nifty_price": 23987.6,
+  "nifty_price": 24234.7,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
     "empty": false,
-    "as_of": "2026-07-27 21:13",
+    "as_of": "2026-07-28 22:09",
     "n": 33,
     "target_n": 60,
     "live_net": 6855.0,
@@ -1960,5 +1908,27 @@
     },
     "verdict": "Not ready - need ~27 more trades, surviving a bad week.",
     "capped": false
-  }
+  },
+  "position": {
+    "otype": "CE",
+    "strike": 24300,
+    "entry": 24235.0,
+    "premium_entry": 98.75,
+    "stop_level": 24209.0,
+    "sl_rs": 1340,
+    "lots": 2,
+    "pnl": -228.0,
+    "peak": -228.0,
+    "floor": null
+  },
+  "rung_base": [
+    150,
+    250,
+    300,
+    450,
+    500,
+    700,
+    850,
+    900
+  ]
 }
