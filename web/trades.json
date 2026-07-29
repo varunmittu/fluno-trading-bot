@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29 11:14",
+  "last_updated": "2026-07-29 11:20",
   "summary": {
     "total_trades": 106,
     "wins": 54,
@@ -1841,6 +1841,16 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "11:15:16",
+      "msg": "Validation: trust 3.7/10 (n=34)",
+      "cls": "info"
+    },
+    {
+      "time": "11:14:53",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:14:51",
       "msg": "Kite: loaded 1546 NIFTY option contracts",
       "cls": "info"
@@ -1876,28 +1886,28 @@
   "oi_nifty": null,
   "running_capital": 26371.0,
   "trade_mode": "paper",
-  "nifty_price": 24234.7,
+  "nifty_price": 24232.85,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
     "empty": false,
-    "as_of": "2026-07-28 22:09",
-    "n": 33,
+    "as_of": "2026-07-29 11:15",
+    "n": 34,
     "target_n": 60,
-    "live_net": 6855.0,
-    "live_per": 208.0,
-    "live_wr": 70,
-    "sd": 949,
-    "ci_lo": -116,
+    "live_net": 7398.0,
+    "live_per": 218.0,
+    "live_wr": 71,
+    "sd": 937,
+    "ci_lo": -97,
     "ci_hi": 532,
-    "t_stat": 1.26,
-    "green": 7,
+    "t_stat": 1.35,
+    "green": 8,
     "red": 3,
-    "live_chg": 2485,
+    "live_chg": 2562,
     "edge_real": false,
     "bt_ok": true,
-    "bt_per": 11,
-    "gap": 196,
+    "bt_per": 13,
+    "gap": 204,
     "trust": 3.7,
     "components": {
       "data": 1.7,
@@ -1906,7 +1916,7 @@
       "edge_real": 0,
       "full_sample": 0
     },
-    "verdict": "Not ready - need ~27 more trades, surviving a bad week.",
+    "verdict": "Not ready - need ~26 more trades, surviving a bad week.",
     "capped": false
   },
   "position": {
@@ -1917,7 +1927,7 @@
     "stop_level": 24209.0,
     "sl_rs": 1340,
     "lots": 2,
-    "pnl": -228.0,
+    "pnl": -365.0,
     "peak": -228.0,
     "floor": null
   },
