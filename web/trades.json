@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-07-29 12:45",
+  "last_updated": "2026-07-29 12:50",
   "summary": {
-    "total_trades": 107,
+    "total_trades": 108,
     "wins": 55,
-    "losses": 52,
-    "win_rate": 51.4,
-    "total_pnl": 5236.0,
+    "losses": 53,
+    "win_rate": 50.9,
+    "total_pnl": 3886.0,
     "avg_win": 515.0,
-    "avg_loss": -444.0
+    "avg_loss": -461.0
   },
   "trades": [
     {
@@ -1828,6 +1828,23 @@
       "lots": 2,
       "gross": 620.0,
       "charges": 71.94
+    },
+    {
+      "id": 111,
+      "date": "2026-07-29",
+      "time": "12:50",
+      "score": 71,
+      "entry": 24228.15,
+      "exit": 24211.3,
+      "pnl": -1350.42,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 18837.0,
+      "lots": 3,
+      "gross": -1270.0,
+      "charges": 80.42
     }
   ],
   "daily_pnl": {
@@ -1851,12 +1868,22 @@
     "2026-07-23": 3107.0,
     "2026-07-24": -3098.0,
     "2026-07-27": 1800.0,
-    "2026-07-29": 1091.0
+    "2026-07-29": -259.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "12:50:14",
+      "msg": "STOP LOSS NIFTY CE | SL:Rs.-1290 Charges:Rs.80 NET:Rs.-1350 | Capital:Rs.25569",
+      "cls": "err"
+    },
+    {
+      "time": "12:45:15",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:40:15",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -1946,24 +1973,14 @@
       "time": "12:10:00",
       "msg": "STAIR UP NIFTY CE | Peak:Rs.701 \u2014 floor locked at Rs.600",
       "cls": "ok"
-    },
-    {
-      "time": "12:05:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:00:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
   "supertrend_bullish": null,
   "oi_nifty": null,
-  "running_capital": 26919.0,
+  "running_capital": 25569.0,
   "trade_mode": "paper",
-  "nifty_price": 24223.2,
+  "nifty_price": 24211.3,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -1996,18 +2013,7 @@
     "verdict": "Not ready - need ~26 more trades, surviving a bad week.",
     "capped": false
   },
-  "position": {
-    "otype": "CE",
-    "strike": 24300,
-    "entry": 24228.0,
-    "premium_entry": 96.6,
-    "stop_level": 24212.0,
-    "sl_rs": 1290,
-    "lots": 3,
-    "pnl": -488.0,
-    "peak": 19.0,
-    "floor": null
-  },
+  "position": null,
   "rung_base": [
     150,
     250,
