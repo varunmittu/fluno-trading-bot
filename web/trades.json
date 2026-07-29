@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29 12:55",
+  "last_updated": "2026-07-29 13:00",
   "summary": {
     "total_trades": 108,
     "wins": 55,
@@ -1875,6 +1875,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:00:21",
+      "msg": "NIFTY:24230 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:3/99 Lots:1L Cap:Rs.25569 Daily:Rs.-259",
+      "cls": ""
+    },
+    {
+      "time": "13:00:21",
+      "msg": "Gated trade skipped \u2014 confirmation timeout",
+      "cls": "info"
+    },
+    {
+      "time": "13:00:20",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:55:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:55:19",
       "msg": "NIFTY:24226 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:3/99 Lots:1L Cap:Rs.25569 Daily:Rs.-259",
       "cls": ""
@@ -1953,26 +1973,6 @@
       "time": "12:20:07",
       "msg": "NIFTY:24229 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:2/99 Lots:3L Cap:Rs.26919 Daily:Rs.1091",
       "cls": ""
-    },
-    {
-      "time": "12:20:07",
-      "msg": "Trade #3 gate: conf 71% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "12:20:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:16:05",
-      "msg": "PRE-ALERT: NIFTY 24233 near or_hi 24224",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:04",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -1980,7 +1980,7 @@
   "oi_nifty": null,
   "running_capital": 25569.0,
   "trade_mode": "paper",
-  "nifty_price": 24225.5,
+  "nifty_price": 24229.75,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
