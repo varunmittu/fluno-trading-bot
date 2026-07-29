@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29 12:25",
+  "last_updated": "2026-07-29 12:30",
   "summary": {
     "total_trades": 107,
     "wins": 55,
@@ -1855,8 +1855,13 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "12:25:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:25:10",
       "msg": "[PAPER] #3 BULLISH \u2014 BUY CALL (CE) | NIFTY 24300 @ Rs.96.6 | BREAK HIGH 24041 | Conf:71% SL:Rs.1290 | 3L Inv:Rs.18837",
@@ -1951,11 +1956,6 @@
       "time": "11:45:18",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "11:40:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -1963,7 +1963,7 @@
   "oi_nifty": null,
   "running_capital": 26919.0,
   "trade_mode": "paper",
-  "nifty_price": 24228.15,
+  "nifty_price": 24223.7,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2004,8 +2004,8 @@
     "stop_level": 24212.0,
     "sl_rs": 1290,
     "lots": 3,
-    "pnl": 0.0,
-    "peak": 0,
+    "pnl": -137.0,
+    "peak": -137.0,
     "floor": null
   },
   "rung_base": [
