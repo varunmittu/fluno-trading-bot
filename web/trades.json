@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29 12:50",
+  "last_updated": "2026-07-29 12:55",
   "summary": {
     "total_trades": 108,
     "wins": 55,
@@ -1875,6 +1875,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:55:19",
+      "msg": "NIFTY:24226 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:3/99 Lots:1L Cap:Rs.25569 Daily:Rs.-259",
+      "cls": ""
+    },
+    {
+      "time": "12:55:18",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:50:17",
+      "msg": "NIFTY:24211 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:3/99 Lots:1L Cap:Rs.25569 Daily:Rs.-259",
+      "cls": ""
+    },
+    {
+      "time": "12:50:17",
+      "msg": "Trade #4 gate: conf 71% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "12:50:17",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "12:50:16",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "12:50:14",
       "msg": "STOP LOSS NIFTY CE | SL:Rs.-1290 Charges:Rs.80 NET:Rs.-1350 | Capital:Rs.25569",
       "cls": "err"
@@ -1943,36 +1973,6 @@
       "time": "12:15:04",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "12:15:04",
-      "msg": "NIFTY:24240 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:2/99 Lots:2L Cap:Rs.26919 Daily:Rs.1091",
-      "cls": ""
-    },
-    {
-      "time": "12:15:04",
-      "msg": "Confidence gate: BREAK HIGH 24041 scored 6.5/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:03",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:02",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.701 Floor:Rs.600 Charges:Rs.72 NET:Rs.+548 | Capital:Rs.26919",
-      "cls": "ok"
-    },
-    {
-      "time": "12:10:01",
-      "msg": "RIDING NIFTY CE | Peak:Rs.701 Now:Rs.701 | staircase floor Rs.600",
-      "cls": "ok"
-    },
-    {
-      "time": "12:10:00",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.701 \u2014 floor locked at Rs.600",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -1980,7 +1980,7 @@
   "oi_nifty": null,
   "running_capital": 25569.0,
   "trade_mode": "paper",
-  "nifty_price": 24211.3,
+  "nifty_price": 24225.5,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
