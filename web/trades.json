@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29 11:20",
+  "last_updated": "2026-07-29 11:25",
   "summary": {
     "total_trades": 106,
     "wins": 54,
@@ -1841,6 +1841,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "11:20:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:15:16",
       "msg": "Validation: trust 3.7/10 (n=34)",
       "cls": "info"
@@ -1886,7 +1891,7 @@
   "oi_nifty": null,
   "running_capital": 26371.0,
   "trade_mode": "paper",
-  "nifty_price": 24232.85,
+  "nifty_price": 24236.3,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -1927,8 +1932,8 @@
     "stop_level": 24209.0,
     "sl_rs": 1340,
     "lots": 2,
-    "pnl": -365.0,
-    "peak": -228.0,
+    "pnl": 84.0,
+    "peak": 84.0,
     "floor": null
   },
   "rung_base": [
