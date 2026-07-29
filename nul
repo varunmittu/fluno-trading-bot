@@ -1,0 +1,4 @@
+
+[notice] A new release of pip is available: 24.0 -> 26.1.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+Another copy of the bot is already running — exiting. (Check the dashboard at http://localhost:5000)
