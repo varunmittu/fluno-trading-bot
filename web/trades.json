@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29 12:15",
+  "last_updated": "2026-07-29 12:20",
   "summary": {
     "total_trades": 107,
     "wins": 55,
@@ -1858,6 +1858,46 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:20:07",
+      "msg": "NIFTY:24229 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:2/99 Lots:3L Cap:Rs.26919 Daily:Rs.1091",
+      "cls": ""
+    },
+    {
+      "time": "12:20:07",
+      "msg": "Trade #3 gate: conf 71% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "12:20:06",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:16:05",
+      "msg": "PRE-ALERT: NIFTY 24233 near or_hi 24224",
+      "cls": "info"
+    },
+    {
+      "time": "12:15:04",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "12:15:04",
+      "msg": "NIFTY:24240 YdH:24041/YdL:23955 Sig:BREAK HIGH 24041 T:2/99 Lots:2L Cap:Rs.26919 Daily:Rs.1091",
+      "cls": ""
+    },
+    {
+      "time": "12:15:04",
+      "msg": "Confidence gate: BREAK HIGH 24041 scored 6.5/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "12:15:03",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "12:15:02",
       "msg": "STAIR BOOK NIFTY CE | Peak:Rs.701 Floor:Rs.600 Charges:Rs.72 NET:Rs.+548 | Capital:Rs.26919",
       "cls": "ok"
@@ -1916,46 +1956,6 @@
       "time": "11:25:15",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "11:20:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:15:16",
-      "msg": "Validation: trust 3.7/10 (n=34)",
-      "cls": "info"
-    },
-    {
-      "time": "11:14:53",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:14:51",
-      "msg": "Kite: loaded 1546 NIFTY option contracts",
-      "cls": "info"
-    },
-    {
-      "time": "11:14:47",
-      "msg": "Restored today's booked P&L from DB: Rs.+542.9",
-      "cls": "info"
-    },
-    {
-      "time": "11:14:47",
-      "msg": "Restored 1 open position(s) from disk.",
-      "cls": "info"
-    },
-    {
-      "time": "11:14:45",
-      "msg": "Capital: Rs.26371 | Lots: 2L (130 units)",
-      "cls": "info"
-    },
-    {
-      "time": "11:14:45",
-      "msg": "Bot started | PAPER TRADE | MANUAL /confirm mode \u2014 send /auto for hands-free | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
-      "cls": "err"
     }
   ],
   "vix": null,
@@ -1963,7 +1963,7 @@
   "oi_nifty": null,
   "running_capital": 26919.0,
   "trade_mode": "paper",
-  "nifty_price": 24240.1,
+  "nifty_price": 24228.9,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
