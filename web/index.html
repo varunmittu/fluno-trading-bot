@@ -346,7 +346,13 @@ function drawCalendar(daily){
 }
 
 async function load(){
-  let d; try{d=await fetch('trades.json?t='+Date.now()).then(r=>r.json());}catch(e){return;}
+  // Live data comes from GitHub (bot pushes there every 15 min) so the page
+  // NEVER needs a Vercel redeploy — it just re-fetches. Falls back to the
+  // bundled copy if GitHub is briefly unreachable.
+  const _RAW='https://raw.githubusercontent.com/varunmittu/fluno-trading-bot/main/web/trades.json';
+  let d;
+  try{d=await fetch(_RAW+'?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json();});}
+  catch(e){try{d=await fetch('trades.json?t='+Date.now()).then(r=>r.json());}catch(e2){return;}}
   const real=(d.trade_mode==='real');
   document.getElementById('hero').classList.toggle('real',real);
   const mb=document.getElementById('mode');mb.textContent=real?'REAL MONEY':'PAPER';mb.className='badge'+(real?' real':'');
