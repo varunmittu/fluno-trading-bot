@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-30 10:00",
+  "last_updated": "2026-07-30 10:15",
   "summary": {
     "total_trades": 108,
     "wins": 55,
@@ -1875,6 +1875,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:15:21",
+      "msg": "NIFTY:24245 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:15:21",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:21",
+      "msg": "Kite: loaded 1558 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:10:16",
+      "msg": "NIFTY:24262 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:05:15",
+      "msg": "NIFTY:24275 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:00:16",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:00:15",
       "msg": "NIFTY:24275 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
       "cls": ""
@@ -1943,36 +1973,6 @@
       "time": "09:10:07",
       "msg": "Morning Telegram ping sent",
       "cls": "info"
-    },
-    {
-      "time": "08:46:58",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
-    },
-    {
-      "time": "00:00:43",
-      "msg": "New trading day | Capital: Rs.25569 | Lots: 2L",
-      "cls": "info"
-    },
-    {
-      "time": "17:24:57",
-      "msg": "Validation: trust 3.8/10 (n=36)",
-      "cls": "info"
-    },
-    {
-      "time": "17:24:26",
-      "msg": "Restored today's booked P&L from DB: Rs.-259.5",
-      "cls": "info"
-    },
-    {
-      "time": "17:24:26",
-      "msg": "3 trade(s) done today (from DB) \u2014 96 gated slot(s) left.",
-      "cls": "info"
-    },
-    {
-      "time": "17:24:25",
-      "msg": "Capital: Rs.25569 | Lots: 2L (130 units)",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1980,7 +1980,7 @@
   "oi_nifty": null,
   "running_capital": 25569.0,
   "trade_mode": "paper",
-  "nifty_price": 24274.55,
+  "nifty_price": 24245.4,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
