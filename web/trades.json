@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-30 15:05",
+  "last_updated": "2026-07-30 15:20",
   "summary": {
     "total_trades": 108,
     "wins": 55,
@@ -1875,6 +1875,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:20:04",
+      "msg": "NIFTY:24314 YdH:24284/YdL:24137 Sig:FADE 24331->24266 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:15:03",
+      "msg": "NIFTY:24318 YdH:24284/YdL:24137 Sig:FADE 24331->24266 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:10:03",
+      "msg": "NIFTY:24322 YdH:24284/YdL:24137 Sig:FADE 24331->24266 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:05:04",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:05:02",
       "msg": "NIFTY:24301 YdH:24284/YdL:24137 Sig:FADE 24331->24266 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
       "cls": ""
@@ -1953,26 +1973,6 @@
       "time": "14:40:13",
       "msg": "NIFTY:24267 YdH:24284/YdL:24137 Sig:FADE 24331->24267 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "14:40:13",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:40:13",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:38:32",
-      "msg": "PRE-ALERT: NIFTY 24262 near or_hi 24287",
-      "cls": "info"
-    },
-    {
-      "time": "14:37:51",
-      "msg": "PRE-ALERT: NIFTY 24260 near yd_high 24284",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1980,7 +1980,7 @@
   "oi_nifty": null,
   "running_capital": 25569.0,
   "trade_mode": "paper",
-  "nifty_price": 24300.95,
+  "nifty_price": 24314.05,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
