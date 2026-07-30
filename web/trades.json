@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-30 12:50",
+  "last_updated": "2026-07-30 13:05",
   "summary": {
     "total_trades": 108,
     "wins": 55,
@@ -1875,6 +1875,71 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:05:12",
+      "msg": "NIFTY:24280 YdH:24284/YdL:24137 Sig:FADE 24331->24280 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:05:12",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:05:11",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:01:30",
+      "msg": "PRE-ALERT: NIFTY 24287 near fade 24295",
+      "cls": "info"
+    },
+    {
+      "time": "13:00:09",
+      "msg": "NIFTY:24290 YdH:24284/YdL:24137 Sig:FADE 24331->24290 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:00:09",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:00:09",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:55:08",
+      "msg": "NIFTY:24296 YdH:24284/YdL:24137 Sig:BREAK HIGH 24284 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:55:08",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "12:55:07",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:53:06",
+      "msg": "PRE-ALERT: NIFTY 24294 near yd_high 24284",
+      "cls": "info"
+    },
+    {
+      "time": "12:52:45",
+      "msg": "PRE-ALERT: NIFTY 24296 near or_hi 24287",
+      "cls": "info"
+    },
+    {
+      "time": "12:50:06",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:50:04",
       "msg": "NIFTY:24301 YdH:24284/YdL:24137 Sig:BREAK HIGH 24284 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
       "cls": ""
@@ -1908,71 +1973,6 @@
       "time": "12:45:02",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "12:40:01",
-      "msg": "NIFTY:24304 YdH:24284/YdL:24137 Sig:BREAK HIGH 24284 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:40:00",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:38:00",
-      "msg": "PRE-ALERT: NIFTY 24303 near yd_high 24284",
-      "cls": "info"
-    },
-    {
-      "time": "12:37:39",
-      "msg": "PRE-ALERT: NIFTY 24311 near or_hi 24287",
-      "cls": "info"
-    },
-    {
-      "time": "12:35:18",
-      "msg": "NIFTY:24310 YdH:24284/YdL:24137 Sig:BREAK HIGH 24284 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:35:18",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:35:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:31:17",
-      "msg": "PRE-ALERT: NIFTY 24267 near fade 24251",
-      "cls": "info"
-    },
-    {
-      "time": "12:30:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:30:16",
-      "msg": "NIFTY:24263 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:30:15",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:25:14",
-      "msg": "NIFTY:24259 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:25:14",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1980,7 +1980,7 @@
   "oi_nifty": null,
   "running_capital": 25569.0,
   "trade_mode": "paper",
-  "nifty_price": 24301.45,
+  "nifty_price": 24279.5,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
