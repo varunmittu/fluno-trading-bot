@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-30 09:45",
+  "last_updated": "2026-07-30 10:00",
   "summary": {
     "total_trades": 108,
     "wins": 55,
@@ -1875,6 +1875,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:00:15",
+      "msg": "NIFTY:24275 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:55:14",
+      "msg": "NIFTY:24261 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:50:13",
+      "msg": "NIFTY:24274 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:45:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:45:12",
       "msg": "NIFTY:24258 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
       "cls": ""
@@ -1953,16 +1973,6 @@
       "time": "17:24:25",
       "msg": "Capital: Rs.25569 | Lots: 2L (130 units)",
       "cls": "info"
-    },
-    {
-      "time": "17:24:25",
-      "msg": "Bot started | PAPER TRADE | MANUAL /confirm mode \u2014 send /auto for hands-free | Strategy: BREAKOUT v5.1 (ATR stop + staircase + 0.15% fade + expiry-day next-week + window 10:15-15:00 + AI council display) | SL: 1.5xATR, Rs.200-1000/lot | Daily stop: Rs.-1000",
-      "cls": "err"
-    },
-    {
-      "time": "17:24:25",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -1970,7 +1980,7 @@
   "oi_nifty": null,
   "running_capital": 25569.0,
   "trade_mode": "paper",
-  "nifty_price": 24258.0,
+  "nifty_price": 24274.55,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
