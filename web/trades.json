@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-31 11:00",
+  "last_updated": "2026-07-31 11:20",
   "summary": {
     "total_trades": 108,
     "wins": 55,
@@ -1875,6 +1875,26 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "11:20:11",
+      "msg": "RIDING NIFTY CE | Peak:Rs.461 Now:Rs.461 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "11:15:09",
+      "msg": "RIDING NIFTY CE | Peak:Rs.362 Now:Rs.362 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "11:15:08",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.362 \u2014 floor locked at Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "11:00:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:45:12",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -1953,26 +1973,6 @@
       "time": "10:15:07",
       "msg": "Kite: loaded 1562 NIFTY option contracts",
       "cls": "info"
-    },
-    {
-      "time": "10:10:00",
-      "msg": "NIFTY:24341 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:05:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:05:18",
-      "msg": "NIFTY:24351 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:00:16",
-      "msg": "NIFTY:24356 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -1980,7 +1980,7 @@
   "oi_nifty": null,
   "running_capital": 25569.0,
   "trade_mode": "paper",
-  "nifty_price": 24354.5,
+  "nifty_price": 24363.05,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2021,9 +2021,9 @@
     "stop_level": 24327.0,
     "sl_rs": 1400,
     "lots": 2,
-    "pnl": 16.0,
-    "peak": 250.0,
-    "floor": null
+    "pnl": 461.0,
+    "peak": 461.0,
+    "floor": 300.0
   },
   "rung_base": [
     150,
