@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-31 13:15",
+  "last_updated": "2026-07-31 13:30",
   "summary": {
     "total_trades": 109,
     "wins": 56,
@@ -1893,6 +1893,46 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:30:17",
+      "msg": "NIFTY:24417 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
+      "cls": ""
+    },
+    {
+      "time": "13:30:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:25:14",
+      "msg": "NIFTY:24425 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
+      "cls": ""
+    },
+    {
+      "time": "13:25:14",
+      "msg": "Trade #2 gate: conf 71% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "13:25:12",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:20:09",
+      "msg": "NIFTY:24422 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
+      "cls": ""
+    },
+    {
+      "time": "13:20:09",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:15:08",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:15:06",
       "msg": "NIFTY:24416 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
       "cls": ""
@@ -1951,46 +1991,6 @@
       "time": "12:55:11",
       "msg": "NIFTY:24408 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
       "cls": ""
-    },
-    {
-      "time": "12:55:11",
-      "msg": "Trade #2 gate: conf 71% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "12:55:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:50:07",
-      "msg": "NIFTY:24411 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
-      "cls": ""
-    },
-    {
-      "time": "12:50:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:45:03",
-      "msg": "NIFTY:24403 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
-      "cls": ""
-    },
-    {
-      "time": "12:45:02",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:40:20",
-      "msg": "NIFTY:24399 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
-      "cls": ""
-    },
-    {
-      "time": "12:40:19",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -1998,7 +1998,7 @@
   "oi_nifty": null,
   "running_capital": 26105.0,
   "trade_mode": "paper",
-  "nifty_price": 24415.5,
+  "nifty_price": 24416.75,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
