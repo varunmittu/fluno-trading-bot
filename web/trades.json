@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-07-31 13:50",
+  "last_updated": "2026-07-31 14:10",
   "summary": {
-    "total_trades": 109,
-    "wins": 56,
+    "total_trades": 110,
+    "wins": 57,
     "losses": 53,
-    "win_rate": 51.4,
-    "total_pnl": 4422.0,
-    "avg_win": 515.0,
+    "win_rate": 51.8,
+    "total_pnl": 4857.0,
+    "avg_win": 514.0,
     "avg_loss": -461.0
   },
   "trades": [
@@ -1862,6 +1862,23 @@
       "lots": 2,
       "gross": 620.0,
       "charges": 84.47
+    },
+    {
+      "id": 113,
+      "date": "2026-07-31",
+      "time": "14:05",
+      "score": 71,
+      "entry": 24402.25,
+      "exit": 24394.8,
+      "pnl": 435.6,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 19617.0,
+      "lots": 2,
+      "gross": 520.0,
+      "charges": 84.4
     }
   ],
   "daily_pnl": {
@@ -1886,12 +1903,57 @@
     "2026-07-24": -3098.0,
     "2026-07-27": 1800.0,
     "2026-07-29": -259.0,
-    "2026-07-31": 536.0
+    "2026-07-31": 972.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "14:10:08",
+      "msg": "[PAPER] #3 BULLISH \u2014 BUY CALL (CE) | NIFTY 24450 @ Rs.150.2 | BREAK HIGH 24343 | Conf:76% SL:Rs.940 | 2L Inv:Rs.19526",
+      "cls": "ok"
+    },
+    {
+      "time": "14:10:06",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:05:03",
+      "msg": "NIFTY:24395 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:2/99 Lots:2L Cap:Rs.26540 Daily:Rs.971",
+      "cls": ""
+    },
+    {
+      "time": "14:05:03",
+      "msg": "Trade #3 gate: conf 76% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "14:05:02",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:05:00",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.578 Floor:Rs.500 Charges:Rs.84 NET:Rs.+436 | Capital:Rs.26540",
+      "cls": "ok"
+    },
+    {
+      "time": "14:00:18",
+      "msg": "RIDING NIFTY CE | Peak:Rs.578 Now:Rs.578 | staircase floor Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "14:00:17",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.578 \u2014 floor locked at Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "13:50:13",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:35:22",
       "msg": "[PAPER] #2 BULLISH \u2014 BUY CALL (CE) | NIFTY 24450 @ Rs.150.9 | BREAK HIGH 24343 | Conf:71% SL:Rs.840 | 2L Inv:Rs.19617",
@@ -1946,59 +2008,14 @@
       "time": "13:15:08",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "13:15:06",
-      "msg": "NIFTY:24416 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
-      "cls": ""
-    },
-    {
-      "time": "13:15:05",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:11:43",
-      "msg": "PRE-ALERT: NIFTY 24414 near fade 24391",
-      "cls": "info"
-    },
-    {
-      "time": "13:10:02",
-      "msg": "NIFTY:24419 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
-      "cls": ""
-    },
-    {
-      "time": "13:10:01",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:05:19",
-      "msg": "NIFTY:24416 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
-      "cls": ""
-    },
-    {
-      "time": "13:05:19",
-      "msg": "Gated trade skipped \u2014 confirmation timeout",
-      "cls": "info"
-    },
-    {
-      "time": "13:05:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:00:15",
-      "msg": "NIFTY:24414 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
-      "cls": ""
     }
   ],
   "vix": null,
   "supertrend_bullish": null,
   "oi_nifty": null,
-  "running_capital": 26105.0,
+  "running_capital": 26540.0,
   "trade_mode": "paper",
-  "nifty_price": 24399.3,
+  "nifty_price": 24390.6,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2034,13 +2051,13 @@
   "position": {
     "otype": "CE",
     "strike": 24450,
-    "entry": 24402.0,
-    "premium_entry": 150.9,
-    "stop_level": 24386.0,
-    "sl_rs": 840,
+    "entry": 24391.0,
+    "premium_entry": 150.2,
+    "stop_level": 24373.0,
+    "sl_rs": 940,
     "lots": 2,
-    "pnl": -173.0,
-    "peak": -168.0,
+    "pnl": 0.0,
+    "peak": 0,
     "floor": null
   },
   "rung_base": [
