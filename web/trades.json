@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-31 14:25",
+  "last_updated": "2026-07-31 14:45",
   "summary": {
     "total_trades": 111,
     "wins": 58,
@@ -1927,6 +1927,81 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:45:16",
+      "msg": "NIFTY:24365 YdH:24343/YdL:24187 Sig:FADE 24429->24365 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
+      "cls": ""
+    },
+    {
+      "time": "14:45:16",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "14:45:15",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:41:13",
+      "msg": "PRE-ALERT: NIFTY 24366 near yd_high 24343",
+      "cls": "info"
+    },
+    {
+      "time": "14:40:12",
+      "msg": "NIFTY:24373 YdH:24343/YdL:24187 Sig:FADE 24429->24373 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
+      "cls": ""
+    },
+    {
+      "time": "14:40:12",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "14:40:11",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:36:49",
+      "msg": "PRE-ALERT: NIFTY 24372 near fade 24393",
+      "cls": "info"
+    },
+    {
+      "time": "14:36:28",
+      "msg": "PRE-ALERT: NIFTY 24371 near or_hi 24378",
+      "cls": "info"
+    },
+    {
+      "time": "14:35:07",
+      "msg": "NIFTY:24374 YdH:24343/YdL:24187 Sig:FADE 24429->24374 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
+      "cls": ""
+    },
+    {
+      "time": "14:35:07",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "14:35:07",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:30:04",
+      "msg": "NIFTY:24395 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
+      "cls": ""
+    },
+    {
+      "time": "14:30:04",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:25:23",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:25:21",
       "msg": "NIFTY:24399 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
       "cls": ""
@@ -1950,81 +2025,6 @@
       "time": "14:21:17",
       "msg": "PRE-ALERT: NIFTY 24394 near or_hi 24378",
       "cls": "info"
-    },
-    {
-      "time": "14:20:16",
-      "msg": "NIFTY:24394 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
-      "cls": ""
-    },
-    {
-      "time": "14:20:16",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:20:15",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:20:14",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.594 Floor:Rs.500 Charges:Rs.84 NET:Rs.+436 | Capital:Rs.26976",
-      "cls": "ok"
-    },
-    {
-      "time": "14:15:11",
-      "msg": "RIDING NIFTY CE | Peak:Rs.594 Now:Rs.594 | staircase floor Rs.500",
-      "cls": "ok"
-    },
-    {
-      "time": "14:15:11",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.594 \u2014 floor locked at Rs.500",
-      "cls": "ok"
-    },
-    {
-      "time": "14:10:10",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:10:08",
-      "msg": "[PAPER] #3 BULLISH \u2014 BUY CALL (CE) | NIFTY 24450 @ Rs.150.2 | BREAK HIGH 24343 | Conf:76% SL:Rs.940 | 2L Inv:Rs.19526",
-      "cls": "ok"
-    },
-    {
-      "time": "14:10:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:05:03",
-      "msg": "NIFTY:24395 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:2/99 Lots:2L Cap:Rs.26540 Daily:Rs.971",
-      "cls": ""
-    },
-    {
-      "time": "14:05:03",
-      "msg": "Trade #3 gate: conf 76% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "14:05:02",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:05:00",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.578 Floor:Rs.500 Charges:Rs.84 NET:Rs.+436 | Capital:Rs.26540",
-      "cls": "ok"
-    },
-    {
-      "time": "14:00:18",
-      "msg": "RIDING NIFTY CE | Peak:Rs.578 Now:Rs.578 | staircase floor Rs.500",
-      "cls": "ok"
-    },
-    {
-      "time": "14:00:17",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.578 \u2014 floor locked at Rs.500",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2032,7 +2032,7 @@
   "oi_nifty": null,
   "running_capital": 26976.0,
   "trade_mode": "paper",
-  "nifty_price": 24398.95,
+  "nifty_price": 24365.35,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
