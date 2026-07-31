@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-31 10:25",
+  "last_updated": "2026-07-31 10:45",
   "summary": {
     "total_trades": 108,
     "wins": 55,
@@ -1872,8 +1872,23 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "10:30:21",
+      "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24400 @ Rs.150.6 | BREAK HIGH 24343 | Conf:76% SL:Rs.1400 | 2L Inv:Rs.19578",
+      "cls": "ok"
+    },
+    {
+      "time": "10:30:19",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:25:19",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:25:17",
       "msg": "NIFTY:24352 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
@@ -1958,21 +1973,6 @@
       "time": "09:55:13",
       "msg": "NIFTY:24351 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:50:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:50:10",
-      "msg": "NIFTY:24356 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:45:07",
-      "msg": "NIFTY:24350 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -1980,7 +1980,7 @@
   "oi_nifty": null,
   "running_capital": 25569.0,
   "trade_mode": "paper",
-  "nifty_price": 24352.15,
+  "nifty_price": 24354.1,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2013,7 +2013,18 @@
     "verdict": "Not ready - need ~24 more trades, surviving a bad week.",
     "capped": false
   },
-  "position": null,
+  "position": {
+    "otype": "CE",
+    "strike": 24400,
+    "entry": 24354.0,
+    "premium_entry": 150.6,
+    "stop_level": 24327.0,
+    "sl_rs": 1400,
+    "lots": 2,
+    "pnl": -4.0,
+    "peak": 250.0,
+    "floor": null
+  },
   "rung_base": [
     150,
     250,
