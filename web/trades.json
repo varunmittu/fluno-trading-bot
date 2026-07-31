@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-31 09:35",
+  "last_updated": "2026-07-31 09:50",
   "summary": {
     "total_trades": 108,
     "wins": 55,
@@ -1875,6 +1875,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:50:10",
+      "msg": "NIFTY:24356 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:45:07",
+      "msg": "NIFTY:24350 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:40:05",
+      "msg": "NIFTY:24310 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:35:04",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:35:03",
       "msg": "NIFTY:24312 YdH:24284/YdL:24137 Sig:-- T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
       "cls": ""
@@ -1953,26 +1973,6 @@
       "time": "15:10:03",
       "msg": "NIFTY:24322 YdH:24284/YdL:24137 Sig:FADE 24331->24266 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "15:05:04",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:05:02",
-      "msg": "NIFTY:24301 YdH:24284/YdL:24137 Sig:FADE 24331->24266 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:00:01",
-      "msg": "NIFTY:24277 YdH:24284/YdL:24137 Sig:FADE 24331->24266 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:55:20",
-      "msg": "NIFTY:24266 YdH:24284/YdL:24137 Sig:FADE 24331->24266 T:0/99 Lots:2L Cap:Rs.25569 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -1980,7 +1980,7 @@
   "oi_nifty": null,
   "running_capital": 25569.0,
   "trade_mode": "paper",
-  "nifty_price": 24312.5,
+  "nifty_price": 24356.45,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
