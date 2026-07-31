@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-31 12:15",
+  "last_updated": "2026-07-31 12:35",
   "summary": {
     "total_trades": 109,
     "wins": 56,
@@ -1893,6 +1893,71 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:35:15",
+      "msg": "NIFTY:24393 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
+      "cls": ""
+    },
+    {
+      "time": "12:35:15",
+      "msg": "Gated trade skipped \u2014 confirmation timeout",
+      "cls": "info"
+    },
+    {
+      "time": "12:35:14",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:30:11",
+      "msg": "NIFTY:24386 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
+      "cls": ""
+    },
+    {
+      "time": "12:30:10",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:25:07",
+      "msg": "NIFTY:24379 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
+      "cls": ""
+    },
+    {
+      "time": "12:25:07",
+      "msg": "Trade #2 gate: conf 71% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "12:25:05",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:22:04",
+      "msg": "PRE-ALERT: NIFTY 24376 near or_hi 24378",
+      "cls": "info"
+    },
+    {
+      "time": "12:20:02",
+      "msg": "NIFTY:24375 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
+      "cls": ""
+    },
+    {
+      "time": "12:20:02",
+      "msg": "Confidence gate: BREAK HIGH 24343 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "12:20:02",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:15:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:15:19",
       "msg": "NIFTY:24383 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
       "cls": ""
@@ -1926,71 +1991,6 @@
       "time": "12:06:52",
       "msg": "PRE-ALERT: NIFTY 24367 near or_hi 24378",
       "cls": "info"
-    },
-    {
-      "time": "12:05:10",
-      "msg": "NIFTY:24361 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
-      "cls": ""
-    },
-    {
-      "time": "12:05:10",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:00:09",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:00:07",
-      "msg": "NIFTY:24365 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
-      "cls": ""
-    },
-    {
-      "time": "12:00:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:55:03",
-      "msg": "NIFTY:24362 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
-      "cls": ""
-    },
-    {
-      "time": "11:55:03",
-      "msg": "CHOP GUARD: ADX 12 < 15 \u2014 signal skipped, market too choppy",
-      "cls": "info"
-    },
-    {
-      "time": "11:55:02",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:52:20",
-      "msg": "PRE-ALERT: NIFTY 24362 near yd_high 24343",
-      "cls": "info"
-    },
-    {
-      "time": "11:51:39",
-      "msg": "PRE-ALERT: NIFTY 24365 near or_hi 24378",
-      "cls": "info"
-    },
-    {
-      "time": "11:50:18",
-      "msg": "NIFTY:24366 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
-      "cls": ""
-    },
-    {
-      "time": "11:50:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:45:12",
-      "msg": "NIFTY:24364 YdH:24343/YdL:24187 Sig:BREAK HIGH 24343 T:1/99 Lots:2L Cap:Rs.26105 Daily:Rs.536",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -1998,7 +1998,7 @@
   "oi_nifty": null,
   "running_capital": 26105.0,
   "trade_mode": "paper",
-  "nifty_price": 24383.15,
+  "nifty_price": 24392.75,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
