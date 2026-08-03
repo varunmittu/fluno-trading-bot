@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-08-03 10:05",
+  "last_updated": "2026-08-03 10:25",
   "summary": {
-    "total_trades": 111,
-    "wins": 58,
+    "total_trades": 112,
+    "wins": 59,
     "losses": 53,
-    "win_rate": 52.3,
-    "total_pnl": 5293.0,
-    "avg_win": 513.0,
+    "win_rate": 52.7,
+    "total_pnl": 5529.0,
+    "avg_win": 508.0,
     "avg_loss": -461.0
   },
   "trades": [
@@ -1896,6 +1896,23 @@
       "lots": 2,
       "gross": 520.0,
       "charges": 84.24
+    },
+    {
+      "id": 115,
+      "date": "2026-08-03",
+      "time": "10:25",
+      "score": 71,
+      "entry": 24581.0,
+      "exit": 24578.65,
+      "pnl": 235.88,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "CE",
+      "invested": 19617.0,
+      "lots": 2,
+      "gross": 320.0,
+      "charges": 84.12
     }
   ],
   "daily_pnl": {
@@ -1920,12 +1937,53 @@
     "2026-07-24": -3098.0,
     "2026-07-27": 1800.0,
     "2026-07-29": -259.0,
-    "2026-07-31": 1408.0
+    "2026-07-31": 1408.0,
+    "2026-08-03": 236.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "10:25:18",
+      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.362 Floor:Rs.300 Charges:Rs.84 NET:Rs.+236 | Capital:Rs.27212",
+      "cls": "ok"
+    },
+    {
+      "time": "10:20:15",
+      "msg": "RIDING NIFTY CE | Peak:Rs.362 Now:Rs.362 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "10:20:15",
+      "msg": "STAIR UP NIFTY CE | Peak:Rs.362 \u2014 floor locked at Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "10:15:11",
+      "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24650 @ Rs.150.9 | BREAK HIGH 24429 | Conf:71% SL:Rs.2000 | 2L Inv:Rs.19617",
+      "cls": "ok"
+    },
+    {
+      "time": "10:15:09",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:09",
+      "msg": "Kite: loaded 1572 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:10:01",
+      "msg": "NIFTY:24567 YdH:24343/YdL:24187 Sig:-- T:0/99 Lots:2L Cap:Rs.26976 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:05:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:05:19",
       "msg": "NIFTY:24568 YdH:24343/YdL:24187 Sig:-- T:0/99 Lots:2L Cap:Rs.26976 Daily:Rs.0",
@@ -1985,54 +2043,14 @@
       "time": "09:20:17",
       "msg": "NIFTY:24539 YdH:24343/YdL:24187 Sig:-- T:0/99 Lots:2L Cap:Rs.26976 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:15:57",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:15:55",
-      "msg": "NIFTY:24548 YdH:24343/YdL:24187 Sig:-- T:0/99 Lots:2L Cap:Rs.26976 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:10:54",
-      "msg": "Morning Telegram ping sent",
-      "cls": "info"
-    },
-    {
-      "time": "00:00:28",
-      "msg": "New trading day | Capital: Rs.26976 | Lots: 2L",
-      "cls": "info"
-    },
-    {
-      "time": "00:00:25",
-      "msg": "New trading day | Capital: Rs.26976 | Lots: 2L",
-      "cls": "info"
-    },
-    {
-      "time": "00:00:23",
-      "msg": "New trading day | Capital: Rs.26976 | Lots: 2L",
-      "cls": "info"
-    },
-    {
-      "time": "16:25:07",
-      "msg": "Validation: trust 4.0/10 (n=39)",
-      "cls": "info"
-    },
-    {
-      "time": "15:31:00",
-      "msg": "NIFTY:24367 YdH:24343/YdL:24187 Sig:FADE 24429->24370 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
-      "cls": ""
     }
   ],
   "vix": null,
   "supertrend_bullish": null,
   "oi_nifty": null,
-  "running_capital": 26976.0,
+  "running_capital": 27212.0,
   "trade_mode": "paper",
-  "nifty_price": 24568.4,
+  "nifty_price": 24578.65,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
