@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-03 13:15",
+  "last_updated": "2026-08-03 13:30",
   "summary": {
     "total_trades": 113,
     "wins": 59,
@@ -1962,6 +1962,66 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:30:15",
+      "msg": "NIFTY:24589 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
+      "cls": ""
+    },
+    {
+      "time": "13:30:15",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:30:14",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:25:12",
+      "msg": "NIFTY:24584 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
+      "cls": ""
+    },
+    {
+      "time": "13:25:12",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:25:11",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:21:49",
+      "msg": "PRE-ALERT: NIFTY 24583 near fade 24572",
+      "cls": "info"
+    },
+    {
+      "time": "13:21:28",
+      "msg": "PRE-ALERT: NIFTY 24583 near or_hi 24582",
+      "cls": "info"
+    },
+    {
+      "time": "13:20:07",
+      "msg": "NIFTY:24586 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
+      "cls": ""
+    },
+    {
+      "time": "13:20:07",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:20:06",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:15:29",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:15:04",
       "msg": "NIFTY:24577 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
       "cls": ""
@@ -2000,66 +2060,6 @@
       "time": "13:05:16",
       "msg": "NIFTY:24579 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
       "cls": ""
-    },
-    {
-      "time": "13:05:16",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "13:05:15",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:00:13",
-      "msg": "NIFTY:24585 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
-      "cls": ""
-    },
-    {
-      "time": "13:00:13",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "13:00:12",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:55:26",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:55:09",
-      "msg": "NIFTY:24589 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
-      "cls": ""
-    },
-    {
-      "time": "12:55:09",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:55:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:51:27",
-      "msg": "PRE-ALERT: NIFTY 24582 near fade 24572",
-      "cls": "info"
-    },
-    {
-      "time": "12:51:06",
-      "msg": "PRE-ALERT: NIFTY 24581 near or_hi 24582",
-      "cls": "info"
-    },
-    {
-      "time": "12:50:05",
-      "msg": "NIFTY:24583 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2067,7 +2067,7 @@
   "oi_nifty": null,
   "running_capital": 26289.0,
   "trade_mode": "paper",
-  "nifty_price": 24577.45,
+  "nifty_price": 24588.95,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
