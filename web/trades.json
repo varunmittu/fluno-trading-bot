@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-03 12:00",
+  "last_updated": "2026-08-03 12:20",
   "summary": {
     "total_trades": 112,
     "wins": 59,
@@ -1942,8 +1942,53 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "12:15:05",
+      "msg": "[PAPER] #2 BULLISH \u2014 BUY CALL (CE) | NIFTY 24650 @ Rs.152.1 | BREAK HIGH 24429 | Conf:76% SL:Rs.860 | 2L Inv:Rs.19773",
+      "cls": "ok"
+    },
+    {
+      "time": "12:15:03",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:10:21",
+      "msg": "NIFTY:24595 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
+      "cls": ""
+    },
+    {
+      "time": "12:10:21",
+      "msg": "Trade #2 gate: conf 76% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "12:10:19",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:05:16",
+      "msg": "NIFTY:24590 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
+      "cls": ""
+    },
+    {
+      "time": "12:05:16",
+      "msg": "Confidence gate: BREAK HIGH 24429 scored 6.5/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "12:05:16",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:00:16",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "12:00:13",
       "msg": "NIFTY:24593 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
@@ -1998,51 +2043,6 @@
       "time": "11:45:02",
       "msg": "NIFTY:24592 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
       "cls": ""
-    },
-    {
-      "time": "11:45:01",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:41:59",
-      "msg": "PRE-ALERT: NIFTY 24600 near or_hi 24582",
-      "cls": "info"
-    },
-    {
-      "time": "11:40:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:40:17",
-      "msg": "NIFTY:24593 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
-      "cls": ""
-    },
-    {
-      "time": "11:40:17",
-      "msg": "Confidence gate: BREAK HIGH 24429 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "11:40:16",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:35:14",
-      "msg": "NIFTY:24584 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
-      "cls": ""
-    },
-    {
-      "time": "11:35:14",
-      "msg": "Confidence gate: BREAK HIGH 24429 scored 6.5/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "11:35:13",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2050,7 +2050,7 @@
   "oi_nifty": null,
   "running_capital": 27212.0,
   "trade_mode": "paper",
-  "nifty_price": 24593.15,
+  "nifty_price": 24607.1,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2083,7 +2083,18 @@
     "verdict": "Not ready - need ~21 more trades, surviving a bad week.",
     "capped": false
   },
-  "position": null,
+  "position": {
+    "otype": "CE",
+    "strike": 24650,
+    "entry": 24601.0,
+    "premium_entry": 152.1,
+    "stop_level": 24585.0,
+    "sl_rs": 860,
+    "lots": 2,
+    "pnl": 282.0,
+    "peak": 282.0,
+    "floor": null
+  },
   "rung_base": [
     150,
     250,
