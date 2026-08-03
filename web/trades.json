@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-03 15:05",
+  "last_updated": "2026-08-03 15:20",
   "summary": {
     "total_trades": 113,
     "wins": 59,
@@ -1962,6 +1962,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:20:12",
+      "msg": "NIFTY:24573 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
+      "cls": ""
+    },
+    {
+      "time": "15:15:10",
+      "msg": "NIFTY:24573 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
+      "cls": ""
+    },
+    {
+      "time": "15:10:08",
+      "msg": "NIFTY:24567 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
+      "cls": ""
+    },
+    {
+      "time": "15:05:08",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:05:06",
       "msg": "NIFTY:24582 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
       "cls": ""
@@ -2040,26 +2060,6 @@
       "time": "14:40:08",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "14:38:26",
-      "msg": "PRE-ALERT: NIFTY 24596 near fade 24572",
-      "cls": "info"
-    },
-    {
-      "time": "14:37:25",
-      "msg": "PRE-ALERT: NIFTY 24595 near or_hi 24582",
-      "cls": "info"
-    },
-    {
-      "time": "14:35:04",
-      "msg": "NIFTY:24591 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
-      "cls": ""
-    },
-    {
-      "time": "14:35:03",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2067,7 +2067,7 @@
   "oi_nifty": null,
   "running_capital": 26289.0,
   "trade_mode": "paper",
-  "nifty_price": 24581.65,
+  "nifty_price": 24573.35,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
