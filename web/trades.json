@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-31 15:20",
+  "last_updated": "2026-08-03 09:15",
   "summary": {
     "total_trades": 111,
     "wins": 58,
@@ -1927,6 +1927,56 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:15:55",
+      "msg": "NIFTY:24548 YdH:24343/YdL:24187 Sig:-- T:0/99 Lots:2L Cap:Rs.26976 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:10:54",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:28",
+      "msg": "New trading day | Capital: Rs.26976 | Lots: 2L",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:25",
+      "msg": "New trading day | Capital: Rs.26976 | Lots: 2L",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:23",
+      "msg": "New trading day | Capital: Rs.26976 | Lots: 2L",
+      "cls": "info"
+    },
+    {
+      "time": "16:25:07",
+      "msg": "Validation: trust 4.0/10 (n=39)",
+      "cls": "info"
+    },
+    {
+      "time": "15:31:00",
+      "msg": "NIFTY:24367 YdH:24343/YdL:24187 Sig:FADE 24429->24370 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
+      "cls": ""
+    },
+    {
+      "time": "15:30:00",
+      "msg": "Error: No item with that key",
+      "cls": "err"
+    },
+    {
+      "time": "15:25:18",
+      "msg": "NIFTY:24379 YdH:24343/YdL:24187 Sig:FADE 24429->24370 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
+      "cls": ""
+    },
+    {
+      "time": "15:20:17",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:20:16",
       "msg": "NIFTY:24378 YdH:24343/YdL:24187 Sig:FADE 24429->24370 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
       "cls": ""
@@ -1975,56 +2025,6 @@
       "time": "14:52:01",
       "msg": "PRE-ALERT: NIFTY 24368 near fade 24393",
       "cls": "info"
-    },
-    {
-      "time": "14:51:40",
-      "msg": "PRE-ALERT: NIFTY 24370 near or_hi 24378",
-      "cls": "info"
-    },
-    {
-      "time": "14:50:19",
-      "msg": "NIFTY:24372 YdH:24343/YdL:24187 Sig:FADE 24429->24372 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
-      "cls": ""
-    },
-    {
-      "time": "14:50:19",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:50:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:45:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:45:16",
-      "msg": "NIFTY:24365 YdH:24343/YdL:24187 Sig:FADE 24429->24365 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
-      "cls": ""
-    },
-    {
-      "time": "14:45:16",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:45:15",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:41:13",
-      "msg": "PRE-ALERT: NIFTY 24366 near yd_high 24343",
-      "cls": "info"
-    },
-    {
-      "time": "14:40:12",
-      "msg": "NIFTY:24373 YdH:24343/YdL:24187 Sig:FADE 24429->24373 T:3/99 Lots:2L Cap:Rs.26976 Daily:Rs.1407",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2032,37 +2032,37 @@
   "oi_nifty": null,
   "running_capital": 26976.0,
   "trade_mode": "paper",
-  "nifty_price": 24377.75,
+  "nifty_price": 24548.1,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
     "empty": false,
-    "as_of": "2026-07-30 16:25",
-    "n": 36,
+    "as_of": "2026-07-31 16:25",
+    "n": 39,
     "target_n": 60,
-    "live_net": 6595.0,
-    "live_per": 183.0,
-    "live_wr": 69,
-    "sd": 948,
-    "ci_lo": -127,
-    "ci_hi": 493,
-    "t_stat": 1.16,
-    "green": 7,
+    "live_net": 8002.0,
+    "live_per": 205.0,
+    "live_wr": 72,
+    "sd": 913,
+    "ci_lo": -81,
+    "ci_hi": 492,
+    "t_stat": 1.4,
+    "green": 8,
     "red": 4,
-    "live_chg": 2715,
+    "live_chg": 2968,
     "edge_real": false,
     "bt_ok": true,
-    "bt_per": 6,
-    "gap": 177,
-    "trust": 3.8,
+    "bt_per": 14,
+    "gap": 191,
+    "trust": 4.0,
     "components": {
-      "data": 1.8,
+      "data": 2.0,
       "profitable": 1,
       "tracking": 1,
       "edge_real": 0,
       "full_sample": 0
     },
-    "verdict": "Not ready - need ~24 more trades, surviving a bad week.",
+    "verdict": "Not ready - need ~21 more trades, surviving a bad week.",
     "capped": false
   },
   "position": null,
