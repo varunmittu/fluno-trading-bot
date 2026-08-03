@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-03 10:45",
+  "last_updated": "2026-08-03 11:05",
   "summary": {
     "total_trades": 112,
     "wins": 59,
@@ -1945,6 +1945,71 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:05:09",
+      "msg": "NIFTY:24598 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
+      "cls": ""
+    },
+    {
+      "time": "11:05:09",
+      "msg": "Confidence gate: BREAK HIGH 24429 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "11:05:08",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:00:06",
+      "msg": "NIFTY:24587 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
+      "cls": ""
+    },
+    {
+      "time": "11:00:06",
+      "msg": "Confidence gate: BREAK HIGH 24429 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "11:00:05",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:56:22",
+      "msg": "PRE-ALERT: NIFTY 24591 near or_hi 24582",
+      "cls": "info"
+    },
+    {
+      "time": "10:55:01",
+      "msg": "NIFTY:24590 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
+      "cls": ""
+    },
+    {
+      "time": "10:55:00",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:50:18",
+      "msg": "NIFTY:24589 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
+      "cls": ""
+    },
+    {
+      "time": "10:50:18",
+      "msg": "Confidence gate: BREAK HIGH 24429 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "10:50:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:45:17",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:45:15",
       "msg": "NIFTY:24584 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
       "cls": ""
@@ -1978,71 +2043,6 @@
       "time": "10:40:09",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "10:35:07",
-      "msg": "NIFTY:24571 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
-      "cls": ""
-    },
-    {
-      "time": "10:35:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:30:04",
-      "msg": "NIFTY:24582 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
-      "cls": ""
-    },
-    {
-      "time": "10:30:03",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:25:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:25:21",
-      "msg": "NIFTY:24579 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:1/99 Lots:2L Cap:Rs.27212 Daily:Rs.236",
-      "cls": ""
-    },
-    {
-      "time": "10:25:21",
-      "msg": "Trade #2 gate: conf 71% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "10:25:20",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:25:18",
-      "msg": "STAIR BOOK NIFTY CE | Peak:Rs.362 Floor:Rs.300 Charges:Rs.84 NET:Rs.+236 | Capital:Rs.27212",
-      "cls": "ok"
-    },
-    {
-      "time": "10:20:15",
-      "msg": "RIDING NIFTY CE | Peak:Rs.362 Now:Rs.362 | staircase floor Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "10:20:15",
-      "msg": "STAIR UP NIFTY CE | Peak:Rs.362 \u2014 floor locked at Rs.300",
-      "cls": "ok"
-    },
-    {
-      "time": "10:15:11",
-      "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24650 @ Rs.150.9 | BREAK HIGH 24429 | Conf:71% SL:Rs.2000 | 2L Inv:Rs.19617",
-      "cls": "ok"
-    },
-    {
-      "time": "10:15:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2050,7 +2050,7 @@
   "oi_nifty": null,
   "running_capital": 27212.0,
   "trade_mode": "paper",
-  "nifty_price": 24583.8,
+  "nifty_price": 24598.3,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
