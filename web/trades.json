@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-08-04 13:45",
+  "last_updated": "2026-08-04 14:05",
   "summary": {
-    "total_trades": 115,
-    "wins": 61,
+    "total_trades": 116,
+    "wins": 62,
     "losses": 54,
-    "win_rate": 53.0,
-    "total_pnl": 4946.0,
-    "avg_win": 497.0,
+    "win_rate": 53.4,
+    "total_pnl": 5881.0,
+    "avg_win": 504.0,
     "avg_loss": -470.0
   },
   "trades": [
@@ -1964,6 +1964,23 @@
       "lots": 2,
       "gross": 320.0,
       "charges": 83.93
+    },
+    {
+      "id": 119,
+      "date": "2026-08-04",
+      "time": "14:00",
+      "score": 57,
+      "entry": 24465.8,
+      "exit": 24447.7,
+      "pnl": 935.01,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 19552.0,
+      "lots": 2,
+      "gross": 1020.0,
+      "charges": 84.99
     }
   ],
   "daily_pnl": {
@@ -1990,12 +2007,67 @@
     "2026-07-29": -259.0,
     "2026-07-31": 1408.0,
     "2026-08-03": -687.0,
-    "2026-08-04": 340.0
+    "2026-08-04": 1275.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "14:05:19",
+      "msg": "[PAPER] #4 BEARISH \u2014 BUY PUT (PE) | NIFTY 24400 @ Rs.151.2 | FADE 24667->24448 | Conf:57% SL:Rs.1260 | 2L Inv:Rs.19656",
+      "cls": "ok"
+    },
+    {
+      "time": "14:05:18",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:00:15",
+      "msg": "NIFTY:24448 YdH:24429/YdL:24300 Sig:FADE 24667->24448 T:3/99 Lots:2L Cap:Rs.27564 Daily:Rs.1275",
+      "cls": ""
+    },
+    {
+      "time": "14:00:15",
+      "msg": "Trade #4 gate: conf 57% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "14:00:14",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:00:12",
+      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.1004 Floor:Rs.1000 Charges:Rs.85 NET:Rs.+935 | Capital:Rs.27564",
+      "cls": "ok"
+    },
+    {
+      "time": "13:55:10",
+      "msg": "RIDING NIFTY PE | Peak:Rs.1004 Now:Rs.1004 | staircase floor Rs.1000",
+      "cls": "ok"
+    },
+    {
+      "time": "13:55:09",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.1004 \u2014 floor locked at Rs.1000",
+      "cls": "ok"
+    },
+    {
+      "time": "13:50:05",
+      "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24400 @ Rs.150.4 | FADE 24667->24468 | Conf:57% SL:Rs.1080 | 2L Inv:Rs.19552",
+      "cls": "ok"
+    },
+    {
+      "time": "13:50:04",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:45:23",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:45:21",
       "msg": "NIFTY:24457 YdH:24429/YdL:24300 Sig:FADE 24667->24457 T:2/99 Lots:2L Cap:Rs.26629 Daily:Rs.340",
@@ -2040,69 +2112,14 @@
       "time": "13:30:10",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "13:30:08",
-      "msg": "[PAPER] #2 BEARISH \u2014 BUY PUT (PE) | NIFTY 24400 @ Rs.150.1 | FADE 24667->24482 | Conf:57% SL:Rs.960 | 2L Inv:Rs.19513",
-      "cls": "ok"
-    },
-    {
-      "time": "13:30:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:25:02",
-      "msg": "NIFTY:24492 YdH:24429/YdL:24300 Sig:FADE 24667->24492 T:1/99 Lots:2L Cap:Rs.26393 Daily:Rs.104",
-      "cls": ""
-    },
-    {
-      "time": "13:25:01",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:20:19",
-      "msg": "NIFTY:24482 YdH:24429/YdL:24300 Sig:FADE 24667->24482 T:1/99 Lots:2L Cap:Rs.26393 Daily:Rs.104",
-      "cls": ""
-    },
-    {
-      "time": "13:20:19",
-      "msg": "Trade #2 gate: conf 57% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "13:20:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:20:17",
-      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
-      "cls": "info"
-    },
-    {
-      "time": "13:15:14",
-      "msg": "NIFTY:24481 YdH:24429/YdL:24300 Sig:FADE 24667->24481 T:1/99 Lots:2L Cap:Rs.26393 Daily:Rs.104",
-      "cls": ""
-    },
-    {
-      "time": "13:15:13",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:10:11",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
   "supertrend_bullish": null,
   "oi_nifty": null,
-  "running_capital": 26629.0,
+  "running_capital": 27564.0,
   "trade_mode": "paper",
-  "nifty_price": 24456.85,
+  "nifty_price": 24446.45,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2135,7 +2152,18 @@
     "verdict": "Not ready - need ~19 more trades, surviving a bad week.",
     "capped": false
   },
-  "position": null,
+  "position": {
+    "otype": "PE",
+    "strike": 24400,
+    "entry": 24446.0,
+    "premium_entry": 151.2,
+    "stop_level": 24471.0,
+    "sl_rs": 1260,
+    "lots": 2,
+    "pnl": 0.0,
+    "peak": 0,
+    "floor": null
+  },
   "rung_base": [
     150,
     250,
