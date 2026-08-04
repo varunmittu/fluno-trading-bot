@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-08-04 13:30",
+  "last_updated": "2026-08-04 13:45",
   "summary": {
-    "total_trades": 114,
-    "wins": 60,
+    "total_trades": 115,
+    "wins": 61,
     "losses": 54,
-    "win_rate": 52.6,
-    "total_pnl": 4710.0,
-    "avg_win": 501.0,
+    "win_rate": 53.0,
+    "total_pnl": 4946.0,
+    "avg_win": 497.0,
     "avg_loss": -470.0
   },
   "trades": [
@@ -1947,6 +1947,23 @@
       "lots": 1,
       "gross": 170.0,
       "charges": 65.7
+    },
+    {
+      "id": 118,
+      "date": "2026-08-04",
+      "time": "13:40",
+      "score": 57,
+      "entry": 24472.4,
+      "exit": 24468.1,
+      "pnl": 236.07,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 19513.0,
+      "lots": 2,
+      "gross": 320.0,
+      "charges": 83.93
     }
   ],
   "daily_pnl": {
@@ -1973,12 +1990,57 @@
     "2026-07-29": -259.0,
     "2026-07-31": 1408.0,
     "2026-08-03": -687.0,
-    "2026-08-04": 104.0
+    "2026-08-04": 340.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 0,
   "bot_log": [
+    {
+      "time": "13:45:21",
+      "msg": "NIFTY:24457 YdH:24429/YdL:24300 Sig:FADE 24667->24457 T:2/99 Lots:2L Cap:Rs.26629 Daily:Rs.340",
+      "cls": ""
+    },
+    {
+      "time": "13:45:20",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:40:18",
+      "msg": "NIFTY:24468 YdH:24429/YdL:24300 Sig:FADE 24667->24468 T:2/99 Lots:2L Cap:Rs.26629 Daily:Rs.340",
+      "cls": ""
+    },
+    {
+      "time": "13:40:18",
+      "msg": "Trade #3 gate: conf 57% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "13:40:16",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:40:14",
+      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.438 Floor:Rs.300 Charges:Rs.84 NET:Rs.+236 | Capital:Rs.26629",
+      "cls": "ok"
+    },
+    {
+      "time": "13:35:12",
+      "msg": "RIDING NIFTY PE | Peak:Rs.438 Now:Rs.438 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "13:35:11",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.438 \u2014 floor locked at Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "13:30:10",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:30:08",
       "msg": "[PAPER] #2 BEARISH \u2014 BUY PUT (PE) | NIFTY 24400 @ Rs.150.1 | FADE 24667->24482 | Conf:57% SL:Rs.960 | 2L Inv:Rs.19513",
@@ -2033,59 +2095,14 @@
       "time": "13:10:11",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "13:10:09",
-      "msg": "NIFTY:24486 YdH:24429/YdL:24300 Sig:FADE 24667->24486 T:1/99 Lots:2L Cap:Rs.26393 Daily:Rs.104",
-      "cls": ""
-    },
-    {
-      "time": "13:10:08",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:05:05",
-      "msg": "NIFTY:24494 YdH:24429/YdL:24300 Sig:FADE 24667->24494 T:1/99 Lots:2L Cap:Rs.26393 Daily:Rs.104",
-      "cls": ""
-    },
-    {
-      "time": "13:05:04",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:00:21",
-      "msg": "NIFTY:24490 YdH:24429/YdL:24300 Sig:FADE 24667->24490 T:1/99 Lots:2L Cap:Rs.26393 Daily:Rs.104",
-      "cls": ""
-    },
-    {
-      "time": "13:00:21",
-      "msg": "Gated trade skipped \u2014 confirmation timeout",
-      "cls": "info"
-    },
-    {
-      "time": "13:00:20",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:55:17",
-      "msg": "NIFTY:24498 YdH:24429/YdL:24300 Sig:FADE 24667->24498 T:1/99 Lots:2L Cap:Rs.26393 Daily:Rs.104",
-      "cls": ""
-    },
-    {
-      "time": "12:55:16",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
   "supertrend_bullish": null,
   "oi_nifty": null,
-  "running_capital": 26393.0,
+  "running_capital": 26629.0,
   "trade_mode": "paper",
-  "nifty_price": 24472.4,
+  "nifty_price": 24456.85,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2118,18 +2135,7 @@
     "verdict": "Not ready - need ~19 more trades, surviving a bad week.",
     "capped": false
   },
-  "position": {
-    "otype": "PE",
-    "strike": 24400,
-    "entry": 24472.0,
-    "premium_entry": 150.1,
-    "stop_level": 24491.0,
-    "sl_rs": 960,
-    "lots": 2,
-    "pnl": 0.0,
-    "peak": 0,
-    "floor": null
-  },
+  "position": null,
   "rung_base": [
     150,
     250,
