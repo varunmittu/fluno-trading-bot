@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-04 10:05",
+  "last_updated": "2026-08-04 10:25",
   "summary": {
     "total_trades": 113,
     "wins": 59,
@@ -1962,6 +1962,71 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:25:07",
+      "msg": "NIFTY:24593 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:25:07",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "10:25:06",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:20:04",
+      "msg": "NIFTY:24616 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:20:03",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:16:21",
+      "msg": "PRE-ALERT: NIFTY 24612 near or_lo 24590",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:20",
+      "msg": "NIFTY:24614 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:15:20",
+      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:20",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:19",
+      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:19",
+      "msg": "Kite: loaded 1874 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:10:12",
+      "msg": "NIFTY:24612 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:05:11",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:05:09",
       "msg": "NIFTY:24628 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
       "cls": ""
@@ -1995,71 +2060,6 @@
       "time": "09:40:18",
       "msg": "NIFTY:24608 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:35:16",
-      "msg": "NIFTY:24591 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:30:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:30:14",
-      "msg": "NIFTY:24600 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:25:11",
-      "msg": "NIFTY:24613 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:20:09",
-      "msg": "NIFTY:24602 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:15:09",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:15:07",
-      "msg": "NIFTY:24614 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:10:06",
-      "msg": "Morning Telegram ping sent",
-      "cls": "info"
-    },
-    {
-      "time": "00:00:41",
-      "msg": "New trading day | Capital: Rs.26289 | Lots: 1L",
-      "cls": "info"
-    },
-    {
-      "time": "16:25:19",
-      "msg": "Validation: trust 4.0/10 (n=41)",
-      "cls": "info"
-    },
-    {
-      "time": "15:31:17",
-      "msg": "NIFTY:24774 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
-      "cls": ""
-    },
-    {
-      "time": "15:30:17",
-      "msg": "Error: No item with that key",
-      "cls": "err"
-    },
-    {
-      "time": "15:25:15",
-      "msg": "NIFTY:24573 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:2/99 Lots:1L Cap:Rs.26289 Daily:Rs.-687",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2067,7 +2067,7 @@
   "oi_nifty": null,
   "running_capital": 26289.0,
   "trade_mode": "paper",
-  "nifty_price": 24627.95,
+  "nifty_price": 24592.7,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
