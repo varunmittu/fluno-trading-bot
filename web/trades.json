@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-04 14:25",
+  "last_updated": "2026-08-04 14:45",
   "summary": {
     "total_trades": 117,
     "wins": 62,
@@ -2028,8 +2028,43 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "14:45:08",
+      "msg": "RIDING NIFTY PE | Peak:Rs.428 Now:Rs.428 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:40:05",
+      "msg": "RIDING NIFTY PE | Peak:Rs.317 Now:Rs.317 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:35:02",
+      "msg": "RIDING NIFTY PE | Peak:Rs.312 Now:Rs.312 | staircase floor Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:35:02",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.312 \u2014 floor locked at Rs.300",
+      "cls": "ok"
+    },
+    {
+      "time": "14:30:20",
+      "msg": "RIDING NIFTY PE | Peak:Rs.157 Now:Rs.157 | staircase floor Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "14:30:19",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.157 \u2014 floor locked at Rs.150",
+      "cls": "ok"
+    },
+    {
+      "time": "14:25:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "14:25:16",
       "msg": "[PAPER] #5 BEARISH \u2014 BUY PUT (PE) | NIFTY 24450 @ Rs.152.4 | FADE 24667->24488 | Conf:61% SL:Rs.670 | 1L Inv:Rs.9906",
@@ -2094,41 +2129,6 @@
       "time": "14:00:14",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "14:00:12",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.1004 Floor:Rs.1000 Charges:Rs.85 NET:Rs.+935 | Capital:Rs.27564",
-      "cls": "ok"
-    },
-    {
-      "time": "13:55:10",
-      "msg": "RIDING NIFTY PE | Peak:Rs.1004 Now:Rs.1004 | staircase floor Rs.1000",
-      "cls": "ok"
-    },
-    {
-      "time": "13:55:09",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.1004 \u2014 floor locked at Rs.1000",
-      "cls": "ok"
-    },
-    {
-      "time": "13:50:05",
-      "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24400 @ Rs.150.4 | FADE 24667->24468 | Conf:57% SL:Rs.1080 | 2L Inv:Rs.19552",
-      "cls": "ok"
-    },
-    {
-      "time": "13:50:04",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:45:23",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:45:21",
-      "msg": "NIFTY:24457 YdH:24429/YdL:24300 Sig:FADE 24667->24457 T:2/99 Lots:2L Cap:Rs.26629 Daily:Rs.340",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2136,7 +2136,7 @@
   "oi_nifty": null,
   "running_capital": 26242.0,
   "trade_mode": "paper",
-  "nifty_price": 24475.9,
+  "nifty_price": 24458.65,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2177,9 +2177,9 @@
     "stop_level": 24502.0,
     "sl_rs": 670,
     "lots": 1,
-    "pnl": 0.0,
-    "peak": 0,
-    "floor": null
+    "pnl": 428.0,
+    "peak": 428.0,
+    "floor": 300.0
   },
   "rung_base": [
     150,
