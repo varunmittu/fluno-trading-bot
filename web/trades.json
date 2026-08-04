@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-08-04 14:45",
+  "last_updated": "2026-08-04 15:00",
   "summary": {
-    "total_trades": 117,
-    "wins": 62,
+    "total_trades": 118,
+    "wins": 63,
     "losses": 55,
-    "win_rate": 53.0,
-    "total_pnl": 4559.0,
-    "avg_win": 504.0,
+    "win_rate": 53.4,
+    "total_pnl": 4813.0,
+    "avg_win": 500.0,
     "avg_loss": -485.0
   },
   "trades": [
@@ -1998,6 +1998,23 @@
       "lots": 2,
       "gross": -1240.0,
       "charges": 81.99
+    },
+    {
+      "id": 121,
+      "date": "2026-08-04",
+      "time": "14:50",
+      "score": 61,
+      "entry": 24475.9,
+      "exit": 24472.9,
+      "pnl": 253.93,
+      "status": "STAIR_BOOK",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 9906.0,
+      "lots": 1,
+      "gross": 320.0,
+      "charges": 66.07
     }
   ],
   "daily_pnl": {
@@ -2024,12 +2041,52 @@
     "2026-07-29": -259.0,
     "2026-07-31": 1408.0,
     "2026-08-03": -687.0,
-    "2026-08-04": -47.0
+    "2026-08-04": 207.0
   },
   "current_score": 0,
   "score_breakdown": {},
   "open_positions": 1,
   "bot_log": [
+    {
+      "time": "14:55:17",
+      "msg": "[PAPER] #6 BEARISH \u2014 BUY PUT (PE) | NIFTY 24450 @ Rs.124.65 | FADE 24667->24473 | Conf:61% SL:Rs.1460 | 2L Inv:Rs.16204",
+      "cls": "ok"
+    },
+    {
+      "time": "14:55:15",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:50:16",
+      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
+      "cls": "ok"
+    },
+    {
+      "time": "14:50:14",
+      "msg": "NIFTY:24473 YdH:24429/YdL:24300 Sig:FADE 24667->24473 T:5/99 Lots:2L Cap:Rs.26496 Daily:Rs.207",
+      "cls": ""
+    },
+    {
+      "time": "14:50:14",
+      "msg": "Trade #6 gate: conf 61% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "14:50:13",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "14:50:11",
+      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.428 Floor:Rs.300 Charges:Rs.66 NET:Rs.+254 | Capital:Rs.26496",
+      "cls": "ok"
+    },
+    {
+      "time": "14:45:11",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "14:45:08",
       "msg": "RIDING NIFTY PE | Peak:Rs.428 Now:Rs.428 | staircase floor Rs.300",
@@ -2089,54 +2146,14 @@
       "time": "14:20:11",
       "msg": "Trade #5 gate: conf 61% \u2014 awaiting /confirm",
       "cls": "info"
-    },
-    {
-      "time": "14:20:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:20:08",
-      "msg": "STOP LOSS NIFTY PE | SL:Rs.-1260 Charges:Rs.82 NET:Rs.-1322 | Capital:Rs.26242",
-      "cls": "err"
-    },
-    {
-      "time": "14:05:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:05:19",
-      "msg": "[PAPER] #4 BEARISH \u2014 BUY PUT (PE) | NIFTY 24400 @ Rs.151.2 | FADE 24667->24448 | Conf:57% SL:Rs.1260 | 2L Inv:Rs.19656",
-      "cls": "ok"
-    },
-    {
-      "time": "14:05:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:00:15",
-      "msg": "NIFTY:24448 YdH:24429/YdL:24300 Sig:FADE 24667->24448 T:3/99 Lots:2L Cap:Rs.27564 Daily:Rs.1275",
-      "cls": ""
-    },
-    {
-      "time": "14:00:15",
-      "msg": "Trade #4 gate: conf 57% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "14:00:14",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
   "supertrend_bullish": null,
   "oi_nifty": null,
-  "running_capital": 26242.0,
+  "running_capital": 26496.0,
   "trade_mode": "paper",
-  "nifty_price": 24458.65,
+  "nifty_price": 24470.95,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2173,13 +2190,13 @@
     "otype": "PE",
     "strike": 24450,
     "entry": 24476.0,
-    "premium_entry": 152.4,
-    "stop_level": 24502.0,
-    "sl_rs": 670,
-    "lots": 1,
-    "pnl": 428.0,
-    "peak": 428.0,
-    "floor": 300.0
+    "premium_entry": 124.65,
+    "stop_level": 24504.0,
+    "sl_rs": 1460,
+    "lots": 2,
+    "pnl": -261.0,
+    "peak": -261.0,
+    "floor": null
   },
   "rung_base": [
     150,
