@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-04 12:50",
+  "last_updated": "2026-08-04 13:10",
   "summary": {
     "total_trades": 114,
     "wins": 60,
@@ -1980,6 +1980,71 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:10:09",
+      "msg": "NIFTY:24486 YdH:24429/YdL:24300 Sig:FADE 24667->24486 T:1/99 Lots:2L Cap:Rs.26393 Daily:Rs.104",
+      "cls": ""
+    },
+    {
+      "time": "13:10:08",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:05:05",
+      "msg": "NIFTY:24494 YdH:24429/YdL:24300 Sig:FADE 24667->24494 T:1/99 Lots:2L Cap:Rs.26393 Daily:Rs.104",
+      "cls": ""
+    },
+    {
+      "time": "13:05:04",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:00:21",
+      "msg": "NIFTY:24490 YdH:24429/YdL:24300 Sig:FADE 24667->24490 T:1/99 Lots:2L Cap:Rs.26393 Daily:Rs.104",
+      "cls": ""
+    },
+    {
+      "time": "13:00:21",
+      "msg": "Gated trade skipped \u2014 confirmation timeout",
+      "cls": "info"
+    },
+    {
+      "time": "13:00:20",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:55:17",
+      "msg": "NIFTY:24498 YdH:24429/YdL:24300 Sig:FADE 24667->24498 T:1/99 Lots:2L Cap:Rs.26393 Daily:Rs.104",
+      "cls": ""
+    },
+    {
+      "time": "12:55:16",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:50:14",
+      "msg": "NIFTY:24503 YdH:24429/YdL:24300 Sig:FADE 24667->24503 T:1/99 Lots:2L Cap:Rs.26393 Daily:Rs.104",
+      "cls": ""
+    },
+    {
+      "time": "12:50:14",
+      "msg": "Trade #2 gate: conf 57% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "12:50:13",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "12:50:12",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "12:50:10",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.240 Floor:Rs.150 Charges:Rs.66 NET:Rs.+104 | Capital:Rs.26393",
       "cls": "ok"
@@ -2013,71 +2078,6 @@
       "time": "12:30:17",
       "msg": "NIFTY:24517 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "12:30:17",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:30:16",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:25:14",
-      "msg": "NIFTY:24520 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:25:14",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:25:13",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:20:11",
-      "msg": "NIFTY:24520 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:20:11",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:20:10",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:20:10",
-      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:10",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:15:08",
-      "msg": "NIFTY:24509 YdH:24429/YdL:24300 Sig:BREAK HIGH 24429 T:0/99 Lots:1L Cap:Rs.26289 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:15:08",
-      "msg": "MTF filter: 15-min trend not aligned with CE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:07",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2085,7 +2085,7 @@
   "oi_nifty": null,
   "running_capital": 26393.0,
   "trade_mode": "paper",
-  "nifty_price": 24502.55,
+  "nifty_price": 24485.65,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
