@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-05 09:15",
+  "last_updated": "2026-08-05 09:40",
   "summary": {
     "total_trades": 119,
     "wins": 64,
@@ -2065,6 +2065,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:40:05",
+      "msg": "NIFTY:24623 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:2L Cap:Rs.27438 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:35:03",
+      "msg": "NIFTY:24611 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:2L Cap:Rs.27438 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:30:20",
+      "msg": "NIFTY:24618 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:2L Cap:Rs.27438 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:25:18",
+      "msg": "NIFTY:24622 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:2L Cap:Rs.27438 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:20:15",
+      "msg": "NIFTY:24637 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:2L Cap:Rs.27438 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:15:55",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:15:53",
       "msg": "NIFTY:24635 YdH:24429/YdL:24300 Sig:-- T:0/99 Lots:2L Cap:Rs.27438 Daily:Rs.0",
       "cls": ""
@@ -2133,36 +2163,6 @@
       "time": "15:05:19",
       "msg": "STAIR UP NIFTY PE | Peak:Rs.1215 \u2014 floor locked at Rs.1000",
       "cls": "ok"
-    },
-    {
-      "time": "15:00:20",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:55:17",
-      "msg": "[PAPER] #6 BEARISH \u2014 BUY PUT (PE) | NIFTY 24450 @ Rs.124.65 | FADE 24667->24473 | Conf:61% SL:Rs.1460 | 2L Inv:Rs.16204",
-      "cls": "ok"
-    },
-    {
-      "time": "14:55:15",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:50:16",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
-    },
-    {
-      "time": "14:50:14",
-      "msg": "NIFTY:24473 YdH:24429/YdL:24300 Sig:FADE 24667->24473 T:5/99 Lots:2L Cap:Rs.26496 Daily:Rs.207",
-      "cls": ""
-    },
-    {
-      "time": "14:50:14",
-      "msg": "Trade #6 gate: conf 61% \u2014 awaiting /confirm",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2170,7 +2170,7 @@
   "oi_nifty": null,
   "running_capital": 27438.0,
   "trade_mode": "paper",
-  "nifty_price": 24635.4,
+  "nifty_price": 24622.7,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
