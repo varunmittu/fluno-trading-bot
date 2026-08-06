@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06 09:15",
+  "last_updated": "2026-08-06 09:40",
   "summary": {
     "total_trades": 120,
     "wins": 64,
@@ -2083,6 +2083,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:40:04",
+      "msg": "NIFTY:24635 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:35:02",
+      "msg": "NIFTY:24625 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:30:20",
+      "msg": "NIFTY:24643 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:25:17",
+      "msg": "NIFTY:24634 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:20:15",
+      "msg": "NIFTY:24627 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:15:54",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:15:52",
       "msg": "NIFTY:24621 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
       "cls": ""
@@ -2151,36 +2181,6 @@
       "time": "14:25:20",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "14:10:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:55:05",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:45:18",
-      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24450 @ Rs.151.0 | OR BREAK LOW 24582 | Conf:57% SL:Rs.1480 | 2L Inv:Rs.19630",
-      "cls": "ok"
-    },
-    {
-      "time": "13:45:16",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:40:13",
-      "msg": "NIFTY:24519 YdH:24704/YdL:24428 Sig:OR BREAK LOW 24582 T:0/99 Lots:2L Cap:Rs.27438 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:40:13",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2188,7 +2188,7 @@
   "oi_nifty": null,
   "running_capital": 25896.0,
   "trade_mode": "paper",
-  "nifty_price": 24620.6,
+  "nifty_price": 24634.8,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
