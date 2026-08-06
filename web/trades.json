@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06 11:25",
+  "last_updated": "2026-08-06 11:45",
   "summary": {
     "total_trades": 120,
     "wins": 64,
@@ -2083,6 +2083,76 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:45:11",
+      "msg": "NIFTY:24633 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:45:10",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:43:49",
+      "msg": "PRE-ALERT: NIFTY 24630 near or_lo 24606",
+      "cls": "info"
+    },
+    {
+      "time": "11:41:27",
+      "msg": "PRE-ALERT: NIFTY 24646 near or_hi 24665",
+      "cls": "info"
+    },
+    {
+      "time": "11:40:06",
+      "msg": "NIFTY:24652 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:40:06",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:35:03",
+      "msg": "NIFTY:24660 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:35:03",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:30:21",
+      "msg": "NIFTY:24675 YdH:24678/YdL:24498 Sig:OR BREAK HIGH 24665 T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:30:21",
+      "msg": "Confidence gate: OR BREAK HIGH 24665 scored 6.5/9 (< 7) and conf 57% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "11:30:20",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:30:19",
+      "msg": "PRE-ALERT: NIFTY 24675 near yd_high 24678",
+      "cls": "info"
+    },
+    {
+      "time": "11:26:17",
+      "msg": "PRE-ALERT: NIFTY 24670 near or_hi 24665",
+      "cls": "info"
+    },
+    {
+      "time": "11:25:17",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:25:16",
       "msg": "NIFTY:24672 YdH:24678/YdL:24498 Sig:OR BREAK HIGH 24665 T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
       "cls": ""
@@ -2111,76 +2181,6 @@
       "time": "11:20:12",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "11:15:10",
-      "msg": "NIFTY:24655 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:15:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:15:09",
-      "msg": "PRE-ALERT: NIFTY 24655 near yd_high 24678",
-      "cls": "info"
-    },
-    {
-      "time": "11:11:06",
-      "msg": "PRE-ALERT: NIFTY 24640 near or_hi 24665",
-      "cls": "info"
-    },
-    {
-      "time": "11:10:07",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:10:05",
-      "msg": "NIFTY:24639 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:10:05",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:05:02",
-      "msg": "NIFTY:24630 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:05:02",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:01:39",
-      "msg": "PRE-ALERT: NIFTY 24628 near or_lo 24606",
-      "cls": "info"
-    },
-    {
-      "time": "11:00:18",
-      "msg": "NIFTY:24632 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:00:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:55:15",
-      "msg": "NIFTY:24628 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:55:15",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2188,7 +2188,7 @@
   "oi_nifty": null,
   "running_capital": 25896.0,
   "trade_mode": "paper",
-  "nifty_price": 24671.8,
+  "nifty_price": 24633.25,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
