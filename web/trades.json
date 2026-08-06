@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06 15:10",
+  "last_updated": "2026-08-06 15:25",
   "summary": {
     "total_trades": 120,
     "wins": 64,
@@ -2083,6 +2083,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:25:16",
+      "msg": "NIFTY:24628 YdH:24678/YdL:24498 Sig:FADE 24677->24631 T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:20:14",
+      "msg": "NIFTY:24628 YdH:24678/YdL:24498 Sig:FADE 24677->24631 T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:15:10",
+      "msg": "NIFTY:24628 YdH:24678/YdL:24498 Sig:FADE 24677->24631 T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:10:10",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:10:08",
       "msg": "NIFTY:24626 YdH:24678/YdL:24498 Sig:FADE 24677->24631 T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
       "cls": ""
@@ -2161,26 +2181,6 @@
       "time": "14:40:09",
       "msg": "NIFTY:24644 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "14:40:08",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:35:03",
-      "msg": "NIFTY:24649 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:35:03",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:33:01",
-      "msg": "PRE-ALERT: NIFTY 24655 near fade 24640",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2188,7 +2188,7 @@
   "oi_nifty": null,
   "running_capital": 25896.0,
   "trade_mode": "paper",
-  "nifty_price": 24626.4,
+  "nifty_price": 24627.95,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
