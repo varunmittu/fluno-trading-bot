@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-08-05 15:00",
+  "last_updated": "2026-08-06 09:15",
   "summary": {
-    "total_trades": 119,
+    "total_trades": 120,
     "wins": 64,
-    "losses": 55,
-    "win_rate": 53.8,
-    "total_pnl": 5755.0,
+    "losses": 56,
+    "win_rate": 53.3,
+    "total_pnl": 4213.0,
     "avg_win": 507.0,
-    "avg_loss": -485.0
+    "avg_loss": -504.0
   },
   "trades": [
     {
@@ -2032,6 +2032,23 @@
       "lots": 2,
       "gross": 1020.0,
       "charges": 78.77
+    },
+    {
+      "id": 123,
+      "date": "2026-08-05",
+      "time": "15:10",
+      "score": 57,
+      "entry": 24507.4,
+      "exit": 24540.1,
+      "pnl": -1541.63,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 19630.0,
+      "lots": 2,
+      "gross": -1460.0,
+      "charges": 81.63
     }
   ],
   "daily_pnl": {
@@ -2058,12 +2075,73 @@
     "2026-07-29": -259.0,
     "2026-07-31": 1408.0,
     "2026-08-03": -687.0,
-    "2026-08-04": 1148.0
+    "2026-08-04": 1148.0,
+    "2026-08-05": -1542.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "09:15:52",
+      "msg": "NIFTY:24621 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:10:51",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:25",
+      "msg": "New trading day | Capital: Rs.25896 | Lots: 1L",
+      "cls": "info"
+    },
+    {
+      "time": "16:25:31",
+      "msg": "Validation: trust 4.4/10 (n=48)",
+      "cls": "info"
+    },
+    {
+      "time": "15:31:03",
+      "msg": "Daily loss limit hit (Rs.-1542). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "15:26:03",
+      "msg": "Daily loss limit hit (Rs.-1542). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "15:21:03",
+      "msg": "Daily loss limit hit (Rs.-1542). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "15:16:03",
+      "msg": "Daily loss limit hit (Rs.-1542). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "15:11:03",
+      "msg": "Daily loss limit hit (Rs.-1542). Stopped for today.",
+      "cls": "err"
+    },
+    {
+      "time": "15:10:03",
+      "msg": "NIFTY:24540 YdH:24704/YdL:24428 Sig:OR BREAK LOW 24582 T:1/99 Lots:1L Cap:Rs.25896 Daily:Rs.-1542",
+      "cls": ""
+    },
+    {
+      "time": "15:10:02",
+      "msg": "STOP LOSS NIFTY PE | SL:Rs.-1480 Charges:Rs.82 NET:Rs.-1542 | Capital:Rs.25896",
+      "cls": "err"
+    },
+    {
+      "time": "15:00:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "14:45:10",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -2103,95 +2181,35 @@
       "time": "13:40:13",
       "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
       "cls": "info"
-    },
-    {
-      "time": "13:40:12",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:35:11",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:35:09",
-      "msg": "NIFTY:24520 YdH:24704/YdL:24428 Sig:OR BREAK LOW 24582 T:0/99 Lots:2L Cap:Rs.27438 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:35:09",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "13:35:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:30:06",
-      "msg": "NIFTY:24530 YdH:24704/YdL:24428 Sig:OR BREAK LOW 24582 T:0/99 Lots:2L Cap:Rs.27438 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:30:06",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "13:30:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:25:03",
-      "msg": "NIFTY:24526 YdH:24704/YdL:24428 Sig:OR BREAK LOW 24582 T:0/99 Lots:2L Cap:Rs.27438 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:25:02",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:20:20",
-      "msg": "NIFTY:24547 YdH:24704/YdL:24428 Sig:OR BREAK LOW 24582 T:0/99 Lots:2L Cap:Rs.27438 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:20:20",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
     }
   ],
   "vix": null,
   "supertrend_bullish": null,
   "oi_nifty": null,
-  "running_capital": 27438.0,
+  "running_capital": 25896.0,
   "trade_mode": "paper",
-  "nifty_price": 24525.55,
+  "nifty_price": 24620.6,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
     "empty": false,
-    "as_of": "2026-08-04 16:25",
-    "n": 47,
+    "as_of": "2026-08-05 16:25",
+    "n": 48,
     "target_n": 60,
-    "live_net": 8464.0,
-    "live_per": 180.0,
-    "live_wr": 72,
-    "sd": 889,
-    "ci_lo": -74,
-    "ci_hi": 434,
-    "t_stat": 1.39,
+    "live_net": 6922.0,
+    "live_per": 144.0,
+    "live_wr": 71,
+    "sd": 914,
+    "ci_lo": -114,
+    "ci_hi": 403,
+    "t_stat": 1.09,
     "green": 9,
-    "red": 5,
-    "live_chg": 3596,
+    "red": 6,
+    "live_chg": 3678,
     "edge_real": false,
     "bt_ok": true,
-    "bt_per": 33,
-    "gap": 147,
+    "bt_per": 18,
+    "gap": 126,
     "trust": 4.4,
     "components": {
       "data": 2.4,
@@ -2200,21 +2218,10 @@
       "edge_real": 0,
       "full_sample": 0
     },
-    "verdict": "Not ready - need ~13 more trades, surviving a bad week.",
+    "verdict": "Not ready - need ~12 more trades, surviving a bad week.",
     "capped": false
   },
-  "position": {
-    "otype": "PE",
-    "strike": 24450,
-    "entry": 24507.0,
-    "premium_entry": 151.0,
-    "stop_level": 24536.0,
-    "sl_rs": 1480,
-    "lots": 2,
-    "pnl": -964.0,
-    "peak": 175.0,
-    "floor": null
-  },
+  "position": null,
   "rung_base": [
     150,
     250,
