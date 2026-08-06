@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06 09:55",
+  "last_updated": "2026-08-06 10:10",
   "summary": {
     "total_trades": 120,
     "wins": 64,
@@ -2083,6 +2083,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:10:19",
+      "msg": "NIFTY:24622 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:05:17",
+      "msg": "NIFTY:24614 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:00:14",
+      "msg": "NIFTY:24633 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:55:13",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:55:11",
       "msg": "NIFTY:24660 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
       "cls": ""
@@ -2161,26 +2181,6 @@
       "time": "15:26:03",
       "msg": "Daily loss limit hit (Rs.-1542). Stopped for today.",
       "cls": "err"
-    },
-    {
-      "time": "15:21:03",
-      "msg": "Daily loss limit hit (Rs.-1542). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "15:16:03",
-      "msg": "Daily loss limit hit (Rs.-1542). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "15:11:03",
-      "msg": "Daily loss limit hit (Rs.-1542). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "15:10:03",
-      "msg": "NIFTY:24540 YdH:24704/YdL:24428 Sig:OR BREAK LOW 24582 T:1/99 Lots:1L Cap:Rs.25896 Daily:Rs.-1542",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2188,7 +2188,7 @@
   "oi_nifty": null,
   "running_capital": 25896.0,
   "trade_mode": "paper",
-  "nifty_price": 24660.45,
+  "nifty_price": 24622.0,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
