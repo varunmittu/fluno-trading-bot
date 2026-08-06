@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06 09:40",
+  "last_updated": "2026-08-06 09:55",
   "summary": {
     "total_trades": 120,
     "wins": 64,
@@ -2083,6 +2083,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:55:11",
+      "msg": "NIFTY:24660 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:50:08",
+      "msg": "NIFTY:24660 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:45:06",
+      "msg": "NIFTY:24648 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:40:06",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:40:04",
       "msg": "NIFTY:24635 YdH:24704/YdL:24428 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
       "cls": ""
@@ -2161,26 +2181,6 @@
       "time": "15:10:03",
       "msg": "NIFTY:24540 YdH:24704/YdL:24428 Sig:OR BREAK LOW 24582 T:1/99 Lots:1L Cap:Rs.25896 Daily:Rs.-1542",
       "cls": ""
-    },
-    {
-      "time": "15:10:02",
-      "msg": "STOP LOSS NIFTY PE | SL:Rs.-1480 Charges:Rs.82 NET:Rs.-1542 | Capital:Rs.25896",
-      "cls": "err"
-    },
-    {
-      "time": "15:00:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:45:10",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:25:20",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2188,7 +2188,7 @@
   "oi_nifty": null,
   "running_capital": 25896.0,
   "trade_mode": "paper",
-  "nifty_price": 24634.8,
+  "nifty_price": 24660.45,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
