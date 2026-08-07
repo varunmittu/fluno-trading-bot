@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-07 13:35",
+  "last_updated": "2026-08-07 13:55",
   "summary": {
     "total_trades": 123,
     "wins": 67,
@@ -2135,6 +2135,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:55:08",
+      "msg": "NIFTY:24573 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "13:50:05",
+      "msg": "NIFTY:24576 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "13:45:03",
+      "msg": "NIFTY:24548 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "13:40:00",
+      "msg": "NIFTY:24548 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "13:35:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:35:18",
       "msg": "NIFTY:24547 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
       "cls": ""
@@ -2208,31 +2233,6 @@
       "time": "12:40:08",
       "msg": "NIFTY:24559 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
       "cls": ""
-    },
-    {
-      "time": "12:35:06",
-      "msg": "NIFTY:24560 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
-    },
-    {
-      "time": "12:31:44",
-      "msg": "PRE-ALERT: NIFTY 24549 near or_lo 24535",
-      "cls": "info"
-    },
-    {
-      "time": "12:30:02",
-      "msg": "NIFTY:24550 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
-    },
-    {
-      "time": "12:30:02",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:25:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2240,7 +2240,7 @@
   "oi_nifty": null,
   "running_capital": 27271.0,
   "trade_mode": "paper",
-  "nifty_price": 24546.85,
+  "nifty_price": 24572.6,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
