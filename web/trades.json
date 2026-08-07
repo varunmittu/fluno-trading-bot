@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-07 11:10",
+  "last_updated": "2026-08-07 11:30",
   "summary": {
     "total_trades": 122,
     "wins": 66,
@@ -2115,8 +2115,38 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "11:15:06",
+      "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24500 @ Rs.151.0 | BREAK LOW 24604 | Conf:71% SL:Rs.1180 | 2L Inv:Rs.19630",
+      "cls": "ok"
+    },
+    {
+      "time": "11:15:05",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:10:22",
+      "msg": "NIFTY:24568 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:2/99 Lots:2L Cap:Rs.26835 Daily:Rs.939",
+      "cls": ""
+    },
+    {
+      "time": "11:10:22",
+      "msg": "Trade #3 gate: conf 71% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "11:10:22",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "11:10:21",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
     {
       "time": "11:10:20",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.939 Floor:Rs.900 Charges:Rs.85 NET:Rs.+835 | Capital:Rs.26835",
@@ -2186,36 +2216,6 @@
       "time": "10:25:22",
       "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24500 @ Rs.150.7 | BREAK LOW 24604 | Conf:71% SL:Rs.680 | 1L Inv:Rs.9796",
       "cls": "ok"
-    },
-    {
-      "time": "10:25:20",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:20:17",
-      "msg": "NIFTY:24580 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:20:17",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "10:20:16",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:16:13",
-      "msg": "PRE-ALERT: NIFTY 24593 near yd_low 24604",
-      "cls": "info"
-    },
-    {
-      "time": "10:15:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2223,7 +2223,7 @@
   "oi_nifty": null,
   "running_capital": 26835.0,
   "trade_mode": "paper",
-  "nifty_price": 24568.1,
+  "nifty_price": 24581.5,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2256,7 +2256,18 @@
     "verdict": "Not ready - need ~12 more trades, surviving a bad week.",
     "capped": false
   },
-  "position": null,
+  "position": {
+    "otype": "PE",
+    "strike": 24500,
+    "entry": 24567.0,
+    "premium_entry": 151.0,
+    "stop_level": 24589.0,
+    "sl_rs": 1180,
+    "lots": 2,
+    "pnl": -790.0,
+    "peak": 217.0,
+    "floor": null
+  },
   "rung_base": [
     150,
     250,
