@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-06 15:25",
+  "last_updated": "2026-08-07 09:15",
   "summary": {
     "total_trades": 120,
     "wins": 64,
@@ -2083,6 +2083,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:15:52",
+      "msg": "NIFTY:24584 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:10:51",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:23",
+      "msg": "New trading day | Capital: Rs.25896 | Lots: 1L",
+      "cls": "info"
+    },
+    {
+      "time": "16:25:37",
+      "msg": "Validation: trust 4.4/10 (n=48)",
+      "cls": "info"
+    },
+    {
+      "time": "15:31:20",
+      "msg": "NIFTY:24636 YdH:24678/YdL:24498 Sig:FADE 24677->24631 T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:30:19",
+      "msg": "SETTLEMENT | Day P&L:Rs.+0 | Capital:Rs.25896 | Next:1L",
+      "cls": "ok"
+    },
+    {
+      "time": "15:25:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:25:16",
       "msg": "NIFTY:24628 YdH:24678/YdL:24498 Sig:FADE 24677->24631 T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
       "cls": ""
@@ -2146,41 +2181,6 @@
       "time": "14:50:17",
       "msg": "NIFTY:24644 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "14:50:16",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:48:15",
-      "msg": "PRE-ALERT: NIFTY 24641 near fade 24640",
-      "cls": "info"
-    },
-    {
-      "time": "14:47:54",
-      "msg": "PRE-ALERT: NIFTY 24640 near or_hi 24665",
-      "cls": "info"
-    },
-    {
-      "time": "14:45:12",
-      "msg": "NIFTY:24637 YdH:24678/YdL:24498 Sig:FADE 24677->24637 T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:45:12",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:45:11",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:40:09",
-      "msg": "NIFTY:24644 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2188,12 +2188,12 @@
   "oi_nifty": null,
   "running_capital": 25896.0,
   "trade_mode": "paper",
-  "nifty_price": 24627.95,
+  "nifty_price": 24584.1,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
     "empty": false,
-    "as_of": "2026-08-05 16:25",
+    "as_of": "2026-08-06 16:25",
     "n": 48,
     "target_n": 60,
     "live_net": 6922.0,
