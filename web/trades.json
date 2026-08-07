@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-07 10:35",
+  "last_updated": "2026-08-07 10:55",
   "summary": {
     "total_trades": 121,
     "wins": 65,
@@ -2098,8 +2098,38 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "10:40:17",
+      "msg": "[PAPER] #2 BEARISH \u2014 BUY PUT (PE) | NIFTY 24500 @ Rs.150.6 | BREAK LOW 24604 | Conf:71% SL:Rs.1220 | 2L Inv:Rs.19578",
+      "cls": "ok"
+    },
+    {
+      "time": "10:40:15",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:35:12",
+      "msg": "NIFTY:24570 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:1/99 Lots:2L Cap:Rs.26000 Daily:Rs.104",
+      "cls": ""
+    },
+    {
+      "time": "10:35:12",
+      "msg": "Trade #2 gate: conf 71% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "10:35:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "10:35:11",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
     {
       "time": "10:35:09",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.159 Floor:Rs.150 Charges:Rs.66 NET:Rs.+104 | Capital:Rs.26000",
@@ -2169,36 +2199,6 @@
       "time": "10:15:12",
       "msg": "Kite: loaded 1792 NIFTY option contracts",
       "cls": "info"
-    },
-    {
-      "time": "10:15:05",
-      "msg": "PRE-ALERT: NIFTY 24600 near or_lo 24606",
-      "cls": "info"
-    },
-    {
-      "time": "10:10:02",
-      "msg": "NIFTY:24612 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:05:20",
-      "msg": "NIFTY:24615 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:00:17",
-      "msg": "NIFTY:24624 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:55:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:55:14",
-      "msg": "NIFTY:24625 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2206,7 +2206,7 @@
   "oi_nifty": null,
   "running_capital": 26000.0,
   "trade_mode": "paper",
-  "nifty_price": 24570.4,
+  "nifty_price": 24582.7,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2239,7 +2239,18 @@
     "verdict": "Not ready - need ~12 more trades, surviving a bad week.",
     "capped": false
   },
-  "position": null,
+  "position": {
+    "otype": "PE",
+    "strike": 24500,
+    "entry": 24575.0,
+    "premium_entry": 150.6,
+    "stop_level": 24598.0,
+    "sl_rs": 1220,
+    "lots": 2,
+    "pnl": -436.0,
+    "peak": 258.0,
+    "floor": null
+  },
   "rung_base": [
     150,
     250,
