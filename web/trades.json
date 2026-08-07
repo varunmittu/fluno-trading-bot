@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-07 13:05",
+  "last_updated": "2026-08-07 13:20",
   "summary": {
     "total_trades": 123,
     "wins": 67,
@@ -2135,6 +2135,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:20:11",
+      "msg": "NIFTY:24547 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "13:15:08",
+      "msg": "NIFTY:24549 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "13:10:05",
+      "msg": "NIFTY:24557 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "13:05:05",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:05:03",
       "msg": "NIFTY:24557 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
       "cls": ""
@@ -2213,26 +2233,6 @@
       "time": "12:20:15",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "12:16:33",
-      "msg": "PRE-ALERT: NIFTY 24536 near or_lo 24535",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:12",
-      "msg": "NIFTY:24540 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
-    },
-    {
-      "time": "12:15:12",
-      "msg": "Gated trade skipped \u2014 confirmation timeout",
-      "cls": "info"
-    },
-    {
-      "time": "12:15:10",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2240,7 +2240,7 @@
   "oi_nifty": null,
   "running_capital": 27271.0,
   "trade_mode": "paper",
-  "nifty_price": 24557.15,
+  "nifty_price": 24546.95,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
