@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-07 12:10",
+  "last_updated": "2026-08-07 12:25",
   "summary": {
     "total_trades": 123,
     "wins": 67,
@@ -2135,6 +2135,51 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:25:19",
+      "msg": "NIFTY:24538 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "12:25:18",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:20:16",
+      "msg": "NIFTY:24538 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "12:20:15",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:16:33",
+      "msg": "PRE-ALERT: NIFTY 24536 near or_lo 24535",
+      "cls": "info"
+    },
+    {
+      "time": "12:15:12",
+      "msg": "NIFTY:24540 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "12:15:12",
+      "msg": "Gated trade skipped \u2014 confirmation timeout",
+      "cls": "info"
+    },
+    {
+      "time": "12:15:10",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:10:09",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:10:07",
       "msg": "NIFTY:24552 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
       "cls": ""
@@ -2188,51 +2233,6 @@
       "time": "11:55:14",
       "msg": "RIDING NIFTY PE | Peak:Rs.560 Now:Rs.560 | staircase floor Rs.500",
       "cls": "ok"
-    },
-    {
-      "time": "11:55:13",
-      "msg": "STAIR UP NIFTY PE | Peak:Rs.560 \u2014 floor locked at Rs.500",
-      "cls": "ok"
-    },
-    {
-      "time": "11:50:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:30:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:15:06",
-      "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24500 @ Rs.151.0 | BREAK LOW 24604 | Conf:71% SL:Rs.1180 | 2L Inv:Rs.19630",
-      "cls": "ok"
-    },
-    {
-      "time": "11:15:05",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:10:22",
-      "msg": "NIFTY:24568 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:2/99 Lots:2L Cap:Rs.26835 Daily:Rs.939",
-      "cls": ""
-    },
-    {
-      "time": "11:10:22",
-      "msg": "Trade #3 gate: conf 71% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "11:10:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:10:21",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2240,7 +2240,7 @@
   "oi_nifty": null,
   "running_capital": 27271.0,
   "trade_mode": "paper",
-  "nifty_price": 24551.95,
+  "nifty_price": 24538.1,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
