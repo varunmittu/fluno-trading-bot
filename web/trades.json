@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-07 09:15",
+  "last_updated": "2026-08-07 09:40",
   "summary": {
     "total_trades": 120,
     "wins": 64,
@@ -2083,6 +2083,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:40:05",
+      "msg": "NIFTY:24605 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:35:02",
+      "msg": "NIFTY:24602 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:30:20",
+      "msg": "NIFTY:24603 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:25:17",
+      "msg": "NIFTY:24604 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:20:14",
+      "msg": "NIFTY:24592 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:15:54",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:15:52",
       "msg": "NIFTY:24584 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
       "cls": ""
@@ -2151,36 +2181,6 @@
       "time": "15:00:03",
       "msg": "NIFTY:24631 YdH:24678/YdL:24498 Sig:FADE 24677->24631 T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "14:58:22",
-      "msg": "PRE-ALERT: NIFTY 24631 near or_lo 24606",
-      "cls": "info"
-    },
-    {
-      "time": "14:55:21",
-      "msg": "NIFTY:24631 YdH:24678/YdL:24498 Sig:FADE 24677->24631 T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:55:21",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:55:20",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:50:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:50:17",
-      "msg": "NIFTY:24644 YdH:24678/YdL:24498 Sig:-- T:0/99 Lots:1L Cap:Rs.25896 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2188,7 +2188,7 @@
   "oi_nifty": null,
   "running_capital": 25896.0,
   "trade_mode": "paper",
-  "nifty_price": 24584.1,
+  "nifty_price": 24604.95,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
