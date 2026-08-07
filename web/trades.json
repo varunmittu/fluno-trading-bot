@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-07 12:25",
+  "last_updated": "2026-08-07 12:45",
   "summary": {
     "total_trades": 123,
     "wins": 67,
@@ -2135,6 +2135,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:45:11",
+      "msg": "NIFTY:24556 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "12:40:08",
+      "msg": "NIFTY:24559 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "12:35:06",
+      "msg": "NIFTY:24560 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "12:31:44",
+      "msg": "PRE-ALERT: NIFTY 24549 near or_lo 24535",
+      "cls": "info"
+    },
+    {
+      "time": "12:30:02",
+      "msg": "NIFTY:24550 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "12:30:02",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:25:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:25:19",
       "msg": "NIFTY:24538 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
       "cls": ""
@@ -2198,41 +2233,6 @@
       "time": "12:05:04",
       "msg": "Trade #4 gate: conf 71% \u2014 awaiting /confirm",
       "cls": "info"
-    },
-    {
-      "time": "12:05:02",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:01:20",
-      "msg": "PRE-ALERT: NIFTY 24560 near or_lo 24535",
-      "cls": "info"
-    },
-    {
-      "time": "12:00:19",
-      "msg": "NIFTY:24562 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
-    },
-    {
-      "time": "12:00:19",
-      "msg": "Confidence gate: BREAK LOW 24604 scored 6.5/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "12:00:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:00:17",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.560 Floor:Rs.500 Charges:Rs.84 NET:Rs.+436 | Capital:Rs.27271",
-      "cls": "ok"
-    },
-    {
-      "time": "11:55:14",
-      "msg": "RIDING NIFTY PE | Peak:Rs.560 Now:Rs.560 | staircase floor Rs.500",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2240,7 +2240,7 @@
   "oi_nifty": null,
   "running_capital": 27271.0,
   "trade_mode": "paper",
-  "nifty_price": 24538.1,
+  "nifty_price": 24556.1,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
