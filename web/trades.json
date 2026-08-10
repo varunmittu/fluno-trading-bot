@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-07 15:20",
+  "last_updated": "2026-08-10 09:15",
   "summary": {
     "total_trades": 123,
     "wins": 67,
@@ -2135,6 +2135,56 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:15:10",
+      "msg": "NIFTY:24584 YdH:24677/YdL:24604 Sig:-- T:0/99 Lots:2L Cap:Rs.27271 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:10:09",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:42",
+      "msg": "New trading day | Capital: Rs.27271 | Lots: 2L",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:40",
+      "msg": "New trading day | Capital: Rs.27271 | Lots: 2L",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:39",
+      "msg": "New trading day | Capital: Rs.27271 | Lots: 2L",
+      "cls": "info"
+    },
+    {
+      "time": "16:25:42",
+      "msg": "Validation: trust 4.5/10 (n=51)",
+      "cls": "info"
+    },
+    {
+      "time": "15:31:16",
+      "msg": "NIFTY:24571 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "15:30:16",
+      "msg": "Error: No item with that key",
+      "cls": "err"
+    },
+    {
+      "time": "15:25:13",
+      "msg": "NIFTY:24557 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
+      "cls": ""
+    },
+    {
+      "time": "15:20:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:20:10",
       "msg": "NIFTY:24557 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
       "cls": ""
@@ -2183,56 +2233,6 @@
       "time": "14:45:12",
       "msg": "NIFTY:24541 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
       "cls": ""
-    },
-    {
-      "time": "14:40:09",
-      "msg": "NIFTY:24538 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
-    },
-    {
-      "time": "14:35:07",
-      "msg": "NIFTY:24542 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
-    },
-    {
-      "time": "14:30:07",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:30:04",
-      "msg": "NIFTY:24535 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
-    },
-    {
-      "time": "14:25:02",
-      "msg": "NIFTY:24543 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
-    },
-    {
-      "time": "14:20:20",
-      "msg": "NIFTY:24536 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
-    },
-    {
-      "time": "14:15:17",
-      "msg": "NIFTY:24526 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
-    },
-    {
-      "time": "14:10:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:10:15",
-      "msg": "NIFTY:24540 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
-    },
-    {
-      "time": "14:05:12",
-      "msg": "NIFTY:24556 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2240,37 +2240,37 @@
   "oi_nifty": null,
   "running_capital": 27271.0,
   "trade_mode": "paper",
-  "nifty_price": 24557.0,
+  "nifty_price": 24584.5,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
     "empty": false,
-    "as_of": "2026-08-06 16:25",
-    "n": 48,
+    "as_of": "2026-08-07 16:25",
+    "n": 51,
     "target_n": 60,
-    "live_net": 6922.0,
-    "live_per": 144.0,
-    "live_wr": 71,
-    "sd": 914,
-    "ci_lo": -114,
-    "ci_hi": 403,
-    "t_stat": 1.09,
-    "green": 9,
+    "live_net": 8297.0,
+    "live_per": 163.0,
+    "live_wr": 73,
+    "sd": 892,
+    "ci_lo": -82,
+    "ci_hi": 408,
+    "t_stat": 1.3,
+    "green": 10,
     "red": 6,
-    "live_chg": 3678,
+    "live_chg": 3913,
     "edge_real": false,
     "bt_ok": true,
-    "bt_per": 18,
-    "gap": 126,
-    "trust": 4.4,
+    "bt_per": 4,
+    "gap": 159,
+    "trust": 4.5,
     "components": {
-      "data": 2.4,
+      "data": 2.5,
       "profitable": 1,
       "tracking": 1,
       "edge_real": 0,
       "full_sample": 0
     },
-    "verdict": "Not ready - need ~12 more trades, surviving a bad week.",
+    "verdict": "Not ready - need ~9 more trades, surviving a bad week.",
     "capped": false
   },
   "position": null,
