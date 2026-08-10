@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-10 09:50",
+  "last_updated": "2026-08-10 10:05",
   "summary": {
     "total_trades": 123,
     "wins": 67,
@@ -2135,6 +2135,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:05:16",
+      "msg": "NIFTY:24538 YdH:24677/YdL:24604 Sig:-- T:0/99 Lots:2L Cap:Rs.27271 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:00:14",
+      "msg": "NIFTY:24539 YdH:24677/YdL:24604 Sig:-- T:0/99 Lots:2L Cap:Rs.27271 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:55:10",
+      "msg": "NIFTY:24529 YdH:24677/YdL:24604 Sig:-- T:0/99 Lots:2L Cap:Rs.27271 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:50:09",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:50:07",
       "msg": "NIFTY:24529 YdH:24677/YdL:24604 Sig:-- T:0/99 Lots:2L Cap:Rs.27271 Daily:Rs.0",
       "cls": ""
@@ -2213,26 +2233,6 @@
       "time": "15:31:16",
       "msg": "NIFTY:24571 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
       "cls": ""
-    },
-    {
-      "time": "15:30:16",
-      "msg": "Error: No item with that key",
-      "cls": "err"
-    },
-    {
-      "time": "15:25:13",
-      "msg": "NIFTY:24557 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
-    },
-    {
-      "time": "15:20:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:20:10",
-      "msg": "NIFTY:24557 YdH:24677/YdL:24604 Sig:BREAK LOW 24604 T:3/99 Lots:2L Cap:Rs.27271 Daily:Rs.1375",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2240,7 +2240,7 @@
   "oi_nifty": null,
   "running_capital": 27271.0,
   "trade_mode": "paper",
-  "nifty_price": 24529.35,
+  "nifty_price": 24538.4,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
