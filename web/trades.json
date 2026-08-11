@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-11 09:50",
+  "last_updated": "2026-08-11 10:10",
   "summary": {
     "total_trades": 124,
     "wins": 67,
@@ -2153,6 +2153,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:10:09",
+      "msg": "NIFTY:24478 YdH:24630/YdL:24523 Sig:-- T:0/99 Lots:1L Cap:Rs.26248 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:05:06",
+      "msg": "NIFTY:24486 YdH:24630/YdL:24523 Sig:-- T:0/99 Lots:1L Cap:Rs.26248 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:00:04",
+      "msg": "NIFTY:24486 YdH:24630/YdL:24523 Sig:-- T:0/99 Lots:1L Cap:Rs.26248 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:55:01",
+      "msg": "NIFTY:24465 YdH:24630/YdL:24523 Sig:-- T:0/99 Lots:1L Cap:Rs.26248 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:50:21",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:50:19",
       "msg": "NIFTY:24471 YdH:24630/YdL:24523 Sig:-- T:0/99 Lots:1L Cap:Rs.26248 Daily:Rs.0",
       "cls": ""
@@ -2226,31 +2251,6 @@
       "time": "15:31:09",
       "msg": "Daily loss limit hit (Rs.-1023). Stopped for today.",
       "cls": "err"
-    },
-    {
-      "time": "15:26:09",
-      "msg": "Daily loss limit hit (Rs.-1023). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "15:21:09",
-      "msg": "Daily loss limit hit (Rs.-1023). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "15:16:09",
-      "msg": "Daily loss limit hit (Rs.-1023). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "15:11:09",
-      "msg": "Daily loss limit hit (Rs.-1023). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "15:06:09",
-      "msg": "Daily loss limit hit (Rs.-1023). Stopped for today.",
-      "cls": "err"
     }
   ],
   "vix": null,
@@ -2258,7 +2258,7 @@
   "oi_nifty": null,
   "running_capital": 26248.0,
   "trade_mode": "paper",
-  "nifty_price": 24471.1,
+  "nifty_price": 24477.8,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
