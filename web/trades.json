@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-11 12:55",
+  "last_updated": "2026-08-11 13:15",
   "summary": {
     "total_trades": 125,
     "wins": 68,
@@ -2171,6 +2171,61 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:15:04",
+      "msg": "NIFTY:24453 YdH:24621/YdL:24511 Sig:BREAK LOW 24511 T:1/99 Lots:2L Cap:Rs.26902 Daily:Rs.654",
+      "cls": ""
+    },
+    {
+      "time": "13:15:03",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:10:01",
+      "msg": "NIFTY:24462 YdH:24621/YdL:24511 Sig:BREAK LOW 24511 T:1/99 Lots:2L Cap:Rs.26902 Daily:Rs.654",
+      "cls": ""
+    },
+    {
+      "time": "13:10:00",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:05:18",
+      "msg": "NIFTY:24455 YdH:24621/YdL:24511 Sig:BREAK LOW 24511 T:1/99 Lots:2L Cap:Rs.26902 Daily:Rs.654",
+      "cls": ""
+    },
+    {
+      "time": "13:05:18",
+      "msg": "Trade #2 gate: conf 71% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "13:05:16",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:00:13",
+      "msg": "NIFTY:24442 YdH:24621/YdL:24511 Sig:BREAK LOW 24511 T:1/99 Lots:2L Cap:Rs.26902 Daily:Rs.654",
+      "cls": ""
+    },
+    {
+      "time": "13:00:13",
+      "msg": "Confidence gate: BREAK LOW 24511 scored 6.5/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "13:00:12",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:55:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:55:10",
       "msg": "NIFTY:24449 YdH:24621/YdL:24511 Sig:BREAK LOW 24511 T:1/99 Lots:2L Cap:Rs.26902 Daily:Rs.654",
       "cls": ""
@@ -2214,61 +2269,6 @@
       "time": "12:45:00",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "12:40:18",
-      "msg": "NIFTY:24441 YdH:24621/YdL:24511 Sig:BREAK LOW 24511 T:1/99 Lots:2L Cap:Rs.26902 Daily:Rs.654",
-      "cls": ""
-    },
-    {
-      "time": "12:40:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:40:17",
-      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
-      "cls": "info"
-    },
-    {
-      "time": "12:35:16",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:35:14",
-      "msg": "NIFTY:24444 YdH:24621/YdL:24511 Sig:BREAK LOW 24511 T:1/99 Lots:2L Cap:Rs.26902 Daily:Rs.654",
-      "cls": ""
-    },
-    {
-      "time": "12:35:14",
-      "msg": "Trade #2 gate: conf 76% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "12:35:12",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:30:10",
-      "msg": "NIFTY:24439 YdH:24621/YdL:24511 Sig:BREAK LOW 24511 T:1/99 Lots:2L Cap:Rs.26902 Daily:Rs.654",
-      "cls": ""
-    },
-    {
-      "time": "12:30:10",
-      "msg": "Confidence gate: BREAK LOW 24511 scored 6.5/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "12:30:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:27:07",
-      "msg": "PRE-ALERT: NIFTY 24437 near or_lo 24461",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2276,7 +2276,7 @@
   "oi_nifty": null,
   "running_capital": 26902.0,
   "trade_mode": "paper",
-  "nifty_price": 24448.6,
+  "nifty_price": 24453.15,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
