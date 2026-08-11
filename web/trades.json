@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-11 11:05",
+  "last_updated": "2026-08-11 11:20",
   "summary": {
     "total_trades": 124,
     "wins": 67,
@@ -2153,6 +2153,31 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "11:20:17",
+      "msg": "RIDING NIFTY PE | Peak:Rs.665 Now:Rs.621 | staircase floor Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "11:15:15",
+      "msg": "RIDING NIFTY PE | Peak:Rs.665 Now:Rs.577 | staircase floor Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "11:10:12",
+      "msg": "RIDING NIFTY PE | Peak:Rs.665 Now:Rs.665 | staircase floor Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "11:10:12",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.665 \u2014 floor locked at Rs.500",
+      "cls": "ok"
+    },
+    {
+      "time": "11:05:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:05:10",
       "msg": "RIDING NIFTY PE | Peak:Rs.497 Now:Rs.497 | staircase floor Rs.450",
       "cls": "ok"
@@ -2226,31 +2251,6 @@
       "time": "09:50:19",
       "msg": "NIFTY:24471 YdH:24630/YdL:24523 Sig:-- T:0/99 Lots:1L Cap:Rs.26248 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:45:17",
-      "msg": "NIFTY:24478 YdH:24630/YdL:24523 Sig:-- T:0/99 Lots:1L Cap:Rs.26248 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:40:14",
-      "msg": "NIFTY:24481 YdH:24630/YdL:24523 Sig:-- T:0/99 Lots:1L Cap:Rs.26248 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:35:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:35:11",
-      "msg": "NIFTY:24489 YdH:24630/YdL:24523 Sig:-- T:0/99 Lots:1L Cap:Rs.26248 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:30:08",
-      "msg": "NIFTY:24483 YdH:24630/YdL:24523 Sig:-- T:0/99 Lots:1L Cap:Rs.26248 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2258,7 +2258,7 @@
   "oi_nifty": null,
   "running_capital": 26248.0,
   "trade_mode": "paper",
-  "nifty_price": 24451.75,
+  "nifty_price": 24447.0,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2299,9 +2299,9 @@
     "stop_level": 24502.0,
     "sl_rs": 800,
     "lots": 1,
-    "pnl": 497.0,
-    "peak": 497.0,
-    "floor": 450.0
+    "pnl": 621.0,
+    "peak": 665.0,
+    "floor": 500.0
   },
   "rung_base": [
     150,
