@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-12 11:25",
+  "last_updated": "2026-08-12 11:40",
   "summary": {
     "total_trades": 126,
     "wins": 69,
@@ -2189,6 +2189,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:40:18",
+      "msg": "NIFTY:24280 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
+      "cls": ""
+    },
+    {
+      "time": "11:35:17",
+      "msg": "NIFTY:24298 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
+      "cls": ""
+    },
+    {
+      "time": "11:30:17",
+      "msg": "NIFTY:24292 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
+      "cls": ""
+    },
+    {
+      "time": "11:25:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:25:16",
       "msg": "NIFTY:24303 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
       "cls": ""
@@ -2267,26 +2287,6 @@
       "time": "10:15:19",
       "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24300 @ Rs.89.1 | BREAK LOW 24429 | Conf:71% SL:Rs.1980 | 2L Inv:Rs.11583",
       "cls": "ok"
-    },
-    {
-      "time": "10:15:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:15:17",
-      "msg": "Kite: loaded 1714 NIFTY option contracts",
-      "cls": "info"
-    },
-    {
-      "time": "10:10:11",
-      "msg": "NIFTY:24364 YdH:24621/YdL:24511 Sig:-- T:0/99 Lots:2L Cap:Rs.26902 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:08:09",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2294,7 +2294,7 @@
   "oi_nifty": null,
   "running_capital": 29550.0,
   "trade_mode": "paper",
-  "nifty_price": 24302.95,
+  "nifty_price": 24279.55,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
