@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-12 11:10",
+  "last_updated": "2026-08-12 11:25",
   "summary": {
     "total_trades": 126,
     "wins": 69,
@@ -2189,6 +2189,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:25:16",
+      "msg": "NIFTY:24303 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
+      "cls": ""
+    },
+    {
+      "time": "11:20:15",
+      "msg": "NIFTY:24305 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
+      "cls": ""
+    },
+    {
+      "time": "11:15:14",
+      "msg": "NIFTY:24302 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
+      "cls": ""
+    },
+    {
+      "time": "11:10:14",
+      "msg": "NIFTY:24306 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
+      "cls": ""
+    },
+    {
+      "time": "11:10:14",
+      "msg": "Trade #2 gate: conf 71% \u2014 awaiting /confirm",
+      "cls": "info"
+    },
+    {
+      "time": "11:10:13",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "11:10:12",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "11:10:09",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.2827 Floor:Rs.2700 Charges:Rs.73 NET:Rs.+2647 | Capital:Rs.29550",
       "cls": "ok"
@@ -2252,41 +2287,6 @@
       "time": "10:08:09",
       "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
       "cls": "ok"
-    },
-    {
-      "time": "10:05:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:05:10",
-      "msg": "NIFTY:24364 YdH:24621/YdL:24511 Sig:-- T:0/99 Lots:2L Cap:Rs.26902 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:00:08",
-      "msg": "NIFTY:24376 YdH:24621/YdL:24511 Sig:-- T:0/99 Lots:2L Cap:Rs.26902 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:55:06",
-      "msg": "NIFTY:24409 YdH:24621/YdL:24511 Sig:-- T:0/99 Lots:2L Cap:Rs.26902 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:50:05",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:50:03",
-      "msg": "NIFTY:24402 YdH:24621/YdL:24511 Sig:-- T:0/99 Lots:2L Cap:Rs.26902 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:45:01",
-      "msg": "NIFTY:24428 YdH:24621/YdL:24511 Sig:-- T:0/99 Lots:2L Cap:Rs.26902 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2294,7 +2294,7 @@
   "oi_nifty": null,
   "running_capital": 29550.0,
   "trade_mode": "paper",
-  "nifty_price": 24305.8,
+  "nifty_price": 24302.95,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
