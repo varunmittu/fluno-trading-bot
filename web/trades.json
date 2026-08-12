@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-12 14:05",
+  "last_updated": "2026-08-12 14:20",
   "summary": {
     "total_trades": 126,
     "wins": 69,
@@ -2189,6 +2189,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:20:05",
+      "msg": "NIFTY:24290 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
+      "cls": ""
+    },
+    {
+      "time": "14:15:04",
+      "msg": "NIFTY:24279 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
+      "cls": ""
+    },
+    {
+      "time": "14:10:03",
+      "msg": "NIFTY:24285 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
+      "cls": ""
+    },
+    {
+      "time": "14:05:04",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:05:02",
       "msg": "NIFTY:24281 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
       "cls": ""
@@ -2267,26 +2287,6 @@
       "time": "13:05:12",
       "msg": "NIFTY:24280 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
       "cls": ""
-    },
-    {
-      "time": "13:00:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:00:12",
-      "msg": "NIFTY:24274 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
-      "cls": ""
-    },
-    {
-      "time": "12:55:11",
-      "msg": "NIFTY:24275 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
-      "cls": ""
-    },
-    {
-      "time": "12:50:10",
-      "msg": "NIFTY:24283 YdH:24577/YdL:24429 Sig:BREAK LOW 24429 T:1/99 Lots:2L Cap:Rs.29550 Daily:Rs.2647",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2294,7 +2294,7 @@
   "oi_nifty": null,
   "running_capital": 29550.0,
   "trade_mode": "paper",
-  "nifty_price": 24281.35,
+  "nifty_price": 24289.9,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
