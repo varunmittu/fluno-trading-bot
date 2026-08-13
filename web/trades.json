@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-13 12:15",
+  "last_updated": "2026-08-13 12:35",
   "summary": {
     "total_trades": 126,
     "wins": 69,
@@ -2189,6 +2189,56 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:35:05",
+      "msg": "NIFTY:24398 YdH:24473/YdL:24266 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:35:05",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:31:02",
+      "msg": "PRE-ALERT: NIFTY 24394 near fade 24392",
+      "cls": "info"
+    },
+    {
+      "time": "12:30:01",
+      "msg": "NIFTY:24393 YdH:24473/YdL:24266 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:30:01",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:25:18",
+      "msg": "NIFTY:24400 YdH:24473/YdL:24266 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:25:18",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:20:15",
+      "msg": "NIFTY:24392 YdH:24473/YdL:24266 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:20:15",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:15:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:15:12",
       "msg": "NIFTY:24398 YdH:24473/YdL:24266 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
       "cls": ""
@@ -2237,56 +2287,6 @@
       "time": "11:55:21",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "11:55:19",
-      "msg": "NIFTY:24358 YdH:24473/YdL:24266 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:55:19",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:50:16",
-      "msg": "NIFTY:24359 YdH:24473/YdL:24266 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:50:15",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:45:13",
-      "msg": "NIFTY:24351 YdH:24473/YdL:24266 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:45:13",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:40:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:40:10",
-      "msg": "NIFTY:24362 YdH:24473/YdL:24266 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:40:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:35:04",
-      "msg": "NIFTY:24345 YdH:24473/YdL:24266 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
