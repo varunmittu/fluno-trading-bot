@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-13 15:30",
+  "last_updated": "2026-08-14 09:15",
   "summary": {
     "total_trades": 126,
     "wins": 69,
@@ -2189,6 +2189,36 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:15:47",
+      "msg": "NIFTY:24322 YdH:24473/YdL:24266 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:10:46",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:22",
+      "msg": "New trading day | Capital: Rs.29550 | Lots: 2L",
+      "cls": "info"
+    },
+    {
+      "time": "16:26:12",
+      "msg": "Validation: trust 4.7/10 (n=54)",
+      "cls": "info"
+    },
+    {
+      "time": "15:31:20",
+      "msg": "NIFTY:24396 YdH:24473/YdL:24266 Sig:FADE 24429->24353 T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "15:30:22",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:30:20",
       "msg": "SETTLEMENT | Day P&L:Rs.+0 | Capital:Rs.29550 | Next:2L",
       "cls": "ok"
@@ -2257,36 +2287,6 @@
       "time": "14:50:18",
       "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
       "cls": "info"
-    },
-    {
-      "time": "14:50:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:45:15",
-      "msg": "NIFTY:24359 YdH:24473/YdL:24266 Sig:FADE 24429->24359 T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "14:45:15",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "14:45:14",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:41:12",
-      "msg": "PRE-ALERT: NIFTY 24371 near fade 24392",
-      "cls": "info"
-    },
-    {
-      "time": "14:40:13",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2294,12 +2294,12 @@
   "oi_nifty": null,
   "running_capital": 29550.0,
   "trade_mode": "paper",
-  "nifty_price": 24395.85,
+  "nifty_price": 24321.5,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
     "empty": false,
-    "as_of": "2026-08-12 16:26",
+    "as_of": "2026-08-13 16:26",
     "n": 54,
     "target_n": 60,
     "live_net": 10576.0,
