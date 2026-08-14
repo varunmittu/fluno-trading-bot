@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-14 10:50",
+  "last_updated": "2026-08-14 11:10",
   "summary": {
     "total_trades": 126,
     "wins": 69,
@@ -2189,6 +2189,71 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:10:06",
+      "msg": "NIFTY:24314 YdH:24432/YdL:24311 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:10:05",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:07:23",
+      "msg": "PRE-ALERT: NIFTY 24316 near yd_low 24311",
+      "cls": "info"
+    },
+    {
+      "time": "11:05:02",
+      "msg": "NIFTY:24321 YdH:24432/YdL:24311 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:05:01",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:01:39",
+      "msg": "PRE-ALERT: NIFTY 24308 near or_lo 24305",
+      "cls": "info"
+    },
+    {
+      "time": "11:00:18",
+      "msg": "NIFTY:24310 YdH:24432/YdL:24311 Sig:BREAK LOW 24311 T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:00:18",
+      "msg": "CHOP GUARD: ADX 13 < 15 \u2014 signal skipped, market too choppy",
+      "cls": "info"
+    },
+    {
+      "time": "11:00:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:55:14",
+      "msg": "NIFTY:24336 YdH:24432/YdL:24311 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:55:13",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:52:11",
+      "msg": "PRE-ALERT: NIFTY 24336 near yd_low 24311",
+      "cls": "info"
+    },
+    {
+      "time": "10:50:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:50:10",
       "msg": "NIFTY:24333 YdH:24432/YdL:24311 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
       "cls": ""
@@ -2222,71 +2287,6 @@
       "time": "10:40:03",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "10:36:20",
-      "msg": "PRE-ALERT: NIFTY 24318 near yd_low 24311",
-      "cls": "info"
-    },
-    {
-      "time": "10:35:20",
-      "msg": "NIFTY:24311 YdH:24432/YdL:24311 Sig:BREAK LOW 24311 T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:35:19",
-      "msg": "CHOP GUARD: ADX 12 < 15 \u2014 signal skipped, market too choppy",
-      "cls": "info"
-    },
-    {
-      "time": "10:35:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:31:16",
-      "msg": "PRE-ALERT: NIFTY 24317 near or_lo 24305",
-      "cls": "info"
-    },
-    {
-      "time": "10:30:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:30:15",
-      "msg": "NIFTY:24331 YdH:24432/YdL:24311 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:30:14",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:25:11",
-      "msg": "NIFTY:24335 YdH:24432/YdL:24311 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:25:11",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:21:08",
-      "msg": "PRE-ALERT: NIFTY 24336 near yd_low 24311",
-      "cls": "info"
-    },
-    {
-      "time": "10:20:07",
-      "msg": "NIFTY:24337 YdH:24432/YdL:24311 Sig:-- T:0/99 Lots:2L Cap:Rs.29550 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:20:07",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2294,7 +2294,7 @@
   "oi_nifty": null,
   "running_capital": 29550.0,
   "trade_mode": "paper",
-  "nifty_price": 24332.6,
+  "nifty_price": 24313.9,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
