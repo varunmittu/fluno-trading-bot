@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-17 11:25",
+  "last_updated": "2026-08-17 11:40",
   "summary": {
     "total_trades": 130,
     "wins": 72,
@@ -2259,6 +2259,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:40:11",
+      "msg": "NIFTY:24238 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
+      "cls": ""
+    },
+    {
+      "time": "11:35:09",
+      "msg": "NIFTY:24242 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
+      "cls": ""
+    },
+    {
+      "time": "11:30:06",
+      "msg": "NIFTY:24240 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
+      "cls": ""
+    },
+    {
+      "time": "11:25:06",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:25:04",
       "msg": "NIFTY:24230 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
       "cls": ""
@@ -2337,26 +2357,6 @@
       "time": "10:50:21",
       "msg": "Trade #3 gate: conf 71% \u2014 awaiting /confirm",
       "cls": "info"
-    },
-    {
-      "time": "10:50:19",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:50:17",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.1189 Floor:Rs.1000 Charges:Rs.85 NET:Rs.+935 | Capital:Rs.29996",
-      "cls": "ok"
-    },
-    {
-      "time": "10:45:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:45:15",
-      "msg": "RIDING NIFTY PE | Peak:Rs.1189 Now:Rs.1189 | staircase floor Rs.1000",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2364,7 +2364,7 @@
   "oi_nifty": null,
   "running_capital": 30232.0,
   "trade_mode": "paper",
-  "nifty_price": 24230.1,
+  "nifty_price": 24237.95,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
