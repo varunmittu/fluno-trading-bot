@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-17 11:40",
+  "last_updated": "2026-08-17 11:55",
   "summary": {
     "total_trades": 130,
     "wins": 72,
@@ -2259,6 +2259,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:55:19",
+      "msg": "NIFTY:24269 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
+      "cls": ""
+    },
+    {
+      "time": "11:50:16",
+      "msg": "NIFTY:24256 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
+      "cls": ""
+    },
+    {
+      "time": "11:45:13",
+      "msg": "NIFTY:24245 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
+      "cls": ""
+    },
+    {
+      "time": "11:40:13",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:40:11",
       "msg": "NIFTY:24238 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
       "cls": ""
@@ -2337,26 +2357,6 @@
       "time": "11:00:08",
       "msg": "STAIR UP NIFTY PE | Peak:Rs.315 \u2014 floor locked at Rs.300",
       "cls": "ok"
-    },
-    {
-      "time": "10:55:05",
-      "msg": "[PAPER] #3 BEARISH \u2014 BUY PUT (PE) | NIFTY 24200 @ Rs.150.1 | BREAK LOW 24297 | Conf:71% SL:Rs.1020 | 2L Inv:Rs.19513",
-      "cls": "ok"
-    },
-    {
-      "time": "10:55:03",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:50:21",
-      "msg": "NIFTY:24242 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:2L Cap:Rs.29996 Daily:Rs.1589",
-      "cls": ""
-    },
-    {
-      "time": "10:50:21",
-      "msg": "Trade #3 gate: conf 71% \u2014 awaiting /confirm",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2364,7 +2364,7 @@
   "oi_nifty": null,
   "running_capital": 30232.0,
   "trade_mode": "paper",
-  "nifty_price": 24237.95,
+  "nifty_price": 24268.7,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
