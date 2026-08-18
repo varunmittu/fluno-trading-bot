@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-18 10:05",
+  "last_updated": "2026-08-18 10:25",
   "summary": {
     "total_trades": 130,
     "wins": 72,
@@ -2256,8 +2256,38 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "10:15:26",
+      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24150 @ Rs.148.6 | BREAK LOW 24297 | Conf:71% SL:Rs.2760 | 3L Inv:Rs.28977",
+      "cls": "ok"
+    },
+    {
+      "time": "10:15:24",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:24",
+      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:24",
+      "msg": "Kite: loaded 1726 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:10:14",
+      "msg": "NIFTY:24222 YdH:24405/YdL:24297 Sig:-- T:0/99 Lots:3L Cap:Rs.30232 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:05:13",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:05:11",
       "msg": "NIFTY:24223 YdH:24405/YdL:24297 Sig:-- T:0/99 Lots:3L Cap:Rs.30232 Daily:Rs.0",
@@ -2327,36 +2357,6 @@
       "time": "09:15:07",
       "msg": "NIFTY:24236 YdH:24405/YdL:24297 Sig:-- T:0/99 Lots:3L Cap:Rs.30232 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:10:06",
-      "msg": "Morning Telegram ping sent",
-      "cls": "info"
-    },
-    {
-      "time": "00:00:40",
-      "msg": "New trading day | Capital: Rs.30232 | Lots: 3L",
-      "cls": "info"
-    },
-    {
-      "time": "16:26:31",
-      "msg": "Validation: trust 4.9/10 (n=58)",
-      "cls": "info"
-    },
-    {
-      "time": "15:31:17",
-      "msg": "NIFTY:24288 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
-      "cls": ""
-    },
-    {
-      "time": "15:30:16",
-      "msg": "Error: No item with that key",
-      "cls": "err"
-    },
-    {
-      "time": "15:25:14",
-      "msg": "NIFTY:24340 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2364,7 +2364,7 @@
   "oi_nifty": null,
   "running_capital": 30232.0,
   "trade_mode": "paper",
-  "nifty_price": 24223.1,
+  "nifty_price": 24219.0,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2397,7 +2397,18 @@
     "verdict": "Not ready - need ~2 more trades, surviving a bad week.",
     "capped": false
   },
-  "position": null,
+  "position": {
+    "otype": "PE",
+    "strike": 24150,
+    "entry": 24219.0,
+    "premium_entry": 148.6,
+    "stop_level": 24255.0,
+    "sl_rs": 2760,
+    "lots": 3,
+    "pnl": -0.0,
+    "peak": 300.0,
+    "floor": null
+  },
   "rung_base": [
     150,
     250,
