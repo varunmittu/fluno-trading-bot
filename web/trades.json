@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-17 15:20",
+  "last_updated": "2026-08-18 09:15",
   "summary": {
     "total_trades": 130,
     "wins": 72,
@@ -2259,6 +2259,46 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:15:07",
+      "msg": "NIFTY:24236 YdH:24405/YdL:24297 Sig:-- T:0/99 Lots:3L Cap:Rs.30232 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:10:06",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:40",
+      "msg": "New trading day | Capital: Rs.30232 | Lots: 3L",
+      "cls": "info"
+    },
+    {
+      "time": "16:26:31",
+      "msg": "Validation: trust 4.9/10 (n=58)",
+      "cls": "info"
+    },
+    {
+      "time": "15:31:17",
+      "msg": "NIFTY:24288 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
+      "cls": ""
+    },
+    {
+      "time": "15:30:16",
+      "msg": "Error: No item with that key",
+      "cls": "err"
+    },
+    {
+      "time": "15:25:14",
+      "msg": "NIFTY:24340 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
+      "cls": ""
+    },
+    {
+      "time": "15:20:16",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:20:12",
       "msg": "NIFTY:24340 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
       "cls": ""
@@ -2317,46 +2357,6 @@
       "time": "14:35:13",
       "msg": "NIFTY:24329 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
       "cls": ""
-    },
-    {
-      "time": "14:30:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:30:10",
-      "msg": "NIFTY:24328 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
-      "cls": ""
-    },
-    {
-      "time": "14:25:08",
-      "msg": "NIFTY:24323 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
-      "cls": ""
-    },
-    {
-      "time": "14:20:06",
-      "msg": "NIFTY:24339 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
-      "cls": ""
-    },
-    {
-      "time": "14:15:06",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:15:04",
-      "msg": "NIFTY:24330 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
-      "cls": ""
-    },
-    {
-      "time": "14:10:02",
-      "msg": "NIFTY:24341 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
-      "cls": ""
-    },
-    {
-      "time": "14:05:20",
-      "msg": "NIFTY:24343 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:3/99 Lots:3L Cap:Rs.30232 Daily:Rs.1825",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2364,37 +2364,37 @@
   "oi_nifty": null,
   "running_capital": 30232.0,
   "trade_mode": "paper",
-  "nifty_price": 24339.8,
+  "nifty_price": 24236.2,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
     "empty": false,
-    "as_of": "2026-08-14 16:26",
-    "n": 55,
+    "as_of": "2026-08-17 16:26",
+    "n": 58,
     "target_n": 60,
-    "live_net": 9434.0,
-    "live_per": 172.0,
-    "live_wr": 71,
-    "sd": 956,
-    "ci_lo": -81,
-    "ci_hi": 424,
-    "t_stat": 1.33,
-    "green": 12,
+    "live_net": 11259.0,
+    "live_per": 194.0,
+    "live_wr": 72,
+    "sd": 938,
+    "ci_lo": -47,
+    "ci_hi": 435,
+    "t_stat": 1.58,
+    "green": 13,
     "red": 8,
-    "live_chg": 4216,
+    "live_chg": 4451,
     "edge_real": false,
     "bt_ok": true,
-    "bt_per": 23,
-    "gap": 149,
-    "trust": 4.8,
+    "bt_per": 27,
+    "gap": 167,
+    "trust": 4.9,
     "components": {
-      "data": 2.8,
+      "data": 2.9,
       "profitable": 1,
       "tracking": 1,
       "edge_real": 0,
       "full_sample": 0
     },
-    "verdict": "Not ready - need ~5 more trades, surviving a bad week.",
+    "verdict": "Not ready - need ~2 more trades, surviving a bad week.",
     "capped": false
   },
   "position": null,
