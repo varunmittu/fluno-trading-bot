@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-18 11:20",
+  "last_updated": "2026-08-18 11:40",
   "summary": {
     "total_trades": 131,
     "wins": 73,
@@ -2277,6 +2277,71 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:40:10",
+      "msg": "NIFTY:24196 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:1/99 Lots:3L Cap:Rs.31649 Daily:Rs.1417",
+      "cls": ""
+    },
+    {
+      "time": "11:40:10",
+      "msg": "Confidence gate: BREAK LOW 24297 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "11:40:10",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:35:07",
+      "msg": "NIFTY:24191 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:1/99 Lots:3L Cap:Rs.31649 Daily:Rs.1417",
+      "cls": ""
+    },
+    {
+      "time": "11:35:07",
+      "msg": "Confidence gate: BREAK LOW 24297 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "11:35:06",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:34:45",
+      "msg": "PRE-ALERT: NIFTY 24190 near or_lo 24213",
+      "cls": "info"
+    },
+    {
+      "time": "11:30:03",
+      "msg": "NIFTY:24183 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:1/99 Lots:3L Cap:Rs.31649 Daily:Rs.1417",
+      "cls": ""
+    },
+    {
+      "time": "11:30:02",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:25:19",
+      "msg": "NIFTY:24193 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:1/99 Lots:3L Cap:Rs.31649 Daily:Rs.1417",
+      "cls": ""
+    },
+    {
+      "time": "11:25:19",
+      "msg": "Confidence gate: BREAK LOW 24297 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "11:25:19",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:20:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:20:16",
       "msg": "NIFTY:24198 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:1/99 Lots:3L Cap:Rs.31649 Daily:Rs.1417",
       "cls": ""
@@ -2310,71 +2375,6 @@
       "time": "11:15:10",
       "msg": "Confidence gate: BREAK LOW 24297 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
       "cls": "info"
-    },
-    {
-      "time": "11:15:09",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:10:07",
-      "msg": "NIFTY:24206 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:1/99 Lots:3L Cap:Rs.31649 Daily:Rs.1417",
-      "cls": ""
-    },
-    {
-      "time": "11:10:07",
-      "msg": "Confidence gate: BREAK LOW 24297 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "11:10:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:05:03",
-      "msg": "NIFTY:24206 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:1/99 Lots:3L Cap:Rs.31649 Daily:Rs.1417",
-      "cls": ""
-    },
-    {
-      "time": "11:05:03",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:01:20",
-      "msg": "PRE-ALERT: NIFTY 24197 near or_lo 24213",
-      "cls": "info"
-    },
-    {
-      "time": "11:00:20",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:00:19",
-      "msg": "NIFTY:24200 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:1/99 Lots:3L Cap:Rs.31649 Daily:Rs.1417",
-      "cls": ""
-    },
-    {
-      "time": "11:00:19",
-      "msg": "Confidence gate: BREAK LOW 24297 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "11:00:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:00:17",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.1946 Floor:Rs.1500 Charges:Rs.103 NET:Rs.+1417 | Capital:Rs.31649",
-      "cls": "ok"
-    },
-    {
-      "time": "10:55:14",
-      "msg": "RIDING NIFTY PE | Peak:Rs.1946 Now:Rs.1946 | staircase floor Rs.1500",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2382,7 +2382,7 @@
   "oi_nifty": null,
   "running_capital": 31649.0,
   "trade_mode": "paper",
-  "nifty_price": 24197.7,
+  "nifty_price": 24195.8,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
