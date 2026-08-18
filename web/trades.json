@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-18 13:25",
+  "last_updated": "2026-08-18 13:40",
   "summary": {
     "total_trades": 132,
     "wins": 74,
@@ -2294,6 +2294,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:40:08",
+      "msg": "NIFTY:24196 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "13:35:07",
+      "msg": "NIFTY:24203 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "13:30:06",
+      "msg": "NIFTY:24207 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "13:25:07",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:25:05",
       "msg": "NIFTY:24204 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
       "cls": ""
@@ -2372,26 +2392,6 @@
       "time": "12:30:07",
       "msg": "NIFTY:24215 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
       "cls": ""
-    },
-    {
-      "time": "12:30:07",
-      "msg": "Trade #3 gate: conf 71% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "12:30:06",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:30:06",
-      "msg": "Expiry day \u2014 trading NEXT week's contract (v4.4)",
-      "cls": "info"
-    },
-    {
-      "time": "12:30:05",
-      "msg": "STAIR BOOK NIFTY PE | Peak:Rs.581 Floor:Rs.450 Charges:Rs.102 NET:Rs.+368 | Capital:Rs.32017",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2399,7 +2399,7 @@
   "oi_nifty": null,
   "running_capital": 32017.0,
   "trade_mode": "paper",
-  "nifty_price": 24204.5,
+  "nifty_price": 24195.7,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
