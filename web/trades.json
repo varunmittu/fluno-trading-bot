@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-18 15:15",
+  "last_updated": "2026-08-18 15:31",
   "summary": {
     "total_trades": 132,
     "wins": 74,
@@ -2294,6 +2294,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "15:31:07",
+      "msg": "NIFTY:24155 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "15:30:07",
+      "msg": "Error: No item with that key",
+      "cls": "err"
+    },
+    {
+      "time": "15:25:06",
+      "msg": "NIFTY:24166 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "15:20:05",
+      "msg": "NIFTY:24166 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "15:15:08",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:15:04",
       "msg": "NIFTY:24166 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
       "cls": ""
@@ -2367,31 +2392,6 @@
       "time": "14:20:15",
       "msg": "NIFTY:24194 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
       "cls": ""
-    },
-    {
-      "time": "14:15:14",
-      "msg": "NIFTY:24197 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "14:10:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:10:13",
-      "msg": "NIFTY:24194 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "14:05:12",
-      "msg": "NIFTY:24208 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "14:00:11",
-      "msg": "NIFTY:24192 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2399,7 +2399,7 @@
   "oi_nifty": null,
   "running_capital": 32017.0,
   "trade_mode": "paper",
-  "nifty_price": 24166.35,
+  "nifty_price": 24154.9,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
