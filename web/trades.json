@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-19 10:10",
+  "last_updated": "2026-08-19 10:30",
   "summary": {
     "total_trades": 132,
     "wins": 74,
@@ -2291,8 +2291,58 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "10:30:06",
+      "msg": "RIDING NIFTY PE | Peak:Rs.506 Now:Rs.506 | staircase floor Rs.450",
+      "cls": "ok"
+    },
+    {
+      "time": "10:30:05",
+      "msg": "STAIR UP NIFTY PE | Peak:Rs.506 \u2014 floor locked at Rs.450",
+      "cls": "ok"
+    },
+    {
+      "time": "10:20:19",
+      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24000 @ Rs.147.6 | BREAK LOW 24155 | Conf:71% SL:Rs.2220 | 3L Inv:Rs.28782",
+      "cls": "ok"
+    },
+    {
+      "time": "10:20:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:16:15",
+      "msg": "PRE-ALERT: NIFTY 24082 near or_lo 24066",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:14",
+      "msg": "NIFTY:24093 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:0/99 Lots:3L Cap:Rs.32017 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:15:14",
+      "msg": "Confidence gate: BREAK LOW 24155 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:13",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:13",
+      "msg": "Kite: loaded 1670 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:10:07",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:10:05",
       "msg": "NIFTY:24094 YdH:24405/YdL:24297 Sig:-- T:0/99 Lots:3L Cap:Rs.32017 Daily:Rs.0",
@@ -2342,56 +2392,6 @@
       "time": "09:35:07",
       "msg": "NIFTY:24074 YdH:24405/YdL:24297 Sig:-- T:0/99 Lots:3L Cap:Rs.32017 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:30:04",
-      "msg": "NIFTY:24096 YdH:24405/YdL:24297 Sig:-- T:0/99 Lots:3L Cap:Rs.32017 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:25:01",
-      "msg": "NIFTY:24106 YdH:24405/YdL:24297 Sig:-- T:0/99 Lots:3L Cap:Rs.32017 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:20:19",
-      "msg": "NIFTY:24116 YdH:24405/YdL:24297 Sig:-- T:0/99 Lots:3L Cap:Rs.32017 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:15:58",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:15:56",
-      "msg": "NIFTY:24108 YdH:24405/YdL:24297 Sig:-- T:0/99 Lots:3L Cap:Rs.32017 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:10:55",
-      "msg": "Morning Telegram ping sent",
-      "cls": "info"
-    },
-    {
-      "time": "00:00:30",
-      "msg": "New trading day | Capital: Rs.32017 | Lots: 3L",
-      "cls": "info"
-    },
-    {
-      "time": "16:26:37",
-      "msg": "Validation: trust 7.0/10 (n=60)",
-      "cls": "info"
-    },
-    {
-      "time": "15:31:10",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:31:07",
-      "msg": "NIFTY:24155 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2399,7 +2399,7 @@
   "oi_nifty": null,
   "running_capital": 32017.0,
   "trade_mode": "paper",
-  "nifty_price": 24094.0,
+  "nifty_price": 24064.65,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2432,7 +2432,18 @@
     "verdict": "Earned - real money defensible (still walk the checklist gates).",
     "capped": false
   },
-  "position": null,
+  "position": {
+    "otype": "PE",
+    "strike": 24000,
+    "entry": 24071.0,
+    "premium_entry": 147.6,
+    "stop_level": 24100.0,
+    "sl_rs": 2220,
+    "lots": 3,
+    "pnl": 506.0,
+    "peak": 506.0,
+    "floor": 450.0
+  },
   "rung_base": [
     150,
     250,
