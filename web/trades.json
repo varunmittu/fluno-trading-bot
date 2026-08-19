@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-18 15:31",
+  "last_updated": "2026-08-19 09:15",
   "summary": {
     "total_trades": 132,
     "wins": 74,
@@ -2294,6 +2294,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:15:56",
+      "msg": "NIFTY:24108 YdH:24405/YdL:24297 Sig:-- T:0/99 Lots:3L Cap:Rs.32017 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:10:55",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:30",
+      "msg": "New trading day | Capital: Rs.32017 | Lots: 3L",
+      "cls": "info"
+    },
+    {
+      "time": "16:26:37",
+      "msg": "Validation: trust 7.0/10 (n=60)",
+      "cls": "info"
+    },
+    {
+      "time": "15:31:10",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:31:07",
       "msg": "NIFTY:24155 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
       "cls": ""
@@ -2367,31 +2392,6 @@
       "time": "14:40:18",
       "msg": "NIFTY:24200 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
       "cls": ""
-    },
-    {
-      "time": "14:35:17",
-      "msg": "NIFTY:24198 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "14:30:16",
-      "msg": "NIFTY:24201 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "14:25:18",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:25:15",
-      "msg": "NIFTY:24198 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "14:20:15",
-      "msg": "NIFTY:24194 YdH:24405/YdL:24297 Sig:BREAK LOW 24297 T:2/99 Lots:3L Cap:Rs.32017 Daily:Rs.1785",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2399,37 +2399,37 @@
   "oi_nifty": null,
   "running_capital": 32017.0,
   "trade_mode": "paper",
-  "nifty_price": 24154.9,
+  "nifty_price": 24107.55,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
     "empty": false,
-    "as_of": "2026-08-17 16:26",
-    "n": 58,
+    "as_of": "2026-08-18 16:26",
+    "n": 60,
     "target_n": 60,
-    "live_net": 11259.0,
-    "live_per": 194.0,
-    "live_wr": 72,
-    "sd": 938,
-    "ci_lo": -47,
-    "ci_hi": 435,
-    "t_stat": 1.58,
-    "green": 13,
+    "live_net": 13044.0,
+    "live_per": 217.0,
+    "live_wr": 73,
+    "sd": 935,
+    "ci_lo": -19,
+    "ci_hi": 454,
+    "t_stat": 1.8,
+    "green": 14,
     "red": 8,
-    "live_chg": 4451,
+    "live_chg": 4656,
     "edge_real": false,
     "bt_ok": true,
-    "bt_per": 27,
-    "gap": 167,
-    "trust": 4.9,
+    "bt_per": 32,
+    "gap": 185,
+    "trust": 7.0,
     "components": {
-      "data": 2.9,
+      "data": 3.0,
       "profitable": 1,
       "tracking": 1,
       "edge_real": 0,
-      "full_sample": 0
+      "full_sample": 2
     },
-    "verdict": "Not ready - need ~2 more trades, surviving a bad week.",
+    "verdict": "Earned - real money defensible (still walk the checklist gates).",
     "capped": false
   },
   "position": null,
