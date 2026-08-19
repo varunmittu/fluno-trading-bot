@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-19 12:30",
+  "last_updated": "2026-08-19 12:50",
   "summary": {
     "total_trades": 134,
     "wins": 76,
@@ -2329,6 +2329,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:50:10",
+      "msg": "NIFTY:24052 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "12:45:07",
+      "msg": "NIFTY:24056 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "12:40:04",
+      "msg": "NIFTY:24057 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "12:35:02",
+      "msg": "NIFTY:24054 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "12:30:22",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:30:19",
       "msg": "NIFTY:24060 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
       "cls": ""
@@ -2402,31 +2427,6 @@
       "time": "11:35:10",
       "msg": "NIFTY:24055 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
       "cls": ""
-    },
-    {
-      "time": "11:30:07",
-      "msg": "NIFTY:24055 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "11:25:07",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:25:05",
-      "msg": "NIFTY:24053 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "11:20:02",
-      "msg": "NIFTY:24053 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "11:20:02",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2434,7 +2434,7 @@
   "oi_nifty": null,
   "running_capital": 33803.0,
   "trade_mode": "paper",
-  "nifty_price": 24060.15,
+  "nifty_price": 24051.7,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
