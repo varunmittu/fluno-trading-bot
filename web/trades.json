@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-19 14:15",
+  "last_updated": "2026-08-19 14:35",
   "summary": {
     "total_trades": 134,
     "wins": 76,
@@ -2329,6 +2329,31 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:35:03",
+      "msg": "NIFTY:24053 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "14:30:01",
+      "msg": "NIFTY:24040 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "14:25:18",
+      "msg": "NIFTY:24036 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "14:20:15",
+      "msg": "NIFTY:24039 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "14:15:15",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "14:15:13",
       "msg": "NIFTY:24054 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
       "cls": ""
@@ -2402,31 +2427,6 @@
       "time": "13:20:05",
       "msg": "NIFTY:24042 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
       "cls": ""
-    },
-    {
-      "time": "13:15:03",
-      "msg": "NIFTY:24050 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "13:10:20",
-      "msg": "NIFTY:24064 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "13:05:19",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:05:17",
-      "msg": "NIFTY:24060 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "13:00:15",
-      "msg": "NIFTY:24056 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2434,7 +2434,7 @@
   "oi_nifty": null,
   "running_capital": 33803.0,
   "trade_mode": "paper",
-  "nifty_price": 24053.65,
+  "nifty_price": 24053.2,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
