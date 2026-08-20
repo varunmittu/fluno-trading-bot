@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-20 11:00",
+  "last_updated": "2026-08-20 11:15",
   "summary": {
     "total_trades": 134,
     "wins": 76,
@@ -2329,6 +2329,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "11:00:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:40:19",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -2422,11 +2427,6 @@
       "time": "09:20:06",
       "msg": "NIFTY:24194 YdH:24270/YdL:24155 Sig:-- T:0/99 Lots:3L Cap:Rs.33803 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:15:06",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2434,7 +2434,7 @@
   "oi_nifty": null,
   "running_capital": 33803.0,
   "trade_mode": "paper",
-  "nifty_price": 24214.15,
+  "nifty_price": 24203.15,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2475,7 +2475,7 @@
     "stop_level": 24188.0,
     "sl_rs": 2670,
     "lots": 3,
-    "pnl": -664.0,
+    "pnl": -1522.0,
     "peak": -215.0,
     "floor": null
   },
