@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-19 15:25",
+  "last_updated": "2026-08-20 09:15",
   "summary": {
     "total_trades": 134,
     "wins": 76,
@@ -2329,6 +2329,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:15:04",
+      "msg": "NIFTY:24209 YdH:24270/YdL:24155 Sig:-- T:0/99 Lots:3L Cap:Rs.33803 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:11:03",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:35",
+      "msg": "New trading day | Capital: Rs.33803 | Lots: 3L",
+      "cls": "info"
+    },
+    {
+      "time": "16:26:43",
+      "msg": "Validation: trust 10.0/10 (n=62)",
+      "cls": "info"
+    },
+    {
+      "time": "15:31:12",
+      "msg": "NIFTY:24078 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
+      "cls": ""
+    },
+    {
+      "time": "15:30:11",
+      "msg": "Error: No item with that key",
+      "cls": "err"
+    },
+    {
+      "time": "15:25:11",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:25:09",
       "msg": "NIFTY:24049 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
       "cls": ""
@@ -2392,41 +2427,6 @@
       "time": "14:35:05",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "14:35:03",
-      "msg": "NIFTY:24053 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "14:30:01",
-      "msg": "NIFTY:24040 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "14:25:18",
-      "msg": "NIFTY:24036 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "14:20:15",
-      "msg": "NIFTY:24039 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "14:15:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:15:13",
-      "msg": "NIFTY:24054 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
-    },
-    {
-      "time": "14:10:10",
-      "msg": "NIFTY:24052 YdH:24270/YdL:24155 Sig:BREAK LOW 24155 T:2/99 Lots:3L Cap:Rs.33803 Daily:Rs.1785",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2434,34 +2434,34 @@
   "oi_nifty": null,
   "running_capital": 33803.0,
   "trade_mode": "paper",
-  "nifty_price": 24048.55,
+  "nifty_price": 24209.2,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
     "empty": false,
-    "as_of": "2026-08-18 16:26",
-    "n": 60,
+    "as_of": "2026-08-19 16:26",
+    "n": 62,
     "target_n": 60,
-    "live_net": 13044.0,
-    "live_per": 217.0,
-    "live_wr": 73,
-    "sd": 935,
-    "ci_lo": -19,
-    "ci_hi": 454,
-    "t_stat": 1.8,
-    "green": 14,
+    "live_net": 14829.0,
+    "live_per": 239.0,
+    "live_wr": 74,
+    "sd": 933,
+    "ci_lo": 7,
+    "ci_hi": 471,
+    "t_stat": 2.02,
+    "green": 15,
     "red": 8,
-    "live_chg": 4656,
-    "edge_real": false,
+    "live_chg": 4861,
+    "edge_real": true,
     "bt_ok": true,
-    "bt_per": 32,
-    "gap": 185,
-    "trust": 7.0,
+    "bt_per": 45,
+    "gap": 194,
+    "trust": 10.0,
     "components": {
       "data": 3.0,
       "profitable": 1,
       "tracking": 1,
-      "edge_real": 0,
+      "edge_real": 3,
       "full_sample": 2
     },
     "verdict": "Earned - real money defensible (still walk the checklist gates).",
