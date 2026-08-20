@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-20 13:40",
+  "last_updated": "2026-08-20 13:55",
   "summary": {
     "total_trades": 135,
     "wins": 77,
@@ -2347,6 +2347,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "13:40:11",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:20:23",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -2440,11 +2445,6 @@
       "time": "10:25:10",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "10:15:21",
-      "msg": "[PAPER] #1 BULLISH \u2014 BUY CALL (CE) | NIFTY 24250 @ Rs.150.8 | BREAK HIGH 24173 | Conf:71% SL:Rs.2670 | 3L Inv:Rs.29406",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2452,7 +2452,7 @@
   "oi_nifty": null,
   "running_capital": 35069.0,
   "trade_mode": "paper",
-  "nifty_price": 24242.2,
+  "nifty_price": 24237.95,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2493,7 +2493,7 @@
     "stop_level": 24228.0,
     "sl_rs": 1230,
     "lots": 3,
-    "pnl": -180.0,
+    "pnl": -511.0,
     "peak": 382.0,
     "floor": null
   },
