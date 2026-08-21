@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-20 15:20",
+  "last_updated": "2026-08-21 09:15",
   "summary": {
     "total_trades": 136,
     "wins": 77,
@@ -2364,6 +2364,46 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "09:15:52",
+      "msg": "NIFTY:24260 YdH:24173/YdL:24026 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:10:51",
+      "msg": "Morning Telegram ping sent",
+      "cls": "info"
+    },
+    {
+      "time": "00:00:25",
+      "msg": "New trading day | Capital: Rs.33759 | Lots: 1L",
+      "cls": "info"
+    },
+    {
+      "time": "16:26:49",
+      "msg": "Validation: trust 7.0/10 (n=64)",
+      "cls": "info"
+    },
+    {
+      "time": "15:31:04",
+      "msg": "NIFTY:24232 YdH:24173/YdL:24026 Sig:BREAK HIGH 24173 T:2/99 Lots:1L Cap:Rs.33759 Daily:Rs.-43",
+      "cls": ""
+    },
+    {
+      "time": "15:30:03",
+      "msg": "Error: No item with that key",
+      "cls": "err"
+    },
+    {
+      "time": "15:25:03",
+      "msg": "NIFTY:24212 YdH:24173/YdL:24026 Sig:BREAK HIGH 24173 T:2/99 Lots:1L Cap:Rs.33759 Daily:Rs.-43",
+      "cls": ""
+    },
+    {
+      "time": "15:20:04",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "15:20:02",
       "msg": "NIFTY:24212 YdH:24173/YdL:24026 Sig:BREAK HIGH 24173 T:2/99 Lots:1L Cap:Rs.33759 Daily:Rs.-43",
       "cls": ""
@@ -2422,46 +2462,6 @@
       "time": "14:35:15",
       "msg": "NIFTY:24244 YdH:24173/YdL:24026 Sig:BREAK HIGH 24173 T:2/99 Lots:1L Cap:Rs.33759 Daily:Rs.-43",
       "cls": ""
-    },
-    {
-      "time": "14:30:15",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "14:30:13",
-      "msg": "NIFTY:24245 YdH:24173/YdL:24026 Sig:BREAK HIGH 24173 T:2/99 Lots:1L Cap:Rs.33759 Daily:Rs.-43",
-      "cls": ""
-    },
-    {
-      "time": "14:25:12",
-      "msg": "NIFTY:24239 YdH:24173/YdL:24026 Sig:BREAK HIGH 24173 T:2/99 Lots:1L Cap:Rs.33759 Daily:Rs.-43",
-      "cls": ""
-    },
-    {
-      "time": "14:20:12",
-      "msg": "NIFTY:24236 YdH:24173/YdL:24026 Sig:BREAK HIGH 24173 T:2/99 Lots:1L Cap:Rs.33759 Daily:Rs.-43",
-      "cls": ""
-    },
-    {
-      "time": "14:20:12",
-      "msg": "Trade #3 gate: conf 76% \u2014 awaiting /confirm",
-      "cls": "info"
-    },
-    {
-      "time": "14:20:10",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "14:20:09",
-      "msg": "STOP LOSS NIFTY CE | SL:Rs.-1230 Charges:Rs.100 NET:Rs.-1310 | Capital:Rs.33759",
-      "cls": "err"
-    },
-    {
-      "time": "14:17:41",
-      "msg": "Kite connected: Pendkar Sai Varun \u2014 live exchange data ON",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2469,34 +2469,34 @@
   "oi_nifty": null,
   "running_capital": 33759.0,
   "trade_mode": "paper",
-  "nifty_price": 24211.6,
+  "nifty_price": 24259.55,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
     "empty": false,
-    "as_of": "2026-08-19 16:26",
-    "n": 62,
+    "as_of": "2026-08-20 16:26",
+    "n": 64,
     "target_n": 60,
-    "live_net": 14829.0,
-    "live_per": 239.0,
-    "live_wr": 74,
-    "sd": 933,
-    "ci_lo": 7,
-    "ci_hi": 471,
-    "t_stat": 2.02,
+    "live_net": 14786.0,
+    "live_per": 231.0,
+    "live_wr": 73,
+    "sd": 947,
+    "ci_lo": -1,
+    "ci_hi": 463,
+    "t_stat": 1.95,
     "green": 15,
-    "red": 8,
-    "live_chg": 4861,
-    "edge_real": true,
+    "red": 9,
+    "live_chg": 5064,
+    "edge_real": false,
     "bt_ok": true,
-    "bt_per": 45,
-    "gap": 194,
-    "trust": 10.0,
+    "bt_per": 51,
+    "gap": 180,
+    "trust": 7.0,
     "components": {
       "data": 3.0,
       "profitable": 1,
       "tracking": 1,
-      "edge_real": 3,
+      "edge_real": 0,
       "full_sample": 2
     },
     "verdict": "Earned - real money defensible (still walk the checklist gates).",
