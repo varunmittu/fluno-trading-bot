@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-21 12:10",
+  "last_updated": "2026-08-21 12:25",
   "summary": {
     "total_trades": 136,
     "wins": 77,
@@ -2364,6 +2364,51 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "12:25:16",
+      "msg": "NIFTY:24241 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:25:15",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:21:13",
+      "msg": "PRE-ALERT: NIFTY 24240 near yd_high 24265",
+      "cls": "info"
+    },
+    {
+      "time": "12:20:12",
+      "msg": "NIFTY:24239 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:20:12",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:16:30",
+      "msg": "PRE-ALERT: NIFTY 24230 near or_lo 24207",
+      "cls": "info"
+    },
+    {
+      "time": "12:15:09",
+      "msg": "NIFTY:24235 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "12:15:08",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "12:10:07",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:10:05",
       "msg": "NIFTY:24237 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
       "cls": ""
@@ -2417,51 +2462,6 @@
       "time": "11:50:09",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "11:50:07",
-      "msg": "NIFTY:24254 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:50:07",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:45:04",
-      "msg": "NIFTY:24252 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:45:04",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:40:01",
-      "msg": "NIFTY:24258 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:40:01",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:39:20",
-      "msg": "PRE-ALERT: NIFTY 24259 near yd_high 24265",
-      "cls": "info"
-    },
-    {
-      "time": "11:35:17",
-      "msg": "NIFTY:24259 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:35:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2469,7 +2469,7 @@
   "oi_nifty": null,
   "running_capital": 33759.0,
   "trade_mode": "paper",
-  "nifty_price": 24237.2,
+  "nifty_price": 24240.7,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
