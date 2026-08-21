@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-21 13:45",
+  "last_updated": "2026-08-21 14:00",
   "summary": {
     "total_trades": 136,
     "wins": 77,
@@ -2364,6 +2364,71 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "14:00:17",
+      "msg": "NIFTY:24235 YdH:24265/YdL:24185 Sig:FADE 24282->24235 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "14:00:17",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "14:00:16",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:57:54",
+      "msg": "PRE-ALERT: NIFTY 24240 near yd_high 24265",
+      "cls": "info"
+    },
+    {
+      "time": "13:55:13",
+      "msg": "NIFTY:24234 YdH:24265/YdL:24185 Sig:FADE 24282->24234 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:55:13",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:55:12",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:51:50",
+      "msg": "PRE-ALERT: NIFTY 24229 near or_lo 24207",
+      "cls": "info"
+    },
+    {
+      "time": "13:50:08",
+      "msg": "NIFTY:24232 YdH:24265/YdL:24185 Sig:FADE 24282->24232 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:50:08",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:50:08",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:47:06",
+      "msg": "PRE-ALERT: NIFTY 24233 near fade 24246",
+      "cls": "info"
+    },
+    {
+      "time": "13:45:07",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:45:05",
       "msg": "NIFTY:24235 YdH:24265/YdL:24185 Sig:FADE 24282->24235 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
       "cls": ""
@@ -2397,71 +2462,6 @@
       "time": "13:35:17",
       "msg": "NIFTY:24240 YdH:24265/YdL:24185 Sig:FADE 24282->24240 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "13:35:17",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "13:35:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:34:36",
-      "msg": "PRE-ALERT: NIFTY 24241 near yd_high 24265",
-      "cls": "info"
-    },
-    {
-      "time": "13:31:54",
-      "msg": "PRE-ALERT: NIFTY 24244 near fade 24246",
-      "cls": "info"
-    },
-    {
-      "time": "13:30:13",
-      "msg": "NIFTY:24249 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:30:12",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:25:11",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "13:25:09",
-      "msg": "NIFTY:24236 YdH:24265/YdL:24185 Sig:FADE 24282->24236 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:25:09",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "13:25:08",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:20:05",
-      "msg": "NIFTY:24246 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "13:20:05",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "13:19:24",
-      "msg": "PRE-ALERT: NIFTY 24247 near yd_high 24265",
-      "cls": "info"
     }
   ],
   "vix": null,
