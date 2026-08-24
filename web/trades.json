@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24 12:20",
+  "last_updated": "2026-08-24 12:35",
   "summary": {
     "total_trades": 136,
     "wins": 77,
@@ -2364,6 +2364,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "12:20:12",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "12:00:22",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -2457,11 +2462,6 @@
       "time": "11:10:09",
       "msg": "NIFTY:24221 YdH:24284/YdL:24207 Sig:OR BREAK LOW 24267 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "11:10:09",
-      "msg": "Confidence gate: OR BREAK LOW 24267 scored 6/9 (< 7) and conf 43% <= 72 \u2014 no alert, no entry",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2469,7 +2469,7 @@
   "oi_nifty": null,
   "running_capital": 33759.0,
   "trade_mode": "paper",
-  "nifty_price": 24191.3,
+  "nifty_price": 24184.9,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2510,7 +2510,7 @@
     "stop_level": 24201.0,
     "sl_rs": 570,
     "lots": 1,
-    "pnl": -338.0,
+    "pnl": -172.0,
     "peak": -59.0,
     "floor": null
   },
