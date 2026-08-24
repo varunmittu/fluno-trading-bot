@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24 10:50",
+  "last_updated": "2026-08-24 11:10",
   "summary": {
     "total_trades": 136,
     "wins": 77,
@@ -2364,6 +2364,76 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "11:10:09",
+      "msg": "NIFTY:24221 YdH:24284/YdL:24207 Sig:OR BREAK LOW 24267 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:10:09",
+      "msg": "Confidence gate: OR BREAK LOW 24267 scored 6/9 (< 7) and conf 43% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "11:10:08",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:05:06",
+      "msg": "NIFTY:24230 YdH:24284/YdL:24207 Sig:OR BREAK LOW 24267 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:05:06",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "11:05:05",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:04:04",
+      "msg": "PRE-ALERT: NIFTY 24230 near yd_low 24207",
+      "cls": "info"
+    },
+    {
+      "time": "11:01:43",
+      "msg": "PRE-ALERT: NIFTY 24250 near or_lo 24267",
+      "cls": "info"
+    },
+    {
+      "time": "11:00:01",
+      "msg": "NIFTY:24241 YdH:24284/YdL:24207 Sig:OR BREAK LOW 24267 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:00:01",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "11:00:01",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:55:18",
+      "msg": "NIFTY:24270 YdH:24284/YdL:24207 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:55:18",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:50:18",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:50:15",
       "msg": "NIFTY:24271 YdH:24284/YdL:24207 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
       "cls": ""
@@ -2392,76 +2462,6 @@
       "time": "10:45:11",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "10:40:08",
-      "msg": "NIFTY:24280 YdH:24284/YdL:24207 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:40:08",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:35:07",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "10:35:05",
-      "msg": "NIFTY:24280 YdH:24284/YdL:24207 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:35:05",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:31:22",
-      "msg": "PRE-ALERT: NIFTY 24280 near or_lo 24267",
-      "cls": "info"
-    },
-    {
-      "time": "10:31:01",
-      "msg": "PRE-ALERT: NIFTY 24279 near yd_high 24284",
-      "cls": "info"
-    },
-    {
-      "time": "10:30:01",
-      "msg": "NIFTY:24278 YdH:24284/YdL:24207 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:30:00",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:25:18",
-      "msg": "NIFTY:24279 YdH:24284/YdL:24207 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:25:17",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:20:15",
-      "msg": "NIFTY:24281 YdH:24284/YdL:24207 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "10:20:14",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "10:16:12",
-      "msg": "PRE-ALERT: NIFTY 24275 near or_lo 24267",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2469,7 +2469,7 @@
   "oi_nifty": null,
   "running_capital": 33759.0,
   "trade_mode": "paper",
-  "nifty_price": 24271.25,
+  "nifty_price": 24220.85,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
