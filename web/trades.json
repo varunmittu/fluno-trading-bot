@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24 11:25",
+  "last_updated": "2026-08-24 11:45",
   "summary": {
     "total_trades": 136,
     "wins": 77,
@@ -2361,8 +2361,33 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "11:35:07",
+      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24150 @ Rs.150.4 | BREAK LOW 24207 | Conf:71% SL:Rs.570 | 1L Inv:Rs.9776",
+      "cls": "ok"
+    },
+    {
+      "time": "11:35:05",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:30:02",
+      "msg": "NIFTY:24202 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "11:30:02",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "11:25:22",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "11:25:19",
       "msg": "NIFTY:24204 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
@@ -2437,31 +2462,6 @@
       "time": "11:05:06",
       "msg": "NIFTY:24230 YdH:24284/YdL:24207 Sig:OR BREAK LOW 24267 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "11:05:06",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "11:05:05",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:04:04",
-      "msg": "PRE-ALERT: NIFTY 24230 near yd_low 24207",
-      "cls": "info"
-    },
-    {
-      "time": "11:01:43",
-      "msg": "PRE-ALERT: NIFTY 24250 near or_lo 24267",
-      "cls": "info"
-    },
-    {
-      "time": "11:00:01",
-      "msg": "NIFTY:24241 YdH:24284/YdL:24207 Sig:OR BREAK LOW 24267 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2469,7 +2469,7 @@
   "oi_nifty": null,
   "running_capital": 33759.0,
   "trade_mode": "paper",
-  "nifty_price": 24203.85,
+  "nifty_price": 24190.0,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2502,7 +2502,18 @@
     "verdict": "Earned - real money defensible (still walk the checklist gates).",
     "capped": false
   },
-  "position": null,
+  "position": {
+    "otype": "PE",
+    "strike": 24150,
+    "entry": 24179.0,
+    "premium_entry": 150.4,
+    "stop_level": 24201.0,
+    "sl_rs": 570,
+    "lots": 1,
+    "pnl": -305.0,
+    "peak": -60.0,
+    "floor": null
+  },
   "rung_base": [
     150,
     250,
