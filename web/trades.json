@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24 13:15",
+  "last_updated": "2026-08-24 13:30",
   "summary": {
     "total_trades": 137,
     "wins": 78,
@@ -2382,6 +2382,41 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:30:12",
+      "msg": "NIFTY:24178 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:1/99 Lots:3L Cap:Rs.34163 Daily:Rs.404",
+      "cls": ""
+    },
+    {
+      "time": "13:25:10",
+      "msg": "NIFTY:24176 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:1/99 Lots:3L Cap:Rs.34163 Daily:Rs.404",
+      "cls": ""
+    },
+    {
+      "time": "13:20:08",
+      "msg": "NIFTY:24173 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:1/99 Lots:3L Cap:Rs.34163 Daily:Rs.404",
+      "cls": ""
+    },
+    {
+      "time": "13:15:06",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
+      "time": "13:15:06",
+      "msg": "NIFTY:24166 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:1/99 Lots:3L Cap:Rs.34163 Daily:Rs.404",
+      "cls": ""
+    },
+    {
+      "time": "13:15:06",
+      "msg": "Confidence gate: BREAK LOW 24207 scored 6/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "13:15:05",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
       "time": "13:15:03",
       "msg": "STAIR BOOK NIFTY PE | Peak:Rs.487 Floor:Rs.450 Charges:Rs.66 NET:Rs.+404 | Capital:Rs.34163",
       "cls": "ok"
@@ -2445,41 +2480,6 @@
       "time": "11:30:02",
       "msg": "NIFTY:24202 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "11:30:02",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:25:22",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:25:19",
-      "msg": "NIFTY:24204 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:25:19",
-      "msg": "Confidence gate: BREAK LOW 24207 scored 5.5/9 (< 7) and conf 57% <= 72 \u2014 no alert, no entry",
-      "cls": "info"
-    },
-    {
-      "time": "11:25:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:20:16",
-      "msg": "NIFTY:24217 YdH:24284/YdL:24207 Sig:OR BREAK LOW 24267 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "11:20:16",
-      "msg": "Confidence gate: OR BREAK LOW 24267 scored 6/9 (< 7) and conf 43% <= 72 \u2014 no alert, no entry",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2487,7 +2487,7 @@
   "oi_nifty": null,
   "running_capital": 34163.0,
   "trade_mode": "paper",
-  "nifty_price": 24166.2,
+  "nifty_price": 24178.3,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
