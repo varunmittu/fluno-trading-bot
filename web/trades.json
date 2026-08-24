@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24 12:00",
+  "last_updated": "2026-08-24 12:20",
   "summary": {
     "total_trades": 136,
     "wins": 77,
@@ -2364,6 +2364,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "12:00:22",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "11:45:14",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -2457,11 +2462,6 @@
       "time": "11:10:09",
       "msg": "Confidence gate: OR BREAK LOW 24267 scored 6/9 (< 7) and conf 43% <= 72 \u2014 no alert, no entry",
       "cls": "info"
-    },
-    {
-      "time": "11:10:08",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2469,7 +2469,7 @@
   "oi_nifty": null,
   "running_capital": 33759.0,
   "trade_mode": "paper",
-  "nifty_price": 24180.55,
+  "nifty_price": 24191.3,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2510,7 +2510,7 @@
     "stop_level": 24201.0,
     "sl_rs": 570,
     "lots": 1,
-    "pnl": -59.0,
+    "pnl": -338.0,
     "peak": -59.0,
     "floor": null
   },
