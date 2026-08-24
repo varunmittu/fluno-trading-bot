@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24 09:55",
+  "last_updated": "2026-08-24 10:10",
   "summary": {
     "total_trades": 136,
     "wins": 77,
@@ -2364,6 +2364,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:10:19",
+      "msg": "NIFTY:24272 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:05:16",
+      "msg": "NIFTY:24271 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:00:14",
+      "msg": "NIFTY:24275 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "09:55:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "09:55:12",
       "msg": "NIFTY:24271 YdH:24265/YdL:24185 Sig:-- T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
       "cls": ""
@@ -2442,26 +2462,6 @@
       "time": "16:26:55",
       "msg": "Validation: trust 7.0/10 (n=64)",
       "cls": "info"
-    },
-    {
-      "time": "15:31:21",
-      "msg": "NIFTY:24252 YdH:24265/YdL:24185 Sig:FADE 24282->24239 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "15:30:21",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "15:30:20",
-      "msg": "WEEKLY SUMMARY sent | Week P&L:Rs.+5352",
-      "cls": "ok"
-    },
-    {
-      "time": "15:30:19",
-      "msg": "SETTLEMENT | Day P&L:Rs.+0 | Capital:Rs.33759 | Next:1L",
-      "cls": "ok"
     }
   ],
   "vix": null,
@@ -2469,7 +2469,7 @@
   "oi_nifty": null,
   "running_capital": 33759.0,
   "trade_mode": "paper",
-  "nifty_price": 24271.3,
+  "nifty_price": 24272.35,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
