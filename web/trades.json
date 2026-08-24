@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24 13:30",
+  "last_updated": "2026-08-24 13:45",
   "summary": {
     "total_trades": 137,
     "wins": 78,
@@ -2382,6 +2382,26 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:45:20",
+      "msg": "NIFTY:24166 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:1/99 Lots:3L Cap:Rs.34163 Daily:Rs.404",
+      "cls": ""
+    },
+    {
+      "time": "13:40:17",
+      "msg": "NIFTY:24169 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:1/99 Lots:3L Cap:Rs.34163 Daily:Rs.404",
+      "cls": ""
+    },
+    {
+      "time": "13:35:15",
+      "msg": "NIFTY:24167 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:1/99 Lots:3L Cap:Rs.34163 Daily:Rs.404",
+      "cls": ""
+    },
+    {
+      "time": "13:30:14",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:30:12",
       "msg": "NIFTY:24178 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:1/99 Lots:3L Cap:Rs.34163 Daily:Rs.404",
       "cls": ""
@@ -2460,26 +2480,6 @@
       "time": "12:00:22",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
-    },
-    {
-      "time": "11:45:14",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "11:35:07",
-      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24150 @ Rs.150.4 | BREAK LOW 24207 | Conf:71% SL:Rs.570 | 1L Inv:Rs.9776",
-      "cls": "ok"
-    },
-    {
-      "time": "11:35:05",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "11:30:02",
-      "msg": "NIFTY:24202 YdH:24284/YdL:24207 Sig:BREAK LOW 24207 T:0/99 Lots:1L Cap:Rs.33759 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2487,7 +2487,7 @@
   "oi_nifty": null,
   "running_capital": 34163.0,
   "trade_mode": "paper",
-  "nifty_price": 24178.3,
+  "nifty_price": 24166.5,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
