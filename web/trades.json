@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-08-25 11:00",
+  "last_updated": "2026-08-25 11:15",
   "summary": {
-    "total_trades": 137,
+    "total_trades": 138,
     "wins": 78,
-    "losses": 59,
-    "win_rate": 56.9,
-    "total_pnl": 12480.0,
+    "losses": 60,
+    "win_rate": 56.5,
+    "total_pnl": 10450.0,
     "avg_win": 566.0,
-    "avg_loss": -537.0
+    "avg_loss": -562.0
   },
   "trades": [
     {
@@ -2338,6 +2338,23 @@
       "lots": 1,
       "gross": 470.0,
       "charges": 66.04
+    },
+    {
+      "id": 141,
+      "date": "2026-08-25",
+      "time": "11:15",
+      "score": 71,
+      "entry": 24121.35,
+      "exit": 24148.55,
+      "pnl": -2030.38,
+      "status": "STOP_LOSS",
+      "mode": "PAPER",
+      "instrument": "NIFTY",
+      "option_type": "PE",
+      "invested": 13962.0,
+      "lots": 3,
+      "gross": -1960.0,
+      "charges": 70.38
     }
   ],
   "daily_pnl": {
@@ -2375,12 +2392,23 @@
     "2026-08-18": 1785.0,
     "2026-08-19": 1785.0,
     "2026-08-20": -44.0,
-    "2026-08-24": 404.0
+    "2026-08-24": 404.0,
+    "2026-08-25": -2030.0
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 1,
+  "open_positions": 0,
   "bot_log": [
+    {
+      "time": "11:15:07",
+      "msg": "STOP LOSS NIFTY PE | SL:Rs.-1980 Charges:Rs.70 NET:Rs.-2030 | Capital:Rs.32133",
+      "cls": "err"
+    },
+    {
+      "time": "11:00:06",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "10:45:04",
       "msg": "Synced to Vercel \u2014 live in ~15s",
@@ -2470,24 +2498,14 @@
       "time": "10:05:02",
       "msg": "NIFTY:24144 YdH:24284/YdL:24207 Sig:-- T:0/99 Lots:3L Cap:Rs.34163 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "10:00:19",
-      "msg": "NIFTY:24141 YdH:24284/YdL:24207 Sig:-- T:0/99 Lots:3L Cap:Rs.34163 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:55:17",
-      "msg": "NIFTY:24139 YdH:24284/YdL:24207 Sig:-- T:0/99 Lots:3L Cap:Rs.34163 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
   "supertrend_bullish": null,
   "oi_nifty": null,
-  "running_capital": 34163.0,
+  "running_capital": 32133.0,
   "trade_mode": "paper",
-  "nifty_price": 24144.9,
+  "nifty_price": 24148.55,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2520,18 +2538,7 @@
     "verdict": "Earned - real money defensible (still walk the checklist gates).",
     "capped": false
   },
-  "position": {
-    "otype": "PE",
-    "strike": 24050,
-    "entry": 24121.0,
-    "premium_entry": 71.6,
-    "stop_level": 24147.0,
-    "sl_rs": 1980,
-    "lots": 3,
-    "pnl": -1151.0,
-    "peak": 165.0,
-    "floor": null
-  },
+  "position": null,
   "rung_base": [
     150,
     250,
