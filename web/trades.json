@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26 10:10",
+  "last_updated": "2026-08-26 10:30",
   "summary": {
     "total_trades": 138,
     "wins": 78,
@@ -2400,6 +2400,81 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "10:30:15",
+      "msg": "NIFTY:24305 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:30:15",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "10:30:14",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:25:11",
+      "msg": "NIFTY:24303 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:25:11",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "10:25:11",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:20:08",
+      "msg": "NIFTY:24319 YdH:24335/YdL:24115 Sig:-- T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:20:08",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:17:26",
+      "msg": "PRE-ALERT: NIFTY 24328 near or_lo 24310",
+      "cls": "info"
+    },
+    {
+      "time": "10:16:25",
+      "msg": "PRE-ALERT: NIFTY 24343 near yd_high 24335",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:24",
+      "msg": "NIFTY:24345 YdH:24335/YdL:24115 Sig:BREAK HIGH 24335 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "10:15:24",
+      "msg": "Confidence gate: BREAK HIGH 24335 scored 5.5/9 (< 7) and conf 54% <= 72 \u2014 no alert, no entry",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:23",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "10:15:23",
+      "msg": "Kite: loaded 1584 NIFTY option contracts",
+      "cls": "info"
+    },
+    {
+      "time": "10:10:15",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "10:10:13",
       "msg": "NIFTY:24345 YdH:24313/YdL:24144 Sig:-- T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
       "cls": ""
@@ -2423,81 +2498,6 @@
       "time": "09:55:05",
       "msg": "NIFTY:24365 YdH:24313/YdL:24144 Sig:-- T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "09:50:02",
-      "msg": "NIFTY:24370 YdH:24313/YdL:24144 Sig:-- T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:45:16",
-      "msg": "NIFTY:24369 YdH:24313/YdL:24144 Sig:-- T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:40:13",
-      "msg": "NIFTY:24358 YdH:24313/YdL:24144 Sig:-- T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:35:12",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:35:10",
-      "msg": "NIFTY:24347 YdH:24313/YdL:24144 Sig:-- T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:30:07",
-      "msg": "NIFTY:24352 YdH:24313/YdL:24144 Sig:-- T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:25:04",
-      "msg": "NIFTY:24354 YdH:24313/YdL:24144 Sig:-- T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:20:01",
-      "msg": "NIFTY:24318 YdH:24313/YdL:24144 Sig:-- T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:16:01",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "09:15:59",
-      "msg": "NIFTY:24336 YdH:24313/YdL:24144 Sig:-- T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "09:10:58",
-      "msg": "Morning Telegram ping sent",
-      "cls": "info"
-    },
-    {
-      "time": "00:00:34",
-      "msg": "New trading day | Capital: Rs.32133 | Lots: 1L",
-      "cls": "info"
-    },
-    {
-      "time": "16:27:15",
-      "msg": "Validation: trust 7.0/10 (n=66)",
-      "cls": "info"
-    },
-    {
-      "time": "15:31:12",
-      "msg": "Daily loss limit hit (Rs.-2030). Stopped for today.",
-      "cls": "err"
-    },
-    {
-      "time": "15:26:12",
-      "msg": "Daily loss limit hit (Rs.-2030). Stopped for today.",
-      "cls": "err"
     }
   ],
   "vix": null,
@@ -2505,7 +2505,7 @@
   "oi_nifty": null,
   "running_capital": 32133.0,
   "trade_mode": "paper",
-  "nifty_price": 24345.1,
+  "nifty_price": 24305.05,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
