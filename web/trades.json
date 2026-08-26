@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26 13:35",
+  "last_updated": "2026-08-26 13:55",
   "summary": {
     "total_trades": 138,
     "wins": 78,
@@ -2400,6 +2400,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "13:35:17",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:25:08",
       "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24200 @ Rs.149.4 | OR BREAK LOW 24310 | Conf:57% SL:Rs.400 | 1L Inv:Rs.9711",
       "cls": "ok"
@@ -2493,11 +2498,6 @@
       "time": "13:00:07",
       "msg": "Fetching 5-min candles [^NSEI]...",
       "cls": "info"
-    },
-    {
-      "time": "12:55:04",
-      "msg": "NIFTY:24277 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2505,7 +2505,7 @@
   "oi_nifty": null,
   "running_capital": 32133.0,
   "trade_mode": "paper",
-  "nifty_price": 24267.3,
+  "nifty_price": 24265.1,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2546,8 +2546,8 @@
     "stop_level": 24274.0,
     "sl_rs": 400,
     "lots": 1,
-    "pnl": -240.0,
-    "peak": -206.0,
+    "pnl": -182.0,
+    "peak": 20.0,
     "floor": null
   },
   "rung_base": [
