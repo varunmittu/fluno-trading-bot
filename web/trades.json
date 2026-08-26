@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26 13:00",
+  "last_updated": "2026-08-26 13:15",
   "summary": {
     "total_trades": 138,
     "wins": 78,
@@ -2400,6 +2400,56 @@
   "open_positions": 0,
   "bot_log": [
     {
+      "time": "13:15:17",
+      "msg": "NIFTY:24267 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:15:17",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:15:17",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:10:14",
+      "msg": "NIFTY:24274 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:10:14",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:10:13",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:05:11",
+      "msg": "NIFTY:24274 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:05:11",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:05:10",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:00:10",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:00:08",
       "msg": "NIFTY:24279 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
       "cls": ""
@@ -2448,56 +2498,6 @@
       "time": "12:45:18",
       "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
       "cls": "info"
-    },
-    {
-      "time": "12:45:18",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:40:17",
-      "msg": "Synced to Vercel \u2014 live in ~15s",
-      "cls": "ok"
-    },
-    {
-      "time": "12:40:15",
-      "msg": "NIFTY:24278 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:40:15",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:40:15",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:37:12",
-      "msg": "PRE-ALERT: NIFTY 24285 near or_lo 24310",
-      "cls": "info"
-    },
-    {
-      "time": "12:35:11",
-      "msg": "NIFTY:24280 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:35:11",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:35:10",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:30:08",
-      "msg": "NIFTY:24279 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
     }
   ],
   "vix": null,
@@ -2505,7 +2505,7 @@
   "oi_nifty": null,
   "running_capital": 32133.0,
   "trade_mode": "paper",
-  "nifty_price": 24278.75,
+  "nifty_price": 24267.2,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
