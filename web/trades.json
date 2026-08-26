@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26 13:55",
+  "last_updated": "2026-08-26 14:10",
   "summary": {
     "total_trades": 138,
     "wins": 78,
@@ -2400,6 +2400,11 @@
   "open_positions": 1,
   "bot_log": [
     {
+      "time": "13:55:08",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
+    {
       "time": "13:35:17",
       "msg": "Synced to Vercel \u2014 live in ~15s",
       "cls": "ok"
@@ -2493,11 +2498,6 @@
       "time": "13:00:08",
       "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
       "cls": "info"
-    },
-    {
-      "time": "13:00:07",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2505,7 +2505,7 @@
   "oi_nifty": null,
   "running_capital": 32133.0,
   "trade_mode": "paper",
-  "nifty_price": 24265.1,
+  "nifty_price": 24265.05,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2546,7 +2546,7 @@
     "stop_level": 24274.0,
     "sl_rs": 400,
     "lots": 1,
-    "pnl": -182.0,
+    "pnl": -181.0,
     "peak": 20.0,
     "floor": null
   },
