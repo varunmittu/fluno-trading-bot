@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26 13:15",
+  "last_updated": "2026-08-26 13:35",
   "summary": {
     "total_trades": 138,
     "wins": 78,
@@ -2397,8 +2397,38 @@
   },
   "current_score": 0,
   "score_breakdown": {},
-  "open_positions": 0,
+  "open_positions": 1,
   "bot_log": [
+    {
+      "time": "13:25:08",
+      "msg": "[PAPER] #1 BEARISH \u2014 BUY PUT (PE) | NIFTY 24200 @ Rs.149.4 | OR BREAK LOW 24310 | Conf:57% SL:Rs.400 | 1L Inv:Rs.9711",
+      "cls": "ok"
+    },
+    {
+      "time": "13:25:06",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:20:20",
+      "msg": "NIFTY:24262 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
+      "cls": ""
+    },
+    {
+      "time": "13:20:20",
+      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
+      "cls": "info"
+    },
+    {
+      "time": "13:20:20",
+      "msg": "Fetching 5-min candles [^NSEI]...",
+      "cls": "info"
+    },
+    {
+      "time": "13:15:20",
+      "msg": "Synced to Vercel \u2014 live in ~15s",
+      "cls": "ok"
+    },
     {
       "time": "13:15:17",
       "msg": "NIFTY:24267 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
@@ -2468,36 +2498,6 @@
       "time": "12:55:04",
       "msg": "NIFTY:24277 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
       "cls": ""
-    },
-    {
-      "time": "12:55:04",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
-    },
-    {
-      "time": "12:55:04",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:50:01",
-      "msg": "NIFTY:24278 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:50:00",
-      "msg": "Fetching 5-min candles [^NSEI]...",
-      "cls": "info"
-    },
-    {
-      "time": "12:45:18",
-      "msg": "NIFTY:24284 YdH:24335/YdL:24115 Sig:OR BREAK LOW 24310 T:0/99 Lots:1L Cap:Rs.32133 Daily:Rs.0",
-      "cls": ""
-    },
-    {
-      "time": "12:45:18",
-      "msg": "MTF filter: 15-min trend not aligned with PE \u2014 entry blocked",
-      "cls": "info"
     }
   ],
   "vix": null,
@@ -2505,7 +2505,7 @@
   "oi_nifty": null,
   "running_capital": 32133.0,
   "trade_mode": "paper",
-  "nifty_price": 24267.2,
+  "nifty_price": 24267.3,
   "market_open": true,
   "validation": {
     "start": "2026-07-14",
@@ -2538,7 +2538,18 @@
     "verdict": "Earned - real money defensible (still walk the checklist gates).",
     "capped": false
   },
-  "position": null,
+  "position": {
+    "otype": "PE",
+    "strike": 24200,
+    "entry": 24259.0,
+    "premium_entry": 149.4,
+    "stop_level": 24274.0,
+    "sl_rs": 400,
+    "lots": 1,
+    "pnl": -240.0,
+    "peak": -206.0,
+    "floor": null
+  },
   "rung_base": [
     150,
     250,
